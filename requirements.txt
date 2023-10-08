@@ -1,0 +1,6 @@
+gdown==4.7.1
+deepl==1.15.0
+tqdm
+nltk
+datasets
+spacy
