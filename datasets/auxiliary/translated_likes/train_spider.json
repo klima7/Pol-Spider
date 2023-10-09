@@ -1633,7 +1633,7 @@
     {
         "db_id": "book_2",
         "question": "Show the prices of publications whose publisher is either \"Person\" or \"Wiley\"",
-        "question_pl": "Pokaż ceny publikacji, których wydawcą jest \"Person\" lub \"Wiley\".",
+        "question_pl": "Pokaż ceny publikacji, których wydawcą jest \"Osoba\" lub \"Wiley\".",
         "query": "SELECT Price FROM publication WHERE Publisher  =  \"Person\" OR Publisher  =  \"Wiley\"",
         "query_pl": "SELECT Price FROM publication WHERE Publisher  =  \"Osoba\" OR Publisher  =  \"Wiley\""
     },
@@ -1738,7 +1738,7 @@
     {
         "db_id": "musical",
         "question": "What are the distinct nominees of the musicals with the award that is not \"Tony Award\"?",
-        "question_pl": "Jakie są odrębne nominacje musicali z nagrodą, która nie jest \"Tony Award\"?",
+        "question_pl": "Jakie są odrębne nominacje musicali z nagrodą, która nie jest \"Nagroda Tony\"?",
         "query": "SELECT DISTINCT Nominee FROM musical WHERE Award != \"Tony Award\"",
         "query_pl": "SELECT DISTINCT Nominee FROM musical WHERE Award != \"Nagroda Tony\""
     },
@@ -1892,7 +1892,7 @@
     {
         "db_id": "musical",
         "question": "Show the nominees that have nominated musicals for both \"Tony Award\" and \"Drama Desk Award\".",
-        "question_pl": "Pokaż nominowanych, którzy nominowali musicale zarówno do \"Tony Award\", jak i \"Drama Desk Award\".",
+        "question_pl": "Pokaż nominowanych, którzy nominowali musicale zarówno do \"Nagroda Tony\", jak i \"Drama Desk Award\".",
         "query": "SELECT Nominee FROM musical WHERE Award  =  \"Tony Award\" INTERSECT SELECT Nominee FROM musical WHERE Award  =  \"Drama Desk Award\"",
         "query_pl": "SELECT Nominee FROM musical WHERE Award  =  \"Nagroda Tony\" INTERSECT SELECT Nominee FROM musical WHERE Award  =  \"Nagroda Drama Desk\""
     },
@@ -1976,9 +1976,9 @@
     {
         "db_id": "twitter_1",
         "question": "Find the names of users whose emails contain ‘superstar’ or ‘edu’.",
-        "question_pl": "Znajdź nazwy użytkowników, których e-maile zawierają \"superstar\" lub \"edu\".",
+        "question_pl": "Znajdź nazwy użytkowników, których e-maile zawierają \"supergwiazda\" lub \"edu\".",
         "query": "SELECT name FROM user_profiles WHERE email LIKE '%superstar%' OR email LIKE '%edu%'",
-        "query_pl": "SELECT name FROM user_profiles WHERE email LIKE '%superstar%' OR email LIKE '%edu%'"
+        "query_pl": "SELECT name FROM user_profiles WHERE email LIKE '%supergwiazda%' OR email LIKE '%edu%'"
     },
     {
         "db_id": "twitter_1",
@@ -2137,14 +2137,14 @@
     {
         "db_id": "product_catalog",
         "question": "What is the attribute data type of the attribute with name \"Green\"?",
-        "question_pl": "Jaki jest typ danych atrybutu o nazwie \"Green\"?",
+        "question_pl": "Jaki jest typ danych atrybutu o nazwie \"Zielony\"?",
         "query": "SELECT attribute_data_type FROM Attribute_Definitions WHERE attribute_name  =  \"Green\"",
         "query_pl": "SELECT attribute_data_type FROM Attribute_Definitions WHERE attribute_name  =  \"Zielony\""
     },
     {
         "db_id": "product_catalog",
         "question": "Find the attribute data type for the attribute named \"Green\".",
-        "question_pl": "Znajdź typ danych atrybutu dla atrybutu o nazwie \"Green\".",
+        "question_pl": "Znajdź typ danych atrybutu dla atrybutu o nazwie \"Zielony\".",
         "query": "SELECT attribute_data_type FROM Attribute_Definitions WHERE attribute_name  =  \"Green\"",
         "query_pl": "SELECT attribute_data_type FROM Attribute_Definitions WHERE attribute_name  =  \"Zielony\""
     },
@@ -4328,7 +4328,7 @@
     {
         "db_id": "store_1",
         "question": "What is the composer who created the track \"Fast As a Shark\"?",
-        "question_pl": "Jaki jest kompozytor, który stworzył utwór \"Fast As a Shark\"?",
+        "question_pl": "Jaki jest kompozytor, który stworzył utwór \"Szybki jak rekin\"?",
         "query": "SELECT composer FROM tracks WHERE name = \"Fast As a Shark\";",
         "query_pl": "SELECT composer FROM tracks WHERE name = \"Szybki jak rekin\";"
     },
@@ -4496,7 +4496,7 @@
     {
         "db_id": "store_1",
         "question": "What is the unit price of the tune \"Fast As a Shark\"?",
-        "question_pl": "Jaka jest cena jednostkowa utworu \"Fast As a Shark\"?",
+        "question_pl": "Jaka jest cena jednostkowa utworu \"Szybki jak rekin\"?",
         "query": "SELECT unit_price FROM tracks WHERE name = \"Fast As a Shark\";",
         "query_pl": "SELECT unit_price FROM tracks WHERE name = \"Szybki jak rekin\";"
     },
@@ -6449,28 +6449,28 @@
     {
         "db_id": "insurance_fnol",
         "question": "Find the names of customers who have used either the service \"Close a policy\" or the service \"Upgrade a policy\".",
-        "question_pl": "Znajdź nazwiska klientów, którzy skorzystali z usługi \"Zamknij polisę\" lub \"Aktualizuj polisę\".",
+        "question_pl": "Znajdź nazwiska klientów, którzy skorzystali z usługi \"Zamknij polisę\" lub \"Aktualizuj politykę\".",
         "query": "SELECT t1.customer_name FROM customers AS t1 JOIN first_notification_of_loss AS t2 ON t1.customer_id  =  t2.customer_id JOIN services AS t3 ON t2.service_id  =  t3.service_id WHERE t3.service_name  =  \"Close a policy\" OR t3.service_name  =  \"Upgrade a policy\"",
         "query_pl": "SELECT t1.customer_name FROM customers AS t1 JOIN first_notification_of_loss AS t2 ON t1.customer_id  =  t2.customer_id JOIN services AS t3 ON t2.service_id  =  t3.service_id WHERE t3.service_name  =  \"Zamknij polisę\" OR t3.service_name  =  \"Uaktualnij politykę\""
     },
     {
         "db_id": "insurance_fnol",
         "question": "Which customers have used the service named \"Close a policy\" or \"Upgrade a policy\"? Give me the customer names.",
-        "question_pl": "Którzy klienci korzystali z usługi o nazwie \"Zamknij polisę\" lub \"Uaktualnij polisę\"? Podaj nazwy klientów.",
+        "question_pl": "Którzy klienci korzystali z usługi o nazwie \"Zamknij polisę\" lub \"Uaktualnij politykę\"? Podaj nazwy klientów.",
         "query": "SELECT t1.customer_name FROM customers AS t1 JOIN first_notification_of_loss AS t2 ON t1.customer_id  =  t2.customer_id JOIN services AS t3 ON t2.service_id  =  t3.service_id WHERE t3.service_name  =  \"Close a policy\" OR t3.service_name  =  \"Upgrade a policy\"",
         "query_pl": "SELECT t1.customer_name FROM customers AS t1 JOIN first_notification_of_loss AS t2 ON t1.customer_id  =  t2.customer_id JOIN services AS t3 ON t2.service_id  =  t3.service_id WHERE t3.service_name  =  \"Zamknij polisę\" OR t3.service_name  =  \"Uaktualnij politykę\""
     },
     {
         "db_id": "insurance_fnol",
         "question": "Find the names of customers who have used both the service \"Close a policy\" and the service \"New policy application\".",
-        "question_pl": "Znajdź nazwiska klientów, którzy skorzystali zarówno z usługi \"Zamknij polisę\", jak i usługi \"Nowy wniosek o polisę\".",
+        "question_pl": "Znajdź nazwiska klientów, którzy skorzystali zarówno z usługi \"Zamknij polisę\", jak i usługi \"Nowy wniosek o politykę\".",
         "query": "SELECT t1.customer_name FROM customers AS t1 JOIN first_notification_of_loss AS t2 ON t1.customer_id  =  t2.customer_id JOIN services AS t3 ON t2.service_id  =  t3.service_id WHERE t3.service_name  =  \"Close a policy\" INTERSECT SELECT t1.customer_name FROM customers AS t1 JOIN first_notification_of_loss AS t2 ON t1.customer_id  =  t2.customer_id JOIN services AS t3 ON t2.service_id  =  t3.service_id WHERE t3.service_name  =  \"New policy application\"",
         "query_pl": "SELECT t1.customer_name FROM customers AS t1 JOIN first_notification_of_loss AS t2 ON t1.customer_id  =  t2.customer_id JOIN services AS t3 ON t2.service_id  =  t3.service_id WHERE t3.service_name  =  \"Zamknij polisę\" INTERSECT SELECT t1.customer_name FROM customers AS t1 JOIN first_notification_of_loss AS t2 ON t1.customer_id  =  t2.customer_id JOIN services AS t3 ON t2.service_id  =  t3.service_id WHERE t3.service_name  =  \"Nowa aplikacja polityki\""
     },
     {
         "db_id": "insurance_fnol",
         "question": "Which customers have used both the service named \"Close a policy\" and the service named \"Upgrade a policy\"? Give me the customer names.",
-        "question_pl": "Którzy klienci korzystali zarówno z usługi o nazwie \"Zamknij polisę\", jak i usługi o nazwie \"Uaktualnij polisę\"? Podaj nazwy klientów.",
+        "question_pl": "Którzy klienci korzystali zarówno z usługi o nazwie \"Zamknij polisę\", jak i usługi o nazwie \"Uaktualnij politykę\"? Podaj nazwy klientów.",
         "query": "SELECT t1.customer_name FROM customers AS t1 JOIN first_notification_of_loss AS t2 ON t1.customer_id  =  t2.customer_id JOIN services AS t3 ON t2.service_id  =  t3.service_id WHERE t3.service_name  =  \"Close a policy\" INTERSECT SELECT t1.customer_name FROM customers AS t1 JOIN first_notification_of_loss AS t2 ON t1.customer_id  =  t2.customer_id JOIN services AS t3 ON t2.service_id  =  t3.service_id WHERE t3.service_name  =  \"New policy application\"",
         "query_pl": "SELECT t1.customer_name FROM customers AS t1 JOIN first_notification_of_loss AS t2 ON t1.customer_id  =  t2.customer_id JOIN services AS t3 ON t2.service_id  =  t3.service_id WHERE t3.service_name  =  \"Zamknij polisę\" INTERSECT SELECT t1.customer_name FROM customers AS t1 JOIN first_notification_of_loss AS t2 ON t1.customer_id  =  t2.customer_id JOIN services AS t3 ON t2.service_id  =  t3.service_id WHERE t3.service_name  =  \"Nowa aplikacja polityki\""
     },
@@ -6631,7 +6631,7 @@
     {
         "db_id": "medicine_enzyme_interaction",
         "question": "What are the names of enzymes in the medicine named 'Amisulpride' that can serve as an 'inhibitor'?",
-        "question_pl": "Jak nazywają się enzymy w leku o nazwie \"Amisulpride\", które mogą służyć jako \"inhibitory\"?",
+        "question_pl": "Jak nazywają się enzymy w leku o nazwie \"Amisulpryd\", które mogą służyć jako \"hamujący\"?",
         "query": "SELECT T1.name FROM enzyme AS T1 JOIN medicine_enzyme_interaction AS T2 ON T1.id  =  T2.enzyme_id JOIN medicine AS T3 ON T2.medicine_id  =  T3.id WHERE T3.name  =  'Amisulpride' AND T2.interaction_type  =  'inhibitor'",
         "query_pl": "SELECT T1.name FROM enzyme AS T1 JOIN medicine_enzyme_interaction AS T2 ON T1.id  =  T2.enzyme_id JOIN medicine AS T3 ON T2.medicine_id  =  T3.id WHERE T3.name  =  \"Amisulpryd\" AND T2.interaction_type  =  \"inhibitor\""
     },
@@ -7212,9 +7212,9 @@
     {
         "db_id": "phone_1",
         "question": "Find all phones that have word 'Full' in their accreditation types. List the Hardware Model name and Company name.",
-        "question_pl": "Znajdź wszystkie telefony, które mają słowo \"Full\" w swoich typach akredytacji. Wymień nazwę modelu sprzętu i nazwę firmy.",
+        "question_pl": "Znajdź wszystkie telefony, które mają słowo \"Pełny\" w swoich typach akredytacji. Wymień nazwę modelu sprzętu i nazwę firmy.",
         "query": "SELECT Hardware_Model_name ,  Company_name FROM phone WHERE Accreditation_type LIKE 'Full';",
-        "query_pl": "SELECT Hardware_Model_name ,  Company_name FROM phone WHERE Accreditation_type LIKE 'Full';"
+        "query_pl": "SELECT Hardware_Model_name ,  Company_name FROM phone WHERE Accreditation_type LIKE 'Pełny';"
     },
     {
         "db_id": "phone_1",
@@ -7275,7 +7275,7 @@
     {
         "db_id": "phone_1",
         "question": "List the hardware model name for the phones that were produced by \"Nokia Corporation\" or whose screen mode type is \"Graphics.\"",
-        "question_pl": "Wymień nazwę modelu sprzętu dla telefonów, które zostały wyprodukowane przez \"Nokia Corporation\" lub których typ trybu ekranu to \"Graphics\".",
+        "question_pl": "Wymień nazwę modelu sprzętu dla telefonów, które zostały wyprodukowane przez \"Nokia Corporation\" lub których typ trybu ekranu to \"Grafika\".",
         "query": "SELECT DISTINCT T2.Hardware_Model_name FROM screen_mode AS T1 JOIN phone AS T2 ON T1.Graphics_mode = T2.screen_mode WHERE T1.Type  =  \"Graphics\" OR t2.Company_name  =  \"Nokia Corporation\"",
         "query_pl": "SELECT DISTINCT T2.Hardware_Model_name FROM screen_mode AS T1 JOIN phone AS T2 ON T1.Graphics_mode = T2.screen_mode WHERE T1.Type  =  \"Grafika\" OR t2.Company_name  =  \"Nokia Corporation\""
     },
@@ -7401,7 +7401,7 @@
     {
         "db_id": "match_season",
         "question": "What are the official native languages that contain the string \"English\".",
-        "question_pl": "Jakie są oficjalne języki ojczyste, które zawierają ciąg znaków \"angielski\".",
+        "question_pl": "Jakie są oficjalne języki ojczyste, które zawierają ciąg znaków \"Angielski\".",
         "query": "SELECT Official_native_language FROM country WHERE Official_native_language LIKE \"%English%\"",
         "query_pl": "SELECT Official_native_language FROM country WHERE Official_native_language LIKE \"%angielski%\""
     },
@@ -8206,9 +8206,9 @@
     {
         "db_id": "body_builder",
         "question": "What are the total scores of the body builders whose birthday contains the string \"January\" ?",
-        "question_pl": "Jakie są łączne wyniki kulturystów, których data urodzenia zawiera ciąg znaków \"Styczeń\"?",
+        "question_pl": "Jakie są łączne wyniki kulturystów, których data urodzenia zawiera ciąg znaków \"styczeń\"?",
         "query": "SELECT T1.total FROM body_builder AS T1 JOIN people AS T2 ON T1.people_id  =  T2.people_id WHERE T2.Birth_Date LIKE \"%January%\";",
-        "query_pl": "SELECT T1.total FROM body_builder AS T1 JOIN people AS T2 ON T1.people_id  =  T2.people_id WHERE T2.Birth_Date LIKE \"%Styczeń%\";"
+        "query_pl": "SELECT T1.total FROM body_builder AS T1 JOIN people AS T2 ON T1.people_id  =  T2.people_id WHERE T2.Birth_Date LIKE \"%styczeń%\";"
     },
     {
         "db_id": "body_builder",
@@ -8437,7 +8437,7 @@
     {
         "db_id": "apartment_rentals",
         "question": "Find all the building full names containing the word \"court\".",
-        "question_pl": "Znajdź wszystkie pełne nazwy budynków zawierające słowo \"court\".",
+        "question_pl": "Znajdź wszystkie pełne nazwy budynków zawierające słowo \"sąd\".",
         "query": "SELECT building_full_name FROM Apartment_Buildings WHERE building_full_name LIKE \"%court%\"",
         "query_pl": "SELECT building_full_name FROM Apartment_Buildings WHERE building_full_name LIKE \"%sąd%\""
     },
@@ -8500,7 +8500,7 @@
     {
         "db_id": "apartment_rentals",
         "question": "Return the apartment numbers of the apartments with type code \"Flat\".",
-        "question_pl": "Zwróć numery apartamentów z kodem typu \"Flat\".",
+        "question_pl": "Zwróć numery apartamentów z kodem typu \"Płaski\".",
         "query": "SELECT apt_number FROM Apartments WHERE apt_type_code  =  \"Flat\"",
         "query_pl": "SELECT apt_number FROM Apartments WHERE apt_type_code  =  \"Płaski\""
     },
@@ -8724,14 +8724,14 @@
     {
         "db_id": "apartment_rentals",
         "question": "Show the apartment type codes and apartment numbers in the buildings managed by \"Kyle\".",
-        "question_pl": "Pokaż kody typów mieszkań i numery mieszkań w budynkach zarządzanych przez \"Kyle'a\".",
+        "question_pl": "Pokaż kody typów mieszkań i numery mieszkań w budynkach zarządzanych przez \"Kylea\".",
         "query": "SELECT T2.apt_type_code ,  T2.apt_number FROM Apartment_Buildings AS T1 JOIN Apartments AS T2 ON T1.building_id  =  T2.building_id WHERE T1.building_manager  =  \"Kyle\"",
         "query_pl": "SELECT T2.apt_type_code ,  T2.apt_number FROM Apartment_Buildings AS T1 JOIN Apartments AS T2 ON T1.building_id  =  T2.building_id WHERE T1.building_manager  =  \"Kyle\""
     },
     {
         "db_id": "apartment_rentals",
         "question": "What apartment type codes and apartment numbers do the buildings managed by \"Kyle\" have?",
-        "question_pl": "Jakie kody typów mieszkań i numery mieszkań mają budynki zarządzane przez \"Kyle'a\"?",
+        "question_pl": "Jakie kody typów mieszkań i numery mieszkań mają budynki zarządzane przez \"Kylea\"?",
         "query": "SELECT T2.apt_type_code ,  T2.apt_number FROM Apartment_Buildings AS T1 JOIN Apartments AS T2 ON T1.building_id  =  T2.building_id WHERE T1.building_manager  =  \"Kyle\"",
         "query_pl": "SELECT T2.apt_type_code ,  T2.apt_number FROM Apartment_Buildings AS T1 JOIN Apartments AS T2 ON T1.building_id  =  T2.building_id WHERE T1.building_manager  =  \"Kyle\""
     },
@@ -12434,7 +12434,7 @@
     {
         "db_id": "small_bank_1",
         "question": "Find the total savings balance of all accounts except the account with name ‘Brown’.",
-        "question_pl": "Znajdź łączne saldo oszczędności na wszystkich kontach z wyjątkiem konta o nazwie \"Brown\".",
+        "question_pl": "Znajdź łączne saldo oszczędności na wszystkich kontach z wyjątkiem konta o nazwie \"Brązowy\".",
         "query": "SELECT sum(T2.balance) FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid WHERE T1.name != 'Brown'",
         "query_pl": "SELECT sum(T2.balance) FROM accounts AS T1 JOIN savings AS T2 ON T1.custid  =  T2.custid WHERE T1.name != \"Brązowy\""
     },
@@ -12819,7 +12819,7 @@
     {
         "db_id": "browser_web",
         "question": "What are the name and os of web client accelerators that do not work with only a 'Broadband' type connection?",
-        "question_pl": "Jak nazywają się akceleratory klienta sieciowego, które nie działają tylko z połączeniem typu \"Broadband\"?",
+        "question_pl": "Jak nazywają się akceleratory klienta sieciowego, które nie działają tylko z połączeniem typu \"Szerokopasmowy\"?",
         "query": "SELECT name ,  operating_system FROM web_client_accelerator WHERE CONNECTION != 'Broadband'",
         "query_pl": "SELECT name ,  operating_system FROM web_client_accelerator WHERE CONNECTION != \"Szerokopasmowy\""
     },
@@ -13281,7 +13281,7 @@
     {
         "db_id": "school_finance",
         "question": "Show the names of donors who donated to both school \"Glenn\" and \"Triton.\"",
-        "question_pl": "Pokaż nazwiska darczyńców, którzy przekazali darowizny zarówno szkole \"Glenn\", jak i \"Triton\".",
+        "question_pl": "Pokaż nazwiska darczyńców, którzy przekazali darowizny zarówno szkole \"Glenn\", jak i \"Tryton\".",
         "query": "SELECT T1.donator_name FROM endowment AS T1 JOIN school AS T2 ON T1.school_id  =  T2.school_id WHERE T2.school_name  =  'Glenn' INTERSECT SELECT T1.donator_name FROM endowment AS T1 JOIN school AS T2 ON T1.school_id  =  T2.school_id WHERE T2.school_name  =  'Triton'",
         "query_pl": "SELECT T1.donator_name FROM endowment AS T1 JOIN school AS T2 ON T1.school_id  =  T2.school_id WHERE T2.school_name  =  \"Glenn\" INTERSECT SELECT T1.donator_name FROM endowment AS T1 JOIN school AS T2 ON T1.school_id  =  T2.school_id WHERE T2.school_name  =  \"Tryton\""
     },
@@ -13708,16 +13708,16 @@
     {
         "db_id": "cinema",
         "question": "How many films have the word 'Dummy' in their titles?",
-        "question_pl": "Ile filmów ma w tytule słowo \"Atrapa\"?",
+        "question_pl": "Ile filmów ma w tytule słowo \"Dummy\"?",
         "query": "SELECT count(*) FROM film WHERE title LIKE \"%Dummy%\"",
-        "query_pl": "SELECT count(*) FROM film WHERE title LIKE \"%Atrapa%\""
+        "query_pl": "SELECT count(*) FROM film WHERE title LIKE \"%Dummy%\""
     },
     {
         "db_id": "cinema",
         "question": "Count the number of films whose title contains the word 'Dummy'.",
-        "question_pl": "Policz liczbę filmów, których tytuł zawiera słowo \"Atrapa\".",
+        "question_pl": "Policz liczbę filmów, których tytuł zawiera słowo \"Dummy\".",
         "query": "SELECT count(*) FROM film WHERE title LIKE \"%Dummy%\"",
-        "query_pl": "SELECT count(*) FROM film WHERE title LIKE \"%Atrapa%\""
+        "query_pl": "SELECT count(*) FROM film WHERE title LIKE \"%Dummy%\""
     },
     {
         "db_id": "products_for_hire",
@@ -16368,7 +16368,7 @@
     {
         "db_id": "csu_1",
         "question": "What is the campus fee of \"San Francisco State University\" in year 1996?",
-        "question_pl": "Ile wynosi opłata kampusowa na \"San Francisco State University\" w roku 1996?",
+        "question_pl": "Ile wynosi opłata kampusowa na \"Uniwersytet Stanowy San Francisco\" w roku 1996?",
         "query": "SELECT campusfee FROM campuses AS T1 JOIN csu_fees AS T2 ON T1.id  =  t2.campus WHERE t1.campus  =  \"San Francisco State University\" AND T2.year  =  1996",
         "query_pl": "SELECT campusfee FROM campuses AS T1 JOIN csu_fees AS T2 ON T1.id  =  t2.campus WHERE t1.campus  =  \"Uniwersytet Stanowy San Francisco\" AND T2.year  =  1996"
     },
@@ -16620,7 +16620,7 @@
     {
         "db_id": "csu_1",
         "question": "What is the number of faculty lines in campus \"Long Beach State University\" in 2002?",
-        "question_pl": "Jaka jest liczba wydziałów w kampusie \"Long Beach State University\" w 2002 roku?",
+        "question_pl": "Jaka jest liczba wydziałów w kampusie \"Uniwersytet Stanowy Long Beach\" w 2002 roku?",
         "query": "SELECT faculty FROM faculty AS T1 JOIN campuses AS T2 ON T1.campus  =  T2.id WHERE T1.year  =  2002 AND T2.campus  =  \"Long Beach State University\"",
         "query_pl": "SELECT faculty FROM faculty AS T1 JOIN campuses AS T2 ON T1.campus  =  T2.id WHERE T1.year  =  2002 AND T2.campus  =  \"Uniwersytet Stanowy Long Beach\""
     },
@@ -16634,7 +16634,7 @@
     {
         "db_id": "csu_1",
         "question": "How many faculty lines are there in \"San Francisco State University\" in year 2004?",
-        "question_pl": "Ile wydziałów ma \"San Francisco State University\" w 2004 roku?",
+        "question_pl": "Ile wydziałów ma \"Uniwersytet Stanowy San Francisco\" w 2004 roku?",
         "query": "SELECT faculty FROM faculty AS T1 JOIN campuses AS T2 ON T1.campus  =  T2.id WHERE T1.year  =  2004 AND T2.campus  =  \"San Francisco State University\"",
         "query_pl": "SELECT faculty FROM faculty AS T1 JOIN campuses AS T2 ON T1.campus  =  T2.id WHERE T1.year  =  2004 AND T2.campus  =  \"Uniwersytet Stanowy San Francisco\""
     },
@@ -16704,7 +16704,7 @@
     {
         "db_id": "csu_1",
         "question": "What is the number of graduates in \"San Francisco State University\" in year 2004?",
-        "question_pl": "Jaka jest liczba absolwentów \"San Francisco State University\" w 2004 roku?",
+        "question_pl": "Jaka jest liczba absolwentów \"Uniwersytet Stanowy San Francisco\" w 2004 roku?",
         "query": "SELECT sum(t1.graduate) FROM discipline_enrollments AS t1 JOIN campuses AS t2 ON t1.campus  =  t2.id WHERE t1.year  =  2004 AND t2.campus  =  \"San Francisco State University\"",
         "query_pl": "SELECT sum(t1.graduate) FROM discipline_enrollments AS t1 JOIN campuses AS t2 ON t1.campus  =  t2.id WHERE t1.year  =  2004 AND t2.campus  =  \"Uniwersytet Stanowy San Francisco\""
     },
@@ -16718,7 +16718,7 @@
     {
         "db_id": "csu_1",
         "question": "What is the campus fee of \"San Francisco State University\" in year 2000?",
-        "question_pl": "Ile wynosi opłata kampusowa na \"San Francisco State University\" w 2000 roku?",
+        "question_pl": "Ile wynosi opłata kampusowa na \"Uniwersytet Stanowy San Francisco\" w 2000 roku?",
         "query": "SELECT t1.campusfee FROM csu_fees AS t1 JOIN campuses AS t2 ON t1.campus  =  t2.id WHERE t2.campus  =  \"San Francisco State University\" AND t1.year  =  2000",
         "query_pl": "SELECT t1.campusfee FROM csu_fees AS t1 JOIN campuses AS t2 ON t1.campus  =  t2.id WHERE t2.campus  =  \"Uniwersytet Stanowy San Francisco\" AND t1.year  =  2000"
     },
@@ -18601,7 +18601,7 @@
     {
         "db_id": "local_govt_mdm",
         "question": "What are the distinct cross reference source system codes which are related to the master customer details 'Gottlieb, Becker and Wyman'?",
-        "question_pl": "Jakie są odrębne kody referencyjne systemu źródłowego, które są powiązane z głównymi danymi klienta \"Gottlieb, Becker and Wyman\"?",
+        "question_pl": "Jakie są odrębne kody referencyjne systemu źródłowego, które są powiązane z głównymi danymi klienta \"Gottlieb, Becker i Wyman\"?",
         "query": "SELECT DISTINCT T2.source_system_code FROM customer_master_index AS T1 JOIN cmi_cross_references AS T2 ON T1.master_customer_id  =  T2.master_customer_id WHERE T1.cmi_details  =  'Gottlieb ,  Becker and Wyman'",
         "query_pl": "SELECT DISTINCT T2.source_system_code FROM customer_master_index AS T1 JOIN cmi_cross_references AS T2 ON T1.master_customer_id  =  T2.master_customer_id WHERE T1.cmi_details  =  \"Gottlieb , Becker i Wyman\""
     },
@@ -19350,14 +19350,14 @@
     {
         "db_id": "election",
         "question": "What are the names of the county that the delegates on \"Appropriations\" committee belong to?",
-        "question_pl": "Jak nazywają się hrabstwa, do których należą delegaci w komisji \"Appropriations\"?",
+        "question_pl": "Jak nazywają się hrabstwa, do których należą delegaci w komisji \"Środki\"?",
         "query": "SELECT T1.County_name FROM county AS T1 JOIN election AS T2 ON T1.County_id  =  T2.District WHERE T2.Committee  =  \"Appropriations\"",
         "query_pl": "SELECT T1.County_name FROM county AS T1 JOIN election AS T2 ON T1.County_id  =  T2.District WHERE T2.Committee  =  \"Środki\""
     },
     {
         "db_id": "election",
         "question": "Which county do the delegates on \"Appropriations\" committee belong to? Give me the county names.",
-        "question_pl": "Do którego okręgu należą delegaci komisji \"Appropriations\"? Podaj mi nazwy okręgów.",
+        "question_pl": "Do którego okręgu należą delegaci komisji \"Środki\"? Podaj mi nazwy okręgów.",
         "query": "SELECT T1.County_name FROM county AS T1 JOIN election AS T2 ON T1.County_id  =  T2.District WHERE T2.Committee  =  \"Appropriations\"",
         "query_pl": "SELECT T1.County_name FROM county AS T1 JOIN election AS T2 ON T1.County_id  =  T2.District WHERE T2.Committee  =  \"Środki\""
     },
@@ -19588,14 +19588,14 @@
     {
         "db_id": "election",
         "question": "What are the names of parties that have both delegates on \"Appropriations\" committee and",
-        "question_pl": "Jakie są nazwy partii, które mają zarówno delegatów do komisji \"Appropriations\" i",
+        "question_pl": "Jakie są nazwy partii, które mają zarówno delegatów do komisji \"Środki\" i",
         "query": "SELECT T2.Party FROM election AS T1 JOIN party AS T2 ON T1.Party  =  T2.Party_ID WHERE T1.Committee  =  \"Appropriations\" INTERSECT SELECT T2.Party FROM election AS T1 JOIN party AS T2 ON T1.Party  =  T2.Party_ID WHERE T1.Committee  =  \"Economic Matters\"",
         "query_pl": "SELECT T2.Party FROM election AS T1 JOIN party AS T2 ON T1.Party  =  T2.Party_ID WHERE T1.Committee  =  \"Środki\" INTERSECT SELECT T2.Party FROM election AS T1 JOIN party AS T2 ON T1.Party  =  T2.Party_ID WHERE T1.Committee  =  \"Sprawy gospodarcze\""
     },
     {
         "db_id": "election",
         "question": "Which parties have delegates in both the \"Appropriations\" committee and the \"Economic Matters\" committee?",
-        "question_pl": "Które partie mają delegatów zarówno w komisji \"Appropriations\", jak i w komisji \"Economic Matters\"?",
+        "question_pl": "Które partie mają delegatów zarówno w komisji \"Środki\", jak i w komisji \"Sprawy gospodarcze\"?",
         "query": "SELECT T2.Party FROM election AS T1 JOIN party AS T2 ON T1.Party  =  T2.Party_ID WHERE T1.Committee  =  \"Appropriations\" INTERSECT SELECT T2.Party FROM election AS T1 JOIN party AS T2 ON T1.Party  =  T2.Party_ID WHERE T1.Committee  =  \"Economic Matters\"",
         "query_pl": "SELECT T2.Party FROM election AS T1 JOIN party AS T2 ON T1.Party  =  T2.Party_ID WHERE T1.Committee  =  \"Środki\" INTERSECT SELECT T2.Party FROM election AS T1 JOIN party AS T2 ON T1.Party  =  T2.Party_ID WHERE T1.Committee  =  \"Sprawy gospodarcze\""
     },
@@ -19637,7 +19637,7 @@
     {
         "db_id": "news_report",
         "question": "Show the names of journalists from \"England\" or \"Wales\".",
-        "question_pl": "Pokaż nazwiska dziennikarzy z \"Anglii\" lub \"Walii\".",
+        "question_pl": "Pokaż nazwiska dziennikarzy z \"Anglia\" lub \"Walii\".",
         "query": "SELECT Name FROM journalist WHERE Nationality  =  \"England\" OR Nationality  =  \"Wales\"",
         "query_pl": "SELECT Name FROM journalist WHERE Nationality  =  \"Anglia\" OR Nationality  =  \"Walia\""
     },
@@ -20120,14 +20120,14 @@
     {
         "db_id": "icfp_1",
         "question": "Who belong to the institution \"University of Oxford\"? Show the first names and last names.",
-        "question_pl": "Kto należy do instytucji \"University of Oxford\"? Pokaż imiona i nazwiska.",
+        "question_pl": "Kto należy do instytucji \"Uniwersytet Oksfordzki\"? Pokaż imiona i nazwiska.",
         "query": "SELECT DISTINCT t1.fname ,  t1.lname FROM authors AS t1 JOIN authorship AS t2 ON t1.authid  =  t2.authid JOIN inst AS t3 ON t2.instid  =  t3.instid WHERE t3.name  =  \"University of Oxford\"",
         "query_pl": "SELECT DISTINCT t1.fname ,  t1.lname FROM authors AS t1 JOIN authorship AS t2 ON t1.authid  =  t2.authid JOIN inst AS t3 ON t2.instid  =  t3.instid WHERE t3.name  =  \"Uniwersytet Oksfordzki\""
     },
     {
         "db_id": "icfp_1",
         "question": "Find the first names and last names of the authors whose institution affiliation is \"University of Oxford\".",
-        "question_pl": "Znajdź imiona i nazwiska autorów, których instytucją afiliacyjną jest \"University of Oxford\".",
+        "question_pl": "Znajdź imiona i nazwiska autorów, których instytucją afiliacyjną jest \"Uniwersytet Oksfordzki\".",
         "query": "SELECT DISTINCT t1.fname ,  t1.lname FROM authors AS t1 JOIN authorship AS t2 ON t1.authid  =  t2.authid JOIN inst AS t3 ON t2.instid  =  t3.instid WHERE t3.name  =  \"University of Oxford\"",
         "query_pl": "SELECT DISTINCT t1.fname ,  t1.lname FROM authors AS t1 JOIN authorship AS t2 ON t1.authid  =  t2.authid JOIN inst AS t3 ON t2.instid  =  t3.instid WHERE t3.name  =  \"Uniwersytet Oksfordzki\""
     },
@@ -20204,14 +20204,14 @@
     {
         "db_id": "icfp_1",
         "question": "How many papers are published by the institution \"Tokohu University\"?",
-        "question_pl": "Ile artykułów zostało opublikowanych przez instytucję \"Tokohu University\"?",
+        "question_pl": "Ile artykułów zostało opublikowanych przez instytucję \"Uniwersytet Tokohu\"?",
         "query": "SELECT count(DISTINCT t1.title) FROM papers AS t1 JOIN authorship AS t2 ON t1.paperid  =  t2.paperid JOIN inst AS t3 ON t2.instid  =  t3.instid WHERE t3.name  =  \"Tokohu University\"",
         "query_pl": "SELECT count(DISTINCT t1.title) FROM papers AS t1 JOIN authorship AS t2 ON t1.paperid  =  t2.paperid JOIN inst AS t3 ON t2.instid  =  t3.instid WHERE t3.name  =  \"Uniwersytet Tokohu\""
     },
     {
         "db_id": "icfp_1",
         "question": "Find the number of papers published by authors from the institution \"Tokohu University\".",
-        "question_pl": "Znajdź liczbę prac opublikowanych przez autorów z instytucji \"Tokohu University\".",
+        "question_pl": "Znajdź liczbę prac opublikowanych przez autorów z instytucji \"Uniwersytet Tokohu\".",
         "query": "SELECT count(DISTINCT t1.title) FROM papers AS t1 JOIN authorship AS t2 ON t1.paperid  =  t2.paperid JOIN inst AS t3 ON t2.instid  =  t3.instid WHERE t3.name  =  \"Tokohu University\"",
         "query_pl": "SELECT count(DISTINCT t1.title) FROM papers AS t1 JOIN authorship AS t2 ON t1.paperid  =  t2.paperid JOIN inst AS t3 ON t2.instid  =  t3.instid WHERE t3.name  =  \"Uniwersytet Tokohu\""
     },
@@ -20344,16 +20344,16 @@
     {
         "db_id": "icfp_1",
         "question": "Which paper's title contains the word \"Database\"?",
-        "question_pl": "Tytuł którego artykułu zawiera słowo \"Baza danych\"?",
+        "question_pl": "Tytuł którego artykułu zawiera słowo \"baza danych\"?",
         "query": "SELECT title FROM papers WHERE title LIKE \"%Database%\"",
-        "query_pl": "SELECT title FROM papers WHERE title LIKE \"%Baza danych%\""
+        "query_pl": "SELECT title FROM papers WHERE title LIKE \"%baza danych%\""
     },
     {
         "db_id": "icfp_1",
         "question": "Which papers have the substring \"Database\" in their titles? Show the titles of the papers.",
         "question_pl": "Które artykuły mają w tytule podciąg \"Baza danych\"? Pokaż tytuły artykułów.",
         "query": "SELECT title FROM papers WHERE title LIKE \"%Database%\"",
-        "query_pl": "SELECT title FROM papers WHERE title LIKE \"%Baza danych%\""
+        "query_pl": "SELECT title FROM papers WHERE title LIKE \"%baza danych%\""
     },
     {
         "db_id": "icfp_1",
@@ -20367,21 +20367,21 @@
         "question": "Who has written a paper that has the word \"Functional\" in its title? Return the first names of the authors.",
         "question_pl": "Kto napisał artykuł ze słowem \"funkcjonalny\" w tytule? Podaj imiona i nazwiska autorów.",
         "query": "SELECT t1.fname FROM authors AS t1 JOIN authorship AS t2 ON t1.authid  =  t2.authid JOIN papers AS t3 ON t2.paperid  =  t3.paperid WHERE t3.title LIKE \"%Functional%\"",
-        "query_pl": "SELECT t1.fname FROM authors AS t1 JOIN authorship AS t2 ON t1.authid  =  t2.authid JOIN papers AS t3 ON t2.paperid  =  t3.paperid WHERE t3.title LIKE \"%funkcjonalny%\""
+        "query_pl": "SELECT t1.fname FROM authors AS t1 JOIN authorship AS t2 ON t1.authid  =  t2.authid JOIN papers AS t3 ON t2.paperid  =  t3.paperid WHERE t3.title LIKE \"%Funkcjonalny%\""
     },
     {
         "db_id": "icfp_1",
         "question": "Find the last names of all the authors that have written a paper with title containing the word \"Monadic\".",
-        "question_pl": "Znajdź nazwiska wszystkich autorów, którzy napisali artykuł z tytułem zawierającym słowo \"Monadic\".",
+        "question_pl": "Znajdź nazwiska wszystkich autorów, którzy napisali artykuł z tytułem zawierającym słowo \"Monadyczny\".",
         "query": "SELECT t1.lname FROM authors AS t1 JOIN authorship AS t2 ON t1.authid  =  t2.authid JOIN papers AS t3 ON t2.paperid  =  t3.paperid WHERE t3.title LIKE \"%Monadic%\"",
-        "query_pl": "SELECT t1.lname FROM authors AS t1 JOIN authorship AS t2 ON t1.authid  =  t2.authid JOIN papers AS t3 ON t2.paperid  =  t3.paperid WHERE t3.title LIKE \"%Monadic%\""
+        "query_pl": "SELECT t1.lname FROM authors AS t1 JOIN authorship AS t2 ON t1.authid  =  t2.authid JOIN papers AS t3 ON t2.paperid  =  t3.paperid WHERE t3.title LIKE \"%Monadyczny%\""
     },
     {
         "db_id": "icfp_1",
         "question": "Which authors have written a paper with title containing the word \"Monadic\"? Return their last names.",
-        "question_pl": "Którzy autorzy napisali pracę, której tytuł zawiera słowo \"Monadic\"? Podaj ich nazwiska.",
+        "question_pl": "Którzy autorzy napisali pracę, której tytuł zawiera słowo \"Monadyczny\"? Podaj ich nazwiska.",
         "query": "SELECT t1.lname FROM authors AS t1 JOIN authorship AS t2 ON t1.authid  =  t2.authid JOIN papers AS t3 ON t2.paperid  =  t3.paperid WHERE t3.title LIKE \"%Monadic%\"",
-        "query_pl": "SELECT t1.lname FROM authors AS t1 JOIN authorship AS t2 ON t1.authid  =  t2.authid JOIN papers AS t3 ON t2.paperid  =  t3.paperid WHERE t3.title LIKE \"%Monadic%\""
+        "query_pl": "SELECT t1.lname FROM authors AS t1 JOIN authorship AS t2 ON t1.authid  =  t2.authid JOIN papers AS t3 ON t2.paperid  =  t3.paperid WHERE t3.title LIKE \"%Monadyczny%\""
     },
     {
         "db_id": "icfp_1",
@@ -20855,7 +20855,7 @@
     {
         "db_id": "sakila_1",
         "question": "What is the name of the language that the film 'AIRPORT POLLOCK' is in?",
-        "question_pl": "Jak nazywa się język, w którym nakręcono film \"AIRPORT POLLOCK\"?",
+        "question_pl": "Jak nazywa się język, w którym nakręcono film \"LOTNISKO POLLOCK\"?",
         "query": "SELECT T2.name FROM film AS T1 JOIN LANGUAGE AS T2 ON T1.language_id  =  T2.language_id WHERE T1.title  =  'AIRPORT POLLOCK'",
         "query_pl": "SELECT T2.name FROM film AS T1 JOIN LANGUAGE AS T2 ON T1.language_id  =  T2.language_id WHERE T1.title  =  \"LOTNISKO POLLOCK\""
     },
@@ -21695,9 +21695,9 @@
     {
         "db_id": "behavior_monitoring",
         "question": "Find the first names of teachers whose email address contains the word \"man\".",
-        "question_pl": "Znajdź imiona nauczycieli, których adres e-mail zawiera słowo \"man\".",
+        "question_pl": "Znajdź imiona nauczycieli, których adres e-mail zawiera słowo \"mężczyzna\".",
         "query": "SELECT first_name FROM Teachers WHERE email_address LIKE '%man%'",
-        "query_pl": "SELECT first_name FROM Teachers WHERE email_address LIKE '%man%'"
+        "query_pl": "SELECT first_name FROM Teachers WHERE email_address LIKE '%mężczyzna%'"
     },
     {
         "db_id": "behavior_monitoring",
@@ -21751,7 +21751,7 @@
     {
         "db_id": "behavior_monitoring",
         "question": "Find the id and last name of the teacher that has the most detentions with detention type code \"AFTER\"?",
-        "question_pl": "Znajdź identyfikator i nazwisko nauczyciela, który ma najwięcej zatrzymań z kodem typu zatrzymania \"AFTER\"?",
+        "question_pl": "Znajdź identyfikator i nazwisko nauczyciela, który ma najwięcej zatrzymań z kodem typu zatrzymania \"PO\"?",
         "query": "SELECT T1.teacher_id ,  T2.last_name FROM Detention AS T1 JOIN Teachers AS T2 ON T1.teacher_id  =  T2.teacher_id WHERE T1.detention_type_code  =  \"AFTER\" GROUP BY T1.teacher_id ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT T1.teacher_id ,  T2.last_name FROM Detention AS T1 JOIN Teachers AS T2 ON T1.teacher_id  =  T2.teacher_id WHERE T1.detention_type_code  =  \"PO\" GROUP BY T1.teacher_id ORDER BY count(*) DESC LIMIT 1"
     },
@@ -22122,9 +22122,9 @@
     {
         "db_id": "station_weather",
         "question": "How many trains have 'Express' in their names?",
-        "question_pl": "Ile pociągów ma w nazwie słowo \"Ekspres\"?",
+        "question_pl": "Ile pociągów ma w nazwie słowo \"Express\"?",
         "query": "SELECT count(*) FROM train WHERE name LIKE \"%Express%\"",
-        "query_pl": "SELECT count(*) FROM train WHERE name LIKE \"%Ekspres%\""
+        "query_pl": "SELECT count(*) FROM train WHERE name LIKE \"%Express%\""
     },
     {
         "db_id": "station_weather",
@@ -25419,14 +25419,14 @@
     {
         "db_id": "baseball_1",
         "question": "What is average salary of the players in the team named 'Boston Red Stockings' ?",
-        "question_pl": "Jaka jest średnia pensja zawodników w drużynie o nazwie \"Boston Red Stockings\"?",
+        "question_pl": "Jaka jest średnia pensja zawodników w drużynie o nazwie \"Czerwone pończochy Boston\"?",
         "query": "SELECT avg(T1.salary) FROM salary AS T1 JOIN team AS T2 ON T1.team_id  =  T2.team_id_br WHERE T2.name  = 'Boston Red Stockings'",
         "query_pl": "SELECT avg(T1.salary) FROM salary AS T1 JOIN team AS T2 ON T1.team_id  =  T2.team_id_br WHERE T2.name  = \"Czerwone pończochy Boston\""
     },
     {
         "db_id": "baseball_1",
         "question": "Compute the average salary of the players in the team called 'Boston Red Stockings'.",
-        "question_pl": "Oblicz średnią pensję zawodników drużyny o nazwie \"Boston Red Stockings\".",
+        "question_pl": "Oblicz średnią pensję zawodników drużyny o nazwie \"Czerwone pończochy Boston\".",
         "query": "SELECT avg(T1.salary) FROM salary AS T1 JOIN team AS T2 ON T1.team_id  =  T2.team_id_br WHERE T2.name  = 'Boston Red Stockings'",
         "query_pl": "SELECT avg(T1.salary) FROM salary AS T1 JOIN team AS T2 ON T1.team_id  =  T2.team_id_br WHERE T2.name  = \"Czerwone pończochy Boston\""
     },
@@ -25678,7 +25678,7 @@
     {
         "db_id": "baseball_1",
         "question": "Count the number of times the team \"Boston Red Stockings\" lost in 2009 postseason.",
-        "question_pl": "Policz, ile razy drużyna \"Boston Red Stockings\" przegrała w sezonie 2009.",
+        "question_pl": "Policz, ile razy drużyna \"Czerwone pończochy Boston\" przegrała w sezonie 2009.",
         "query": "SELECT count(*) FROM postseason AS T1 JOIN team AS T2 ON T1.team_id_loser  =  T2.team_id_br WHERE T2.name  =  'Boston Red Stockings' AND T1.year = 2009;",
         "query_pl": "SELECT count(*) FROM postseason AS T1 JOIN team AS T2 ON T1.team_id_loser  =  T2.team_id_br WHERE T2.name  =  \"Czerwone pończochy Boston\" AND T1.year = 2009;"
     },
@@ -26399,7 +26399,7 @@
     {
         "db_id": "e_learning",
         "question": "Return the description for the courses named \"database\".",
-        "question_pl": "Zwróć opis dla kursów o nazwie \"database\".",
+        "question_pl": "Zwróć opis dla kursów o nazwie \"baza danych\".",
         "query": "SELECT course_description FROM COURSES WHERE course_name  =  \"database\"",
         "query_pl": "SELECT course_description FROM COURSES WHERE course_name  =  \"baza danych\""
     },
@@ -26532,14 +26532,14 @@
     {
         "db_id": "e_learning",
         "question": "What are the dates of the latest logon of the students with family name \"Jaskolski\" or \"Langosh\"?",
-        "question_pl": "Jakie są daty ostatniego logowania uczniów o nazwisku \"Jaskolski\" lub \"Langosh\"?",
+        "question_pl": "Jakie są daty ostatniego logowania uczniów o nazwisku \"Jaskólski\" lub \"Langosh\"?",
         "query": "SELECT date_of_latest_logon FROM Students WHERE family_name  =  \"Jaskolski\" OR family_name  =  \"Langosh\"",
         "query_pl": "SELECT date_of_latest_logon FROM Students WHERE family_name  =  \"Jaskólski\" OR family_name  =  \"Langosh\""
     },
     {
         "db_id": "e_learning",
         "question": "Find the latest logon date of the students whose family name is \"Jaskolski\" or \"Langosh\".",
-        "question_pl": "Znajdź datę ostatniego logowania uczniów, których nazwisko rodowe to \"Jaskolski\" lub \"Langosh\".",
+        "question_pl": "Znajdź datę ostatniego logowania uczniów, których nazwisko rodowe to \"Jaskólski\" lub \"Langosh\".",
         "query": "SELECT date_of_latest_logon FROM Students WHERE family_name  =  \"Jaskolski\" OR family_name  =  \"Langosh\"",
         "query_pl": "SELECT date_of_latest_logon FROM Students WHERE family_name  =  \"Jaskólski\" OR family_name  =  \"Langosh\""
     },
@@ -26548,14 +26548,14 @@
         "question": "How many students have personal names that contain the word \"son\"?",
         "question_pl": "Ilu uczniów ma imiona zawierające słowo \"syn\"?",
         "query": "SELECT COUNT(*) FROM Students WHERE personal_name LIKE \"%son%\"",
-        "query_pl": "SELECT COUNT(*) FROM Students WHERE personal_name LIKE \"%son%\""
+        "query_pl": "SELECT COUNT(*) FROM Students WHERE personal_name LIKE \"%syn%\""
     },
     {
         "db_id": "e_learning",
         "question": "Find the number of students who have the word \"son\" in their personal names.",
         "question_pl": "Znajdź liczbę uczniów, którzy mają słowo \"syn\" w swoich imionach.",
         "query": "SELECT COUNT(*) FROM Students WHERE personal_name LIKE \"%son%\"",
-        "query_pl": "SELECT COUNT(*) FROM Students WHERE personal_name LIKE \"%son%\""
+        "query_pl": "SELECT COUNT(*) FROM Students WHERE personal_name LIKE \"%syn%\""
     },
     {
         "db_id": "e_learning",
@@ -26637,7 +26637,7 @@
     {
         "db_id": "e_learning",
         "question": "What are the addresses of the course authors who teach either \"operating system\" or \"data structure\" course.",
-        "question_pl": "Jakie są adresy autorów kursów, którzy uczą \"systemu operacyjnego\" lub \"struktury danych\".",
+        "question_pl": "Jakie są adresy autorów kursów, którzy uczą \"system operacyjny\" lub \"struktura danych\".",
         "query": "SELECT T1.address_line_1 FROM Course_Authors_and_Tutors AS T1 JOIN Courses AS T2 ON T1.author_id  =  T2.author_id WHERE T2.course_name  =  \"operating system\" OR T2.course_name  =  \"data structure\"",
         "query_pl": "SELECT T1.address_line_1 FROM Course_Authors_and_Tutors AS T1 JOIN Courses AS T2 ON T1.author_id  =  T2.author_id WHERE T2.course_name  =  \"system operacyjny\" OR T2.course_name  =  \"struktura danych\""
     },
@@ -29052,16 +29052,16 @@
     {
         "db_id": "film_rank",
         "question": "Find the titles and studios of the films that are produced by some film studios that contained the word \"Universal\".",
-        "question_pl": "Znajdź tytuły i studia filmów wyprodukowanych przez niektóre studia filmowe zawierające słowo \"Universal\".",
+        "question_pl": "Znajdź tytuły i studia filmów wyprodukowanych przez niektóre studia filmowe zawierające słowo \"Uniwersalny\".",
         "query": "SELECT title ,  Studio FROM film WHERE Studio LIKE \"%Universal%\"",
-        "query_pl": "SELECT title ,  Studio FROM film WHERE Studio LIKE \"%Universal%\""
+        "query_pl": "SELECT title ,  Studio FROM film WHERE Studio LIKE \"%Uniwersalny%\""
     },
     {
         "db_id": "film_rank",
         "question": "What are the titles and studios of films that have been produced by a studio whose name contains \"Universal\"?",
-        "question_pl": "Jakie są tytuły i studia filmów, które zostały wyprodukowane przez studio, którego nazwa zawiera słowo \"Universal\"?",
+        "question_pl": "Jakie są tytuły i studia filmów, które zostały wyprodukowane przez studio, którego nazwa zawiera słowo \"Uniwersalny\"?",
         "query": "SELECT title ,  Studio FROM film WHERE Studio LIKE \"%Universal%\"",
-        "query_pl": "SELECT title ,  Studio FROM film WHERE Studio LIKE \"%Universal%\""
+        "query_pl": "SELECT title ,  Studio FROM film WHERE Studio LIKE \"%Uniwersalny%\""
     },
     {
         "db_id": "film_rank",
@@ -29220,14 +29220,14 @@
     {
         "db_id": "cre_Doc_Tracking_DB",
         "question": "What is the date when the document \"Marry CV\" was stored?",
-        "question_pl": "Jaka jest data zapisania dokumentu \"Marry CV\"?",
+        "question_pl": "Jaka jest data zapisania dokumentu \"Poślub CV\"?",
         "query": "SELECT date_stored FROM All_documents WHERE Document_name  =  \"Marry CV\"",
         "query_pl": "SELECT date_stored FROM All_documents WHERE Document_name  =  \"Poślub CV\""
     },
     {
         "db_id": "cre_Doc_Tracking_DB",
         "question": "When was the document named \"Marry CV\" stored? Give me the date.",
-        "question_pl": "Kiedy został zapisany dokument o nazwie \"Marry CV\"? Podaj datę.",
+        "question_pl": "Kiedy został zapisany dokument o nazwie \"Poślub CV\"? Podaj datę.",
         "query": "SELECT date_stored FROM All_documents WHERE Document_name  =  \"Marry CV\"",
         "query_pl": "SELECT date_stored FROM All_documents WHERE Document_name  =  \"Poślub CV\""
     },
@@ -29514,14 +29514,14 @@
     {
         "db_id": "cre_Doc_Tracking_DB",
         "question": "Show the employee ids for all employees with role name \"Human Resource\" or \"Manager\".",
-        "question_pl": "Pokaż identyfikatory wszystkich pracowników z rolą \"Human Resource\" lub \"Manager\".",
+        "question_pl": "Pokaż identyfikatory wszystkich pracowników z rolą \"Zasoby ludzkie\" lub \"Kierownik\".",
         "query": "SELECT T1.employee_id FROM Employees AS T1 JOIN ROLES AS T2 ON T1.role_code  =  T2.role_code WHERE T2.role_name  =  \"Human Resource\" OR T2.role_name  =  \"Manager\"",
         "query_pl": "SELECT T1.employee_id FROM Employees AS T1 JOIN ROLES AS T2 ON T1.role_code  =  T2.role_code WHERE T2.role_name  =  \"Zasoby ludzkie\" OR T2.role_name  =  \"Kierownik\""
     },
     {
         "db_id": "cre_Doc_Tracking_DB",
         "question": "What are the employee ids of the employees whose role name is \"Human Resource\" or \"Manager\"?",
-        "question_pl": "Jakie są identyfikatory pracowników, których nazwa roli to \"Human Resource\" lub \"Manager\"?",
+        "question_pl": "Jakie są identyfikatory pracowników, których nazwa roli to \"Zasoby ludzkie\" lub \"Kierownik\"?",
         "query": "SELECT T1.employee_id FROM Employees AS T1 JOIN ROLES AS T2 ON T1.role_code  =  T2.role_code WHERE T2.role_name  =  \"Human Resource\" OR T2.role_name  =  \"Manager\"",
         "query_pl": "SELECT T1.employee_id FROM Employees AS T1 JOIN ROLES AS T2 ON T1.role_code  =  T2.role_code WHERE T2.role_name  =  \"Zasoby ludzkie\" OR T2.role_name  =  \"Kierownik\""
     },
@@ -29570,7 +29570,7 @@
     {
         "db_id": "cre_Doc_Tracking_DB",
         "question": "What is \"the date in location from\" and \"the date in location to\" for the document with name \"Robin CV\"?",
-        "question_pl": "Jaka jest \"data w lokalizacji od\" i \"data w lokalizacji do\" dla dokumentu o nazwie \"Robin CV\"?",
+        "question_pl": "Jaka jest \"dane w lokalizacji od\" i \"dane w lokalizacji do\" dla dokumentu o nazwie \"Robin CV\"?",
         "query": "SELECT T1.date_in_location_from ,  T1.date_in_locaton_to FROM Document_locations AS T1 JOIN All_documents AS T2 ON T1.document_id  =  T2.document_id WHERE T2.document_name  =  \"Robin CV\"",
         "query_pl": "SELECT T1.date_in_location_from ,  T1.date_in_locaton_to FROM Document_locations AS T1 JOIN All_documents AS T2 ON T1.document_id  =  T2.document_id WHERE T2.document_name  =  \"Robin CV\""
     },
@@ -29836,14 +29836,14 @@
     {
         "db_id": "club_1",
         "question": "How many members does the club \"Tennis Club\" has?",
-        "question_pl": "Ilu członków ma klub \"Tennis Club\"?",
+        "question_pl": "Ilu członków ma klub \"Klub tenisowy\"?",
         "query": "SELECT count(*) FROM club AS t1 JOIN member_of_club AS t2 ON t1.clubid  =  t2.clubid JOIN student AS t3 ON t2.stuid  =  t3.stuid WHERE t1.clubname  =  \"Tennis Club\"",
         "query_pl": "SELECT count(*) FROM club AS t1 JOIN member_of_club AS t2 ON t1.clubid  =  t2.clubid JOIN student AS t3 ON t2.stuid  =  t3.stuid WHERE t1.clubname  =  \"Klub tenisowy\""
     },
     {
         "db_id": "club_1",
         "question": "Count the members of the club \"Tennis Club\".",
-        "question_pl": "Policz członków klubu \"Tennis Club\".",
+        "question_pl": "Policz członków klubu \"Klub tenisowy\".",
         "query": "SELECT count(*) FROM club AS t1 JOIN member_of_club AS t2 ON t1.clubid  =  t2.clubid JOIN student AS t3 ON t2.stuid  =  t3.stuid WHERE t1.clubname  =  \"Tennis Club\"",
         "query_pl": "SELECT count(*) FROM club AS t1 JOIN member_of_club AS t2 ON t1.clubid  =  t2.clubid JOIN student AS t3 ON t2.stuid  =  t3.stuid WHERE t1.clubname  =  \"Klub tenisowy\""
     },
@@ -29962,14 +29962,14 @@
     {
         "db_id": "club_1",
         "question": "What is the description of the club named \"Tennis Club\"?",
-        "question_pl": "Jaki jest opis klubu o nazwie \"Tennis Club\"?",
+        "question_pl": "Jaki jest opis klubu o nazwie \"Klub tenisowy\"?",
         "query": "SELECT clubdesc FROM club WHERE clubname  =  \"Tennis Club\"",
         "query_pl": "SELECT clubdesc FROM club WHERE clubname  =  \"Klub tenisowy\""
     },
     {
         "db_id": "club_1",
         "question": "Find the description of the club called \"Tennis Club\".",
-        "question_pl": "Znajdź opis klubu o nazwie \"Tennis Club\".",
+        "question_pl": "Znajdź opis klubu o nazwie \"Klub tenisowy\".",
         "query": "SELECT clubdesc FROM club WHERE clubname  =  \"Tennis Club\"",
         "query_pl": "SELECT clubdesc FROM club WHERE clubname  =  \"Klub tenisowy\""
     },
@@ -29990,14 +29990,14 @@
     {
         "db_id": "club_1",
         "question": "What is the location of the club named \"Tennis Club\"?",
-        "question_pl": "Jaka jest lokalizacja klubu o nazwie \"Tennis Club\"?",
+        "question_pl": "Jaka jest lokalizacja klubu o nazwie \"Klub tenisowy\"?",
         "query": "SELECT clublocation FROM club WHERE clubname  =  \"Tennis Club\"",
         "query_pl": "SELECT clublocation FROM club WHERE clubname  =  \"Klub tenisowy\""
     },
     {
         "db_id": "club_1",
         "question": "Where us the club named \"Tennis Club\" located?",
-        "question_pl": "Gdzie znajduje się klub o nazwie \"Tennis Club\"?",
+        "question_pl": "Gdzie znajduje się klub o nazwie \"Klub tenisowy\"?",
         "query": "SELECT clublocation FROM club WHERE clubname  =  \"Tennis Club\"",
         "query_pl": "SELECT clublocation FROM club WHERE clubname  =  \"Klub tenisowy\""
     },
@@ -30228,14 +30228,14 @@
     {
         "db_id": "club_1",
         "question": "Retrieve the average age of members of the club \"Tennis Club\".",
-        "question_pl": "Pobierz średnią wieku członków klubu \"Tennis Club\".",
+        "question_pl": "Pobierz średnią wieku członków klubu \"Klub tenisowy\".",
         "query": "SELECT avg(t3.age) FROM club AS t1 JOIN member_of_club AS t2 ON t1.clubid  =  t2.clubid JOIN student AS t3 ON t2.stuid  =  t3.stuid WHERE t1.clubname  =  \"Tennis Club\"",
         "query_pl": "SELECT avg(t3.age) FROM club AS t1 JOIN member_of_club AS t2 ON t1.clubid  =  t2.clubid JOIN student AS t3 ON t2.stuid  =  t3.stuid WHERE t1.clubname  =  \"Klub tenisowy\""
     },
     {
         "db_id": "club_1",
         "question": "Compute the average age of the members in the club \"Tennis Club\".",
-        "question_pl": "Oblicz średni wiek członków klubu \"Tennis Club\".",
+        "question_pl": "Oblicz średni wiek członków klubu \"Klub tenisowy\".",
         "query": "SELECT avg(t3.age) FROM club AS t1 JOIN member_of_club AS t2 ON t1.clubid  =  t2.clubid JOIN student AS t3 ON t2.stuid  =  t3.stuid WHERE t1.clubname  =  \"Tennis Club\"",
         "query_pl": "SELECT avg(t3.age) FROM club AS t1 JOIN member_of_club AS t2 ON t1.clubid  =  t2.clubid JOIN student AS t3 ON t2.stuid  =  t3.stuid WHERE t1.clubname  =  \"Klub tenisowy\""
     },
@@ -30550,16 +30550,16 @@
     {
         "db_id": "tracking_grants_for_research",
         "question": "Which document type is described with the prefix 'Initial'?",
-        "question_pl": "Który typ dokumentu jest opisany przedrostkiem \"Wstępny\"?",
+        "question_pl": "Który typ dokumentu jest opisany przedrostkiem \"Początkowy\"?",
         "query": "SELECT document_type_code FROM Document_Types WHERE document_description LIKE 'Initial%'",
-        "query_pl": "SELECT document_type_code FROM Document_Types WHERE document_description LIKE 'Wstępny%'"
+        "query_pl": "SELECT document_type_code FROM Document_Types WHERE document_description LIKE 'Początkowy%'"
     },
     {
         "db_id": "tracking_grants_for_research",
         "question": "What is the type of the document whose description starts with the word 'Initial'?",
-        "question_pl": "Jaki jest typ dokumentu, którego opis zaczyna się od słowa \"Wstępny\"?",
+        "question_pl": "Jaki jest typ dokumentu, którego opis zaczyna się od słowa \"Początkowy\"?",
         "query": "SELECT document_type_code FROM Document_Types WHERE document_description LIKE 'Initial%'",
-        "query_pl": "SELECT document_type_code FROM Document_Types WHERE document_description LIKE 'Wstępny%'"
+        "query_pl": "SELECT document_type_code FROM Document_Types WHERE document_description LIKE 'Początkowy%'"
     },
     {
         "db_id": "tracking_grants_for_research",
@@ -33707,7 +33707,7 @@
     {
         "db_id": "aircraft",
         "question": "Please show the names of aircrafts associated with airport with name \"London Gatwick\".",
-        "question_pl": "Pokaż nazwy samolotów związanych z lotniskiem o nazwie \"London Gatwick\".",
+        "question_pl": "Pokaż nazwy samolotów związanych z lotniskiem o nazwie \"Londyn Gatwick\".",
         "query": "SELECT T1.Aircraft FROM aircraft AS T1 JOIN airport_aircraft AS T2 ON T1.Aircraft_ID  =  T2.Aircraft_ID JOIN airport AS T3 ON T2.Airport_ID  =  T3.Airport_ID WHERE T3.Airport_Name  =  \"London Gatwick\"",
         "query_pl": "SELECT T1.Aircraft FROM aircraft AS T1 JOIN airport_aircraft AS T2 ON T1.Aircraft_ID  =  T2.Aircraft_ID JOIN airport AS T3 ON T2.Airport_ID  =  T3.Airport_ID WHERE T3.Airport_Name  =  \"Londyn Gatwick\""
     },
@@ -33833,7 +33833,7 @@
     {
         "db_id": "aircraft",
         "question": "Show the names of aircrafts that are associated with both an airport named \"London Heathrow\" and an airport named \"London Gatwick\"",
-        "question_pl": "Pokaż nazwy samolotów, które są powiązane zarówno z lotniskiem o nazwie \"London Heathrow\", jak i lotniskiem o nazwie \"London Gatwick\".",
+        "question_pl": "Pokaż nazwy samolotów, które są powiązane zarówno z lotniskiem o nazwie \"London Heathrow\", jak i lotniskiem o nazwie \"Londyn Gatwick\".",
         "query": "SELECT T1.Aircraft FROM aircraft AS T1 JOIN airport_aircraft AS T2 ON T1.Aircraft_ID  =  T2.Aircraft_ID JOIN airport AS T3 ON T2.Airport_ID  =  T3.Airport_ID WHERE T3.Airport_Name  =  \"London Heathrow\" INTERSECT SELECT T1.Aircraft FROM aircraft AS T1 JOIN airport_aircraft AS T2 ON T1.Aircraft_ID  =  T2.Aircraft_ID JOIN airport AS T3 ON T2.Airport_ID  =  T3.Airport_ID WHERE T3.Airport_Name  =  \"London Gatwick\"",
         "query_pl": "SELECT T1.Aircraft FROM aircraft AS T1 JOIN airport_aircraft AS T2 ON T1.Aircraft_ID  =  T2.Aircraft_ID JOIN airport AS T3 ON T2.Airport_ID  =  T3.Airport_ID WHERE T3.Airport_Name  =  \"Londyn Heathrow\" INTERSECT SELECT T1.Aircraft FROM aircraft AS T1 JOIN airport_aircraft AS T2 ON T1.Aircraft_ID  =  T2.Aircraft_ID JOIN airport AS T3 ON T2.Airport_ID  =  T3.Airport_ID WHERE T3.Airport_Name  =  \"Londyn Gatwick\""
     },
@@ -33959,7 +33959,7 @@
     {
         "db_id": "local_govt_and_lot",
         "question": "What are the distinct id and type of the thing that has the status 'Close' or has a status record before the date '2017-06-19 02:59:21'",
-        "question_pl": "Jaki jest odrębny identyfikator i typ rzeczy, która ma status \"Close\" lub ma rekord statusu przed datą \"2017-06-19 02:59:21\"?",
+        "question_pl": "Jaki jest odrębny identyfikator i typ rzeczy, która ma status \"Zamknij\" lub ma rekord statusu przed datą \"2017-06-19 02:59:21\"?",
         "query": "SELECT DISTINCT T2.thing_id ,  T2.Type_of_Thing_Code FROM Timed_Status_of_Things AS T1 JOIN Things AS T2 ON T1.thing_id  =  T2.thing_id WHERE T1.Status_of_Thing_Code  =  'Close' OR T1.Date_and_Date  <  '2017-06-19 02:59:21'",
         "query_pl": "SELECT DISTINCT T2.thing_id ,  T2.Type_of_Thing_Code FROM Timed_Status_of_Things AS T1 JOIN Things AS T2 ON T1.thing_id  =  T2.thing_id WHERE T1.Status_of_Thing_Code  =  \"Zamknij\" OR T1.Date_and_Date  <  \"2017-06-19 02:59:21\""
     },
@@ -34540,16 +34540,16 @@
     {
         "db_id": "store_product",
         "question": "Find all the product whose name contains the word \"Scanner\".",
-        "question_pl": "Znajdź wszystkie produkty, których nazwa zawiera słowo \"Skaner\".",
+        "question_pl": "Znajdź wszystkie produkty, których nazwa zawiera słowo \"skaner\".",
         "query": "SELECT product FROM product WHERE product LIKE \"%Scanner%\"",
         "query_pl": "SELECT product FROM product WHERE product LIKE \"%Skaner%\""
     },
     {
         "db_id": "store_product",
         "question": "What are all of the products whose name includes the substring \"Scanner\"?",
-        "question_pl": "Jakie są wszystkie produkty, których nazwa zawiera podciąg \"Scanner\"?",
+        "question_pl": "Jakie są wszystkie produkty, których nazwa zawiera podciąg \"Skaner\"?",
         "query": "SELECT product FROM product WHERE product LIKE \"%Scanner%\"",
-        "query_pl": "SELECT product FROM product WHERE product LIKE \"%Scanner%\""
+        "query_pl": "SELECT product FROM product WHERE product LIKE \"%Skaner%\""
     },
     {
         "db_id": "store_product",
@@ -35842,14 +35842,14 @@
     {
         "db_id": "cre_Drama_Workshop_Groups",
         "question": "Which city is the address of the store named \"FJA Filming\" located in?",
-        "question_pl": "W jakim mieście znajduje się adres sklepu o nazwie \"FJA Filming\"?",
+        "question_pl": "W jakim mieście znajduje się adres sklepu o nazwie \"Filmowanie FJA\"?",
         "query": "SELECT T1.City_Town FROM Addresses AS T1 JOIN Stores AS T2 ON T1.Address_ID  =  T2.Address_ID WHERE T2.Store_Name  =  \"FJA Filming\"",
         "query_pl": "SELECT T1.City_Town FROM Addresses AS T1 JOIN Stores AS T2 ON T1.Address_ID  =  T2.Address_ID WHERE T2.Store_Name  =  \"Filmowanie FJA\""
     },
     {
         "db_id": "cre_Drama_Workshop_Groups",
         "question": "Find the city the store named \"FJA Filming\" is in.",
-        "question_pl": "Znajdź miasto, w którym znajduje się sklep o nazwie \"FJA Filming\".",
+        "question_pl": "Znajdź miasto, w którym znajduje się sklep o nazwie \"Filmowanie FJA\".",
         "query": "SELECT T1.City_Town FROM Addresses AS T1 JOIN Stores AS T2 ON T1.Address_ID  =  T2.Address_ID WHERE T2.Store_Name  =  \"FJA Filming\"",
         "query_pl": "SELECT T1.City_Town FROM Addresses AS T1 JOIN Stores AS T2 ON T1.Address_ID  =  T2.Address_ID WHERE T2.Store_Name  =  \"Filmowanie FJA\""
     },
@@ -36304,14 +36304,14 @@
     {
         "db_id": "music_2",
         "question": "Find all the songs produced by artists with first name \"Marianne\".",
-        "question_pl": "Znajdź wszystkie piosenki wyprodukowane przez artystów o imieniu \"Marianne\".",
+        "question_pl": "Znajdź wszystkie piosenki wyprodukowane przez artystów o imieniu \"Marianna\".",
         "query": "SELECT T3.Title FROM Performance AS T1 JOIN Band AS T2 ON T1.bandmate  =  T2.id JOIN Songs AS T3 ON T3.SongId  =  T1.SongId WHERE T2.firstname  =  \"Marianne\"",
         "query_pl": "SELECT T3.Title FROM Performance AS T1 JOIN Band AS T2 ON T1.bandmate  =  T2.id JOIN Songs AS T3 ON T3.SongId  =  T1.SongId WHERE T2.firstname  =  \"Marianna\""
     },
     {
         "db_id": "music_2",
         "question": "What are the names of all songs produced by the artist with the first name \"Marianne\"?",
-        "question_pl": "Jak nazywają się wszystkie utwory wyprodukowane przez artystkę o imieniu \"Marianne\"?",
+        "question_pl": "Jak nazywają się wszystkie utwory wyprodukowane przez artystkę o imieniu \"Marianna\"?",
         "query": "SELECT T3.Title FROM Performance AS T1 JOIN Band AS T2 ON T1.bandmate  =  T2.id JOIN Songs AS T3 ON T3.SongId  =  T1.SongId WHERE T2.firstname  =  \"Marianne\"",
         "query_pl": "SELECT T3.Title FROM Performance AS T1 JOIN Band AS T2 ON T1.bandmate  =  T2.id JOIN Songs AS T3 ON T3.SongId  =  T1.SongId WHERE T2.firstname  =  \"Marianna\""
     },
@@ -36458,7 +36458,7 @@
     {
         "db_id": "music_2",
         "question": "How many songs have used the instrument \"drums\"?",
-        "question_pl": "W ilu utworach użyto instrumentu \"drums\"?",
+        "question_pl": "W ilu utworach użyto instrumentu \"bębny\"?",
         "query": "SELECT count(*) FROM instruments WHERE instrument  =  \"drums\"",
         "query_pl": "SELECT count(*) FROM instruments WHERE instrument  =  \"bębny\""
     },
@@ -36612,14 +36612,14 @@
     {
         "db_id": "music_2",
         "question": "Which vocal type did the musician with first name \"Solveig\" played in the song with title \"A Bar in Amsterdam\"?",
-        "question_pl": "Jaki rodzaj wokalu wykonał muzyk o imieniu \"Solveig\" w utworze o tytule \"A Bar in Amsterdam\"?",
+        "question_pl": "Jaki rodzaj wokalu wykonał muzyk o imieniu \"Solveig\" w utworze o tytule \"Bar w Amsterdamie\"?",
         "query": "SELECT TYPE FROM vocals AS T1 JOIN songs AS T2 ON T1.songid  =  T2.songid JOIN band AS T3 ON T1.bandmate  =  T3.id WHERE T3.firstname  =  \"Solveig\" AND T2.title  =  \"A Bar In Amsterdam\"",
         "query_pl": "SELECT TYPE FROM vocals AS T1 JOIN songs AS T2 ON T1.songid  =  T2.songid JOIN band AS T3 ON T1.bandmate  =  T3.id WHERE T3.firstname  =  \"Solveig\" AND T2.title  =  \"Bar w Amsterdamie\""
     },
     {
         "db_id": "music_2",
         "question": "What are the types of vocals that the musician with the first name \"Solveig\" played in the song \"A Bar in Amsterdam\"?",
-        "question_pl": "Jakie są rodzaje wokali, które muzyk o imieniu \"Solveig\" zagrał w piosence \"A Bar in Amsterdam\"?",
+        "question_pl": "Jakie są rodzaje wokali, które muzyk o imieniu \"Solveig\" zagrał w piosence \"Bar w Amsterdamie\"?",
         "query": "SELECT TYPE FROM vocals AS T1 JOIN songs AS T2 ON T1.songid  =  T2.songid JOIN band AS T3 ON T1.bandmate  =  T3.id WHERE T3.firstname  =  \"Solveig\" AND T2.title  =  \"A Bar In Amsterdam\"",
         "query_pl": "SELECT TYPE FROM vocals AS T1 JOIN songs AS T2 ON T1.songid  =  T2.songid JOIN band AS T3 ON T1.bandmate  =  T3.id WHERE T3.firstname  =  \"Solveig\" AND T2.title  =  \"Bar w Amsterdamie\""
     },
@@ -36822,14 +36822,14 @@
     {
         "db_id": "music_2",
         "question": "Which vocal type has the band mate with first name \"Marianne\" played the most?",
-        "question_pl": "Który rodzaj wokalu najczęściej wykonywał członek zespołu o imieniu \"Marianne\"?",
+        "question_pl": "Który rodzaj wokalu najczęściej wykonywał członek zespołu o imieniu \"Marianna\"?",
         "query": "SELECT TYPE FROM vocals AS T1 JOIN band AS T2 ON T1.bandmate  =  T2.id WHERE firstname  =  \"Marianne\" GROUP BY TYPE ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT TYPE FROM vocals AS T1 JOIN band AS T2 ON T1.bandmate  =  T2.id WHERE firstname  =  \"Marianna\" GROUP BY TYPE ORDER BY count(*) DESC LIMIT 1"
     },
     {
         "db_id": "music_2",
         "question": "What is the vocal type of the band mate whose first name is \"Marianne\" played the most?",
-        "question_pl": "Jaki jest najczęściej grany typ wokalu kolegi z zespołu, który ma na imię \"Marianne\"?",
+        "question_pl": "Jaki jest najczęściej grany typ wokalu kolegi z zespołu, który ma na imię \"Marianna\"?",
         "query": "SELECT TYPE FROM vocals AS T1 JOIN band AS T2 ON T1.bandmate  =  T2.id WHERE firstname  =  \"Marianne\" GROUP BY TYPE ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT TYPE FROM vocals AS T1 JOIN band AS T2 ON T1.bandmate  =  T2.id WHERE firstname  =  \"Marianna\" GROUP BY TYPE ORDER BY count(*) DESC LIMIT 1"
     },
@@ -36864,14 +36864,14 @@
     {
         "db_id": "music_2",
         "question": "What are the songs in album \"A Kiss Before You Go: Live in Hamburg\"?",
-        "question_pl": "Jakie utwory znajdują się na albumie \"A Kiss Before You Go: Live in Hamburg\"?",
+        "question_pl": "Jakie utwory znajdują się na albumie \"Pocałunek zanim odejdziesz: na żywo w Hamburgu\"?",
         "query": "SELECT T3.title FROM albums AS T1 JOIN tracklists AS T2 ON T1.aid  =  T2.albumid JOIN songs AS T3 ON T2.songid  =  T3.songid WHERE T1.title  =  \"A Kiss Before You Go: Live in Hamburg\"",
         "query_pl": "SELECT T3.title FROM albums AS T1 JOIN tracklists AS T2 ON T1.aid  =  T2.albumid JOIN songs AS T3 ON T2.songid  =  T3.songid WHERE T1.title  =  \"A Kiss Before You Go: Live in Hamburg\""
     },
     {
         "db_id": "music_2",
         "question": "What are the song titles on the album \"A Kiss Before You Go: Live in Hamburg\"?",
-        "question_pl": "Jakie są tytuły piosenek na albumie \"A Kiss Before You Go: Live in Hamburg\"?",
+        "question_pl": "Jakie są tytuły piosenek na albumie \"Pocałunek zanim odejdziesz: na żywo w Hamburgu\"?",
         "query": "SELECT T3.title FROM albums AS T1 JOIN tracklists AS T2 ON T1.aid  =  T2.albumid JOIN songs AS T3 ON T2.songid  =  T3.songid WHERE T1.title  =  \"A Kiss Before You Go: Live in Hamburg\"",
         "query_pl": "SELECT T3.title FROM albums AS T1 JOIN tracklists AS T2 ON T1.aid  =  T2.albumid JOIN songs AS T3 ON T2.songid  =  T3.songid WHERE T1.title  =  \"A Kiss Before You Go: Live in Hamburg\""
     },
@@ -39006,7 +39006,7 @@
     {
         "db_id": "products_gen_characteristics",
         "question": "List the all the distinct names of the products with the characteristic name 'warm'.",
-        "question_pl": "Wymień wszystkie odrębne nazwy produktów z charakterystyczną nazwą \"warm\".",
+        "question_pl": "Wymień wszystkie odrębne nazwy produktów z charakterystyczną nazwą \"ciepły\".",
         "query": "SELECT DISTINCT t1.product_name FROM products AS t1 JOIN product_characteristics AS t2 ON t1.product_id  =  t2.product_id JOIN CHARACTERISTICS AS t3 ON t2.characteristic_id  =  t3.characteristic_id WHERE t3.characteristic_name  =  \"warm\"",
         "query_pl": "SELECT DISTINCT t1.product_name FROM products AS t1 JOIN product_characteristics AS t2 ON t1.product_id  =  t2.product_id JOIN CHARACTERISTICS AS t3 ON t2.characteristic_id  =  t3.characteristic_id WHERE t3.characteristic_name  =  \"ciepły\""
     },
@@ -39055,7 +39055,7 @@
     {
         "db_id": "products_gen_characteristics",
         "question": "Return the unit of measure for 'Herb' products.",
-        "question_pl": "Zwróć jednostkę miary dla produktów \"Herb\".",
+        "question_pl": "Zwróć jednostkę miary dla produktów \"Zioło\".",
         "query": "SELECT unit_of_measure FROM ref_product_categories WHERE product_category_code  =  \"Herbs\"",
         "query_pl": "SELECT unit_of_measure FROM ref_product_categories WHERE product_category_code  =  \"Zioła\""
     },
@@ -39874,16 +39874,16 @@
     {
         "db_id": "dorm_1",
         "question": "Find the capacity and gender type of the dorm whose name has substring ‘Donor’.",
-        "question_pl": "Znajdź pojemność i typ płci akademika, którego nazwa zawiera podciąg \"Dawca\".",
+        "question_pl": "Znajdź pojemność i typ płci akademika, którego nazwa zawiera podciąg \"Darczyńca\".",
         "query": "SELECT student_capacity ,  gender FROM dorm WHERE dorm_name LIKE '%Donor%'",
-        "query_pl": "SELECT student_capacity ,  gender FROM dorm WHERE dorm_name LIKE '%Dawca%'"
+        "query_pl": "SELECT student_capacity ,  gender FROM dorm WHERE dorm_name LIKE '%Darczyńca%'"
     },
     {
         "db_id": "dorm_1",
         "question": "What is the student capacity and type of gender for the dorm whose name as the phrase Donor in it?",
-        "question_pl": "Jaka jest liczba studentów i rodzaj płci w akademiku, którego nazwa to Dawca?",
+        "question_pl": "Jaka jest liczba studentów i rodzaj płci w akademiku, którego nazwa to Donor?",
         "query": "SELECT student_capacity ,  gender FROM dorm WHERE dorm_name LIKE '%Donor%'",
-        "query_pl": "SELECT student_capacity ,  gender FROM dorm WHERE dorm_name LIKE '%Dawca%'"
+        "query_pl": "SELECT student_capacity ,  gender FROM dorm WHERE dorm_name LIKE '%Darczyńca%'"
     },
     {
         "db_id": "dorm_1",
@@ -40742,14 +40742,14 @@
     {
         "db_id": "workshop_paper",
         "question": "Show the names of authors from college \"Florida\" or \"Temple\"",
-        "question_pl": "Pokaż nazwiska autorów z uczelni \"Florida\" lub \"Temple\".",
+        "question_pl": "Pokaż nazwiska autorów z uczelni \"Floryda\" lub \"Świątynia\".",
         "query": "SELECT Author FROM submission WHERE College  =  \"Florida\" OR College  =  \"Temple\"",
         "query_pl": "SELECT Author FROM submission WHERE College  =  \"Floryda\" OR College  =  \"Świątynia\""
     },
     {
         "db_id": "workshop_paper",
         "question": "Which authors with submissions are from college \"Florida\" or \"Temple\"?",
-        "question_pl": "Którzy autorzy ze zgłoszeniami pochodzą z uczelni \"Florida\" lub \"Temple\"?",
+        "question_pl": "Którzy autorzy ze zgłoszeniami pochodzą z uczelni \"Floryda\" lub \"Świątynia\"?",
         "query": "SELECT Author FROM submission WHERE College  =  \"Florida\" OR College  =  \"Temple\"",
         "query_pl": "SELECT Author FROM submission WHERE College  =  \"Floryda\" OR College  =  \"Świątynia\""
     },
@@ -42443,7 +42443,7 @@
     {
         "db_id": "customers_and_addresses",
         "question": "Find the \"date became customers\" of the customers whose ID is between 10 and 20.",
-        "question_pl": "Znajdź \"date became customers\" klientów, których ID mieści się w przedziale od 10 do 20.",
+        "question_pl": "Znajdź \"data stała się klientem\" klientów, których ID mieści się w przedziale od 10 do 20.",
         "query": "SELECT date_became_customer FROM customers WHERE customer_id BETWEEN 10 AND 20",
         "query_pl": "SELECT date_became_customer FROM customers WHERE customer_id BETWEEN 10 AND 20"
     },
@@ -42555,7 +42555,7 @@
     {
         "db_id": "customers_and_addresses",
         "question": "How many customers are living in city \"Lake Geovannyton\"?",
-        "question_pl": "Ilu klientów mieszka w mieście \"Lake Geovannyton\"?",
+        "question_pl": "Ilu klientów mieszka w mieście \"Jezioro Geovannyton\"?",
         "query": "SELECT count(*) FROM customers AS t1 JOIN customer_addresses AS t2 ON t1.customer_id  =  t2.customer_id JOIN addresses AS t3 ON t2.address_id  =  t3.address_id WHERE t3.city  =  \"Lake Geovannyton\"",
         "query_pl": "SELECT count(*) FROM customers AS t1 JOIN customer_addresses AS t2 ON t1.customer_id  =  t2.customer_id JOIN addresses AS t3 ON t2.address_id  =  t3.address_id WHERE t3.city  =  \"Jezioro Geovannyton\""
     },
@@ -42702,7 +42702,7 @@
     {
         "db_id": "customers_and_addresses",
         "question": "Return the the \"active to date\" of the latest contact channel used by the customer named \"Tillman Ernser\".",
-        "question_pl": "Zwróć wartość \"active to date\" ostatniego kanału kontaktowego używanego przez klienta o nazwie \"Tillman Ernser\".",
+        "question_pl": "Zwróć wartość \"aktywny do tej pory\" ostatniego kanału kontaktowego używanego przez klienta o nazwie \"Tillman Ernser\".",
         "query": "SELECT max(t2.active_to_date) FROM customers AS t1 JOIN customer_contact_channels AS t2 ON t1.customer_id  =  t2.customer_id WHERE t1.customer_name  =  \"Tillman Ernser\"",
         "query_pl": "SELECT max(t2.active_to_date) FROM customers AS t1 JOIN customer_contact_channels AS t2 ON t1.customer_id  =  t2.customer_id WHERE t1.customer_name  =  \"Tillman Ernser\""
     },
@@ -44634,7 +44634,7 @@
     {
         "db_id": "flight_company",
         "question": "What are the different pilot names who had piloted a flight in the country 'United States' or in the airport named 'Billund Airport'?",
-        "question_pl": "Jakie są różne nazwiska pilotów, którzy pilotowali lot w kraju \"Stany Zjednoczone\" lub na lotnisku o nazwie \"Billund Airport\"?",
+        "question_pl": "Jakie są różne nazwiska pilotów, którzy pilotowali lot w kraju \"Stany Zjednoczone\" lub na lotnisku o nazwie \"Lotnisko Billund\"?",
         "query": "SELECT DISTINCT T2.pilot FROM airport AS T1 JOIN flight AS T2 ON T1.id  =  T2.airport_id WHERE T1.country  =  'United States' OR T1.name  =  'Billund Airport'",
         "query_pl": "SELECT DISTINCT T2.pilot FROM airport AS T1 JOIN flight AS T2 ON T1.id  =  T2.airport_id WHERE T1.country  =  \"Stany Zjednoczone\" OR T1.name  =  \"Lotnisko Billund\""
     },
@@ -44865,14 +44865,14 @@
     {
         "db_id": "cre_Docs_and_Epenses",
         "question": "Show the document name and the document date for all documents on project with details 'Graph Database project'.",
-        "question_pl": "Pokaż nazwę dokumentu i datę dokumentu dla wszystkich dokumentów w projekcie ze szczegółami \"Graph Database project\".",
+        "question_pl": "Pokaż nazwę dokumentu i datę dokumentu dla wszystkich dokumentów w projekcie ze szczegółami \"Projekt graficznej bazy danych\".",
         "query": "SELECT document_name ,  document_date FROM Documents AS T1 JOIN projects AS T2 ON T1.project_id  =  T2.project_id WHERE T2.project_details  =  'Graph Database project'",
         "query_pl": "SELECT document_name ,  document_date FROM Documents AS T1 JOIN projects AS T2 ON T1.project_id  =  T2.project_id WHERE T2.project_details  =  \"Projekt graficznej bazy danych\""
     },
     {
         "db_id": "cre_Docs_and_Epenses",
         "question": "What are the names and dates for documents corresponding to project that has the details 'Graph Database project'?",
-        "question_pl": "Jakie są nazwy i daty dokumentów odpowiadających projektowi, który ma szczegóły \"Graph Database project\"?",
+        "question_pl": "Jakie są nazwy i daty dokumentów odpowiadających projektowi, który ma szczegóły \"Projekt graficznej bazy danych\"?",
         "query": "SELECT document_name ,  document_date FROM Documents AS T1 JOIN projects AS T2 ON T1.project_id  =  T2.project_id WHERE T2.project_details  =  'Graph Database project'",
         "query_pl": "SELECT document_name ,  document_date FROM Documents AS T1 JOIN projects AS T2 ON T1.project_id  =  T2.project_id WHERE T2.project_details  =  \"Projekt graficznej bazy danych\""
     },
@@ -44963,7 +44963,7 @@
     {
         "db_id": "cre_Docs_and_Epenses",
         "question": "Show the statement detail and the corresponding document name for the statement with detail 'Private Project'.",
-        "question_pl": "Pokaż szczegóły wyciągu i odpowiednią nazwę dokumentu dla wyciągu ze szczegółem \"Private Project\".",
+        "question_pl": "Pokaż szczegóły wyciągu i odpowiednią nazwę dokumentu dla wyciągu ze szczegółem \"Prywatny projekt\".",
         "query": "SELECT T1.statement_details ,  T2.document_name FROM Statements AS T1 JOIN Documents AS T2 ON T1.statement_id  =  T2.document_id WHERE T1.statement_details  =  'Private Project'",
         "query_pl": "SELECT T1.statement_details ,  T2.document_name FROM Statements AS T1 JOIN Documents AS T2 ON T1.statement_id  =  T2.document_id WHERE T1.statement_details  =  \"Projekt prywatny\""
     },
@@ -45446,7 +45446,7 @@
     {
         "db_id": "scientist_1",
         "question": "What are the names of any scientists who worked on projects named 'Matter of Time' and 'A Puzzling Pattern'?",
-        "question_pl": "Jak nazywają się naukowcy, którzy pracowali nad projektami o nazwach \"Matter of Time\" i \"A Puzzling Pattern\"?",
+        "question_pl": "Jak nazywają się naukowcy, którzy pracowali nad projektami o nazwach \"Matter of Time\" i \"Zagadkowy wzór\"?",
         "query": "SELECT T3.name FROM assignedto AS T1 JOIN projects AS T2 ON T1.project  =  T2.code JOIN scientists AS T3 ON T1.scientist  =  T3.SSN WHERE T2.name  =  'Matter of Time' INTERSECT SELECT T3.name FROM assignedto AS T1 JOIN projects AS T2 ON T1.project  =  T2.code JOIN scientists AS T3 ON T1.scientist  =  T3.SSN WHERE T2.name  =  'A Puzzling Parallax'",
         "query_pl": "SELECT T3.name FROM assignedto AS T1 JOIN projects AS T2 ON T1.project  =  T2.code JOIN scientists AS T3 ON T1.scientist  =  T3.SSN WHERE T2.name  =  \"Kwestia czasu\" INTERSECT SELECT T3.name FROM assignedto AS T1 JOIN projects AS T2 ON T1.project  =  T2.code JOIN scientists AS T3 ON T1.scientist  =  T3.SSN WHERE T2.name  =  \"Zagadkowa paralaksa\""
     },
@@ -47105,7 +47105,7 @@
     {
         "db_id": "activity_1",
         "question": "Show the phone, room, and building for the faculty named Jerry Prince.",
-        "question_pl": "Wskaż telefon, pokój i budynek, w którym znajduje się wydział Jerry'ego Prince'a.",
+        "question_pl": "Wskaż telefon, pokój i budynek, w którym znajduje się wydział Jerry\"ego Princea.",
         "query": "SELECT phone ,  room ,  building FROM Faculty WHERE Fname  =  \"Jerry\" AND Lname  =  \"Prince\"",
         "query_pl": "SELECT phone ,  room ,  building FROM Faculty WHERE Fname  =  \"Jerry\" AND Lname  =  \"Książę\""
     },
@@ -47749,16 +47749,16 @@
     {
         "db_id": "flight_4",
         "question": "Find the number of airports whose name contain the word 'International'.",
-        "question_pl": "Znajdź liczbę lotnisk, których nazwy zawierają słowo \"Międzynarodowe\".",
+        "question_pl": "Znajdź liczbę lotnisk, których nazwy zawierają słowo \"Międzynarodowy\".",
         "query": "SELECT count(*) FROM airports WHERE name LIKE '%International%'",
-        "query_pl": "SELECT count(*) FROM airports WHERE name LIKE '%Międzynarodowe%'"
+        "query_pl": "SELECT count(*) FROM airports WHERE name LIKE '%Międzynarodowy%'"
     },
     {
         "db_id": "flight_4",
         "question": "How many airports' names have the word Interanation in them?",
-        "question_pl": "Ile nazw lotnisk zawiera słowo Międzynarodowe?",
+        "question_pl": "Ile nazw lotnisk zawiera słowo Międzynarodowy?",
         "query": "SELECT count(*) FROM airports WHERE name LIKE '%International%'",
-        "query_pl": "SELECT count(*) FROM airports WHERE name LIKE '%Międzynarodowe%'"
+        "query_pl": "SELECT count(*) FROM airports WHERE name LIKE '%Międzynarodowy%'"
     },
     {
         "db_id": "flight_4",
@@ -48596,7 +48596,7 @@
     {
         "db_id": "tracking_orders",
         "question": "What are the names of the customers who bought product \"food\" at least once?",
-        "question_pl": "Jak nazywają się klienci, którzy przynajmniej raz kupili produkt \"food\"?",
+        "question_pl": "Jak nazywają się klienci, którzy przynajmniej raz kupili produkt \"jedzenie\"?",
         "query": "SELECT T1.customer_name FROM customers AS T1 JOIN orders AS T2 JOIN order_items AS T3 JOIN products AS T4 ON T1.customer_id = T2.customer_id AND T2.order_id = T3.order_id AND T3.product_id = T4.product_id WHERE T4.product_name = \"food\" GROUP BY T1.customer_id HAVING count(*)  >=  1",
         "query_pl": "SELECT T1.customer_name FROM customers AS T1 JOIN orders AS T2 JOIN order_items AS T3 JOIN products AS T4 ON T1.customer_id = T2.customer_id AND T2.order_id = T3.order_id AND T3.product_id = T4.product_id WHERE T4.product_name = \"jedzenie\" GROUP BY T1.customer_id HAVING count(*)  >=  1"
     },

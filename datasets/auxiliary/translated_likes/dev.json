@@ -1395,7 +1395,7 @@
     {
         "db_id": "flight_2",
         "question": "What is the airport name for airport 'AKO'?",
-        "question_pl": "Jaka jest nazwa lotniska 'AKO'?",
+        "question_pl": "Jaka jest nazwa lotniska \"AKO?",
         "query": "SELECT AirportName FROM AIRPORTS WHERE AirportCode  =  \"AKO\"",
         "query_pl": "SELECT AirportName FROM AIRPORTS WHERE AirportCode  =  \"AKO\""
     },
@@ -1409,7 +1409,7 @@
     {
         "db_id": "flight_2",
         "question": "What are airport names at City 'Aberdeen'?",
-        "question_pl": "Jakie są nazwy lotnisk w City 'Aberdeen'?",
+        "question_pl": "Jakie są nazwy lotnisk w City \"Aberdeen?",
         "query": "SELECT AirportName FROM AIRPORTS WHERE City = \"Aberdeen\"",
         "query_pl": "SELECT AirportName FROM AIRPORTS WHERE City = \"Aberdeen\""
     },
@@ -1633,7 +1633,7 @@
     {
         "db_id": "flight_2",
         "question": "What are airlines that have some flight departing from airport 'AHD'?",
-        "question_pl": "Jakie linie lotnicze oferują loty z lotniska 'AHD'?",
+        "question_pl": "Jakie linie lotnicze oferują loty z lotniska \"AHD?",
         "query": "SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"AHD\"",
         "query_pl": "SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"AHD\""
     },
@@ -1647,7 +1647,7 @@
     {
         "db_id": "flight_2",
         "question": "What are airlines that have flights arriving at airport 'AHD'?",
-        "question_pl": "Jakie linie lotnicze obsługują loty na lotnisko 'AHD'?",
+        "question_pl": "Jakie linie lotnicze obsługują loty na lotnisko \"AHD?",
         "query": "SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.DestAirport  =  \"AHD\"",
         "query_pl": "SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.DestAirport  =  \"AHD\""
     },
@@ -1661,7 +1661,7 @@
     {
         "db_id": "flight_2",
         "question": "Find all airlines that have flights from both airports 'APG' and 'CVO'.",
-        "question_pl": "Znajdź wszystkie linie lotnicze, które oferują loty z obu lotnisk 'APG' i 'CVO'.",
+        "question_pl": "Znajdź wszystkie linie lotnicze, które oferują loty z obu lotnisk 'APG' i \"CVO.",
         "query": "SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"APG\" INTERSECT SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"CVO\"",
         "query_pl": "SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"APG\" INTERSECT SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"CVO\""
     },
@@ -1675,7 +1675,7 @@
     {
         "db_id": "flight_2",
         "question": "Find all airlines that have flights from airport 'CVO' but not from 'APG'.",
-        "question_pl": "Znajdź wszystkie linie lotnicze, które mają loty z lotniska 'CVO', ale nie z 'APG'.",
+        "question_pl": "Znajdź wszystkie linie lotnicze, które mają loty z lotniska \"CVO, ale nie z 'APG'.",
         "query": "SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"CVO\" EXCEPT SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"APG\"",
         "query_pl": "SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"CVO\" EXCEPT SELECT T1.Airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline WHERE T2.SourceAirport  =  \"APG\""
     },
@@ -1759,7 +1759,7 @@
     {
         "db_id": "flight_2",
         "question": "What are flight numbers of flights departing from City \"Aberdeen \"?",
-        "question_pl": "Jakie są numery lotów odlatujących z miasta \"Aberdeen \"?",
+        "question_pl": "Jakie są numery lotów odlatujących z miasta \"Aberdeen\"?",
         "query": "SELECT T1.FlightNo FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.SourceAirport   =  T2.AirportCode WHERE T2.City  =  \"Aberdeen\"",
         "query_pl": "SELECT T1.FlightNo FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.SourceAirport   =  T2.AirportCode WHERE T2.City  =  \"Aberdeen\""
     },
@@ -2361,7 +2361,7 @@
     {
         "db_id": "cre_Doc_Template_Mgt",
         "question": "What is the template type code of the template used by document with the name \"Data base\"?",
-        "question_pl": "Jaki jest kod typu szablonu używanego przez dokument o nazwie \"Data base\"?",
+        "question_pl": "Jaki jest kod typu szablonu używanego przez dokument o nazwie \"Baza danych\"?",
         "query": "SELECT T1.template_type_code FROM Templates AS T1 JOIN Documents AS T2 ON T1.template_id  =  T2.template_id WHERE T2.document_name  =  \"Data base\"",
         "query_pl": "SELECT T1.template_type_code FROM Templates AS T1 JOIN Documents AS T2 ON T1.template_id  =  T2.template_id WHERE T2.document_name  =  \"Baza danych\""
     },
@@ -2466,7 +2466,7 @@
     {
         "db_id": "cre_Doc_Template_Mgt",
         "question": "Return the type code of the template type with the description \"Book\".",
-        "question_pl": "Zwróć kod typu szablonu z opisem \"Book\".",
+        "question_pl": "Zwróć kod typu szablonu z opisem \"Książka\".",
         "query": "SELECT template_type_code FROM Ref_template_types WHERE template_type_description  =  \"Book\"",
         "query_pl": "SELECT template_type_code FROM Ref_template_types WHERE template_type_description  =  \"Książka\""
     },
@@ -2494,7 +2494,7 @@
     {
         "db_id": "cre_Doc_Template_Mgt",
         "question": "Return the ids corresponding to templates with the description 'Presentation'.",
-        "question_pl": "Zwróć identyfikatory odpowiadające szablonom z opisem \"Presentation\".",
+        "question_pl": "Zwróć identyfikatory odpowiadające szablonom z opisem \"Prezentacja\".",
         "query": "SELECT T2.template_id FROM Ref_template_types AS T1 JOIN Templates AS T2 ON T1.template_type_code  = T2.template_type_code WHERE T1.template_type_description  =  \"Presentation\"",
         "query_pl": "SELECT T2.template_id FROM Ref_template_types AS T1 JOIN Templates AS T2 ON T1.template_type_code  = T2.template_type_code WHERE T1.template_type_description  =  \"Prezentacja\""
     },
@@ -2543,14 +2543,14 @@
     {
         "db_id": "cre_Doc_Template_Mgt",
         "question": "Show all paragraph ids and texts for the document with name 'Welcome to NY'.",
-        "question_pl": "Pokaż wszystkie identyfikatory akapitów i teksty dla dokumentu o nazwie \"Welcome to NY\".",
+        "question_pl": "Pokaż wszystkie identyfikatory akapitów i teksty dla dokumentu o nazwie \"Witaj w Nowym Jorku\".",
         "query": "SELECT T1.paragraph_id ,   T1.paragraph_text FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id WHERE T2.Document_Name  =  'Welcome to NY'",
         "query_pl": "SELECT T1.paragraph_id ,   T1.paragraph_text FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id WHERE T2.Document_Name  =  \"Witamy w Nowym Jorku\""
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
         "question": "What are the ids and texts of paragraphs in the document titled 'Welcome to NY'?",
-        "question_pl": "Jakie są identyfikatory i teksty akapitów w dokumencie zatytułowanym \"Welcome to NY\"?",
+        "question_pl": "Jakie są identyfikatory i teksty akapitów w dokumencie zatytułowanym \"Witaj w Nowym Jorku\"?",
         "query": "SELECT T1.paragraph_id ,   T1.paragraph_text FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id WHERE T2.Document_Name  =  'Welcome to NY'",
         "query_pl": "SELECT T1.paragraph_id ,   T1.paragraph_text FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id WHERE T2.Document_Name  =  \"Witamy w Nowym Jorku\""
     },
@@ -4272,7 +4272,7 @@
     {
         "db_id": "tvshow",
         "question": "What is the series name of the TV Channel that shows the cartoon \"The Rise of the Blue Beetle\"?",
-        "question_pl": "Jak nazywa się kanał telewizyjny, na którym emitowana jest kreskówka \"The Rise of the Blue Beetle\"?",
+        "question_pl": "Jak nazywa się kanał telewizyjny, na którym emitowana jest kreskówka \"Powstanie niebieskiego żuka\"?",
         "query": "SELECT T1.series_name FROM TV_Channel AS T1 JOIN Cartoon AS T2 ON T1.id = T2.Channel WHERE T2.Title = \"The Rise of the Blue Beetle!\";",
         "query_pl": "SELECT T1.series_name FROM TV_Channel AS T1 JOIN Cartoon AS T2 ON T1.id = T2.Channel WHERE T2.Title = \"Powstanie Niebieskiego Żuka!\";"
     },
@@ -4342,7 +4342,7 @@
     {
         "db_id": "tvshow",
         "question": "When did the episode \"A Love of a Lifetime\" air?",
-        "question_pl": "Kiedy wyemitowano odcinek \"A Love of a Lifetime\"?",
+        "question_pl": "Kiedy wyemitowano odcinek \"Miłość na całe życie\"?",
         "query": "SELECT Air_Date FROM TV_series WHERE Episode = \"A Love of a Lifetime\";",
         "query_pl": "SELECT Air_Date FROM TV_series WHERE Episode = \"Miłość na całe życie\";"
     },
@@ -4356,7 +4356,7 @@
     {
         "db_id": "tvshow",
         "question": "What is the weekly rank for the episode \"A Love of a Lifetime\"?",
-        "question_pl": "Jaka jest tygodniowa ranga odcinka \"A Love of a Lifetime\"?",
+        "question_pl": "Jaka jest tygodniowa ranga odcinka \"Miłość na całe życie\"?",
         "query": "SELECT Weekly_Rank FROM TV_series WHERE Episode = \"A Love of a Lifetime\";",
         "query_pl": "SELECT Weekly_Rank FROM TV_series WHERE Episode = \"Miłość na całe życie\";"
     },
@@ -4370,7 +4370,7 @@
     {
         "db_id": "tvshow",
         "question": "What is the name of the series that has the episode \"A Love of a Lifetime\"?",
-        "question_pl": "Jak nazywa się serial z odcinkiem \"A Love of a Lifetime\"?",
+        "question_pl": "Jak nazywa się serial z odcinkiem \"Miłość na całe życie\"?",
         "query": "SELECT T1.series_name FROM TV_Channel AS T1 JOIN TV_series AS T2 ON T1.id = T2.Channel WHERE T2.Episode = \"A Love of a Lifetime\";",
         "query_pl": "SELECT T1.series_name FROM TV_Channel AS T1 JOIN TV_series AS T2 ON T1.id = T2.Channel WHERE T2.Episode = \"Miłość na całe życie\";"
     },
@@ -5833,7 +5833,7 @@
     {
         "db_id": "orchestra",
         "question": "Return the maximum and minimum shares for performances that do not have the type \"Live final\".",
-        "question_pl": "Zwróć maksymalne i minimalne udziały dla występów, które nie mają typu \"Live final\".",
+        "question_pl": "Zwróć maksymalne i minimalne udziały dla występów, które nie mają typu \"Finał na żywo\".",
         "query": "SELECT max(SHARE) ,  min(SHARE) FROM performance WHERE TYPE != \"Live final\"",
         "query_pl": "SELECT max(SHARE) ,  min(SHARE) FROM performance WHERE TYPE != \"Finał na żywo\""
     },

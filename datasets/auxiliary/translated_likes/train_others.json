@@ -7877,7 +7877,7 @@
     {
         "db_id": "scholar",
         "question": "What is the year of publication of \" A Switching Architecture For ISDN \" ?",
-        "question_pl": "Jaki jest rok publikacji \" A Switching Architecture For ISDN \" ?",
+        "question_pl": "Jaki jest rok publikacji \" Architektura przełączania dla ISDN \" ?",
         "query": "SELECT DISTINCT title  ,  YEAR FROM paper WHERE title  =  \"A Switching Architecture For ISDN\";",
         "query_pl": "SELECT DISTINCT title  ,  YEAR FROM paper WHERE title  =  \"Architektura przełączania dla ISDN\";"
     },
@@ -8731,14 +8731,14 @@
     {
         "db_id": "academic",
         "question": "return me the year of \" Making database systems usable \"",
-        "question_pl": "zwróć mi rok \"uczynienia systemów baz danych użytecznymi\"",
+        "question_pl": "zwróć mi rok \"Uczenie systemów baz danych użytecznych\"",
         "query": "SELECT YEAR FROM publication WHERE title  =  \"Making database systems usable\";",
         "query_pl": "SELECT YEAR FROM publication WHERE title  =  \"Użyteczność systemów baz danych\";"
     },
     {
         "db_id": "academic",
         "question": "return me the year of \" Making database systems usable \" .",
-        "question_pl": "zwróć mi rok \"uczynienia systemów baz danych użytecznymi\".",
+        "question_pl": "zwróć mi rok \"Uczenie systemów baz danych użytecznych\".",
         "query": "SELECT YEAR FROM publication WHERE title  =  \"Making database systems usable\";",
         "query_pl": "SELECT YEAR FROM publication WHERE title  =  \"Użyteczność systemów baz danych\";"
     },
@@ -8780,35 +8780,35 @@
     {
         "db_id": "academic",
         "question": "return me the homepage of \" University of Michigan \" .",
-        "question_pl": "zwróć mi stronę główną \"University of Michigan\".",
+        "question_pl": "zwróć mi stronę główną \"Uniwersytet Michigan\".",
         "query": "SELECT homepage FROM organization WHERE name  =  \"University of Michigan\";",
         "query_pl": "SELECT homepage FROM organization WHERE name  =  \"Uniwersytet Michigan\";"
     },
     {
         "db_id": "academic",
         "question": "return me the number of references of \" Making database systems usable \" .",
-        "question_pl": "zwróć mi liczbę odwołań do \"Making database systems usable\".",
+        "question_pl": "zwróć mi liczbę odwołań do \"Uczynienie systemów baz danych użytecznymi\".",
         "query": "SELECT reference_num FROM publication WHERE title  =  \"Making database systems usable\";",
         "query_pl": "SELECT reference_num FROM publication WHERE title  =  \"Użyteczność systemów baz danych\";"
     },
     {
         "db_id": "academic",
         "question": "return me the references of \" Making database systems usable \" .",
-        "question_pl": "zwróć mi referencje do \"Making database systems usable\".",
+        "question_pl": "zwróć mi referencje do \"Uczynienie systemów baz danych użytecznymi\".",
         "query": "SELECT reference_num FROM publication WHERE title  =  \"Making database systems usable\";",
         "query_pl": "SELECT reference_num FROM publication WHERE title  =  \"Użyteczność systemów baz danych\";"
     },
     {
         "db_id": "academic",
         "question": "return me the number of citations of \" Making database systems usable \" .",
-        "question_pl": "zwróć mi liczbę cytowań hasła \"Making database systems usable\".",
+        "question_pl": "zwróć mi liczbę cytowań hasła \"Uczynienie systemów baz danych użytecznymi\".",
         "query": "SELECT citation_num FROM publication WHERE title  =  \"Making database systems usable\";",
         "query_pl": "SELECT citation_num FROM publication WHERE title  =  \"Użyteczność systemów baz danych\";"
     },
     {
         "db_id": "academic",
         "question": "return me the citations of \" Making database systems usable \" .",
-        "question_pl": "Zwróć mi cytaty z \"Making database systems usable\".",
+        "question_pl": "Zwróć mi cytaty z \"Uczynienie systemów baz danych użytecznymi\".",
         "query": "SELECT citation_num FROM publication WHERE title  =  \"Making database systems usable\";",
         "query_pl": "SELECT citation_num FROM publication WHERE title  =  \"Użyteczność systemów baz danych\";"
     },
@@ -8899,14 +8899,14 @@
     {
         "db_id": "academic",
         "question": "return me the authors of \" Making database systems usable \" .",
-        "question_pl": "Zwróć mi autorów \" Making database systems usable \" .",
+        "question_pl": "Zwróć mi autorów \" Uczynienie systemów baz danych użytecznymi \" .",
         "query": "SELECT t1.name FROM writes AS t2 JOIN author AS t1 ON t2.aid  =  t1.aid JOIN publication AS t3 ON t2.pid  =  t3.pid WHERE t3.title  =  \"Making database systems usable\";",
         "query_pl": "SELECT t1.name FROM writes AS t2 JOIN author AS t1 ON t2.aid  =  t1.aid JOIN publication AS t3 ON t2.pid  =  t3.pid WHERE t3.title  =  \"Użyteczność systemów baz danych\";"
     },
     {
         "db_id": "academic",
         "question": "return me the conference, which published \" Making database systems usable \" .",
-        "question_pl": "Zwróćcie mi konferencję, na której opublikowano \"Making database systems usable\".",
+        "question_pl": "Zwróćcie mi konferencję, na której opublikowano \"Uczynienie systemów baz danych użytecznymi\".",
         "query": "SELECT t1.name FROM publication AS t2 JOIN conference AS t1 ON t2.cid  =  t1.cid WHERE t2.title  =  \"Making database systems usable\";",
         "query_pl": "SELECT t1.name FROM publication AS t2 JOIN conference AS t1 ON t2.cid  =  t1.cid WHERE t2.title  =  \"Użyteczność systemów baz danych\";"
     },
@@ -9039,28 +9039,28 @@
     {
         "db_id": "academic",
         "question": "return me the keywords in the papers of \" University of Michigan \" .",
-        "question_pl": "zwróć mi słowa kluczowe w dokumentach \"University of Michigan\".",
+        "question_pl": "zwróć mi słowa kluczowe w dokumentach \"Uniwersytet Michigan\".",
         "query": "SELECT t1.keyword FROM organization AS t6 JOIN author AS t2 ON t6.oid  =  t2.oid JOIN writes AS t4 ON t4.aid  =  t2.aid JOIN publication AS t5 ON t4.pid  =  t5.pid JOIN publication_keyword AS t3 ON t5.pid  =  t3.pid JOIN keyword AS t1 ON t3.kid  =  t1.kid WHERE t6.name  =  \"University of Michigan\";",
         "query_pl": "SELECT t1.keyword FROM organization AS t6 JOIN author AS t2 ON t6.oid  =  t2.oid JOIN writes AS t4 ON t4.aid  =  t2.aid JOIN publication AS t5 ON t4.pid  =  t5.pid JOIN publication_keyword AS t3 ON t5.pid  =  t3.pid JOIN keyword AS t1 ON t3.kid  =  t1.kid WHERE t6.name  =  \"Uniwersytet Michigan\";"
     },
     {
         "db_id": "academic",
         "question": "return me the papers of \" H. V. Jagadish \" containing keyword \" User Study \" .",
-        "question_pl": "zwróć mi artykuły \" H. V. Jagadish \" zawierające słowo kluczowe \" User Study \" .",
+        "question_pl": "zwróć mi artykuły \" H. V. Jagadish \" zawierające słowo kluczowe \" Badanie użytkownika \" .",
         "query": "SELECT t5.title FROM publication_keyword AS t3 JOIN keyword AS t1 ON t3.kid  =  t1.kid JOIN publication AS t5 ON t5.pid  =  t3.pid JOIN writes AS t4 ON t4.pid  =  t5.pid JOIN author AS t2 ON t4.aid  =  t2.aid WHERE t2.name  =  \"H. V. Jagadish\" AND t1.keyword  =  \"User Study\";",
         "query_pl": "SELECT t5.title FROM publication_keyword AS t3 JOIN keyword AS t1 ON t3.kid  =  t1.kid JOIN publication AS t5 ON t5.pid  =  t3.pid JOIN writes AS t4 ON t4.pid  =  t5.pid JOIN author AS t2 ON t4.aid  =  t2.aid WHERE t2.name  =  \"H. V. Jagadish\" AND t1.keyword  =  \"Badanie użytkownika\";"
     },
     {
         "db_id": "academic",
         "question": "return me the papers in PVLDB containing keyword \" Keyword search \" .",
-        "question_pl": "zwróć mi dokumenty w PVLDB zawierające słowo kluczowe \"Keyword search\".",
+        "question_pl": "zwróć mi dokumenty w PVLDB zawierające słowo kluczowe \"Wyszukiwanie słów kluczowych\".",
         "query": "SELECT t4.title FROM publication_keyword AS t2 JOIN keyword AS t1 ON t2.kid  =  t1.kid JOIN publication AS t4 ON t4.pid  =  t2.pid JOIN journal AS t3 ON t4.jid  =  t3.jid WHERE t3.name  =  \"PVLDB\" AND t1.keyword  =  \"Keyword search\";",
         "query_pl": "SELECT t4.title FROM publication_keyword AS t2 JOIN keyword AS t1 ON t2.kid  =  t1.kid JOIN publication AS t4 ON t4.pid  =  t2.pid JOIN journal AS t3 ON t4.jid  =  t3.jid WHERE t3.name  =  \"PVLDB\" AND t1.keyword  =  \"Wyszukiwanie słów kluczowych\";"
     },
     {
         "db_id": "academic",
         "question": "return me the papers in VLDB conference containing keyword \" Information Retrieval \" .",
-        "question_pl": "zwróć mi artykuły z konferencji VLDB zawierające słowo kluczowe \"Information Retrieval\".",
+        "question_pl": "zwróć mi artykuły z konferencji VLDB zawierające słowo kluczowe \"Wyszukiwanie informacji\".",
         "query": "SELECT t4.title FROM publication_keyword AS t3 JOIN keyword AS t1 ON t3.kid  =  t1.kid JOIN publication AS t4 ON t4.pid  =  t3.pid JOIN conference AS t2 ON t4.cid  =  t2.cid WHERE t2.name  =  \"VLDB\" AND t1.keyword  =  \"Information Retrieval\";",
         "query_pl": "SELECT t4.title FROM publication_keyword AS t3 JOIN keyword AS t1 ON t3.kid  =  t1.kid JOIN publication AS t4 ON t4.pid  =  t3.pid JOIN conference AS t2 ON t4.cid  =  t2.cid WHERE t2.name  =  \"VLDB\" AND t1.keyword  =  \"Wyszukiwanie informacji\";"
     },
@@ -9088,49 +9088,49 @@
     {
         "db_id": "academic",
         "question": "return me all the researchers in \" University of Michigan \" .",
-        "question_pl": "Zwróć mi wszystkich naukowców z \"University of Michigan\".",
+        "question_pl": "Zwróć mi wszystkich naukowców z \"Uniwersytet Michigan\".",
         "query": "SELECT t1.name FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid WHERE t2.name  =  \"University of Michigan\";",
         "query_pl": "SELECT t1.name FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid WHERE t2.name  =  \"Uniwersytet Michigan\";"
     },
     {
         "db_id": "academic",
         "question": "return me all the researchers in Databases area in \" University of Michigan \" .",
-        "question_pl": "Zwróć mi wszystkich badaczy w obszarze Bazy danych w \" University of Michigan \" .",
+        "question_pl": "Zwróć mi wszystkich badaczy w obszarze Bazy danych w \" Uniwersytet Michigan \" .",
         "query": "SELECT t1.name FROM domain_author AS t4 JOIN author AS t1 ON t4.aid  =  t1.aid JOIN DOMAIN AS t3 ON t3.did  =  t4.did JOIN organization AS t2 ON t2.oid  =  t1.oid WHERE t3.name  =  \"Databases\" AND t2.name  =  \"University of Michigan\";",
         "query_pl": "SELECT t1.name FROM domain_author AS t4 JOIN author AS t1 ON t4.aid  =  t1.aid JOIN DOMAIN AS t3 ON t3.did  =  t4.did JOIN organization AS t2 ON t2.oid  =  t1.oid WHERE t3.name  =  \"Bazy danych\" AND t2.name  =  \"Uniwersytet Michigan\";"
     },
     {
         "db_id": "academic",
         "question": "return me all the papers in \" University of Michigan \" .",
-        "question_pl": "Zwróć mi wszystkie dokumenty z \"University of Michigan\".",
+        "question_pl": "Zwróć mi wszystkie dokumenty z \"Uniwersytet Michigan\".",
         "query": "SELECT t4.title FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t3 ON t3.aid  =  t1.aid JOIN publication AS t4 ON t3.pid  =  t4.pid WHERE t2.name  =  \"University of Michigan\";",
         "query_pl": "SELECT t4.title FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t3 ON t3.aid  =  t1.aid JOIN publication AS t4 ON t3.pid  =  t4.pid WHERE t2.name  =  \"Uniwersytet Michigan\";"
     },
     {
         "db_id": "academic",
         "question": "return me all the papers after 2000 in \" University of Michigan \" .",
-        "question_pl": "Zwróć mi wszystkie dokumenty po 2000 roku z \"University of Michigan\".",
+        "question_pl": "Zwróć mi wszystkie dokumenty po 2000 roku z \"Uniwersytet Michigan\".",
         "query": "SELECT t4.title FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t3 ON t3.aid  =  t1.aid JOIN publication AS t4 ON t3.pid  =  t4.pid WHERE t2.name  =  \"University of Michigan\" AND t4.year  >  2000;",
         "query_pl": "SELECT t4.title FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t3 ON t3.aid  =  t1.aid JOIN publication AS t4 ON t3.pid  =  t4.pid WHERE t2.name  =  \"Uniwersytet Michigan\" AND t4.year  >  2000;"
     },
     {
         "db_id": "academic",
         "question": "return me all the papers in VLDB conference in \" University of Michigan \" .",
-        "question_pl": "Zwróć mi wszystkie referaty z konferencji VLDB na \"University of Michigan\".",
+        "question_pl": "Zwróć mi wszystkie referaty z konferencji VLDB na \"Uniwersytet Michigan\".",
         "query": "SELECT t5.title FROM organization AS t3 JOIN author AS t1 ON t3.oid  =  t1.oid JOIN writes AS t4 ON t4.aid  =  t1.aid JOIN publication AS t5 ON t4.pid  =  t5.pid JOIN conference AS t2 ON t5.cid  =  t2.cid WHERE t2.name  =  \"VLDB\" AND t3.name  =  \"University of Michigan\";",
         "query_pl": "SELECT t5.title FROM organization AS t3 JOIN author AS t1 ON t3.oid  =  t1.oid JOIN writes AS t4 ON t4.aid  =  t1.aid JOIN publication AS t5 ON t4.pid  =  t5.pid JOIN conference AS t2 ON t5.cid  =  t2.cid WHERE t2.name  =  \"VLDB\" AND t3.name  =  \"Uniwersytet Michigan\";"
     },
     {
         "db_id": "academic",
         "question": "return me all the papers in PVLDB in \" University of Michigan \" .",
-        "question_pl": "Zwróć mi wszystkie dokumenty w PVLDB w \"University of Michigan\".",
+        "question_pl": "Zwróć mi wszystkie dokumenty w PVLDB w \"Uniwersytet Michigan\".",
         "query": "SELECT t5.title FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t4 ON t4.aid  =  t1.aid JOIN publication AS t5 ON t4.pid  =  t5.pid JOIN journal AS t3 ON t5.jid  =  t3.jid WHERE t3.name  =  \"PVLDB\" AND t2.name  =  \"University of Michigan\";",
         "query_pl": "SELECT t5.title FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t4 ON t4.aid  =  t1.aid JOIN publication AS t5 ON t4.pid  =  t5.pid JOIN journal AS t3 ON t5.jid  =  t3.jid WHERE t3.name  =  \"PVLDB\" AND t2.name  =  \"Uniwersytet Michigan\";"
     },
     {
         "db_id": "academic",
         "question": "return me all the papers in PVLDB after 2000 in \" University of Michigan \" .",
-        "question_pl": "Zwróć mi wszystkie dokumenty w PVLDB po 2000 roku w \"University of Michigan\".",
+        "question_pl": "Zwróć mi wszystkie dokumenty w PVLDB po 2000 roku w \"Uniwersytet Michigan\".",
         "query": "SELECT t5.title FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t4 ON t4.aid  =  t1.aid JOIN publication AS t5 ON t4.pid  =  t5.pid JOIN journal AS t3 ON t5.jid  =  t3.jid WHERE t3.name  =  \"PVLDB\" AND t2.name  =  \"University of Michigan\" AND t5.year  >  2000;",
         "query_pl": "SELECT t5.title FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t4 ON t4.aid  =  t1.aid JOIN publication AS t5 ON t4.pid  =  t5.pid JOIN journal AS t3 ON t5.jid  =  t3.jid WHERE t3.name  =  \"PVLDB\" AND t2.name  =  \"Uniwersytet Michigan\" AND t5.year  >  2000;"
     },
@@ -9228,21 +9228,21 @@
     {
         "db_id": "academic",
         "question": "return me the number of authors of \" Making database systems usable \" .",
-        "question_pl": "Zwróć mi liczbę autorów \"Making database systems usable\".",
+        "question_pl": "Zwróć mi liczbę autorów \"Uczynienie systemów baz danych użytecznymi\".",
         "query": "SELECT COUNT ( DISTINCT t1.name ) FROM writes AS t2 JOIN author AS t1 ON t2.aid  =  t1.aid JOIN publication AS t3 ON t2.pid  =  t3.pid WHERE t3.title  =  \"Making database systems usable\";",
         "query_pl": "SELECT COUNT ( DISTINCT t1.name ) FROM writes AS t2 JOIN author AS t1 ON t2.aid  =  t1.aid JOIN publication AS t3 ON t2.pid  =  t3.pid WHERE t3.title  =  \"Użyteczność systemów baz danych\";"
     },
     {
         "db_id": "academic",
         "question": "return me the number of citations of \" Making database systems usable \" in each year .",
-        "question_pl": "zwróć mi liczbę cytowań \"Making database systems usable\" w każdym roku.",
+        "question_pl": "zwróć mi liczbę cytowań \"Uczynienie systemów baz danych użytecznymi\" w każdym roku.",
         "query": "SELECT YEAR  ,  SUM ( citation_num ) FROM publication WHERE title  =  \"Making database systems usable\" GROUP BY YEAR;",
         "query_pl": "SELECT YEAR  ,  SUM ( citation_num ) FROM publication WHERE title  =  \"Użyteczność systemów baz danych\" GROUP BY YEAR;"
     },
     {
         "db_id": "academic",
         "question": "return me the number of citations of \" Making database systems usable \" before 2010 .",
-        "question_pl": "zwróć mi liczbę cytowań \"Making database systems usable\" przed 2010 rokiem.",
+        "question_pl": "zwróć mi liczbę cytowań \"Uczynienie systemów baz danych użytecznymi\" przed 2010 rokiem.",
         "query": "SELECT COUNT ( DISTINCT t2.title ) FROM publication AS t3 JOIN cite AS t1 ON t3.pid  =  t1.cited JOIN publication AS t2 ON t2.pid  =  t1.citing WHERE t3.title  =  \"Making database systems usable\" AND t2.year  <  2010;",
         "query_pl": "SELECT COUNT ( DISTINCT t2.title ) FROM publication AS t3 JOIN cite AS t1 ON t3.pid  =  t1.cited JOIN publication AS t2 ON t2.pid  =  t1.citing WHERE t3.title  =  \"Użyteczność systemów baz danych\" AND t2.year  <  2010;"
     },
@@ -9347,7 +9347,7 @@
     {
         "db_id": "academic",
         "question": "return me the number of the keywords of \" Making database systems usable \" .",
-        "question_pl": "zwróć mi liczbę słów kluczowych z \" Making database systems usable \" .",
+        "question_pl": "zwróć mi liczbę słów kluczowych z \" Uczynienie systemów baz danych użytecznymi \" .",
         "query": "SELECT COUNT ( DISTINCT t1.keyword ) FROM publication_keyword AS t3 JOIN keyword AS t1 ON t3.kid  =  t1.kid JOIN publication AS t2 ON t2.pid  =  t3.pid WHERE t2.title  =  \"Making database systems usable\";",
         "query_pl": "SELECT COUNT ( DISTINCT t1.keyword ) FROM publication_keyword AS t3 JOIN keyword AS t1 ON t3.kid  =  t1.kid JOIN publication AS t2 ON t2.pid  =  t3.pid WHERE t2.title  =  \"Użyteczność systemów baz danych\";"
     },
@@ -9375,28 +9375,28 @@
     {
         "db_id": "academic",
         "question": "return me the number of keywords in the papers of \" University of Michigan \" .",
-        "question_pl": "zwróć mi liczbę słów kluczowych w dokumentach \"University of Michigan\".",
+        "question_pl": "zwróć mi liczbę słów kluczowych w dokumentach \"Uniwersytet Michigan\".",
         "query": "SELECT COUNT ( DISTINCT t1.keyword ) FROM organization AS t6 JOIN author AS t2 ON t6.oid  =  t2.oid JOIN writes AS t4 ON t4.aid  =  t2.aid JOIN publication AS t5 ON t4.pid  =  t5.pid JOIN publication_keyword AS t3 ON t5.pid  =  t3.pid JOIN keyword AS t1 ON t3.kid  =  t1.kid WHERE t6.name  =  \"University of Michigan\";",
         "query_pl": "SELECT COUNT ( DISTINCT t1.keyword ) FROM organization AS t6 JOIN author AS t2 ON t6.oid  =  t2.oid JOIN writes AS t4 ON t4.aid  =  t2.aid JOIN publication AS t5 ON t4.pid  =  t5.pid JOIN publication_keyword AS t3 ON t5.pid  =  t3.pid JOIN keyword AS t1 ON t3.kid  =  t1.kid WHERE t6.name  =  \"Uniwersytet Michigan\";"
     },
     {
         "db_id": "academic",
         "question": "return me the number of the papers of \" H. V. Jagadish \" containing keyword \" User Study \" .",
-        "question_pl": "zwróć mi liczbę artykułów \"H. V. Jagadish\" zawierających słowo kluczowe \"User Study\".",
+        "question_pl": "zwróć mi liczbę artykułów \"H. V. Jagadish\" zawierających słowo kluczowe \"Badanie użytkownika\".",
         "query": "SELECT COUNT ( DISTINCT t5.title ) FROM publication_keyword AS t3 JOIN keyword AS t1 ON t3.kid  =  t1.kid JOIN publication AS t5 ON t5.pid  =  t3.pid JOIN writes AS t4 ON t4.pid  =  t5.pid JOIN author AS t2 ON t4.aid  =  t2.aid WHERE t2.name  =  \"H. V. Jagadish\" AND t1.keyword  =  \"User Study\";",
         "query_pl": "SELECT COUNT ( DISTINCT t5.title ) FROM publication_keyword AS t3 JOIN keyword AS t1 ON t3.kid  =  t1.kid JOIN publication AS t5 ON t5.pid  =  t3.pid JOIN writes AS t4 ON t4.pid  =  t5.pid JOIN author AS t2 ON t4.aid  =  t2.aid WHERE t2.name  =  \"H. V. Jagadish\" AND t1.keyword  =  \"Badanie użytkownika\";"
     },
     {
         "db_id": "academic",
         "question": "return me the number of papers in PVLDB containing keyword \" Keyword search \" .",
-        "question_pl": "zwróć mi liczbę dokumentów w PVLDB zawierających słowo kluczowe \"Keyword search\".",
+        "question_pl": "zwróć mi liczbę dokumentów w PVLDB zawierających słowo kluczowe \"Wyszukiwanie słów kluczowych\".",
         "query": "SELECT COUNT ( DISTINCT t4.title ) FROM publication_keyword AS t2 JOIN keyword AS t1 ON t2.kid  =  t1.kid JOIN publication AS t4 ON t4.pid  =  t2.pid JOIN journal AS t3 ON t4.jid  =  t3.jid WHERE t3.name  =  \"PVLDB\" AND t1.keyword  =  \"Keyword search\";",
         "query_pl": "SELECT COUNT ( DISTINCT t4.title ) FROM publication_keyword AS t2 JOIN keyword AS t1 ON t2.kid  =  t1.kid JOIN publication AS t4 ON t4.pid  =  t2.pid JOIN journal AS t3 ON t4.jid  =  t3.jid WHERE t3.name  =  \"PVLDB\" AND t1.keyword  =  \"Wyszukiwanie słów kluczowych\";"
     },
     {
         "db_id": "academic",
         "question": "return me the number of papers in VLDB conference containing keyword \" Information Retrieval \" .",
-        "question_pl": "zwróć mi liczbę artykułów na konferencji VLDB zawierających słowo kluczowe \"Information Retrieval\".",
+        "question_pl": "zwróć mi liczbę artykułów na konferencji VLDB zawierających słowo kluczowe \"Wyszukiwanie informacji\".",
         "query": "SELECT COUNT ( DISTINCT t4.title ) FROM publication_keyword AS t3 JOIN keyword AS t1 ON t3.kid  =  t1.kid JOIN publication AS t4 ON t4.pid  =  t3.pid JOIN conference AS t2 ON t4.cid  =  t2.cid WHERE t2.name  =  \"VLDB\" AND t1.keyword  =  \"Information Retrieval\";",
         "query_pl": "SELECT COUNT ( DISTINCT t4.title ) FROM publication_keyword AS t3 JOIN keyword AS t1 ON t3.kid  =  t1.kid JOIN publication AS t4 ON t4.pid  =  t3.pid JOIN conference AS t2 ON t4.cid  =  t2.cid WHERE t2.name  =  \"VLDB\" AND t1.keyword  =  \"Wyszukiwanie informacji\";"
     },
@@ -9445,63 +9445,63 @@
     {
         "db_id": "academic",
         "question": "return me the number of papers in \" University of Michigan \" .",
-        "question_pl": "Zwróć mi liczbę dokumentów w \"University of Michigan\".",
+        "question_pl": "Zwróć mi liczbę dokumentów w \"Uniwersytet Michigan\".",
         "query": "SELECT COUNT ( DISTINCT t4.title ) FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t3 ON t3.aid  =  t1.aid JOIN publication AS t4 ON t3.pid  =  t4.pid WHERE t2.name  =  \"University of Michigan\";",
         "query_pl": "SELECT COUNT ( DISTINCT t4.title ) FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t3 ON t3.aid  =  t1.aid JOIN publication AS t4 ON t3.pid  =  t4.pid WHERE t2.name  =  \"Uniwersytet Michigan\";"
     },
     {
         "db_id": "academic",
         "question": "return me the number of papers in \" University of Michigan \" in Databases area .",
-        "question_pl": "zwróć mi liczbę dokumentów w obszarze \"University of Michigan\" w bazach danych.",
+        "question_pl": "zwróć mi liczbę dokumentów w obszarze \"Uniwersytet Michigan\" w bazach danych.",
         "query": "SELECT COUNT ( DISTINCT t4.title ) FROM domain_author AS t6 JOIN author AS t1 ON t6.aid  =  t1.aid JOIN DOMAIN AS t3 ON t3.did  =  t6.did JOIN domain_publication AS t2 ON t3.did  =  t2.did JOIN organization AS t5 ON t5.oid  =  t1.oid JOIN publication AS t4 ON t4.pid  =  t2.pid WHERE t3.name  =  \"Databases\" AND t5.name  =  \"University of Michigan\";",
         "query_pl": "SELECT COUNT ( DISTINCT t4.title ) FROM domain_author AS t6 JOIN author AS t1 ON t6.aid  =  t1.aid JOIN DOMAIN AS t3 ON t3.did  =  t6.did JOIN domain_publication AS t2 ON t3.did  =  t2.did JOIN organization AS t5 ON t5.oid  =  t1.oid JOIN publication AS t4 ON t4.pid  =  t2.pid WHERE t3.name  =  \"Bazy danych\" AND t5.name  =  \"Uniwersytet Michigan\";"
     },
     {
         "db_id": "academic",
         "question": "return me the number of papers after 2000 in \" University of Michigan \" .",
-        "question_pl": "Zwróć mi liczbę artykułów po 2000 roku w \"University of Michigan\".",
+        "question_pl": "Zwróć mi liczbę artykułów po 2000 roku w \"Uniwersytet Michigan\".",
         "query": "SELECT COUNT ( DISTINCT t4.title ) FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t3 ON t3.aid  =  t1.aid JOIN publication AS t4 ON t3.pid  =  t4.pid WHERE t2.name  =  \"University of Michigan\" AND t4.year  >  2000;",
         "query_pl": "SELECT COUNT ( DISTINCT t4.title ) FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t3 ON t3.aid  =  t1.aid JOIN publication AS t4 ON t3.pid  =  t4.pid WHERE t2.name  =  \"Uniwersytet Michigan\" AND t4.year  >  2000;"
     },
     {
         "db_id": "academic",
         "question": "return me the number of papers in VLDB conference in \" University of Michigan \" .",
-        "question_pl": "Zwróć mi liczbę referatów na konferencji VLDB w \"University of Michigan\".",
+        "question_pl": "Zwróć mi liczbę referatów na konferencji VLDB w \"Uniwersytet Michigan\".",
         "query": "SELECT COUNT ( DISTINCT t5.title ) FROM organization AS t3 JOIN author AS t1 ON t3.oid  =  t1.oid JOIN writes AS t4 ON t4.aid  =  t1.aid JOIN publication AS t5 ON t4.pid  =  t5.pid JOIN conference AS t2 ON t5.cid  =  t2.cid WHERE t2.name  =  \"VLDB\" AND t3.name  =  \"University of Michigan\";",
         "query_pl": "SELECT COUNT ( DISTINCT t5.title ) FROM organization AS t3 JOIN author AS t1 ON t3.oid  =  t1.oid JOIN writes AS t4 ON t4.aid  =  t1.aid JOIN publication AS t5 ON t4.pid  =  t5.pid JOIN conference AS t2 ON t5.cid  =  t2.cid WHERE t2.name  =  \"VLDB\" AND t3.name  =  \"Uniwersytet Michigan\";"
     },
     {
         "db_id": "academic",
         "question": "return me the number of papers in PVLDB in \" University of Michigan \" .",
-        "question_pl": "zwróć mi liczbę dokumentów w PVLDB w \"University of Michigan\".",
+        "question_pl": "zwróć mi liczbę dokumentów w PVLDB w \"Uniwersytet Michigan\".",
         "query": "SELECT COUNT ( DISTINCT t5.title ) FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t4 ON t4.aid  =  t1.aid JOIN publication AS t5 ON t4.pid  =  t5.pid JOIN journal AS t3 ON t5.jid  =  t3.jid WHERE t3.name  =  \"PVLDB\" AND t2.name  =  \"University of Michigan\";",
         "query_pl": "SELECT COUNT ( DISTINCT t5.title ) FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t4 ON t4.aid  =  t1.aid JOIN publication AS t5 ON t4.pid  =  t5.pid JOIN journal AS t3 ON t5.jid  =  t3.jid WHERE t3.name  =  \"PVLDB\" AND t2.name  =  \"Uniwersytet Michigan\";"
     },
     {
         "db_id": "academic",
         "question": "return me the number of papers in PVLDB after 2000 in \" University of Michigan \" .",
-        "question_pl": "zwróć mi liczbę artykułów w PVLDB po 2000 roku w \"University of Michigan\".",
+        "question_pl": "zwróć mi liczbę artykułów w PVLDB po 2000 roku w \"Uniwersytet Michigan\".",
         "query": "SELECT COUNT ( DISTINCT t5.title ) FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t4 ON t4.aid  =  t1.aid JOIN publication AS t5 ON t4.pid  =  t5.pid JOIN journal AS t3 ON t5.jid  =  t3.jid WHERE t3.name  =  \"PVLDB\" AND t2.name  =  \"University of Michigan\" AND t5.year  >  2000;",
         "query_pl": "SELECT COUNT ( DISTINCT t5.title ) FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t4 ON t4.aid  =  t1.aid JOIN publication AS t5 ON t4.pid  =  t5.pid JOIN journal AS t3 ON t5.jid  =  t3.jid WHERE t3.name  =  \"PVLDB\" AND t2.name  =  \"Uniwersytet Michigan\" AND t5.year  >  2000;"
     },
     {
         "db_id": "academic",
         "question": "return me the total citations of the papers in \" University of Michigan \" .",
-        "question_pl": "zwróć mi całkowitą liczbę cytowań artykułów w \"University of Michigan\".",
+        "question_pl": "zwróć mi całkowitą liczbę cytowań artykułów w \"Uniwersytet Michigan\".",
         "query": "SELECT SUM ( t4.citation_num ) FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t3 ON t3.aid  =  t1.aid JOIN publication AS t4 ON t3.pid  =  t4.pid WHERE t2.name  =  \"University of Michigan\";",
         "query_pl": "SELECT SUM ( t4.citation_num ) FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t3 ON t3.aid  =  t1.aid JOIN publication AS t4 ON t3.pid  =  t4.pid WHERE t2.name  =  \"Uniwersytet Michigan\";"
     },
     {
         "db_id": "academic",
         "question": "return me the number of researchers in \" University of Michigan \" .",
-        "question_pl": "Zwróć mi liczbę naukowców w \"University of Michigan\".",
+        "question_pl": "Zwróć mi liczbę naukowców w \"Uniwersytet Michigan\".",
         "query": "SELECT COUNT ( DISTINCT t1.name ) FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid WHERE t2.name  =  \"University of Michigan\";",
         "query_pl": "SELECT COUNT ( DISTINCT t1.name ) FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid WHERE t2.name  =  \"Uniwersytet Michigan\";"
     },
     {
         "db_id": "academic",
         "question": "return me the number of researchers in Databases area in \" University of Michigan \" .",
-        "question_pl": "Zwróć mi liczbę badaczy w obszarze Bazy danych w \" University of Michigan \" .",
+        "question_pl": "Zwróć mi liczbę badaczy w obszarze Bazy danych w \" Uniwersytet Michigan \" .",
         "query": "SELECT COUNT ( DISTINCT t1.name ) FROM domain_author AS t4 JOIN author AS t1 ON t4.aid  =  t1.aid JOIN DOMAIN AS t3 ON t3.did  =  t4.did JOIN organization AS t2 ON t2.oid  =  t1.oid WHERE t3.name  =  \"Databases\" AND t2.name  =  \"University of Michigan\";",
         "query_pl": "SELECT COUNT ( DISTINCT t1.name ) FROM domain_author AS t4 JOIN author AS t1 ON t4.aid  =  t1.aid JOIN DOMAIN AS t3 ON t3.did  =  t4.did JOIN organization AS t2 ON t2.oid  =  t1.oid WHERE t3.name  =  \"Bazy danych\" AND t2.name  =  \"Uniwersytet Michigan\";"
     },
@@ -9781,14 +9781,14 @@
     {
         "db_id": "academic",
         "question": "return me the author in the \" University of Michigan \" whose papers have the most total citations .",
-        "question_pl": "Zwróć mi autora z \"University of Michigan\", którego artykuły mają najwięcej cytowań.",
+        "question_pl": "Zwróć mi autora z \"Uniwersytet Michigan\", którego artykuły mają najwięcej cytowań.",
         "query": "SELECT t1.name FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t3 ON t3.aid  =  t1.aid JOIN publication AS t4 ON t3.pid  =  t4.pid WHERE t2.name  =  \"University of Michigan\" GROUP BY t1.name ORDER BY SUM ( t4.citation_num ) DESC LIMIT 1;",
         "query_pl": "SELECT t1.name FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t3 ON t3.aid  =  t1.aid JOIN publication AS t4 ON t3.pid  =  t4.pid WHERE t2.name  =  \"Uniwersytet Michigan\" GROUP BY t1.name ORDER BY SUM ( t4.citation_num ) DESC LIMIT 1;"
     },
     {
         "db_id": "academic",
         "question": "return me the author in the \" University of Michigan \" whose papers in Databases area have the most total citations .",
-        "question_pl": "Zwróć mi autora w \"University of Michigan\", którego artykuły w obszarze Bazy danych mają najwięcej cytowań.",
+        "question_pl": "Zwróć mi autora w \"Uniwersytet Michigan\", którego artykuły w obszarze Bazy danych mają najwięcej cytowań.",
         "query": "SELECT t1.name FROM DOMAIN AS t4 JOIN domain_publication AS t2 ON t4.did  =  t2.did JOIN publication AS t5 ON t5.pid  =  t2.pid JOIN writes AS t3 ON t3.pid  =  t5.pid JOIN author AS t1 ON t3.aid  =  t1.aid JOIN organization AS t6 ON t6.oid  =  t1.oid WHERE t4.name  =  \"Databases\" AND t6.name  =  \"University of Michigan\" GROUP BY t1.name ORDER BY SUM ( t5.citation_num ) DESC LIMIT 1;",
         "query_pl": "SELECT t1.name FROM DOMAIN AS t4 JOIN domain_publication AS t2 ON t4.did  =  t2.did JOIN publication AS t5 ON t5.pid  =  t2.pid JOIN writes AS t3 ON t3.pid  =  t5.pid JOIN author AS t1 ON t3.aid  =  t1.aid JOIN organization AS t6 ON t6.oid  =  t1.oid WHERE t4.name  =  \"Bazy danych\" AND t6.name  =  \"Uniwersytet Michigan\" GROUP BY t1.name ORDER BY SUM ( t5.citation_num ) DESC LIMIT 1;"
     },
@@ -9963,14 +9963,14 @@
     {
         "db_id": "academic",
         "question": "return me the author in the \" University of Michigan \" whose papers have more than 5000 total citations .",
-        "question_pl": "Zwróć mi autora z \"University of Michigan\", którego prace mają łącznie ponad 5000 cytowań.",
+        "question_pl": "Zwróć mi autora z \"Uniwersytet Michigan\", którego prace mają łącznie ponad 5000 cytowań.",
         "query": "SELECT t1.name FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t3 ON t3.aid  =  t1.aid JOIN publication AS t4 ON t3.pid  =  t4.pid WHERE t2.name  =  \"University of Michigan\" GROUP BY t1.name HAVING SUM ( t4.citation_num )  >  5000;",
         "query_pl": "SELECT t1.name FROM organization AS t2 JOIN author AS t1 ON t2.oid  =  t1.oid JOIN writes AS t3 ON t3.aid  =  t1.aid JOIN publication AS t4 ON t3.pid  =  t4.pid WHERE t2.name  =  \"Uniwersytet Michigan\" GROUP BY t1.name HAVING SUM ( t4.citation_num )  >  5000;"
     },
     {
         "db_id": "academic",
         "question": "return me the author in the \" University of Michigan \" in Databases area whose papers have more than 5000 total citations .",
-        "question_pl": "Zwróć mi autora w obszarze \"University of Michigan\" w bazach danych, którego artykuły mają łącznie ponad 5000 cytowań.",
+        "question_pl": "Zwróć mi autora w obszarze \"Uniwersytet Michigan\" w bazach danych, którego artykuły mają łącznie ponad 5000 cytowań.",
         "query": "SELECT t1.name FROM domain_author AS t6 JOIN author AS t1 ON t6.aid  =  t1.aid JOIN DOMAIN AS t3 ON t3.did  =  t6.did JOIN organization AS t5 ON t5.oid  =  t1.oid JOIN writes AS t2 ON t2.aid  =  t1.aid JOIN publication AS t4 ON t2.pid  =  t4.pid WHERE t3.name  =  \"Databases\" AND t5.name  =  \"University of Michigan\" GROUP BY t1.name HAVING SUM ( t4.citation_num )  >  5000;",
         "query_pl": "SELECT t1.name FROM domain_author AS t6 JOIN author AS t1 ON t6.aid  =  t1.aid JOIN DOMAIN AS t3 ON t3.did  =  t6.did JOIN organization AS t5 ON t5.oid  =  t1.oid JOIN writes AS t2 ON t2.aid  =  t1.aid JOIN publication AS t4 ON t2.pid  =  t4.pid WHERE t3.name  =  \"Bazy danych\" AND t5.name  =  \"Uniwersytet Michigan\" GROUP BY t1.name HAVING SUM ( t4.citation_num )  >  5000;"
     },
@@ -10278,7 +10278,7 @@
     {
         "db_id": "imdb",
         "question": "Find all actors who were born in \" New York City \" in 1984",
-        "question_pl": "Znajdź wszystkich aktorów, którzy urodzili się w \" Nowym Jorku \" w 1984 roku",
+        "question_pl": "Znajdź wszystkich aktorów, którzy urodzili się w \" Nowego Jorku \" w 1984 roku",
         "query": "SELECT name FROM actor WHERE birth_city  =  \"New York City\" AND birth_year  =  1984;",
         "query_pl": "SELECT name FROM actor WHERE birth_city  =  \"Nowy Jork\" AND birth_year  =  1984;"
     },
