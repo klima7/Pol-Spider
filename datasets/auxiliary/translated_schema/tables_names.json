@@ -435,7 +435,7 @@
         "db_id": "decoration_competition",
         "name": "college",
         "name_original": "college",
-        "name_pl": "college"
+        "name_pl": "uczelnia"
     },
     {
         "db_id": "decoration_competition",
@@ -477,7 +477,7 @@
         "db_id": "store_product",
         "name": "store",
         "name_original": "store",
-        "name_pl": "store"
+        "name_pl": "sklep"
     },
     {
         "db_id": "store_product",
@@ -1791,37 +1791,37 @@
         "db_id": "baseball_1",
         "name": "batting postseason",
         "name_original": "batting_postseason",
-        "name_pl": "batting postseason"
+        "name_pl": "uderzenia posezonowe"
     },
     {
         "db_id": "baseball_1",
         "name": "player college",
         "name_original": "player_college",
-        "name_pl": "gracz college"
+        "name_pl": "gracz uczelnia"
     },
     {
         "db_id": "baseball_1",
         "name": "fielding",
         "name_original": "fielding",
-        "name_pl": "fielding"
+        "name_pl": "obrony"
     },
     {
         "db_id": "baseball_1",
         "name": "fielding outfield",
         "name_original": "fielding_outfield",
-        "name_pl": "fielding outfield"
+        "name_pl": "obrony zewnętrzne"
     },
     {
         "db_id": "baseball_1",
         "name": "fielding postseason",
         "name_original": "fielding_postseason",
-        "name_pl": "fielding postseason"
+        "name_pl": "obrony posezonowe"
     },
     {
         "db_id": "baseball_1",
         "name": "hall of fame",
         "name_original": "hall_of_fame",
-        "name_pl": "hall of fame"
+        "name_pl": "galeria sław"
     },
     {
         "db_id": "baseball_1",
@@ -1857,13 +1857,13 @@
         "db_id": "baseball_1",
         "name": "pitching",
         "name_original": "pitching",
-        "name_pl": "pitching"
+        "name_pl": "rzucanie"
     },
     {
         "db_id": "baseball_1",
         "name": "pitching postseason",
         "name_original": "pitching_postseason",
-        "name_pl": "pitching postseason"
+        "name_pl": "rzuty posezonowe"
     },
     {
         "db_id": "baseball_1",
@@ -1875,13 +1875,13 @@
         "db_id": "baseball_1",
         "name": "college",
         "name_original": "college",
-        "name_pl": "college"
+        "name_pl": "uczelnia"
     },
     {
         "db_id": "baseball_1",
         "name": "postseason",
         "name_original": "postseason",
-        "name_pl": "postseason"
+        "name_pl": "postsezon"
     },
     {
         "db_id": "baseball_1",
@@ -2883,7 +2883,7 @@
         "db_id": "club_1",
         "name": "club",
         "name_original": "Club",
-        "name_pl": "club"
+        "name_pl": "klub"
     },
     {
         "db_id": "club_1",
@@ -2979,7 +2979,7 @@
         "db_id": "world_1",
         "name": "countrylanguage",
         "name_original": "countrylanguage",
-        "name_pl": "countrylanguage"
+        "name_pl": "językkraju"
     },
     {
         "db_id": "device",
@@ -3447,7 +3447,7 @@
         "db_id": "hr_1",
         "name": "jobs",
         "name_original": "jobs",
-        "name_pl": "jobs"
+        "name_pl": "zadania"
     },
     {
         "db_id": "hr_1",
@@ -3987,7 +3987,7 @@
         "db_id": "yelp",
         "name": "checkin",
         "name_original": "checkin",
-        "name_pl": "checkin"
+        "name_pl": "zameldowanie"
     },
     {
         "db_id": "yelp",
@@ -4527,7 +4527,7 @@
         "db_id": "geo",
         "name": "highlow",
         "name_original": "highlow",
-        "name_pl": "highlow"
+        "name_pl": "wysokonisko"
     },
     {
         "db_id": "geo",
@@ -4677,7 +4677,7 @@
         "db_id": "soccer_2",
         "name": "college",
         "name_original": "College",
-        "name_pl": "college"
+        "name_pl": "uczelnia"
     },
     {
         "db_id": "soccer_2",
@@ -4689,7 +4689,7 @@
         "db_id": "soccer_2",
         "name": "tryout",
         "name_original": "Tryout",
-        "name_pl": "tryout"
+        "name_pl": "kwalifikacja"
     },
     {
         "db_id": "activity_1",
@@ -4725,7 +4725,7 @@
         "db_id": "cre_Theme_park",
         "name": "ref hotel star ratings",
         "name_original": "Ref_Hotel_Star_Ratings",
-        "name_pl": "ref hotel star ratings"
+        "name_pl": "gwiazdkowe oceny hoteli"
     },
     {
         "db_id": "cre_Theme_park",
@@ -5199,7 +5199,7 @@
         "db_id": "epinions_1",
         "name": "useracct",
         "name_original": "useracct",
-        "name_pl": "useracct"
+        "name_pl": "użytkownik_acct"
     },
     {
         "db_id": "epinions_1",
