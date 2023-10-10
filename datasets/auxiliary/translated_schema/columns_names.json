@@ -5388,7 +5388,7 @@
         "column_name_original": "Result",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "wynik"
+        "column_name_pl": "rezultat"
     },
     {
         "db_id": "city_record",
@@ -29571,7 +29571,7 @@
         "column_name_original": "numCiting",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "liczba cytowań"
+        "column_name_pl": "liczba cytowanych"
     },
     {
         "db_id": "scholar",
@@ -29580,7 +29580,7 @@
         "column_name_original": "numCitedBy",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "liczba cytowań"
+        "column_name_pl": "liczba cytowań przez"
     },
     {
         "db_id": "scholar",

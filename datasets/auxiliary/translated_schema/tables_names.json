@@ -3219,7 +3219,7 @@
         "db_id": "restaurant_1",
         "name": "restaurant type",
         "name_original": "Restaurant_Type",
-        "name_pl": "typ restauracji"
+        "name_pl": "restauracja typu"
     },
     {
         "db_id": "restaurant_1",
@@ -3645,7 +3645,7 @@
         "db_id": "college_3",
         "name": "faculty",
         "name_original": "Faculty",
-        "name_pl": "wydział"
+        "name_pl": "wydział uczelniany"
     },
     {
         "db_id": "college_3",
@@ -4395,7 +4395,7 @@
         "db_id": "cre_Drama_Workshop_Groups",
         "name": "clients",
         "name_original": "Clients",
-        "name_pl": "klienci"
+        "name_pl": "konsumenci"
     },
     {
         "db_id": "cre_Drama_Workshop_Groups",
