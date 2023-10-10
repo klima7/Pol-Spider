@@ -1329,7 +1329,7 @@
         "column_name_original": "cid",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "cid"
+        "column_name_pl": "identyfikator konferencji"
     },
     {
         "db_id": "academic",
@@ -1392,7 +1392,7 @@
         "column_name_original": "cid",
         "primary_key": false,
         "foreign_key": "conference",
-        "column_name_pl": "cid"
+        "column_name_pl": "identyfikator konferencji"
     },
     {
         "db_id": "academic",
@@ -1419,7 +1419,7 @@
         "column_name_original": "jid",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "jid"
+        "column_name_pl": "identyfikator czasopisma"
     },
     {
         "db_id": "academic",
@@ -1500,7 +1500,7 @@
         "column_name_original": "cid",
         "primary_key": false,
         "foreign_key": "conference",
-        "column_name_pl": "cid"
+        "column_name_pl": "identyfikator konferencji"
     },
     {
         "db_id": "academic",
@@ -1518,7 +1518,7 @@
         "column_name_original": "jid",
         "primary_key": false,
         "foreign_key": "journal",
-        "column_name_pl": "jid"
+        "column_name_pl": "identyfikator czasopisma"
     },
     {
         "db_id": "academic",
@@ -1608,7 +1608,7 @@
         "column_name_original": "oid",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "oid"
+        "column_name_pl": "identyfikator organizacji"
     },
     {
         "db_id": "academic",
@@ -7269,7 +7269,7 @@
         "column_name_original": "cid",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "cid"
+        "column_name_pl": "identyfikator prawa autorskiego"
     },
     {
         "db_id": "imdb",
@@ -7314,7 +7314,7 @@
         "column_name_original": "gid",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "gid"
+        "column_name_pl": "Identyfikator gatunku"
     },
     {
         "db_id": "imdb",
@@ -7350,7 +7350,7 @@
         "column_name_original": "gid",
         "primary_key": false,
         "foreign_key": "genre",
-        "column_name_pl": "gid"
+        "column_name_pl": "Identyfikator gatunku"
     },
     {
         "db_id": "imdb",
@@ -7440,7 +7440,7 @@
         "column_name_original": "pid",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "pid"
+        "column_name_pl": "Identyfikator publikacji"
     },
     {
         "db_id": "imdb",
@@ -7638,7 +7638,7 @@
         "column_name_original": "sid",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "sid"
+        "column_name_pl": "identyfikator serialu"
     },
     {
         "db_id": "imdb",
@@ -7701,7 +7701,7 @@
         "column_name_original": "wid",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "wid"
+        "column_name_pl": "identyfikator pisarza"
     },
     {
         "db_id": "imdb",
@@ -7782,7 +7782,7 @@
         "column_name_original": "wid",
         "primary_key": false,
         "foreign_key": "writer",
-        "column_name_pl": "wid"
+        "column_name_pl": "identyfikator pisarza"
     },
     {
         "db_id": "products_for_hire",
@@ -30507,7 +30507,7 @@
         "column_name_original": "uid",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "uid"
+        "column_name_pl": "Identyfikator użytkownika"
     },
     {
         "db_id": "yelp",
@@ -30534,7 +30534,7 @@
         "column_name_original": "cid",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "cid"
+        "column_name_pl": "identyfikator zameldowania"
     },
     {
         "db_id": "yelp",
