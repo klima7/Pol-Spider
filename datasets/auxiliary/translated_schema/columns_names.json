@@ -78,7 +78,7 @@
         "column_name_original": "People_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "identyfikator osób"
+        "column_name_pl": "identyfikator osoby"
     },
     {
         "db_id": "perpetrator",
@@ -834,7 +834,7 @@
         "column_name_original": "People_ID",
         "primary_key": false,
         "foreign_key": "people",
-        "column_name_pl": "ludzie id"
+        "column_name_pl": "identyfikator osoby"
     },
     {
         "db_id": "body_builder",
@@ -870,7 +870,7 @@
         "column_name_original": "People_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "ludzie id"
+        "column_name_pl": "identyfikator osoby"
     },
     {
         "db_id": "body_builder",
@@ -4497,7 +4497,7 @@
         "column_name_original": "country",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "country"
+        "column_name_pl": "kraj"
     },
     {
         "db_id": "music_1",
@@ -4587,7 +4587,7 @@
         "column_name_original": "country",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "country"
+        "column_name_pl": "kraj"
     },
     {
         "db_id": "music_1",
@@ -4632,7 +4632,7 @@
         "column_name_original": "releasedate",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "releasedate"
+        "column_name_pl": "data wydania"
     },
     {
         "db_id": "music_1",
@@ -6135,7 +6135,7 @@
         "column_name_original": "People_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "identyfikator osób"
+        "column_name_pl": "identyfikator osoby"
     },
     {
         "db_id": "debate",
@@ -6585,7 +6585,7 @@
         "column_name_original": "gender_mf",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "gender mf"
+        "column_name_pl": "płeć mf"
     },
     {
         "db_id": "e_learning",
@@ -6963,7 +6963,7 @@
         "column_name_original": "Class",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "class"
+        "column_name_pl": "klasa"
     },
     {
         "db_id": "ship_1",
@@ -8619,7 +8619,7 @@
         "column_name_original": "GenreId",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "genre id"
+        "column_name_pl": "id gatunku"
     },
     {
         "db_id": "chinook_1",
@@ -8736,7 +8736,7 @@
         "column_name_original": "TrackId",
         "primary_key": false,
         "foreign_key": "track",
-        "column_name_pl": "track id"
+        "column_name_pl": "id ścieżki"
     },
     {
         "db_id": "chinook_1",
@@ -8961,7 +8961,7 @@
         "column_name_original": "codeshare",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "code share"
+        "column_name_pl": "udostępnienie kodu"
     },
     {
         "db_id": "flight_4",
@@ -9339,7 +9339,7 @@
         "column_name_original": "gender",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "gender"
+        "column_name_pl": "płeć"
     },
     {
         "db_id": "dorm_1",
@@ -9753,7 +9753,7 @@
         "column_name_original": "medicine_id",
         "primary_key": false,
         "foreign_key": "medicine",
-        "column_name_pl": "medicine id"
+        "column_name_pl": "id lekarstwa"
     },
     {
         "db_id": "medicine_enzyme_interaction",
@@ -10977,7 +10977,7 @@
         "column_name_original": "Country",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "country"
+        "column_name_pl": "kraj"
     },
     {
         "db_id": "concert_singer",
@@ -11571,7 +11571,7 @@
         "column_name_original": "ObjectNumber",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "objectnumber"
+        "column_name_pl": "numer objektu"
     },
     {
         "db_id": "railway",
@@ -11697,7 +11697,7 @@
         "column_name_original": "Manager_ID",
         "primary_key": false,
         "foreign_key": "manager",
-        "column_name_pl": "manager id"
+        "column_name_pl": "id manadżera"
     },
     {
         "db_id": "railway",
@@ -12192,7 +12192,7 @@
         "column_name_original": "g_batting",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "g batting"
+        "column_name_pl": "g uderzenie"
     },
     {
         "db_id": "baseball_1",
@@ -13362,7 +13362,7 @@
         "column_name_original": "yearid",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "yearid"
+        "column_name_pl": "id roku"
     },
     {
         "db_id": "baseball_1",
@@ -13371,7 +13371,7 @@
         "column_name_original": "votedby",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "votedby"
+        "column_name_pl": "głosowane przez"
     },
     {
         "db_id": "baseball_1",
@@ -13551,7 +13551,7 @@
         "column_name_original": "inseason",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "inseason"
+        "column_name_pl": "w sezonie"
     },
     {
         "db_id": "baseball_1",
@@ -13641,7 +13641,7 @@
         "column_name_original": "inseason",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "inseason"
+        "column_name_pl": "w sezonie"
     },
     {
         "db_id": "baseball_1",
@@ -14712,7 +14712,7 @@
         "column_name_original": "div_id",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "div id"
+        "column_name_pl": "identyfikator  div"
     },
     {
         "db_id": "baseball_1",
@@ -15099,7 +15099,7 @@
         "column_name_original": "team_id_retro",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "team id retro"
+        "column_name_pl": "drużyna id retro"
     },
     {
         "db_id": "baseball_1",
@@ -17439,7 +17439,7 @@
         "column_name_original": "DepartmentID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "departmentid"
+        "column_name_pl": "id działu"
     },
     {
         "db_id": "hospital_1",
@@ -17988,7 +17988,7 @@
         "column_name_original": "DateUndergoes",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "date undergoes"
+        "column_name_pl": "data podlega"
     },
     {
         "db_id": "hospital_1",
@@ -18141,7 +18141,7 @@
         "column_name_original": "mailshot_id",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "mailshot id"
+        "column_name_pl": "identyfikator mailshot"
     },
     {
         "db_id": "customers_campaigns_ecommerce",
@@ -18159,7 +18159,7 @@
         "column_name_original": "mailshot_name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "mailshot name"
+        "column_name_pl": "nazwa mailshot"
     },
     {
         "db_id": "customers_campaigns_ecommerce",
@@ -18465,7 +18465,7 @@
         "column_name_original": "People_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "ludzie id"
+        "column_name_pl": "identyfikator osoby"
     },
     {
         "db_id": "gymnast",
@@ -22758,7 +22758,7 @@
         "column_name_original": "name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "name"
+        "column_name_pl": "nazwa"
     },
     {
         "db_id": "world_1",
@@ -22857,7 +22857,7 @@
         "column_name_original": "GNPOld",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "gnp old"
+        "column_name_pl": "gnp stary"
     },
     {
         "db_id": "world_1",
@@ -22911,7 +22911,7 @@
         "column_name_original": "CountryCode",
         "primary_key": true,
         "foreign_key": "country",
-        "column_name_pl": "countrycode"
+        "column_name_pl": "kod kraju"
     },
     {
         "db_id": "world_1",
@@ -23766,7 +23766,7 @@
         "column_name_original": "People_ID",
         "primary_key": false,
         "foreign_key": "people",
-        "column_name_pl": "ludzie id"
+        "column_name_pl": "identyfikator osoby"
     },
     {
         "db_id": "poker_player",
@@ -23811,7 +23811,7 @@
         "column_name_original": "People_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "people id"
+        "column_name_pl": "identyfikator osoby"
     },
     {
         "db_id": "poker_player",
@@ -25629,7 +25629,7 @@
         "column_name_original": "cmi_cross_ref_id",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "cmi cross reference id"
+        "column_name_pl": "cmi odsyłacz id"
     },
     {
         "db_id": "local_govt_mdm",
@@ -25656,7 +25656,7 @@
         "column_name_original": "council_tax_id",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "council tax id"
+        "column_name_pl": "identyfikator podatku"
     },
     {
         "db_id": "local_govt_mdm",
@@ -25926,7 +25926,7 @@
         "column_name_original": "JOB_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "job id"
+        "column_name_pl": "id zadania"
     },
     {
         "db_id": "hr_1",
@@ -26016,7 +26016,7 @@
         "column_name_original": "JOB_ID",
         "primary_key": false,
         "foreign_key": "jobs",
-        "column_name_pl": "job id"
+        "column_name_pl": "id zadania"
     },
     {
         "db_id": "hr_1",
@@ -26538,7 +26538,7 @@
         "column_name_original": "name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "name"
+        "column_name_pl": "nazwa"
     },
     {
         "db_id": "soccer_1",
@@ -26988,7 +26988,7 @@
         "column_name_original": "address2",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "address2"
+        "column_name_pl": "adres 2"
     },
     {
         "db_id": "sakila_1",
@@ -27078,7 +27078,7 @@
         "column_name_original": "city",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "city"
+        "column_name_pl": "miasto"
     },
     {
         "db_id": "sakila_1",
@@ -27114,7 +27114,7 @@
         "column_name_original": "country",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "country"
+        "column_name_pl": "kraj"
     },
     {
         "db_id": "sakila_1",
@@ -27195,7 +27195,7 @@
         "column_name_original": "create_date",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "create date"
+        "column_name_pl": "data stworzenia"
     },
     {
         "db_id": "sakila_1",
@@ -27933,7 +27933,7 @@
         "column_name_original": "fld_feature_2",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "fld feature 2"
+        "column_name_pl": "fld cecha 2"
     },
     {
         "db_id": "real_estate_properties",
@@ -27942,7 +27942,7 @@
         "column_name_original": "fld_feature_3",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "fld feature 3"
+        "column_name_pl": "fld cecha 3"
     },
     {
         "db_id": "real_estate_properties",
@@ -29868,7 +29868,7 @@
         "column_name_original": "College",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "college"
+        "column_name_pl": "uczelnia"
     },
     {
         "db_id": "match_season",
@@ -30048,7 +30048,7 @@
         "column_name_original": "best_of",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "best of"
+        "column_name_pl": "najlepszy z"
     },
     {
         "db_id": "wta_1",
@@ -30894,7 +30894,7 @@
         "column_name_original": "id",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "name"
+        "column_name_pl": "nazwa"
     },
     {
         "db_id": "store_1",
@@ -30984,7 +30984,7 @@
         "column_name_original": "title",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "title"
+        "column_name_pl": "tytuł"
     },
     {
         "db_id": "store_1",
@@ -32127,7 +32127,7 @@
         "column_name_original": "statusId",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "status id"
+        "column_name_pl": "id statusu"
     },
     {
         "db_id": "formula_1",
@@ -32181,7 +32181,7 @@
         "column_name_original": "name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "name"
+        "column_name_pl": "nazwa"
     },
     {
         "db_id": "formula_1",
@@ -32541,7 +32541,7 @@
         "column_name_original": "qualifyId",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "qualify id"
+        "column_name_pl": "id jakości"
     },
     {
         "db_id": "formula_1",
@@ -32919,7 +32919,7 @@
         "column_name_original": "bname",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "bname"
+        "column_name_pl": "bnazwa"
     },
     {
         "db_id": "loan_1",
@@ -33531,7 +33531,7 @@
         "column_name_original": "People_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "identyfikator osób"
+        "column_name_pl": "identyfikator osoby"
     },
     {
         "db_id": "entrepreneur",
@@ -34782,7 +34782,7 @@
         "column_name_original": "MakeId",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "make id"
+        "column_name_pl": "id marki samochodu"
     },
     {
         "db_id": "car_1",
@@ -34800,7 +34800,7 @@
         "column_name_original": "Make",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "make"
+        "column_name_pl": "marka"
     },
     {
         "db_id": "car_1",
@@ -35979,7 +35979,7 @@
         "column_name_original": "Destroyed_by_Employee_ID",
         "primary_key": false,
         "foreign_key": "employees",
-        "column_name_pl": "destroyed by employee id"
+        "column_name_pl": "zniszczony przez ID pracownika"
     },
     {
         "db_id": "cre_Doc_Tracking_DB",
@@ -36060,7 +36060,7 @@
         "column_name_original": "ACC_Home",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "acc home"
+        "column_name_pl": "acc dom"
     },
     {
         "db_id": "university_basketball",
@@ -36069,7 +36069,7 @@
         "column_name_original": "ACC_Road",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "acc road"
+        "column_name_pl": "droga acc"
     },
     {
         "db_id": "university_basketball",
@@ -37320,7 +37320,7 @@
         "column_name_original": "People_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "identyfikator osób"
+        "column_name_pl": "identyfikator osoby"
     },
     {
         "db_id": "wedding",
@@ -37599,7 +37599,7 @@
         "column_name_original": "Appelation",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "appelation"
+        "column_name_pl": "apelacja"
     },
     {
         "db_id": "wine_1",
@@ -37905,7 +37905,7 @@
         "column_name_original": "date_address_to",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "date address to"
+        "column_name_pl": "data adres do"
     },
     {
         "db_id": "customers_and_addresses",
