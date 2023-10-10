@@ -5411,7 +5411,7 @@
     {
         "db_id": "city_record",
         "table_name": "temperature",
-        "column_name": "jan",
+        "column_name": "sty",
         "column_name_original": "Jan",
         "primary_key": false,
         "foreign_key": "",
@@ -5420,7 +5420,7 @@
     {
         "db_id": "city_record",
         "table_name": "temperature",
-        "column_name": "feb",
+        "column_name": "lut",
         "column_name_original": "Feb",
         "primary_key": false,
         "foreign_key": "",
@@ -5438,7 +5438,7 @@
     {
         "db_id": "city_record",
         "table_name": "temperature",
-        "column_name": "apr",
+        "column_name": "kwi",
         "column_name_original": "Apr",
         "primary_key": false,
         "foreign_key": "",
@@ -5447,7 +5447,7 @@
     {
         "db_id": "city_record",
         "table_name": "temperature",
-        "column_name": "jun",
+        "column_name": "cze",
         "column_name_original": "Jun",
         "primary_key": false,
         "foreign_key": "",
@@ -5456,7 +5456,7 @@
     {
         "db_id": "city_record",
         "table_name": "temperature",
-        "column_name": "jul",
+        "column_name": "lip",
         "column_name_original": "Jul",
         "primary_key": false,
         "foreign_key": "",
@@ -5465,7 +5465,7 @@
     {
         "db_id": "city_record",
         "table_name": "temperature",
-        "column_name": "aug",
+        "column_name": "sie",
         "column_name_original": "Aug",
         "primary_key": false,
         "foreign_key": "",
@@ -5474,7 +5474,7 @@
     {
         "db_id": "city_record",
         "table_name": "temperature",
-        "column_name": "sep",
+        "column_name": "wrz",
         "column_name_original": "Sep",
         "primary_key": false,
         "foreign_key": "",
@@ -5483,7 +5483,7 @@
     {
         "db_id": "city_record",
         "table_name": "temperature",
-        "column_name": "oct",
+        "column_name": "paź",
         "column_name_original": "Oct",
         "primary_key": false,
         "foreign_key": "",
@@ -5492,7 +5492,7 @@
     {
         "db_id": "city_record",
         "table_name": "temperature",
-        "column_name": "nov",
+        "column_name": "lis",
         "column_name_original": "Nov",
         "primary_key": false,
         "foreign_key": "",
@@ -5501,7 +5501,7 @@
     {
         "db_id": "city_record",
         "table_name": "temperature",
-        "column_name": "dec",
+        "column_name": "gru",
         "column_name_original": "Dec",
         "primary_key": false,
         "foreign_key": "",
@@ -22902,7 +22902,7 @@
         "column_name_original": "Code2",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "code2"
+        "column_name_pl": "kod2"
     },
     {
         "db_id": "world_1",
