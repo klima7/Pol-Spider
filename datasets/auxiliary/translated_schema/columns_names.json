@@ -76,7 +76,7 @@
         "column_name_original": "Injured",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "rannych",
+        "column_name_pl": "obrażenia",
         "column_name_original_pl": "Obrażenia"
     },
     {
@@ -126,7 +126,7 @@
         "column_name_original": "Home Town",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "miejscowość zamieszkania",
+        "column_name_pl": "miasto rodzinne",
         "column_name_original_pl": "Miasto_Rodzinne"
     },
     {
@@ -347,7 +347,7 @@
         "primary_key": true,
         "foreign_key": "instructor",
         "column_name_pl": "id",
-        "column_name_original_pl": "Dowód_tożsamości"
+        "column_name_original_pl": "ID"
     },
     {
         "db_id": "college_2",
@@ -397,7 +397,7 @@
         "primary_key": true,
         "foreign_key": "",
         "column_name_pl": "id",
-        "column_name_original_pl": "Dokument_tożsamości"
+        "column_name_original_pl": "ID"
     },
     {
         "db_id": "college_2",
@@ -437,7 +437,7 @@
         "primary_key": true,
         "foreign_key": "student",
         "column_name_pl": "id",
-        "column_name_original_pl": "Dokument_tożsamości"
+        "column_name_original_pl": "ID"
     },
     {
         "db_id": "college_2",
@@ -936,7 +936,7 @@
         "column_name_original": "Snatch",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "rwanie",
+        "column_name_pl": "podrzut",
         "column_name_original_pl": "Podrzut"
     },
     {
@@ -1076,7 +1076,7 @@
         "column_name_original": "Number_Deaths",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "liczba ofiar śmiertelnych",
+        "column_name_pl": "liczba zgonów",
         "column_name_original_pl": "Liczba_Zgonów"
     },
     {
@@ -1227,7 +1227,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "nazwisko pilota",
-        "column_name_original_pl": "Imię_i_nazwisko_pilota"
+        "column_name_original_pl": "nazwisko_pilota"
     },
     {
         "db_id": "pilot_record",
@@ -1466,7 +1466,7 @@
         "column_name_original": "oid",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "oid",
+        "column_name_pl": "aid",
         "column_name_original_pl": "aid"
     },
     {
@@ -1476,7 +1476,7 @@
         "column_name_original": "cid",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id konferencji",
+        "column_name_pl": "kid",
         "column_name_original_pl": "kid"
     },
     {
@@ -1546,7 +1546,7 @@
         "column_name_original": "cid",
         "primary_key": false,
         "foreign_key": "conference",
-        "column_name_pl": "id konferencji",
+        "column_name_pl": "kid",
         "column_name_original_pl": "kid"
     },
     {
@@ -1576,7 +1576,7 @@
         "column_name_original": "jid",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id czasopisma",
+        "column_name_pl": "cid",
         "column_name_original_pl": "cid"
     },
     {
@@ -1606,7 +1606,7 @@
         "column_name_original": "jid",
         "primary_key": false,
         "foreign_key": "journal",
-        "column_name_pl": "jid",
+        "column_name_pl": "cid",
         "column_name_original_pl": "cid"
     },
     {
@@ -1666,7 +1666,7 @@
         "column_name_original": "cid",
         "primary_key": false,
         "foreign_key": "conference",
-        "column_name_pl": "id konferencji",
+        "column_name_pl": "kid",
         "column_name_original_pl": "kid"
     },
     {
@@ -1686,7 +1686,7 @@
         "column_name_original": "jid",
         "primary_key": false,
         "foreign_key": "journal",
-        "column_name_pl": "id czasopisma",
+        "column_name_pl": "cid",
         "column_name_original_pl": "cid"
     },
     {
@@ -1786,7 +1786,7 @@
         "column_name_original": "oid",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id organizacji",
+        "column_name_pl": "oid",
         "column_name_original_pl": "oid"
     },
     {
@@ -2417,7 +2417,7 @@
         "primary_key": true,
         "foreign_key": "",
         "column_name_pl": "id artysty",
-        "column_name_original_pl": "id_wykonawcy"
+        "column_name_original_pl": "id_artysty"
     },
     {
         "db_id": "music_4",
@@ -2476,7 +2476,7 @@
         "column_name_original": "Volume_Issue",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "problem z głośnością",
+        "column_name_pl": "kwestia głośności",
         "column_name_original_pl": "Kwestia_Głośności"
     },
     {
@@ -2506,7 +2506,7 @@
         "column_name_original": "Song",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "utwór",
+        "column_name_pl": "piosenka",
         "column_name_original_pl": "Piosenka"
     },
     {
@@ -2517,7 +2517,7 @@
         "primary_key": false,
         "foreign_key": "artist",
         "column_name_pl": "id artysty",
-        "column_name_original_pl": "id_wykonawcy"
+        "column_name_original_pl": "id_artysty"
     },
     {
         "db_id": "music_4",
@@ -2747,7 +2747,7 @@
         "primary_key": false,
         "foreign_key": "first notification of loss",
         "column_name_pl": "fnol id",
-        "column_name_original_pl": "id_FNOL"
+        "column_name_original_pl": "FNOL_ID"
     },
     {
         "db_id": "insurance_fnol",
@@ -2816,7 +2816,7 @@
         "column_name_original": "Rank_in_series",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "stopień w serii",
+        "column_name_pl": "ranga w serii",
         "column_name_original_pl": "Ranga_w_serii"
     },
     {
@@ -2957,7 +2957,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "godziny pokazów dziennie",
-        "column_name_original_pl": "Godziny_pokazów_w_ciągu_dnia"
+        "column_name_original_pl": "Godziny_pokazów_dziennie"
     },
     {
         "db_id": "cinema",
@@ -2977,7 +2977,7 @@
         "primary_key": true,
         "foreign_key": "",
         "column_name_pl": "id uczelni",
-        "column_name_original_pl": "Legitymacja_szkolna"
+        "column_name_original_pl": "Uczelnia_ID"
     },
     {
         "db_id": "decoration_competition",
@@ -3047,7 +3047,7 @@
         "primary_key": false,
         "foreign_key": "college",
         "column_name_pl": "id uczelni",
-        "column_name_original_pl": "Legitymacja_szkolna"
+        "column_name_original_pl": "Uczelnia_ID"
     },
     {
         "db_id": "decoration_competition",
@@ -3156,7 +3156,7 @@
         "column_name_original": "District",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "dzielnica",
+        "column_name_pl": "okręg",
         "column_name_original_pl": "Okręg"
     },
     {
@@ -3326,7 +3326,7 @@
         "column_name_original": "Area_size",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "wielkość powierzchni",
+        "column_name_pl": "wielkość obszaru",
         "column_name_original_pl": "Wielkość_obszaru"
     },
     {
@@ -3696,7 +3696,7 @@
         "column_name_original": "asset_details",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "szczegóły zasobu",
+        "column_name_pl": "szczegóły zasobów",
         "column_name_original_pl": "szczegóły_zasobów"
     },
     {
@@ -5167,7 +5167,7 @@
         "primary_key": true,
         "foreign_key": "",
         "column_name_pl": "id osoby",
-        "column_name_original_pl": "id_osób"
+        "column_name_original_pl": "Osoba_ID"
     },
     {
         "db_id": "company_employee",
@@ -5236,7 +5236,7 @@
         "column_name_original": "Headquarters",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "siedziba główna",
+        "column_name_pl": "siedziba",
         "column_name_original_pl": "Siedziba"
     },
     {
@@ -5376,7 +5376,7 @@
         "column_name_original": "Census_Ranking",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "ranking spisu powszechnego",
+        "column_name_pl": "ranking spisu ludności",
         "column_name_original_pl": "Ranking_Spisu_Ludności"
     },
     {
@@ -5486,7 +5486,7 @@
         "column_name_original": "Competition_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id konkurencji",
+        "column_name_pl": "id konkursu",
         "column_name_original_pl": "id_konkursu"
     },
     {
@@ -5706,8 +5706,8 @@
         "column_name_original": "Finance_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id finansowy",
-        "column_name_original_pl": "id_finansów"
+        "column_name_pl": "id finansów",
+        "column_name_original_pl": "Finanse_ID"
     },
     {
         "db_id": "solvency_ii",
@@ -5936,7 +5936,7 @@
         "column_name_original": "GDP",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "pKB",
+        "column_name_pl": "pkb",
         "column_name_original_pl": "PKB"
     },
     {
@@ -5986,7 +5986,7 @@
         "column_name_original": "Result",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "rezultat",
+        "column_name_pl": "wynik",
         "column_name_original_pl": "Wynik"
     },
     {
@@ -6146,7 +6146,7 @@
         "column_name_original": "Host_City",
         "primary_key": false,
         "foreign_key": "city",
-        "column_name_pl": "miasto gospodarz",
+        "column_name_pl": "miasto goszczące",
         "column_name_original_pl": "Miasto_Goszczące"
     },
     {
@@ -6557,7 +6557,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "populacja",
-        "column_name_original_pl": "Ludność"
+        "column_name_original_pl": "Populacja"
     },
     {
         "db_id": "election",
@@ -6657,7 +6657,7 @@
         "primary_key": true,
         "foreign_key": "",
         "column_name_pl": "id wyborów",
-        "column_name_original_pl": "id_wyborczy"
+        "column_name_original_pl": "Wybory_ID"
     },
     {
         "db_id": "election",
@@ -6716,7 +6716,7 @@
         "column_name_original": "Committee",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "komisja",
+        "column_name_pl": "komitet",
         "column_name_original_pl": "Komitet"
     },
     {
@@ -6866,8 +6866,8 @@
         "column_name_original": "Debate_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "debata id",
-        "column_name_original_pl": "ID_Debaty"
+        "column_name_pl": "id debaty",
+        "column_name_original_pl": "Debata_ID"
     },
     {
         "db_id": "debate",
@@ -6916,7 +6916,7 @@
         "column_name_original": "Affirmative",
         "primary_key": false,
         "foreign_key": "people",
-        "column_name_pl": "twierdzący",
+        "column_name_pl": "afirmatywny",
         "column_name_original_pl": "Afirmatywny"
     },
     {
@@ -6926,7 +6926,7 @@
         "column_name_original": "Negative",
         "primary_key": false,
         "foreign_key": "people",
-        "column_name_pl": "negatywne",
+        "column_name_pl": "negatywny",
         "column_name_original_pl": "Negatywny"
     },
     {
@@ -6936,7 +6936,7 @@
         "column_name_original": "If_Affirmative_Win",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "jeśli twierdzący wygrają",
+        "column_name_pl": "jeśli afirmatywni wygrają",
         "column_name_original_pl": "Jeśli_Afirmatywni_Wygrają"
     },
     {
@@ -7066,8 +7066,8 @@
         "column_name_original": "Participant_Details",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "dane uczestników",
-        "column_name_original_pl": "Szczegóły_Dotyczące_Uczestników"
+        "column_name_pl": "szczegóły uczestników",
+        "column_name_original_pl": "Szczegóły_Uczestników"
     },
     {
         "db_id": "local_govt_in_alabama",
@@ -7606,7 +7606,7 @@
         "column_name_original": "Hours",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "godzin",
+        "column_name_pl": "godziny",
         "column_name_original_pl": "Godziny"
     },
     {
@@ -7846,8 +7846,8 @@
         "column_name_original": "Artwork_ID",
         "primary_key": true,
         "foreign_key": "artwork",
-        "column_name_pl": "id dzieła sztuki",
-        "column_name_original_pl": "id_grafiki"
+        "column_name_pl": "id grafiki",
+        "column_name_original_pl": "Grafika_ID"
     },
     {
         "db_id": "entertainment_awards",
@@ -7967,7 +7967,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "kierunek",
-        "column_name_original_pl": "Kierunek_Studiów"
+        "column_name_original_pl": "Kierunek"
     },
     {
         "db_id": "allergy_1",
@@ -8076,7 +8076,7 @@
         "column_name_original": "cid",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "id prawa autorskiego",
+        "column_name_pl": "paid",
         "column_name_original_pl": "paid"
     },
     {
@@ -8096,7 +8096,7 @@
         "column_name_original": "msid",
         "primary_key": false,
         "foreign_key": "copyright",
-        "column_name_pl": "msid",
+        "column_name_pl": "paid",
         "column_name_original_pl": "paid"
     },
     {
@@ -8146,7 +8146,7 @@
         "column_name_original": "id",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "iD",
+        "column_name_pl": "id",
         "column_name_original_pl": "iD"
     },
     {
@@ -9176,8 +9176,8 @@
         "column_name_original": "Unsure_rate",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "wskaźnik niepewności",
-        "column_name_original_pl": "Odsetek_osób_niezdecydowanych"
+        "column_name_pl": "odsetek niezdecydowanych",
+        "column_name_original_pl": "Odsetek_niezdecydowanych"
     },
     {
         "db_id": "candidate_poll",
@@ -9187,7 +9187,7 @@
         "primary_key": true,
         "foreign_key": "",
         "column_name_pl": "id osoby",
-        "column_name_original_pl": "id_osób"
+        "column_name_original_pl": "Osoba_ID"
     },
     {
         "db_id": "candidate_poll",
@@ -9567,7 +9567,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "email",
-        "column_name_original_pl": "E-Mail"
+        "column_name_original_pl": "EMail"
     },
     {
         "db_id": "chinook_1",
@@ -9856,7 +9856,7 @@
         "column_name_original": "Milliseconds",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "milisekund",
+        "column_name_pl": "milisekundy",
         "column_name_original_pl": "Milisekundy"
     },
     {
@@ -10317,7 +10317,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "kierunek",
-        "column_name_original_pl": "Kierunek_Studiów"
+        "column_name_original_pl": "Kierunek"
     },
     {
         "db_id": "dorm_1",
@@ -10746,7 +10746,7 @@
         "column_name_original": "FDA_approved",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "zatwierdzony przez FDA",
+        "column_name_pl": "zatwierdzony przez fda",
         "column_name_original_pl": "Zatwierdzony_przez_FDA"
     },
     {
@@ -11606,7 +11606,7 @@
         "column_name_original": "Address_road",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "droga adresowa",
+        "column_name_pl": "adres drogi",
         "column_name_original_pl": "Adres_drogi"
     },
     {
@@ -12186,7 +12186,7 @@
         "column_name_original": "Name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "nazwa",
+        "column_name_pl": "imię",
         "column_name_original_pl": "Imię"
     },
     {
@@ -12206,7 +12206,7 @@
         "column_name_original": "Song_Name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "nazwa utworu",
+        "column_name_pl": "nazwa piosenki",
         "column_name_original_pl": "Nazwa_Piosenki"
     },
     {
@@ -12216,7 +12216,7 @@
         "column_name_original": "Song_release_year",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "rok wydania utworu",
+        "column_name_pl": "rok wydania piosenki",
         "column_name_original_pl": "Rok_wydania_piosenki"
     },
     {
@@ -12257,7 +12257,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "nazwa koncertu",
-        "column_name_original_pl": "koncert_Nazwa"
+        "column_name_original_pl": "nazwa_Koncertu"
     },
     {
         "db_id": "concert_singer",
@@ -12636,8 +12636,8 @@
         "column_name_original": "Player_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id zawodnika",
-        "column_name_original_pl": "id_gracza"
+        "column_name_pl": "id gracza",
+        "column_name_original_pl": "Gracz_ID"
     },
     {
         "db_id": "sports_competition",
@@ -12957,7 +12957,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "rozpoczęcie roku pracy",
-        "column_name_original_pl": "Początek_roku_roboczego"
+        "column_name_original_pl": "Rozpoczęcie_Roku_Pracy"
     },
     {
         "db_id": "railway",
@@ -12996,8 +12996,8 @@
         "column_name_original": "Manager_ID",
         "primary_key": false,
         "foreign_key": "manager",
-        "column_name_pl": "id manadżera",
-        "column_name_original_pl": "id_menedżera"
+        "column_name_pl": "id menedżera",
+        "column_name_original_pl": "Menadżer_ID"
     },
     {
         "db_id": "railway",
@@ -15156,7 +15156,7 @@
         "column_name_original": "inseason",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "w sezonie",
+        "column_name_pl": "wsezonie",
         "column_name_original_pl": "wsezonie"
     },
     {
@@ -16346,7 +16346,7 @@
         "column_name_original": "div_id",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "id div",
+        "column_name_pl": "div id",
         "column_name_original_pl": "div_id"
     },
     {
@@ -17236,7 +17236,7 @@
         "column_name_original": "Undergraduate",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "studia licencjackie",
+        "column_name_pl": "absolwenci studiów licencjackich",
         "column_name_original_pl": "Absolwenci_Studiów_Licencjackich"
     },
     {
@@ -17276,7 +17276,7 @@
         "column_name_original": "TotalEnrollment_AY",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "całkowite zapisy ay",
+        "column_name_pl": "całkowitezapisy ay",
         "column_name_original_pl": "CałkowiteZapisy_AY"
     },
     {
@@ -17606,7 +17606,7 @@
         "column_name_original": "Customer_Details",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "dane klientów",
+        "column_name_pl": "dane klienta",
         "column_name_original_pl": "Dane_Klienta"
     },
     {
@@ -17636,7 +17636,7 @@
         "column_name_original": "Policy_Type_Code",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "kod rodzaju polisy",
+        "column_name_pl": "kod typu polisy",
         "column_name_original_pl": "Kod_Typu_Polisy"
     },
     {
@@ -17656,7 +17656,7 @@
         "column_name_original": "End_Date",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "data końcowa",
+        "column_name_pl": "data zakończenia",
         "column_name_original_pl": "Data_Zakończenia"
     },
     {
@@ -17696,7 +17696,7 @@
         "column_name_original": "Date_Claim_Settled",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "data uregulowania roszczenia",
+        "column_name_pl": "data rozliczenia roszczenia",
         "column_name_original_pl": "Data_Rozliczenia_Roszczenia"
     },
     {
@@ -17716,7 +17716,7 @@
         "column_name_original": "Amount_Settled",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "kwota rozliczona",
+        "column_name_pl": "rozliczona kwota",
         "column_name_original_pl": "Rozliczona_Kwota"
     },
     {
@@ -17756,7 +17756,7 @@
         "column_name_original": "Date_Claim_Settled",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "data uregulowania roszczenia",
+        "column_name_pl": "data rozliczenia roszczenia",
         "column_name_original_pl": "Data_Rozliczenia_Roszczenia"
     },
     {
@@ -17836,7 +17836,7 @@
         "column_name_original": "Amount_Payment",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "kwota płatności",
+        "column_name_pl": "kwota płatność",
         "column_name_original_pl": "Kwota_Płatność"
     },
     {
@@ -17846,7 +17846,7 @@
         "column_name_original": "Company_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id spółki",
+        "column_name_pl": "id firmy",
         "column_name_original_pl": "id_firmy"
     },
     {
@@ -17876,7 +17876,7 @@
         "column_name_original": "Headquarters",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "siedziba główna",
+        "column_name_pl": "siedziba",
         "column_name_original_pl": "Siedziba"
     },
     {
@@ -17886,7 +17886,7 @@
         "column_name_original": "Main_Industry",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "główna branża",
+        "column_name_pl": "główny przemysł",
         "column_name_original_pl": "Główny_Przemysł"
     },
     {
@@ -17906,7 +17906,7 @@
         "column_name_original": "Profits_billion",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "zyski miliard",
+        "column_name_pl": "zyski w miliardach",
         "column_name_original_pl": "Zyski_w_miliardach"
     },
     {
@@ -17916,7 +17916,7 @@
         "column_name_original": "Assets_billion",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "aktywa mld",
+        "column_name_pl": "miliard aktywów",
         "column_name_original_pl": "Miliard_aktywów"
     },
     {
@@ -17946,7 +17946,7 @@
         "column_name_original": "Open_Year",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "otwarty rok",
+        "column_name_pl": "rok otwarty",
         "column_name_original_pl": "Rok_Otwarty"
     },
     {
@@ -17987,7 +17987,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "nazwa przedstawiciela",
-        "column_name_original_pl": "Imię_I_Nazwisko_Przedstawiciela"
+        "column_name_original_pl": "Nazwa_Przedstawiciela"
     },
     {
         "db_id": "gas_company",
@@ -18016,7 +18016,7 @@
         "column_name_original": "Rank_of_the_Year",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "ranga roku",
+        "column_name_pl": "ranking roku",
         "column_name_original_pl": "Ranking_Roku"
     },
     {
@@ -18286,7 +18286,7 @@
         "column_name_original": "uk_vat_number",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "brytyjski numer VAT",
+        "column_name_pl": "brytyjski numer vat",
         "column_name_original_pl": "brytyjski_numer_VAT"
     },
     {
@@ -18546,7 +18546,7 @@
         "column_name_original": "Party",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "impreza",
+        "column_name_pl": "strona",
         "column_name_original_pl": "Strona"
     },
     {
@@ -18576,7 +18576,7 @@
         "column_name_original": "School_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id szkolny",
+        "column_name_pl": "legitymacja szkolna",
         "column_name_original_pl": "Legitymacja_szkolna"
     },
     {
@@ -18586,7 +18586,7 @@
         "column_name_original": "Grade",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "klasa",
+        "column_name_pl": "stopień",
         "column_name_original_pl": "Stopień"
     },
     {
@@ -18626,7 +18626,7 @@
         "column_name_original": "School_ID",
         "primary_key": true,
         "foreign_key": "school",
-        "column_name_pl": "id szkoły",
+        "column_name_pl": "legitymacja szkolna",
         "column_name_original_pl": "Legitymacja_szkolna"
     },
     {
@@ -18646,7 +18646,7 @@
         "column_name_original": "Years_Working",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "lat pracy",
+        "column_name_pl": "lata pracy",
         "column_name_original_pl": "Lata_Pracy"
     },
     {
@@ -18697,7 +18697,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "notatki",
-        "column_name_original_pl": "Uwagi"
+        "column_name_original_pl": "Notatki"
     },
     {
         "db_id": "machine_repair",
@@ -19076,7 +19076,7 @@
         "column_name_original": "Low_Estimate",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "niskie szacunki",
+        "column_name_pl": "niski szacunek",
         "column_name_original_pl": "Niski_Szacunek"
     },
     {
@@ -19086,7 +19086,7 @@
         "column_name_original": "High_Estimate",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "wysokie szacunki",
+        "column_name_pl": "wysoki szacunek",
         "column_name_original_pl": "Wysoki_Szacunek"
     },
     {
@@ -19226,7 +19226,7 @@
         "column_name_original": "Left_office",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "opuścił biuro",
+        "column_name_pl": "opuszczone biuro",
         "column_name_original_pl": "Opuszczone_biuro"
     },
     {
@@ -19367,7 +19367,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "ssn",
-        "column_name_original_pl": "Numer_SSN"
+        "column_name_original_pl": "SSN"
     },
     {
         "db_id": "hospital_1",
@@ -20326,7 +20326,7 @@
         "column_name_original": "mailshot_id",
         "primary_key": false,
         "foreign_key": "mailshot campaigns",
-        "column_name_pl": "mailshot id",
+        "column_name_pl": "id mailshot",
         "column_name_original_pl": "id_mailshot"
     },
     {
@@ -20456,8 +20456,8 @@
         "column_name_original": "Pommel_Horse_Points",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "punkty za konia z pomponem",
-        "column_name_original_pl": "Punkty_Pommel_Horse"
+        "column_name_pl": "punkty za konia gimnastycznego",
+        "column_name_original_pl": "Punkty_Za_Konia_Gimnastycznego"
     },
     {
         "db_id": "gymnast",
@@ -20467,7 +20467,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "punkty za pierścienie",
-        "column_name_original_pl": "Pierścienie_Punkty"
+        "column_name_original_pl": "Punkty_Za_Pierścienie"
     },
     {
         "db_id": "gymnast",
@@ -20487,7 +20487,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "punkty za drążki równoległe",
-        "column_name_original_pl": "Punkty_Na_Poręczach_Równoległych"
+        "column_name_original_pl": "Punkty_Za_Drążki_Równoległe"
     },
     {
         "db_id": "gymnast",
@@ -20496,7 +20496,7 @@
         "column_name_original": "Horizontal_Bar_Points",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "punkty na drążku poziomym",
+        "column_name_pl": "punkty za drążek poziomy",
         "column_name_original_pl": "Punkty_Za_Drążek_Poziomy"
     },
     {
@@ -20506,7 +20506,7 @@
         "column_name_original": "Total_Points",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "suma punktów",
+        "column_name_pl": "łączna liczba punktów",
         "column_name_original_pl": "Łączna_Liczba_Punktów"
     },
     {
@@ -20517,7 +20517,7 @@
         "primary_key": true,
         "foreign_key": "",
         "column_name_pl": "id osoby",
-        "column_name_original_pl": "id_osób"
+        "column_name_original_pl": "Osoba_ID"
     },
     {
         "db_id": "gymnast",
@@ -20556,7 +20556,7 @@
         "column_name_original": "Hometown",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "rodzinne miasto",
+        "column_name_pl": "miasto rodzinne",
         "column_name_original_pl": "Miasto_Rodzinne"
     },
     {
@@ -20576,7 +20576,7 @@
         "column_name_original": "COUNTY",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "powiat",
+        "column_name_pl": "kraj",
         "column_name_original_pl": "KRAJ"
     },
     {
@@ -22696,7 +22696,7 @@
         "column_name_original": "Launched_Year",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "rozpoczęty rok",
+        "column_name_pl": "rok uruchomienia",
         "column_name_original_pl": "Rok_Uruchomienia"
     },
     {
@@ -22876,7 +22876,7 @@
         "column_name_original": "Industry",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "branża",
+        "column_name_pl": "przemysł",
         "column_name_original_pl": "Przemysł"
     },
     {
@@ -22896,7 +22896,7 @@
         "column_name_original": "Profits_billion",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "zyski w miliardach",
+        "column_name_pl": "zyski w mld",
         "column_name_original_pl": "Zyski_w_mld"
     },
     {
@@ -22906,7 +22906,7 @@
         "column_name_original": "Assets_billion",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "aktywa mld",
+        "column_name_pl": "miliard aktywów",
         "column_name_original_pl": "Miliard_aktywów"
     },
     {
@@ -23637,7 +23637,7 @@
         "primary_key": false,
         "foreign_key": "member",
         "column_name_pl": "id członka",
-        "column_name_original_pl": "id_członkowski"
+        "column_name_original_pl": "Członek_ID"
     },
     {
         "db_id": "coffee_shop",
@@ -23657,7 +23657,7 @@
         "primary_key": true,
         "foreign_key": "",
         "column_name_pl": "id zawodnika",
-        "column_name_original_pl": "id_zawodnika"
+        "column_name_original_pl": "Zawodnik_ID"
     },
     {
         "db_id": "riding_club",
@@ -23696,7 +23696,7 @@
         "column_name_original": "Residence",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "miejsce zamieszkania",
+        "column_name_pl": "rezydencja",
         "column_name_original_pl": "Rezydencja"
     },
     {
@@ -24236,7 +24236,7 @@
         "column_name_original": "Residents_per_officer",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "mieszkańców na funkcjonariusza",
+        "column_name_pl": "mieszkańcy na funkcjonariusza",
         "column_name_original_pl": "Mieszkańcy_na_funkcjonariusza"
     },
     {
@@ -24246,7 +24246,7 @@
         "column_name_original": "Case_burden",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "obciążenie sprawami",
+        "column_name_pl": "obciążenie sprawą",
         "column_name_original_pl": "Obciążenie_sprawą"
     },
     {
@@ -24286,8 +24286,8 @@
         "column_name_original": "City_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id miejski",
-        "column_name_original_pl": "id_miasta"
+        "column_name_pl": "id miasta",
+        "column_name_original_pl": "Miasto_ID"
     },
     {
         "db_id": "county_public_safety",
@@ -24347,7 +24347,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "azjatycki",
-        "column_name_original_pl": "Azjatyckii"
+        "column_name_original_pl": "Azjatycki"
     },
     {
         "db_id": "county_public_safety",
@@ -24366,7 +24366,7 @@
         "column_name_original": "Hispanic",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "latynosów",
+        "column_name_pl": "latynos",
         "column_name_original_pl": "Latynos"
     },
     {
@@ -24416,7 +24416,7 @@
         "column_name_original": "Performance_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id wyników",
+        "column_name_pl": "id występu",
         "column_name_original_pl": "id_występu"
     },
     {
@@ -24476,7 +24476,7 @@
         "column_name_original": "Performance_ID",
         "primary_key": false,
         "foreign_key": "performance",
-        "column_name_pl": "id wyników",
+        "column_name_pl": "id występu",
         "column_name_original_pl": "id_występu"
     },
     {
@@ -24856,7 +24856,7 @@
         "column_name_original": "Budget_million",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "milion budżetu",
+        "column_name_pl": "budżet w milionach",
         "column_name_original_pl": "Budżet_w_milionach"
     },
     {
@@ -24896,7 +24896,7 @@
         "column_name_original": "Incorporated_in",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "włączone do",
+        "column_name_pl": "włączony do",
         "column_name_original_pl": "Włączony_do"
     },
     {
@@ -24906,7 +24906,7 @@
         "column_name_original": "Group_Equity_Shareholding",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "grupowy udział kapitałowy",
+        "column_name_pl": "udziały kapitałowe grupy",
         "column_name_original_pl": "Udziały_Kapitałowe_Grupy"
     },
     {
@@ -25266,7 +25266,7 @@
         "column_name_original": "District",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "dzielnica",
+        "column_name_pl": "dystrykt",
         "column_name_original_pl": "Dystrykt"
     },
     {
@@ -25386,7 +25386,7 @@
         "column_name_original": "GNP",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "gnp",
+        "column_name_pl": "pnb",
         "column_name_original_pl": "PNB"
     },
     {
@@ -25456,7 +25456,7 @@
         "column_name_original": "CountryCode",
         "primary_key": true,
         "foreign_key": "country",
-        "column_name_pl": "kod kraju",
+        "column_name_pl": "kodkraju",
         "column_name_original_pl": "KodKraju"
     },
     {
@@ -26126,7 +26126,7 @@
         "column_name_original": "District",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "dzielnica",
+        "column_name_pl": "dystrykt",
         "column_name_original_pl": "Dystrykt"
     },
     {
@@ -26186,7 +26186,7 @@
         "column_name_original": "Is_full_time",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "jest pełnoetatowy",
+        "column_name_pl": "jest zatrudniony na pełny etat",
         "column_name_original_pl": "Jest_zatrudniony_na_pełny_etat"
     },
     {
@@ -26416,7 +26416,7 @@
         "column_name_original": "Final_Table_Made",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "stół finałowy",
+        "column_name_pl": "utworzono stół finałowy",
         "column_name_original_pl": "Utworzono_Stół_Finałowy"
     },
     {
@@ -26426,7 +26426,7 @@
         "column_name_original": "Best_Finish",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "najlepszy finisz",
+        "column_name_pl": "najlepsze zakończenie",
         "column_name_original_pl": "Najlepsze_Zakończenie"
     },
     {
@@ -26496,7 +26496,7 @@
         "column_name_original": "Height",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "wzrost",
+        "column_name_pl": "wysokość",
         "column_name_original_pl": "Wysokość"
     },
     {
@@ -26716,7 +26716,7 @@
         "column_name_original": "Aircraft",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "samolot",
+        "column_name_pl": "samoloty",
         "column_name_original_pl": "Samoloty"
     },
     {
@@ -26856,7 +26856,7 @@
         "column_name_original": "Total_Passengers",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "łączna liczba pasażerów",
+        "column_name_pl": "pasażerowie ogółem",
         "column_name_original_pl": "Pasażerowie_Ogółem"
     },
     {
@@ -26866,7 +26866,7 @@
         "column_name_original": "%_Change_2007",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "zmiana % 2007",
+        "column_name_pl": "% zmiana 2007",
         "column_name_original_pl": "%_Zmiana_2007"
     },
     {
@@ -26906,7 +26906,7 @@
         "column_name_original": "Aircraft_Movements",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "ruchy statków powietrznych",
+        "column_name_pl": "ruch statków powietrznych",
         "column_name_original_pl": "Ruch_Statków_Powietrznych"
     },
     {
@@ -26947,7 +26947,7 @@
         "primary_key": false,
         "foreign_key": "aircraft",
         "column_name_pl": "id samolotu",
-        "column_name_original_pl": "id_statku_powietrznego"
+        "column_name_original_pl": "id_samolotu"
     },
     {
         "db_id": "restaurant_1",
@@ -26996,7 +26996,7 @@
         "column_name_original": "Sex",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "seks",
+        "column_name_pl": "płeć",
         "column_name_original_pl": "Płeć"
     },
     {
@@ -27156,7 +27156,7 @@
         "column_name_original": "Spent",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "wydane",
+        "column_name_pl": "wydatki",
         "column_name_original_pl": "Wydatki"
     },
     {
@@ -27736,7 +27736,7 @@
         "column_name_original": "Customer_Details",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "dane klientów",
+        "column_name_pl": "dane klienta",
         "column_name_original_pl": "Dane_Klienta"
     },
     {
@@ -27746,7 +27746,7 @@
         "column_name_original": "Staff_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id pracownika",
+        "column_name_pl": "id personelu",
         "column_name_original_pl": "id_personelu"
     },
     {
@@ -27786,7 +27786,7 @@
         "column_name_original": "Policy_Type_Code",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "kod rodzaju polisy",
+        "column_name_pl": "kod typu polisy",
         "column_name_original_pl": "Kod_Typu_Polisy"
     },
     {
@@ -27806,7 +27806,7 @@
         "column_name_original": "End_Date",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "data końcowa",
+        "column_name_pl": "data zakończenia",
         "column_name_original_pl": "Data_Zakończenia"
     },
     {
@@ -27916,7 +27916,7 @@
         "column_name_original": "Created_by_Staff_ID",
         "primary_key": false,
         "foreign_key": "staff",
-        "column_name_pl": "stworzone przez personel id",
+        "column_name_pl": "utworzony przez personel id",
         "column_name_original_pl": "Utworzony_przez_Personel_ID"
     },
     {
@@ -28056,8 +28056,8 @@
         "column_name_original": "CLASS_TIME",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "czas zajęć",
-        "column_name_original_pl": "CZAS_W_KLASIE"
+        "column_name_pl": "klasa czas",
+        "column_name_original_pl": "KLASA_CZAS"
     },
     {
         "db_id": "college_1",
@@ -28066,8 +28066,8 @@
         "column_name_original": "CLASS_ROOM",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "sala lekcyjna",
-        "column_name_original_pl": "POKÓJ_KLASOWY"
+        "column_name_pl": "klasa pokój",
+        "column_name_original_pl": "KLASA_POKÓJ"
     },
     {
         "db_id": "college_1",
@@ -28276,8 +28276,8 @@
         "column_name_original": "ENROLL_GRADE",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "zapisz się do klasy",
-        "column_name_original_pl": "KLASA_WEJŚCIA"
+        "column_name_pl": "zapisy stopień",
+        "column_name_original_pl": "ZAPISY_STOPIEŃ"
     },
     {
         "db_id": "college_1",
@@ -28786,8 +28786,8 @@
         "column_name_original": "MANAGER_ID",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "id kierownika",
-        "column_name_original_pl": "ID_MANAGERA"
+        "column_name_pl": "id menadżera",
+        "column_name_original_pl": "ID_MENADŻERA"
     },
     {
         "db_id": "hr_1",
@@ -28817,7 +28817,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "nazwa stanowiska",
-        "column_name_original_pl": "TYTUŁ_ZATRUDNIENIA"
+        "column_name_original_pl": "NAZWA_STANOWISKA"
     },
     {
         "db_id": "hr_1",
@@ -28876,7 +28876,7 @@
         "column_name_original": "EMAIL",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "e-mail",
+        "column_name_pl": "email",
         "column_name_original_pl": "EMAIL"
     },
     {
@@ -28926,7 +28926,7 @@
         "column_name_original": "COMMISSION_PCT",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "procent prowizji",
+        "column_name_pl": "prowizja pct",
         "column_name_original_pl": "Prowizja_PCT"
     },
     {
@@ -28946,7 +28946,7 @@
         "column_name_original": "DEPARTMENT_ID",
         "primary_key": false,
         "foreign_key": "departments",
-        "column_name_pl": "id działu",
+        "column_name_pl": "id departamentu",
         "column_name_original_pl": "ID_DEPARTAMENTU"
     },
     {
@@ -28967,7 +28967,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "data rozpoczęcia",
-        "column_name_original_pl": "DATA_ROZPOCZĘCIA_PRACY"
+        "column_name_original_pl": "DATA_ROZPOCZĘCIA"
     },
     {
         "db_id": "hr_1",
@@ -29017,7 +29017,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "adres ulicy",
-        "column_name_original_pl": "ADRES_STREET"
+        "column_name_original_pl": "ADRES_ULICY"
     },
     {
         "db_id": "hr_1",
@@ -29046,7 +29046,7 @@
         "column_name_original": "STATE_PROVINCE",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "stan prowincja",
+        "column_name_pl": "prowincja państwa",
         "column_name_original_pl": "PROWINCJA_PAŃSTWA"
     },
     {
@@ -29986,8 +29986,8 @@
         "column_name_original": "address2",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "adres 2",
-        "column_name_original_pl": "adres"
+        "column_name_pl": "adres2",
+        "column_name_original_pl": "adres2"
     },
     {
         "db_id": "sakila_1",
@@ -30187,7 +30187,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "email",
-        "column_name_original_pl": "e-mail"
+        "column_name_original_pl": "email"
     },
     {
         "db_id": "sakila_1",
@@ -31236,7 +31236,7 @@
         "column_name_original": "Major",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "kierunek",
+        "column_name_pl": "kierunek studiów",
         "column_name_original_pl": "Kierunek_Studiów"
     },
     {
@@ -31306,7 +31306,7 @@
         "column_name_original": "Sex",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "seks",
+        "column_name_pl": "płeć",
         "column_name_original_pl": "Płeć"
     },
     {
@@ -31356,7 +31356,7 @@
         "column_name_original": "Division",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "dział",
+        "column_name_pl": "wydział",
         "column_name_original_pl": "Wydział"
     },
     {
@@ -31456,7 +31456,7 @@
         "column_name_original": "Credits",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "punktów",
+        "column_name_pl": "punkty",
         "column_name_original_pl": "Punkty"
     },
     {
@@ -31486,7 +31486,7 @@
         "column_name_original": "Hours",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "godzin",
+        "column_name_pl": "godziny",
         "column_name_original_pl": "Godziny"
     },
     {
@@ -31746,7 +31746,7 @@
         "column_name_original": "Opened",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "otwarty",
+        "column_name_pl": "otwarte",
         "column_name_original_pl": "Otwarte"
     },
     {
@@ -32436,7 +32436,7 @@
         "column_name_original": "Away_team",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "drużyna na wyjeździe",
+        "column_name_pl": "drużyna przeciwna",
         "column_name_original_pl": "Drużyna_przeciwna"
     },
     {
@@ -32456,7 +32456,7 @@
         "column_name_original": "Competition",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "rywalizacja",
+        "column_name_pl": "konkurencja",
         "column_name_original_pl": "Konkurencja"
     },
     {
@@ -32496,7 +32496,7 @@
         "column_name_original": "Injury",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "kontuzja",
+        "column_name_pl": "uraz",
         "column_name_original_pl": "Uraz"
     },
     {
@@ -32566,7 +32566,7 @@
         "column_name_original": "Enrollment",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "rekrutacja",
+        "column_name_pl": "zapisy",
         "column_name_original_pl": "Zapisy"
     },
     {
@@ -32626,7 +32626,7 @@
         "column_name_original": "Budgeted",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "zapisane w budżecie",
+        "column_name_pl": "budżetowane",
         "column_name_original_pl": "Budżetowane"
     },
     {
@@ -32666,7 +32666,7 @@
         "column_name_original": "Budget_invested_percent",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "zainwestowany procent budżetu",
+        "column_name_pl": "procent zainwestowanego budżetu",
         "column_name_original_pl": "Procent_zainwestowanego_budżetu"
     },
     {
@@ -33196,7 +33196,7 @@
         "column_name_original": "Player_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id zawodnika",
+        "column_name_pl": "id gracza",
         "column_name_original_pl": "id_gracza"
     },
     {
@@ -33226,7 +33226,7 @@
         "column_name_original": "Total_WL",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "łączna wygrana",
+        "column_name_pl": "łączny wl",
         "column_name_original_pl": "Łączny_WL"
     },
     {
@@ -33236,7 +33236,7 @@
         "column_name_original": "Singles_WL",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "wl singli",
+        "column_name_pl": "singiel wl",
         "column_name_original_pl": "Singiel_WL"
     },
     {
@@ -33246,7 +33246,7 @@
         "column_name_original": "Doubles_WL",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "double wl",
+        "column_name_pl": "gra podwójna wl",
         "column_name_original_pl": "Gra_podwójna_WL"
     },
     {
@@ -34216,7 +34216,7 @@
         "column_name_original": "Open_Year",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "rok otwarcia",
+        "column_name_pl": "rok otwarty",
         "column_name_original_pl": "Rok_Otwarty"
     },
     {
@@ -34257,7 +34257,7 @@
         "primary_key": true,
         "foreign_key": "",
         "column_name_pl": "id mebla",
-        "column_name_original_pl": "id_mebli"
+        "column_name_original_pl": "id_mebla"
     },
     {
         "db_id": "manufacturer",
@@ -34276,7 +34276,7 @@
         "column_name_original": "Num_of_Component",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "numer komponentu",
+        "column_name_pl": "liczba komponentów",
         "column_name_original_pl": "Liczba_komponentów"
     },
     {
@@ -35016,7 +35016,7 @@
         "column_name_original": "Annual_interchanges",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "roczne węzły przesiadkowe",
+        "column_name_pl": "coroczne przesiadki",
         "column_name_original_pl": "Coroczne_przesiadki"
     },
     {
@@ -36506,7 +36506,7 @@
         "column_name_original": "Hours_Played",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "rozegranych godzin",
+        "column_name_pl": "rozegrane godziny",
         "column_name_original_pl": "Rozegrane_Godziny"
     },
     {
@@ -37126,7 +37126,7 @@
         "column_name_original": "max_wind_Speed_mph",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "maksymalna prędkość wiatru mph",
+        "column_name_pl": "maksymalna prędkość wiatru w milach na godzinę",
         "column_name_original_pl": "maksymalna_prędkość_wiatru_w_milach_na_godzinę"
     },
     {
@@ -37257,7 +37257,7 @@
         "primary_key": true,
         "foreign_key": "",
         "column_name_pl": "id osoby",
-        "column_name_original_pl": "id_osób"
+        "column_name_original_pl": "Osoby_ID"
     },
     {
         "db_id": "entrepreneur",
@@ -37357,7 +37357,7 @@
         "primary_key": true,
         "foreign_key": "",
         "column_name_pl": "orkiestra id",
-        "column_name_original_pl": "id_orkiestry"
+        "column_name_original_pl": "Orkiestra_ID"
     },
     {
         "db_id": "orchestra",
@@ -37416,7 +37416,7 @@
         "column_name_original": "Performance_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id wydajności",
+        "column_name_pl": "id występu",
         "column_name_original_pl": "id_występu"
     },
     {
@@ -37567,7 +37567,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "kod typu usługi nadrzędnej",
-        "column_name_original_pl": "Kod_Typu_Usługi_Dla_Rodziców"
+        "column_name_original_pl": "Kod_Typu_Usługi_Nadrzędnej"
     },
     {
         "db_id": "cre_Drama_Workshop_Groups",
@@ -37626,7 +37626,7 @@
         "column_name_original": "State_County",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "stan hrabstwa",
+        "column_name_pl": "hrabstwo stanowe",
         "column_name_original_pl": "Hrabstwo_Stanowe"
     },
     {
@@ -37746,7 +37746,7 @@
         "column_name_original": "Address_ID",
         "primary_key": false,
         "foreign_key": "addresses",
-        "column_name_pl": "dane adresowe",
+        "column_name_pl": "id adresu",
         "column_name_original_pl": "id_adresu"
     },
     {
@@ -37776,7 +37776,7 @@
         "column_name_original": "Customer_Phone",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "telefony od klientów",
+        "column_name_pl": "telefon od klienta",
         "column_name_original_pl": "Telefon_Od_Klienta"
     },
     {
@@ -37816,7 +37816,7 @@
         "column_name_original": "Currency_Code",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "kod waluty",
+        "column_name_pl": "kod walutowy",
         "column_name_original_pl": "Kod_Walutowy"
     },
     {
@@ -37856,8 +37856,8 @@
         "column_name_original": "Store_Email_Address",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "przechowuj adres e-mail",
-        "column_name_original_pl": "Zapisz_Adres_E-Mail"
+        "column_name_pl": "zapisz adres email",
+        "column_name_original_pl": "Zapisz_Adres_EMail"
     },
     {
         "db_id": "cre_Drama_Workshop_Groups",
@@ -37886,7 +37886,7 @@
         "column_name_original": "Address_ID",
         "primary_key": false,
         "foreign_key": "addresses",
-        "column_name_pl": "dane adresowe",
+        "column_name_pl": "id adresu",
         "column_name_original_pl": "id_adresu"
     },
     {
@@ -37906,7 +37906,7 @@
         "column_name_original": "Customer_Phone",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "telefon od klienta",
+        "column_name_pl": "telefon klienta",
         "column_name_original_pl": "Telefon_Klienta"
     },
     {
@@ -37996,7 +37996,7 @@
         "column_name_original": "Store_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id sklepu",
+        "column_name_pl": "sklep id",
         "column_name_original_pl": "Sklep_ID"
     },
     {
@@ -38106,7 +38106,7 @@
         "column_name_original": "Store_ID",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "id sklepu",
+        "column_name_pl": "sklep id",
         "column_name_original_pl": "Sklep_ID"
     },
     {
@@ -38286,7 +38286,7 @@
         "column_name_original": "Other_Item_Details",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "inne szczegóły przedmiotu",
+        "column_name_pl": "inne szczegóły pozycji",
         "column_name_original_pl": "Inne_Szczegóły_Pozycji"
     },
     {
@@ -38376,7 +38376,7 @@
         "column_name_original": "Service_Type_Code",
         "primary_key": false,
         "foreign_key": "reference service types",
-        "column_name_pl": "kod typu usługi",
+        "column_name_pl": "kod rodzaju usługi",
         "column_name_original_pl": "Kod_Rodzaju_Usługi"
     },
     {
@@ -38716,7 +38716,7 @@
         "column_name_original": "Horsepower",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "kM",
+        "column_name_pl": "moc",
         "column_name_original_pl": "Moc"
     },
     {
@@ -38736,7 +38736,7 @@
         "column_name_original": "Accelerate",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "przyspiesz",
+        "column_name_pl": "przyspieszenie",
         "column_name_original_pl": "Przyspieszenie"
     },
     {
@@ -39716,7 +39716,7 @@
         "column_name_original": "Calendar_Date",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "data kalendarzowa",
+        "column_name_pl": "data kalendarza",
         "column_name_original_pl": "Data_Kalendarza"
     },
     {
@@ -39806,7 +39806,7 @@
         "column_name_original": "Date_Stored",
         "primary_key": false,
         "foreign_key": "reference calendar",
-        "column_name_pl": "przechowywana data",
+        "column_name_pl": "data przechowywania",
         "column_name_original_pl": "Data_Przechowywania"
     },
     {
@@ -40047,7 +40047,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "sezon regularny acc",
-        "column_name_original_pl": "Sezon_zasadniczy_ACC"
+        "column_name_original_pl": "Sezon_Regularny_ACC"
     },
     {
         "db_id": "university_basketball",
@@ -40056,7 +40056,7 @@
         "column_name_original": "ACC_Percent",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "acc procent",
+        "column_name_pl": "procent acc",
         "column_name_original_pl": "Procent_ACC"
     },
     {
@@ -40137,7 +40137,7 @@
         "primary_key": true,
         "foreign_key": "",
         "column_name_pl": "id szkoły",
-        "column_name_original_pl": "Legitymacja_szkolna"
+        "column_name_original_pl": "Szkoła_ID"
     },
     {
         "db_id": "university_basketball",
@@ -40177,7 +40177,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "przynależność",
-        "column_name_original_pl": "Afiliacja"
+        "column_name_original_pl": "Przynależność"
     },
     {
         "db_id": "university_basketball",
@@ -40637,7 +40637,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "informacje turystyczne",
-        "column_name_original_pl": "Szczegółowe_Informacje_Turystyczne"
+        "column_name_original_pl": "Informacje_Turystyczne"
     },
     {
         "db_id": "cre_Theme_park",
@@ -40726,7 +40726,7 @@
         "column_name_original": "Attraction_Type_Code",
         "primary_key": false,
         "foreign_key": "ref attraction types",
-        "column_name_pl": "kod rodzaju atrakcji",
+        "column_name_pl": "kod typu atrakcji",
         "column_name_original_pl": "Kod_Typu_Atrakcji"
     },
     {
@@ -41026,7 +41026,7 @@
         "column_name_original": "Name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "nazwa",
+        "column_name_pl": "imię",
         "column_name_original_pl": "Imię"
     },
     {
@@ -41177,7 +41177,7 @@
         "primary_key": true,
         "foreign_key": "",
         "column_name_pl": "id wyborów",
-        "column_name_original_pl": "id_wyborczy"
+        "column_name_original_pl": "Wybory_ID"
     },
     {
         "db_id": "election_representative",
@@ -41206,7 +41206,7 @@
         "column_name_original": "Votes",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "głosów",
+        "column_name_pl": "głosy",
         "column_name_original_pl": "Głosy"
     },
     {
@@ -41226,7 +41226,7 @@
         "column_name_original": "Seats",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "mandatów",
+        "column_name_pl": "mandaty",
         "column_name_original_pl": "Mandaty"
     },
     {
@@ -41406,8 +41406,8 @@
         "column_name_original": "President_Vote",
         "primary_key": false,
         "foreign_key": "student",
-        "column_name_pl": "głosowanie prezydenta",
-        "column_name_original_pl": "Głosowanie_Przewodniczącego"
+        "column_name_pl": "głosowanie na przewodniczącego",
+        "column_name_original_pl": "Głosowanie_Na_Przewodniczącego"
     },
     {
         "db_id": "voter_2",
@@ -41416,7 +41416,7 @@
         "column_name_original": "Vice_President_Vote",
         "primary_key": false,
         "foreign_key": "student",
-        "column_name_pl": "głosowanie na wiceprezydenta",
+        "column_name_pl": "głosowanie na wiceprzewodniczącego",
         "column_name_original_pl": "Głosowanie_Na_Wiceprzewodniczącego"
     },
     {
@@ -41426,8 +41426,8 @@
         "column_name_original": "Secretary_Vote",
         "primary_key": false,
         "foreign_key": "student",
-        "column_name_pl": "głosowanie tajne",
-        "column_name_original_pl": "Głos_Sekretarza"
+        "column_name_pl": "głos na sekretarza",
+        "column_name_original_pl": "Głos_Na_Sekretarza"
     },
     {
         "db_id": "voter_2",
@@ -41466,8 +41466,8 @@
         "column_name_original": "People_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id osoby",
-        "column_name_original_pl": "id_osób"
+        "column_name_pl": "id ludzi",
+        "column_name_original_pl": "Ludzie_ID"
     },
     {
         "db_id": "wedding",
@@ -41546,7 +41546,7 @@
         "column_name_original": "Open_Date",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "otwarta data",
+        "column_name_pl": "data otwarta",
         "column_name_original_pl": "Data_Otwarta"
     },
     {
@@ -41587,7 +41587,7 @@
         "primary_key": false,
         "foreign_key": "people",
         "column_name_pl": "id kobiety",
-        "column_name_original_pl": "Dowód_osobisty_kobiety"
+        "column_name_original_pl": "Kobieta_ID"
     },
     {
         "db_id": "wedding",
@@ -41696,7 +41696,7 @@
         "column_name_original": "Years_working",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "lat pracy",
+        "column_name_pl": "lata pracy",
         "column_name_original_pl": "Lata_pracy"
     },
     {
@@ -41916,7 +41916,7 @@
         "column_name_original": "Cases",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "przypadki",
+        "column_name_pl": "obudowy",
         "column_name_original_pl": "Obudowy"
     },
     {
@@ -42286,7 +42286,7 @@
         "column_name_original": "Years_as_tallest",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "lat jako najwyższy",
+        "column_name_pl": "lata jako najwyższy",
         "column_name_original_pl": "Lata_jako_najwyższy"
     },
     {
@@ -42296,7 +42296,7 @@
         "column_name_original": "Height_feet",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "wysokość stóp",
+        "column_name_pl": "wysokość w stopach",
         "column_name_original_pl": "Wysokość_w_stopach"
     },
     {
@@ -42387,7 +42387,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "konferencja podstawowa",
-        "column_name_original_pl": "Konferencja_Główna"
+        "column_name_original_pl": "Konferencja_Podstawowa"
     },
     {
         "db_id": "protein_institute",
@@ -42477,7 +42477,7 @@
         "primary_key": true,
         "foreign_key": "",
         "column_name_pl": "id szkoły",
-        "column_name_original_pl": "Legitymacja_szkolna"
+        "column_name_original_pl": "Szkoła_ID"
     },
     {
         "db_id": "school_player",
@@ -42516,8 +42516,8 @@
         "column_name_original": "Founded",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "założona",
-        "column_name_original_pl": "Założony"
+        "column_name_pl": "założenie",
+        "column_name_original_pl": "Założenie"
     },
     {
         "db_id": "school_player",
@@ -42546,7 +42546,7 @@
         "column_name_original": "Day_or_Boarding",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "dzienny lub z wyżywieniem",
+        "column_name_pl": "dzień lub wyżywienie",
         "column_name_original_pl": "Dzień_lub_wyżywienie"
     },
     {
@@ -42556,7 +42556,7 @@
         "column_name_original": "Year_Entered_Competition",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "rok startu w zawodach",
+        "column_name_pl": "rok udziału w zawodach",
         "column_name_original_pl": "Rok_Udziału_W_Zawodach"
     },
     {
@@ -42577,7 +42577,7 @@
         "primary_key": true,
         "foreign_key": "school",
         "column_name_pl": "id szkoły",
-        "column_name_original_pl": "Legitymacja_szkolna"
+        "column_name_original_pl": "Szkoła_ID"
     },
     {
         "db_id": "school_player",
@@ -42727,7 +42727,7 @@
         "primary_key": false,
         "foreign_key": "school",
         "column_name_pl": "id szkoły",
-        "column_name_original_pl": "Legitymacja_szkolna"
+        "column_name_original_pl": "Szkoła_ID"
     },
     {
         "db_id": "phone_1",
@@ -42826,7 +42826,7 @@
         "column_name_original": "Pixels",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "pikseli",
+        "column_name_pl": "piksele",
         "column_name_original_pl": "Piksele"
     },
     {
@@ -42837,7 +42837,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "kolory sprzętu",
-        "column_name_original_pl": "Kolory_sprzętowe"
+        "column_name_original_pl": "Kolory_sprzętu"
     },
     {
         "db_id": "phone_1",
@@ -42986,7 +42986,7 @@
         "column_name_original": "Content",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "zawartość",
+        "column_name_pl": "treść",
         "column_name_original_pl": "Treść"
     },
     {
@@ -42996,7 +42996,7 @@
         "column_name_original": "Pixel_aspect_ratio_PAR",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "współczynnik proporcji piksela par",
+        "column_name_pl": "współczynnik proporcji pikseli par",
         "column_name_original_pl": "Współczynnik_proporcji_pikseli_PAR"
     },
     {
@@ -43076,7 +43076,7 @@
         "column_name_original": "Share",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "udział",
+        "column_name_pl": "udostępnij",
         "column_name_original_pl": "Udostępnij"
     },
     {
@@ -43086,7 +43086,7 @@
         "column_name_original": "18_49_Rating_Share",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "18 49 udział w ratingu",
+        "column_name_pl": "18 49 udział w rankingu",
         "column_name_original_pl": "18_49_Udział_W_Rankingu"
     },
     {
@@ -43296,7 +43296,7 @@
         "column_name_original": "Elimination_Move",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "ruch eliminacji",
+        "column_name_pl": "ruch eliminacyjny",
         "column_name_original_pl": "Ruch_Eliminacyjny"
     },
     {
@@ -43677,7 +43677,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "liczba pracowników",
-        "column_name_original_pl": "Num_Pracownicy"
+        "column_name_original_pl": "Liczba_Pracowników"
     },
     {
         "db_id": "department_management",
@@ -44326,7 +44326,7 @@
         "column_name_original": "Dependent_name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "nazwa osoby zależnej",
+        "column_name_pl": "nazwa podmiotu zależnego",
         "column_name_original_pl": "Nazwa_podmiotu_zależnego"
     },
     {
@@ -44356,7 +44356,7 @@
         "column_name_original": "Relationship",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "relacja",
+        "column_name_pl": "związek",
         "column_name_original_pl": "Związek"
     },
     {
@@ -44436,7 +44436,7 @@
         "column_name_original": "Scores",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "punktacja",
+        "column_name_pl": "wyniki",
         "column_name_original_pl": "Wyniki"
     },
     {
@@ -44456,7 +44456,7 @@
         "column_name_original": "College",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "kolegium",
+        "column_name_pl": "uczelnia",
         "column_name_original_pl": "Uczelnia"
     },
     {
@@ -44676,7 +44676,7 @@
         "column_name_original": "Host_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id hosta",
+        "column_name_pl": "id gospodarza",
         "column_name_original_pl": "id_gospodarza"
     },
     {
