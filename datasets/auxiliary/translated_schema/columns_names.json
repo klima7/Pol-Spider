@@ -5986,8 +5986,8 @@
         "column_name_original": "Result",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "wynik",
-        "column_name_original_pl": "Wynik"
+        "column_name_pl": "rezultat",
+        "column_name_original_pl": "Rezultat"
     },
     {
         "db_id": "city_record",
