@@ -4210,8 +4210,8 @@
         "db_id": "real_estate_properties",
         "name": "reference feature types",
         "name_original": "Ref_Feature_Types",
-        "name_pl": "referencyjne typy funkcji",
-        "name_original_pl": "Ref_Typy_Funkcji"
+        "name_pl": "referencyjne typy udogodnień",
+        "name_original_pl": "Ref_Typy_Udogodnień"
     },
     {
         "db_id": "real_estate_properties",
@@ -4224,8 +4224,8 @@
         "db_id": "real_estate_properties",
         "name": "other available features",
         "name_original": "Other_Available_Features",
-        "name_pl": "inne dostępne funkcje",
-        "name_original_pl": "Inne_Dostępne_Funkcje"
+        "name_pl": "inne dostępne udogodnienia",
+        "name_original_pl": "Inne_Dostępne_Udogodnienia"
     },
     {
         "db_id": "real_estate_properties",
@@ -4238,8 +4238,8 @@
         "db_id": "real_estate_properties",
         "name": "other property features",
         "name_original": "Other_Property_Features",
-        "name_pl": "inne cechy nieruchomości",
-        "name_original_pl": "Inne_Cechy_Nieruchomości"
+        "name_pl": "inne cechy udogodnień",
+        "name_original_pl": "Inne_Cechy_Udogodnień"
     },
     {
         "db_id": "college_3",
