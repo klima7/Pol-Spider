@@ -6130,5 +6130,12 @@
         "name_original": "Catalog_Contents_Additional_Attributes",
         "name_pl": "zawartość katalogu dodatkowe atrybuty",
         "name_original_pl": "Zawartość_Katalogu_Dodatkowe_Atrybuty"
+    },
+    {
+        "db_id": "assets_maintenance",
+        "name": "ref company types",
+        "name_original": "Ref_Company_Types",
+        "name_pl": "referencyjne typy firm",
+        "name_original_pl": "Ref_Typy_Firm"
     }
 ]

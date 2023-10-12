@@ -45028,5 +45028,25 @@
         "foreign_key": "",
         "column_name_pl": "wartość atrybutu",
         "column_name_original_pl": "wartość_atrybutu"
+    },
+    {
+        "db_id": "assets_maintenance",
+        "table_name_original": "Ref_Company_Types",
+        "column_name": "company type code",
+        "column_name_original": "company_type_code",
+        "primary_key": false,
+        "foreign_key": "",
+        "column_name_pl": "kod typu firmy",
+        "column_name_original_pl": "kod_typu_firmy"
+    },
+    {
+        "db_id": "assets_maintenance",
+        "table_name_original": "Third_Party_Companies",
+        "column_name": "company type code",
+        "column_name_original": "company_type_code",
+        "primary_key": false,
+        "foreign_key": "",
+        "column_name_pl": "kod typu firmy",
+        "column_name_original_pl": "kod_typu_firmy"
     }
 ]
