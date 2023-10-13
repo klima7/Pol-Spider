@@ -4,3 +4,5 @@ tqdm
 nltk
 datasets
 spacy
+sqlparse
+sqlglot
