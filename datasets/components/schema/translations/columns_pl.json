@@ -45056,8 +45056,8 @@
         "column_name_original": "Conductor_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "conductor id",
-        "column_name_original_pl": "Conductor_ID"
+        "column_name_pl": "identyfikator dyrygenta",
+        "column_name_original_pl": "Identyfikator_dyrygenta"
     },
     {
         "db_id": "new_orchestra",
@@ -45066,8 +45066,8 @@
         "column_name_original": "Name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "name",
-        "column_name_original_pl": "Name"
+        "column_name_pl": "nazwa",
+        "column_name_original_pl": "Imię_I_Nazwisko"
     },
     {
         "db_id": "new_orchestra",
@@ -45076,8 +45076,8 @@
         "column_name_original": "birthday",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "date of birth",
-        "column_name_original_pl": "birthday"
+        "column_name_pl": "data urodzenia",
+        "column_name_original_pl": "urodziny"
     },
     {
         "db_id": "new_orchestra",
@@ -45086,8 +45086,8 @@
         "column_name_original": "Nationality",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "nationality",
-        "column_name_original_pl": "Nationality"
+        "column_name_pl": "narodowość",
+        "column_name_original_pl": "Narodowość"
     },
     {
         "db_id": "new_orchestra",
@@ -45096,8 +45096,8 @@
         "column_name_original": "Year_of_Work",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "year of work",
-        "column_name_original_pl": "Year_of_Work"
+        "column_name_pl": "rok pracy",
+        "column_name_original_pl": "Rok_pracy"
     },
     {
         "db_id": "new_orchestra",
@@ -45106,8 +45106,8 @@
         "column_name_original": "Orchestra_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "orchestra id",
-        "column_name_original_pl": "Orchestra_ID"
+        "column_name_pl": "orkiestra id",
+        "column_name_original_pl": "Identyfikator_orkiestry"
     },
     {
         "db_id": "new_orchestra",
@@ -45116,8 +45116,8 @@
         "column_name_original": "Orchestra",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "orchestra",
-        "column_name_original_pl": "Orchestra"
+        "column_name_pl": "orkiestra",
+        "column_name_original_pl": "Orkiestra"
     },
     {
         "db_id": "new_orchestra",
@@ -45126,8 +45126,8 @@
         "column_name_original": "Conductor_ID",
         "primary_key": false,
         "foreign_key": "conductor",
-        "column_name_pl": "conductor id",
-        "column_name_original_pl": "Conductor_ID"
+        "column_name_pl": "identyfikator dyrygenta",
+        "column_name_original_pl": "Identyfikator_dyrygenta"
     },
     {
         "db_id": "new_orchestra",
@@ -45136,7 +45136,7 @@
         "column_name_original": "Record_Company",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "record company",
+        "column_name_pl": "wytwórnia płytowa",
         "column_name_original_pl": "Record_Company"
     },
     {
@@ -45146,8 +45146,8 @@
         "column_name_original": "Year_of_Founded",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "year of founded",
-        "column_name_original_pl": "Year_of_Founded"
+        "column_name_pl": "Rok założenia",
+        "column_name_original_pl": "Rok_założenia"
     },
     {
         "db_id": "new_orchestra",
@@ -45156,7 +45156,7 @@
         "column_name_original": "Major_Record_Format",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "major record format",
+        "column_name_pl": "główny format płyty",
         "column_name_original_pl": "Major_Record_Format"
     },
     {
@@ -45166,8 +45166,8 @@
         "column_name_original": "Performance_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "performance id",
-        "column_name_original_pl": "Performance_ID"
+        "column_name_pl": "identyfikator wydajności",
+        "column_name_original_pl": "Identyfikator_występu"
     },
     {
         "db_id": "new_orchestra",
@@ -45176,8 +45176,8 @@
         "column_name_original": "Orchestra_ID",
         "primary_key": false,
         "foreign_key": "orchestra",
-        "column_name_pl": "orchestra id",
-        "column_name_original_pl": "Orchestra_ID"
+        "column_name_pl": "ID orkiestry",
+        "column_name_original_pl": "Identyfikator_orkiestry"
     },
     {
         "db_id": "new_orchestra",
@@ -45186,8 +45186,8 @@
         "column_name_original": "Type",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "type",
-        "column_name_original_pl": "Type"
+        "column_name_pl": "typ",
+        "column_name_original_pl": "Typ"
     },
     {
         "db_id": "new_orchestra",
@@ -45196,8 +45196,8 @@
         "column_name_original": "Date",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "date",
-        "column_name_original_pl": "Date"
+        "column_name_pl": "data",
+        "column_name_original_pl": "Data"
     },
     {
         "db_id": "new_orchestra",
@@ -45206,8 +45206,8 @@
         "column_name_original": "Official_ratings_(millions)",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "official ratings (millions)",
-        "column_name_original_pl": "Official_ratings_(millions)"
+        "column_name_pl": "Oficjalne ratingi",
+        "column_name_original_pl": "Oficjalne_ratingi"
     },
     {
         "db_id": "new_orchestra",
@@ -45216,8 +45216,8 @@
         "column_name_original": "Weekly_rank",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "weekly rank",
-        "column_name_original_pl": "Weekly_rank"
+        "column_name_pl": "ranga tygodniowa",
+        "column_name_original_pl": "Ranga_tygodniowa"
     },
     {
         "db_id": "new_orchestra",
@@ -45226,8 +45226,8 @@
         "column_name_original": "Share",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "share",
-        "column_name_original_pl": "Share"
+        "column_name_pl": "udział",
+        "column_name_original_pl": "Udział"
     },
     {
         "db_id": "new_orchestra",
@@ -45236,8 +45236,8 @@
         "column_name_original": "Show_ID",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "show id",
-        "column_name_original_pl": "Show_ID"
+        "column_name_pl": "identyfikator pokazu",
+        "column_name_original_pl": "ID_pokazu"
     },
     {
         "db_id": "new_orchestra",
@@ -45246,8 +45246,8 @@
         "column_name_original": "Performance_ID",
         "primary_key": false,
         "foreign_key": "performance",
-        "column_name_pl": "performance id",
-        "column_name_original_pl": "Performance_ID"
+        "column_name_pl": "identyfikator występu",
+        "column_name_original_pl": "Identyfikator_występu"
     },
     {
         "db_id": "new_orchestra",
@@ -45256,8 +45256,8 @@
         "column_name_original": "If_first_show",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "if first show",
-        "column_name_original_pl": "If_first_show"
+        "column_name_pl": "jeśli pierwszy pokaz",
+        "column_name_original_pl": "Jeśli_pierwszy_pokaz"
     },
     {
         "db_id": "new_orchestra",
@@ -45266,8 +45266,8 @@
         "column_name_original": "Result",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "result",
-        "column_name_original_pl": "Result"
+        "column_name_pl": "wynik",
+        "column_name_original_pl": "Wynik"
     },
     {
         "db_id": "new_orchestra",
@@ -45276,8 +45276,8 @@
         "column_name_original": "Attendance",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "attendance",
-        "column_name_original_pl": "Attendance"
+        "column_name_pl": "frekwencja",
+        "column_name_original_pl": "Frekwencja"
     },
     {
         "db_id": "new_concert_singer",
@@ -45286,7 +45286,7 @@
         "column_name_original": "Stadium_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "stadium id",
+        "column_name_pl": "identyfikator stadionu",
         "column_name_original_pl": "Stadium_ID"
     },
     {
@@ -45296,8 +45296,8 @@
         "column_name_original": "Location",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "location",
-        "column_name_original_pl": "Location"
+        "column_name_pl": "lokalizacja",
+        "column_name_original_pl": "Lokalizacja"
     },
     {
         "db_id": "new_concert_singer",
@@ -45306,8 +45306,8 @@
         "column_name_original": "Name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "name",
-        "column_name_original_pl": "Name"
+        "column_name_pl": "nazwa",
+        "column_name_original_pl": "Nazwa"
     },
     {
         "db_id": "new_concert_singer",
@@ -45316,8 +45316,8 @@
         "column_name_original": "Capacity",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "capacity",
-        "column_name_original_pl": "Capacity"
+        "column_name_pl": "pojemność",
+        "column_name_original_pl": "Pojemność"
     },
     {
         "db_id": "new_concert_singer",
@@ -45326,8 +45326,8 @@
         "column_name_original": "Highest",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "highest",
-        "column_name_original_pl": "Highest"
+        "column_name_pl": "najwyższy",
+        "column_name_original_pl": "Najwyższy"
     },
     {
         "db_id": "new_concert_singer",
@@ -45336,8 +45336,8 @@
         "column_name_original": "Lowest",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "lowest",
-        "column_name_original_pl": "Lowest"
+        "column_name_pl": "najniższy",
+        "column_name_original_pl": "Najniższy"
     },
     {
         "db_id": "new_concert_singer",
@@ -45346,8 +45346,8 @@
         "column_name_original": "Average",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "average",
-        "column_name_original_pl": "Average"
+        "column_name_pl": "średnia",
+        "column_name_original_pl": "Średnia"
     },
     {
         "db_id": "new_concert_singer",
@@ -45356,8 +45356,8 @@
         "column_name_original": "Singer_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "singer id",
-        "column_name_original_pl": "Singer_ID"
+        "column_name_pl": "identyfikator piosenkarza",
+        "column_name_original_pl": "Identyfikator_piosenkarza"
     },
     {
         "db_id": "new_concert_singer",
@@ -45366,8 +45366,8 @@
         "column_name_original": "Name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "name",
-        "column_name_original_pl": "Name"
+        "column_name_pl": "nazwa",
+        "column_name_original_pl": "Imię"
     },
     {
         "db_id": "new_concert_singer",
@@ -45386,8 +45386,8 @@
         "column_name_original": "Song_Name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "song name",
-        "column_name_original_pl": "Song_Name"
+        "column_name_pl": "nazwa utworu",
+        "column_name_original_pl": "Nazwa_Piosenki"
     },
     {
         "db_id": "new_concert_singer",
@@ -45396,8 +45396,8 @@
         "column_name_original": "Song_release_year",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "song release year",
-        "column_name_original_pl": "Song_release_year"
+        "column_name_pl": "rok wydania piosenki",
+        "column_name_original_pl": "Rok_wydania_piosenki"
     },
     {
         "db_id": "new_concert_singer",
@@ -45406,8 +45406,8 @@
         "column_name_original": "Birthday",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "date of birth",
-        "column_name_original_pl": "Birthday"
+        "column_name_pl": "data urodzenia",
+        "column_name_original_pl": "Urodziny"
     },
     {
         "db_id": "new_concert_singer",
@@ -45416,8 +45416,8 @@
         "column_name_original": "Is_male",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "is male",
-        "column_name_original_pl": "Is_male"
+        "column_name_pl": "jest mężczyzną",
+        "column_name_original_pl": "Jest_mężczyzną"
     },
     {
         "db_id": "new_concert_singer",
@@ -45426,8 +45426,8 @@
         "column_name_original": "concert_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "concert id",
-        "column_name_original_pl": "concert_ID"
+        "column_name_pl": "identyfikator koncertowy",
+        "column_name_original_pl": "identyfikator_koncertowy"
     },
     {
         "db_id": "new_concert_singer",
@@ -45436,8 +45436,8 @@
         "column_name_original": "concert_Name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "concert name",
-        "column_name_original_pl": "concert_Name"
+        "column_name_pl": "nazwa koncertu",
+        "column_name_original_pl": "nazwa_koncertu"
     },
     {
         "db_id": "new_concert_singer",
@@ -45446,8 +45446,8 @@
         "column_name_original": "Theme",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "theme",
-        "column_name_original_pl": "Theme"
+        "column_name_pl": "temat",
+        "column_name_original_pl": "Temat"
     },
     {
         "db_id": "new_concert_singer",
@@ -45456,7 +45456,7 @@
         "column_name_original": "Stadium_ID",
         "primary_key": false,
         "foreign_key": "stadium",
-        "column_name_pl": "stadium id",
+        "column_name_pl": "identyfikator stadionu",
         "column_name_original_pl": "Stadium_ID"
     },
     {
@@ -45466,8 +45466,8 @@
         "column_name_original": "Year",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "year",
-        "column_name_original_pl": "Year"
+        "column_name_pl": "rok",
+        "column_name_original_pl": "Rok"
     },
     {
         "db_id": "new_concert_singer",
@@ -45476,8 +45476,8 @@
         "column_name_original": "concert_ID",
         "primary_key": true,
         "foreign_key": "concert",
-        "column_name_pl": "concert id",
-        "column_name_original_pl": "concert_ID"
+        "column_name_pl": "identyfikator koncertowy",
+        "column_name_original_pl": "identyfikator_koncertowy"
     },
     {
         "db_id": "new_concert_singer",
@@ -45486,8 +45486,8 @@
         "column_name_original": "Singer_ID",
         "primary_key": false,
         "foreign_key": "singer",
-        "column_name_pl": "singer id",
-        "column_name_original_pl": "Singer_ID"
+        "column_name_pl": "identyfikator piosenkarza",
+        "column_name_original_pl": "Identyfikator_piosenkarza"
     },
     {
         "db_id": "new_pets_1",
@@ -45496,7 +45496,7 @@
         "column_name_original": "StuID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "student id",
+        "column_name_pl": "identyfikator studenta",
         "column_name_original_pl": "StuID"
     },
     {
@@ -45506,7 +45506,7 @@
         "column_name_original": "LName",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "last name",
+        "column_name_pl": "nazwisko",
         "column_name_original_pl": "LName"
     },
     {
@@ -45516,7 +45516,7 @@
         "column_name_original": "Fname",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "first name",
+        "column_name_pl": "imię",
         "column_name_original_pl": "Fname"
     },
     {
@@ -45526,8 +45526,8 @@
         "column_name_original": "Age",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "age",
-        "column_name_original_pl": "Age"
+        "column_name_pl": "wiek",
+        "column_name_original_pl": "Wiek"
     },
     {
         "db_id": "new_pets_1",
@@ -45536,8 +45536,8 @@
         "column_name_original": "Sex",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "sex",
-        "column_name_original_pl": "Sex"
+        "column_name_pl": "płeć",
+        "column_name_original_pl": "Płeć"
     },
     {
         "db_id": "new_pets_1",
@@ -45546,7 +45546,7 @@
         "column_name_original": "Major",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "major",
+        "column_name_pl": "kierunek",
         "column_name_original_pl": "Major"
     },
     {
@@ -45556,8 +45556,8 @@
         "column_name_original": "Advisor",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "advisor",
-        "column_name_original_pl": "Advisor"
+        "column_name_pl": "doradca",
+        "column_name_original_pl": "Doradca"
     },
     {
         "db_id": "new_pets_1",
@@ -45566,8 +45566,8 @@
         "column_name_original": "city_code",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "city code",
-        "column_name_original_pl": "city_code"
+        "column_name_pl": "kodeks miejski",
+        "column_name_original_pl": "kodeks_miejski"
     },
     {
         "db_id": "new_pets_1",
@@ -45576,7 +45576,7 @@
         "column_name_original": "StuID",
         "primary_key": false,
         "foreign_key": "student",
-        "column_name_pl": "student id",
+        "column_name_pl": "identyfikator studenta",
         "column_name_original_pl": "StuID"
     },
     {
@@ -45586,7 +45586,7 @@
         "column_name_original": "PetID",
         "primary_key": false,
         "foreign_key": "pets",
-        "column_name_pl": "pet id",
+        "column_name_pl": "identyfikator zwierzęcia",
         "column_name_original_pl": "PetID"
     },
     {
@@ -45596,7 +45596,7 @@
         "column_name_original": "PetID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "pet id",
+        "column_name_pl": "identyfikator zwierzęcia",
         "column_name_original_pl": "PetID"
     },
     {
@@ -45606,7 +45606,7 @@
         "column_name_original": "PetType",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "pet type",
+        "column_name_pl": "typ zwierzęcia",
         "column_name_original_pl": "PetType"
     },
     {
@@ -45616,8 +45616,8 @@
         "column_name_original": "birthdate",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "date of birth",
-        "column_name_original_pl": "birthdate"
+        "column_name_pl": "data urodzenia",
+        "column_name_original_pl": "data_urodzenia"
     },
     {
         "db_id": "new_pets_1",
@@ -45626,7 +45626,7 @@
         "column_name_original": "weight",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "weight",
-        "column_name_original_pl": "weight"
+        "column_name_pl": "waga",
+        "column_name_original_pl": "waga"
     }
 ]
