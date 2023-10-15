@@ -6142,22 +6142,22 @@
         "db_id": "new_orchestra",
         "name": "conductor",
         "name_original": "conductor",
-        "name_pl": "conductor",
-        "name_original_pl": "conductor"
+        "name_pl": "dyrygent",
+        "name_original_pl": "dyrygent"
     },
     {
         "db_id": "new_orchestra",
         "name": "orchestra",
         "name_original": "orchestra",
-        "name_pl": "orchestra",
-        "name_original_pl": "orchestra"
+        "name_pl": "orkiestra",
+        "name_original_pl": "orkiestra"
     },
     {
         "db_id": "new_orchestra",
         "name": "performance",
         "name_original": "performance",
-        "name_pl": "performance",
-        "name_original_pl": "performance"
+        "name_pl": "wykonanie",
+        "name_original_pl": "wykonanie"
     },
     {
         "db_id": "new_orchestra",
@@ -6170,29 +6170,29 @@
         "db_id": "new_concert_singer",
         "name": "stadium",
         "name_original": "stadium",
-        "name_pl": "stadium",
-        "name_original_pl": "stadium"
+        "name_pl": "stadion",
+        "name_original_pl": "stadion"
     },
     {
         "db_id": "new_concert_singer",
         "name": "singer",
         "name_original": "singer",
-        "name_pl": "singer",
-        "name_original_pl": "singer"
+        "name_pl": "wokalista",
+        "name_original_pl": "wokalista"
     },
     {
         "db_id": "new_concert_singer",
         "name": "concert",
         "name_original": "concert",
-        "name_pl": "concert",
-        "name_original_pl": "concert"
+        "name_pl": "koncert",
+        "name_original_pl": "koncert"
     },
     {
         "db_id": "new_concert_singer",
         "name": "singer in concert",
         "name_original": "singer_in_concert",
-        "name_pl": "singer in concert",
-        "name_original_pl": "singer_in_concert"
+        "name_pl": "piosenkarz na koncercie",
+        "name_original_pl": "piosenkarz_na_koncercie"
     },
     {
         "db_id": "new_pets_1",
@@ -6205,14 +6205,14 @@
         "db_id": "new_pets_1",
         "name": "has pet",
         "name_original": "Has_Pet",
-        "name_pl": "has pet",
-        "name_original_pl": "Has_Pet"
+        "name_pl": "ma zwierzaka",
+        "name_original_pl": "Ma_Zwierzaka"
     },
     {
         "db_id": "new_pets_1",
         "name": "pets",
         "name_original": "Pets",
-        "name_pl": "pets",
-        "name_original_pl": "Pets"
+        "name_pl": "zwierzęta domowe",
+        "name_original_pl": "Zwierzęta_Domowe"
     }
 ]
