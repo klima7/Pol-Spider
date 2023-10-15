@@ -56,7 +56,7 @@ def load_column_translations(columns_names_path):
 def translate_tables(tables, table_trans, column_trans):
     translated_tables = deepcopy(tables)
 
-    for db in translated_tables:
+    for db in tqdm(translated_tables, desc="Translating tables"):
         db_id = db["db_id"]
 
         # translate columns
@@ -75,8 +75,8 @@ def translate_tables(tables, table_trans, column_trans):
         for i in range(len(db["table_names_original"])):
             table_name = db["table_names_original"][i]
             translations = table_trans[db_id][table_name.lower()]
-            db["table_names_original"][i] = translations["name"]
-            db["table_names"][i] = translations["name_original"]
+            db["table_names_original"][i] = translations["name_original"]
+            db["table_names"][i] = translations["name"]
 
     return translated_tables
 
@@ -291,10 +291,14 @@ def translate_query(query, db_id, table_trans, column_trans):
 
 
 def translate_samples(samples, table_trans, column_trans):
-    def process_sample(sample):
-        sample["query"] = translate_query(
-            sample["query"], sample["db_id"], table_trans, column_trans
-        )
-        return sample
+    return Parallel(-1)(
+        delayed(translate_samples_single)(sample, table_trans, column_trans)
+        for sample in tqdm(samples, desc="Translating SQL queries")
+    )
 
-    return Parallel(-1)(delayed(process_sample)(sample) for sample in tqdm(samples))
+
+def translate_samples_single(sample, table_trans, column_trans):
+    sample["query_pl"] = translate_query(
+        sample["query"], sample["db_id"], table_trans, column_trans
+    )
+    return sample
