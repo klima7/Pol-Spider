@@ -1896,8 +1896,8 @@
         "column_name_original": "staff_name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "imię i nazwisko pracownika",
-        "column_name_original_pl": "imię_i_nazwisko_pracownika"
+        "column_name_pl": "imię pracownika",
+        "column_name_original_pl": "imię_pracownika"
     },
     {
         "db_id": "department_store",
@@ -3636,8 +3636,8 @@
         "column_name_original": "staff_name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "imię i nazwisko pracownika",
-        "column_name_original_pl": "imię_i_nazwisko_pracownika"
+        "column_name_pl": "imię pracownika",
+        "column_name_original_pl": "imię_pracownika"
     },
     {
         "db_id": "assets_maintenance",
@@ -21226,8 +21226,8 @@
         "column_name_original": "employee_name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "imię i nazwisko pracownika",
-        "column_name_original_pl": "imię_i_nazwisko_pracownika"
+        "column_name_pl": "imię pracownika",
+        "column_name_original_pl": "imię_pracownika"
     },
     {
         "db_id": "cre_Doc_Control_Systems",
@@ -23126,8 +23126,8 @@
         "column_name_original": "staff_first_name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "imię i nazwisko pracownika",
-        "column_name_original_pl": "imię_i_nazwisko_pracownika"
+        "column_name_pl": "imię pracownika",
+        "column_name_original_pl": "imię_i_pracownika"
     },
     {
         "db_id": "tracking_software_problems",
@@ -32246,8 +32246,8 @@
         "column_name_original": "employee_name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "imię i nazwisko pracownika",
-        "column_name_original_pl": "imię_i_nazwisko_pracownika"
+        "column_name_pl": "imię pracownika",
+        "column_name_original_pl": "imię_pracownika"
     },
     {
         "db_id": "customer_deliveries",
@@ -39876,8 +39876,8 @@
         "column_name_original": "Employee_Name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "imię i nazwisko pracownika",
-        "column_name_original_pl": "Imię_I_Nazwisko_Pracownika"
+        "column_name_pl": "imię pracownika",
+        "column_name_original_pl": "Imię_Pracownika"
     },
     {
         "db_id": "cre_Doc_Tracking_DB",
@@ -44616,8 +44616,8 @@
         "column_name_original": "Party_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id grupy",
-        "column_name_original_pl": "Grupa_ID"
+        "column_name_pl": "id imprezy",
+        "column_name_original_pl": "Impreza_ID"
     },
     {
         "db_id": "party_host",
@@ -44716,8 +44716,8 @@
         "column_name_original": "Party_ID",
         "primary_key": true,
         "foreign_key": "party",
-        "column_name_pl": "id grupy",
-        "column_name_original_pl": "Grupa_ID"
+        "column_name_pl": "id imprezy",
+        "column_name_original_pl": "Impreza_ID"
     },
     {
         "db_id": "party_host",

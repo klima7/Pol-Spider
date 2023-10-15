@@ -18622,14 +18622,14 @@
     {
         "db_id": "party_host",
         "question": "How many parties are there?",
-        "question_pl": "Ile jest partii?",
+        "question_pl": "Ile jest imprez?",
         "query": "SELECT count(*) FROM party",
         "query_pl": "SELECT count(*) FROM party"
     },
     {
         "db_id": "party_host",
         "question": "Count the number of parties.",
-        "question_pl": "Policz liczbę stron.",
+        "question_pl": "Policz liczbę imprez.",
         "query": "SELECT count(*) FROM party",
         "query_pl": "SELECT count(*) FROM party"
     },
