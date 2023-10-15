@@ -7,7 +7,7 @@ from pathlib import Path
 import sqlparse
 from tqdm import tqdm
 
-from deepl_utils import translate_phrase, translate_sentence
+from .deepl_utils import translate_phrase, translate_sentence
 
 
 def translate_question(question):

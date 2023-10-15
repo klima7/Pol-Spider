@@ -6137,5 +6137,82 @@
         "name_original": "Ref_Company_Types",
         "name_pl": "referencyjne typy firm",
         "name_original_pl": "Ref_Typy_Firm"
+    },
+    {
+        "db_id": "new_orchestra",
+        "name": "conductor",
+        "name_original": "conductor",
+        "name_pl": "conductor",
+        "name_original_pl": "conductor"
+    },
+    {
+        "db_id": "new_orchestra",
+        "name": "orchestra",
+        "name_original": "orchestra",
+        "name_pl": "orchestra",
+        "name_original_pl": "orchestra"
+    },
+    {
+        "db_id": "new_orchestra",
+        "name": "performance",
+        "name_original": "performance",
+        "name_pl": "performance",
+        "name_original_pl": "performance"
+    },
+    {
+        "db_id": "new_orchestra",
+        "name": "show",
+        "name_original": "show",
+        "name_pl": "show",
+        "name_original_pl": "show"
+    },
+    {
+        "db_id": "new_concert_singer",
+        "name": "stadium",
+        "name_original": "stadium",
+        "name_pl": "stadium",
+        "name_original_pl": "stadium"
+    },
+    {
+        "db_id": "new_concert_singer",
+        "name": "singer",
+        "name_original": "singer",
+        "name_pl": "singer",
+        "name_original_pl": "singer"
+    },
+    {
+        "db_id": "new_concert_singer",
+        "name": "concert",
+        "name_original": "concert",
+        "name_pl": "concert",
+        "name_original_pl": "concert"
+    },
+    {
+        "db_id": "new_concert_singer",
+        "name": "singer in concert",
+        "name_original": "singer_in_concert",
+        "name_pl": "singer in concert",
+        "name_original_pl": "singer_in_concert"
+    },
+    {
+        "db_id": "new_pets_1",
+        "name": "student",
+        "name_original": "Student",
+        "name_pl": "student",
+        "name_original_pl": "Student"
+    },
+    {
+        "db_id": "new_pets_1",
+        "name": "has pet",
+        "name_original": "Has_Pet",
+        "name_pl": "has pet",
+        "name_original_pl": "Has_Pet"
+    },
+    {
+        "db_id": "new_pets_1",
+        "name": "pets",
+        "name_original": "Pets",
+        "name_pl": "pets",
+        "name_original_pl": "Pets"
     }
 ]
