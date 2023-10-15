@@ -1,6 +1,4 @@
 from .translation import (
-    load_column_translations,
-    load_table_translations,
     translate_tables,
     translate_query,
     translate_samples,
