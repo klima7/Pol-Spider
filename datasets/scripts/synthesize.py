@@ -1,6 +1,8 @@
-import click
+import os
 import json
 from pathlib import Path
+
+import click
 
 import synthesis
 from synthesis import (
@@ -8,6 +10,7 @@ from synthesis import (
     load_column_translations,
     add_calculated_attributes,
     translate_samples,
+    create_gold_sql
 )
 
 
@@ -38,6 +41,7 @@ def translate_tables(column_trans_path, table_trans_path, output_path):
     )
     trans_tables = synthesis.translate_tables(tables, table_trans, column_trans)
     _save_json(output_path, trans_tables)
+    print('Done')
 
 
 @cli.command()
@@ -72,12 +76,24 @@ def synthesize_samples(
     samples = translate_samples(samples, table_trans, column_trans)
     samples = add_calculated_attributes(samples, tables)
     _save_json(output_path, samples)
+    print('Done')
 
 
 @cli.command()
-def create_gold():
+@click.argument(
+    "output_path",
+    type=click.Path(exists=False, dir_okay=False, writable=True),
+)
+@click.argument(
+    "samples_paths",
+    type=click.Path(exists=True, dir_okay=False),
+    nargs=-1
+)
+def create_gold(output_path, samples_paths):
     """create gold.sql from samples"""
-    click.echo("Dropped the database")
+    samples_list = [_load_json(path) for path in samples_paths]
+    create_gold_sql(samples_list, output_path)
+    print('Done')
 
 
 def _load_json(path):
