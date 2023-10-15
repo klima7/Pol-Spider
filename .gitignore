@@ -1,3 +1,4 @@
 **/__pycache__/**
+.vscode/**
 spider-en/**
-datasets/complete/**
+datasets/synthesized/**

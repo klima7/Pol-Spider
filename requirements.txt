@@ -6,3 +6,4 @@ datasets
 spacy
 sqlparse
 sqlglot
+click
