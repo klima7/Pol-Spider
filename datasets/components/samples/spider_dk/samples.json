@@ -612,8 +612,8 @@
         "db_id": "new_pets_1",
         "question": "What are the different names and ages of the students who do have pets?",
         "question_pl": "Jakie są imiona i wiek uczniów, którzy mają zwierzęta?",
-        "query": "SELECT DISTINCT T1.fname , T1.LName  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid",
-        "query_pl": "SELECT DISTINCT T1.fname , T1.LName  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid"
+        "query": "SELECT DISTINCT T1.fname , T1.LName ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid",
+        "query_pl": "SELECT DISTINCT T1.fname , T1.LName ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid"
     },
     {
         "type": 0,
