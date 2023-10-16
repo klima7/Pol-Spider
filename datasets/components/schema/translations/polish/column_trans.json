@@ -4786,8 +4786,8 @@
         "column_name_original": "professional_id",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "id fachowca",
-        "column_name_original_pl": "fachowiec_id"
+        "column_name_pl": "id profesjonalisty",
+        "column_name_original_pl": "profesjonalista_id"
     },
     {
         "db_id": "dog_kennels",
@@ -37487,7 +37487,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "id pokazu",
-        "column_name_original_pl": "Pokaż_ID"
+        "column_name_original_pl": "Pokaz_ID"
     },
     {
         "db_id": "orchestra",

@@ -5085,8 +5085,8 @@
         "db_id": "orchestra",
         "name": "show",
         "name_original": "show",
-        "name_pl": "pokaż",
-        "name_original_pl": "pokaż"
+        "name_pl": "pokaz",
+        "name_original_pl": "pokaz"
     },
     {
         "db_id": "cre_Drama_Workshop_Groups",
