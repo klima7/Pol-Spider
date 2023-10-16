@@ -1,4 +1,5 @@
 from copy import deepcopy
+from pathlib import Path
 
 import sqlparse
 from sqlparse import sql
@@ -8,8 +9,10 @@ import sqlglot.expressions as exp
 from tqdm import tqdm
 from joblib import Parallel, delayed
 
+from common import load_json, save_json, load_column_translations, load_table_translations
 
-def translate_tables(tables, table_trans, column_trans):
+
+def translate_tables_list(tables, table_trans, column_trans):
     translated_tables = deepcopy(tables)
 
     for db in tqdm(translated_tables, desc="Translating tables"):
@@ -35,6 +38,16 @@ def translate_tables(tables, table_trans, column_trans):
             db["table_names"][i] = translations["name"]
 
     return translated_tables
+
+
+def translate_tables(column_trans_path, table_trans_path, output_path):
+    table_trans = load_table_translations(table_trans_path)
+    column_trans = load_column_translations(column_trans_path)
+    tables = load_json(
+        str(Path(__file__).parent.parent.parent / "components/schema/base/tables.json")
+    )
+    trans_tables = translate_tables_list(tables, table_trans, column_trans)
+    save_json(output_path, trans_tables)
 
 
 def get_tables_aliasing(sql):
