@@ -1,6 +1,7 @@
+import re
+import shutil
 from unidecode import unidecode
 from pathlib import Path
-import re
 
 from common import load_json, save_json
 
@@ -39,6 +40,10 @@ def sanitize(input_name, output_name):
     
     input_dir = TRANSLATIONS_DIR_PATH / input_name
     output_dir = TRANSLATIONS_DIR_PATH / output_name
+    
+    if output_dir.exists():
+        shutil.rmtree(str(output_dir))
+    output_dir.mkdir(parents=True, exist_ok=False)
     
     translate_tables(input_dir / 'table_trans.json', output_dir / 'table_trans.json')
     translate_columns(input_dir / 'column_trans.json', output_dir / 'column_trans.json')
