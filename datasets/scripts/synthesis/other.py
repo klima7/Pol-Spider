@@ -38,7 +38,7 @@ def add_calculated_attributes_single(sample, schemas, tables):
             "except": None,
         }
 
-    return {
+    new_sample = {
         "db_id": sample["db_id"],
         "question": sample["question_pl"],
         "question_toks": tokenize_question(sample["question_pl"]),
@@ -47,6 +47,12 @@ def add_calculated_attributes_single(sample, schemas, tables):
         "query_toks_no_value": tokenize_query_no_value(sample["query_pl"]),
         "sql": sql,
     }
+    
+    for extra_attr in ["type"]:
+        if extra_attr in sample:
+            new_sample[extra_attr] = sample[extra_attr]
+    
+    return new_sample
 
 
 def create_gold_sql(samples_list, output_path):
