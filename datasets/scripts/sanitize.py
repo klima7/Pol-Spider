@@ -14,7 +14,7 @@ TRANSLATIONS_DIR_PATH = Path(__file__).parent.parent / 'components' / 'schema' /
 
 def sanitize_name(name):
     name = unidecode(name).replace('-', '_')
-    name = re.sub('[^A-Za-z0-9]+', '', name)
+    name = re.sub('[^A-Za-z0-9_]+', '', name)
     return name
 
 
