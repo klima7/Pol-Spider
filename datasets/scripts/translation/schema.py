@@ -80,37 +80,48 @@ class NoContextSchemaTranslation(BaseSchemaTranslation):
 class DoubleSchemaTranslation(BaseSchemaTranslation):
     
     def translate_table_name(self, table_entry):
-        return self._translate_name(table_entry['name'], table_entry['db_id'])
+        return self._translate_name_in_context(table_entry['name'], table_entry['db_id'])
     
     def translate_table_name_original(self, table_entry):
-        return self._translate_original_name(table_entry['name_original'], table_entry['db_id'])
+        return self._translate_original_name_in_context(table_entry['name_original'], table_entry['db_id'])
     
     def translate_column_name(self, column_entry, table_entry, all_tables_entry):
-        return self._translate_name(column_entry['column_name'], table_entry['name'], column_entry['db_id'])
+        return self._translate_name_in_context(column_entry['column_name'], table_entry['name'], column_entry['db_id'])
     
     def translate_column_name_original(self, column_entry, table_entry, all_tables_entry):
-        return self._translate_original_name(column_entry['column_name_original'], table_entry['name'], column_entry['db_id'])
+        return self._translate_original_name_in_context(column_entry['column_name_original'], table_entry['name'], column_entry['db_id'])
 
-    def _translate_name(self, name, container_name, other_container_name=None):
+    def _translate_name_in_context(self, name, container_name, other_container_name=None):
         container_name = self._naturalize_name(container_name)
         if not other_container_name:
             text = f"{name} (from {container_name})"
         else:
             other_container_name = self._naturalize_name(other_container_name)
             text = f"{name} (from {container_name} and {other_container_name})"
-        print(text)
         text_pl = translate_sentence(text)
-        print(text_pl)
         paren_idx = text_pl.index('(')
-        return text_pl[:paren_idx].strip()
-    
+        translated_name = text_pl[:paren_idx].strip()
+        if translated_name == name:
+            translated_name = translate_phrase(name)
+        return translated_name
+
+    def _translate_original_name_in_context(self, name, container, other_container=None):
+        natural_text_en = name.replace('_', ' ')
+        id_suffix, natural_text_en = self._strip_id_suffix(name)
+        was_titled = all(word[0]==word[0].upper() and word[1:]==word[1:].lower() for word in natural_text_en.split(' '))
+        natural_text_pl = translate_phrase(natural_text_en)
+        if was_titled:
+            natural_text_pl = natural_text_pl.title()
+        return natural_text_pl.replace(' ', "_") + id_suffix
+
     def _naturalize_name(self, name):
         return re.sub(r'[^a-zA-Z ]', ' ', name)
 
-    def _translate_original_name(self, name, container, other_container=None):
-        natural_text_en = name.replace('_', ' ')
-        was_titled = all(word[0]==word[0].upper() and word[1:]==word[1:].lower() for word in natural_text_en.split(' '))
-        natural_text_pl = self._translate_name(natural_text_en, container, other_container)
-        if was_titled:
-            natural_text_pl = natural_text_pl.title()
-        return natural_text_pl.replace(' ', "_")
+    def _strip_id_suffix(self, name):
+        if name.lower().endswith('_id'):
+            rest = ''.join(list(name)[:-3])
+            suffix = ''.join(list(name)[-3:])
+        else:
+            rest = name
+            suffix = ''
+        return suffix, rest

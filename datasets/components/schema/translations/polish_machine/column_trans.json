@@ -35007,7 +35007,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "roczny wjazd, wyjazd",
-        "column_name_original_pl": "Roczny_wjazd,_wyjazd"
+        "column_name_original_pl": "Roczny_wjazd_wyjazd"
     },
     {
         "db_id": "train_station",

@@ -6130,5 +6130,89 @@
         "name_original": "Catalog_Contents_Additional_Attributes",
         "name_pl": "zawartość katalogu dodatkowe atrybuty",
         "name_original_pl": "Zawartość_Katalogu_Dodatkowe_Atrybuty"
+    },
+    {
+        "db_id": "assets_maintenance",
+        "name": "ref company types",
+        "name_original": "Ref_Company_Types",
+        "name_pl": "referencyjne typy firm",
+        "name_original_pl": "Ref_Typy_Firm"
+    },
+    {
+        "db_id": "new_orchestra",
+        "name": "conductor",
+        "name_original": "conductor",
+        "name_pl": "dyrygent",
+        "name_original_pl": "dyrygent"
+    },
+    {
+        "db_id": "new_orchestra",
+        "name": "orchestra",
+        "name_original": "orchestra",
+        "name_pl": "orkiestra",
+        "name_original_pl": "orkiestra"
+    },
+    {
+        "db_id": "new_orchestra",
+        "name": "performance",
+        "name_original": "performance",
+        "name_pl": "wykonanie",
+        "name_original_pl": "wykonanie"
+    },
+    {
+        "db_id": "new_orchestra",
+        "name": "show",
+        "name_original": "show",
+        "name_pl": "show",
+        "name_original_pl": "show"
+    },
+    {
+        "db_id": "new_concert_singer",
+        "name": "stadium",
+        "name_original": "stadium",
+        "name_pl": "stadion",
+        "name_original_pl": "stadion"
+    },
+    {
+        "db_id": "new_concert_singer",
+        "name": "singer",
+        "name_original": "singer",
+        "name_pl": "wokalista",
+        "name_original_pl": "wokalista"
+    },
+    {
+        "db_id": "new_concert_singer",
+        "name": "concert",
+        "name_original": "concert",
+        "name_pl": "koncert",
+        "name_original_pl": "koncert"
+    },
+    {
+        "db_id": "new_concert_singer",
+        "name": "singer in concert",
+        "name_original": "singer_in_concert",
+        "name_pl": "piosenkarz na koncercie",
+        "name_original_pl": "piosenkarz_na_koncercie"
+    },
+    {
+        "db_id": "new_pets_1",
+        "name": "student",
+        "name_original": "Student",
+        "name_pl": "student",
+        "name_original_pl": "Student"
+    },
+    {
+        "db_id": "new_pets_1",
+        "name": "has pet",
+        "name_original": "Has_Pet",
+        "name_pl": "ma zwierzaka",
+        "name_original_pl": "Ma_Zwierzaka"
+    },
+    {
+        "db_id": "new_pets_1",
+        "name": "pets",
+        "name_original": "Pets",
+        "name_pl": "zwierzęta domowe",
+        "name_original_pl": "Zwierzęta_Domowe"
     }
 ]
