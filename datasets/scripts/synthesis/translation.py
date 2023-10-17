@@ -227,14 +227,35 @@ def translate_simple_query(
             elif table_name.lower() in aliasing_rev:
                 table_name = aliasing_rev[table_name.lower()]
 
-            tokens[i].value = columns_trans[table_name.lower()][token_low][
-                "name_original"
-            ]
+            trans_name = columns_trans[table_name.lower()][token_low]["name_original"]
+            trans_name_in_style = copy_name_style(token, trans_name)
+            tokens[i].value = trans_name_in_style
 
         elif token_type == "table" and token_low not in aliasing_rev:
-            tokens[i].value = tables_trans[token_low]["name_original"]
+            trans_name = tables_trans[token_low]["name_original"]
+            trans_name_in_style = copy_name_style(token, trans_name)
+            tokens[i].value = trans_name_in_style
 
     return this_aliasing
+
+
+def copy_name_style(style, name):
+    # make lower if style is lower
+    if style == style.lower():
+        return name.lower()
+    
+    # make upper if style is upper
+    if style == style.upper():
+        return name.upper()
+    
+    style_space = style.replace('_', ' ')
+    
+    # make titled if style is titled
+    if style_space == style_space.title():
+        return name.replace('_', ' ').title().replace(' ', '_')
+    
+    # if style not recognized
+    return name
 
 
 def translate_query_recursively(tokens, db_id, table_trans, column_trans, aliasing):
