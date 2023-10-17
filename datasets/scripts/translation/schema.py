@@ -110,17 +110,19 @@ class DoubleSchemaTranslation(BaseSchemaTranslation):
         return self._translate_original_name_in_context(column_entry['column_name_original'], table_entry['name'], column_entry['db_id'])
 
     def _translate_name_in_context(self, name, container_name, other_container_name=None):
+        if name.lower() == 'id':
+            return name
+        
         container_name = self._naturalize_name(container_name)
         if not other_container_name:
             text = f"{name} (from {container_name})"
         else:
             other_container_name = self._naturalize_name(other_container_name)
             text = f"{name} (from {container_name} and {other_container_name})"
+            
         text_pl = translate_sentence(text)
         paren_idx = text_pl.index('(')
         translated_name = text_pl[:paren_idx].strip()
-        if translated_name == name:
-            translated_name = translate_phrase(name)
         return translated_name
 
     def _translate_original_name_in_context(self, name, container, other_container=None):
