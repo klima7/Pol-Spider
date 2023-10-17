@@ -210,6 +210,8 @@ def parse_col(toks, start_idx, tables_with_alias, schema, default_tables=None):
     if "." in tok:  # if token is a composite
         alias, col = tok.split(".")
         key = tables_with_alias[alias] + "." + col
+        if key not in schema.idMap:
+            return start_idx + 1, -1
         return start_idx + 1, schema.idMap[key]
 
     assert (

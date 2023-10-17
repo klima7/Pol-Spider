@@ -183,6 +183,8 @@ def parse_col(toks, start_idx, tables_with_alias, schema, default_tables=None):
         table = tables_with_alias[alias]
         if tok in schema.schema[table]:
             key = table + "." + tok
+            if key not in schema.idMap:
+                return start_idx + 1, -1
             return start_idx+1, schema.idMap[key]
 
     assert False, "Error col: {}".format(tok)
