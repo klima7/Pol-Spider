@@ -61,6 +61,15 @@ class BaseSchemaTranslation:
     def translate_column_name_original(self, column_entry, table_entry, all_tables_entry):
         return ''
     
+    def _strip_id_suffix(self, name):
+        if name.lower().endswith('_id'):
+            rest = ''.join(list(name)[:-3])
+            suffix = ''.join(list(name)[-3:])
+        else:
+            rest = name
+            suffix = ''
+        return suffix, rest
+    
     
 class NoContextSchemaTranslation(BaseSchemaTranslation):
     
@@ -68,13 +77,22 @@ class NoContextSchemaTranslation(BaseSchemaTranslation):
         return translate_phrase(table_entry['name'])
     
     def translate_table_name_original(self, table_entry):
-        return translate_phrase(table_entry['name'])
+        return self._translate_original_name(table_entry['name_original'])
     
     def translate_column_name(self, column_entry, table_entry, all_tables_entry):
         return translate_phrase(column_entry['column_name'])
     
     def translate_column_name_original(self, column_entry, table_entry, all_tables_entry):
-        return translate_phrase(column_entry['column_name'])
+        return self._translate_original_name(column_entry['column_name_original'])
+    
+    def _translate_original_name(self, name):
+        id_suffix, name = self._strip_id_suffix(name)
+        natural_text_en = name.replace('_', ' ')
+        was_titled = all(word[0]==word[0].upper() and word[1:]==word[1:].lower() for word in natural_text_en.split(' '))
+        natural_text_pl = translate_phrase(natural_text_en)
+        if was_titled:
+            natural_text_pl = natural_text_pl.title()
+        return natural_text_pl.replace(' ', "_") + id_suffix
     
 
 class DoubleSchemaTranslation(BaseSchemaTranslation):
@@ -106,22 +124,13 @@ class DoubleSchemaTranslation(BaseSchemaTranslation):
         return translated_name
 
     def _translate_original_name_in_context(self, name, container, other_container=None):
+        id_suffix, name = self._strip_id_suffix(name)
         natural_text_en = name.replace('_', ' ')
-        id_suffix, natural_text_en = self._strip_id_suffix(name)
         was_titled = all(word[0]==word[0].upper() and word[1:]==word[1:].lower() for word in natural_text_en.split(' '))
-        natural_text_pl = translate_phrase(natural_text_en)
+        natural_text_pl = self._translate_name_in_context(natural_text_en, container, other_container)
         if was_titled:
             natural_text_pl = natural_text_pl.title()
         return natural_text_pl.replace(' ', "_") + id_suffix
 
     def _naturalize_name(self, name):
         return re.sub(r'[^a-zA-Z ]', ' ', name)
-
-    def _strip_id_suffix(self, name):
-        if name.lower().endswith('_id'):
-            rest = ''.join(list(name)[:-3])
-            suffix = ''.join(list(name)[-3:])
-        else:
-            rest = name
-            suffix = ''
-        return suffix, rest
