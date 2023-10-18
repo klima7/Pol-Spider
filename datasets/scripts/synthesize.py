@@ -68,7 +68,7 @@ def spider_syn(output_name, schema_translation):
         ],
         gold_mapping={
             'dev_gold.sql': ['dev.json'],
-            'train_gold.sql': ['train_spider.json'],
+            'train_gold': ['train_spider.json'],
         },
         schema_translation_name=schema_translation
     )
