@@ -92,7 +92,9 @@ class NoContextSchemaTranslation(BaseSchemaTranslation):
         natural_text_pl = translate_phrase(natural_text_en)
         if was_titled:
             natural_text_pl = natural_text_pl.title()
-        return natural_text_pl.replace(' ', "_") + id_suffix
+        translated_name = natural_text_pl.replace(' ', "_") + id_suffix
+        translated_name = re.sub('[^a-z0-9_ąćźóęśżłń]+', '', translated_name, flags=re.IGNORECASE)
+        return translated_name
     
 
 class DoubleSchemaTranslation(BaseSchemaTranslation):
@@ -132,7 +134,9 @@ class DoubleSchemaTranslation(BaseSchemaTranslation):
         natural_text_pl = self._translate_name_in_context(natural_text_en, container, other_container)
         if was_titled:
             natural_text_pl = natural_text_pl.title()
-        return natural_text_pl.replace(' ', "_") + id_suffix
+        translated_name = natural_text_pl.replace(' ', "_") + id_suffix
+        translated_name = re.sub('[^a-z0-9_ąćźóęśżłń]+', '', translated_name, flags=re.IGNORECASE)
+        return translated_name
 
     def _naturalize_name(self, name):
         return re.sub(r'[^a-zA-Z ]', ' ', name)
