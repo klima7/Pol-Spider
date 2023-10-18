@@ -30,18 +30,8 @@ def add_calculated_attributes_single(sample, schemas, tables):
         sql = create_sql(sample["db_id"], sample["query_pl"], schemas, tables)
     except SQLParseException:
         print(f"WARNING Unable to parse SQL for sample '{sample['query_pl']}'")
-        sql = {
-            "from": {"table_units": [], "conds": []},
-            "select": [],
-            "where": [],
-            "groupBy": [],
-            "having": [],
-            "orderBy": [],
-            "limit": None,
-            "intersect": None,
-            "union": None,
-            "except": None,
-        }
+        sql = create_sql(sample["db_id"], f"select count(*) from {list(schemas[sample['db_id']].keys())[0]}", schemas, tables)
+
 
     new_sample = {
         "db_id": sample["db_id"],
