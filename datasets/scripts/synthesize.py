@@ -29,8 +29,8 @@ def spider(output_name, schema_translation):
             samples_path / 'train_spider.json',
         ],
         gold_mapping={
-            'dev_gold': ['dev.json'],
-            'train_gold': ['train_spider.json', 'train_others.json'],
+            'dev_gold.sql': ['dev.json'],
+            'train_gold.sql': ['train_spider.json', 'train_others.json'],
         },
         schema_translation_name=schema_translation
     )
@@ -48,7 +48,7 @@ def spider_dk(output_name, schema_translation):
             samples_path / 'samples.json',
         ],
         gold_mapping={
-            'dev_gold': ['samples.json'],
+            'dev_gold.sql': ['samples.json'],
         },
         schema_translation_name=schema_translation
     )
@@ -68,7 +68,7 @@ def spider_syn(output_name, schema_translation):
         ],
         gold_mapping={
             'dev_gold.sql': ['dev.json'],
-            'train_gold': ['train_spider.json'],
+            'train_gold.sql': ['train_spider.json'],
         },
         schema_translation_name=schema_translation
     )
