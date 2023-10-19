@@ -21,7 +21,7 @@ class CoreNLP:
         self.client = corenlp.CoreNLPClient()
 
     def __del__(self):
-        self.client.stop()
+        pass
 
     def annotate(self, text, annotators=None, output_format=None, properties=None):
         try:
