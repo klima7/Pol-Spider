@@ -33,6 +33,8 @@ RUN mkdir -p /app/third_party && \
     cd /app/third_party && \
     curl https://download.cs.stanford.edu/nlp/software/stanford-corenlp-full-2018-10-05.zip | jar xv
 
+RUN pip install protobuf==3.20 scikit-learn
+
 # Now copy the rest of the app
 COPY . /app/
 
@@ -51,4 +53,4 @@ RUN /bin/bash -c 'if compgen -G "/app/**/*.sh" > /dev/null; then dos2unix /app/*
 # Extend PYTHONPATH to load WikiSQL dependencies
 ENV PYTHONPATH="/app/third_party/wikisql/:${PYTHONPATH}" 
 
-ENTRYPOINT bash
+ENTRYPOINT sleep infinity

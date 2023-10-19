@@ -1,0 +1,13 @@
+services:
+  ratsql:
+    container_name: ratsql
+    build:
+      context: .
+      dockerfile: Dockerfile
+    mem_limit: 16GB
+    volumes:
+      - ./data:/mnt/data
+      - .:/app
+      - exclude:/app/third_party
+volumes:
+  exclude:
