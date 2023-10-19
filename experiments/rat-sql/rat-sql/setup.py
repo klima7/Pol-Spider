@@ -25,10 +25,13 @@ setup(
         'records~=0.5.3',
         'stanford-corenlp~=3.9.2',
         'tabulate~=0.8.6',
-        'torch~=1.3.1',
+        'torch',
         'torchtext~=0.3.1',
         'tqdm~=4.36.1',
         'transformers~=2.3.0',
+        'sentencepiece',
+        'protobuf==3.20',
+        'scikit-learn'
     ],
     entry_points={"console_scripts": ["ratsql=run:main"]},
 )

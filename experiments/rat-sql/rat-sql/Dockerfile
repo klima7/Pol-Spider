@@ -1,8 +1,11 @@
 FROM pytorch/pytorch:1.5-cuda10.1-cudnn7-devel
 
 ENV LC_ALL=C.UTF-8 \
-    LANG=C.UTF-8
+    LANG=C.UTF-8 \
+    TZ=Europe/Warsaw \
+    DEBIAN_FRONTEND=noninteractive
 
+# Fix problem with gpg key for next command
 RUN apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub
 
 RUN mkdir -p /usr/share/man/man1 && \
@@ -23,17 +26,13 @@ RUN pip install --user -r requirements.txt --no-warn-script-location && \
     pip install --user entmax && \
     python -c "import nltk; nltk.download('stopwords'); nltk.download('punkt')"
 
-RUN pip install sentencepiece==0.1.91
-
 # Cache the pretrained BERT model
-RUN python -c "from transformers import BertModel; BertModel.from_pretrained('bert-large-uncased-whole-word-masking')"
+RUN python -c "from transformers import BertModel; BertModel.from_pretrained('dkleczek/bert-base-polish-uncased-v1')"
 
 # Download & cache StanfordNLP
 RUN mkdir -p /app/third_party && \
     cd /app/third_party && \
     curl https://download.cs.stanford.edu/nlp/software/stanford-corenlp-full-2018-10-05.zip | jar xv
-
-RUN pip install protobuf==3.20 scikit-learn
 
 # Now copy the rest of the app
 COPY . /app/
