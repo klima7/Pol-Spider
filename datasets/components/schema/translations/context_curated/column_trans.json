@@ -33996,8 +33996,8 @@
         "column_name_original": "rid",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "",
-        "column_name_original_pl": ""
+        "column_name_pl": "review id",
+        "column_name_original_pl": "rid"
     },
     {
         "db_id": "yelp",
