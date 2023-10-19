@@ -9,5 +9,12 @@ services:
       - ./data:/mnt/data
       - .:/app
       - exclude:/app/third_party
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
 volumes:
   exclude:
