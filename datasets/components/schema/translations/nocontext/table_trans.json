@@ -24,7 +24,7 @@
         "db_id": "college_2",
         "name": "department",
         "name_original": "department",
-        "name_pl": "wydział",
+        "name_pl": "dział",
         "name_original_pl": "dział"
     },
     {
@@ -52,21 +52,21 @@
         "db_id": "college_2",
         "name": "teaches",
         "name_original": "teaches",
-        "name_pl": "uczy",
+        "name_pl": "nauczyciele",
         "name_original_pl": "nauczyciele"
     },
     {
         "db_id": "college_2",
         "name": "student",
         "name_original": "student",
-        "name_pl": "student",
+        "name_pl": "uczeń",
         "name_original_pl": "uczeń"
     },
     {
         "db_id": "college_2",
         "name": "takes classes",
         "name_original": "takes",
-        "name_pl": "uczęszcza na zajęcia",
+        "name_pl": "bierze udział w zajęciach",
         "name_original_pl": "bierze"
     },
     {
@@ -101,7 +101,7 @@
         "db_id": "flight_company",
         "name": "operate company",
         "name_original": "operate_company",
-        "name_pl": "obsługuj firmę",
+        "name_pl": "prowadzić firmę",
         "name_original_pl": "prowadzić_firmę"
     },
     {
@@ -129,7 +129,7 @@
         "db_id": "icfp_1",
         "name": "papers",
         "name_original": "Papers",
-        "name_pl": "dokumenty",
+        "name_pl": "papiery",
         "name_original_pl": "Papiery"
     },
     {
@@ -206,7 +206,7 @@
         "db_id": "race_track",
         "name": "track",
         "name_original": "track",
-        "name_pl": "tor",
+        "name_pl": "ścieżka",
         "name_original_pl": "ścieżka"
     },
     {
@@ -248,7 +248,7 @@
         "db_id": "academic",
         "name": "journal",
         "name_original": "journal",
-        "name_pl": "czasopismo",
+        "name_pl": "dziennik",
         "name_original_pl": "dziennik"
     },
     {
@@ -283,7 +283,7 @@
         "db_id": "academic",
         "name": "domain publication",
         "name_original": "domain_publication",
-        "name_pl": "publikacja w domenie",
+        "name_pl": "publikacja domeny",
         "name_original_pl": "publikacja_domeny"
     },
     {
@@ -311,7 +311,7 @@
         "db_id": "academic",
         "name": "cite",
         "name_original": "cite",
-        "name_pl": "cytuj",
+        "name_pl": "cytat",
         "name_original_pl": "cytat"
     },
     {
@@ -395,7 +395,7 @@
         "db_id": "department_store",
         "name": "order items",
         "name_original": "Order_Items",
-        "name_pl": "zamów produkty",
+        "name_pl": "zamów pozycje",
         "name_original_pl": "Zamów_Przedmioty"
     },
     {
@@ -409,7 +409,7 @@
         "db_id": "department_store",
         "name": "staff department assignments",
         "name_original": "Staff_Department_Assignments",
-        "name_pl": "przydziały działów personelu",
+        "name_pl": "przydział pracowników do działów",
         "name_original_pl": "Przydziały_Do_Działów_Personelu"
     },
     {
@@ -423,7 +423,7 @@
         "db_id": "music_4",
         "name": "volume",
         "name_original": "volume",
-        "name_pl": "głośność",
+        "name_pl": "objętość",
         "name_original_pl": "objętość"
     },
     {
@@ -451,21 +451,21 @@
         "db_id": "insurance_fnol",
         "name": "available policies",
         "name_original": "Available_Policies",
-        "name_pl": "dostępne polisy",
+        "name_pl": "dostępne zasady",
         "name_original_pl": "Dostępne_Zasady"
     },
     {
         "db_id": "insurance_fnol",
         "name": "customers policies",
         "name_original": "Customers_Policies",
-        "name_pl": "polisy klientów",
+        "name_pl": "zasady dotyczące klientów",
         "name_original_pl": "Zasady_Dotyczące_Klientów"
     },
     {
         "db_id": "insurance_fnol",
         "name": "first notification of loss",
         "name_original": "First_Notification_of_Loss",
-        "name_pl": "pierwsze zawiadomienie o szkodzie",
+        "name_pl": "pierwsze powiadomienie o stracie",
         "name_original_pl": "Pierwsze_powiadomienie_o_stracie"
     },
     {
@@ -556,7 +556,7 @@
         "db_id": "store_product",
         "name": "store",
         "name_original": "store",
-        "name_pl": "store",
+        "name_pl": "sklep",
         "name_original_pl": "sklep"
     },
     {
@@ -570,14 +570,14 @@
         "db_id": "store_product",
         "name": "store product",
         "name_original": "store_product",
-        "name_pl": "produkt sklepowy",
+        "name_pl": "przechowuj produkt",
         "name_original_pl": "przechowuj_produkt"
     },
     {
         "db_id": "store_product",
         "name": "store district",
         "name_original": "store_district",
-        "name_pl": "dzielnica sklepu",
+        "name_pl": "dzielnica sklepowa",
         "name_original_pl": "dzielnica_sklepowa"
     },
     {
@@ -647,7 +647,7 @@
         "db_id": "assets_maintenance",
         "name": "fault log",
         "name_original": "Fault_Log",
-        "name_pl": "dziennik usterek",
+        "name_pl": "dziennik błędów",
         "name_original_pl": "Dziennik_Błędów"
     },
     {
@@ -668,7 +668,7 @@
         "db_id": "assets_maintenance",
         "name": "fault log parts",
         "name_original": "Fault_Log_Parts",
-        "name_pl": "części dziennika usterek",
+        "name_pl": "części dziennika błędów",
         "name_original_pl": "Części_Dziennika_Błędów"
     },
     {
@@ -696,7 +696,7 @@
         "db_id": "student_assessment",
         "name": "students",
         "name_original": "Students",
-        "name_pl": "studentów",
+        "name_pl": "studenci",
         "name_original_pl": "Studenci"
     },
     {
@@ -731,7 +731,7 @@
         "db_id": "student_assessment",
         "name": "candidates",
         "name_original": "Candidates",
-        "name_pl": "kandydatów",
+        "name_pl": "kandydaci",
         "name_original_pl": "Kandydaci"
     },
     {
@@ -864,7 +864,7 @@
         "db_id": "farm",
         "name": "farm competition",
         "name_original": "farm_competition",
-        "name_pl": "konkurencja na farmie",
+        "name_pl": "konkurs rolniczy",
         "name_original_pl": "konkurs_rolniczy"
     },
     {
@@ -927,21 +927,21 @@
         "db_id": "solvency_ii",
         "name": "events",
         "name_original": "Events",
-        "name_pl": "zdarzenia",
+        "name_pl": "wydarzenia",
         "name_original_pl": "Wydarzenia"
     },
     {
         "db_id": "solvency_ii",
         "name": "products in events",
         "name_original": "Products_in_Events",
-        "name_pl": "produkty w zdarzeniach",
+        "name_pl": "produkty w wydarzeniach",
         "name_original_pl": "Produkty_w_Wydarzeniach"
     },
     {
         "db_id": "solvency_ii",
         "name": "parties in events",
         "name_original": "Parties_in_Events",
-        "name_pl": "strony w zdarzeniach",
+        "name_pl": "imprezy w wydarzeniach",
         "name_original_pl": "Imprezy_w_Wydarzeniach"
     },
     {
@@ -955,7 +955,7 @@
         "db_id": "solvency_ii",
         "name": "assets in events",
         "name_original": "Assets_in_Events",
-        "name_pl": "aktywa w zdarzeniach",
+        "name_pl": "aktywa w wydarzeniach",
         "name_original_pl": "Aktywa_w_wydarzeniach"
     },
     {
@@ -983,7 +983,7 @@
         "db_id": "city_record",
         "name": "hosting city",
         "name_original": "hosting_city",
-        "name_pl": "miasto przyjmujące",
+        "name_pl": "miasto goszczące",
         "name_original_pl": "miasto_goszczące"
     },
     {
@@ -1046,7 +1046,7 @@
         "db_id": "election",
         "name": "party",
         "name_original": "party",
-        "name_pl": "partia",
+        "name_pl": "impreza",
         "name_original_pl": "impreza"
     },
     {
@@ -1088,7 +1088,7 @@
         "db_id": "debate",
         "name": "debate people",
         "name_original": "debate_people",
-        "name_pl": "debatuj z ludźmi",
+        "name_pl": "debatować o ludziach",
         "name_original_pl": "debatować_o_ludziach"
     },
     {
@@ -1102,7 +1102,7 @@
         "db_id": "network_2",
         "name": "person friend",
         "name_original": "PersonFriend",
-        "name_pl": "osoba znajoma",
+        "name_pl": "osoba przyjaciel",
         "name_original_pl": "PersonFriend"
     },
     {
@@ -1165,7 +1165,7 @@
         "db_id": "e_learning",
         "name": "subjects",
         "name_original": "Subjects",
-        "name_pl": "przedmioty",
+        "name_pl": "tematy",
         "name_original_pl": "Przedmioty"
     },
     {
@@ -1186,7 +1186,7 @@
         "db_id": "e_learning",
         "name": "student tests taken",
         "name_original": "Student_Tests_Taken",
-        "name_pl": "testy wykonane przez uczniów",
+        "name_pl": "testy wykonane przez studentów",
         "name_original_pl": "Testy_Wykonane_Przez_Uczniów"
     },
     {
@@ -1263,7 +1263,7 @@
         "db_id": "allergy_1",
         "name": "student",
         "name_original": "Student",
-        "name_pl": "student",
+        "name_pl": "uczeń",
         "name_original_pl": "Uczeń"
     },
     {
@@ -1312,7 +1312,7 @@
         "db_id": "imdb",
         "name": "director",
         "name_original": "director",
-        "name_pl": "reżyser",
+        "name_pl": "dyrektor",
         "name_original_pl": "dyrektor"
     },
     {
@@ -1326,7 +1326,7 @@
         "db_id": "imdb",
         "name": "directed by",
         "name_original": "directed_by",
-        "name_pl": "reżyseria",
+        "name_pl": "w reżyserii",
         "name_original_pl": "w_reżyserii"
     },
     {
@@ -1340,7 +1340,7 @@
         "db_id": "imdb",
         "name": "made by",
         "name_original": "made_by",
-        "name_pl": "wyprodukowany przez",
+        "name_pl": "wykonany przez",
         "name_original_pl": "wykonany_przez"
     },
     {
@@ -1368,7 +1368,7 @@
         "db_id": "imdb",
         "name": "writer",
         "name_original": "writer",
-        "name_pl": "scenarzysta",
+        "name_pl": "pisarz",
         "name_original_pl": "pisarz"
     },
     {
@@ -1424,7 +1424,7 @@
         "db_id": "products_for_hire",
         "name": "view product availability",
         "name_original": "View_Product_Availability",
-        "name_pl": "zobacz dostępność produktu",
+        "name_pl": "zobacz dostępność produktów",
         "name_original_pl": "Zobacz_Dostępność_Produktu"
     },
     {
@@ -1438,7 +1438,7 @@
         "db_id": "candidate_poll",
         "name": "people",
         "name_original": "people",
-        "name_pl": "osób",
+        "name_pl": "ludzie",
         "name_original_pl": "ludzie"
     },
     {
@@ -1487,7 +1487,7 @@
         "db_id": "chinook_1",
         "name": "invoice line",
         "name_original": "InvoiceLine",
-        "name_pl": "linia faktur",
+        "name_pl": "linia faktury",
         "name_original_pl": "InvoiceLine"
     },
     {
@@ -1508,14 +1508,14 @@
         "db_id": "chinook_1",
         "name": "playlist track",
         "name_original": "PlaylistTrack",
-        "name_pl": "utwór z playlisty",
+        "name_pl": "utwór na liście odtwarzania",
         "name_original_pl": "PlaylistTrack"
     },
     {
         "db_id": "chinook_1",
         "name": "track",
         "name_original": "Track",
-        "name_pl": "utwór",
+        "name_pl": "ścieżka",
         "name_original_pl": "Ścieżka"
     },
     {
@@ -1543,7 +1543,7 @@
         "db_id": "pets_1",
         "name": "student",
         "name_original": "Student",
-        "name_pl": "student",
+        "name_pl": "uczeń",
         "name_original_pl": "Uczeń"
     },
     {
@@ -1557,14 +1557,14 @@
         "db_id": "pets_1",
         "name": "pets",
         "name_original": "Pets",
-        "name_pl": "zwierzęta domowe",
+        "name_pl": "zwierzęta",
         "name_original_pl": "Zwierzęta_Domowe"
     },
     {
         "db_id": "dorm_1",
         "name": "student",
         "name_original": "Student",
-        "name_pl": "student",
+        "name_pl": "uczeń",
         "name_original_pl": "Uczeń"
     },
     {
@@ -1599,7 +1599,7 @@
         "db_id": "journal_committee",
         "name": "journal",
         "name_original": "journal",
-        "name_pl": "czasopismo",
+        "name_pl": "dziennik",
         "name_original_pl": "dziennik"
     },
     {
@@ -1648,7 +1648,7 @@
         "db_id": "medicine_enzyme_interaction",
         "name": "medicine",
         "name_original": "medicine",
-        "name_pl": "lek",
+        "name_pl": "medycyna",
         "name_original_pl": "medycyna"
     },
     {
@@ -1662,7 +1662,7 @@
         "db_id": "medicine_enzyme_interaction",
         "name": "medicine enzyme interaction",
         "name_original": "medicine_enzyme_interaction",
-        "name_pl": "interakcja enzymów leków",
+        "name_pl": "medycyna interakcja enzymatyczna",
         "name_original_pl": "medycyna_interakcja_enzymatyczna"
     },
     {
@@ -1676,7 +1676,7 @@
         "db_id": "local_govt_and_lot",
         "name": "properties",
         "name_original": "Properties",
-        "name_pl": "nieruchomości",
+        "name_pl": "właściwości",
         "name_original_pl": "Właściwości"
     },
     {
@@ -1732,7 +1732,7 @@
         "db_id": "local_govt_and_lot",
         "name": "timed status of things",
         "name_original": "Timed_Status_of_Things",
-        "name_pl": "aktualny stan rzeczy",
+        "name_pl": "czasowy stan rzeczy",
         "name_original_pl": "Czasowy_status_rzeczy"
     },
     {
@@ -1914,7 +1914,7 @@
         "db_id": "music_2",
         "name": "vocals",
         "name_original": "Vocals",
-        "name_pl": "wokal",
+        "name_pl": "wokale",
         "name_original_pl": "Wokal"
     },
     {
@@ -1928,14 +1928,14 @@
         "db_id": "sports_competition",
         "name": "club rank",
         "name_original": "club_rank",
-        "name_pl": "ranga klubowa",
+        "name_pl": "ranga klubu",
         "name_original_pl": "ranga_klubu"
     },
     {
         "db_id": "sports_competition",
         "name": "player",
         "name_original": "player",
-        "name_pl": "zawodnik",
+        "name_pl": "gracz",
         "name_original_pl": "gracz"
     },
     {
@@ -1949,7 +1949,7 @@
         "db_id": "sports_competition",
         "name": "competition result",
         "name_original": "competition_result",
-        "name_pl": "wynik zawodów",
+        "name_pl": "wynik konkursu",
         "name_original_pl": "wynik_konkursu"
     },
     {
@@ -2019,7 +2019,7 @@
         "db_id": "browser_web",
         "name": "web client accelerator",
         "name_original": "Web_client_accelerator",
-        "name_pl": "akcelerator klienta internetowego",
+        "name_pl": "akcelerator klienta sieciowego",
         "name_original_pl": "Akcelerator_klienta_sieci_Web"
     },
     {
@@ -2040,14 +2040,14 @@
         "db_id": "baseball_1",
         "name": "all star",
         "name_original": "all_star",
-        "name_pl": "all Star",
+        "name_pl": "gwiazda",
         "name_original_pl": "gwiazda"
     },
     {
         "db_id": "baseball_1",
         "name": "appearances",
         "name_original": "appearances",
-        "name_pl": "występy",
+        "name_pl": "pozory",
         "name_original_pl": "pozory"
     },
     {
@@ -2068,7 +2068,7 @@
         "db_id": "baseball_1",
         "name": "manager award vote",
         "name_original": "manager_award_vote",
-        "name_pl": "głosowanie na nagrodę dla menedżera",
+        "name_pl": "głosowanie na nagrodę menedżera",
         "name_original_pl": "głosowanie_na_nagrodę_menedżera"
     },
     {
@@ -2124,7 +2124,7 @@
         "db_id": "baseball_1",
         "name": "hall of fame",
         "name_original": "hall_of_fame",
-        "name_pl": "hall of fame",
+        "name_pl": "hala sław",
         "name_original_pl": "hala_sław"
     },
     {
@@ -2138,14 +2138,14 @@
         "db_id": "baseball_1",
         "name": "manager",
         "name_original": "manager",
-        "name_pl": "menedżer",
+        "name_pl": "kierownik",
         "name_original_pl": "kierownik"
     },
     {
         "db_id": "baseball_1",
         "name": "manager half",
         "name_original": "manager_half",
-        "name_pl": "menedżer połowy",
+        "name_pl": "menedżer połowa",
         "name_original_pl": "menedżer_połowa"
     },
     {
@@ -2201,14 +2201,14 @@
         "db_id": "baseball_1",
         "name": "team",
         "name_original": "team",
-        "name_pl": "drużyna",
+        "name_pl": "zespół",
         "name_original_pl": "zespół"
     },
     {
         "db_id": "baseball_1",
         "name": "team franchise",
         "name_original": "team_franchise",
-        "name_pl": "franczyza zespołu",
+        "name_pl": "franczyza zespołowa",
         "name_original_pl": "franczyza_zespołowa"
     },
     {
@@ -2257,14 +2257,14 @@
         "db_id": "csu_1",
         "name": "degrees",
         "name_original": "degrees",
-        "name_pl": "stopnie naukowe",
+        "name_pl": "stopnie",
         "name_original_pl": "stopnie"
     },
     {
         "db_id": "csu_1",
         "name": "discipline enrollments",
         "name_original": "discipline_enrollments",
-        "name_pl": "zapisy na dyscypliny",
+        "name_pl": "zapisy do dyscyplin",
         "name_original_pl": "zapisy_do_dyscyplin"
     },
     {
@@ -2285,7 +2285,7 @@
         "db_id": "tracking_orders",
         "name": "customers",
         "name_original": "Customers",
-        "name_pl": "klientów",
+        "name_pl": "klienci",
         "name_original_pl": "Klienci"
     },
     {
@@ -2299,7 +2299,7 @@
         "db_id": "tracking_orders",
         "name": "orders",
         "name_original": "Orders",
-        "name_pl": "zamówień",
+        "name_pl": "zamówienia",
         "name_original_pl": "Zamówienia"
     },
     {
@@ -2313,7 +2313,7 @@
         "db_id": "tracking_orders",
         "name": "order items",
         "name_original": "Order_Items",
-        "name_pl": "pozycje zamówienia",
+        "name_pl": "zamów pozycje",
         "name_original_pl": "Zamów_Przedmioty"
     },
     {
@@ -2327,7 +2327,7 @@
         "db_id": "tracking_orders",
         "name": "shipment items",
         "name_original": "Shipment_Items",
-        "name_pl": "pozycje przesyłki",
+        "name_pl": "elementy przesyłki",
         "name_original_pl": "Elementy_Przesyłki"
     },
     {
@@ -2341,7 +2341,7 @@
         "db_id": "insurance_policies",
         "name": "customer policies",
         "name_original": "Customer_Policies",
-        "name_pl": "polisy klientów",
+        "name_pl": "zasady dotyczące klientów",
         "name_original_pl": "Zasady_Dotyczące_Klientów"
     },
     {
@@ -2369,7 +2369,7 @@
         "db_id": "gas_company",
         "name": "company",
         "name_original": "company",
-        "name_pl": "spółka",
+        "name_pl": "firma",
         "name_original_pl": "firma"
     },
     {
@@ -2383,7 +2383,7 @@
         "db_id": "gas_company",
         "name": "station company",
         "name_original": "station_company",
-        "name_pl": "spółka stacyjna",
+        "name_pl": "stacja spółka",
         "name_original_pl": "stacja_spółka"
     },
     {
@@ -2404,14 +2404,14 @@
         "db_id": "e_government",
         "name": "forms",
         "name_original": "Forms",
-        "name_pl": "formularze",
+        "name_pl": "formy",
         "name_original_pl": "Formularze"
     },
     {
         "db_id": "e_government",
         "name": "individuals",
         "name_original": "Individuals",
-        "name_pl": "osoby fizyczne",
+        "name_pl": "osoby",
         "name_original_pl": "Osoby_Fizyczne"
     },
     {
@@ -2425,7 +2425,7 @@
         "db_id": "e_government",
         "name": "parties",
         "name_original": "Parties",
-        "name_pl": "partie",
+        "name_pl": "strony",
         "name_original_pl": "Strony"
     },
     {
@@ -2446,14 +2446,14 @@
         "db_id": "e_government",
         "name": "party forms",
         "name_original": "Party_Forms",
-        "name_pl": "formularze partyjne",
+        "name_pl": "formularze imprezowe",
         "name_original_pl": "Formularze_Imprezowe"
     },
     {
         "db_id": "e_government",
         "name": "party services",
         "name_original": "Party_Services",
-        "name_pl": "usługi partyjne",
+        "name_pl": "usługi imprezowe",
         "name_original_pl": "Usługi_Imprezowe"
     },
     {
@@ -2502,7 +2502,7 @@
         "db_id": "machine_repair",
         "name": "repair assignment",
         "name_original": "repair_assignment",
-        "name_pl": "zlecenie naprawy",
+        "name_pl": "zadanie naprawy",
         "name_original_pl": "zadanie_naprawy"
     },
     {
@@ -2523,7 +2523,7 @@
         "db_id": "theme_gallery",
         "name": "exhibition record",
         "name_original": "exhibition_record",
-        "name_pl": "zapis wystawy",
+        "name_pl": "rekord wystawy",
         "name_original_pl": "rekord_wystawy"
     },
     {
@@ -2544,7 +2544,7 @@
         "db_id": "film_rank",
         "name": "film market estimation",
         "name_original": "film_market_estimation",
-        "name_pl": "oszacowanie rynku filmowego",
+        "name_pl": "oszacowanie rynku folii",
         "name_original_pl": "oszacowanie_rynku_folii"
     },
     {
@@ -2572,7 +2572,7 @@
         "db_id": "party_people",
         "name": "party events",
         "name_original": "party_events",
-        "name_pl": "wydarzenia imprezowe",
+        "name_pl": "imprezy",
         "name_original_pl": "imprezy"
     },
     {
@@ -2586,7 +2586,7 @@
         "db_id": "hospital_1",
         "name": "department",
         "name_original": "Department",
-        "name_pl": "oddział",
+        "name_pl": "dział",
         "name_original_pl": "Dział"
     },
     {
@@ -2628,14 +2628,14 @@
         "db_id": "hospital_1",
         "name": "appointment",
         "name_original": "Appointment",
-        "name_pl": "spotkanie",
+        "name_pl": "nominacja",
         "name_original_pl": "Powołanie"
     },
     {
         "db_id": "hospital_1",
         "name": "medication",
         "name_original": "Medication",
-        "name_pl": "leki",
+        "name_pl": "lek",
         "name_original_pl": "Leki"
     },
     {
@@ -2684,7 +2684,7 @@
         "db_id": "customers_campaigns_ecommerce",
         "name": "premises",
         "name_original": "Premises",
-        "name_pl": "lokale",
+        "name_pl": "pomieszczenia",
         "name_original_pl": "Lokale"
     },
     {
@@ -2726,7 +2726,7 @@
         "db_id": "customers_campaigns_ecommerce",
         "name": "mailshot customers",
         "name_original": "Mailshot_Customers",
-        "name_pl": "wysyłanie e-maili do klientów",
+        "name_pl": "klienci wysyłający maile",
         "name_original_pl": "Klienci_Korzystający_Z_Usługi_Mailshot"
     },
     {
@@ -2754,7 +2754,7 @@
         "db_id": "restaurants",
         "name": "geographic",
         "name_original": "GEOGRAPHIC",
-        "name_pl": "geograficzne",
+        "name_pl": "geograficzny",
         "name_original_pl": "GEOGRAFIA"
     },
     {
@@ -2782,7 +2782,7 @@
         "db_id": "mountain_photos",
         "name": "camera lens",
         "name_original": "camera_lens",
-        "name_pl": "obiektyw aparatu",
+        "name_pl": "obiektyw kamery",
         "name_original_pl": "obiektyw_kamery"
     },
     {
@@ -2859,14 +2859,14 @@
         "db_id": "cre_Doc_Control_Systems",
         "name": "employees",
         "name_original": "Employees",
-        "name_pl": "pracowników",
+        "name_pl": "pracownicy",
         "name_original_pl": "Pracownicy"
     },
     {
         "db_id": "cre_Doc_Control_Systems",
         "name": "document drafts",
         "name_original": "Document_Drafts",
-        "name_pl": "wersje robocze dokumentów",
+        "name_pl": "projekty dokumentów",
         "name_original_pl": "Projekty_Dokumentów"
     },
     {
@@ -2894,14 +2894,14 @@
         "db_id": "tracking_share_transactions",
         "name": "investors",
         "name_original": "Investors",
-        "name_pl": "inwestorów",
+        "name_pl": "inwestorzy",
         "name_original_pl": "Inwestorzy"
     },
     {
         "db_id": "tracking_share_transactions",
         "name": "lots",
         "name_original": "Lots",
-        "name_pl": "partii",
+        "name_pl": "partie",
         "name_original_pl": "Dużo"
     },
     {
@@ -2936,7 +2936,7 @@
         "db_id": "tracking_share_transactions",
         "name": "transactions lots",
         "name_original": "Transactions_Lots",
-        "name_pl": "transakcji",
+        "name_pl": "partie transakcji",
         "name_original_pl": "Partie_Transakcji"
     },
     {
@@ -2950,7 +2950,7 @@
         "db_id": "apartment_rentals",
         "name": "apartments",
         "name_original": "Apartments",
-        "name_pl": "apartamenty",
+        "name_pl": "mieszkania",
         "name_original_pl": "Apartamenty"
     },
     {
@@ -2978,7 +2978,7 @@
         "db_id": "apartment_rentals",
         "name": "view unit status",
         "name_original": "View_Unit_Status",
-        "name_pl": "zobacz status jednostki",
+        "name_pl": "wyświetl status urządzenia",
         "name_original_pl": "Wyświetl_Status_Jednostki"
     },
     {
@@ -2999,7 +2999,7 @@
         "db_id": "student_transcripts_tracking",
         "name": "departments",
         "name_original": "Departments",
-        "name_pl": "wydziały",
+        "name_pl": "działy",
         "name_original_pl": "Działy"
     },
     {
@@ -3020,21 +3020,21 @@
         "db_id": "student_transcripts_tracking",
         "name": "semesters",
         "name_original": "Semesters",
-        "name_pl": "semestrów",
+        "name_pl": "semestry",
         "name_original_pl": "Semestry"
     },
     {
         "db_id": "student_transcripts_tracking",
         "name": "students",
         "name_original": "Students",
-        "name_pl": "studentów",
+        "name_pl": "studenci",
         "name_original_pl": "Studenci"
     },
     {
         "db_id": "student_transcripts_tracking",
         "name": "student enrolment",
         "name_original": "Student_Enrolment",
-        "name_pl": "rejestracja studentów",
+        "name_pl": "rekrutacja studentów",
         "name_original_pl": "Rejestracja_Studentów"
     },
     {
@@ -3132,7 +3132,7 @@
         "db_id": "company_office",
         "name": "companies",
         "name_original": "Companies",
-        "name_pl": "spółki",
+        "name_pl": "firmy",
         "name_original_pl": "Firmy"
     },
     {
@@ -3160,7 +3160,7 @@
         "db_id": "tracking_software_problems",
         "name": "problem status codes",
         "name_original": "Problem_Status_Codes",
-        "name_pl": "kody statusu problemów",
+        "name_pl": "kody statusu problemu",
         "name_original_pl": "Kody_Statusu_Problemu"
     },
     {
@@ -3188,7 +3188,7 @@
         "db_id": "products_gen_characteristics",
         "name": "reference characteristic types",
         "name_original": "Ref_Characteristic_Types",
-        "name_pl": "referencyjne typy charakterystyk",
+        "name_pl": "typy charakterystyk referencyjnych",
         "name_original_pl": "Ref_Typy_Charakterystyczne"
     },
     {
@@ -3258,7 +3258,7 @@
         "db_id": "riding_club",
         "name": "player",
         "name_original": "player",
-        "name_pl": "zawodnik",
+        "name_pl": "gracz",
         "name_original_pl": "gracz"
     },
     {
@@ -3321,7 +3321,7 @@
         "db_id": "county_public_safety",
         "name": "county public safety",
         "name_original": "county_public_safety",
-        "name_pl": "bezpieczeństwo publiczne hrabstwa",
+        "name_pl": "bezpieczeństwo publiczne powiatu",
         "name_original_pl": "bezpieczeństwo_publiczne_powiatu"
     },
     {
@@ -3349,21 +3349,21 @@
         "db_id": "performance_attendance",
         "name": "member attendance",
         "name_original": "member_attendance",
-        "name_pl": "frekwencja członków",
+        "name_pl": "obecność członków",
         "name_original_pl": "obecność_członków"
     },
     {
         "db_id": "club_1",
         "name": "student",
         "name_original": "Student",
-        "name_pl": "student",
+        "name_pl": "uczeń",
         "name_original_pl": "Uczeń"
     },
     {
         "db_id": "club_1",
         "name": "club",
         "name_original": "Club",
-        "name_pl": "club",
+        "name_pl": "klub",
         "name_original_pl": "Klub"
     },
     {
@@ -3405,7 +3405,7 @@
         "db_id": "culture_company",
         "name": "culture company",
         "name_original": "culture_company",
-        "name_pl": "przedsiębiorstwo kulturalne",
+        "name_pl": "firma kulturalna",
         "name_original_pl": "firma_kulturalna"
     },
     {
@@ -3440,7 +3440,7 @@
         "db_id": "musical",
         "name": "musical",
         "name_original": "musical",
-        "name_pl": "musical",
+        "name_pl": "muzyczny",
         "name_original_pl": "muzyczny"
     },
     {
@@ -3517,7 +3517,7 @@
         "db_id": "tracking_grants_for_research",
         "name": "grants",
         "name_original": "Grants",
-        "name_pl": "granty",
+        "name_pl": "dotacje",
         "name_original_pl": "Dotacje"
     },
     {
@@ -3573,7 +3573,7 @@
         "db_id": "tracking_grants_for_research",
         "name": "staff roles",
         "name_original": "Staff_Roles",
-        "name_pl": "role personelu",
+        "name_pl": "role pracowników",
         "name_original_pl": "Role_Pracowników"
     },
     {
@@ -3650,7 +3650,7 @@
         "db_id": "network_1",
         "name": "likes",
         "name_original": "Likes",
-        "name_pl": "polubienia",
+        "name_pl": "upodobania",
         "name_original_pl": "Lubi"
     },
     {
@@ -3734,7 +3734,7 @@
         "db_id": "restaurant_1",
         "name": "student",
         "name_original": "Student",
-        "name_pl": "student",
+        "name_pl": "uczeń",
         "name_original_pl": "Uczeń"
     },
     {
@@ -3790,7 +3790,7 @@
         "db_id": "customers_and_invoices",
         "name": "accounts",
         "name_original": "Accounts",
-        "name_pl": "rachunki",
+        "name_pl": "konta",
         "name_original_pl": "Konta"
     },
     {
@@ -3818,35 +3818,35 @@
         "db_id": "customers_and_invoices",
         "name": "order items",
         "name_original": "Order_Items",
-        "name_pl": "pozycje zamówienia",
+        "name_pl": "zamów pozycje",
         "name_original_pl": "Zamów_Przedmioty"
     },
     {
         "db_id": "customers_and_invoices",
         "name": "invoice line items",
         "name_original": "Invoice_Line_Items",
-        "name_pl": "pozycje faktury",
+        "name_pl": "pozycje na fakturze",
         "name_original_pl": "Pozycje_Faktury"
     },
     {
         "db_id": "insurance_and_eClaims",
         "name": "customers",
         "name_original": "Customers",
-        "name_pl": "klientów",
+        "name_pl": "klienci",
         "name_original_pl": "Klienci"
     },
     {
         "db_id": "insurance_and_eClaims",
         "name": "staff",
         "name_original": "Staff",
-        "name_pl": "pracownicy",
+        "name_pl": "personel",
         "name_original_pl": "Personel"
     },
     {
         "db_id": "insurance_and_eClaims",
         "name": "policies",
         "name_original": "Policies",
-        "name_pl": "polisy",
+        "name_pl": "zasady",
         "name_original_pl": "Zasady"
     },
     {
@@ -3860,14 +3860,14 @@
         "db_id": "insurance_and_eClaims",
         "name": "claims documents",
         "name_original": "Claims_Documents",
-        "name_pl": "dokumenty roszczeń",
+        "name_pl": "dokumenty dotyczące roszczeń",
         "name_original_pl": "Dokumenty_Dotyczące_Roszczeń"
     },
     {
         "db_id": "insurance_and_eClaims",
         "name": "claims processing stages",
         "name_original": "Claims_Processing_Stages",
-        "name_pl": "etapy przetwarzania roszczeń",
+        "name_pl": "etapy rozpatrywania roszczeń",
         "name_original_pl": "Etapy_Przetwarzania_Roszczeń"
     },
     {
@@ -3895,7 +3895,7 @@
         "db_id": "college_1",
         "name": "department",
         "name_original": "DEPARTMENT",
-        "name_pl": "wydział",
+        "name_pl": "dział",
         "name_original_pl": "WYDZIAŁ"
     },
     {
@@ -3923,14 +3923,14 @@
         "db_id": "college_1",
         "name": "student",
         "name_original": "STUDENT",
-        "name_pl": "student",
+        "name_pl": "uczeń",
         "name_original_pl": "STUDENT"
     },
     {
         "db_id": "local_govt_mdm",
         "name": "customer master index",
         "name_original": "Customer_Master_Index",
-        "name_pl": "główny indeks klienta",
+        "name_pl": "główny indeks klientów",
         "name_original_pl": "Główny_Indeks_Klientów"
     },
     {
@@ -4021,7 +4021,7 @@
         "db_id": "hr_1",
         "name": "jobs",
         "name_original": "jobs",
-        "name_pl": "jobs",
+        "name_pl": "miejsca pracy",
         "name_original_pl": "miejsca_pracy"
     },
     {
@@ -4035,7 +4035,7 @@
         "db_id": "hr_1",
         "name": "job history",
         "name_original": "job_history",
-        "name_pl": "historia zatrudnienia",
+        "name_pl": "historia pracy",
         "name_original_pl": "historia_pracy"
     },
     {
@@ -4049,7 +4049,7 @@
         "db_id": "soccer_1",
         "name": "player attributes",
         "name_original": "Player_Attributes",
-        "name_pl": "atrybuty zawodnika",
+        "name_pl": "atrybuty gracza",
         "name_original_pl": "Atrybuty_Gracza"
     },
     {
@@ -4063,7 +4063,7 @@
         "db_id": "soccer_1",
         "name": "player",
         "name_original": "Player",
-        "name_pl": "zawodnik",
+        "name_pl": "gracz",
         "name_original_pl": "Gracz"
     },
     {
@@ -4084,14 +4084,14 @@
         "db_id": "soccer_1",
         "name": "team",
         "name_original": "Team",
-        "name_pl": "drużyna",
+        "name_pl": "zespół",
         "name_original_pl": "Zespół"
     },
     {
         "db_id": "soccer_1",
         "name": "team attributes",
         "name_original": "Team_Attributes",
-        "name_pl": "atrybuty drużyny",
+        "name_pl": "atrybuty zespołu",
         "name_original_pl": "Atrybuty_Zespołu"
     },
     {
@@ -4217,7 +4217,7 @@
         "db_id": "real_estate_properties",
         "name": "reference property types",
         "name_original": "Ref_Property_Types",
-        "name_pl": "referencyjne typy nieruchomości",
+        "name_pl": "typy właściwości referencyjnych",
         "name_original_pl": "Typy_Nieruchomości_Ref"
     },
     {
@@ -4231,7 +4231,7 @@
         "db_id": "real_estate_properties",
         "name": "properties",
         "name_original": "Properties",
-        "name_pl": "nieruchomości",
+        "name_pl": "właściwości",
         "name_original_pl": "Właściwości"
     },
     {
@@ -4245,7 +4245,7 @@
         "db_id": "college_3",
         "name": "student",
         "name_original": "Student",
-        "name_pl": "student",
+        "name_pl": "uczeń",
         "name_original_pl": "Uczeń"
     },
     {
@@ -4259,7 +4259,7 @@
         "db_id": "college_3",
         "name": "department",
         "name_original": "Department",
-        "name_pl": "wydział",
+        "name_pl": "dział",
         "name_original_pl": "Dział"
     },
     {
@@ -4280,14 +4280,14 @@
         "db_id": "college_3",
         "name": "minor in",
         "name_original": "Minor_in",
-        "name_pl": "małoletni",
+        "name_pl": "nieletni w",
         "name_original_pl": "Mniejszy_w"
     },
     {
         "db_id": "college_3",
         "name": "enrolled in",
         "name_original": "Enrolled_in",
-        "name_pl": "zapisany",
+        "name_pl": "zapisany do",
         "name_original_pl": "Zarejestrowany_w"
     },
     {
@@ -4413,14 +4413,14 @@
         "db_id": "customer_deliveries",
         "name": "employees",
         "name_original": "Employees",
-        "name_pl": "pracowników",
+        "name_pl": "pracownicy",
         "name_original_pl": "Pracownicy"
     },
     {
         "db_id": "customer_deliveries",
         "name": "order deliveries",
         "name_original": "Order_Deliveries",
-        "name_pl": "dostawy zamówień",
+        "name_pl": "zamów dostawy",
         "name_original_pl": "Dostawy_Zamówień"
     },
     {
@@ -4462,7 +4462,7 @@
         "db_id": "school_finance",
         "name": "endowment",
         "name_original": "endowment",
-        "name_pl": "kapitał żelazny",
+        "name_pl": "dofinansowanie",
         "name_original_pl": "dofinansowanie"
     },
     {
@@ -4483,7 +4483,7 @@
         "db_id": "scholar",
         "name": "dataset",
         "name_original": "dataset",
-        "name_pl": "zestaw danych",
+        "name_pl": "zbiór danych",
         "name_original_pl": "zbiór_danych"
     },
     {
@@ -4511,14 +4511,14 @@
         "db_id": "scholar",
         "name": "cite",
         "name_original": "cite",
-        "name_pl": "cytuj",
+        "name_pl": "cytat",
         "name_original_pl": "cytat"
     },
     {
         "db_id": "scholar",
         "name": "paper dataset",
         "name_original": "paperDataset",
-        "name_pl": "papierowy zestaw danych",
+        "name_pl": "papierowy zbiór danych",
         "name_original_pl": "paperDataset"
     },
     {
@@ -4553,7 +4553,7 @@
         "db_id": "voter_1",
         "name": "votes",
         "name_original": "VOTES",
-        "name_pl": "głosów",
+        "name_pl": "głosy",
         "name_original_pl": "GŁOSY"
     },
     {
@@ -4567,7 +4567,7 @@
         "db_id": "match_season",
         "name": "team",
         "name_original": "team",
-        "name_pl": "drużyna",
+        "name_pl": "zespół",
         "name_original_pl": "zespół"
     },
     {
@@ -4581,7 +4581,7 @@
         "db_id": "match_season",
         "name": "player",
         "name_original": "player",
-        "name_pl": "zawodnik",
+        "name_pl": "gracz",
         "name_original_pl": "gracz"
     },
     {
@@ -4602,14 +4602,14 @@
         "db_id": "small_bank_1",
         "name": "checking",
         "name_original": "CHECKING",
-        "name_pl": "czek",
+        "name_pl": "sprawdzanie",
         "name_original_pl": "SPRAWDZANIE"
     },
     {
         "db_id": "wta_1",
         "name": "players",
         "name_original": "players",
-        "name_pl": "zawodnicy",
+        "name_pl": "gracze",
         "name_original_pl": "gracze"
     },
     {
@@ -4651,21 +4651,21 @@
         "db_id": "yelp",
         "name": "checkin",
         "name_original": "checkin",
-        "name_pl": "checkin",
+        "name_pl": "odprawa",
         "name_original_pl": "odprawa"
     },
     {
         "db_id": "yelp",
         "name": "neighbourhood",
         "name_original": "neighbourhood",
-        "name_pl": "okolica",
+        "name_pl": "sąsiedztwo",
         "name_original_pl": "sąsiedztwo"
     },
     {
         "db_id": "yelp",
         "name": "review",
         "name_original": "review",
-        "name_pl": "recenzja",
+        "name_pl": "przegląd",
         "name_original_pl": "przegląd"
     },
     {
@@ -4777,14 +4777,14 @@
         "db_id": "store_1",
         "name": "invoice lines",
         "name_original": "invoice_lines",
-        "name_pl": "linie faktur",
+        "name_pl": "linie faktury",
         "name_original_pl": "linie_faktury"
     },
     {
         "db_id": "store_1",
         "name": "playlists",
         "name_original": "playlists",
-        "name_pl": "listy odtwarzania",
+        "name_pl": "playlisty",
         "name_original_pl": "playlisty"
     },
     {
@@ -4826,7 +4826,7 @@
         "db_id": "document_management",
         "name": "users",
         "name_original": "Users",
-        "name_pl": "użytkowników",
+        "name_pl": "użytkownicy",
         "name_original_pl": "Użytkownicy"
     },
     {
@@ -4868,14 +4868,14 @@
         "db_id": "document_management",
         "name": "document sections",
         "name_original": "Document_Sections",
-        "name_pl": "sekcje dokumentów",
+        "name_pl": "sekcje dokumentu",
         "name_original_pl": "Sekcje_Dokumentu"
     },
     {
         "db_id": "document_management",
         "name": "document sections images",
         "name_original": "Document_Sections_Images",
-        "name_pl": "obrazy sekcji dokumentów",
+        "name_pl": "sekcje dokumentu obrazy",
         "name_original_pl": "Obrazy_Sekcji_Dokumentu"
     },
     {
@@ -4896,7 +4896,7 @@
         "db_id": "formula_1",
         "name": "drivers",
         "name_original": "drivers",
-        "name_pl": "kierowcy",
+        "name_pl": "sterowniki",
         "name_original_pl": "sterowniki"
     },
     {
@@ -4910,14 +4910,14 @@
         "db_id": "formula_1",
         "name": "seasons",
         "name_original": "seasons",
-        "name_pl": "sezony",
+        "name_pl": "pory roku",
         "name_original_pl": "pory_roku"
     },
     {
         "db_id": "formula_1",
         "name": "constructors",
         "name_original": "constructors",
-        "name_pl": "konstruktory",
+        "name_pl": "konstruktorzy",
         "name_original_pl": "konstruktorzy"
     },
     {
@@ -4952,7 +4952,7 @@
         "db_id": "formula_1",
         "name": "qualifying",
         "name_original": "qualifying",
-        "name_pl": "kwalifikujące",
+        "name_pl": "kwalifikujący się",
         "name_original_pl": "kwalifikujący_się"
     },
     {
@@ -5064,7 +5064,7 @@
         "db_id": "orchestra",
         "name": "conductor",
         "name_original": "conductor",
-        "name_pl": "dyrygent",
+        "name_pl": "przewodnik",
         "name_original_pl": "przewodnik"
     },
     {
@@ -5078,14 +5078,14 @@
         "db_id": "orchestra",
         "name": "performance",
         "name_original": "performance",
-        "name_pl": "wykonanie",
+        "name_pl": "wydajność",
         "name_original_pl": "wydajność"
     },
     {
         "db_id": "orchestra",
         "name": "show",
         "name_original": "show",
-        "name_pl": "pokaż",
+        "name_pl": "pokaz",
         "name_original_pl": "pokaz"
     },
     {
@@ -5134,14 +5134,14 @@
         "db_id": "cre_Drama_Workshop_Groups",
         "name": "drama workshop groups",
         "name_original": "Drama_Workshop_Groups",
-        "name_pl": "grupy warsztatów dramowych",
+        "name_pl": "grupy warsztatowe dramy",
         "name_original_pl": "Grupy_Warsztatów_Teatralnych"
     },
     {
         "db_id": "cre_Drama_Workshop_Groups",
         "name": "performers",
         "name_original": "Performers",
-        "name_pl": "wykonawców",
+        "name_pl": "wykonawcy",
         "name_original_pl": "Wykonawcy"
     },
     {
@@ -5169,7 +5169,7 @@
         "db_id": "cre_Drama_Workshop_Groups",
         "name": "performers in bookings",
         "name_original": "Performers_in_Bookings",
-        "name_pl": "wykonawców w rezerwacjach",
+        "name_pl": "wykonawcy w rezerwacjach",
         "name_original_pl": "Wykonawcy_w_rezerwacjach"
     },
     {
@@ -5183,7 +5183,7 @@
         "db_id": "cre_Drama_Workshop_Groups",
         "name": "order items",
         "name_original": "Order_Items",
-        "name_pl": "zamów przedmioty",
+        "name_pl": "zamów pozycje",
         "name_original_pl": "Zamów_Przedmioty"
     },
     {
@@ -5211,7 +5211,7 @@
         "db_id": "cre_Drama_Workshop_Groups",
         "name": "invoice items",
         "name_original": "Invoice_Items",
-        "name_pl": "pozycje faktur",
+        "name_pl": "pozycje faktury",
         "name_original_pl": "Pozycje_Faktury"
     },
     {
@@ -5253,7 +5253,7 @@
         "db_id": "car_1",
         "name": "cars data",
         "name_original": "cars_data",
-        "name_pl": "dane samochodu",
+        "name_pl": "dane samochodów",
         "name_original_pl": "dane_samochodów"
     },
     {
@@ -5274,7 +5274,7 @@
         "db_id": "geo",
         "name": "border info",
         "name_original": "border_info",
-        "name_pl": "informacje o granicy",
+        "name_pl": "informacje graniczne",
         "name_original_pl": "informacje_graniczne"
     },
     {
@@ -5337,7 +5337,7 @@
         "db_id": "behavior_monitoring",
         "name": "students",
         "name_original": "Students",
-        "name_pl": "uczniów",
+        "name_pl": "studenci",
         "name_original_pl": "Studenci"
     },
     {
@@ -5351,7 +5351,7 @@
         "db_id": "behavior_monitoring",
         "name": "assessment notes",
         "name_original": "Assessment_Notes",
-        "name_pl": "notatki z oceny",
+        "name_pl": "uwagi do oceny",
         "name_original_pl": "Uwagi_Dotyczące_Oceny"
     },
     {
@@ -5372,14 +5372,14 @@
         "db_id": "behavior_monitoring",
         "name": "student addresses",
         "name_original": "Student_Addresses",
-        "name_pl": "adresy uczniów",
+        "name_pl": "adresy studentów",
         "name_original_pl": "Adresy_Studentów"
     },
     {
         "db_id": "behavior_monitoring",
         "name": "students in detention",
         "name_original": "Students_in_Detention",
-        "name_pl": "uczniów zatrzymanych",
+        "name_pl": "uczniowie w areszcie",
         "name_original_pl": "Uczniowie_przebywający_w_areszcie"
     },
     {
@@ -5421,7 +5421,7 @@
         "db_id": "cre_Doc_Tracking_DB",
         "name": "employees",
         "name_original": "Employees",
-        "name_pl": "pracowników",
+        "name_pl": "pracownicy",
         "name_original_pl": "Pracownicy"
     },
     {
@@ -5463,14 +5463,14 @@
         "db_id": "soccer_2",
         "name": "player",
         "name_original": "Player",
-        "name_pl": "zawodnik",
+        "name_pl": "gracz",
         "name_original_pl": "Gracz"
     },
     {
         "db_id": "soccer_2",
         "name": "tryout",
         "name_original": "Tryout",
-        "name_pl": "tryout",
+        "name_pl": "próba",
         "name_original_pl": "Próba"
     },
     {
@@ -5498,7 +5498,7 @@
         "db_id": "activity_1",
         "name": "student",
         "name_original": "Student",
-        "name_pl": "student",
+        "name_pl": "uczeń",
         "name_original_pl": "Uczeń"
     },
     {
@@ -5533,7 +5533,7 @@
         "db_id": "cre_Theme_park",
         "name": "visitors",
         "name_original": "Visitors",
-        "name_pl": "odwiedzających",
+        "name_pl": "goście",
         "name_original_pl": "Odwiedzający"
     },
     {
@@ -5561,7 +5561,7 @@
         "db_id": "cre_Theme_park",
         "name": "street markets",
         "name_original": "Street_Markets",
-        "name_pl": "targi uliczne",
+        "name_pl": "rynki uliczne",
         "name_original_pl": "Rynki_Uliczne"
     },
     {
@@ -5617,14 +5617,14 @@
         "db_id": "cre_Theme_park",
         "name": "tourist attraction features",
         "name_original": "Tourist_Attraction_Features",
-        "name_pl": "cechy atrakcji turystycznej",
+        "name_pl": "cechy atrakcji turystycznych",
         "name_original_pl": "Cechy_Atrakcji_Turystycznych"
     },
     {
         "db_id": "twitter_1",
         "name": "follows",
         "name_original": "follows",
-        "name_pl": "śledzi",
+        "name_pl": "następuje",
         "name_original_pl": "następuje"
     },
     {
@@ -5659,14 +5659,14 @@
         "db_id": "voter_2",
         "name": "student",
         "name_original": "Student",
-        "name_pl": "student",
+        "name_pl": "uczeń",
         "name_original_pl": "Uczeń"
     },
     {
         "db_id": "voter_2",
         "name": "voting record",
         "name_original": "Voting_record",
-        "name_pl": "historia głosowania",
+        "name_pl": "rekord głosowania",
         "name_original_pl": "Wyniki_głosowania"
     },
     {
@@ -5708,7 +5708,7 @@
         "db_id": "news_report",
         "name": "news report",
         "name_original": "news_report",
-        "name_pl": "raport prasowy",
+        "name_pl": "reportaż",
         "name_original_pl": "reportaż"
     },
     {
@@ -5764,7 +5764,7 @@
         "db_id": "customers_and_addresses",
         "name": "customer contact channels",
         "name_original": "Customer_Contact_Channels",
-        "name_pl": "kanały kontaktu z klientami",
+        "name_pl": "kanały kontaktu z klientem",
         "name_original_pl": "Kanały_Kontaktu_Z_Klientem"
     },
     {
@@ -5813,14 +5813,14 @@
         "db_id": "school_player",
         "name": "school details",
         "name_original": "school_details",
-        "name_pl": "dane szkoły",
+        "name_pl": "szczegóły szkoły",
         "name_original_pl": "szczegóły_szkoły"
     },
     {
         "db_id": "school_player",
         "name": "school performance",
         "name_original": "school_performance",
-        "name_pl": "osiągnięcia szkolne",
+        "name_pl": "wyniki szkoły",
         "name_original_pl": "wyniki_szkoły"
     },
     {
@@ -5855,7 +5855,7 @@
         "db_id": "tvshow",
         "name": "tv channel",
         "name_original": "TV_Channel",
-        "name_pl": "kanał tv",
+        "name_pl": "kanał telewizyjny",
         "name_original_pl": "Kanał_telewizyjny"
     },
     {
@@ -5890,28 +5890,28 @@
         "db_id": "customer_complaints",
         "name": "staff",
         "name_original": "Staff",
-        "name_pl": "pracowników",
+        "name_pl": "personel",
         "name_original_pl": "Personel"
     },
     {
         "db_id": "customer_complaints",
         "name": "customers",
         "name_original": "Customers",
-        "name_pl": "klientów",
+        "name_pl": "klienci",
         "name_original_pl": "Klienci"
     },
     {
         "db_id": "customer_complaints",
         "name": "products",
         "name_original": "Products",
-        "name_pl": "produktów",
+        "name_pl": "produkty",
         "name_original_pl": "Produkty"
     },
     {
         "db_id": "customer_complaints",
         "name": "complaints",
         "name_original": "Complaints",
-        "name_pl": "skargi",
+        "name_pl": "reklamacje",
         "name_original_pl": "Skargi"
     },
     {
@@ -5925,7 +5925,7 @@
         "db_id": "department_management",
         "name": "head",
         "name_original": "head",
-        "name_pl": "kierownik",
+        "name_pl": "głowa",
         "name_original_pl": "głowa"
     },
     {
@@ -6058,7 +6058,7 @@
         "db_id": "epinions_1",
         "name": "review",
         "name_original": "review",
-        "name_pl": "recenzja",
+        "name_pl": "przegląd",
         "name_original_pl": "przegląd"
     },
     {
@@ -6135,14 +6135,14 @@
         "db_id": "assets_maintenance",
         "name": "ref company types",
         "name_original": "Ref_Company_Types",
-        "name_pl": "referencyjne typy firm",
+        "name_pl": "typy spółek ref",
         "name_original_pl": "Typy_Spółek_Ref"
     },
     {
         "db_id": "new_orchestra",
         "name": "conductor",
         "name_original": "conductor",
-        "name_pl": "dyrygent",
+        "name_pl": "przewodnik",
         "name_original_pl": "przewodnik"
     },
     {
@@ -6156,14 +6156,14 @@
         "db_id": "new_orchestra",
         "name": "performance",
         "name_original": "performance",
-        "name_pl": "wykonanie",
+        "name_pl": "wydajność",
         "name_original_pl": "wydajność"
     },
     {
         "db_id": "new_orchestra",
         "name": "show",
         "name_original": "show",
-        "name_pl": "show",
+        "name_pl": "pokaz",
         "name_original_pl": "pokaz"
     },
     {
@@ -6177,7 +6177,7 @@
         "db_id": "new_concert_singer",
         "name": "singer",
         "name_original": "singer",
-        "name_pl": "wokalista",
+        "name_pl": "piosenkarz",
         "name_original_pl": "piosenkarz"
     },
     {
@@ -6198,21 +6198,21 @@
         "db_id": "new_pets_1",
         "name": "student",
         "name_original": "Student",
-        "name_pl": "student",
+        "name_pl": "uczeń",
         "name_original_pl": "Uczeń"
     },
     {
         "db_id": "new_pets_1",
         "name": "has pet",
         "name_original": "Has_Pet",
-        "name_pl": "ma zwierzaka",
+        "name_pl": "ma zwierzę domowe",
         "name_original_pl": "Ma_Zwierzę_Domowe"
     },
     {
         "db_id": "new_pets_1",
         "name": "pets",
         "name_original": "Pets",
-        "name_pl": "zwierzęta domowe",
+        "name_pl": "zwierzęta",
         "name_original_pl": "Zwierzęta_Domowe"
     }
 ]

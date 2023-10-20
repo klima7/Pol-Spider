@@ -807,12 +807,15 @@ class SpiderEncoderBert(torch.nn.Module):
         batch_id_map = {}  # some long examples are not included
         for batch_idx, desc in enumerate(descs):
             qs = self.pad_single_sentence_for_bert(desc['question'], cls=True)
+            print(qs)
+            print('-'*100)
             if self.use_column_type:
                 cols = [self.pad_single_sentence_for_bert(c, cls=False) for c in desc['columns']]
             else:
                 cols = [self.pad_single_sentence_for_bert(c[:-1], cls=False) for c in desc['columns']]
             tabs = [self.pad_single_sentence_for_bert(t, cls=False) for t in desc['tables']]
-
+            print(cols)
+            print('-'*100)
             token_list = qs + [c for col in cols for c in col] + \
                          [t for tab in tabs for t in tab]
             assert self.check_bert_seq(token_list)
