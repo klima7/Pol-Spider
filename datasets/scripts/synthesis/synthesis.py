@@ -10,7 +10,7 @@ from joblib import Parallel, delayed
 from common import load_json, save_json, load_column_translations, load_table_translations
 from .process_sql import create_sql, get_schemas_from_json, SQLParseException
 from .tokenization import tokenize_question, tokenize_query, tokenize_query_no_value
-from .translation import translate_samples, translate_tables
+from .sql_translation import translate_samples, translate_tables
 
 
 def add_calculated_attributes(samples, tables):

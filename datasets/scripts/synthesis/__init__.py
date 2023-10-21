@@ -1,4 +1,4 @@
-from .translation import (
+from .sql_translation import (
     translate_tables,
     translate_query,
     translate_samples,
@@ -8,7 +8,7 @@ from .tokenization import (
     tokenize_query,
     tokenize_query_no_value,
 )
-from .other import (
+from .synthesis import (
     add_calculated_attributes,
     create_gold_sql,
 )

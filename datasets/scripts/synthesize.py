@@ -3,7 +3,7 @@ from pathlib import Path
 
 import click
 
-from synthesis.other import synthesize_everything
+from synthesis.synthesis import synthesize_everything
 
 
 BASE_PATH = Path(__file__).parent.parent
