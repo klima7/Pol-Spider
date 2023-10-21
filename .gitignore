@@ -2,4 +2,4 @@
 .vscode/**
 spider-en/**
 datasets/complete/**
-datasets/database/**
+datasets/components/database/**
