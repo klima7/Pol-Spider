@@ -586,7 +586,7 @@
         "column_name_original": "prereq_id",
         "primary_key": false,
         "foreign_key": "course",
-        "column_name_pl": "warunek wstępny id",
+        "column_name_pl": "wymagania wstępne id",
         "column_name_original_pl": "wymagania_wstępne_id"
     },
     {
@@ -2186,7 +2186,7 @@
         "column_name_original": "dept_store_id",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "dom towarowy id",
+        "column_name_pl": "magazyn id",
         "column_name_original_pl": "magazyn_id"
     },
     {
@@ -2257,7 +2257,7 @@
         "primary_key": false,
         "foreign_key": "department stores",
         "column_name_pl": "dom towarowy id",
-        "column_name_original_pl": "dom_towarody_id"
+        "column_name_original_pl": "dom_towarowy_id"
     },
     {
         "db_id": "department_store",
@@ -5026,7 +5026,7 @@
         "column_name_original": "f_id",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "utwór id",
+        "column_name_pl": "piosenka id",
         "column_name_original_pl": "f_id"
     },
     {
@@ -7776,8 +7776,8 @@
         "column_name_original": "Chair_Name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "imię i nazwisko przewodniczącego",
-        "column_name_original_pl": "Imię_I_Nazwisko_Przewodniczącego"
+        "column_name_pl": "imię przewodniczącego",
+        "column_name_original_pl": "Imię_Przewodniczącego"
     },
     {
         "db_id": "entertainment_awards",
@@ -9296,7 +9296,7 @@
         "column_name_original": "CustomerId",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "customer id",
+        "column_name_pl": "klient id",
         "column_name_original_pl": "IdKlienta"
     },
     {
@@ -9426,7 +9426,7 @@
         "column_name_original": "EmployeeId",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "employee id",
+        "column_name_pl": "pracownik id",
         "column_name_original_pl": "IdPracownika"
     },
     {
@@ -9686,7 +9686,7 @@
         "column_name_original": "InvoiceLineId",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "invoice line id",
+        "column_name_pl": "linia faktury id",
         "column_name_original_pl": "IdLiniiFaktury"
     },
     {
@@ -9706,7 +9706,7 @@
         "column_name_original": "TrackId",
         "primary_key": false,
         "foreign_key": "track",
-        "column_name_pl": "track id",
+        "column_name_pl": "ścieżka id",
         "column_name_original_pl": "IdŚcieżki"
     },
     {
@@ -9776,7 +9776,7 @@
         "column_name_original": "PlaylistId",
         "primary_key": true,
         "foreign_key": "playlist",
-        "column_name_pl": "play list id",
+        "column_name_pl": "lista odtwarzania id",
         "column_name_original_pl": "IdListyOdtwarzania"
     },
     {
@@ -9786,7 +9786,7 @@
         "column_name_original": "TrackId",
         "primary_key": false,
         "foreign_key": "track",
-        "column_name_pl": "track id",
+        "column_name_pl": "utwór id",
         "column_name_original_pl": "IdUtworu"
     },
     {
@@ -9796,7 +9796,7 @@
         "column_name_original": "TrackId",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "track id",
+        "column_name_pl": "utwór id",
         "column_name_original_pl": "IdUtworu"
     },
     {
@@ -10196,8 +10196,8 @@
         "column_name_original": "city_code",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "kodeks miejski",
-        "column_name_original_pl": "kodeks_miejski"
+        "column_name_pl": "kod miasta",
+        "column_name_original_pl": "kod_miasta"
     },
     {
         "db_id": "pets_1",
@@ -10216,7 +10216,7 @@
         "column_name_original": "PetID",
         "primary_key": false,
         "foreign_key": "pets",
-        "column_name_pl": "pet id",
+        "column_name_pl": "zwierzę id",
         "column_name_original_pl": "ZwierzęID"
     },
     {
@@ -10226,7 +10226,7 @@
         "column_name_original": "PetID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "zwierzę domowe id",
+        "column_name_pl": "zwierzę id",
         "column_name_original_pl": "ZwierzęID"
     },
     {
@@ -10346,7 +10346,7 @@
         "column_name_original": "dormid",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "dorm id",
+        "column_name_pl": "akademik id",
         "column_name_original_pl": "akademikid"
     },
     {
@@ -10416,7 +10416,7 @@
         "column_name_original": "amenid",
         "primary_key": false,
         "foreign_key": "dorm amenity",
-        "column_name_pl": "amenity id",
+        "column_name_pl": "udogodnienia id",
         "column_name_original_pl": "udogoid"
     },
     {
@@ -10627,7 +10627,7 @@
         "primary_key": false,
         "foreign_key": "aircraft",
         "column_name_pl": "linia lotnicza id",
-        "column_name_original_pl": "pomoc"
+        "column_name_original_pl": "llid"
     },
     {
         "db_id": "flight_1",
@@ -10637,7 +10637,7 @@
         "primary_key": true,
         "foreign_key": "",
         "column_name_pl": "linia lotnicza id",
-        "column_name_original_pl": "pomoc"
+        "column_name_original_pl": "llid"
     },
     {
         "db_id": "flight_1",
@@ -10666,7 +10666,7 @@
         "column_name_original": "eid",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "employee id",
+        "column_name_pl": "pracownik id",
         "column_name_original_pl": "pid"
     },
     {
@@ -10707,7 +10707,7 @@
         "primary_key": false,
         "foreign_key": "aircraft",
         "column_name_pl": "linia lotnicza id",
-        "column_name_original_pl": "pomoc"
+        "column_name_original_pl": "llid"
     },
     {
         "db_id": "medicine_enzyme_interaction",
@@ -12317,7 +12317,7 @@
         "primary_key": true,
         "foreign_key": "",
         "column_name_pl": "piosenka id",
-        "column_name_original_pl": "SongId"
+        "column_name_original_pl": "PiosenkaID"
     },
     {
         "db_id": "music_2",
@@ -12417,7 +12417,7 @@
         "primary_key": true,
         "foreign_key": "songs",
         "column_name_pl": "piosenka id",
-        "column_name_original_pl": "IdUtworu"
+        "column_name_original_pl": "IdPiosenki"
     },
     {
         "db_id": "music_2",
@@ -12426,7 +12426,7 @@
         "column_name_original": "BandmateId",
         "primary_key": false,
         "foreign_key": "band",
-        "column_name_pl": "kolega z zespołu id",
+        "column_name_pl": "członek zespołu id",
         "column_name_original_pl": "IdCzłonkaZespołu"
     },
     {
@@ -12447,7 +12447,7 @@
         "primary_key": true,
         "foreign_key": "songs",
         "column_name_pl": "piosenka id",
-        "column_name_original_pl": "IdUtworu"
+        "column_name_original_pl": "PiosenkaId"
     },
     {
         "db_id": "music_2",
@@ -12507,7 +12507,7 @@
         "primary_key": true,
         "foreign_key": "songs",
         "column_name_pl": "piosenka id",
-        "column_name_original_pl": "IdUtworu"
+        "column_name_original_pl": "IdPiosenki"
     },
     {
         "db_id": "music_2",
@@ -13217,7 +13217,7 @@
         "primary_key": true,
         "foreign_key": "",
         "column_name_pl": "klient id",
-        "column_name_original_pl": "Dowód_tożsamości"
+        "column_name_original_pl": "ID"
     },
     {
         "db_id": "museum_visit",
@@ -17966,8 +17966,8 @@
         "column_name_original": "Manager_Name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "imię i nazwisko kierownika",
-        "column_name_original_pl": "Imię_I_Nazwisko_Kierownika"
+        "column_name_pl": "nazwa kierownika",
+        "column_name_original_pl": "Nazwa_Kierownika"
     },
     {
         "db_id": "gas_company",
@@ -17976,8 +17976,8 @@
         "column_name_original": "Vice_Manager_Name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "imię i nazwisko wicedyrektora",
-        "column_name_original_pl": "Imię_I_Nazwisko_Wicedyrektora"
+        "column_name_pl": "nazwa wicedyrektora",
+        "column_name_original_pl": "Nazwa_Wicedyrektora"
     },
     {
         "db_id": "gas_company",
@@ -23676,8 +23676,8 @@
         "column_name_original": "Player_name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "imię i nazwisko zawodnika",
-        "column_name_original_pl": "Imię_i_nazwisko_zawodnika"
+        "column_name_pl": "nazwa_zawodnika",
+        "column_name_original_pl": "Nazwa_zawodnika"
     },
     {
         "db_id": "riding_club",
@@ -23786,8 +23786,8 @@
         "column_name_original": "Coach_name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "imię i nazwisko zawodnika",
-        "column_name_original_pl": "Imię_i_nazwisko_trenera"
+        "column_name_pl": "nazwa zawodnika",
+        "column_name_original_pl": "Nazwa_trenera"
     },
     {
         "db_id": "riding_club",
@@ -24576,7 +24576,7 @@
         "column_name_original": "ClubID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "club id",
+        "column_name_pl": "klub id",
         "column_name_original_pl": "KlubID"
     },
     {
@@ -26146,8 +26146,8 @@
         "column_name_original": "Manager_name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "imię i nazwisko kierownika",
-        "column_name_original_pl": "Imię_i_nazwisko_kierownika"
+        "column_name_pl": "nazwa kierownika",
+        "column_name_original_pl": "Nazwa_kierownika"
     },
     {
         "db_id": "employee_hire_evaluation",
@@ -28476,7 +28476,7 @@
         "column_name_original": "cmi_cross_ref_id",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "cmi cross reference id",
+        "column_name_pl": "cmi odsyłacz id",
         "column_name_original_pl": "cmi_odsyłacz_id"
     },
     {
@@ -28516,7 +28516,7 @@
         "column_name_original": "cmi_cross_ref_id",
         "primary_key": false,
         "foreign_key": "cmi cross references",
-        "column_name_pl": "cmi cross reference id",
+        "column_name_pl": "cmi odsyłacz id",
         "column_name_original_pl": "cmi_odsyłacz_id"
     },
     {
@@ -28536,7 +28536,7 @@
         "column_name_original": "cmi_cross_ref_id",
         "primary_key": false,
         "foreign_key": "cmi cross references",
-        "column_name_pl": "cmi cross reference id",
+        "column_name_pl": "cmi odsyłacz id",
         "column_name_original_pl": "cmi_odsyłacz_id"
     },
     {
@@ -28576,7 +28576,7 @@
         "column_name_original": "cmi_cross_ref_id",
         "primary_key": false,
         "foreign_key": "cmi cross references",
-        "column_name_pl": "cmi cross reference id",
+        "column_name_pl": "cmi odsyłacz id",
         "column_name_original_pl": "cmi_odsyłacz_id"
     },
     {
@@ -28596,7 +28596,7 @@
         "column_name_original": "cmi_cross_ref_id",
         "primary_key": false,
         "foreign_key": "cmi cross references",
-        "column_name_pl": "cmi cross reference id",
+        "column_name_pl": "cmi odsyłacz id",
         "column_name_original_pl": "cmi_odsyłacz_id"
     },
     {
@@ -28616,7 +28616,7 @@
         "column_name_original": "cmi_cross_ref_id",
         "primary_key": false,
         "foreign_key": "cmi cross references",
-        "column_name_pl": "odniesienie cmi id",
+        "column_name_pl": "cmi odsyłacz id",
         "column_name_original_pl": "cmi_odsyłacz_id"
     },
     {
@@ -29906,7 +29906,7 @@
         "column_name_original": "defenceTeamWidthClass",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "klasa szerokości drużyny obronnej",
+        "column_name_pl": "klasa szerokości drużyny w obronie",
         "column_name_original_pl": "klasaSzerokościDrużynyWObronie"
     },
     {
@@ -32696,8 +32696,8 @@
         "column_name_original": "donator_name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "imię i nazwisko darczyńcy",
-        "column_name_original_pl": "imię_i_nazwisko_darczyńcy"
+        "column_name_pl": "nazwa darczyńcy",
+        "column_name_original_pl": "nazwa_darczyńcy"
     },
     {
         "db_id": "school_finance",
@@ -32756,7 +32756,7 @@
         "column_name_original": "datasetId",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "dataset id",
+        "column_name_pl": "zbiór danych id",
         "column_name_original_pl": "idZbioruDanych"
     },
     {
@@ -32776,7 +32776,7 @@
         "column_name_original": "journalId",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "journal id",
+        "column_name_pl": "czasopismo id",
         "column_name_original_pl": "idCzasopisma"
     },
     {
@@ -32816,7 +32816,7 @@
         "column_name_original": "paperId",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "papier id",
+        "column_name_pl": "artykuł id",
         "column_name_original_pl": "idArtykułu"
     },
     {
@@ -32876,7 +32876,7 @@
         "column_name_original": "journalId",
         "primary_key": false,
         "foreign_key": "journal",
-        "column_name_pl": "journal id",
+        "column_name_pl": "czasopismo id",
         "column_name_original_pl": "idCzasopisma"
     },
     {
@@ -32886,7 +32886,7 @@
         "column_name_original": "citingPaperId",
         "primary_key": true,
         "foreign_key": "paper",
-        "column_name_pl": "cytowanie artykułu id",
+        "column_name_pl": "cytujący artykuł id",
         "column_name_original_pl": "idCytującegoArtykułu"
     },
     {
@@ -32906,7 +32906,7 @@
         "column_name_original": "paperId",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "paper id",
+        "column_name_pl": "artykuł id",
         "column_name_original_pl": "idArtykułu"
     },
     {
@@ -32926,7 +32926,7 @@
         "column_name_original": "paperId",
         "primary_key": false,
         "foreign_key": "paper",
-        "column_name_pl": "paper id",
+        "column_name_pl": "artykuł id",
         "column_name_original_pl": "idArtykułu"
     },
     {
@@ -32946,7 +32946,7 @@
         "column_name_original": "paperId",
         "primary_key": true,
         "foreign_key": "paper",
-        "column_name_pl": "papier id",
+        "column_name_pl": "artykuł id",
         "column_name_original_pl": "idArtykułu"
     },
     {
@@ -32996,8 +32996,8 @@
         "column_name_original": "contestant_name",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "imię i nazwisko zawodnika",
-        "column_name_original_pl": "imię_i_nazwisko_zawodnika"
+        "column_name_pl": "nazwa zawodnika",
+        "column_name_original_pl": "nazwa_zawodnika"
     },
     {
         "db_id": "voter_1",
@@ -35436,7 +35436,7 @@
         "column_name_original": "circuitId",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "obwód id",
+        "column_name_pl": "tor id",
         "column_name_original_pl": "idToru"
     },
     {
@@ -35786,7 +35786,7 @@
         "column_name_original": "constructorStandingsId",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "klasyfikacja konstruktorów id",
+        "column_name_pl": "klasyfikacja konstruktora id",
         "column_name_original_pl": "idKlasyfikacjiKonstruktora"
     },
     {
@@ -36036,7 +36036,7 @@
         "column_name_original": "driverStandingsId",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "klasyfikacja kierowców id",
+        "column_name_pl": "klasyfikacja kierowcy id",
         "column_name_original_pl": "idKlasyfikacjiKierowcy"
     },
     {
@@ -36116,7 +36116,7 @@
         "column_name_original": "raceId",
         "primary_key": false,
         "foreign_key": "races",
-        "column_name_pl": "race id",
+        "column_name_pl": "wyścig id",
         "column_name_original_pl": "idWyścigu"
     },
     {
@@ -36156,7 +36156,7 @@
         "column_name_original": "qualifyId",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "zakwalifikuj się id",
+        "column_name_pl": "kwalifikacja id",
         "column_name_original_pl": "idKwalifikacji"
     },
     {
@@ -36486,7 +36486,7 @@
         "column_name_original": "StuID",
         "primary_key": false,
         "foreign_key": "student",
-        "column_name_pl": "uczeń id",
+        "column_name_pl": "student id",
         "column_name_original_pl": "StuID"
     },
     {
@@ -36496,7 +36496,7 @@
         "column_name_original": "GameID",
         "primary_key": false,
         "foreign_key": "video games",
-        "column_name_pl": "game id",
+        "column_name_pl": "gra id",
         "column_name_original_pl": "GraID"
     },
     {
@@ -38526,7 +38526,7 @@
         "column_name_original": "ContId",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "cd id",
+        "column_name_pl": "kont id",
         "column_name_original_pl": "KontId"
     },
     {
@@ -38646,7 +38646,7 @@
         "column_name_original": "MakeId",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "make id",
+        "column_name_pl": "marka id",
         "column_name_original_pl": "IdMarki"
     },
     {
@@ -40246,7 +40246,7 @@
         "column_name_original": "pID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "player id",
+        "column_name_pl": "gracz id",
         "column_name_original_pl": "gID"
     },
     {
@@ -40366,7 +40366,7 @@
         "column_name_original": "FacID",
         "primary_key": false,
         "foreign_key": "faculty",
-        "column_name_pl": "wydziału id",
+        "column_name_pl": "wydział id",
         "column_name_original_pl": "WydzID"
     },
     {
@@ -41166,8 +41166,8 @@
         "column_name_original": "followers",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "obserwujących",
-        "column_name_original_pl": "obserwujących"
+        "column_name_pl": "obserwujący",
+        "column_name_original_pl": "obserwujący"
     },
     {
         "db_id": "election_representative",
@@ -41376,7 +41376,7 @@
         "column_name_original": "StuID",
         "primary_key": false,
         "foreign_key": "student",
-        "column_name_pl": "uczeń id",
+        "column_name_pl": "student id",
         "column_name_original_pl": "StuID"
     },
     {
@@ -44267,7 +44267,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "data rozpoczęcia kierownika",
-        "column_name_original_pl": "Data_rozpoczęcia_pracy_na_stanowisku_kierowniczym"
+        "column_name_original_pl": "Data_rozpoczęcia_kierownika"
     },
     {
         "db_id": "company_1",
@@ -44496,7 +44496,7 @@
         "column_name_original": "i_id",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "item id",
+        "column_name_pl": "przedmiot id",
         "column_name_original_pl": "p_id"
     },
     {
@@ -44536,7 +44536,7 @@
         "column_name_original": "i_id",
         "primary_key": false,
         "foreign_key": "item",
-        "column_name_pl": "pozycja id",
+        "column_name_pl": "przedmiot id",
         "column_name_original_pl": "p_id"
     },
     {
@@ -45586,7 +45586,7 @@
         "column_name_original": "PetID",
         "primary_key": false,
         "foreign_key": "pets",
-        "column_name_pl": "zwierzę domowe id",
+        "column_name_pl": "zwierzę id",
         "column_name_original_pl": "ZwierzęID"
     },
     {
@@ -45596,7 +45596,7 @@
         "column_name_original": "PetID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "zwierzę domowe id",
+        "column_name_pl": "zwierzę id",
         "column_name_original_pl": "ZwierzęID"
     },
     {
