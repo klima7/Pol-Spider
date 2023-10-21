@@ -6,8 +6,10 @@ import click
 from synthesis.other import synthesize_everything
 
 
-COMPONENTS_DIR_PATH = Path(__file__).parent.parent / 'components'
-COMPLETE_DIR_PATH = Path(__file__).parent.parent / 'complete'
+BASE_PATH = Path(__file__).parent.parent
+COMPONENTS_DIR_PATH = BASE_PATH / 'components'
+SAMPLES_PATH = COMPONENTS_DIR_PATH / 'samples'
+COMPLETE_DIR_PATH = BASE_PATH / 'complete'
 
 
 @click.group()
@@ -20,7 +22,7 @@ def cli():
 @click.option('-s', '--schema-translation', type=str, default='english')
 def spider(output_name, schema_translation):
     """Synthesize spider dataset"""
-    samples_path = Path(__file__).parent.parent / 'components' / 'samples' / 'spider'
+    samples_path = SAMPLES_PATH / 'spider'
     synthesize_everything(
         output_name=output_name,
         samples_paths=[
@@ -41,7 +43,7 @@ def spider(output_name, schema_translation):
 @click.option('-s', '--schema-translation', type=str, default='english')
 def spider_dk(output_name, schema_translation):
     """Synthesize spider dataset"""
-    samples_path = Path(__file__).parent.parent / 'components' / 'samples' / 'spider_dk'
+    samples_path = SAMPLES_PATH / 'spider_dk'
     synthesize_everything(
         output_name=output_name,
         samples_paths=[
@@ -59,7 +61,7 @@ def spider_dk(output_name, schema_translation):
 @click.option('-s', '--schema-translation', type=str, default='english')
 def spider_syn(output_name, schema_translation):
     """Synthesize spider dataset"""
-    samples_path = Path(__file__).parent.parent / 'components' / 'samples' / 'spider_syn'
+    samples_path = SAMPLES_PATH / 'spider_syn'
     synthesize_everything(
         output_name=output_name,
         samples_paths=[
@@ -76,5 +78,4 @@ def spider_syn(output_name, schema_translation):
 
 if __name__ == "__main__":
     cli()
-
 

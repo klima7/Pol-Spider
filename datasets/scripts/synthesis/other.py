@@ -74,7 +74,7 @@ def synthesize_samples(
     
     
 def get_paths_from_schema_translation_name(schema_translation_name):
-    translations_dir = Path(__file__).parent.parent.parent / 'components' / 'schema' / 'translations'
+    translations_dir = Path(__file__).parent.parent.parent / 'components' / 'schema_trans'
     available_names = [path.name for path in translations_dir.glob('*/')]
     if not schema_translation_name in available_names:
         return None, None
@@ -85,7 +85,7 @@ def get_paths_from_schema_translation_name(schema_translation_name):
 def synthesize_everything(output_name, samples_paths, gold_mapping, schema_translation_name=''):
     column_trans_path, table_trans_path = get_paths_from_schema_translation_name(schema_translation_name)
     
-    translations_path = Path(__file__).parent.parent.parent / 'components' / 'schema' / 'translations'
+    translations_path = Path(__file__).parent.parent.parent / 'components' / 'schema_trans'
     complete_dir_path = Path(__file__).parent.parent.parent / 'complete' / output_name
     
     if complete_dir_path.exists():
@@ -101,7 +101,7 @@ def synthesize_everything(output_name, samples_paths, gold_mapping, schema_trans
         
     else:
         shutil.copyfile(
-            str(translations_path.parent / 'base' / 'tables.json'),
+            str(translations_path.parent.parent / 'base' / 'tables.json'),
             str(complete_dir_path / 'tables.json')
         )
         

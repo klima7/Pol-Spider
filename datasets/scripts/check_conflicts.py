@@ -4,7 +4,7 @@ from pathlib import Path
 from common import load_json
 
 
-TRANSLATIONS_DIR_PATH = Path(__file__).parent.parent / 'components' / 'schema' / 'translations'
+TRANSLATIONS_DIR_PATH = Path(__file__).parent.parent / 'components' / 'schema_trans'
 
 
 
