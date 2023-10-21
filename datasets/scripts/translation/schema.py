@@ -179,7 +179,7 @@ class ContextSchemaTranslation(BaseSchemaTranslation):
             return name
         
         db_name = self._naturalize_name(db_name)
-        context = "from {db_name}"
+        context = f"from {db_name}"
         if table_name:
             table_name = self._naturalize_name(table_name)
             context += f" and {table_name})"
