@@ -13,8 +13,14 @@ def check_tables_conflicts(table_trans_path):
         
     db_ids = set(table['db_id'] for table in tables)
     for db_id in db_ids:
-        tables_names = list(table['name_original_pl'] for table in tables if table['db_id'] == db_id)
-        duplicates = list(set([name for name in tables_names if len([x for x in tables_names if x == name]) > 1]))
+        tables_names = list(
+            table['name_original_pl'].lower()
+            for table in tables if table['db_id'] == db_id
+        )
+        duplicates = list(set([
+            name for name in tables_names 
+            if len([x for x in tables_names if x == name]) > 1
+        ]))
         if duplicates:
             print(f"Conflicting tables {duplicates} in database '{db_id}'")
     
@@ -24,10 +30,21 @@ def check_columns_conflicts(column_trans_path):
         
     db_ids = set(column['db_id'] for column in columns)
     for db_id in db_ids:
-        tables_names = set(column['table_name_original'] for column in columns if column['db_id'] == db_id)
+        tables_names = set(
+            column['table_name_original'] 
+            for column in columns 
+            if column['db_id'] == db_id
+        )
         for table_name in tables_names:
-            columns_names = [column['column_name_original_pl'] for column in columns if column['db_id'] == db_id and column['table_name_original'] == table_name]
-            duplicates = list(set([name for name in columns_names if len([x for x in columns_names if x == name]) > 1]))
+            columns_names = [
+                column['column_name_original_pl'].lower() 
+                for column in columns 
+                if column['db_id'] == db_id and column['table_name_original'] == table_name
+            ]
+            duplicates = list(set([
+                name for name in columns_names 
+                if len([x for x in columns_names if x == name]) > 1
+            ]))
             if duplicates:
                 print(f"Conflicting columns {duplicates} in table '{table_name}' in database '{db_id}'")
 
