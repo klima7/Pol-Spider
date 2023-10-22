@@ -25287,7 +25287,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "nazwa",
-        "column_name_original_pl": "nazwa"
+        "column_name_original_pl": "name"
     },
     {
         "db_id": "world_1",
@@ -25297,7 +25297,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "sekw",
-        "column_name_original_pl": "sekw"
+        "column_name_original_pl": "seq"
     },
     {
         "db_id": "world_1",
@@ -29487,7 +29487,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "nazwa",
-        "column_name_original_pl": "nazwa"
+        "column_name_original_pl": "name"
     },
     {
         "db_id": "soccer_1",
@@ -29497,7 +29497,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "sekw",
-        "column_name_original_pl": "sekw"
+        "column_name_original_pl": "seq"
     },
     {
         "db_id": "soccer_1",
@@ -34347,7 +34347,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "id",
-        "column_name_original_pl": "nazwa"
+        "column_name_original_pl": "name"
     },
     {
         "db_id": "store_1",

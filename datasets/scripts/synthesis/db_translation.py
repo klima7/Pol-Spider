@@ -34,19 +34,13 @@ def _generate_renaming_sql_script(db_id, column_trans, table_trans):
     statements = []
     
     for table_name, columns_dict in column_trans.items():
-        if table_name == 'sqlite_sequence':
-            continue
-        
         for old_name, translations in columns_dict.items():
             new_name = translations['name_original']
             if old_name.lower() != new_name.lower():
                 statement = _create_column_rename_sql(table_name, old_name, new_name)
                 statements.append(statement)
             
-    for old_name, translations in table_trans.items():
-        if old_name == 'sqlite_sequence':
-            continue
-        
+    for old_name, translations in table_trans.items():        
         new_name = translations['name_original']
         if old_name.lower() != new_name.lower():
             statement = _create_table_rename_sql(old_name, new_name)

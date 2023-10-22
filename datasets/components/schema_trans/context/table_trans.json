@@ -3462,7 +3462,7 @@
         "name": "sqlite sequence",
         "name_original": "sqlite_sequence",
         "name_pl": "sekwencja sqlite",
-        "name_original_pl": "sekwencja_sqlite"
+        "name_original_pl": "sqlite_sequence"
     },
     {
         "db_id": "world_1",
@@ -4057,7 +4057,7 @@
         "name": "sqlite sequence",
         "name_original": "sqlite_sequence",
         "name_pl": "sekwencja sqlite",
-        "name_original_pl": "sekwencja_sqlite"
+        "name_original_pl": "sqlite_sequence"
     },
     {
         "db_id": "soccer_1",
@@ -4722,7 +4722,7 @@
         "name": "artists",
         "name_original": "sqlite_sequence",
         "name_pl": "artyści",
-        "name_original_pl": "sekwencja_sqlite"
+        "name_original_pl": "sqlite_sequence"
     },
     {
         "db_id": "store_1",

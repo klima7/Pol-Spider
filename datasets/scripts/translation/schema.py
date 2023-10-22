@@ -114,12 +114,22 @@ class BaseSchemaTranslation:
         )
     
     def translate_table_name_original(self, table_entry):
+        # 'sqlite_sequence' is special table - do not translate its name
+        if table_entry['name_original'] == 'sqlite_sequence':
+            table_entry['name_original_pl'] = table_entry['name_original']
+            return
+        
         table_entry['name_original_pl'] = self._translate_name_original(
             table_entry['name_original'],
             table_entry['db_id']
         )
     
     def translate_column_name_original(self, column_entry, table_entry):
+        # 'sqlite_sequence' is special table - do not translate its columns
+        if column_entry['table_name_original'] == 'sqlite_sequence':
+            column_entry['column_name_original_pl'] = column_entry['column_name_original']
+            return
+        
         column_entry['column_name_original_pl'] = self._translate_name_original(
             column_entry['column_name_original'],
             table_entry['name'],
