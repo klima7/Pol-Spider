@@ -1436,8 +1436,8 @@
         "column_name_original": "aid",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "pomoc",
-        "column_name_original_pl": "pomoc"
+        "column_name_pl": "aid",
+        "column_name_original_pl": "aid"
     },
     {
         "db_id": "academic",
@@ -1466,8 +1466,8 @@
         "column_name_original": "oid",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "aid",
-        "column_name_original_pl": "aid"
+        "column_name_pl": "oid",
+        "column_name_original_pl": "oid"
     },
     {
         "db_id": "academic",
@@ -1506,8 +1506,8 @@
         "column_name_original": "did",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "zrobił",
-        "column_name_original_pl": "zrobił"
+        "column_name_pl": "did",
+        "column_name_original_pl": "did"
     },
     {
         "db_id": "academic",
@@ -1526,8 +1526,8 @@
         "column_name_original": "aid",
         "primary_key": false,
         "foreign_key": "author",
-        "column_name_pl": "pomoc",
-        "column_name_original_pl": "pomoc"
+        "column_name_pl": "aid",
+        "column_name_original_pl": "aid"
     },
     {
         "db_id": "academic",
@@ -1536,8 +1536,8 @@
         "column_name_original": "did",
         "primary_key": true,
         "foreign_key": "domain",
-        "column_name_pl": "zrobił",
-        "column_name_original_pl": "zrobił"
+        "column_name_pl": "did",
+        "column_name_original_pl": "did"
     },
     {
         "db_id": "academic",
@@ -1556,8 +1556,8 @@
         "column_name_original": "did",
         "primary_key": true,
         "foreign_key": "domain",
-        "column_name_pl": "zrobił",
-        "column_name_original_pl": "zrobił"
+        "column_name_pl": "did",
+        "column_name_original_pl": "did"
     },
     {
         "db_id": "academic",
@@ -1596,8 +1596,8 @@
         "column_name_original": "did",
         "primary_key": true,
         "foreign_key": "domain",
-        "column_name_pl": "zrobił",
-        "column_name_original_pl": "zrobił"
+        "column_name_pl": "did",
+        "column_name_original_pl": "did"
     },
     {
         "db_id": "academic",
@@ -1636,8 +1636,8 @@
         "column_name_original": "did",
         "primary_key": true,
         "foreign_key": "domain",
-        "column_name_pl": "zrobił",
-        "column_name_original_pl": "zrobił"
+        "column_name_pl": "did",
+        "column_name_original_pl": "did"
     },
     {
         "db_id": "academic",
@@ -1736,8 +1736,8 @@
         "column_name_original": "did",
         "primary_key": true,
         "foreign_key": "domain",
-        "column_name_pl": "zrobił",
-        "column_name_original_pl": "zrobił"
+        "column_name_pl": "did",
+        "column_name_original_pl": "did"
     },
     {
         "db_id": "academic",
@@ -1816,8 +1816,8 @@
         "column_name_original": "aid",
         "primary_key": true,
         "foreign_key": "author",
-        "column_name_pl": "pomoc",
-        "column_name_original_pl": "pomoc"
+        "column_name_pl": "aid",
+        "column_name_original_pl": "aid"
     },
     {
         "db_id": "academic",
@@ -7996,8 +7996,8 @@
         "column_name_original": "aid",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "pomoc",
-        "column_name_original_pl": "pomoc"
+        "column_name_pl": "aid",
+        "column_name_original_pl": "aid"
     },
     {
         "db_id": "imdb",
@@ -8106,8 +8106,8 @@
         "column_name_original": "aid",
         "primary_key": false,
         "foreign_key": "actor",
-        "column_name_pl": "pomoc",
-        "column_name_original_pl": "pomoc"
+        "column_name_pl": "aid",
+        "column_name_original_pl": "aid"
     },
     {
         "db_id": "imdb",
@@ -8206,8 +8206,8 @@
         "column_name_original": "did",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "zrobił",
-        "column_name_original_pl": "zrobił"
+        "column_name_pl": "did",
+        "column_name_original_pl": "did"
     },
     {
         "db_id": "imdb",
@@ -8346,8 +8346,8 @@
         "column_name_original": "did",
         "primary_key": false,
         "foreign_key": "director",
-        "column_name_pl": "zrobił",
-        "column_name_original_pl": "zrobił"
+        "column_name_pl": "did",
+        "column_name_original_pl": "did"
     },
     {
         "db_id": "imdb",
