@@ -19,8 +19,9 @@ def cli():
 
 @cli.command()
 @click.argument("output_name", type=click.STRING)
-@click.option('-s', '--schema-translation', type=str, default='english')
-def spider(output_name, schema_translation):
+@click.option('-s', '--schema-translation', type=str, default='english', help='Schema translation to use')
+@click.option('-d', '--with-db', is_flag=True, help='Translate databases')
+def spider(output_name, schema_translation, with_db):
     """Synthesize spider dataset"""
     samples_path = SAMPLES_PATH / 'spider'
     synthesize_everything(
@@ -34,14 +35,16 @@ def spider(output_name, schema_translation):
             'dev_gold.sql': ['dev.json'],
             'train_gold.sql': ['train_spider.json', 'train_others.json'],
         },
-        schema_translation_name=schema_translation
+        schema_translation_name=schema_translation,
+        with_db=with_db
     )
     
     
 @cli.command()
 @click.argument("output_name", type=click.STRING)
 @click.option('-s', '--schema-translation', type=str, default='english')
-def spider_dk(output_name, schema_translation):
+@click.option('-d', '--with-db', is_flag=True, help='Translate databases')
+def spider_dk(output_name, schema_translation, with_db):
     """Synthesize spider dataset"""
     samples_path = SAMPLES_PATH / 'spider_dk'
     synthesize_everything(
@@ -52,14 +55,16 @@ def spider_dk(output_name, schema_translation):
         gold_mapping={
             'dev_gold.sql': ['samples.json'],
         },
-        schema_translation_name=schema_translation
+        schema_translation_name=schema_translation,
+        with_db=with_db
     )
     
 
 @cli.command()
 @click.argument("output_name", type=click.STRING)
 @click.option('-s', '--schema-translation', type=str, default='english')
-def spider_syn(output_name, schema_translation):
+@click.option('-d', '--with-db', is_flag=True, help='Translate databases')
+def spider_syn(output_name, schema_translation, with_db):
     """Synthesize spider dataset"""
     samples_path = SAMPLES_PATH / 'spider_syn'
     synthesize_everything(
@@ -72,7 +77,8 @@ def spider_syn(output_name, schema_translation):
             'dev_gold.sql': ['dev.json'],
             'train_gold.sql': ['train_spider.json'],
         },
-        schema_translation_name=schema_translation
+        schema_translation_name=schema_translation,
+        with_db=with_db
     )
 
 

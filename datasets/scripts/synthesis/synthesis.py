@@ -11,6 +11,7 @@ from common import load_json, save_json, load_column_translations, load_table_tr
 from .process_sql import create_sql, get_schemas_from_json, SQLParseException
 from .tokenization import tokenize_question, tokenize_query, tokenize_query_no_value
 from .sql_translation import translate_samples, translate_tables
+from .db_translation import translate_db
 
 
 def add_calculated_attributes(samples, tables):
@@ -82,7 +83,9 @@ def get_paths_from_schema_translation_name(schema_translation_name):
         return translations_dir / schema_translation_name / 'column_trans.json', translations_dir / schema_translation_name / 'table_trans.json'
 
 
-def synthesize_everything(output_name, samples_paths, gold_mapping, schema_translation_name=''):
+def synthesize_everything(
+    output_name, samples_paths, gold_mapping, schema_translation_name='', with_db=False
+    ):
     column_trans_path, table_trans_path = get_paths_from_schema_translation_name(schema_translation_name)
     
     translations_path = Path(__file__).parent.parent.parent / 'components' / 'schema_trans'
@@ -118,4 +121,12 @@ def synthesize_everything(output_name, samples_paths, gold_mapping, schema_trans
         create_gold_sql(
             [complete_dir_path / name for name in samples_names],
             complete_dir_path / gold_name
+        )
+        
+    if with_db:
+        translate_db(
+            src_db_path=str(Path(__file__).parent.parent.parent / 'components' / 'database'),
+            out_db_path=str(complete_dir_path / 'database'),
+            column_trans_path=column_trans_path,
+            table_trans_path=table_trans_path
         )
