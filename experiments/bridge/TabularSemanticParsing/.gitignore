@@ -107,6 +107,8 @@ ENV/
 data/
 neuralsp/wombat/data/
 
+wandb/**
+
 # Misc
 *.pkl
 *.pdf

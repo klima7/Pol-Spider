@@ -1,0 +1,16 @@
+services:
+  bridge:
+    container_name: bridge
+    build:
+      context: .
+      dockerfile: Dockerfile
+    mem_limit: 8GB
+    volumes:
+      - .:/home/user/app
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

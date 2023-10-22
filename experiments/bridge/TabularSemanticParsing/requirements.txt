@@ -5,7 +5,7 @@ mo-future>=2.20
 pyparsing==2.3.0
 wandb==0.8.30
 n2w
-matplotlib==3.0.2
+matplotlib
 transformers==2.8.0
 asciitree
 apex
