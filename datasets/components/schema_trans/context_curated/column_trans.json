@@ -31277,7 +31277,7 @@
         "primary_key": false,
         "foreign_key": "",
         "column_name_pl": "nazwisko",
-        "column_name_original_pl": "imię"
+        "column_name_original_pl": "Nazwisko"
     },
     {
         "db_id": "college_3",
