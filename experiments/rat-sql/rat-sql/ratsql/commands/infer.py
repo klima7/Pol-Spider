@@ -88,7 +88,7 @@ class Inferer:
                 json.dumps({
                     'index': i,
                     'beams': decoded,
-                }) + '\n')
+                }, ensure_ascii=False) + '\n')
             output.flush()
 
     def _infer_one(self, model, data_item, preproc_item, beam_size, output_history=False, use_heuristic=True):

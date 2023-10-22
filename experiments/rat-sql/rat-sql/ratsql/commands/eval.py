@@ -26,7 +26,7 @@ def main(args):
         else:
             output_path = args.output
         with open(output_path, 'w') as f:
-            json.dump(metrics, f)
+            json.dump(metrics, f, ensure_ascii=False, indent=4)
         print(f'Wrote eval results to {output_path}')
     else:
         print(metrics)
