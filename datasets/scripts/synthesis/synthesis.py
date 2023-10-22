@@ -2,12 +2,12 @@ import json
 import tempfile
 import shutil
 from pathlib import Path
-from glob import glob
 
 from tqdm import tqdm
 from joblib import Parallel, delayed
 
 from common import load_json, save_json, load_column_translations, load_table_translations
+from common.constants import *
 from .process_sql import create_sql, get_schemas_from_json, SQLParseException
 from .tokenization import tokenize_question, tokenize_query, tokenize_query_no_value
 from .sql_translation import translate_samples, translate_tables
@@ -75,12 +75,14 @@ def synthesize_samples(
     
     
 def get_paths_from_schema_translation_name(schema_translation_name):
-    translations_dir = Path(__file__).parent.parent.parent / 'components' / 'schema_trans'
-    available_names = [path.name for path in translations_dir.glob('*/')]
+    available_names = [path.name for path in TRANS_PATH.glob('*/')]
     if not schema_translation_name in available_names:
         return None, None
     else:
-        return translations_dir / schema_translation_name / 'column_trans.json', translations_dir / schema_translation_name / 'table_trans.json'
+        return (
+            TRANS_PATH / schema_translation_name / 'column_trans.json',
+            TRANS_PATH / schema_translation_name / 'table_trans.json'
+        )
 
 
 def synthesize_everything(
@@ -88,8 +90,7 @@ def synthesize_everything(
     ):
     column_trans_path, table_trans_path = get_paths_from_schema_translation_name(schema_translation_name)
     
-    translations_path = Path(__file__).parent.parent.parent / 'components' / 'schema_trans'
-    complete_dir_path = Path(__file__).parent.parent.parent / 'complete' / output_name
+    complete_dir_path = COMPLETE_PATH / output_name
     
     if complete_dir_path.exists():
         shutil.rmtree(str(complete_dir_path))
@@ -104,7 +105,7 @@ def synthesize_everything(
         
     else:
         shutil.copyfile(
-            str(translations_path.parent.parent / 'base' / 'tables.json'),
+            str(BASE_PATH / 'tables.json'),
             str(complete_dir_path / 'tables.json')
         )
         
@@ -125,7 +126,7 @@ def synthesize_everything(
         
     if with_db:
         translate_db(
-            src_db_path=str(Path(__file__).parent.parent.parent / 'components' / 'database'),
+            src_db_path=str(DATABASE_PATH),
             out_db_path=str(complete_dir_path / 'database'),
             column_trans_path=column_trans_path,
             table_trans_path=table_trans_path

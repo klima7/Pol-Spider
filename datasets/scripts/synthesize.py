@@ -1,15 +1,7 @@
-import os
-from pathlib import Path
-
 import click
 
-from synthesis.synthesis import synthesize_everything
-
-
-BASE_PATH = Path(__file__).parent.parent
-COMPONENTS_DIR_PATH = BASE_PATH / 'components'
-SAMPLES_PATH = COMPONENTS_DIR_PATH / 'samples'
-COMPLETE_DIR_PATH = BASE_PATH / 'complete'
+from common import SAMPLES_PATH
+from synthesis import synthesize_everything
 
 
 @click.group()

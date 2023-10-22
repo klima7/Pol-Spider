@@ -10,6 +10,7 @@ from tqdm import tqdm
 from joblib import Parallel, delayed
 
 from common import load_json, save_json, load_column_translations, load_table_translations
+from common.constants import *
 
 
 def translate_tables_list(tables, table_trans, column_trans):
@@ -43,9 +44,7 @@ def translate_tables_list(tables, table_trans, column_trans):
 def translate_tables(column_trans_path, table_trans_path, output_path):
     table_trans = load_table_translations(table_trans_path)
     column_trans = load_column_translations(column_trans_path)
-    tables = load_json(
-        str(Path(__file__).parent.parent.parent / "components/base/tables.json")
-    )
+    tables = load_json(BASE_PATH / "tables.json")
     trans_tables = translate_tables_list(tables, table_trans, column_trans)
     save_json(output_path, trans_tables)
 
