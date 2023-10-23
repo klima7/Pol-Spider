@@ -1,4 +1,4 @@
-data/**
+data/spider/**
 wandb/**
 viz/**
 neuralsp/wombat/data/**

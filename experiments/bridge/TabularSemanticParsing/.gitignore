@@ -104,7 +104,7 @@ ENV/
 *.class
 
 # Data files
-data/
+/data/spider/**
 neuralsp/wombat/data/
 
 wandb/**
