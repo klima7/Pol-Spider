@@ -13,6 +13,8 @@
 
 ## Training
 
+With `bert-large-uncased` requires about 40GB VRAM.
+
 1. Place spider dataset under [`data/spider`](rat-sql/data/spider)
 2. Run dataset repair:
     ```
