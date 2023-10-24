@@ -14,6 +14,9 @@
 
 ## Bert variant
 
+### Notes
+- With `bert-base-multilingual-uncased` 11GB VRAM required 
+
 ### Training
 
 1. Run dataset preprocessing:
