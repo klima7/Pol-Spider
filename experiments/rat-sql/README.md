@@ -10,22 +10,47 @@
     ```
     docker exec -it ratsql bash
     ```
+4. Place spider dataset under [`data/spider`](rat-sql/data/spider)
 
-## Training
+## Bert variant
 
-1. Place spider dataset under [`data/spider`](rat-sql/data/spider)
-2. Run dataset preprocessing:
+### Training
+
+1. Run dataset preprocessing:
     ```
     python run.py preprocess experiments/spider-bert-run.jsonnet
     ```
-3. Run training:
+2. Run training:
     ```
     python run.py train experiments/spider-bert-run.jsonnet
     ```
 
-## Inference
+### Inference
 
 1. Run evaluation:
     ```
     python run.py eval experiments/spider-bert-run.jsonnet
+    ```
+
+## GLOVE variant
+
+### Notes
+- 4GB VRAM required
+
+### Training
+
+1. Run dataset preprocessing:
+    ```
+    python run.py preprocess experiments/spider-glove-run.jsonnet
+    ```
+2. Run training:
+    ```
+    python run.py train experiments/spider-glove-run.jsonnet
+    ```
+
+### Inference
+
+1. Run evaluation:
+    ```
+    python run.py eval experiments/spider-glove-run.jsonnet
     ```
