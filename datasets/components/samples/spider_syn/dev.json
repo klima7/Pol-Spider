@@ -5285,9 +5285,9 @@
     {
         "db_id": "tvshow",
         "question_original": "List all cartoon directed by \"Ben Jones\".",
-        "question_original_pl": "Lista wszystkich kreskówek wyreżyserowanych przez \"Bena Jonesa\".",
+        "question_original_pl": "Zwróć listę wszystkich kreskówek wyreżyserowanych przez \"Bena Jonesa\".",
         "question": "List all animation directed by \"Ben Jones\".",
-        "question_pl": "Lista wszystkich animacji wyreżyserowanych przez \"Bena Jonesa\".",
+        "question_pl": "Zwróć listę wszystkich animacji wyreżyserowanych przez \"Bena Jonesa\".",
         "query": "SELECT Title FROM Cartoon WHERE Directed_by = \"Ben Jones\";",
         "query_pl": "SELECT Title FROM Cartoon WHERE Directed_by = \"Ben Jones\";"
     },
@@ -5321,9 +5321,9 @@
     {
         "db_id": "tvshow",
         "question_original": "list all cartoon titles and their directors ordered by their air date",
-        "question_original_pl": "lista wszystkich tytułów kreskówek i ich reżyserów uporządkowana według daty emisji",
+        "question_original_pl": "Zwróć listę wszystkich tytułów kreskówek i ich reżyserów uporządkowana według daty emisji",
         "question": "list all animation and their directors ordered by their airdate",
-        "question_pl": "lista wszystkich animacji i ich reżyserów uporządkowana według daty emisji",
+        "question_pl": "Zwróć listę wszystkich animacji i ich reżyserów uporządkowana według daty emisji",
         "query": "SELECT title ,  Directed_by FROM Cartoon ORDER BY Original_air_date",
         "query_pl": "SELECT title ,  Directed_by FROM Cartoon ORDER BY Original_air_date"
     },
@@ -5519,9 +5519,9 @@
     {
         "db_id": "tvshow",
         "question_original": "List the  Episode of all TV series sorted by rating.",
-        "question_original_pl": "Lista odcinków wszystkich seriali telewizyjnych posortowanych według oceny.",
+        "question_original_pl": "Zwróć listę odcinków wszystkich seriali telewizyjnych posortowanych według oceny.",
         "question": "List the Episode of all TV series sorted by rating.",
-        "question_pl": "Lista odcinków wszystkich seriali telewizyjnych posortowanych według oceny.",
+        "question_pl": "Zwróć listę odcinków wszystkich seriali telewizyjnych posortowanych według oceny.",
         "query": "SELECT Episode FROM TV_series ORDER BY rating",
         "query_pl": "SELECT Episode FROM TV_series ORDER BY rating"
     },
@@ -5537,9 +5537,9 @@
     {
         "db_id": "tvshow",
         "question_original": "List top 3 highest Rating  TV series. List the TV series's Episode and Rating.",
-        "question_original_pl": "Lista 3 najwyżej ocenianych seriali telewizyjnych. Wymień odcinek i ocenę serialu telewizyjnego.",
+        "question_original_pl": "Zwróć listę 3 najwyżej ocenianych seriali telewizyjnych. Wymień odcinek i ocenę serialu telewizyjnego.",
         "question": "List top 3 highest score  TV series. List the TV series's Episode and score.",
-        "question_pl": "Lista 3 najwyżej ocenianych seriali telewizyjnych. Wymień odcinek i wynik serialu telewizyjnego.",
+        "question_pl": "Zwróć listę 3 najwyżej ocenianych seriali telewizyjnych. Wymień odcinek i wynik serialu telewizyjnego.",
         "query": "SELECT Episode ,  Rating FROM TV_series ORDER BY Rating DESC LIMIT 3;",
         "query_pl": "SELECT Episode ,  Rating FROM TV_series ORDER BY Rating DESC LIMIT 3;"
     },
@@ -5627,9 +5627,9 @@
     {
         "db_id": "tvshow",
         "question_original": "List the Episode of all  TV series showed on TV Channel with series name \"Sky Radio\".",
-        "question_original_pl": "Lista odcinków wszystkich seriali telewizyjnych pokazywanych na kanale telewizyjnym o nazwie \"Sky Radio\".",
+        "question_original_pl": "Zwróć listę odcinków wszystkich seriali telewizyjnych pokazywanych na kanale telewizyjnym o nazwie \"Sky Radio\".",
         "question": "List the Episode of all  TV series showed on TV Channel with series name \"Sky Radio\".",
-        "question_pl": "Lista odcinków wszystkich seriali telewizyjnych pokazywanych na kanale telewizyjnym o nazwie \"Sky Radio\".",
+        "question_pl": "Zwróć listę odcinków wszystkich seriali telewizyjnych pokazywanych na kanale telewizyjnym o nazwie \"Sky Radio\".",
         "query": "SELECT T2.Episode FROM TV_Channel AS T1 JOIN TV_series AS T2 ON T1.id = T2.Channel WHERE T1.series_name = \"Sky Radio\";",
         "query_pl": "SELECT T2.Episode FROM TV_Channel AS T1 JOIN TV_series AS T2 ON T1.id = T2.Channel WHERE T1.series_name = \"Sky Radio\";"
     },

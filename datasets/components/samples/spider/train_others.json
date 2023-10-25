@@ -4279,7 +4279,7 @@
     {
         "db_id": "scholar",
         "question": "list papers published in chi",
-        "question_pl": "lista artykułów opublikowanych w chi",
+        "question_pl": "Podaj listę artykułów opublikowanych w chi",
         "query": "SELECT DISTINCT t1.paperid FROM venue AS t2 JOIN paper AS t1 ON t2.venueid  =  t1.venueid WHERE t2.venuename  =  \"chi\";",
         "query_pl": "SELECT DISTINCT t1.paperid FROM venue AS t2 JOIN paper AS t1 ON t2.venueid  =  t1.venueid WHERE t2.venuename  =  \"chi\";"
     },
@@ -5042,7 +5042,7 @@
     {
         "db_id": "scholar",
         "question": "List papers that has a keyword Question Answering",
-        "question_pl": "Lista artykułów ze słowem kluczowym Odpowiadanie na pytania",
+        "question_pl": "Zwróć listę artykułów ze słowem kluczowym Odpowiadanie na pytania",
         "query": "SELECT DISTINCT t3.paperid FROM paperkeyphrase AS t2 JOIN keyphrase AS t1 ON t2.keyphraseid  =  t1.keyphraseid JOIN paper AS t3 ON t3.paperid  =  t2.paperid WHERE t1.keyphrasename  =  \"Question Answering\";",
         "query_pl": "SELECT DISTINCT t3.paperid FROM paperkeyphrase AS t2 JOIN keyphrase AS t1 ON t2.keyphraseid  =  t1.keyphraseid JOIN paper AS t3 ON t3.paperid  =  t2.paperid WHERE t1.keyphrasename  =  \"Odpowiadanie na pytania\";"
     },
@@ -5189,7 +5189,7 @@
     {
         "db_id": "scholar",
         "question": "List papers that has keyword Question Answering",
-        "question_pl": "Lista artykułów zawierających słowo kluczowe Question Answering",
+        "question_pl": "Podaj listę artykułów zawierających słowo kluczowe Question Answering",
         "query": "SELECT DISTINCT t3.paperid FROM paperkeyphrase AS t2 JOIN keyphrase AS t1 ON t2.keyphraseid  =  t1.keyphraseid JOIN paper AS t3 ON t3.paperid  =  t2.paperid WHERE t1.keyphrasename  =  \"Question Answering\";",
         "query_pl": "SELECT DISTINCT t3.paperid FROM paperkeyphrase AS t2 JOIN keyphrase AS t1 ON t2.keyphraseid  =  t1.keyphraseid JOIN paper AS t3 ON t3.paperid  =  t2.paperid WHERE t1.keyphrasename  =  \"Odpowiadanie na pytania\";"
     },
@@ -5231,7 +5231,7 @@
     {
         "db_id": "scholar",
         "question": "list papers published by balakrishnan prabhakaran",
-        "question_pl": "lista artykułów opublikowanych przez balakrishnan prabhakaran",
+        "question_pl": "Zwróć listę artykułów opublikowanych przez balakrishnan prabhakaran",
         "query": "SELECT DISTINCT t3.paperid  ,  t3.year FROM writes AS t2 JOIN author AS t1 ON t2.authorid  =  t1.authorid JOIN paper AS t3 ON t2.paperid  =  t3.paperid WHERE t1.authorname  =  \"balakrishnan prabhakaran\";",
         "query_pl": "SELECT DISTINCT t3.paperid  ,  t3.year FROM writes AS t2 JOIN author AS t1 ON t2.authorid  =  t1.authorid JOIN paper AS t3 ON t2.paperid  =  t3.paperid WHERE t1.authorname  =  \"balakrishnan prabhakaran\";"
     },
@@ -5252,14 +5252,14 @@
     {
         "db_id": "scholar",
         "question": "list papers by subhasis chaudhuri",
-        "question_pl": "lista dokumentów autorstwa subhasis chaudhuri",
+        "question_pl": "Zwróć listę dokumentów autorstwa subhasis chaudhuri",
         "query": "SELECT DISTINCT t3.paperid FROM writes AS t2 JOIN author AS t1 ON t2.authorid  =  t1.authorid JOIN paper AS t3 ON t2.paperid  =  t3.paperid WHERE t1.authorname  =  \"subhasis chaudhuri\";",
         "query_pl": "SELECT DISTINCT t3.paperid FROM writes AS t2 JOIN author AS t1 ON t2.authorid  =  t1.authorid JOIN paper AS t3 ON t2.paperid  =  t3.paperid WHERE t1.authorname  =  \"subhasis chaudhuri\";"
     },
     {
         "db_id": "scholar",
         "question": "List of papers by subhasis chaudhuri",
-        "question_pl": "Lista artykułów autorstwa subhasis chaudhuri",
+        "question_pl": "Zwróć listę artykułów autorstwa subhasis chaudhuri",
         "query": "SELECT DISTINCT t3.paperid FROM writes AS t2 JOIN author AS t1 ON t2.authorid  =  t1.authorid JOIN paper AS t3 ON t2.paperid  =  t3.paperid WHERE t1.authorname  =  \"subhasis chaudhuri\";",
         "query_pl": "SELECT DISTINCT t3.paperid FROM writes AS t2 JOIN author AS t1 ON t2.authorid  =  t1.authorid JOIN paper AS t3 ON t2.paperid  =  t3.paperid WHERE t1.authorname  =  \"subhasis chaudhuri\";"
     },
@@ -5665,7 +5665,7 @@
     {
         "db_id": "scholar",
         "question": "List of authors acl 2016",
-        "question_pl": "Lista autorów acl 2016",
+        "question_pl": "Zwróć listę autorów acl 2016",
         "query": "SELECT DISTINCT t1.authorid FROM venue AS t3 JOIN paper AS t2 ON t3.venueid  =  t2.venueid JOIN writes AS t1 ON t1.paperid  =  t2.paperid WHERE t2.year  =  2016 AND t3.venuename  =  \"acl\";",
         "query_pl": "SELECT DISTINCT t1.authorid FROM venue AS t3 JOIN paper AS t2 ON t3.venueid  =  t2.venueid JOIN writes AS t1 ON t1.paperid  =  t2.paperid WHERE t2.year  =  2016 AND t3.venuename  =  \"acl\";"
     },
@@ -5686,7 +5686,7 @@
     {
         "db_id": "scholar",
         "question": "List of authors in acl 2016",
-        "question_pl": "Lista autorów w acl 2016",
+        "question_pl": "Zwróć listę autorów w acl 2016",
         "query": "SELECT DISTINCT t1.authorid FROM venue AS t3 JOIN paper AS t2 ON t3.venueid  =  t2.venueid JOIN writes AS t1 ON t1.paperid  =  t2.paperid WHERE t2.year  =  2016 AND t3.venuename  =  \"acl\";",
         "query_pl": "SELECT DISTINCT t1.authorid FROM venue AS t3 JOIN paper AS t2 ON t3.venueid  =  t2.venueid JOIN writes AS t1 ON t1.paperid  =  t2.paperid WHERE t2.year  =  2016 AND t3.venuename  =  \"acl\";"
     },
@@ -6470,7 +6470,7 @@
     {
         "db_id": "scholar",
         "question": "List top papers for parsing",
-        "question_pl": "Lista najlepszych dokumentów do parsowania",
+        "question_pl": "Zwróć listę najlepszych dokumentów do parsowania",
         "query": "SELECT DISTINCT t4.citedpaperid  ,  COUNT ( t4.citedpaperid ) FROM paperkeyphrase AS t2 JOIN keyphrase AS t1 ON t2.keyphraseid  =  t1.keyphraseid JOIN paper AS t3 ON t3.paperid  =  t2.paperid JOIN cite AS t4 ON t3.paperid  =  t4.citedpaperid WHERE t1.keyphrasename  =  \"parsing\" GROUP BY t4.citedpaperid ORDER BY COUNT ( t4.citedpaperid ) DESC;",
         "query_pl": "SELECT DISTINCT t4.citedpaperid  ,  COUNT ( t4.citedpaperid ) FROM paperkeyphrase AS t2 JOIN keyphrase AS t1 ON t2.keyphraseid  =  t1.keyphraseid JOIN paper AS t3 ON t3.paperid  =  t2.paperid JOIN cite AS t4 ON t3.paperid  =  t4.citedpaperid WHERE t1.keyphrasename  =  \"parsowanie\" GROUP BY t4.citedpaperid ORDER BY COUNT ( t4.citedpaperid ) DESC;"
     },
@@ -7107,7 +7107,7 @@
     {
         "db_id": "scholar",
         "question": "List of papers in pldi 2015",
-        "question_pl": "Lista referatów w pldi 2015",
+        "question_pl": "Zwróć listę referatów w pldi 2015",
         "query": "SELECT DISTINCT t1.paperid FROM venue AS t2 JOIN paper AS t1 ON t2.venueid  =  t1.venueid WHERE t1.year  =  2015 AND t2.venuename  =  \"pldi\";",
         "query_pl": "SELECT DISTINCT t1.paperid FROM venue AS t2 JOIN paper AS t1 ON t2.venueid  =  t1.venueid WHERE t1.year  =  2015 AND t2.venuename  =  \"pldi\";"
     },
@@ -7156,7 +7156,7 @@
     {
         "db_id": "scholar",
         "question": "pldi 2015 list of papers",
-        "question_pl": "lista dokumentów pldi 2015",
+        "question_pl": "Zwróć listę dokumentów pldi 2015",
         "query": "SELECT DISTINCT t1.paperid FROM venue AS t2 JOIN paper AS t1 ON t2.venueid  =  t1.venueid WHERE t1.year  =  2015 AND t2.venuename  =  \"pldi\";",
         "query_pl": "SELECT DISTINCT t1.paperid FROM venue AS t2 JOIN paper AS t1 ON t2.venueid  =  t1.venueid WHERE t1.year  =  2015 AND t2.venuename  =  \"pldi\";"
     },
@@ -7324,7 +7324,7 @@
     {
         "db_id": "scholar",
         "question": "List the journals related to Temporal Data",
-        "question_pl": "Lista czasopism związanych z Temporal Data",
+        "question_pl": "Zwróć listę czasopism związanych z Temporal Data",
         "query": "SELECT DISTINCT t3.journalid FROM paperkeyphrase AS t2 JOIN keyphrase AS t1 ON t2.keyphraseid  =  t1.keyphraseid JOIN paper AS t3 ON t3.paperid  =  t2.paperid WHERE t1.keyphrasename  =  \"Temporal Data\" GROUP BY t3.journalid;",
         "query_pl": "SELECT DISTINCT t3.journalid FROM paperkeyphrase AS t2 JOIN keyphrase AS t1 ON t2.keyphraseid  =  t1.keyphraseid JOIN paper AS t3 ON t3.paperid  =  t2.paperid WHERE t1.keyphrasename  =  \"Dane czasowe\" GROUP BY t3.journalid;"
     },
@@ -8024,7 +8024,7 @@
     {
         "db_id": "yelp",
         "question": "List all the reviews by Michelle for Italian restaurant",
-        "question_pl": "Lista wszystkich opinii o Italian restaurant, napisanych przez Michelle",
+        "question_pl": "Zwróć listę wszystkich opinii o Italian restaurant, napisanych przez Michelle",
         "query": "SELECT t4.text FROM category AS t2 JOIN business AS t1 ON t2.business_id  =  t1.business_id JOIN category AS t3 ON t3.business_id  =  t1.business_id JOIN review AS t4 ON t4.business_id  =  t1.business_id JOIN USER AS t5 ON t5.user_id  =  t4.user_id WHERE t2.category_name  =  \"Italian\" AND t3.category_name  =  \"category_category_name1\" AND t5.name  =  \"Michelle\";",
         "query_pl": "SELECT t4.text FROM category AS t2 JOIN business AS t1 ON t2.business_id  =  t1.business_id JOIN category AS t3 ON t3.business_id  =  t1.business_id JOIN review AS t4 ON t4.business_id  =  t1.business_id JOIN USER AS t5 ON t5.user_id  =  t4.user_id WHERE t2.category_name  =  \"Włoski\" AND t3.category_name  =  \"category_category_name1\" AND t5.name  =  \"Michelle\";"
     },
@@ -8045,14 +8045,14 @@
     {
         "db_id": "yelp",
         "question": "List all the neighbourhoods with Italian restaurant in Madison",
-        "question_pl": "Lista wszystkich dzielnic z włoską restauracją w Madison",
+        "question_pl": "Zwróć listę wszystkich dzielnic z włoską restauracją w Madison",
         "query": "SELECT t1.neighbourhood_name FROM category AS t3 JOIN business AS t2 ON t3.business_id  =  t2.business_id JOIN category AS t4 ON t4.business_id  =  t2.business_id JOIN neighbourhood AS t1 ON t1.business_id  =  t2.business_id WHERE t2.city  =  \"Madison\" AND t3.category_name  =  \"Italian\" AND t4.category_name  =  \"restaurant\";",
         "query_pl": "SELECT t1.neighbourhood_name FROM category AS t3 JOIN business AS t2 ON t3.business_id  =  t2.business_id JOIN category AS t4 ON t4.business_id  =  t2.business_id JOIN neighbourhood AS t1 ON t1.business_id  =  t2.business_id WHERE t2.city  =  \"Madison\" AND t3.category_name  =  \"Włoski\" AND t4.category_name  =  \"restauracja\";"
     },
     {
         "db_id": "yelp",
         "question": "List all the neighbourhoods with Italian restaurant rated less than 2.5 in Madison",
-        "question_pl": "Lista wszystkich dzielnic z włoską restauracją z oceną poniżej 2,5 w Madison",
+        "question_pl": "Zwróć listę wszystkich dzielnic z włoską restauracją z oceną poniżej 2,5 w Madison",
         "query": "SELECT t1.neighbourhood_name FROM category AS t3 JOIN business AS t2 ON t3.business_id  =  t2.business_id JOIN category AS t4 ON t4.business_id  =  t2.business_id JOIN neighbourhood AS t1 ON t1.business_id  =  t2.business_id WHERE t2.city  =  \"Madison\" AND t2.rating  <  2.5 AND t3.category_name  =  \"Italian\" AND t4.category_name  =  \"restaurant\";",
         "query_pl": "SELECT t1.neighbourhood_name FROM category AS t3 JOIN business AS t2 ON t3.business_id  =  t2.business_id JOIN category AS t4 ON t4.business_id  =  t2.business_id JOIN neighbourhood AS t1 ON t1.business_id  =  t2.business_id WHERE t2.city  =  \"Madison\" AND t2.rating  <  2.5 AND t3.category_name  =  \"Włoski\" AND t4.category_name  =  \"restauracja\";"
     },
@@ -8108,7 +8108,7 @@
     {
         "db_id": "yelp",
         "question": "List the addresses of all Walmart in \" Los Angeles \"",
-        "question_pl": "Lista adresów wszystkich Walmartów w \" Los Angeles \".",
+        "question_pl": "Zwróć listę adresów wszystkich Walmartów w \" Los Angeles \".",
         "query": "SELECT full_address FROM business WHERE city  =  \"Los Angeles\" AND name  =  \"Walmart\";",
         "query_pl": "SELECT full_address FROM business WHERE city  =  \"Los Angeles\" AND name  =  \"Walmart\";"
     },
@@ -8164,7 +8164,7 @@
     {
         "db_id": "yelp",
         "question": "List all the Seafood restaurant in \" Los Angeles \"",
-        "question_pl": "Lista wszystkich restauracji serwujących owoce morza w \" Los Angeles \"",
+        "question_pl": "Zwróć listę wszystkich restauracji serwujących owoce morza w \" Los Angeles \"",
         "query": "SELECT t1.name FROM category AS t2 JOIN business AS t1 ON t2.business_id  =  t1.business_id JOIN category AS t3 ON t3.business_id  =  t1.business_id WHERE t1.city  =  \"Los Angeles\" AND t2.category_name  =  \"Seafood\" AND t3.category_name  =  \"restaurant\";",
         "query_pl": "SELECT t1.name FROM category AS t2 JOIN business AS t1 ON t2.business_id  =  t1.business_id JOIN category AS t3 ON t3.business_id  =  t1.business_id WHERE t1.city  =  \"Los Angeles\" AND t2.category_name  =  \"Owoce morza\" AND t3.category_name  =  \"restauracja\";"
     },
@@ -8255,7 +8255,7 @@
     {
         "db_id": "yelp",
         "question": "List all tips for \" Cafe Zinho \" in Pennsylvania in 2010 .",
-        "question_pl": "Lista wszystkich wskazówek dotyczących \" Cafe Zinho \" w Pensylwanii w 2010 roku .",
+        "question_pl": "Zwróć listę wszystkich wskazówek dotyczących \" Cafe Zinho \" w Pensylwanii w 2010 roku .",
         "query": "SELECT t2.text FROM tip AS t2 JOIN business AS t1 ON t2.business_id  =  t1.business_id WHERE t1.name  =  \"Cafe Zinho\" AND t1.state  =  \"Pennsylvania\" AND t2.year  =  2010;",
         "query_pl": "SELECT t2.text FROM tip AS t2 JOIN business AS t1 ON t2.business_id  =  t1.business_id WHERE t1.name  =  \"Cafe Zinho\" AND t1.state  =  \"Pensylwania\" AND t2.year  =  2010;"
     },
@@ -10138,7 +10138,7 @@
     {
         "db_id": "imdb",
         "question": "List \" James Bond \" directors",
-        "question_pl": "Lista \" James Bond \" Reżyserzy",
+        "question_pl": "Zwróć listę reżyserów \" James Bond \"",
         "query": "SELECT t2.name FROM director AS t2 JOIN directed_by AS t1 ON t2.did  =  t1.did JOIN movie AS t3 ON t3.mid  =  t1.msid WHERE t3.title  =  \"James Bond\";",
         "query_pl": "SELECT t2.name FROM director AS t2 JOIN directed_by AS t1 ON t2.did  =  t1.did JOIN movie AS t3 ON t3.mid  =  t1.msid WHERE t3.title  =  \"James Bond\";"
     },
@@ -10243,7 +10243,7 @@
     {
         "db_id": "imdb",
         "question": "List all the Sci-Fi movies which released in 2010",
-        "question_pl": "Lista wszystkich filmów sci-fi, które ukazały się w 2010 roku",
+        "question_pl": "Zwróć listę wszystkich filmów sci-fi, które ukazały się w 2010 roku",
         "query": "SELECT t3.title FROM genre AS t2 JOIN classification AS t1 ON t2.gid  =  t1.gid JOIN movie AS t3 ON t3.mid  =  t1.msid WHERE t2.genre  =  \"Sci-Fi\" AND t3.release_year  =  2010;",
         "query_pl": "SELECT t3.title FROM genre AS t2 JOIN classification AS t1 ON t2.gid  =  t1.gid JOIN movie AS t3 ON t3.mid  =  t1.msid WHERE t2.genre  =  \"Sci-Fi\" AND t3.release_year  =  2010;"
     },
@@ -10327,7 +10327,7 @@
     {
         "db_id": "imdb",
         "question": "List all the movies directed by \" Asghar Farhadi \" in which \" Taraneh Alidoosti \" played",
-        "question_pl": "Lista wszystkich filmów wyreżyserowanych przez \" Asghar Farhadi \", w których zagrał \" Taraneh Alidoosti \"",
+        "question_pl": "Zwróć listę wszystkich filmów wyreżyserowanych przez \" Asghar Farhadi \", w których zagrał \" Taraneh Alidoosti \"",
         "query": "SELECT t4.title FROM CAST AS t5 JOIN actor AS t1 ON t5.aid  =  t1.aid JOIN movie AS t4 ON t4.mid  =  t5.msid JOIN directed_by AS t2 ON t4.mid  =  t2.msid JOIN director AS t3 ON t3.did  =  t2.did WHERE t1.name  =  \"Taraneh Alidoosti\" AND t3.name  =  \"Asghar Farhadi\";",
         "query_pl": "SELECT t4.title FROM CAST AS t5 JOIN actor AS t1 ON t5.aid  =  t1.aid JOIN movie AS t4 ON t4.mid  =  t5.msid JOIN directed_by AS t2 ON t4.mid  =  t2.msid JOIN director AS t3 ON t3.did  =  t2.did WHERE t1.name  =  \"Taraneh Alidoosti\" AND t3.name  =  \"Asghar Farhadi\";"
     },

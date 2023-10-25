@@ -3761,7 +3761,7 @@
     {
         "db_id": "store_1",
         "question": "A list of the top 5 countries by number of invoices. List country name and number of invoices.",
-        "question_pl": "Lista 5 najlepszych krajów pod względem liczby faktur. Wymień nazwę kraju i liczbę faktur.",
+        "question_pl": "Zwróć listę 5 najlepszych krajów pod względem liczby faktur. Wymień nazwę kraju i liczbę faktur.",
         "query": "SELECT billing_country ,  COUNT(*) FROM invoices GROUP BY billing_country ORDER BY count(*) DESC LIMIT 5;",
         "query_pl": "SELECT billing_country ,  COUNT(*) FROM invoices GROUP BY billing_country ORDER BY count(*) DESC LIMIT 5;"
     },
@@ -3775,7 +3775,7 @@
     {
         "db_id": "store_1",
         "question": "A list of the top 8 countries by gross/total invoice size. List country name and gross invoice size.",
-        "question_pl": "Lista 8 najlepszych krajów pod względem wielkości faktury brutto/łącznej. Wymień nazwę kraju i wielkość faktury brutto.",
+        "question_pl": "Zwróć listę 8 najlepszych krajów pod względem wielkości faktury brutto/łącznej. Wymień nazwę kraju i wielkość faktury brutto.",
         "query": "SELECT billing_country ,  SUM(total) FROM invoices GROUP BY billing_country ORDER BY SUM(total) DESC LIMIT 8;",
         "query_pl": "SELECT billing_country ,  SUM(total) FROM invoices GROUP BY billing_country ORDER BY SUM(total) DESC LIMIT 8;"
     },
@@ -3789,7 +3789,7 @@
     {
         "db_id": "store_1",
         "question": "A list of the top 10 countries by average invoice size. List country name and average invoice size.",
-        "question_pl": "Lista 10 największych krajów pod względem średniej wielkości faktury. Wymień nazwę kraju i średnią wielkość faktury.",
+        "question_pl": "Zwróć listę 10 największych krajów pod względem średniej wielkości faktury. Wymień nazwę kraju i średnią wielkość faktury.",
         "query": "SELECT billing_country ,  AVG(total) FROM invoices GROUP BY billing_country ORDER BY AVG(total) DESC LIMIT 10;",
         "query_pl": "SELECT billing_country ,  AVG(total) FROM invoices GROUP BY billing_country ORDER BY AVG(total) DESC LIMIT 10;"
     },
@@ -4475,7 +4475,7 @@
     {
         "db_id": "store_1",
         "question": "List all tracks bought by customer Daan Peeters.",
-        "question_pl": "Lista wszystkich utworów kupionych przez klienta Daan Peeters.",
+        "question_pl": "Zwróć listę wszystkich utworów kupionych przez klienta Daan Peeters.",
         "query": "SELECT T1.name FROM tracks AS T1 JOIN invoice_lines AS T2 ON T1.id = T2.track_id JOIN invoices AS T3 ON T3.id = T2.invoice_id JOIN customers AS T4 ON T4.id = T3.customer_id WHERE T4.first_name = \"Daan\" AND T4.last_name = \"Peeters\";",
         "query_pl": "SELECT T1.name FROM tracks AS T1 JOIN invoice_lines AS T2 ON T1.id = T2.track_id JOIN invoices AS T3 ON T3.id = T2.invoice_id JOIN customers AS T4 ON T4.id = T3.customer_id WHERE T4.first_name = \"Daan\" AND T4.last_name = \"Peeters\";"
     },
@@ -14856,7 +14856,7 @@
     {
         "db_id": "cre_Doc_Control_Systems",
         "question": "List document id of documents status is done and document type is Paper and the document is shipped by shipping agent named USPS.",
-        "question_pl": "Lista identyfikatorów dokumentów jest zakończona, typ dokumentu to Paper, a dokument jest wysyłany przez agenta spedycyjnego o nazwie USPS.",
+        "question_pl": "Zwróć listę identyfikatorów dokumentów jest zakończona, typ dokumentu to Paper, a dokument jest wysyłany przez agenta spedycyjnego o nazwie USPS.",
         "query": "SELECT document_id FROM Documents WHERE document_status_code  =  \"done\" AND document_type_code = \"Paper\" INTERSECT SELECT document_id FROM Documents JOIN Ref_Shipping_Agents ON Documents.shipping_agent_code = Ref_Shipping_Agents.shipping_agent_code WHERE Ref_Shipping_Agents.shipping_agent_name = \"USPS\";",
         "query_pl": "SELECT document_id FROM Documents WHERE document_status_code  =  \"zrobione\" AND document_type_code = \"Papier\" INTERSECT SELECT document_id FROM Documents JOIN Ref_Shipping_Agents ON Documents.shipping_agent_code = Ref_Shipping_Agents.shipping_agent_code WHERE Ref_Shipping_Agents.shipping_agent_name = \"USPS\";"
     },
@@ -22787,7 +22787,7 @@
     {
         "db_id": "college_1",
         "question": "list names of all departments ordered by their names.",
-        "question_pl": "lista nazw wszystkich działów uporządkowana według ich nazw.",
+        "question_pl": "Zwróć listę nazw wszystkich działów uporządkowana według ich nazw.",
         "query": "SELECT dept_name FROM department ORDER BY dept_name",
         "query_pl": "SELECT dept_name FROM department ORDER BY dept_name"
     },
