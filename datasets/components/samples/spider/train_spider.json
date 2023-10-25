@@ -16347,7 +16347,7 @@
     {
         "db_id": "csu_1",
         "question": "What campuses are located in Northridge, Los Angeles or in San Francisco, San Francisco?",
-        "question_pl": "Jakie kampusy znajdują się w Northridge w Los Angeles lub w San Francisco w San Francisco?",
+        "question_pl": "Jakie kampusy znajdują się w Northridge, w Los Angeles lub w San Francisco w San Francisco?",
         "query": "SELECT campus FROM campuses WHERE LOCATION  =  \"Northridge\" AND county  =  \"Los Angeles\" UNION SELECT campus FROM campuses WHERE LOCATION  =  \"San Francisco\" AND county  =  \"San Francisco\"",
         "query_pl": "SELECT campus FROM campuses WHERE LOCATION  =  \"Northridge\" AND county  =  \"Los Angeles\" UNION SELECT campus FROM campuses WHERE LOCATION  =  \"San Francisco\" AND county  =  \"San Francisco\""
     },
