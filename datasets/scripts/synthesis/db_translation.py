@@ -8,10 +8,13 @@ from common import load_column_translations, load_table_translations
 
 
 def translate_db(src_db_path, out_db_path, column_trans_path, table_trans_path):
+    shutil.copytree(src_db_path, out_db_path)
+    
+    if column_trans_path is None or table_trans_path is None:
+        return
+    
     column_trans = load_column_translations(column_trans_path)
     table_trans = load_table_translations(table_trans_path)
-    
-    shutil.copytree(src_db_path, out_db_path)
     
     for db_id in tqdm(table_trans.keys(), desc='Translating databases'):
         script = _generate_renaming_sql_script(db_id, column_trans, table_trans)
