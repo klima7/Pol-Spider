@@ -3446,8 +3446,8 @@
         "column_name_original": "company_id",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "spółka id",
-        "column_name_original_pl": "spółka_id"
+        "column_name_pl": "firma id",
+        "column_name_original_pl": "firma_id"
     },
     {
         "db_id": "assets_maintenance",
@@ -17846,8 +17846,8 @@
         "column_name_original": "Company_ID",
         "primary_key": true,
         "foreign_key": "",
-        "column_name_pl": "spółka id",
-        "column_name_original_pl": "Spółka_ID"
+        "column_name_pl": "firma id",
+        "column_name_original_pl": "Firma_ID"
     },
     {
         "db_id": "gas_company",
@@ -17866,8 +17866,8 @@
         "column_name_original": "Company",
         "primary_key": false,
         "foreign_key": "",
-        "column_name_pl": "spółka",
-        "column_name_original_pl": "Spółka"
+        "column_name_pl": "firma",
+        "column_name_original_pl": "Firma"
     },
     {
         "db_id": "gas_company",

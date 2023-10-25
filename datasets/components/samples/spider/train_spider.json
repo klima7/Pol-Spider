@@ -44186,7 +44186,7 @@
     {
         "db_id": "e_government",
         "question": "Find the name of the most popular party form.",
-        "question_pl": "Znajdź nazwę najpopularniejszej formy imprezy.",
+        "question_pl": "Znajdź nazwę najpopularniejszej formy partii.",
         "query": "SELECT t1.form_name FROM forms AS t1 JOIN party_forms AS t2 ON t1.form_id  =  t2.form_id GROUP BY t2.form_id ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT t1.form_name FROM forms AS t1 JOIN party_forms AS t2 ON t1.form_id  =  t2.form_id GROUP BY t2.form_id ORDER BY count(*) DESC LIMIT 1"
     },
@@ -44214,7 +44214,7 @@
     {
         "db_id": "e_government",
         "question": "Find the emails of parties with the most popular party form.",
-        "question_pl": "Znajdź e-maile imprez z najpopularniejszą formą imprezy.",
+        "question_pl": "Znajdź e-maile imprez z najpopularniejszą formą partii.",
         "query": "SELECT t1.party_email FROM parties AS t1 JOIN party_forms AS t2 ON t1.party_id  =  t2.party_id WHERE t2.form_id  =  (SELECT form_id FROM party_forms GROUP BY form_id ORDER BY count(*) DESC LIMIT 1)",
         "query_pl": "SELECT t1.party_email FROM parties AS t1 JOIN party_forms AS t2 ON t1.party_id  =  t2.party_id WHERE t2.form_id  =  (SELECT form_id FROM party_forms GROUP BY form_id ORDER BY count(*) DESC LIMIT 1)"
     },
@@ -44347,7 +44347,7 @@
     {
         "db_id": "e_government",
         "question": "What are the payment method codes that have been used by more than 3 parties?",
-        "question_pl": "Jakie są kody metod płatności, które zostały użyte przez więcej niż 3 strony?",
+        "question_pl": "Jakie są kody metod płatności, które zostały użyte przez więcej niż 3 partie?",
         "query": "SELECT payment_method_code FROM parties GROUP BY payment_method_code HAVING count(*)  >  3",
         "query_pl": "SELECT payment_method_code FROM parties GROUP BY payment_method_code HAVING count(*)  >  3"
     },
@@ -44368,28 +44368,28 @@
     {
         "db_id": "e_government",
         "question": "How many distinct payment methods are used by parties?",
-        "question_pl": "Z ilu różnych metod płatności korzystają strony?",
+        "question_pl": "Z ilu różnych metod płatności korzystają partie?",
         "query": "SELECT count(DISTINCT payment_method_code) FROM parties",
         "query_pl": "SELECT count(DISTINCT payment_method_code) FROM parties"
     },
     {
         "db_id": "e_government",
         "question": "Count the number of different payment method codes used by parties.",
-        "question_pl": "Policz liczbę różnych kodów metod płatności używanych przez strony.",
+        "question_pl": "Policz liczbę różnych kodów metod płatności używanych przez partie.",
         "query": "SELECT count(DISTINCT payment_method_code) FROM parties",
         "query_pl": "SELECT count(DISTINCT payment_method_code) FROM parties"
     },
     {
         "db_id": "e_government",
         "question": "Which is the email of the party that has used the services the most number of times?",
-        "question_pl": "Jaki jest adres e-mail strony, która skorzystała z usług najwięcej razy?",
+        "question_pl": "Jaki jest adres e-mail partii, która skorzystała z usług najwięcej razy?",
         "query": "SELECT t1.party_email FROM parties AS t1 JOIN party_services AS t2 ON t1.party_id  =  t2.customer_id GROUP BY t1.party_email ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT t1.party_email FROM parties AS t1 JOIN party_services AS t2 ON t1.party_id  =  t2.customer_id GROUP BY t1.party_email ORDER BY count(*) DESC LIMIT 1"
     },
     {
         "db_id": "e_government",
         "question": "Return the party email that has used party services the greatest number of times.",
-        "question_pl": "Zwróć adres e-mail strony, która skorzystała z usług strony największą liczbę razy.",
+        "question_pl": "Zwróć adres e-mail parii, która skorzystała z usług parii największą liczbę razy.",
         "query": "SELECT t1.party_email FROM parties AS t1 JOIN party_services AS t2 ON t1.party_id  =  t2.customer_id GROUP BY t1.party_email ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT t1.party_email FROM parties AS t1 JOIN party_services AS t2 ON t1.party_id  =  t2.customer_id GROUP BY t1.party_email ORDER BY count(*) DESC LIMIT 1"
     },

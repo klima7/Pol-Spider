@@ -67,7 +67,7 @@
         "name": "takes classes",
         "name_original": "takes",
         "name_pl": "uczęszcza na zajęcia",
-        "name_original_pl": "bierze"
+        "name_original_pl": "uczęszcza"
     },
     {
         "db_id": "college_2",
@@ -395,8 +395,8 @@
         "db_id": "department_store",
         "name": "order items",
         "name_original": "Order_Items",
-        "name_pl": "zamów przedmioty",
-        "name_original_pl": "Zamów_Przedmioty"
+        "name_pl": "przedmioty zamównienia",
+        "name_original_pl": "Przedmioty_Zamówienia"
     },
     {
         "db_id": "department_store",
@@ -1088,8 +1088,8 @@
         "db_id": "debate",
         "name": "debate people",
         "name_original": "debate_people",
-        "name_pl": "debatuj z ludźmi",
-        "name_original_pl": "debatuj_z_ludźmi"
+        "name_pl": "debata ludzie",
+        "name_original_pl": "debata_ludzie"
     },
     {
         "db_id": "network_2",
@@ -1326,8 +1326,8 @@
         "db_id": "imdb",
         "name": "directed by",
         "name_original": "directed_by",
-        "name_pl": "reżyseria",
-        "name_original_pl": "reżyseria"
+        "name_pl": "wyreżyserowany przez",
+        "name_original_pl": "wyreżyserowany_przez"
     },
     {
         "db_id": "imdb",
@@ -1438,8 +1438,8 @@
         "db_id": "candidate_poll",
         "name": "people",
         "name_original": "people",
-        "name_pl": "osób",
-        "name_original_pl": "osób"
+        "name_pl": "ludzie",
+        "name_original_pl": "ludzie"
     },
     {
         "db_id": "chinook_1",
@@ -1662,8 +1662,8 @@
         "db_id": "medicine_enzyme_interaction",
         "name": "medicine enzyme interaction",
         "name_original": "medicine_enzyme_interaction",
-        "name_pl": "interakcja enzymów leków",
-        "name_original_pl": "interakcja_enzymów_leków"
+        "name_pl": "lek enzym interakcja",
+        "name_original_pl": "lek_enzym_interakcja"
     },
     {
         "db_id": "local_govt_and_lot",
@@ -1908,7 +1908,7 @@
         "name": "track lists",
         "name_original": "Tracklists",
         "name_pl": "listy utworów",
-        "name_original_pl": "Tracklisty"
+        "name_original_pl": "ListyUtworów"
     },
     {
         "db_id": "music_2",
@@ -2082,8 +2082,8 @@
         "db_id": "baseball_1",
         "name": "batting",
         "name_original": "batting",
-        "name_pl": "mrugnięcie",
-        "name_original_pl": "mrugnięcie"
+        "name_pl": "uderzenie",
+        "name_original_pl": "uderzenie"
     },
     {
         "db_id": "baseball_1",
@@ -2096,8 +2096,8 @@
         "db_id": "baseball_1",
         "name": "player college",
         "name_original": "player_college",
-        "name_pl": "gracz uczelni",
-        "name_original_pl": "gracz_uczelni"
+        "name_pl": "gracz uczelnia",
+        "name_original_pl": "gracz_uczelnia"
     },
     {
         "db_id": "baseball_1",
@@ -2215,8 +2215,8 @@
         "db_id": "baseball_1",
         "name": "team half",
         "name_original": "team_half",
-        "name_pl": "połowa drużyny",
-        "name_original_pl": "połowa_drużyny"
+        "name_pl": "drużyna połowa",
+        "name_original_pl": "drużyna_połowa"
     },
     {
         "db_id": "architecture",
@@ -2369,8 +2369,8 @@
         "db_id": "gas_company",
         "name": "company",
         "name_original": "company",
-        "name_pl": "spółka",
-        "name_original_pl": "spółka"
+        "name_pl": "firma",
+        "name_original_pl": "firma"
     },
     {
         "db_id": "gas_company",
@@ -2383,8 +2383,8 @@
         "db_id": "gas_company",
         "name": "station company",
         "name_original": "station_company",
-        "name_pl": "spółka stacyjna",
-        "name_original_pl": "spółka_stacyjna"
+        "name_pl": "stacja firma",
+        "name_original_pl": "stacja_firma"
     },
     {
         "db_id": "e_government",
@@ -2439,22 +2439,22 @@
         "db_id": "e_government",
         "name": "party addresses",
         "name_original": "Party_Addresses",
-        "name_pl": "adresy stron",
-        "name_original_pl": "Adresy_Stron"
+        "name_pl": "partia adres",
+        "name_original_pl": "Partia_Adres"
     },
     {
         "db_id": "e_government",
         "name": "party forms",
         "name_original": "Party_Forms",
-        "name_pl": "formularze partyjne",
-        "name_original_pl": "Formularze_Partyjne"
+        "name_pl": "partia formularz",
+        "name_original_pl": "Partia_Formularz"
     },
     {
         "db_id": "e_government",
         "name": "party services",
         "name_original": "Party_Services",
-        "name_pl": "usługi partyjne",
-        "name_original_pl": "Usługu_Partyjne"
+        "name_pl": "partia usługa",
+        "name_original_pl": "Partia_Usługi"
     },
     {
         "db_id": "school_bus",
@@ -2733,8 +2733,8 @@
         "db_id": "customers_campaigns_ecommerce",
         "name": "order items",
         "name_original": "Order_Items",
-        "name_pl": "zamówienia pozycje",
-        "name_original_pl": "Zamówienia_Pozycje"
+        "name_pl": "pozycje zamówienia",
+        "name_original_pl": "Pozycje_Zamówienia"
     },
     {
         "db_id": "gymnast",
@@ -3279,8 +3279,8 @@
         "db_id": "riding_club",
         "name": "player coach",
         "name_original": "player_coach",
-        "name_pl": "trener zawodników",
-        "name_original_pl": "trener_zawodników"
+        "name_pl": "zawodnik trener",
+        "name_original_pl": "zawodnik_trener"
     },
     {
         "db_id": "riding_club",
@@ -3321,8 +3321,8 @@
         "db_id": "county_public_safety",
         "name": "county public safety",
         "name_original": "county_public_safety",
-        "name_pl": "bezpieczeństwo publiczne hrabstwa",
-        "name_original_pl": "bezpieczeństwo_publiczne_hrabstwa"
+        "name_pl": "bezpieczeństwo publiczne miasta",
+        "name_original_pl": "bezpieczeństwo_publiczne_miasta"
     },
     {
         "db_id": "county_public_safety",
@@ -3342,8 +3342,8 @@
         "db_id": "performance_attendance",
         "name": "performance",
         "name_original": "performance",
-        "name_pl": "wydajność",
-        "name_original_pl": "wydajność"
+        "name_pl": "występ",
+        "name_original_pl": "występ"
     },
     {
         "db_id": "performance_attendance",
@@ -3727,8 +3727,8 @@
         "db_id": "aircraft",
         "name": "airport aircraft",
         "name_original": "airport_aircraft",
-        "name_pl": "samolot lotniskowy",
-        "name_original_pl": "samolot_lotniskowy"
+        "name_pl": "lotnisko samolot",
+        "name_original_pl": "lotnisko_samolot"
     },
     {
         "db_id": "restaurant_1",
@@ -4154,8 +4154,8 @@
         "db_id": "sakila_1",
         "name": "film category",
         "name_original": "film_category",
-        "name_pl": "kategoria film",
-        "name_original_pl": "kategoria_film"
+        "name_pl": "kategoria filmu",
+        "name_original_pl": "kategoria_filmu"
     },
     {
         "db_id": "sakila_1",
@@ -4280,8 +4280,8 @@
         "db_id": "college_3",
         "name": "minor in",
         "name_original": "Minor_in",
-        "name_pl": "małoletni",
-        "name_original_pl": "Małoletni"
+        "name_pl": "studiuję drugi fakultet",
+        "name_original_pl": "studiuję_drugi_fakultet"
     },
     {
         "db_id": "college_3",
@@ -4504,8 +4504,8 @@
         "db_id": "scholar",
         "name": "paper",
         "name_original": "paper",
-        "name_pl": "papier",
-        "name_original_pl": "papier"
+        "name_pl": "artykuł",
+        "name_original_pl": "artykuł"
     },
     {
         "db_id": "scholar",
@@ -4707,8 +4707,8 @@
         "db_id": "manufacturer",
         "name": "furniture manufacte",
         "name_original": "furniture_manufacte",
-        "name_pl": "producent mebli",
-        "name_original_pl": "producent_mebli"
+        "name_pl": "mebel producent",
+        "name_original_pl": "mebel_producent"
     },
     {
         "db_id": "store_1",
@@ -4791,8 +4791,8 @@
         "db_id": "store_1",
         "name": "playlist tracks",
         "name_original": "playlist_tracks",
-        "name_pl": "ścieżki listy odtwarzania",
-        "name_original_pl": "ścieżki_listy_odtwarzania"
+        "name_pl": "utwory listy odtwarzania",
+        "name_original_pl": "utwory_listy_odtwarzania"
     },
     {
         "db_id": "train_station",
@@ -5211,8 +5211,8 @@
         "db_id": "cre_Drama_Workshop_Groups",
         "name": "invoice items",
         "name_original": "Invoice_Items",
-        "name_pl": "pozycje faktur",
-        "name_original_pl": "Pozycje_Faktur"
+        "name_pl": "pozycje faktury",
+        "name_original_pl": "Pozycje_Faktury"
     },
     {
         "db_id": "car_1",
@@ -5778,8 +5778,8 @@
         "db_id": "customers_and_addresses",
         "name": "order items",
         "name_original": "Order_Items",
-        "name_pl": "zamów pozycje",
-        "name_original_pl": "Zamów_Pozycje"
+        "name_pl": "pozycje zamówienia",
+        "name_original_pl": "Pozycje_Zamówienia"
     },
     {
         "db_id": "protein_institute",
