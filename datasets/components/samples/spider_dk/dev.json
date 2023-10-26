@@ -316,16 +316,16 @@
         "db_id": "new_concert_singer",
         "question": "what is the name and nation of the singer who have a song having 'Hey' in its name?",
         "question_pl": "Jak nazywa się i z jakiego kraju pochodzi piosenkarz, którego utwór nosi tytuł \"Hej\"?",
-        "query": "SELECT name ,  country FROM singer WHERE song_name LIKE '%Hey%'",
-        "query_pl": "SELECT name ,  country FROM singer WHERE song_name LIKE '%Hey%'"
+        "query": "SELECT name ,  country FROM singer WHERE song_name LIKE '%Hej%'",
+        "query_pl": "SELECT name ,  country FROM singer WHERE song_name LIKE '%Hej%'"
     },
     {
         "type": 0,
         "db_id": "new_concert_singer",
         "question": "What is the name and country of origin of every singer who has a song with the word 'Hey' in its title?",
         "question_pl": "Jak nazywa się i z jakiego kraju pochodzi każdy piosenkarz, który ma w tytule utwór ze słowem \"Hej\"?",
-        "query": "SELECT name ,  country FROM singer WHERE song_name LIKE '%Hey%'",
-        "query_pl": "SELECT name ,  country FROM singer WHERE song_name LIKE '%Hey%'"
+        "query": "SELECT name ,  country FROM singer WHERE song_name LIKE '%Hej%'",
+        "query_pl": "SELECT name ,  country FROM singer WHERE song_name LIKE '%Hej%'"
     },
     {
         "type": 5,
@@ -3804,32 +3804,32 @@
         "db_id": "dog_kennels",
         "question": "Which professionals live in a city containing the substring 'West'? List his or her name.",
         "question_pl": "Którzy specjaliści mieszkają w mieście zawierającym podciąg \"Zachód\"? Wymień ich nazwiska.",
-        "query": "SELECT first_name , last_name FROM professionals WHERE city LIKE '%West%'",
-        "query_pl": "SELECT first_name , last_name FROM professionals WHERE city LIKE '%West%'"
+        "query": "SELECT first_name , last_name FROM professionals WHERE city LIKE '%Zachód%'",
+        "query_pl": "SELECT first_name , last_name FROM professionals WHERE city LIKE '%Zachód%'"
     },
     {
         "type": 1,
         "db_id": "dog_kennels",
         "question": "Find the name of the professionals living in a city that contains the substring 'West'.",
         "question_pl": "Znajdź nazwiska specjalistów mieszkających w mieście, które zawiera podciąg \"Zachód\".",
-        "query": "SELECT first_name , last_name FROM professionals WHERE city LIKE '%West%'",
-        "query_pl": "SELECT first_name , last_name FROM professionals WHERE city LIKE '%West%'"
+        "query": "SELECT first_name , last_name FROM professionals WHERE city LIKE '%Zachód%'",
+        "query_pl": "SELECT first_name , last_name FROM professionals WHERE city LIKE '%Zachód%'"
     },
     {
         "type": 1,
         "db_id": "dog_kennels",
         "question": "Which owners live in the state whose name contains the substring 'North'? List his name.",
         "question_pl": "Którzy właściciele mieszkają w stanie, którego nazwa zawiera podciąg \"Północ\"? Wymień jego nazwisko.",
-        "query": "SELECT first_name , last_name FROM Owners WHERE state LIKE '%North%'",
-        "query_pl": "SELECT first_name , last_name FROM Owners WHERE state LIKE '%North%'"
+        "query": "SELECT first_name , last_name FROM Owners WHERE state LIKE '%Północ%'",
+        "query_pl": "SELECT first_name , last_name FROM Owners WHERE state LIKE '%Północ%'"
     },
     {
         "type": 1,
         "db_id": "dog_kennels",
         "question": "Return the name of the owners living in a state whose name contains the substring 'North'.",
         "question_pl": "Zwróć nazwę właścicieli mieszkających w stanie, którego nazwa zawiera podciąg \"Północ\".",
-        "query": "SELECT first_name , last_name FROM Owners WHERE state LIKE '%North%'",
-        "query_pl": "SELECT first_name , last_name FROM Owners WHERE state LIKE '%North%'"
+        "query": "SELECT first_name , last_name FROM Owners WHERE state LIKE '%Północ%'",
+        "query_pl": "SELECT first_name , last_name FROM Owners WHERE state LIKE '%Północ%'"
     },
     {
         "type": 4,
