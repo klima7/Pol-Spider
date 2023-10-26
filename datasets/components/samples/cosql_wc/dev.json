@@ -2,1722 +2,1722 @@
     {
         "db_id": "car_1",
         "question": "How many car models are produced by each maker? List the count and the maker full name.",
-        "question_pl": "...",
+        "question_pl": "Ile modeli samochodów produkują poszczególni producenci? Podaj liczbę i pełną nazwę producenta.",
         "query": "SELECT Count(*) ,  T2.FullName  FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id GROUP BY T2.id;",
         "query_pl": "..."
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
         "question": "Hi!  Can you tell me how many unique template IDs there are?",
-        "question_pl": "...",
+        "question_pl": "Cześć! Czy możesz mi powiedzieć, ile jest unikalnych identyfikatorów szablonów?",
         "query": "SELECT count(distinct template_id) FROM Documents ",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "Find the first name of the students who permanently live in the country Haiti.",
-        "question_pl": "...",
+        "question_pl": "Znajdź imiona uczniów, którzy na stałe mieszkają w kraju Haiti.",
         "query": "SELECT T1.first_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.permanent_address_id  =  T2.address_id WHERE T2.country  =  'Haiti' ",
         "query_pl": "..."
     },
     {
         "db_id": "concert_singer",
         "question": "what is the name of the stadium that does not have a concert in year 2014?",
-        "question_pl": "...",
+        "question_pl": "Jak nazywa się stadion, na którym nie odbył się koncert w 2014 roku?",
         "query": "SELECT name FROM stadium EXCEPT SELECT T2.name FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.year  =  2014",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "how many female dogs have gone through treatment ",
-        "question_pl": "...",
+        "question_pl": "ile suczek przeszło leczenie",
         "query": "SELECT count(*) FROM Dogs WHERE dog_id IN ( SELECT dog_id FROM Treatments )",
         "query_pl": "..."
     },
     {
         "db_id": "course_teach",
         "question": "How many teachers are there?",
-        "question_pl": "...",
+        "question_pl": "Ilu jest nauczycieli?",
         "query": "SELECT COUNT(*) FROM teacher",
         "query_pl": "..."
     },
     {
         "db_id": "battle_death",
         "question": "What is the Latin commander of Battle of Serres?",
-        "question_pl": "...",
+        "question_pl": "Jaki jest łaciński dowódca bitwy pod Serres?",
         "query": "SELECT latin_commander\t FROM battle WHERE name = \"Battle of Serres\"",
         "query_pl": "..."
     },
     {
         "db_id": "employee_hire_evaluation",
         "question": "Which district has the largest number of products?",
-        "question_pl": "...",
+        "question_pl": "Która dzielnica ma największą liczbę produktów?",
         "query": "SELECT district FROM shop ORDER BY number_products DESC LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "I want to know the average population of all cities please\n",
-        "question_pl": "...",
+        "question_pl": "Chcę znać średnią populację wszystkich miast.\n",
         "query": "SELECT avg(Population) FROM city",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "Can you list all nations whose government is US territory?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz wymienić wszystkie narody, których rząd jest terytorium USA?",
         "query": "SELECT Name FROM country WHERE GovernmentForm  =  \"US Territory\"",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "give me the total surface area of the continent\n Asia ",
-        "question_pl": "...",
+        "question_pl": "Podaj całkowitą powierzchnię kontynentu\n Azja",
         "query": "SELECT sum(SurfaceArea) FROM country WHERE Continent = \"Asia\"",
         "query_pl": "..."
     },
     {
         "db_id": "employee_hire_evaluation",
         "question": "How many shops do we have data for?",
-        "question_pl": "...",
+        "question_pl": "Dla ilu sklepów posiadamy dane?",
         "query": "SELECT count(*) FROM shop",
         "query_pl": "..."
     },
     {
         "db_id": "concert_singer",
         "question": "what are the singers name on this list?",
-        "question_pl": "...",
+        "question_pl": "Jak nazywają się piosenkarze na tej liście?",
         "query": "SELECT name from singer",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "Can you list all the continents?",
-        "question_pl": "...",
+        "question_pl": "Czy potrafisz wymienić wszystkie kontynenty?",
         "query": "SELECT Continent FROM CONTINENTS",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "which models are lighter than 3500?",
-        "question_pl": "...",
+        "question_pl": "Które modele są lżejsze niż 3500?",
         "query": "SELECT DISTINCT T1.model FROM MODEL_LIST AS T1 JOIN CAR_NAMES AS T2 ON T1.Model  =  T2.Model JOIN CARS_DATA AS T3 ON T2.MakeId  =  T3.Id JOIN CAR_MAKERS AS T4 ON T1.Maker  =  T4.Id WHERE T3.weight  <  3500",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "Hi. How many countries are listed in total?",
-        "question_pl": "...",
+        "question_pl": "Cześć, ile krajów jest w sumie wymienionych?",
         "query": "SELECT count(*) from country",
         "query_pl": "..."
     },
     {
         "db_id": "flight_2",
         "question": "how many airline's there",
-        "question_pl": "...",
+        "question_pl": "ile jest linii lotniczych",
         "query": "SELECT count(*) FROM AIRLINES",
         "query_pl": "..."
     },
     {
         "db_id": "singer",
         "question": "how many  singer there",
-        "question_pl": "...",
+        "question_pl": "ilu jest tam piosenkarzy",
         "query": "SELECT count(*) from singer",
         "query_pl": "..."
     },
     {
         "db_id": "flight_2",
         "question": "delta airline is from which country?\n",
-        "question_pl": "...",
+        "question_pl": "Linie lotnicze delta pochodzą z jakiego kraju?\n",
         "query": "SELECT country FROM AIRLINES where Airline = 'Delta Airlines'",
         "query_pl": "..."
     },
     {
         "db_id": "concert_singer",
         "question": "how many concert are presented on the table",
-        "question_pl": "...",
+        "question_pl": "ile koncertów jest prezentowanych w tabeli",
         "query": "SELECT  count(*) FROM concert",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "How many different treatments are there?",
-        "question_pl": "...",
+        "question_pl": "Ile jest różnych metod leczenia?",
         "query": "select count(*) from (SELECT distinct treatment_type_code from treatments)",
         "query_pl": "..."
     },
     {
         "db_id": "poker_player",
         "question": "Hello!  Which nationalities are shared by more than one person?",
-        "question_pl": "...",
+        "question_pl": "Witaj!  Które narodowości są wspólne dla więcej niż jednej osoby?",
         "query": "SELECT Nationality FROM people GROUP BY Nationality HAVING COUNT(*)  >  1",
         "query_pl": "..."
     },
     {
         "db_id": "wta_1",
         "question": "What's the average age of all losers of all matches?",
-        "question_pl": "...",
+        "question_pl": "Jaki jest średni wiek wszystkich przegranych we wszystkich meczach?",
         "query": "SELECT avg(loser_age) FROM matches",
         "query_pl": "..."
     },
     {
         "db_id": "flight_2",
         "question": "how many flights are landing in the city of aberdeen or abilene",
-        "question_pl": "...",
+        "question_pl": "Ile lotów ląduje w mieście aberdeen lub abilene?",
         "query": "SELECT count(*) FROM Flights AS T1 JOIN Airports AS T2 ON T1.DestAirport  =  T2.AirportCode WHERE T2.city  like  \"%Aberdeen%\" OR T2.city  like  \"%Abilene%\"",
         "query_pl": "..."
     },
     {
         "db_id": "museum_visit",
         "question": "what are the name of the museums?",
-        "question_pl": "...",
+        "question_pl": "Jak nazywają się muzea?",
         "query": "SELECT name from museum",
         "query_pl": "..."
     },
     {
         "db_id": "tvshow",
         "question": "Which titles were directed by Ben Jones or Brandon Vietti?",
-        "question_pl": "...",
+        "question_pl": "Które tytuły zostały wyreżyserowane przez Bena Jonesa lub Brandona Viettiego?",
         "query": "SELECT Title FROM Cartoon WHERE Directed_by = \"Ben Jones\" OR Directed_by = \"Brandon Vietti\";",
         "query_pl": "..."
     },
     {
         "db_id": "wta_1",
         "question": "What is the average age of the losers from all matches?",
-        "question_pl": "...",
+        "question_pl": "Jaki jest średni wiek przegranych we wszystkich meczach?",
         "query": "SELECT avg(loser_age)  FROM matches",
         "query_pl": "..."
     },
     {
         "db_id": "pets_1",
         "question": "How many students have a cat pet? ",
-        "question_pl": "...",
+        "question_pl": "Ilu uczniów ma kota?",
         "query": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid = T2.stuid JOIN pets AS T3 ON T3.petid = T2.petid WHERE T3.pettype = 'cat'",
         "query_pl": "..."
     },
     {
         "db_id": "museum_visit",
         "question": "What is the name of the visitor who visited both a museum opened before 2009 and a museum opened after 2011?",
-        "question_pl": "...",
+        "question_pl": "Jak nazywa się zwiedzający, który odwiedził zarówno muzeum otwarte przed 2009 r., jak i muzeum otwarte po 2011 r.?",
         "query": "SELECT t1.name FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id JOIN museum AS t3 ON t3.Museum_ID  =  t2.Museum_ID WHERE t3.open_year  <  2009 INTERSECT SELECT t1.name FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id JOIN museum AS t3 ON t3.Museum_ID  =  t2.Museum_ID WHERE t3.open_year  >  2011",
         "query_pl": "..."
     },
     {
         "db_id": "flight_2",
         "question": "what is the source airport for United Airlines?\n",
-        "question_pl": "...",
+        "question_pl": "Jakie jest lotnisko źródłowe dla United Airlines?\n",
         "query": "SELECT T1.SourceAirport FROM FLIGHTS AS T1 JOIN AIRLINES AS T2 ON T2.uid  =  T1.Airline WHERE T2.Airline  =  \"United Airlines\"",
         "query_pl": "..."
     },
     {
         "db_id": "wta_1",
         "question": "hi, what are the names of the players?",
-        "question_pl": "...",
+        "question_pl": "Cześć, jak nazywają się gracze?",
         "query": "SELECT first_name,  last_name FROM players",
         "query_pl": "..."
     },
     {
         "db_id": "flight_2",
         "question": "How many United Airlines flights go to the city called Aberdeen?",
-        "question_pl": "...",
+        "question_pl": "Ile lotów United Airlines odbywa się do miasta o nazwie Aberdeen?",
         "query": "SELECT count(*) FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport  =  T2.AirportCode JOIN AIRLINES AS T3 ON T3.uid  =  T1.Airline WHERE T2.City  =  \"Aberdeen\" AND T3.Airline  =  \"United Airlines\"",
         "query_pl": "..."
     },
     {
         "db_id": "poker_player",
         "question": "What is the birth date of the poker player with the lowest earnings?",
-        "question_pl": "...",
+        "question_pl": "Jaka jest data urodzenia pokerzysty z najniższymi zarobkami?",
         "query": "SELECT T1.Birth_Date FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T2.Earnings ASC LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "poker_player",
         "question": "how many poker players are on the table",
-        "question_pl": "...",
+        "question_pl": "ilu pokerzystów jest przy stole",
         "query": "SELECT count(*) FROM poker_player",
         "query_pl": "..."
     },
     {
         "db_id": "pets_1",
         "question": "Can you show me a list of all of the students IDs for students who have dogs as their pet type?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz mi pokazać listę wszystkich identyfikatorów uczniów, którzy mają psy jako typ zwierzęcia domowego?",
         "query": "SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid = T2.stuid JOIN pets AS T3 ON T3.petid = T2.petid WHERE T3.pettype = 'dog'",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "how many country there",
-        "question_pl": "...",
+        "question_pl": "ile jest krajów",
         "query": "SELECT count(*) from country",
         "query_pl": "..."
     },
     {
         "db_id": "tvshow",
         "question": "find id of the tv channels that are from countries with more than two tv channels",
-        "question_pl": "...",
+        "question_pl": "znajdź identyfikatory kanałów telewizyjnych, które pochodzą z krajów z więcej niż dwoma kanałami telewizyjnymi",
         "query": "select id from tv_channel where country in (SELECT country FROM tv_channel GROUP BY country HAVING count(*)  >  2)",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "Hello, how many dogs have gone through treatments?",
-        "question_pl": "...",
+        "question_pl": "Witaj, ile psów przeszło leczenie?",
         "query": "SELECT count(*) FROM Dogs WHERE dog_id IN ( SELECT dog_id FROM Treatments )",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "LIST THE NATIONS WHICH DO NOT USE ENGLISH",
-        "question_pl": "...",
+        "question_pl": "WYMIEŃ NARODY, KTÓRE NIE UŻYWAJĄ JĘZYKA ANGIELSKIEGO",
         "query": "SELECT Name FROM country WHERE Name NOT IN (SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\")",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "How many different cars on this list were produced in 1974?",
-        "question_pl": "...",
+        "question_pl": "Ile różnych samochodów z tej listy zostało wyprodukowanych w 1974 roku?",
         "query": "select count(*) from cars_data where year='1974'",
         "query_pl": "..."
     },
     {
         "db_id": "employee_hire_evaluation",
         "question": "I'd like to see Shop names.\n",
-        "question_pl": "...",
+        "question_pl": "Chciałbym zobaczyć nazwy sklepów.\n",
         "query": "select name from shop",
         "query_pl": "..."
     },
     {
         "db_id": "singer",
         "question": "how many singers are on the table?",
-        "question_pl": "...",
+        "question_pl": "Ilu piosenkarzy jest na stole?",
         "query": "select count(distinct Singer_ID) from Singer",
         "query_pl": "..."
     },
     {
         "db_id": "flight_2",
         "question": "hi, list out all airport name",
-        "question_pl": "...",
+        "question_pl": "Cześć, wymień wszystkie nazwy lotnisk",
         "query": "SELECT airportname FROM airports",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "How many dog breeds are there?",
-        "question_pl": "...",
+        "question_pl": "Ile jest ras psów?",
         "query": "SELECT count(*) from Breeds",
         "query_pl": "..."
     },
     {
         "db_id": "orchestra",
         "question": "List the name of the conductor with the most years of work.",
-        "question_pl": "...",
+        "question_pl": "Wymień nazwisko dyrygenta z największą liczbą lat pracy.",
         "query": "SELECT Name FROM conductor ORDER BY Year_of_Work DESC LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "voter_1",
         "question": "Can you tell me what the total number of votes are for the states of \"NY\" and \"CA\"?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz mi powiedzieć, jaka jest łączna liczba głosów w stanach \"NY\" i \"CA\"?",
         "query": "SELECT count(*) FROM votes WHERE state  =  'NY' or  state  =  'CA'",
         "query_pl": "..."
     },
     {
         "db_id": "poker_player",
         "question": "List all the nationalities in the table with no duplicate records",
-        "question_pl": "...",
+        "question_pl": "Wymień wszystkie narodowości w tabeli bez zduplikowanych rekordów.",
         "query": "SELECT distinct Nationality FROM people",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "list the makers who designed more than 3 car models",
-        "question_pl": "...",
+        "question_pl": "Wymień producentów, którzy zaprojektowali więcej niż 3 modele samochodów",
         "query": "SELECT T1.* FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker GROUP BY T1.Id HAVING count(*)  >  3;",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "What is the average horsepower?\n",
-        "question_pl": "...",
+        "question_pl": "Jaka jest średnia moc?\n",
         "query": "SELECT avg(Horsepower) FROM cars_data",
         "query_pl": "..."
     },
     {
         "db_id": "concert_singer",
         "question": "When was the Auditions concert?",
-        "question_pl": "...",
+        "question_pl": "Kiedy odbył się koncert Auditions?",
         "query": "SELECT year from concert where concert_name = \"Auditions\"",
         "query_pl": "..."
     },
     {
         "db_id": "wta_1",
         "question": "what are the names of the tourneys?",
-        "question_pl": "...",
+        "question_pl": "Jakie są nazwy turniejów?",
         "query": "SELECT distinct tourney_name FROM matches ",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "How many graduates of the school are there?",
-        "question_pl": "...",
+        "question_pl": "Ilu jest absolwentów tej szkoły?",
         "query": "SELECT count(*)  from students ",
         "query_pl": "..."
     },
     {
         "db_id": "flight_2",
         "question": "Can you show the SourceAirport FlightNo 28?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz pokazać SourceAirport FlightNo 28?",
         "query": "SELECT SourceAirport FROM Flights WHERE FlightNo='28'",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "when is the first transcript released?",
-        "question_pl": "...",
+        "question_pl": "Kiedy ukaże się pierwsza transkrypcja?",
         "query": "SELECT * FROM Transcripts ORDER BY transcript_date ASC LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "wta_1",
         "question": "Find the names of the 3 youngest winners across all matches",
-        "question_pl": "...",
+        "question_pl": "Znajdź nazwiska 3 najmłodszych zwycięzców wszystkich meczów",
         "query": "SELECT DISTINCT winner_name  FROM matches ORDER BY winner_age LIMIT 3",
         "query_pl": "..."
     },
     {
         "db_id": "network_1",
         "question": "How many friends in this table?",
-        "question_pl": "...",
+        "question_pl": "Ilu masz znajomych w tej tabeli?",
         "query": "SELECT count(*) FROM Friend",
         "query_pl": "..."
     },
     {
         "db_id": "poker_player",
         "question": "How many poker players are there ?",
-        "question_pl": "...",
+        "question_pl": "Ilu jest pokerzystów?",
         "query": "select count(*) from poker_player",
         "query_pl": "..."
     },
     {
         "db_id": "museum_visit",
         "question": "How many museums do you have?",
-        "question_pl": "...",
+        "question_pl": "Ile masz muzeów?",
         "query": "SELECT count(*) from museum",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "Hello!  Can you tell me how many students in total there are on this list?",
-        "question_pl": "...",
+        "question_pl": "Witaj!  Czy możesz mi powiedzieć, ilu studentów znajduje się na tej liście?",
         "query": "SELECT count(*) FROM Students ",
         "query_pl": "..."
     },
     {
         "db_id": "pets_1",
         "question": "How many students are there?",
-        "question_pl": "...",
+        "question_pl": "Ilu jest studentów?",
         "query": "SELECT count(StuID) FROM student ",
         "query_pl": "..."
     },
     {
         "db_id": "pets_1",
         "question": "Hello!  Can you show me a list of all of the student IDs for students who have pets?",
-        "question_pl": "...",
+        "question_pl": "Witaj!  Czy możesz mi pokazać listę wszystkich legitymacji studenckich dla studentów, którzy mają zwierzęta?",
         "query": "SELECT distinct T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "how many dogs on the table",
-        "question_pl": "...",
+        "question_pl": "ile psów na stole",
         "query": "SELECT count(*) FROM Dogs",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "What are the names of the nations with the 3 lowest populations?",
-        "question_pl": "...",
+        "question_pl": "Jak nazywają się kraje o 3 najniższych populacjach?",
         "query": "SELECT Name FROM country ORDER BY Population ASC LIMIT 3",
         "query_pl": "..."
     },
     {
         "db_id": "network_1",
         "question": "what is the average of friend id?\n",
-        "question_pl": "...",
+        "question_pl": "Jaki jest średni identyfikator znajomego?\n",
         "query": "SELECT AVG(friend_id) FROM friend",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "how many students are enrolled in a bachelor degree program?",
-        "question_pl": "...",
+        "question_pl": "Ilu studentów jest zapisanych na studia licencjackie?",
         "query": "SELECT count(*) FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1.student_id  =  T2.student_id JOIN Degree_Programs AS T3 ON T2.degree_program_id  =  T3.degree_program_id WHERE T3.degree_summary_name  =  'Bachelor'",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "How many makes are there for Chevrolet?",
-        "question_pl": "...",
+        "question_pl": "Ile jest marek Chevroleta?",
         "query": "SELECT count(DISTINCT Make) FROM CAR_NAMES WHERE Model = 'chevrolet'",
         "query_pl": "..."
     },
     {
         "db_id": "course_teach",
         "question": "Can you show me the names of teachers with the course id for the courses they teach?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz pokazać mi nazwiska nauczycieli z identyfikatorami kursów, które prowadzą?",
         "query": "SELECT T2.Name, T1.course_id FROM course_arrange AS T1 JOIN teacher AS T2 ON T1.Teacher_ID  =  T2.Teacher_ID",
         "query_pl": "..."
     },
     {
         "db_id": "wta_1",
         "question": "Can you show the birth date of player id 200002?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz pokazać datę urodzenia gracza o identyfikatorze 200002?",
         "query": "SELECT birth_date FROM players where player_id=200002",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "which region is the city kabul located",
-        "question_pl": "...",
+        "question_pl": "W którym regionie znajduje się miasto kabul?",
         "query": "SELECT Region FROM country AS T1 JOIN city AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Name  =  \"Kabul\"",
         "query_pl": "..."
     },
     {
         "db_id": "wta_1",
         "question": "What year has the most number of matches, please?",
-        "question_pl": "...",
+        "question_pl": "W którym roku rozegrano najwięcej meczów?",
         "query": "SELECT YEAR FROM matches GROUP BY YEAR ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "What is the average percent?",
-        "question_pl": "...",
+        "question_pl": "Jaki jest średni procent?",
         "query": "select avg(percentage) from countrylanguage",
         "query_pl": "..."
     },
     {
         "db_id": "museum_visit",
         "question": "What is the membership level of Gonzalo Higuaín ?",
-        "question_pl": "...",
+        "question_pl": "Jaki jest poziom członkostwa Gonzalo Higuaín ?",
         "query": "SELECT Level_of_membership FROM visitor WHERE name =  \"Gonzalo Higuaín \"",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "Which country speaks the largest number of languages?\n",
-        "question_pl": "...",
+        "question_pl": "W którym kraju mówi się największą liczbą języków?\n",
         "query": "SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Name ORDER BY COUNT(*) DESC LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "pets_1",
         "question": "How many students have more than one pet?",
-        "question_pl": "...",
+        "question_pl": "Ilu uczniów ma więcej niż jednego zwierzaka?",
         "query": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid GROUP BY T1.stuid HAVING count(*)  >  1",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "HOw many regions are there in ASia?",
-        "question_pl": "...",
+        "question_pl": "Ile jest regionów w Azji?",
         "query": "select count(*) from (SELECT region FROM country WHERE Continent  =  \"Asia\" group by region)",
         "query_pl": "..."
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
         "question": "Hello!  How many template IDs have the description of \"Presentation\"?",
-        "question_pl": "...",
+        "question_pl": "Witaj! Ile identyfikatorów szablonów ma opis \"Prezentacja\"?",
         "query": "SELECT count(*) FROM Ref_template_types AS T1 JOIN Templates AS T2 ON T1.template_type_code  = T2.template_type_code WHERE T1.template_type_description  =  \"Presentation\"",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "How many times at most can a course enrollment result show in different transcripts?",
-        "question_pl": "...",
+        "question_pl": "Ile razy maksymalnie wynik zapisu na kurs może pojawić się w różnych transkrypcjach?",
         "query": "SELECT count(*)  FROM Transcript_Contents GROUP BY student_course_id ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "real_estate_properties",
         "question": "What are the names of the properties with more that one room?",
-        "question_pl": "...",
+        "question_pl": "Jak nazywają się nieruchomości z więcej niż jednym pokojem?",
         "query": "SELECT property_name FROM Properties WHERE room_count  >  1",
         "query_pl": "..."
     },
     {
         "db_id": "flight_2",
         "question": "How many airports are there?\n",
-        "question_pl": "...",
+        "question_pl": "Ile jest lotnisk?\n",
         "query": "SELECT count(*) from airports",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "how many car makers are their in germany",
-        "question_pl": "...",
+        "question_pl": "Ilu producentów samochodów jest w Niemczech?",
         "query": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  'germany';",
         "query_pl": "..."
     },
     {
         "db_id": "employee_hire_evaluation",
         "question": "Which cities do more than one employee under age 30 come from?",
-        "question_pl": "...",
+        "question_pl": "Z których miast pochodzi więcej niż jeden pracownik w wieku poniżej 30 lat?",
         "query": "SELECT city FROM employee WHERE age  <  30 GROUP BY city HAVING count(*)  >  1",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "How many dog owner's are there?",
-        "question_pl": "...",
+        "question_pl": "Ilu jest właścicieli psów?",
         "query": "SELECT count(*) FROM Owners ",
         "query_pl": "..."
     },
     {
         "db_id": "singer",
         "question": "Can you list all the singer ids that aren't present in the song table?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz wymienić wszystkie identyfikatory piosenkarzy, których nie ma w tabeli utworów?",
         "query": "SELECT Name FROM singer WHERE Singer_ID NOT IN (SELECT Singer_ID FROM song)",
         "query_pl": "..."
     },
     {
         "db_id": "singer",
         "question": "What are the names of the singers who were born in either 1948 or 1949?",
-        "question_pl": "...",
+        "question_pl": "Jak nazywają się piosenkarze, którzy urodzili się w 1948 lub 1949 roku?",
         "query": "SELECT Name FROM singer WHERE Birth_Year  =  1948 OR Birth_Year  =  1949",
         "query_pl": "..."
     },
     {
         "db_id": "battle_death",
         "question": "How many battles did not lose any ship with tonnage 225?\n",
-        "question_pl": "...",
+        "question_pl": "W ilu bitwach nie zginął żaden okręt o tonażu 225?\n",
         "query": "SELECT count(*) FROM battle WHERE id NOT IN ( SELECT lost_in_battle FROM ship WHERE tonnage  =  '225' );",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "tell me the FullName of the maker amc",
-        "question_pl": "...",
+        "question_pl": "podaj mi pełną nazwę producenta amc",
         "query": "SELECT Fullname FROM car_makers WHERE maker = \"amc\"",
         "query_pl": "..."
     },
     {
         "db_id": "poker_player",
         "question": "What is the money rank of the poker player with the highest earnings?",
-        "question_pl": "...",
+        "question_pl": "Jaka jest ranga pieniężna pokerzysty z najwyższymi zarobkami?",
         "query": "SELECT Money_Rank FROM poker_player ORDER BY Earnings DESC LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "orchestra",
         "question": "How many orchestras are there?",
-        "question_pl": "...",
+        "question_pl": "Ile jest orkiestr?",
         "query": "SELECT COUNT(DISTINCT Orchestra) FROM orchestra",
         "query_pl": "..."
     },
     {
         "db_id": "concert_singer",
         "question": "Find the name and location of the stadiums which some concerts happened in the years of both 2014 and 2015.",
-        "question_pl": "...",
+        "question_pl": "Znajdź nazwy i lokalizacje stadionów, na których odbyły się koncerty w latach 2014 i 2015.",
         "query": "SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2014 INTERSECT SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2015",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "what are the degree_program_id in the Table Name: Student_Enrolment?",
-        "question_pl": "...",
+        "question_pl": "Jakie są identyfikatory degree_program_id w tabeli Table Name: Student_Enrolment?",
         "query": "SELECT degree_program_id from Student_Enrolment",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "What is the average life expectancy for each government form?\n",
-        "question_pl": "...",
+        "question_pl": "Jaka jest średnia długość życia dla każdej formy rządu?\n",
         "query": "SELECT GovernmentForm, avg(LifeExpectancy) FROM country GROUP BY GovernmentForm ",
         "query_pl": "..."
     },
     {
         "db_id": "tvshow",
         "question": "Which TV channels do not play any cartoons by Ben Jones?  List the ids.",
-        "question_pl": "...",
+        "question_pl": "Które kanały telewizyjne nie puszczają kreskówek Bena Jonesa?  Wymień ich identyfikatory.",
         "query": "SELECT id FROM TV_Channel EXCEPT SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones'",
         "query_pl": "..."
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
         "question": "Can you show me document ids?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz pokazać mi identyfikatory dokumentów?",
         "query": "SELECT document_id FROM Paragraphs ",
         "query_pl": "..."
     },
     {
         "db_id": "flight_2",
         "question": "Howdy!  Can you show me a list of all flight numbers?",
-        "question_pl": "...",
+        "question_pl": "Cześć!  Czy możesz mi pokazać listę wszystkich numerów lotów?",
         "query": "SELECT FlightNo FROM Flights ",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "Which countries have Spanish speaking majorities?",
-        "question_pl": "...",
+        "question_pl": "Które kraje mają większość hiszpańskojęzyczną?",
         "query": "SELECT countrycode FROM (SELECT max(percentage), language, countrycode FROM countrylanguage  GROUP BY countrycode) WHERE language = \"Spanish\"",
         "query_pl": "..."
     },
     {
         "db_id": "flight_2",
         "question": "How many flights are arriving in the city called Aberdeen?",
-        "question_pl": "...",
+        "question_pl": "Ile lotów przybywa do miasta o nazwie Aberdeen?",
         "query": "SELECT count(*) FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport  =  T2.AirportCode WHERE T2.City  =  \"Aberdeen\"",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "WHAT ARE THE AFRICAN COUNTRIES THAT HAVE POPULATION LESS THAN ANY COUNTRY IN ASIA",
-        "question_pl": "...",
+        "question_pl": "JAKIE SĄ KRAJE AFRYKAŃSKIE, KTÓRE MAJĄ MNIEJ LUDNOŚCI NIŻ JAKIKOLWIEK KRAJ W AZJI?",
         "query": "SELECT Name FROM country WHERE Continent  =  \"Africa\"  AND population  <  (SELECT max(population) FROM country WHERE Continent  =  \"Asia\")",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "kindly give me the names that might be used for professionals or owners but cannot be use for dog names",
-        "question_pl": "...",
+        "question_pl": "Uprzejmie podaj mi imiona, które mogą być używane dla profesjonalistów lub właścicieli, ale nie mogą być używane jako imiona dla psów",
         "query": "SELECT first_name FROM Professionals UNION SELECT first_name FROM Owners EXCEPT SELECT name FROM Dogs",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "What are the names of the makers who produced some cars in the year 1970?",
-        "question_pl": "...",
+        "question_pl": "Jak nazywają się producenci, którzy wyprodukowali kilka samochodów w 1970 roku?",
         "query": "SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  =  '1970';",
         "query_pl": "..."
     },
     {
         "db_id": "employee_hire_evaluation",
         "question": "What is the average number of products of all stores?",
-        "question_pl": "...",
+        "question_pl": "Jaka jest średnia liczba produktów we wszystkich sklepach?",
         "query": "select avg(Number_products) from shop",
         "query_pl": "..."
     },
     {
         "db_id": "flight_2",
         "question": "How many flights in this table?",
-        "question_pl": "...",
+        "question_pl": "Ile lotów znajduje się w tej tabeli?",
         "query": "SELECT count(*) FROM flights",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "What are the countries where either English or Dutch is the official language?\n",
-        "question_pl": "...",
+        "question_pl": "W jakich krajach językiem urzędowym jest angielski lub niderlandzki?\n",
         "query": "SELECT * FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" AND IsOfficial  =  \"T\" UNION SELECT * FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"Dutch\" AND IsOfficial  =  \"T\"",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "What are the populations of every country in Africa?",
-        "question_pl": "...",
+        "question_pl": "Jaka jest populacja każdego kraju w Afryce?",
         "query": "SELECT name,population FROM country WHERE Continent  =  \"Africa\"",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "What is the name of the country with the shortest life expectancy in Asia?",
-        "question_pl": "...",
+        "question_pl": "Jak nazywa się kraj o najkrótszej średniej długości życia w Azji?",
         "query": "SELECT Name FROM country WHERE Continent  =  \"Asia\" ORDER BY LifeExpectancy LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "poker_player",
         "question": "How much did the winning poker player make?",
-        "question_pl": "...",
+        "question_pl": "Ile zarobił zwycięski pokerzysta?",
         "query": "SELECT Earnings FROM poker_player ",
         "query_pl": "..."
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
         "question": "Hello there!  Can you please list all the template IDs and which document IDs they are associated with?",
-        "question_pl": "...",
+        "question_pl": "Witaj!  Czy możesz wymienić wszystkie identyfikatory szablonów i identyfikatory dokumentów, z którymi są powiązane?",
         "query": "SELECT template_id FROM Documents",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "Tell me how many dogs have gone through any treatments.",
-        "question_pl": "...",
+        "question_pl": "Powiedz mi, ile psów przeszło jakiekolwiek leczenie.",
         "query": "SELECT count(*) FROM Dogs WHERE dog_id IN ( SELECT dog_id FROM Treatments )",
         "query_pl": "..."
     },
     {
         "db_id": "pets_1",
         "question": "How many female students are on the list?",
-        "question_pl": "...",
+        "question_pl": "Ile studentek znajduje się na liście?",
         "query": "SELECT count(*)FROM student WHERE Sex=\"F\"",
         "query_pl": "..."
     },
     {
         "db_id": "tvshow",
         "question": "Which country tv channels some cartoon written by todd casey?",
-        "question_pl": "...",
+        "question_pl": "W którym kraju telewizja nadaje kreskówkę napisaną przez Todda Caseya?",
         "query": "SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "HOW MANY LANGUAGE ARE THERE?\n ",
-        "question_pl": "...",
+        "question_pl": "ILE JEST JĘZYKÓW?\n ",
         "query": "SELECT count(distinct language) from countrylanguage ",
         "query_pl": "..."
     },
     {
         "db_id": "wta_1",
         "question": "What are the codes of countries that have more than 50 players?",
-        "question_pl": "...",
+        "question_pl": "Jakie są kody krajów, które mają więcej niż 50 graczy?",
         "query": "SELECT country_code FROM players GROUP BY country_code HAVING count(*)  >  50",
         "query_pl": "..."
     },
     {
         "db_id": "battle_death",
         "question": "Can you please show the names of the battles that had no ships lost in the 'English Channel'?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz podać nazwy bitew, w których nie utracono okrętów w \"kanale La Manche\"?",
         "query": "SELECT name FROM battle EXCEPT SELECT T1.name FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.location  =  'English Channel'",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "which breed is the top ranked?",
-        "question_pl": "...",
+        "question_pl": "Która rasa jest najwyżej sklasyfikowana?",
         "query": "SELECT T1.breed_name FROM Breeds AS T1 JOIN Dogs AS T2 ON T1.breed_code  =  T2.breed_code GROUP BY T1.breed_name ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "museum_visit",
         "question": "What are the names who have a membership level higher than 4?",
-        "question_pl": "...",
+        "question_pl": "Jakie nazwiska mają poziom członkostwa wyższy niż 4?",
         "query": "SELECT name FROM visitor WHERE Level_of_membership  >  4 ",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "How many dog owners live in Virginia?",
-        "question_pl": "...",
+        "question_pl": "Ilu właścicieli psów mieszka w Wirginii?",
         "query": "SELECT count(*) FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  'Virginia'",
         "query_pl": "..."
     },
     {
         "db_id": "orchestra",
         "question": "How many record companies are there?",
-        "question_pl": "...",
+        "question_pl": "Ile jest wytwórni płytowych?",
         "query": "SELECT count(Record_Company) FROM orchestra ",
         "query_pl": "..."
     },
     {
         "db_id": "flight_2",
         "question": "How many 'United Airlines' flights go to the Airport 'ASY'?",
-        "question_pl": "...",
+        "question_pl": "Ile lotów linii \"United Airlines\" odbywa się na lotnisko \"ASY\"?",
         "query": "SELECT count(*) FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T2.Airline  =  T1.uid WHERE T1.Airline  =  \"United Airlines\" AND T2.DestAirport  =  \"ASY\"",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "How many Volvo cars are there?",
-        "question_pl": "...",
+        "question_pl": "Ile jest samochodów Volvo?",
         "query": "SELECT count(*) FROM CAR_names where model = \"volvo\"",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "Which semester did bachelor students enroll? List the id.",
-        "question_pl": "...",
+        "question_pl": "Na który semestr zapisali się studenci studiów licencjackich? Wymień identyfikator.",
         "query": "SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  'Master'",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "Which model saves the most gasoline? That is to say, have the maximum miles per gallon?",
-        "question_pl": "...",
+        "question_pl": "Który model oszczędza najwięcej benzyny? To znaczy, który ma maksymalną liczbę mil na galon?",
         "query": "SELECT T1.Model FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id ORDER BY T2.mpg DESC LIMIT 1;",
         "query_pl": "..."
     },
     {
         "db_id": "employee_hire_evaluation",
         "question": "what is the age of George Chuter?",
-        "question_pl": "...",
+        "question_pl": "Ile lat ma George Chuter?",
         "query": "SELECT Age from employee where Name='George Chuter'",
         "query_pl": "..."
     },
     {
         "db_id": "poker_player",
         "question": "What are the names of non poker players?",
-        "question_pl": "...",
+        "question_pl": "Jak nazywają się gracze, którzy nie grają w pokera?",
         "query": "SELECT Name FROM people WHERE People_ID NOT IN (SELECT People_ID FROM poker_player)",
         "query_pl": "..."
     },
     {
         "db_id": "wta_1",
         "question": "how many players are presented on the table",
-        "question_pl": "...",
+        "question_pl": "ilu graczy znajduje się na stole",
         "query": "SELECT count(*) FROM players ",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "what models are produced by the make General Motors?\n",
-        "question_pl": "...",
+        "question_pl": "Jakie modele są produkowane przez markę General Motors?\n",
         "query": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors'",
         "query_pl": "..."
     },
     {
         "db_id": "poker_player",
         "question": "Which height of Aleksey Ostapenko?",
-        "question_pl": "...",
+        "question_pl": "Jakiego wzrostu jest Aleksey Ostapenko?",
         "query": "SELECT height FROM people where name = \"Aleksey Ostapenko\"",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "What is the population of Afghanistan?",
-        "question_pl": "...",
+        "question_pl": "Jaka jest populacja Afganistan?",
         "query": "SELECT Population FROM country where Name  =  \"Afghanistan\"",
         "query_pl": "..."
     },
     {
         "db_id": "museum_visit",
         "question": "What age of Gonzalo Higuaín?",
-        "question_pl": "...",
+        "question_pl": "W jakim wieku jest Gonzalo Higuaín?",
         "query": "SELECT age FROM visitor where name = \"Gonzalo Higuaín\"",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "What are the regions that use English, please?",
-        "question_pl": "...",
+        "question_pl": "W jakich regionach używa się języka angielskiego?",
         "query": "SELECT DISTINCT T1.Region FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\"",
         "query_pl": "..."
     },
     {
         "db_id": "wta_1",
         "question": "What are the names of the 3 youngest winners across all matches?",
-        "question_pl": "...",
+        "question_pl": "Jak nazywają się 3 najmłodsi zwycięzcy wszystkich meczów?",
         "query": "SELECT winner_name  FROM matches ORDER BY winner_age LIMIT 3",
         "query_pl": "..."
     },
     {
         "db_id": "battle_death",
         "question": "How many death events are there?",
-        "question_pl": "...",
+        "question_pl": "Ile jest zdarzeń związanych ze śmiercią?",
         "query": "SELECT count(*) FROM death ",
         "query_pl": "..."
     },
     {
         "db_id": "battle_death",
         "question": "What are the death situations caused by the ship with tonnage 't' ?",
-        "question_pl": "...",
+        "question_pl": "Jakie są sytuacje śmierci spowodowane przez statek o tonażu \"t\"?",
         "query": "SELECT T1.killed FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id = T2.id WHERE T2.tonnage = 't'\n\n",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "Can you list the number of car makers on each continent?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz wymienić liczbę producentów samochodów na każdym kontynencie?",
         "query": "SELECT T1.Continent ,  count(*) FROM CONTINENTS AS T1 JOIN COUNTRIES AS T2 ON T1.ContId  =  T2.continent JOIN car_makers AS T3 ON T2.CountryId  =  T3.Country GROUP BY T1.Continent;",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "What is the total number of countries?",
-        "question_pl": "...",
+        "question_pl": "Jaka jest łączna liczba krajów?",
         "query": "SELECT count(*) FROM country ",
         "query_pl": "..."
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
         "question": "How many documents have template type code BK?",
-        "question_pl": "...",
+        "question_pl": "Ile dokumentów ma kod typu szablonu BK?",
         "query": "SELECT count(*) FROM Templates AS T1 JOIN Documents AS T2 ON T1.template_id  =  T2.template_id WHERE T1.template_type_code  =  \"BK\"",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "What are the codes of the countries that do not speak English?",
-        "question_pl": "...",
+        "question_pl": "Jakie są kody krajów, w których nie mówi się po angielsku?",
         "query": "SELECT CountryCode FROM countrylanguage WHERE LANGUAGE  !=  \"English\"",
         "query_pl": "..."
     },
     {
         "db_id": "concert_singer",
         "question": "Can you tell me which countries a singer above age 40 are from please?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz mi powiedzieć, z jakich krajów pochodzą piosenkarze w wieku powyżej 40 lat?",
         "query": "SELECT country FROM singer WHERE age  >  40",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "WHAT IS THE ACCELERATE OF THE CAR MAKE AMC HORNET SPORTABOUT(SW)",
-        "question_pl": "...",
+        "question_pl": "JAKIE JEST PRZYSPIESZENIE SAMOCHODU MARKI AMC HORNET SPORTABOUT(SW)",
         "query": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  'amc hornet sportabout (sw)';",
         "query_pl": "..."
     },
     {
         "db_id": "concert_singer",
         "question": "show the name and theme for all concerts and the number of singers in each concert.",
-        "question_pl": "...",
+        "question_pl": "Pokaż nazwę i temat wszystkich koncertów oraz liczbę wokalistów w każdym koncercie.",
         "query": "SELECT T2.concert_name , T2.theme , count(*) FROM singer_in_concert AS T1 JOIN concert AS T2 ON T1.concert_id = T2.concert_id GROUP BY T2.concert_id\n\n",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "What is the population in Asian continent?",
-        "question_pl": "...",
+        "question_pl": "Jaka jest populacja na kontynencie azjatyckim?",
         "query": "SELECT sum(Population) FROM country where Continent = 'Asia'",
         "query_pl": "..."
     },
     {
         "db_id": "concert_singer",
         "question": "What are the names of the singers whose song release year is greater than the average song release year",
-        "question_pl": "...",
+        "question_pl": "Jak nazywają się piosenkarze, których rok wydania utworu jest dłuższy niż średni rok wydania utworu?",
         "query": "SELECT song_name FROM singer WHERE song_release_year  >  (SELECT avg(song_release_year) FROM singer)",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "how many students there",
-        "question_pl": "...",
+        "question_pl": "ilu jest studentów",
         "query": "SELECT count(*) FROM Students",
         "query_pl": "..."
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
         "question": "What are the templates ever used by any document?",
-        "question_pl": "...",
+        "question_pl": "Jakie szablony są kiedykolwiek używane w jakimkolwiek dokumencie?",
         "query": "SELECT * FROM Templates AS T1 JOIN Documents AS T2 ON T1.Template_ID  =  T2.template_ID",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "how many students live in North Carolina?",
-        "question_pl": "...",
+        "question_pl": "Ilu studentów mieszka w Karolinie Północnej?",
         "query": "SELECT count(*) FROM Students AS T1 JOIN Addresses AS T2 ON T1.current_address_id  =  T2.address_id WHERE T2.state_province_county  =  'NorthCarolina'",
         "query_pl": "..."
     },
     {
         "db_id": "voter_1",
         "question": "What are all the area codes?",
-        "question_pl": "...",
+        "question_pl": "Jakie są wszystkie numery kierunkowe?",
         "query": "select area_code from AREA_CODE_STATE",
         "query_pl": "..."
     },
     {
         "db_id": "employee_hire_evaluation",
         "question": "how many shop are presented on the table",
-        "question_pl": "...",
+        "question_pl": "ile sklepów jest prezentowanych w tabeli",
         "query": "SELECT count(*) FROM shop ",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "Hello!  Can you list all of the deparatment names and department IDs?",
-        "question_pl": "...",
+        "question_pl": "Witaj!  Czy możesz wymienić wszystkie nazwy oddziałów i identyfikatory działów?",
         "query": "select department_id,department_name from Departments",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "What are the ids of the professionals?\n",
-        "question_pl": "...",
+        "question_pl": "Jakie są identyfikatory specjalistów?\n",
         "query": "SELECT professional_id  FROM Professionals ",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "Can you tell me the ID of the american motor company ?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz mi podać identyfikator amerykańskiej firmy motoryzacyjnej?",
         "query": "SELECT Id FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker WHERE T1.FullName  =  'American Motor Company';",
         "query_pl": "..."
     },
     {
         "db_id": "course_teach",
         "question": "list the name of the teachers and the courses assigned for them to teach",
-        "question_pl": "...",
+        "question_pl": "wymień imiona i nazwiska nauczycieli oraz kursy, których będą uczyć.",
         "query": "SELECT T3.Name ,  T2.Course FROM course_arrange AS T1 JOIN course AS T2 ON T1.Course_ID  =  T2.Course_ID JOIN teacher AS T3 ON T1.Teacher_ID  =  T3.Teacher_ID ",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "can you show countries name?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz podać nazwę kraju?",
         "query": "SELECT Name FROM country",
         "query_pl": "..."
     },
     {
         "db_id": "tvshow",
         "question": "IN WHAT LANGUAGE SKY MUSIC AVAILABLE?",
-        "question_pl": "...",
+        "question_pl": "W JAKIM JĘZYKU DOSTĘPNA JEST MUZYKA Z NIEBA?",
         "query": "SELECT Language FROM TV_Channel where series_name='Sky Music'",
         "query_pl": "..."
     },
     {
         "db_id": "tvshow",
         "question": "Can you please tell me the language used on the least number of TV Channels?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz mi powiedzieć, jaki język jest używany na najmniejszej liczbie kanałów telewizyjnych?",
         "query": "SELECT LANGUAGE FROM TV_Channel GROUP BY LANGUAGE ORDER BY count(*) ASC LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "Which first names are used for professionals or owners?",
-        "question_pl": "...",
+        "question_pl": "Jakie imiona są używane dla profesjonalistów lub właścicieli?",
         "query": "SELECT first_name FROM Professionals UNION SELECT first_name FROM Owners ",
         "query_pl": "..."
     },
     {
         "db_id": "pets_1",
         "question": "Can you tell me the last names of students who have pets?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz mi podać nazwiska uczniów, którzy mają zwierzęta?",
         "query": "select lname from Student AS T1 JOIN Has_Pet AS T2 ON T2.stuid=T1.stuid",
         "query_pl": "..."
     },
     {
         "db_id": "orchestra",
         "question": "Can you show me orchestra names and the major record formats?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz pokazać mi nazwy orkiestr i główne formaty nagrań?",
         "query": "SELECT orchestra, Major_Record_Format  FROM orchestra",
         "query_pl": "..."
     },
     {
         "db_id": "museum_visit",
         "question": "how many museum id in the list?",
-        "question_pl": "...",
+        "question_pl": "Ile identyfikatorów muzeów znajduje się na liście?",
         "query": "SELECT count(Museum_ID ) FROM museum",
         "query_pl": "..."
     },
     {
         "db_id": "museum_visit",
         "question": "List the names of all visitors who visited some museums more than once, please.",
-        "question_pl": "...",
+        "question_pl": "Wymień nazwiska wszystkich odwiedzających, którzy odwiedzili niektóre muzea więcej niż jeden raz.",
         "query": "SELECT  t1.name FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id GROUP BY t1.id HAVING count(*)  >  1",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "How many government forms are in the table?",
-        "question_pl": "...",
+        "question_pl": "Ile formularzy rządowych znajduje się w tabeli?",
         "query": "SELECT count(GovernmentForm) FROM country",
         "query_pl": "..."
     },
     {
         "db_id": "museum_visit",
         "question": "Whats the level of membership customer id 1 has?",
-        "question_pl": "...",
+        "question_pl": "Jaki jest poziom członkostwa klienta o identyfikatorze 1?",
         "query": "SELECT \tLevel_of_membership FROM visitor WHERE ID = 1",
         "query_pl": "..."
     },
     {
         "db_id": "flight_2",
         "question": "Hi, What Airline has the largest number of flights?",
-        "question_pl": "...",
+        "question_pl": "Cześć, Która linia lotnicza ma największą liczbę lotów?",
         "query": "SELECT T1.airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline GROUP BY T1.Airline ORDER BY count(*) desc LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "battle_death",
         "question": "Hi there!  Can you show me a list of all of the battle ids and the corresponding battle names?",
-        "question_pl": "...",
+        "question_pl": "Cześć!  Czy możesz pokazać mi listę wszystkich identyfikatorów bitew i odpowiadających im nazw bitew?",
         "query": "SELECT T1.id ,  T1.name FROM battle AS T1",
         "query_pl": "..."
     },
     {
         "db_id": "pets_1",
         "question": "Hey can you tell me the average age for cats?",
-        "question_pl": "...",
+        "question_pl": "Hej, możesz mi podać średni wiek kotów?",
         "query": "SELECT avg(pet_age) FROM pets WHERE PetType = 'cat'",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "What is the phone number of the professional who has done the most treatment.",
-        "question_pl": "...",
+        "question_pl": "Jaki jest numer telefonu specjalisty, który wykonał najwięcej zabiegów.",
         "query": "SELECT T1.cell_number FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id order by count(*)  desc limit 1",
         "query_pl": "..."
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
         "question": "WHAT IS THE DOCUMENT ID WITH 1 TO 2 PARAGRAPH?",
-        "question_pl": "...",
+        "question_pl": "JAKI JEST IDENTYFIKATOR DOKUMENTU Z 1 DO 2 AKAPITAMI?",
         "query": "SELECT document_id FROM Paragraphs GROUP BY document_id HAVING count(*) BETWEEN 1 AND 2",
         "query_pl": "..."
     },
     {
         "db_id": "course_teach",
         "question": "Who is the youngest teacher?",
-        "question_pl": "...",
+        "question_pl": "Kto jest najmłodszym nauczycielem?",
         "query": "select name from teacher order by Age asc limit 1",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "Hi what is the latest transcript?",
-        "question_pl": "...",
+        "question_pl": "Cześć, jaka jest najnowsza transkrypcja?",
         "query": "SELECT transcript_id FROM Transcripts ORDER BY transcript_date DESC LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "Show me the date and id of the transcript with at least 2 course results.",
-        "question_pl": "...",
+        "question_pl": "Pokaż mi datę i identyfikator transkrypcji z co najmniej 2 wynikami kursów.",
         "query": "SELECT T2.transcript_date ,  T1.transcript_id FROM Transcript_Contents AS T1 JOIN Transcripts AS T2 ON T1.transcript_id  =  T2.transcript_id GROUP BY T1.transcript_id HAVING count(*)  >=  2",
         "query_pl": "..."
     },
     {
         "db_id": "network_1",
         "question": "Hello!  Can you see all of the ids of the high school students?",
-        "question_pl": "...",
+        "question_pl": "Witaj!  Czy widzisz wszystkie identyfikatory licealistów?",
         "query": "select student_id from Friend",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "Please list the emails of all the professionals who live in the state of Hawaii?",
-        "question_pl": "...",
+        "question_pl": "Podaj adresy e-mail wszystkich profesjonalistów mieszkających na Hawajach.",
         "query": "SELECT email_address FROM Professionals WHERE state  =  'Hawaii' ",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "Can you list the semester names and their enrollments?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz wymienić nazwy semestrów i ich zapisy?",
         "query": "SELECT T1.semester_name, count(*) from semesters as T1 join student_enrolment as T2 on T1.semester_id = T2.semester_id group by T2.semester_id",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "What are all of the countries where English isn't the official language?",
-        "question_pl": "...",
+        "question_pl": "Jakie są kraje, w których angielski nie jest językiem urzędowym?",
         "query": "SELECT name FROM country WHERE Name NOT IN (SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" AND T2.IsOfficial  =  \"T\")",
         "query_pl": "..."
     },
     {
         "db_id": "flight_2",
         "question": "Find Flight from CVO to SNA",
-        "question_pl": "...",
+        "question_pl": "Znajdź lot z CVO do SNA",
         "query": "SELECT FlightNo FROM flights where SourceAirport=\"CVO\" and DestAirport=\"SNA\"",
         "query_pl": "..."
     },
     {
         "db_id": "tvshow",
         "question": "What is the TV Channel of TV series \"A love of a lifetime\"?\n",
-        "question_pl": "...",
+        "question_pl": "Jaki jest kanał telewizyjny serialu \"Miłość na całe życie\"?\n",
         "query": "SELECT T1.series_name FROM TV_Channel AS T1 JOIN TV_series AS T2 ON T1.id = T2.Channel WHERE T2.Episode = \"A Love of a Lifetime\";",
         "query_pl": "..."
     },
     {
         "db_id": "wta_1",
         "question": "What is the player id for the youngest player?",
-        "question_pl": "...",
+        "question_pl": "Jaki jest identyfikator najmłodszego gracza?",
         "query": "SELECT player_id FROM players ORDER BY birth_date desc LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "course_teach",
         "question": "What're the names of the teachers who teach two or more courses?",
-        "question_pl": "...",
+        "question_pl": "Jak nazywają się nauczyciele, którzy prowadzą dwa lub więcej kursów?",
         "query": "SELECT T2.Name FROM course_arrange AS T1 JOIN teacher AS T2 ON T1.Teacher_ID  =  T2.Teacher_ID GROUP BY T2.Name HAVING COUNT(*)  >=  2",
         "query_pl": "..."
     },
     {
         "db_id": "battle_death",
         "question": "how many ships are there?",
-        "question_pl": "...",
+        "question_pl": "Ile jest statków?",
         "query": "SELECT   count(*)  from ship",
         "query_pl": "..."
     },
     {
         "db_id": "concert_singer",
         "question": "What is the name of the youngest singer?",
-        "question_pl": "...",
+        "question_pl": "Jak nazywa się najmłodsza piosenkarka?",
         "query": "SELECT Name FROM singer ORDER BY age LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "Can you please list all the names of the countries that are in the continent of Europe?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz wymienić wszystkie nazwy krajów, które znajdują się na kontynencie europejskim?",
         "query": "SELECT Name FROM country WHERE continent  =  \"Europe\"",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "What is the full name of the department that has the substring computer in its name?",
-        "question_pl": "...",
+        "question_pl": "Jaka jest pełna nazwa działu, który ma w nazwie podciąg computer?",
         "query": "SELECT department_name FROM Departments WHERE department_name LIKE '%computer%'",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "how many cylinders in the cars_data table",
-        "question_pl": "...",
+        "question_pl": "ile cylindrów w tabeli cars_data",
         "query": "SELECT sum(Cylinders) FROM cars_data",
         "query_pl": "..."
     },
     {
         "db_id": "concert_singer",
         "question": "what is the age of Joe sharp ",
-        "question_pl": "...",
+        "question_pl": "Ile lat ma Joe sharp?",
         "query": "SELECT age from singer where name = \"Joe Sharp\"",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "Which models are manufactured by the maker with the name \"General Motors\"?",
-        "question_pl": "...",
+        "question_pl": "Które modele są produkowane przez producenta o nazwie \"General Motors\"?",
         "query": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors'",
         "query_pl": "..."
     },
     {
         "db_id": "network_1",
         "question": "How many students in this table?",
-        "question_pl": "...",
+        "question_pl": "Ilu uczniów znajduje się w tej tabeli?",
         "query": "SELECT count(*) FROM Highschooler",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "What countries produced cars?",
-        "question_pl": "...",
+        "question_pl": "Jakie kraje produkowały samochody?",
         "query": "SELECT T1.CountryName FROM countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.countryId  =  T2.Country;",
         "query_pl": "..."
     },
     {
         "db_id": "network_1",
         "question": "Can you show me a list of student IDs and their friends IDs?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz mi pokazać listę identyfikatorów studentów i ich znajomych?",
         "query": "SELECT student_id, friend_id FROM Friend",
         "query_pl": "..."
     },
     {
         "db_id": "employee_hire_evaluation",
         "question": "Hello!  Can you please provide me with a list of all of the cities in this database?",
-        "question_pl": "...",
+        "question_pl": "Witaj!  Czy możesz podać mi listę wszystkich miast w tej bazie danych?",
         "query": "SELECT city FROM employee",
         "query_pl": "..."
     },
     {
         "db_id": "pets_1",
         "question": "How many students in the \"Student\" table are over the age of 20?",
-        "question_pl": "...",
+        "question_pl": "Ilu uczniów w tabeli \"Uczniowie\" ma więcej niż 20 lat?",
         "query": "SELECT count(*) FROM student WHERE age  >  20",
         "query_pl": "..."
     },
     {
         "db_id": "wta_1",
         "question": "Tell me the loser_name whose age is 24.626967830300003 ",
-        "question_pl": "...",
+        "question_pl": "Podaj mi nazwę przegranego, którego wiek wynosi 24 lata. 626967830300003",
         "query": "SELECT distinct loser_name from matches where loser_age = 24.626967830300003",
         "query_pl": "..."
     },
     {
         "db_id": "network_1",
         "question": "What are the names of all of the high schoolers?",
-        "question_pl": "...",
+        "question_pl": "Jak nazywają się wszyscy licealiści?",
         "query": "SELECT name FROM Highschooler",
         "query_pl": "..."
     },
     {
         "db_id": "real_estate_properties",
         "question": "What is the feature type name of the feature AirCon?",
-        "question_pl": "...",
+        "question_pl": "Jaka jest nazwa typu funkcji AirCon?",
         "query": "SELECT T2.feature_type_name FROM Other_Available_Features AS T1 JOIN Ref_Feature_Types AS T2 ON T1.feature_type_code  =  T2.feature_type_code WHERE T1.feature_name  =  \"AirCon\"",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "Can you list the transcript date that appears least often?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz wymienić datę transkrypcji, która pojawia się najrzadziej?",
         "query": "SELECT transcript_date FROM Transcripts group by transcript_date order by count(*) asc limit 1",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "how many car models are produced in the USA?",
-        "question_pl": "...",
+        "question_pl": "Ile modeli samochodów jest produkowanych w USA?",
         "query": "SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  'usa';",
         "query_pl": "..."
     },
     {
         "db_id": "network_1",
         "question": "Show the names of students who have at least 2 likes.",
-        "question_pl": "...",
+        "question_pl": "Pokaż imiona uczniów, którzy mają co najmniej 2 polubienia.",
         "query": "SELECT T2.name FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id HAVING count(*)  >=  2",
         "query_pl": "..."
     },
     {
         "db_id": "flight_2",
         "question": "what is the dest airport of airline 1",
-        "question_pl": "...",
+        "question_pl": "Jakie jest lotnisko docelowe linii lotniczej 1",
         "query": "SELECT DestAirport FROM flights WHERE airline  =  \"1\"",
         "query_pl": "..."
     },
     {
         "db_id": "network_1",
         "question": "what is the average of grades?",
-        "question_pl": "...",
+        "question_pl": "Jaka jest średnia ocen?",
         "query": "SELECT AVG(grade) FROM Highschooler",
         "query_pl": "..."
     },
     {
         "db_id": "poker_player",
         "question": "Can you list all the names of the poker players ordered by the final tables in ascending order please?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz wymienić wszystkie nazwiska pokerzystów uporządkowane według stołów finałowych w kolejności rosnącej?",
         "query": "SELECT T1.Name FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T2.Final_Table_Made",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "What are the release dates for transcripts?\n",
-        "question_pl": "...",
+        "question_pl": "Jakie są daty wydania transkrypcji?\n",
         "query": "select transcript_date from Transcripts",
         "query_pl": "..."
     },
     {
         "db_id": "tvshow",
         "question": "which is the most recently aired cartoon?\n",
-        "question_pl": "...",
+        "question_pl": "Która kreskówka była ostatnio emitowana?\n",
         "query": "SELECT Title FROM cartoon ORDER BY original_air_date LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
         "question": "What is the version number of template id 3?",
-        "question_pl": "...",
+        "question_pl": "Jaki jest numer wersji szablonu id 3?",
         "query": "SELECT Version_Number from Templates where Template_ID = 3",
         "query_pl": "..."
     },
     {
         "db_id": "flight_2",
         "question": "Can you list all the flight numbers that have a source airport value of AHD?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz wymienić wszystkie numery lotów, dla których wartość lotniska źródłowego wynosi AHD?",
         "query": "SELECT FlightNo FROM FLIGHTS WHERE SourceAirport  = \"AHD\"",
         "query_pl": "..."
     },
     {
         "db_id": "concert_singer",
         "question": "How many stadiums can accommodate more than 1000 people in average.?",
-        "question_pl": "...",
+        "question_pl": "Ile stadionów może pomieścić średnio ponad 1000 osób?",
         "query": "SELECT count(*) FROM stadium WHERE average > 1000",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "Which African countries have a smaller population than that of any Asian country?",
-        "question_pl": "...",
+        "question_pl": "Które kraje afrykańskie mają mniejszą populację niż którykolwiek kraj azjatycki?",
         "query": "SELECT Name FROM country WHERE Continent  =  \"Africa\"  AND population  <  (SELECT min(population) FROM country WHERE Continent  =  \"Asia\")",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "Hello!  Can you tell me how many dogs have not gone through any treatment?",
-        "question_pl": "...",
+        "question_pl": "Witaj!  Czy możesz mi powiedzieć, ile psów nie przeszło żadnego leczenia?",
         "query": "SELECT count(*) FROM Dogs WHERE dog_id NOT IN ( SELECT dog_id FROM Treatments )",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "Find the program which most number of students are enrolled in. List both the id and the summary.",
-        "question_pl": "...",
+        "question_pl": "Znajdź program, do którego zapisało się najwięcej studentów. Wymień zarówno identyfikator, jak i podsumowanie.",
         "query": "SELECT T1.degree_program_id ,  T1.degree_summary_name FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id GROUP BY T1.degree_program_id ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "whats is total cost of treatment?\n",
-        "question_pl": "...",
+        "question_pl": "Jaki jest całkowity koszt leczenia?\n",
         "query": "SELECT sum(cost_of_treatment) from treatments",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "Show me continent IDs of each continent",
-        "question_pl": "...",
+        "question_pl": "Pokaż mi identyfikatory poszczególnych kontynentów",
         "query": "SELECT ContId ,  Continent  FROM CONTINENTS",
         "query_pl": "..."
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
         "question": "Hello!  How are you?  First, I'll start with a straightforward request...  Can you show me all document IDs and their corresponding document names and number of paragraphs?",
-        "question_pl": "...",
+        "question_pl": "Witaj, jak się masz?  Najpierw zacznę od prostej prośby...  Czy możesz pokazać mi wszystkie identyfikatory dokumentów i odpowiadające im nazwy dokumentów oraz liczbę akapitów?",
         "query": "SELECT T1.document_id ,  T2.document_name ,  count(*) FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id GROUP BY T1.document_id",
         "query_pl": "..."
     },
     {
         "db_id": "tvshow",
         "question": "Hello!  Can you provide me with a list of all cartoons written by Todd Casey?",
-        "question_pl": "...",
+        "question_pl": "Witaj!  Czy możesz podać mi listę wszystkich komiksów napisanych przez Todda Caseya?",
         "query": "select * from Cartoon where Written_by = 'Todd Casey'",
         "query_pl": "..."
     },
     {
         "db_id": "museum_visit",
         "question": "Can you tell me the total amount spent on tickets by visitors with membership level 1?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz podać całkowitą kwotę wydaną na bilety przez odwiedzających z poziomem członkostwa 1?",
         "query": "SELECT sum(t2.Total_spent) FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id WHERE t1.Level_of_membership  =  1",
         "query_pl": "..."
     },
     {
         "db_id": "wta_1",
         "question": "what is the first name of player id 200001?",
-        "question_pl": "...",
+        "question_pl": "Jakie jest imię gracza o id 200001?",
         "query": "SELECT first_name FROM players WHERE player_id = 200001",
         "query_pl": "..."
     },
     {
         "db_id": "wta_1",
         "question": "find the total ranking point for each player and their first name",
-        "question_pl": "...",
+        "question_pl": "znajdź łączną liczbę punktów rankingowych dla każdego gracza i jego imię.",
         "query": "SELECT sum(ranking_points) ,  T1.first_name FROM players AS T1 JOIN rankings AS T2 ON T1.player_id  =  T2.player_id GROUP BY T1.first_name",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "What African country has the largest population?",
-        "question_pl": "...",
+        "question_pl": "Który kraj afrykański ma największą populację?",
         "query": "SELECT Name FROM country WHERE Continent = \"Africa\" order by population desc limit 1",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "Which unique cities are in Asian countries?",
-        "question_pl": "...",
+        "question_pl": "Jakie wyjątkowe miasta znajdują się w krajach azjatyckich?",
         "query": "SELECT DISTINCT T3.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode JOIN city AS T3 ON T1.Code  =  T3.CountryCode WHERE T1.Continent  =  \"Asia\"",
         "query_pl": "..."
     },
     {
         "db_id": "wta_1",
         "question": "Could you list the average ranking for each player with their first name?",
-        "question_pl": "...",
+        "question_pl": "Czy mógłbyś podać średni ranking każdego gracza wraz z jego imieniem?",
         "query": "SELECT avg(ranking) ,  T1.first_name FROM players AS T1 JOIN rankings AS T2 ON T1.player_id  =  T2.player_id GROUP BY T1.player_id",
         "query_pl": "..."
     },
     {
         "db_id": "network_1",
         "question": "What is the average grade of all students who have some friends, please?",
-        "question_pl": "...",
+        "question_pl": "Jaka jest średnia ocen wszystkich uczniów, którzy mają przyjaciół?",
         "query": "SELECT avg(grade) FROM Highschooler WHERE id IN (SELECT T1.student_id FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id)",
         "query_pl": "..."
     },
     {
         "db_id": "concert_singer",
         "question": "show the stadium names without any concern",
-        "question_pl": "...",
+        "question_pl": "wyświetlaj nazwy stadionów bez żadnych obaw",
         "query": "SELECT name FROM stadium WHERE stadium_id NOT IN (SELECT stadium_id FROM concert)",
         "query_pl": "..."
     },
     {
         "db_id": "singer",
         "question": "What is the most common citizenship of singers, please?",
-        "question_pl": "...",
+        "question_pl": "Jakie jest najczęstsze obywatelstwo piosenkarzy?",
         "query": "SELECT Citizenship FROM singer GROUP BY Citizenship ORDER BY COUNT(*) DESC LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "poker_player",
         "question": "To which nationality does the people_id 1 belongs to ?",
-        "question_pl": "...",
+        "question_pl": "Do jakiej narodowości należy osoba o identyfikatorze people_id 1?",
         "query": "SELECT Nationality FROM people where People_ID=1",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "Which program had the least number of students enrolled?",
-        "question_pl": "...",
+        "question_pl": "Do którego programu zapisało się najmniej studentów?",
         "query": "SELECT T1.degree_summary_name FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id GROUP BY T1.degree_summary_name ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "Which programs has the student by the first name Timmothy enrolled?",
-        "question_pl": "...",
+        "question_pl": "Na jakie programy zapisał się student o imieniu Timmothy?",
         "query": "SELECT T2.degree_program_id FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1.student_id = T2.student_id WHERE T1.first_name = \"Timmothy\"",
         "query_pl": "..."
     },
     {
         "db_id": "pets_1",
         "question": "Hi. What are the different types of pets?",
-        "question_pl": "...",
+        "question_pl": "Witam. Jakie są różne rodzaje zwierząt domowych?",
         "query": "SELECT distinct PetType from Pets",
         "query_pl": "..."
     },
     {
         "db_id": "student_transcripts_tracking",
         "question": "Could you tell me the last names of all the students who live in the state of North Carolina?",
-        "question_pl": "...",
+        "question_pl": "Czy możesz podać nazwiska wszystkich uczniów mieszkających w stanie Karolina Północna?",
         "query": "SELECT T1.last_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.current_address_id  =  T2.address_id WHERE T2.state_province_county  =  'NorthCarolina' ",
         "query_pl": "..."
     },
     {
         "db_id": "wta_1",
         "question": "find the name of loser and winner who played in the match with the greatest number of minutes",
-        "question_pl": "...",
+        "question_pl": "znajdź nazwisko przegranego i zwycięzcy, którzy zagrali w meczu z największą liczbą minut",
         "query": "SELECT winner_name ,  loser_name FROM matches ORDER BY minutes DESC LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "What are all the car models available? ",
-        "question_pl": "...",
+        "question_pl": "Jakie są dostępne modele samochodów?",
         "query": "select distinct Model from car_names",
         "query_pl": "..."
     },
     {
         "db_id": "network_1",
         "question": "which grade has the \nmost high schoolers",
-        "question_pl": "...",
+        "question_pl": "Która klasa ma\nnajwięcej licealistów",
         "query": "SELECT grade FROM Highschooler GROUP BY grade ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "network_1",
         "question": "Show the names of all of the high schoolers.",
-        "question_pl": "...",
+        "question_pl": "Pokaż nazwiska wszystkich licealistów.",
         "query": "select name from highschooler",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "Hi! which countries are in europe?",
-        "question_pl": "...",
+        "question_pl": "Cześć! Które kraje są w Europie?",
         "query": "SELECT distinct T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europe'",
         "query_pl": "..."
     },
     {
         "db_id": "museum_visit",
         "question": "Hello there!  Can you tell me the total number of visitors who did not visit any museum that was opened after 2010?",
-        "question_pl": "...",
+        "question_pl": "Witajcie!  Czy możesz mi podać całkowitą liczbę odwiedzających, którzy nie odwiedzili żadnego muzeum otwartego po 2010 roku?",
         "query": "SELECT count(*) FROM visitor WHERE id NOT IN (SELECT t2.visitor_id FROM museum AS t1 JOIN visit AS t2 ON t1.Museum_ID  =  t2.Museum_ID WHERE t1.open_year  >  2010)",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "Hi! How many owners temporarily do not have dogs?",
-        "question_pl": "...",
+        "question_pl": "Cześć! Ilu właścicieli tymczasowo nie ma psów?",
         "query": "SELECT count(*) FROM Owners WHERE owner_id NOT IN ( SELECT owner_id FROM Dogs )",
         "query_pl": "..."
     },
     {
         "db_id": "tvshow",
         "question": "Which cartoon aired first?\n",
-        "question_pl": "...",
+        "question_pl": "Która kreskówka została wyemitowana jako pierwsza?\n",
         "query": "SELECT title  FROM cartoon ORDER BY original_air_date LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "singer",
         "question": "which singers were born before 1945?",
-        "question_pl": "...",
+        "question_pl": "Którzy piosenkarze urodzili się przed 1945 rokiem?",
         "query": "SELECT * FROM singer WHERE Birth_Year  <  1945",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "how many country there",
-        "question_pl": "...",
+        "question_pl": "ile jest krajów",
         "query": "select count(*) from Country;",
         "query_pl": "..."
     },
     {
         "db_id": "world_1",
         "question": "Hi, what is the population of the Caribbean?\n",
-        "question_pl": "...",
+        "question_pl": "Cześć, jaka jest populacja Karaiby?\n",
         "query": "SELECT sum(Population) FROM country WHERE Region = \"Caribbean\"",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "Which street does  Nora Haley live?",
-        "question_pl": "...",
+        "question_pl": "Na której ulicy mieszka Nora Haley?",
         "query": "SELECT street FROM Owners WHERE first_name = \"Nora\" and last_name = \"Haley\"",
         "query_pl": "..."
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
         "question": "What is the document id with least number of paragraphs?",
-        "question_pl": "...",
+        "question_pl": "Jaki jest identyfikator dokumentu z najmniejszą liczbą akapitów?",
         "query": "SELECT document_id FROM Paragraphs GROUP BY document_id ORDER BY count(*) ASC LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "wta_1",
         "question": "How many matches played in 2013?",
-        "question_pl": "...",
+        "question_pl": "Ile meczów rozegrałeś w 2013 roku?",
         "query": "SELECT count(*) FROM matches WHERE YEAR  =  2013 ",
         "query_pl": "..."
     },
     {
         "db_id": "tvshow",
         "question": "which countries tv channels are not playing any cartoon written todd casey\n",
-        "question_pl": "...",
+        "question_pl": "W których krajach kanały telewizyjne nie puszczają żadnych kreskówek napisał todd casey\n",
         "query": "SELECT country FROM TV_Channel EXCEPT SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'",
         "query_pl": "..."
     },
     {
         "db_id": "concert_singer",
         "question": "Show the name and the release year of the song by the youngest singer",
-        "question_pl": "...",
+        "question_pl": "Pokaż nazwę i rok wydania utworu najmłodszego piosenkarza.",
         "query": "SELECT song_name ,  song_release_year FROM singer ORDER BY age LIMIT 1",
         "query_pl": "..."
     },
     {
         "db_id": "pets_1",
         "question": "hi, what number of students have a dog as a pet?",
-        "question_pl": "...",
+        "question_pl": "Cześć, ilu studentów ma psa jako zwierzę domowe?",
         "query": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog'",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "List the first name of professionals",
-        "question_pl": "...",
+        "question_pl": "Wymień imiona i nazwiska specjalistów",
         "query": "SELECT DISTINCT first_name FROM professionals ",
         "query_pl": "..."
     },
     {
         "db_id": "course_teach",
         "question": "how many course id numbers",
-        "question_pl": "...",
+        "question_pl": "ile numerów identyfikacyjnych kursu",
         "query": "SELECT count(Course_ID) FROM course",
         "query_pl": "..."
     },
     {
         "db_id": "dog_kennels",
         "question": "Hi there! Can you tell me how many different professional IDs are on this list?",
-        "question_pl": "...",
+        "question_pl": "Cześć! Czy możesz mi powiedzieć, ile różnych profesjonalnych identyfikatorów znajduje się na tej liście?",
         "query": "SELECT count(distinct professional_id) from professionals",
         "query_pl": "..."
     },
     {
         "db_id": "battle_death",
         "question": "Show the names of all the battles. ",
-        "question_pl": "...",
+        "question_pl": "Pokaż nazwy wszystkich bitew.",
         "query": "SELECT name  FROM battle",
         "query_pl": "..."
     },
     {
         "db_id": "network_1",
         "question": "how many Likes there",
-        "question_pl": "...",
+        "question_pl": "Ile masz polubień",
         "query": "SELECT count(*) FROM Likes",
         "query_pl": "..."
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
         "question": "Show me the documents",
-        "question_pl": "...",
+        "question_pl": "Pokaż mi dokumenty",
         "query": "SELECT * FROM Documents",
         "query_pl": "..."
     },
     {
         "db_id": "car_1",
         "question": "whats the average acceleration",
-        "question_pl": "...",
+        "question_pl": "Jakie jest średnie przyspieszenie?",
         "query": "SELECT AVG(Accelerate) FROM cars_data",
         "query_pl": "..."
     }
