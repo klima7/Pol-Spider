@@ -4091,6 +4091,10 @@
          ],
          [
             0,
+            "company type code"
+         ],
+         [
+            0,
             "company id"
          ],
          [
@@ -4344,12 +4348,20 @@
          [
             13,
             "skill id"
+         ],
+         [
+            14,
+            "company type code"
          ]
       ],
       "column_names_original": [
          [
             -1,
             "*"
+         ],
+         [
+            0,
+            "company_type_code"
          ],
          [
             0,
@@ -4606,19 +4618,14 @@
          [
             13,
             "skill_id"
+         ],
+         [
+            14,
+            "company_type_code"
          ]
       ],
       "column_types": [
          "text",
-         "number",
-         "text",
-         "text",
-         "text",
-         "text",
-         "number",
-         "number",
-         "time",
-         "time",
          "text",
          "number",
          "text",
@@ -4626,24 +4633,18 @@
          "text",
          "text",
          "number",
-         "text",
-         "text",
          "number",
-         "text",
-         "text",
-         "text",
-         "number",
-         "number",
-         "number",
-         "text",
-         "text",
-         "text",
          "time",
          "time",
          "text",
          "number",
+         "text",
+         "text",
+         "text",
+         "text",
          "number",
-         "number",
+         "text",
+         "text",
          "number",
          "text",
          "text",
@@ -4651,21 +4652,37 @@
          "number",
          "number",
          "number",
-         "number",
-         "number",
-         "time",
          "text",
          "text",
-         "number",
-         "number",
-         "number",
-         "number",
          "text",
          "time",
          "time",
          "text",
          "number",
          "number",
+         "number",
+         "number",
+         "text",
+         "text",
+         "text",
+         "number",
+         "number",
+         "number",
+         "number",
+         "number",
+         "time",
+         "text",
+         "text",
+         "number",
+         "number",
+         "number",
+         "number",
+         "text",
+         "time",
+         "time",
+         "text",
+         "number",
+         "number",
          "text",
          "text",
          "text",
@@ -4673,7 +4690,8 @@
          "number",
          "text",
          "number",
-         "number"
+         "number",
+         "text"
       ],
       "db_id": "assets_maintenance",
       "foreign_keys": [
@@ -4776,7 +4794,8 @@
          "engineer visits",
          "part faults",
          "fault log parts",
-         "skills required to fix"
+         "skills required to fix",
+         "reference company types"
       ],
       "table_names_original": [
          "Third_Party_Companies",
@@ -4792,7 +4811,8 @@
          "Engineer_Visits",
          "Part_Faults",
          "Fault_Log_Parts",
-         "Skills_Required_To_Fix"
+         "Skills_Required_To_Fix",
+         "Ref_Company_Types"
       ]
    },
    {

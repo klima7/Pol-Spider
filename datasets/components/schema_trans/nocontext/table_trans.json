@@ -6133,7 +6133,7 @@
     },
     {
         "db_id": "assets_maintenance",
-        "name": "ref company types",
+        "name": "reference company types",
         "name_original": "Ref_Company_Types",
         "name_pl": "typy spółek ref",
         "name_original_pl": "Typy_Spółek_Ref"
