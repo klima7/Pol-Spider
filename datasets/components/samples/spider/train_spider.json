@@ -48113,16 +48113,16 @@
     {
         "db_id": "flight_4",
         "question": "Find the number of routes that have destination John F Kennedy International Airport.",
-        "question_pl": "Znajdź liczbę tras, których celem jest międzynarodowe lotnisko im. Johna F. Kennedy'ego.",
+        "question_pl": "Znajdź liczbę tras, których celem jest międzynarodowe lotnisko im. Johna F. Kennedyego.",
         "query": "SELECT count(*) FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE T1.name  =  'John F Kennedy International Airport'",
-        "query_pl": "SELECT count(*) FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE T1.name  =  \"Międzynarodowy port lotniczy im. Johna F. Kennedy'ego\""
+        "query_pl": "SELECT count(*) FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE T1.name  =  \"Międzynarodowy port lotniczy im. Johna F. Kennedyego\""
     },
     {
         "db_id": "flight_4",
         "question": "What is the number of routes that end at John F Kennedy International Airport?",
-        "question_pl": "Jaka jest liczba tras, które kończą się na międzynarodowym lotnisku Johna F. Kennedy'ego?",
+        "question_pl": "Jaka jest liczba tras, które kończą się na międzynarodowym lotnisku Johna F. Kennedyego?",
         "query": "SELECT count(*) FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE T1.name  =  'John F Kennedy International Airport'",
-        "query_pl": "SELECT count(*) FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE T1.name  =  \"Międzynarodowy port lotniczy im. Johna F. Kennedy'ego\""
+        "query_pl": "SELECT count(*) FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE T1.name  =  \"Międzynarodowy port lotniczy im. Johna F. Kennedyego\""
     },
     {
         "db_id": "flight_4",

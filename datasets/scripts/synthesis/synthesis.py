@@ -29,7 +29,7 @@ def add_calculated_attributes(samples, tables):
 def add_calculated_attributes_single(sample, schemas, tables):
     try:
         sql = create_sql(sample["db_id"], sample["query_pl"], schemas, tables)
-    except SQLParseException:
+    except SQLParseException as e:
         print(f"WARNING Unable to parse SQL for sample '{sample['query_pl']}'")
         sql = create_sql(sample["db_id"], f"select count(*) from {list(schemas[sample['db_id']].keys())[0]}", schemas, tables)
 
