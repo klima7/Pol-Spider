@@ -2649,8 +2649,8 @@
         "db_id": "student_transcripts_tracking",
         "question": "Show me all department names that contain the word \"computer\"",
         "question_pl": "Pokaż mi wszystkie nazwy działów, które zawierają słowo \"komputer\"",
-        "query": "SELECT * FROM Departments WHERE department_name LIKE '%computer%'",
-        "query_pl": "SELECT * FROM Departments WHERE department_name LIKE '%computer%'"
+        "query": "SELECT * FROM Departments WHERE department_name LIKE '%komputer%'",
+        "query_pl": "SELECT * FROM Departments WHERE department_name LIKE '%komputer%'"
     },
     {
         "db_id": "student_transcripts_tracking",

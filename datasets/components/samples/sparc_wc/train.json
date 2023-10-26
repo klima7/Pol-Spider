@@ -1655,8 +1655,8 @@
         "db_id": "college_1",
         "question": "Which courses have a description including the word \"Statistics\"?",
         "question_pl": "Które kursy mają opis zawierający słowo \"Statystyka\"?",
-        "query": "SELECT * FROM course WHERE crs_description LIKE '%Statistics%'",
-        "query_pl": "SELECT * FROM course WHERE crs_description LIKE '%Statistics%'"
+        "query": "SELECT * FROM course WHERE crs_description LIKE '%Statystyka%'",
+        "query_pl": "SELECT * FROM course WHERE crs_description LIKE '%Statystyka%'"
     },
     {
         "db_id": "college_1",
@@ -7128,9 +7128,9 @@
     {
         "db_id": "chinook_1",
         "question": "Find the names of all the albums that contain the word \"you\".",
-        "question_pl": "Znajdź nazwy wszystkich albumów, które zawierają słowo \"Ty\".",
-        "query": "SELECT Title FROM ALBUM WHERE title LIKE '%you%'",
-        "query_pl": "SELECT Title FROM ALBUM WHERE title LIKE '%you%'"
+        "question_pl": "Znajdź nazwy wszystkich albumów, które zawierają słowo \"ty\".",
+        "query": "SELECT Title FROM ALBUM WHERE title LIKE '%ty%'",
+        "query_pl": "SELECT Title FROM ALBUM WHERE title LIKE '%ty%'"
     },
     {
         "db_id": "chinook_1",
@@ -7955,8 +7955,8 @@
         "db_id": "phone_1",
         "question": "Tell me the phones that have the word 'Provisional' in their accreditation types.",
         "question_pl": "Podaj mi telefony, które mają słowo \"Tymczasowy\" w swoich typach akredytacji.",
-        "query": "SELECT Hardware_Model_name FROM phone WHERE Accreditation_type LIKE 'Provisional'",
-        "query_pl": "SELECT Hardware_Model_name FROM phone WHERE Accreditation_type LIKE 'Provisional'"
+        "query": "SELECT Hardware_Model_name FROM phone WHERE Accreditation_type LIKE 'Tymczasowy'",
+        "query_pl": "SELECT Hardware_Model_name FROM phone WHERE Accreditation_type LIKE 'Tymczasowy'"
     },
     {
         "db_id": "phone_1",
@@ -15186,8 +15186,8 @@
         "db_id": "browser_web",
         "question": "Which accelerator name contains substring \"Free\"?",
         "question_pl": "Która nazwa akceleratora zawiera podciąg \"Darmowy\"?",
-        "query": "SELECT name FROM web_client_accelerator WHERE name LIKE \"%Free%\"",
-        "query_pl": "SELECT name FROM web_client_accelerator WHERE name LIKE \"%Free%\""
+        "query": "SELECT name FROM web_client_accelerator WHERE name LIKE \"%Darmowy%\"",
+        "query_pl": "SELECT name FROM web_client_accelerator WHERE name LIKE \"%Darmowy%\""
     },
     {
         "db_id": "roller_coaster",
@@ -16796,8 +16796,8 @@
         "db_id": "aircraft",
         "question": "How many total passengers are in any airport with the word London in its name?",
         "question_pl": "Ilu łącznie pasażerów obsługuje lotnisko ze słowem \"Londyn\" w nazwie?",
-        "query": "SELECT sum(Total_Passengers) FROM airport WHERE Airport_Name LIKE \"%London%\"",
-        "query_pl": "SELECT sum(Total_Passengers) FROM airport WHERE Airport_Name LIKE \"%London%\""
+        "query": "SELECT sum(Total_Passengers) FROM airport WHERE Airport_Name LIKE \"%Londyn%\"",
+        "query_pl": "SELECT sum(Total_Passengers) FROM airport WHERE Airport_Name LIKE \"%Londyn%\""
     },
     {
         "db_id": "aircraft",
@@ -16866,8 +16866,8 @@
         "db_id": "aircraft",
         "question": "What airports have \"London\" in its name?",
         "question_pl": "Które lotniska mają w nazwie słowo \"Londyn\"?",
-        "query": "SELECT Airport_Name FROM Airport WHERE Airport_Name LIKE \"%London%\"",
-        "query_pl": "SELECT Airport_Name FROM Airport WHERE Airport_Name LIKE \"%London%\""
+        "query": "SELECT Airport_Name FROM Airport WHERE Airport_Name LIKE \"%Londyn%\"",
+        "query_pl": "SELECT Airport_Name FROM Airport WHERE Airport_Name LIKE \"%Londyn%\""
     },
     {
         "db_id": "aircraft",
@@ -19246,8 +19246,8 @@
         "db_id": "music_1",
         "question": "How many songs are released in January?",
         "question_pl": "Ile utworów ukazuje się w styczniu?",
-        "query": "SELECT count(*) FROM song where releasedate LIKE \"%JAN%\"",
-        "query_pl": "SELECT count(*) FROM song where releasedate LIKE \"%JAN%\""
+        "query": "SELECT count(*) FROM song where releasedate LIKE \"%STY%\"",
+        "query_pl": "SELECT count(*) FROM song where releasedate LIKE \"%STY%\""
     },
     {
         "db_id": "music_1",
