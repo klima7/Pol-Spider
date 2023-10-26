@@ -37,7 +37,7 @@ def spider(output_name, schema_translation, with_db):
 @click.option('-s', '--schema-translation', type=str, default='english')
 @click.option('-d', '--with-db', is_flag=True, help='Translate databases')
 def spider_dk(output_name, schema_translation, with_db):
-    """Synthesize spider dataset"""
+    """Synthesize spider_dk dataset"""
     samples_path = SAMPLES_PATH / 'spider_dk'
     synthesize_everything(
         output_name=output_name,
@@ -57,7 +57,7 @@ def spider_dk(output_name, schema_translation, with_db):
 @click.option('-s', '--schema-translation', type=str, default='english')
 @click.option('-d', '--with-db', is_flag=True, help='Translate databases')
 def spider_syn(output_name, schema_translation, with_db):
-    """Synthesize spider dataset"""
+    """Synthesize spider_syn dataset"""
     samples_path = SAMPLES_PATH / 'spider_syn'
     synthesize_everything(
         output_name=output_name,
@@ -68,6 +68,28 @@ def spider_syn(output_name, schema_translation, with_db):
         gold_mapping={
             'dev_gold.sql': ['dev.json'],
             'train_gold.sql': ['train_spider.json'],
+        },
+        schema_translation_name=schema_translation,
+        with_db=with_db
+    )
+    
+    
+@cli.command()
+@click.argument("output_name", type=click.STRING)
+@click.option('-s', '--schema-translation', type=str, default='english')
+@click.option('-d', '--with-db', is_flag=True, help='Translate databases')
+def sparc_wc(output_name, schema_translation, with_db):
+    """Synthesize spider_dk dataset"""
+    samples_path = SAMPLES_PATH / 'sparc_wc'
+    synthesize_everything(
+        output_name=output_name,
+        samples_paths=[
+            samples_path / 'dev.json',
+            samples_path / 'train.json',
+        ],
+        gold_mapping={
+            'dev_gold.sql': ['dev.json'],
+            'train_gold.sql': ['train.json'],
         },
         schema_translation_name=schema_translation,
         with_db=with_db
