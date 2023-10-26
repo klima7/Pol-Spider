@@ -6256,15 +6256,6 @@
     },
     {
         "db_id": "college_2",
-        "question_original": "Find the name of the courses that do not have any prerequisite?",
-        "question_original_pl": "Znajdź nazwy kursów, które nie mają żadnych wymagań wstępnych?",
-        "question": "Find the name of the curriculum that do not have any prerequisite?",
-        "question_pl": "Znajdź nazwę programu nauczania, który nie ma żadnych wymagań wstępnych?",
-        "query": "SELECT title FROM course WHERE course_id NOT IN (SELECT course_id FROM prereq)",
-        "query_pl": "SELECT title FROM course WHERE course_id NOT IN (SELECT course_id FROM prereq)"
-    },
-    {
-        "db_id": "college_2",
         "question_original": "What are the names of courses without prerequisites?",
         "question_original_pl": "Jakie są nazwy kursów bez wymagań wstępnych?",
         "question": "What are the names of curriculum without prerequisites?",
@@ -10339,15 +10330,6 @@
         "question_pl": "znajdź nazwiska osób, których wzrost jest niższy niż przeciętny.",
         "query": "SELECT name FROM people WHERE height  <  (SELECT avg(height) FROM people)",
         "query_pl": "SELECT name FROM people WHERE height  <  (SELECT avg(height) FROM people)"
-    },
-    {
-        "db_id": "movie_1",
-        "question_original": "How many movies were made before 2000?",
-        "question_original_pl": "Ile filmów nakręcono przed 2000 rokiem?",
-        "question": "How many films were made before 2000?",
-        "question_pl": "Ile filmów powstało przed 2000 rokiem?",
-        "query": "SELECT count(*) FROM Movie WHERE YEAR  <  2000",
-        "query_pl": "SELECT count(*) FROM Movie WHERE YEAR  <  2000"
     },
     {
         "db_id": "movie_1",
@@ -14686,24 +14668,6 @@
         "question_pl": "Uzyskaj informacje o pracownikach zarządzających działem.",
         "query": "SELECT DISTINCT * FROM employees AS T1 JOIN departments AS T2 ON T1.department_id  =  T2.department_id WHERE T1.employee_id  =  T2.manager_id",
         "query_pl": "SELECT DISTINCT * FROM employees AS T1 JOIN departments AS T2 ON T1.department_id  =  T2.department_id WHERE T1.employee_id  =  T2.manager_id"
-    },
-    {
-        "db_id": "hr_1",
-        "question_original": "display all the information about the department Marketing.",
-        "question_original_pl": "wyświetla wszystkie informacje o dziale Marketing.",
-        "question": "display all the information about the division Marketing.",
-        "question_pl": "wyświetla wszystkie informacje o dywizji Marketing.",
-        "query": "SELECT * FROM  departments WHERE department_name  =  'Marketing'",
-        "query_pl": "SELECT * FROM  departments WHERE department_name  =  \"Marketing\""
-    },
-    {
-        "db_id": "hr_1",
-        "question_original": "What is all the information about the Marketing department?",
-        "question_original_pl": "Jakie są wszystkie informacje o dziale marketingu?",
-        "question": "What is all the information about the Marketing division?",
-        "question_pl": "Jakie są wszystkie informacje na temat działu marketingu?",
-        "query": "SELECT * FROM  departments WHERE department_name  =  'Marketing'",
-        "query_pl": "SELECT * FROM  departments WHERE department_name  =  \"Marketing\""
     },
     {
         "db_id": "hr_1",
