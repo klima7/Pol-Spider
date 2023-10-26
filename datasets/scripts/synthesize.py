@@ -42,10 +42,10 @@ def spider_dk(output_name, schema_translation, with_db):
     synthesize_everything(
         output_name=output_name,
         samples_paths=[
-            samples_path / 'samples.json',
+            samples_path / 'dev.json',
         ],
         gold_mapping={
-            'dev_gold.sql': ['samples.json'],
+            'dev_gold.sql': ['dev.json'],
         },
         schema_translation_name=schema_translation,
         with_db=with_db
