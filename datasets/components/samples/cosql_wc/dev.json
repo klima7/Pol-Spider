@@ -330,13 +330,6 @@
     },
     {
         "db_id": "car_1",
-        "question": "list the makers who designed more than 3 car models",
-        "question_pl": "Wymień producentów, którzy zaprojektowali więcej niż 3 modele samochodów",
-        "query": "SELECT T1.* FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker GROUP BY T1.Id HAVING count(*)  >  3;",
-        "query_pl": "SELECT T1.* FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker GROUP BY T1.Id HAVING count(*)  >  3;"
-    },
-    {
-        "db_id": "car_1",
         "question": "What is the average horsepower?",
         "question_pl": "Jaka jest średnia moc?",
         "query": "SELECT avg(Horsepower) FROM cars_data",
@@ -656,13 +649,6 @@
         "question_pl": "Cześć!  Czy możesz mi pokazać listę wszystkich numerów lotów?",
         "query": "SELECT FlightNo FROM Flights ",
         "query_pl": "SELECT FlightNo FROM Flights "
-    },
-    {
-        "db_id": "world_1",
-        "question": "Which countries have Spanish speaking majorities?",
-        "question_pl": "Które kraje mają większość hiszpańskojęzyczną?",
-        "query": "SELECT countrycode FROM (SELECT max(percentage), language, countrycode FROM countrylanguage  GROUP BY countrycode) WHERE language = \"Spanish\"",
-        "query_pl": "SELECT countrycode FROM (SELECT max(percentage), language, countrycode FROM countrylanguage  GROUP BY countrycode) WHERE language = \"Hiszpański\""
     },
     {
         "db_id": "flight_2",

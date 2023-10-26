@@ -1981,13 +1981,6 @@
         "query_pl": "SELECT College FROM match_season GROUP BY College HAVING count(*)  =  2"
     },
     {
-        "db_id": "cre_Drama_Workshop_Groups",
-        "question": "What is the address for FJA Filming?",
-        "question_pl": "Jaki jest adres FJA Filming?",
-        "query": "SELECT T1.* FROM Addresses AS T1 JOIN Stores AS T2 ON T1.Address_ID  =  T2.Address_ID WHERE T2.Store_Name  =  \"FJA Filming\"",
-        "query_pl": "SELECT T1.* FROM Addresses AS T1 JOIN Stores AS T2 ON T1.Address_ID  =  T2.Address_ID WHERE T2.Store_Name  =  \"Filmowanie FJA\""
-    },
-    {
         "db_id": "apartment_rentals",
         "question": "What are the booking start and end dates of the apartments with more than 2 bedrooms ?",
         "question_pl": "Jakie są daty rozpoczęcia i zakończenia rezerwacji apartamentów z więcej niż 2 sypialniami?",
@@ -2196,13 +2189,6 @@
         "question_pl": "Jaki jest udział w rynku Chabudai?",
         "query": "SELECT Market_Rate  FROM furniture WHERE name = \"Chabudai\"",
         "query_pl": "SELECT Market_Rate  FROM furniture WHERE name = \"Chabudai\""
-    },
-    {
-        "db_id": "tracking_grants_for_research",
-        "question": "Which grants are described as 'regular'?",
-        "question_pl": "Które dotacje są określane jako \"regularne\"?",
-        "query": "SELECT T1.* FROM Grants AS T1 JOIN Documents AS T2 ON T1.grant_id  =  T2.grant_id JOIN Document_Types AS T3 ON T2.document_type_code  =  T3.document_type_code WHERE T3.document_description  =  'Regular' ",
-        "query_pl": "SELECT T1.* FROM Grants AS T1 JOIN Documents AS T2 ON T1.grant_id  =  T2.grant_id JOIN Document_Types AS T3 ON T2.document_type_code  =  T3.document_type_code WHERE T3.document_description  =  \"Regularny\" "
     },
     {
         "db_id": "department_management",
@@ -4844,13 +4830,6 @@
         "query_pl": "SELECT country FROM airlines"
     },
     {
-        "db_id": "store_1",
-        "question": "What tracks belong to genre Rock?",
-        "question_pl": "Jakie utwory należą do gatunku Rock?",
-        "query": "SELECT T2.* FROM genres AS T1 JOIN tracks AS T2 ON T1.id = T2.genre_id WHERE T1.name = \"Rock\";",
-        "query_pl": "SELECT T2.* FROM genres AS T1 JOIN tracks AS T2 ON T1.id = T2.genre_id WHERE T1.name = \"Skała\";"
-    },
-    {
         "db_id": "driving_school",
         "question": "Tell me the vehicle id and staff id for all lesson id's...",
         "question_pl": "Podaj mi identyfikator pojazdu i identyfikator personelu dla wszystkich identyfikatorów lekcji...",
@@ -5404,13 +5383,6 @@
         "query_pl": "SELECT department_id ,  SUM(salary) FROM employees GROUP BY department_id HAVING count(*)  >=  2"
     },
     {
-        "db_id": "ship_1",
-        "question": "what is the average number of captains per ship?",
-        "question_pl": "Jaka jest średnia liczba kapitanów na statek?",
-        "query": "select avg(ct) from (SELECT t2.ship_id, count(*) as ct FROM ship AS t1 JOIN captain AS t2 ON t1.ship_id  =  t2.ship_id GROUP BY t2.ship_id)",
-        "query_pl": "select avg(ct) from (SELECT t2.ship_id, count(*) as ct FROM ship AS t1 JOIN captain AS t2 ON t1.ship_id  =  t2.ship_id GROUP BY t2.ship_id)"
-    },
-    {
         "db_id": "soccer_2",
         "question": "Find the names of either colleges in LA with greater than 15000 size or in state AZ with less than 13000 enrollment.",
         "question_pl": "Znajdź nazwy uczelni w LA z liczbą studentów większą niż 15000 lub w stanie AZ z liczbą studentów mniejszą niż 13000.",
@@ -5633,13 +5605,6 @@
         "question_pl": "Jak nazywają się wszystkie utwory, które mają niższą ocenę niż jakiś utwór z gatunku blues?",
         "query": "SELECT song_name FROM song WHERE rating  <  (SELECT max(rating) FROM song WHERE genre_is  =  \"blues\")",
         "query_pl": "SELECT song_name FROM song WHERE rating  <  (SELECT max(rating) FROM song WHERE genre_is  =  \"blues\")"
-    },
-    {
-        "db_id": "store_1",
-        "question": "Show the albums of Billy Cobham.",
-        "question_pl": "Pokaż albumy Billy'ego Cobhama.",
-        "query": "SELECT T1.* FROM albums AS T1 JOIN artists AS T2 ON  T1.artist_id = T2.id WHERE T2.name = \"Billy Cobham\";",
-        "query_pl": "SELECT T1.* FROM albums AS T1 JOIN artists AS T2 ON  T1.artist_id = T2.id WHERE T2.name = \"Billy Cobham\";"
     },
     {
         "db_id": "products_gen_characteristics",
@@ -6090,13 +6055,6 @@
         "query_pl": "SELECT count(distinct instructor) from Course"
     },
     {
-        "db_id": "tracking_grants_for_research",
-        "question": "Which organization hired the most research staff?",
-        "question_pl": "Która organizacja zatrudniła najwięcej pracowników naukowych?",
-        "query": "SELECT T1.* FROM Organisations AS T1 JOIN Research_Staff AS T2 ON T1.organisation_id  =  T2.employer_organisation_id GROUP BY T1.organisation_id ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT T1.* FROM Organisations AS T1 JOIN Research_Staff AS T2 ON T1.organisation_id  =  T2.employer_organisation_id GROUP BY T1.organisation_id ORDER BY count(*) DESC LIMIT 1"
-    },
-    {
         "db_id": "match_season",
         "question": "how many countries are participated?",
         "question_pl": "Ile krajów bierze udział?",
@@ -6184,8 +6142,8 @@
         "db_id": "flight_4",
         "question": "Show me the destination details of John F Kennedy International Airport",
         "question_pl": "Pokaż mi szczegóły miejsca docelowego Międzynarodowe lotnisko im. Johna F. Kennedy'ego",
-        "query": "SELECT dst_apid,dst_ap FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE T1.name  =  'John F Kennedy International Airport'",
-        "query_pl": "SELECT dst_apid,dst_ap FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE T1.name  =  \"Międzynarodowy port lotniczy im. Johna F. Kennedy'ego\""
+        "query": "SELECT dst_apid, dst_ap FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE T1.name  =  'John F Kennedy International Airport'",
+        "query_pl": "SELECT dst_apid, dst_ap FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE T1.name  =  \"Międzynarodowy port lotniczy im. Johna F. Kennedyego\""
     },
     {
         "db_id": "sakila_1",
@@ -7318,8 +7276,8 @@
         "db_id": "customers_and_invoices",
         "question": "how many account name in the accounts table",
         "question_pl": "ile nazw kont znajduje się w tabeli kont",
-        "query": "select count(*) as number from Accounts",
-        "query_pl": "select count(*) as number from Accounts"
+        "query": "select count(*) from Accounts",
+        "query_pl": "select count(*) from Accounts"
     },
     {
         "db_id": "ship_mission",
@@ -7509,13 +7467,6 @@
         "question_pl": "Ilu pracowników obsługuje co najmniej 10 klientów?",
         "query": "SELECT count(*) FROM CUSTOMER AS T1 JOIN EMPLOYEE AS T2 ON T1.SupportRepId  =  T2.EmployeeId GROUP BY T1.SupportRepId HAVING COUNT(*)  >=  10",
         "query_pl": "SELECT count(*) FROM CUSTOMER AS T1 JOIN EMPLOYEE AS T2 ON T1.SupportRepId  =  T2.EmployeeId GROUP BY T1.SupportRepId HAVING COUNT(*)  >=  10"
-    },
-    {
-        "db_id": "film_rank",
-        "question": "Hello, which films where made in 1995?",
-        "question_pl": "Witaj, które filmy zostały nakręcone w 1995 roku?",
-        "query": "SELECT T1.* FROM film AS T1 JOIN film_market_estimation AS T2 ON T1.Film_ID  =  T2.Film_ID WHERE T2.Year  =  1995",
-        "query_pl": "SELECT T1.* FROM film AS T1 JOIN film_market_estimation AS T2 ON T1.Film_ID  =  T2.Film_ID WHERE T2.Year  =  1995"
     },
     {
         "db_id": "customers_and_invoices",
@@ -8610,13 +8561,6 @@
         "query_pl": "select count(*) from customers"
     },
     {
-        "db_id": "baseball_1",
-        "question": "what team pays the lowest average salary?",
-        "question_pl": "Która drużyna płaci najniższą średnią pensję?",
-        "query": "SELECT T1.* FROM team AS T1 JOIN salary AS T2 ON T1.team_id = T2.team_id GROUP BY T1.team_id ORDER BY avg(T2.salary) ASC LIMIT 1;",
-        "query_pl": "SELECT T1.* FROM team AS T1 JOIN salary AS T2 ON T1.team_id = T2.team_id GROUP BY T1.team_id ORDER BY avg(T2.salary) ASC LIMIT 1;"
-    },
-    {
         "db_id": "customer_deliveries",
         "question": "What is the name of the products?",
         "question_pl": "Jak nazywają się te produkty?",
@@ -9660,13 +9604,6 @@
         "query_pl": "SELECT TIME FROM elimination WHERE Eliminated_By  =  \"Punk\" OR Eliminated_By  =  \"Orton\""
     },
     {
-        "db_id": "train_station",
-        "question": "Which station has the greatest number of traims?",
-        "question_pl": "Która stacja ma największą liczbę ofiar?",
-        "query": "SELECT T2.* FROM train_station AS T1 JOIN station AS T2 ON T1.station_id  =  T2.station_id GROUP BY T1.station_id ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT T2.* FROM train_station AS T1 JOIN station AS T2 ON T1.station_id  =  T2.station_id GROUP BY T1.station_id ORDER BY count(*) DESC LIMIT 1"
-    },
-    {
         "db_id": "e_government",
         "question": "Tell me the party email of the party with id 1?",
         "question_pl": "Podaj mi adres e-mail strony o identyfikatorze 1?",
@@ -9896,13 +9833,6 @@
         "question_pl": "Ile burz wyrządziło szkody w jakimkolwiek regionie?",
         "query": "select count(*) from storm",
         "query_pl": "select count(*) from storm"
-    },
-    {
-        "db_id": "network_2",
-        "question": "is there any person who has no student friends",
-        "question_pl": "Czy jest jakaś osoba, która nie ma przyjaciół wśród studentów?",
-        "query": "SELECT * FROM person EXCEPT SELECT T1.* FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.friend WHERE T1.job  =  'student'",
-        "query_pl": "SELECT * FROM person EXCEPT SELECT T1.* FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.friend WHERE T1.job  =  \"uczeń\""
     },
     {
         "db_id": "game_1",
@@ -10332,13 +10262,6 @@
         "query_pl": "SELECT distinct member_name FROM member"
     },
     {
-        "db_id": "tracking_orders",
-        "question": "Which customers made at least two orders?",
-        "question_pl": "Którzy klienci złożyli co najmniej dwa zamówienia?",
-        "query": "SELECT T2.* ,  count(*) FROM orders AS T1 JOIN customers AS T2 ON T1.customer_id = T2.customer_id GROUP BY T2.customer_id HAVING count(*)  >=  2",
-        "query_pl": "SELECT T2.* ,  count(*) FROM orders AS T1 JOIN customers AS T2 ON T1.customer_id = T2.customer_id GROUP BY T2.customer_id HAVING count(*)  >=  2"
-    },
-    {
         "db_id": "college_1",
         "question": "how many professors there",
         "question_pl": "ilu jest tam profesorów",
@@ -10652,13 +10575,6 @@
         "question_pl": "Jaki jest numer telefonu klienta, który złożył ostatnią skargę?",
         "query": "SELECT t1.phone_number FROM customers AS t1 JOIN complaints AS t2 ON t1.customer_id  =  t2.customer_id ORDER BY t2.date_complaint_raised DESC LIMIT 1",
         "query_pl": "SELECT t1.phone_number FROM customers AS t1 JOIN complaints AS t2 ON t1.customer_id  =  t2.customer_id ORDER BY t2.date_complaint_raised DESC LIMIT 1"
-    },
-    {
-        "db_id": "tracking_grants_for_research",
-        "question": "What projects are detailed as 'omnis'?",
-        "question_pl": "Jakie projekty są wyszczególnione jako \"omnis\"?",
-        "query": "SELECT T2.* FROM Tasks AS T1 JOIN Projects AS T2 ON T1.project_id  =  T2.project_id WHERE T2.project_details  =  'omnis'",
-        "query_pl": "SELECT T2.* FROM Tasks AS T1 JOIN Projects AS T2 ON T1.project_id  =  T2.project_id WHERE T2.project_details  =  \"omnis\""
     },
     {
         "db_id": "cre_Drama_Workshop_Groups",
@@ -11140,8 +11056,8 @@
         "db_id": "local_govt_and_lot",
         "question": "How many things are there with status \"close\"?",
         "question_pl": "Ile jest rzeczy ze statusem \"blisko\"?",
-        "query": "select count(*) as num from Timed_Status_of_Things where Status_of_Thing_Code = 'Close'",
-        "query_pl": "select count(*) as num from Timed_Status_of_Things where Status_of_Thing_Code = \"Zamknij\""
+        "query": "select count(*) from Timed_Status_of_Things where Status_of_Thing_Code = 'Close'",
+        "query_pl": "select count(*) from Timed_Status_of_Things where Status_of_Thing_Code = \"Zamknij\""
     },
     {
         "db_id": "store_1",
