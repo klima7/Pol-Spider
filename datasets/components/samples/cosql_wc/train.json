@@ -38,8 +38,8 @@
         "db_id": "machine_repair",
         "question": "Who are the technicians from team \"CLE\" and \"CWS\"?",
         "question_pl": "Kim są technicy z drużyn \"CLE\" i \"CWS\"?",
-        "query": "select Name from technician where \tTeam='CLE' or team='CWS'",
-        "query_pl": "select Name from technician where \tTeam=\"CLE\" or team=\"CWS\""
+        "query": "select Name from technician where \tTeam = 'CLE' or team = 'CWS'",
+        "query_pl": "select Name from technician where \tTeam = \"CLE\" or team = \"CWS\""
     },
     {
         "db_id": "student_1",
@@ -297,8 +297,8 @@
         "db_id": "election",
         "question": "Who are the delegates on the Appropriations committee?",
         "question_pl": "Kim są delegaci w komisji ds. środków finansowych?",
-        "query": "select Delegate from election where Committee='Appropriations'",
-        "query_pl": "select Delegate from election where Committee=\"Środki\""
+        "query": "select Delegate from election where Committee = 'Appropriations'",
+        "query_pl": "select Delegate from election where Committee = \"Środki\""
     },
     {
         "db_id": "driving_school",
@@ -612,8 +612,8 @@
         "db_id": "customers_campaigns_ecommerce",
         "question": "what form of payment method did customer ID 1 Use?",
         "question_pl": "Jakiej formy płatności użył klient ID 1?",
-        "query": "SELECT \tpayment_method FROM customers WHERE customer_id =1",
-        "query_pl": "SELECT \tpayment_method FROM customers WHERE customer_id =1"
+        "query": "SELECT \tpayment_method FROM customers WHERE customer_id = 1",
+        "query_pl": "SELECT \tpayment_method FROM customers WHERE customer_id = 1"
     },
     {
         "db_id": "college_1",
@@ -682,8 +682,8 @@
         "db_id": "device",
         "question": "how many locations have shops that opened before 2008?",
         "question_pl": "W ilu lokalizacjach znajdują się sklepy otwarte przed 2008 rokiem?",
-        "query": "select count(Location) from shop where Open_Year='2008'",
-        "query_pl": "select count(Location) from shop where Open_Year=\"2008\""
+        "query": "select count(Location) from shop where Open_Year = '2008'",
+        "query_pl": "select count(Location) from shop where Open_Year = \"2008\""
     },
     {
         "db_id": "sports_competition",
@@ -780,8 +780,8 @@
         "db_id": "entrepreneur",
         "question": "What are the investor name of Leonardo Binchi?",
         "question_pl": "Jak nazywa się inwestor Leonardo Binchi?",
-        "query": "SELECT T1.Investor FROM entrepreneur AS T1 JOIN people AS T2 ON T1.People_ID  =  T2.People_ID WHERE T2.Name= \"Leonardo Binchi\"",
-        "query_pl": "SELECT T1.Investor FROM entrepreneur AS T1 JOIN people AS T2 ON T1.People_ID  =  T2.People_ID WHERE T2.Name= \"Leonardo Binchi\""
+        "query": "SELECT T1.Investor FROM entrepreneur AS T1 JOIN people AS T2 ON T1.People_ID  =  T2.People_ID WHERE T2.Name = \"Leonardo Binchi\"",
+        "query_pl": "SELECT T1.Investor FROM entrepreneur AS T1 JOIN people AS T2 ON T1.People_ID  =  T2.People_ID WHERE T2.Name = \"Leonardo Binchi\""
     },
     {
         "db_id": "department_store",
@@ -829,8 +829,8 @@
         "db_id": "college_1",
         "question": "what is the school code of emp num 114",
         "question_pl": "Jaki jest kod szkoły dla numeru emp 114",
-        "query": "SELECT SCHOOL_CODE\t from DEPARTMENT where EMP_NUM=114",
-        "query_pl": "SELECT SCHOOL_CODE\t from DEPARTMENT where EMP_NUM=114"
+        "query": "SELECT SCHOOL_CODE\t from DEPARTMENT where EMP_NUM = 114",
+        "query_pl": "SELECT SCHOOL_CODE\t from DEPARTMENT where EMP_NUM = 114"
     },
     {
         "db_id": "products_gen_characteristics",
@@ -934,8 +934,8 @@
         "db_id": "manufactory_1",
         "question": "Hello!  Can you please provide me with the name of the founder for Sony?",
         "question_pl": "Witaj!  Czy możesz podać mi nazwisko założyciela Sony?",
-        "query": "SELECT founder FROM manufacturers WHERE name='Sony'",
-        "query_pl": "SELECT founder FROM manufacturers WHERE name=\"Sony\""
+        "query": "SELECT founder FROM manufacturers WHERE name = 'Sony'",
+        "query_pl": "SELECT founder FROM manufacturers WHERE name = \"Sony\""
     },
     {
         "db_id": "csu_1",
@@ -1046,8 +1046,8 @@
         "db_id": "e_learning",
         "question": "find the student id and personal name of the student whose course id is 2",
         "question_pl": "znajdź identyfikator studenta i imię i nazwisko studenta, którego identyfikator kursu to 2",
-        "query": "SELECT T1.student_id , T2.personal_name FROM Student_Course_Enrolment AS T1 JOIN Students AS T2 ON T1.student_id = T2.student_id where T1.course_id='2'",
-        "query_pl": "SELECT T1.student_id , T2.personal_name FROM Student_Course_Enrolment AS T1 JOIN Students AS T2 ON T1.student_id = T2.student_id where T1.course_id=\"2\""
+        "query": "SELECT T1.student_id , T2.personal_name FROM Student_Course_Enrolment AS T1 JOIN Students AS T2 ON T1.student_id = T2.student_id where T1.course_id = '2'",
+        "query_pl": "SELECT T1.student_id , T2.personal_name FROM Student_Course_Enrolment AS T1 JOIN Students AS T2 ON T1.student_id = T2.student_id where T1.course_id = \"2\""
     },
     {
         "db_id": "game_1",
@@ -1116,8 +1116,8 @@
         "db_id": "chinook_1",
         "question": "Hi, could you please let me know the genre ID for Latin and Pop?",
         "question_pl": "Cześć, czy możesz dać mi znać identyfikator gatunku dla Latin i Pop?",
-        "query": "SELECT GenreId FROM Genre WHERE Name=\"Latin\" OR Name=\"Pop\"",
-        "query_pl": "SELECT GenreId FROM Genre WHERE Name=\"Łacina\" OR Name=\"Pop\""
+        "query": "SELECT GenreId FROM Genre WHERE Name = \"Latin\" OR Name = \"Pop\"",
+        "query_pl": "SELECT GenreId FROM Genre WHERE Name = \"Łacina\" OR Name = \"Pop\""
     },
     {
         "db_id": "college_2",
@@ -1172,8 +1172,8 @@
         "db_id": "music_1",
         "question": "Can you show the artist name of f id 2?",
         "question_pl": "Czy możesz pokazać nazwę artysty f id 2?",
-        "query": "SELECT \tartist_name FROM files WHERE f_id='2'",
-        "query_pl": "SELECT \tartist_name FROM files WHERE f_id=\"2\""
+        "query": "SELECT \tartist_name FROM files WHERE f_id = '2'",
+        "query_pl": "SELECT \tartist_name FROM files WHERE f_id = \"2\""
     },
     {
         "db_id": "flight_4",
@@ -1221,8 +1221,8 @@
         "db_id": "network_2",
         "question": "How many friends does Zach have?",
         "question_pl": "Ilu przyjaciół ma Zach?",
-        "query": "SELECT count(friend) from PersonFriend  where name='Zach'",
-        "query_pl": "SELECT count(friend) from PersonFriend  where name=\"Zach\""
+        "query": "SELECT count(friend) from PersonFriend  where name = 'Zach'",
+        "query_pl": "SELECT count(friend) from PersonFriend  where name = \"Zach\""
     },
     {
         "db_id": "soccer_2",
@@ -1312,8 +1312,8 @@
         "db_id": "cre_Theme_park",
         "question": "What is the name of photo ID 280",
         "question_pl": "Jak nazywa się dokument tożsamości ze zdjęciem 280",
-        "query": "SELECT Name FROM PHOTOS where photo_id=280",
-        "query_pl": "SELECT Name FROM PHOTOS where photo_id=280"
+        "query": "SELECT Name FROM PHOTOS where photo_id = 280",
+        "query_pl": "SELECT Name FROM PHOTOS where photo_id = 280"
     },
     {
         "db_id": "browser_web",
@@ -1340,8 +1340,8 @@
         "db_id": "tracking_grants_for_research",
         "question": "tell me the staff details of staff id 1 ?",
         "question_pl": "podaj mi dane personelu o identyfikatorze 1?",
-        "query": "SELECT staff_details FROM  Research_Staff where staff_id=1",
-        "query_pl": "SELECT staff_details FROM  Research_Staff where staff_id=1"
+        "query": "SELECT staff_details FROM  Research_Staff where staff_id = 1",
+        "query_pl": "SELECT staff_details FROM  Research_Staff where staff_id = 1"
     },
     {
         "db_id": "flight_company",
@@ -1550,8 +1550,8 @@
         "db_id": "dorm_1",
         "question": "Please show me how many female students have the major 600",
         "question_pl": "Proszę, pokaż mi, ile studentek ma kierunek 600",
-        "query": "SELECT count(*) FROM student WHERE sex  =  'F' AND Major=600",
-        "query_pl": "SELECT count(*) FROM student WHERE sex  =  \"F\" AND Major=600"
+        "query": "SELECT count(*) FROM student WHERE sex  =  'F' AND Major = 600",
+        "query_pl": "SELECT count(*) FROM student WHERE sex  =  \"F\" AND Major = 600"
     },
     {
         "db_id": "twitter_1",
@@ -1592,15 +1592,15 @@
         "db_id": "manufactory_1",
         "question": "Can you list all companies based in Austin and their revenues?",
         "question_pl": "Czy możesz wymienić wszystkie firmy z siedzibą w Austin i ich przychody?",
-        "query": "select Name,Revenue from Manufacturers where Headquarter='Austin'",
-        "query_pl": "select Name,Revenue from Manufacturers where Headquarter=\"Austin\""
+        "query": "select Name,Revenue from Manufacturers where Headquarter = 'Austin'",
+        "query_pl": "select Name,Revenue from Manufacturers where Headquarter = \"Austin\""
     },
     {
         "db_id": "university_basketball",
         "question": "Hi, when was the University of Delaware founded?",
         "question_pl": "Cześć, kiedy został założony Uniwersytet Delaware?",
-        "query": "SELECT founded FROM university WHERE school='University of Delaware'",
-        "query_pl": "SELECT founded FROM university WHERE school=\"Uniwersytet Delaware\""
+        "query": "SELECT founded FROM university WHERE school = 'University of Delaware'",
+        "query_pl": "SELECT founded FROM university WHERE school = \"Uniwersytet Delaware\""
     },
     {
         "db_id": "match_season",
@@ -1641,8 +1641,8 @@
         "db_id": "flight_4",
         "question": "What is the name of the airport in Mount Hagen city?",
         "question_pl": "Jak nazywa się lotnisko w mieście Mount Hagen?",
-        "query": "SELECT name from airports where city ='Mount Hagen'",
-        "query_pl": "SELECT name from airports where city =\"Mount Hagen\""
+        "query": "SELECT name from airports where city = 'Mount Hagen'",
+        "query_pl": "SELECT name from airports where city = \"Mount Hagen\""
     },
     {
         "db_id": "dorm_1",
@@ -1690,8 +1690,8 @@
         "db_id": "assets_maintenance",
         "question": "what is the fault status of engineer visit id 1?",
         "question_pl": "Jaki jest status błędu wizyty inżyniera o identyfikatorze 1?",
-        "query": "SELECT  fault_status from Engineer_Visits where engineer_visit_id=1",
-        "query_pl": "SELECT  fault_status from Engineer_Visits where engineer_visit_id=1"
+        "query": "SELECT  fault_status from Engineer_Visits where engineer_visit_id = 1",
+        "query_pl": "SELECT  fault_status from Engineer_Visits where engineer_visit_id = 1"
     },
     {
         "db_id": "city_record",
@@ -1746,8 +1746,8 @@
         "db_id": "products_gen_characteristics",
         "question": "Can you list the color code that has a color description of 'white'?",
         "question_pl": "Czy możesz wymienić kod koloru, który ma opis koloru \"biały\"?",
-        "query": "select color_code from Ref_Colors where color_description='white'",
-        "query_pl": "select color_code from Ref_Colors where color_description=\"biały\""
+        "query": "select color_code from Ref_Colors where color_description = 'white'",
+        "query_pl": "select color_code from Ref_Colors where color_description = \"biały\""
     },
     {
         "db_id": "apartment_rentals",
@@ -1865,8 +1865,8 @@
         "db_id": "document_management",
         "question": "Show the Document code for document type code Book?",
         "question_pl": "Pokaż kod dokumentu dla kodu typu dokumentu Książka?",
-        "query": "SELECT document_code FROM documents WHERE document_type_code='Book'",
-        "query_pl": "SELECT document_code FROM documents WHERE document_type_code=\"Książka\""
+        "query": "SELECT document_code FROM documents WHERE document_type_code = 'Book'",
+        "query_pl": "SELECT document_code FROM documents WHERE document_type_code = \"Książka\""
     },
     {
         "db_id": "shop_membership",
@@ -1907,8 +1907,8 @@
         "db_id": "coffee_shop",
         "question": "What is the membership card of Breton,Robert?",
         "question_pl": "Jaka jest karta członkowska Breton,Robert?",
-        "query": "SELECT Membership_card FROM member where Name='Breton, Robert'",
-        "query_pl": "SELECT Membership_card FROM member where Name=\"Breton, Robert\""
+        "query": "SELECT Membership_card FROM member where Name = 'Breton, Robert'",
+        "query_pl": "SELECT Membership_card FROM member where Name = \"Breton, Robert\""
     },
     {
         "db_id": "flight_1",
@@ -2698,8 +2698,8 @@
         "db_id": "insurance_fnol",
         "question": "How many policies does America Jaskolski have listed?",
         "question_pl": "Ile polis ma na liście America Jaskolski?",
-        "query": "SELECT count(*) FROM customers AS t1 JOIN customers_policies AS t2 ON t1.customer_id = t2.customer_id where \tCustomer_name=\"America Jaskolski\"",
-        "query_pl": "SELECT count(*) FROM customers AS t1 JOIN customers_policies AS t2 ON t1.customer_id = t2.customer_id where \tCustomer_name=\"America Jaskolski\""
+        "query": "SELECT count(*) FROM customers AS t1 JOIN customers_policies AS t2 ON t1.customer_id = t2.customer_id where \tCustomer_name = \"America Jaskolski\"",
+        "query_pl": "SELECT count(*) FROM customers AS t1 JOIN customers_policies AS t2 ON t1.customer_id = t2.customer_id where \tCustomer_name = \"America Jaskolski\""
     },
     {
         "db_id": "club_1",
@@ -2789,8 +2789,8 @@
         "db_id": "products_gen_characteristics",
         "question": "what is the color code of basil?",
         "question_pl": "Jaki jest kod koloru bazylii?",
-        "query": "SELECT color_code from products where product_name='basil'",
-        "query_pl": "SELECT color_code from products where product_name=\"bazylia\""
+        "query": "SELECT color_code from products where product_name = 'basil'",
+        "query_pl": "SELECT color_code from products where product_name = \"bazylia\""
     },
     {
         "db_id": "baseball_1",
@@ -2852,8 +2852,8 @@
         "db_id": "chinook_1",
         "question": "State the email id of custormer id 1?",
         "question_pl": "Podaj identyfikator e-mail klienta o identyfikatorze 1?",
-        "query": "select email from customer where customerid='1'",
-        "query_pl": "select email from customer where customerid=\"1\""
+        "query": "select email from customer where customerid = '1'",
+        "query_pl": "select email from customer where customerid = \"1\""
     },
     {
         "db_id": "tracking_share_transactions",
@@ -2901,8 +2901,8 @@
         "db_id": "customers_and_addresses",
         "question": "what is the country of zip postcode 416?",
         "question_pl": "Jaki jest kraj kodu pocztowego 416?",
-        "query": "SELECT \tcountry from Addresses where zip_postcode=416 ",
-        "query_pl": "SELECT \tcountry from Addresses where zip_postcode=416 "
+        "query": "SELECT \tcountry from Addresses where zip_postcode = 416 ",
+        "query_pl": "SELECT \tcountry from Addresses where zip_postcode = 416 "
     },
     {
         "db_id": "store_1",
@@ -3062,8 +3062,8 @@
         "db_id": "scientist_1",
         "question": "How many number if scientist belong to project AeH1",
         "question_pl": "Ilu naukowców należy do projektu AeH1?",
-        "query": "SELECT count(*) FROM projects AS T1 JOIN assignedto AS T2 ON T1.code  =  T2.project where T1.Code=\"AeH1\"",
-        "query_pl": "SELECT count(*) FROM projects AS T1 JOIN assignedto AS T2 ON T1.code  =  T2.project where T1.Code=\"AeH1\""
+        "query": "SELECT count(*) FROM projects AS T1 JOIN assignedto AS T2 ON T1.code  =  T2.project where T1.Code = \"AeH1\"",
+        "query_pl": "SELECT count(*) FROM projects AS T1 JOIN assignedto AS T2 ON T1.code  =  T2.project where T1.Code = \"AeH1\""
     },
     {
         "db_id": "news_report",
@@ -3111,8 +3111,8 @@
         "db_id": "behavior_monitoring",
         "question": "Show the detention type code for the detention with id 1?",
         "question_pl": "Pokaż kod typu zatrzymania dla zatrzymania o identyfikatorze 1?",
-        "query": "SELECT T1.detention_type_code FROM Detention AS T1 JOIN Ref_Detention_Type AS T2 ON T1.detention_type_code  =  T2.detention_type_code where detention_id=1",
-        "query_pl": "SELECT T1.detention_type_code FROM Detention AS T1 JOIN Ref_Detention_Type AS T2 ON T1.detention_type_code  =  T2.detention_type_code where detention_id=1"
+        "query": "SELECT T1.detention_type_code FROM Detention AS T1 JOIN Ref_Detention_Type AS T2 ON T1.detention_type_code  =  T2.detention_type_code where detention_id = 1",
+        "query_pl": "SELECT T1.detention_type_code FROM Detention AS T1 JOIN Ref_Detention_Type AS T2 ON T1.detention_type_code  =  T2.detention_type_code where detention_id = 1"
     },
     {
         "db_id": "perpetrator",
@@ -3846,8 +3846,8 @@
         "db_id": "products_for_hire",
         "question": "what is the daily hire cost of the product id 1",
         "question_pl": "Jaki jest dzienny koszt wynajmu produktu o identyfikatorze 1?",
-        "query": "SELECT daily_hire_cost\t FROM Products_for_Hire where product_id=1",
-        "query_pl": "SELECT daily_hire_cost\t FROM Products_for_Hire where product_id=1"
+        "query": "SELECT daily_hire_cost\t FROM Products_for_Hire where product_id = 1",
+        "query_pl": "SELECT daily_hire_cost\t FROM Products_for_Hire where product_id = 1"
     },
     {
         "db_id": "medicine_enzyme_interaction",
@@ -3867,8 +3867,8 @@
         "db_id": "tracking_orders",
         "question": "what is the customer name of customer id 1",
         "question_pl": "Jaka jest nazwa klienta o identyfikatorze klienta 1",
-        "query": "SELECT customer_name FROM Customers WHERE customer_id=1",
-        "query_pl": "SELECT customer_name FROM Customers WHERE customer_id=1"
+        "query": "SELECT customer_name FROM Customers WHERE customer_id = 1",
+        "query_pl": "SELECT customer_name FROM Customers WHERE customer_id = 1"
     },
     {
         "db_id": "college_2",
@@ -3923,15 +3923,15 @@
         "db_id": "shop_membership",
         "question": "What are the register year of Jeremy Jarmon?",
         "question_pl": "Jaki jest rok rejestracji Jeremy'ego Jarmona?",
-        "query": "SELECT T1.register_year FROM membership_register_branch AS T1 JOIN member AS T2 ON T1.member_id  =  T2.member_id WHERE T2.name=\"Jeremy Jarmon\"",
-        "query_pl": "SELECT T1.register_year FROM membership_register_branch AS T1 JOIN member AS T2 ON T1.member_id  =  T2.member_id WHERE T2.name=\"Jeremy Jarmon\""
+        "query": "SELECT T1.register_year FROM membership_register_branch AS T1 JOIN member AS T2 ON T1.member_id  =  T2.member_id WHERE T2.name = \"Jeremy Jarmon\"",
+        "query_pl": "SELECT T1.register_year FROM membership_register_branch AS T1 JOIN member AS T2 ON T1.member_id  =  T2.member_id WHERE T2.name = \"Jeremy Jarmon\""
     },
     {
         "db_id": "school_player",
         "question": "Show the School name with School_ID 1?",
         "question_pl": "Pokaż nazwę szkoły z identyfikatorem School_ID 1?",
-        "query": "SELECT School FROM school WHERE School_ID='1'",
-        "query_pl": "SELECT School FROM school WHERE School_ID=\"1\""
+        "query": "SELECT School FROM school WHERE School_ID = '1'",
+        "query_pl": "SELECT School FROM school WHERE School_ID = \"1\""
     },
     {
         "db_id": "student_1",
@@ -3972,8 +3972,8 @@
         "db_id": "climbing",
         "question": "what is height of Kibo (Uhuru Pk)\t",
         "question_pl": "Jaka jest wysokość Kibo (Uhuru Pk)?",
-        "query": "SELECT height FROM mountain where name='Kibo (Uhuru Pk)'",
-        "query_pl": "SELECT height FROM mountain where name=\"Kibo (Uhuru Pk)\""
+        "query": "SELECT height FROM mountain where name = 'Kibo (Uhuru Pk)'",
+        "query_pl": "SELECT height FROM mountain where name = \"Kibo (Uhuru Pk)\""
     },
     {
         "db_id": "department_management",
@@ -4413,8 +4413,8 @@
         "db_id": "tracking_grants_for_research",
         "question": "What were the dates that APP sent their grants?",
         "question_pl": "Jakie były daty wysłania dotacji przez APP?",
-        "query": "SELECT sent_date FROM Documents where document_type_code=\"APP\"",
-        "query_pl": "SELECT sent_date FROM Documents where document_type_code=\"APP\""
+        "query": "SELECT sent_date FROM Documents where document_type_code = \"APP\"",
+        "query_pl": "SELECT sent_date FROM Documents where document_type_code = \"APP\""
     },
     {
         "db_id": "college_1",
@@ -4525,8 +4525,8 @@
         "db_id": "club_1",
         "question": "Tell me the club description for club id 1 ?",
         "question_pl": "Podaj mi opis klubu dla identyfikatora klubu 1?",
-        "query": "SELECT ClubDesc FROM club where ClubID=1",
-        "query_pl": "SELECT ClubDesc FROM club where ClubID=1"
+        "query": "SELECT ClubDesc FROM club where ClubID = 1",
+        "query_pl": "SELECT ClubDesc FROM club where ClubID = 1"
     },
     {
         "db_id": "tracking_orders",
@@ -4686,8 +4686,8 @@
         "db_id": "insurance_fnol",
         "question": " What is the customer ID of America Jaskolski",
         "question_pl": " Jaki jest identyfikator klienta America Jaskolski?",
-        "query": "SELECT Customer_ID FROM customers where Customer_name ='America Jaskolski'",
-        "query_pl": "SELECT Customer_ID FROM customers where Customer_name =\"America Jaskolski\""
+        "query": "SELECT Customer_ID FROM customers where Customer_name = 'America Jaskolski'",
+        "query_pl": "SELECT Customer_ID FROM customers where Customer_name = \"America Jaskolski\""
     },
     {
         "db_id": "cre_Theme_park",
@@ -4987,8 +4987,8 @@
         "db_id": "soccer_2",
         "question": "What is the player id for Charles?",
         "question_pl": "Jaki jest identyfikator gracza Charles?",
-        "query": "SELECT pID FROM Player WHERE pName=\"Charles\"",
-        "query_pl": "SELECT pID FROM Player WHERE pName=\"Charles\""
+        "query": "SELECT pID FROM Player WHERE pName = \"Charles\"",
+        "query_pl": "SELECT pID FROM Player WHERE pName = \"Charles\""
     },
     {
         "db_id": "journal_committee",
@@ -5372,8 +5372,8 @@
         "db_id": "sakila_1",
         "question": "what is the city id   of alberta district?",
         "question_pl": "Jaki jest identyfikator miasta w dzielnicy alberta?",
-        "query": "SELECT \tdistinct city_id  from address where district=\"Alberta\";",
-        "query_pl": "SELECT \tdistinct city_id  from address where district=\"Alberta\";"
+        "query": "SELECT \tdistinct city_id  from address where district = \"Alberta\";",
+        "query_pl": "SELECT \tdistinct city_id  from address where district = \"Alberta\";"
     },
     {
         "db_id": "chinook_1",
@@ -6135,8 +6135,8 @@
         "db_id": "tracking_grants_for_research",
         "question": "Project details of project ID 1?",
         "question_pl": "Szczegóły projektu ID projektu 1?",
-        "query": "SELECT project_details FROM Projects where project_id=1",
-        "query_pl": "SELECT project_details FROM Projects where project_id=1"
+        "query": "SELECT project_details FROM Projects where project_id = 1",
+        "query_pl": "SELECT project_details FROM Projects where project_id = 1"
     },
     {
         "db_id": "company_employee",
@@ -6541,8 +6541,8 @@
         "db_id": "flight_4",
         "question": "WHAT IS THE AIRPORT NAME OF GORKA CITY IN AIRPORT TABLE?",
         "question_pl": "JAKA JEST NAZWA LOTNISKA W MIEŚCIE GORKA W TABELI LOTNISK?",
-        "query": "select name from airports where city='Goroka'",
-        "query_pl": "select name from airports where city=\"Goroka\""
+        "query": "select name from airports where city = 'Goroka'",
+        "query_pl": "select name from airports where city = \"Goroka\""
     },
     {
         "db_id": "voter_2",
@@ -6842,8 +6842,8 @@
         "db_id": "company_employee",
         "question": "Show the name of the company with company_id 1.0?",
         "question_pl": "Pokaż nazwę firmy z identyfikatorem company_id 1.0?",
-        "query": "SELECT Name  from company  where Company_ID=1.0",
-        "query_pl": "SELECT Name  from company  where Company_ID=1.0"
+        "query": "SELECT Name  from company  where Company_ID = 1.0",
+        "query_pl": "SELECT Name  from company  where Company_ID = 1.0"
     },
     {
         "db_id": "inn_1",
@@ -6982,8 +6982,8 @@
         "db_id": "customers_and_invoices",
         "question": "Hello, I was wondering how many accounts are listed under the first name of John?",
         "question_pl": "Witaj, zastanawiałem się, ile kont jest wymienionych pod imieniem John?",
-        "query": "select count(distinct account_id) from Customers AS T1 JOIN Accounts AS T2 ON T2.customer_id=T1.customer_id WHERE customer_first_name='John'",
-        "query_pl": "select count(distinct account_id) from Customers AS T1 JOIN Accounts AS T2 ON T2.customer_id=T1.customer_id WHERE customer_first_name=\"John\""
+        "query": "select count(distinct account_id) from Customers AS T1 JOIN Accounts AS T2 ON T2.customer_id = T1.customer_id WHERE customer_first_name = 'John'",
+        "query_pl": "select count(distinct account_id) from Customers AS T1 JOIN Accounts AS T2 ON T2.customer_id = T1.customer_id WHERE customer_first_name = \"John\""
     },
     {
         "db_id": "solvency_ii",
@@ -6996,8 +6996,8 @@
         "db_id": "baseball_1",
         "question": "What are the names of some public parks in the United States?",
         "question_pl": "Jak nazywają się niektóre parki publiczne w Stanach Zjednoczonych?",
-        "query": "SELECT park_name FROM park where country='US'",
-        "query_pl": "SELECT park_name FROM park where country=\"USA\""
+        "query": "SELECT park_name FROM park where country = 'US'",
+        "query_pl": "SELECT park_name FROM park where country = \"US\""
     },
     {
         "db_id": "ship_mission",
@@ -7038,8 +7038,8 @@
         "db_id": "gas_company",
         "question": "Show the name of the company with company id 1?",
         "question_pl": "Pokaż nazwę firmy z identyfikatorem firmy 1?",
-        "query": "SELECT company  FROM company WHERE company_id='1'",
-        "query_pl": "SELECT company  FROM company WHERE company_id=\"1\""
+        "query": "SELECT company  FROM company WHERE company_id = '1'",
+        "query_pl": "SELECT company  FROM company WHERE company_id = \"1\""
     },
     {
         "db_id": "soccer_2",
@@ -7122,8 +7122,8 @@
         "db_id": "chinook_1",
         "question": "find the name of the Track 2?",
         "question_pl": "Znajdź nazwę ścieżki 2?",
-        "query": "SELECT Name from  Track where TrackId='2'",
-        "query_pl": "SELECT Name from  Track where TrackId=\"2\""
+        "query": "SELECT Name from  Track where TrackId = '2'",
+        "query_pl": "SELECT Name from  Track where TrackId = \"2\""
     },
     {
         "db_id": "tracking_grants_for_research",
@@ -7297,8 +7297,8 @@
         "db_id": "assets_maintenance",
         "question": "How many assets have fault logs?",
         "question_pl": "Ile zasobów ma dzienniki błędów?",
-        "query": "select count(*) from (SELECT * FROM Assets AS T1 JOIN Fault_Log AS T2 ON T1.asset_id  =  T2.asset_id GROUP BY T1.asset_id HAVING count(*)  >=1)",
-        "query_pl": "select count(*) from (SELECT * FROM Assets AS T1 JOIN Fault_Log AS T2 ON T1.asset_id  =  T2.asset_id GROUP BY T1.asset_id HAVING count(*)  >=1)"
+        "query": "select count(*) from (SELECT * FROM Assets AS T1 JOIN Fault_Log AS T2 ON T1.asset_id  =  T2.asset_id GROUP BY T1.asset_id HAVING count(*)  >= 1)",
+        "query_pl": "select count(*) from (SELECT * FROM Assets AS T1 JOIN Fault_Log AS T2 ON T1.asset_id  =  T2.asset_id GROUP BY T1.asset_id HAVING count(*)  >= 1)"
     },
     {
         "db_id": "local_govt_mdm",
@@ -7325,8 +7325,8 @@
         "db_id": "ship_mission",
         "question": "How many ships does United Kingdom have?",
         "question_pl": "Ile statków ma Wielka Brytania?",
-        "query": "SELECT Nationality,count(*) FROM ship  WHERE Nationality='United Kingdom' GROUP BY Nationality",
-        "query_pl": "SELECT Nationality,count(*) FROM ship  WHERE Nationality=\"Wielka Brytania\" GROUP BY Nationality"
+        "query": "SELECT Nationality,count(*) FROM ship  WHERE Nationality = 'United Kingdom' GROUP BY Nationality",
+        "query_pl": "SELECT Nationality,count(*) FROM ship  WHERE Nationality = \"Wielka Brytania\" GROUP BY Nationality"
     },
     {
         "db_id": "wine_1",
@@ -7535,8 +7535,8 @@
         "db_id": "products_gen_characteristics",
         "question": "Show the name of the product with product id 1?",
         "question_pl": "Pokaż nazwę produktu z identyfikatorem produktu 1?",
-        "query": "SELECT product_name\t FROM products WHERE product_id='1'",
-        "query_pl": "SELECT product_name\t FROM products WHERE product_id=\"1\""
+        "query": "SELECT product_name\t FROM products WHERE product_id = '1'",
+        "query_pl": "SELECT product_name\t FROM products WHERE product_id = \"1\""
     },
     {
         "db_id": "twitter_1",
@@ -7724,8 +7724,8 @@
         "db_id": "customers_and_addresses",
         "question": "list the canceled product customer id?",
         "question_pl": "Wymień identyfikator klienta anulowanego produktu?",
-        "query": "SELECT product_id FROM customer_orders AS t1 JOIN order_items AS t2 ON t1.order_id  =  t2.order_id WHERE order_status='Cancelled'",
-        "query_pl": "SELECT product_id FROM customer_orders AS t1 JOIN order_items AS t2 ON t1.order_id  =  t2.order_id WHERE order_status=\"Anulowane\""
+        "query": "SELECT product_id FROM customer_orders AS t1 JOIN order_items AS t2 ON t1.order_id  =  t2.order_id WHERE order_status = 'Cancelled'",
+        "query_pl": "SELECT product_id FROM customer_orders AS t1 JOIN order_items AS t2 ON t1.order_id  =  t2.order_id WHERE order_status = \"Anulowane\""
     },
     {
         "db_id": "hr_1",
@@ -7955,8 +7955,8 @@
         "db_id": "hr_1",
         "question": "hi,what is the president min salary?",
         "question_pl": "Cześć, jaka jest minimalna pensja prezesa?",
-        "query": "select min_salary from jobs where \tJOB_TITLE ='president'",
-        "query_pl": "select min_salary from jobs where \tJOB_TITLE =\"prezes\""
+        "query": "select min_salary from jobs where \tJOB_TITLE = 'president'",
+        "query_pl": "select min_salary from jobs where \tJOB_TITLE = \"prezes\""
     },
     {
         "db_id": "pilot_record",
@@ -8053,8 +8053,8 @@
         "db_id": "inn_1",
         "question": "What is the first name of Reservations Code 10105?",
         "question_pl": "Jaka jest pierwsza nazwa kodu rezerwacji 10105?",
-        "query": "SELECT FirstName from Reservations where Code=10105",
-        "query_pl": "SELECT FirstName from Reservations where Code=10105"
+        "query": "SELECT FirstName from Reservations where Code = 10105",
+        "query_pl": "SELECT FirstName from Reservations where Code = 10105"
     },
     {
         "db_id": "journal_committee",
@@ -8256,8 +8256,8 @@
         "db_id": "department_store",
         "question": "What is the Job title code of department id 4?",
         "question_pl": "Jaki jest kod nazwy stanowiska w dziale o identyfikatorze 4?",
-        "query": "SELECT \tjob_title_code FROM Staff_Department_Assignments WHERE department_id=4",
-        "query_pl": "SELECT \tjob_title_code FROM Staff_Department_Assignments WHERE department_id=4"
+        "query": "SELECT \tjob_title_code FROM Staff_Department_Assignments WHERE department_id = 4",
+        "query_pl": "SELECT \tjob_title_code FROM Staff_Department_Assignments WHERE department_id = 4"
     },
     {
         "db_id": "theme_gallery",
@@ -8466,8 +8466,8 @@
         "db_id": "device",
         "question": "How many devices are in stock at \tDinas Device?",
         "question_pl": "Ile urządzeń znajduje się w magazynie Dinas Device?",
-        "query": "SELECT count(Device_ID) FROM stock AS T1 JOIN shop AS T2 ON T1.Shop_ID  =  T2.Shop_ID where Shop_Name='Dinas Device'",
-        "query_pl": "SELECT count(Device_ID) FROM stock AS T1 JOIN shop AS T2 ON T1.Shop_ID  =  T2.Shop_ID where Shop_Name=\"Urządzenie Dinas\""
+        "query": "SELECT count(Device_ID) FROM stock AS T1 JOIN shop AS T2 ON T1.Shop_ID  =  T2.Shop_ID where Shop_Name = 'Dinas Device'",
+        "query_pl": "SELECT count(Device_ID) FROM stock AS T1 JOIN shop AS T2 ON T1.Shop_ID  =  T2.Shop_ID where Shop_Name = \"Urządzenie Dinas\""
     },
     {
         "db_id": "network_2",
@@ -8711,8 +8711,8 @@
         "db_id": "college_1",
         "question": "what is the enroll grade of 324257",
         "question_pl": "Jaki jest stopień rejestracji 324257?",
-        "query": "SELECT ENROLL_GRADE from ENROLL where STU_NUM=324257",
-        "query_pl": "SELECT ENROLL_GRADE from ENROLL where STU_NUM=324257"
+        "query": "SELECT ENROLL_GRADE from ENROLL where STU_NUM = 324257",
+        "query_pl": "SELECT ENROLL_GRADE from ENROLL where STU_NUM = 324257"
     },
     {
         "db_id": "club_1",
@@ -8872,8 +8872,8 @@
         "db_id": "local_govt_and_lot",
         "question": "Which events only have 1 note?",
         "question_pl": "Które wydarzenia mają tylko 1 notatkę?",
-        "query": "SELECT T1.Customer_Event_ID FROM Customer_Events AS T1 JOIN Customer_Event_Notes AS T2 ON T1.Customer_Event_ID  =  T2.Customer_Event_ID GROUP BY T1.customer_event_id HAVING count(*)=1",
-        "query_pl": "SELECT T1.Customer_Event_ID FROM Customer_Events AS T1 JOIN Customer_Event_Notes AS T2 ON T1.Customer_Event_ID  =  T2.Customer_Event_ID GROUP BY T1.customer_event_id HAVING count(*)=1"
+        "query": "SELECT T1.Customer_Event_ID FROM Customer_Events AS T1 JOIN Customer_Event_Notes AS T2 ON T1.Customer_Event_ID  =  T2.Customer_Event_ID GROUP BY T1.customer_event_id HAVING count(*) = 1",
+        "query_pl": "SELECT T1.Customer_Event_ID FROM Customer_Events AS T1 JOIN Customer_Event_Notes AS T2 ON T1.Customer_Event_ID  =  T2.Customer_Event_ID GROUP BY T1.customer_event_id HAVING count(*) = 1"
     },
     {
         "db_id": "small_bank_1",
@@ -8991,8 +8991,8 @@
         "db_id": "club_1",
         "question": "where is the location of club \"Hopkins Student Enterprises\"?",
         "question_pl": "Gdzie znajduje się klub \"Hopkins Student Enterprises\"?",
-        "query": "SELECT ClubLocation FROM Club WHERE ClubName= \"Hopkins Student Enterprises\"",
-        "query_pl": "SELECT ClubLocation FROM Club WHERE ClubName= \"Hopkins Student Enterprises\""
+        "query": "SELECT ClubLocation FROM Club WHERE ClubName = \"Hopkins Student Enterprises\"",
+        "query_pl": "SELECT ClubLocation FROM Club WHERE ClubName = \"Hopkins Student Enterprises\""
     },
     {
         "db_id": "twitter_1",
@@ -9733,8 +9733,8 @@
         "db_id": "browser_web",
         "question": "What distinct accelerator names are compatible with Firefox.",
         "question_pl": "Jakie różne nazwy akceleratorów są kompatybilne z Firefoksem.",
-        "query": "SELECT DISTINCT T1.name FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id JOIN browser AS T3 ON T2.browser_id  =  T3.id WHERE T3.name =\"Firefox\"",
-        "query_pl": "SELECT DISTINCT T1.name FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id JOIN browser AS T3 ON T2.browser_id  =  T3.id WHERE T3.name =\"Firefox\""
+        "query": "SELECT DISTINCT T1.name FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id JOIN browser AS T3 ON T2.browser_id  =  T3.id WHERE T3.name = \"Firefox\"",
+        "query_pl": "SELECT DISTINCT T1.name FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id JOIN browser AS T3 ON T2.browser_id  =  T3.id WHERE T3.name = \"Firefox\""
     },
     {
         "db_id": "sports_competition",
@@ -9866,8 +9866,8 @@
         "db_id": "cre_Theme_park",
         "question": "Show me the location ID of the Tourist Attraction ID 2113?",
         "question_pl": "Pokaż mi identyfikator lokalizacji atrakcji turystycznej ID 2113?",
-        "query": "SELECT \tLocation_ID FROM Tourist_Attractions WHERE Tourist_Attraction_ID='2113'",
-        "query_pl": "SELECT \tLocation_ID FROM Tourist_Attractions WHERE Tourist_Attraction_ID=\"2113\""
+        "query": "SELECT \tLocation_ID FROM Tourist_Attractions WHERE Tourist_Attraction_ID = '2113'",
+        "query_pl": "SELECT \tLocation_ID FROM Tourist_Attractions WHERE Tourist_Attraction_ID = \"2113\""
     },
     {
         "db_id": "shop_membership",
@@ -9908,8 +9908,8 @@
         "db_id": "game_1",
         "question": "what is the lname of linda",
         "question_pl": "Jak nazywa się Linda?",
-        "query": "SELECT LName FROM Student where Fname='Linda'",
-        "query_pl": "SELECT LName FROM Student where Fname=\"Linda\""
+        "query": "SELECT LName FROM Student where Fname = 'Linda'",
+        "query_pl": "SELECT LName FROM Student where Fname = \"Linda\""
     },
     {
         "db_id": "phone_market",
@@ -10489,8 +10489,8 @@
         "db_id": "epinions_1",
         "question": "What is the user id of Helen",
         "question_pl": "Jaki jest identyfikator użytkownika Helen",
-        "query": "SELECT u_id FROM useracct where name=\"Helen\"",
-        "query_pl": "SELECT u_id FROM useracct where name=\"Helen\""
+        "query": "SELECT u_id FROM useracct where name = \"Helen\"",
+        "query_pl": "SELECT u_id FROM useracct where name = \"Helen\""
     },
     {
         "db_id": "college_2",
@@ -10783,8 +10783,8 @@
         "db_id": "e_learning",
         "question": "How many failed the exam? ",
         "question_pl": "Ilu z nich nie zdało egzaminu?",
-        "query": "SELECT count(*) FROM Student_Tests_Taken where test_result='Fail'",
-        "query_pl": "SELECT count(*) FROM Student_Tests_Taken where test_result=\"Niepowodzenie\""
+        "query": "SELECT count(*) FROM Student_Tests_Taken where test_result = 'Fail'",
+        "query_pl": "SELECT count(*) FROM Student_Tests_Taken where test_result = \"Niepowodzenie\""
     },
     {
         "db_id": "products_for_hire",
@@ -11028,8 +11028,8 @@
         "db_id": "perpetrator",
         "question": "HOW MANY PEOPLE HAS KILLED AT SOUTH KOREA ?",
         "question_pl": "ILE OSÓB ZGINĘŁO W KOREI POŁUDNIOWEJ?",
-        "query": "SELECT killed FROM perpetrator WHERE Country=\"South Korea\"",
-        "query_pl": "SELECT killed FROM perpetrator WHERE Country=\"Korea Południowa\""
+        "query": "SELECT killed FROM perpetrator WHERE Country = \"South Korea\"",
+        "query_pl": "SELECT killed FROM perpetrator WHERE Country = \"Korea Południowa\""
     },
     {
         "db_id": "architecture",
@@ -11420,8 +11420,8 @@
         "db_id": "manufactory_1",
         "question": "where is the Headquarter of Sony?",
         "question_pl": "Gdzie znajduje się główna siedziba Sony?",
-        "query": "SELECT \tHeadquarter  FROM manufacturers WHERE  Name=\"Sony\"",
-        "query_pl": "SELECT \tHeadquarter  FROM manufacturers WHERE  Name=\"Sony\""
+        "query": "SELECT \tHeadquarter  FROM manufacturers WHERE  Name = \"Sony\"",
+        "query_pl": "SELECT \tHeadquarter  FROM manufacturers WHERE  Name = \"Sony\""
     },
     {
         "db_id": "storm_record",
@@ -11763,8 +11763,8 @@
         "db_id": "product_catalog",
         "question": "What is the height of Cola?",
         "question_pl": "Jaka jest wysokość Coli?",
-        "query": "SELECT height  FROM catalog_contents WHERE \tcatalog_entry_name=\"Cola\"",
-        "query_pl": "SELECT height  FROM catalog_contents WHERE \tcatalog_entry_name=\"Cola\""
+        "query": "SELECT height  FROM catalog_contents WHERE \tcatalog_entry_name = \"Cola\"",
+        "query_pl": "SELECT height  FROM catalog_contents WHERE \tcatalog_entry_name = \"Cola\""
     },
     {
         "db_id": "chinook_1",
@@ -11826,8 +11826,8 @@
         "db_id": "manufactory_1",
         "question": "Can you show the Name of the Products of Code 1?",
         "question_pl": "Czy możesz pokazać nazwę produktów z kodem 1?",
-        "query": "SELECT Name FROM Products WHERE Code=1",
-        "query_pl": "SELECT Name FROM Products WHERE Code=1"
+        "query": "SELECT Name FROM Products WHERE Code = 1",
+        "query_pl": "SELECT Name FROM Products WHERE Code = 1"
     },
     {
         "db_id": "insurance_and_eClaims",

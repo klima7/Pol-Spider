@@ -276,8 +276,8 @@
         "db_id": "car_1",
         "question": "How many different cars on this list were produced in 1974?",
         "question_pl": "Ile różnych samochodów z tej listy zostało wyprodukowanych w 1974 roku?",
-        "query": "select count(*) from cars_data where year='1974'",
-        "query_pl": "select count(*) from cars_data where year=\"1974\""
+        "query": "select count(*) from cars_data where year = '1974'",
+        "query_pl": "select count(*) from cars_data where year = \"1974\""
     },
     {
         "db_id": "employee_hire_evaluation",
@@ -367,8 +367,8 @@
         "db_id": "flight_2",
         "question": "Can you show the SourceAirport FlightNo 28?",
         "question_pl": "Czy możesz pokazać SourceAirport FlightNo 28?",
-        "query": "SELECT SourceAirport FROM Flights WHERE FlightNo='28'",
-        "query_pl": "SELECT SourceAirport FROM Flights WHERE FlightNo=\"28\""
+        "query": "SELECT SourceAirport FROM Flights WHERE FlightNo = '28'",
+        "query_pl": "SELECT SourceAirport FROM Flights WHERE FlightNo = \"28\""
     },
     {
         "db_id": "student_transcripts_tracking",
@@ -472,8 +472,8 @@
         "db_id": "wta_1",
         "question": "Can you show the birth date of player id 200002?",
         "question_pl": "Czy możesz pokazać datę urodzenia gracza o identyfikatorze 200002?",
-        "query": "SELECT birth_date FROM players where player_id=200002",
-        "query_pl": "SELECT birth_date FROM players where player_id=200002"
+        "query": "SELECT birth_date FROM players where player_id = 200002",
+        "query_pl": "SELECT birth_date FROM players where player_id = 200002"
     },
     {
         "db_id": "world_1",
@@ -752,8 +752,8 @@
         "db_id": "pets_1",
         "question": "How many female students are on the list?",
         "question_pl": "Ile studentek znajduje się na liście?",
-        "query": "SELECT count(*)FROM student WHERE Sex=\"F\"",
-        "query_pl": "SELECT count(*)FROM student WHERE Sex=\"F\""
+        "query": "SELECT count(*)FROM student WHERE Sex = \"F\"",
+        "query_pl": "SELECT count(*)FROM student WHERE Sex = \"F\""
     },
     {
         "db_id": "tvshow",
@@ -843,8 +843,8 @@
         "db_id": "employee_hire_evaluation",
         "question": "what is the age of George Chuter?",
         "question_pl": "Ile lat ma George Chuter?",
-        "query": "SELECT Age from employee where Name='George Chuter'",
-        "query_pl": "SELECT Age from employee where Name=\"George Chuter\""
+        "query": "SELECT Age from employee where Name = 'George Chuter'",
+        "query_pl": "SELECT Age from employee where Name = \"George Chuter\""
     },
     {
         "db_id": "poker_player",
@@ -1053,8 +1053,8 @@
         "db_id": "tvshow",
         "question": "IN WHAT LANGUAGE SKY MUSIC AVAILABLE?",
         "question_pl": "W JAKIM JĘZYKU DOSTĘPNA JEST MUZYKA Z NIEBA?",
-        "query": "SELECT Language FROM TV_Channel where series_name='Sky Music'",
-        "query_pl": "SELECT Language FROM TV_Channel where series_name=\"Sky Music\""
+        "query": "SELECT Language FROM TV_Channel where series_name = 'Sky Music'",
+        "query_pl": "SELECT Language FROM TV_Channel where series_name = \"Sky Music\""
     },
     {
         "db_id": "tvshow",
@@ -1074,8 +1074,8 @@
         "db_id": "pets_1",
         "question": "Can you tell me the last names of students who have pets?",
         "question_pl": "Czy możesz mi podać nazwiska uczniów, którzy mają zwierzęta?",
-        "query": "select lname from Student AS T1 JOIN Has_Pet AS T2 ON T2.stuid=T1.stuid",
-        "query_pl": "select lname from Student AS T1 JOIN Has_Pet AS T2 ON T2.stuid=T1.stuid"
+        "query": "select lname from Student AS T1 JOIN Has_Pet AS T2 ON T2.stuid = T1.stuid",
+        "query_pl": "select lname from Student AS T1 JOIN Has_Pet AS T2 ON T2.stuid = T1.stuid"
     },
     {
         "db_id": "orchestra",
@@ -1200,8 +1200,8 @@
         "db_id": "flight_2",
         "question": "Find Flight from CVO to SNA",
         "question_pl": "Znajdź lot z CVO do SNA",
-        "query": "SELECT FlightNo FROM flights where SourceAirport=\"CVO\" and DestAirport=\"SNA\"",
-        "query_pl": "SELECT FlightNo FROM flights where SourceAirport=\"CVO\" and DestAirport=\"SNA\""
+        "query": "SELECT FlightNo FROM flights where SourceAirport = \"CVO\" and DestAirport = \"SNA\"",
+        "query_pl": "SELECT FlightNo FROM flights where SourceAirport = \"CVO\" and DestAirport = \"SNA\""
     },
     {
         "db_id": "tvshow",
@@ -1522,8 +1522,8 @@
         "db_id": "poker_player",
         "question": "To which nationality does the people_id 1 belongs to ?",
         "question_pl": "Do jakiej narodowości należy osoba o identyfikatorze people_id 1?",
-        "query": "SELECT Nationality FROM people where People_ID=1",
-        "query_pl": "SELECT Nationality FROM people where People_ID=1"
+        "query": "SELECT Nationality FROM people where People_ID = 1",
+        "query_pl": "SELECT Nationality FROM people where People_ID = 1"
     },
     {
         "db_id": "student_transcripts_tracking",
