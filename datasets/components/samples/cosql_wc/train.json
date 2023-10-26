@@ -2737,13 +2737,6 @@
         "query_pl": "SELECT Appelation FROM WINE WHERE YEAR  >  2008"
     },
     {
-        "db_id": "hospital_1",
-        "question": "Which department has the least number of employees?",
-        "question_pl": "Który dział zatrudnia najmniej pracowników?",
-        "query": "SELECT * FROM department GROUP BY departmentID ORDER BY count(*) LIMIT 1;",
-        "query_pl": "SELECT * FROM department GROUP BY departmentID ORDER BY count(*) LIMIT 1;"
-    },
-    {
         "db_id": "college_3",
         "question": "What is the highest grade point?",
         "question_pl": "Jaka jest najwyższa ocena?",
@@ -3675,13 +3668,6 @@
         "query_pl": "SELECT count(*) FROM instructor "
     },
     {
-        "db_id": "activity_1",
-        "question": "How many professors are there?",
-        "question_pl": "Ilu jest profesorów?",
-        "query": "SELECT COUNT(*) FROM Faculty WHERE Rank = \"Professor\"",
-        "query_pl": "SELECT COUNT(*) FROM Faculty WHERE Rank = \"Profesor\""
-    },
-    {
         "db_id": "tracking_software_problems",
         "question": "What is the staff id of Bosco?",
         "question_pl": "Jaki jest identyfikator personelu Bosco?",
@@ -3953,13 +3939,6 @@
         "question_pl": "Jak nazywają się wszyscy uczniowie?",
         "query": "select lastname,firstname from list",
         "query_pl": "select lastname,firstname from list"
-    },
-    {
-        "db_id": "apartment_rentals",
-        "question": "How many apartments are there?",
-        "question_pl": "Ile jest apartamentów?",
-        "query": "SELECT count(*) FROM  Apartments ",
-        "query_pl": "SELECT count(*) FROM  Apartments "
     },
     {
         "db_id": "journal_committee",
@@ -5264,13 +5243,6 @@
         "query_pl": "SELECT shipping_agent_code FROM Ref_Shipping_Agents"
     },
     {
-        "db_id": "cre_Doc_Tracking_DB",
-        "question": "How many employees are there?",
-        "question_pl": "Ilu masz pracowników?",
-        "query": "select count(employee_id) from employees",
-        "query_pl": "select count(employee_id) from employees"
-    },
-    {
         "db_id": "game_1",
         "question": "list number of games played by students ",
         "question_pl": "Wymień liczbę gier rozegranych przez uczniów",
@@ -5789,13 +5761,6 @@
         "query_pl": "SELECT name FROM driver "
     },
     {
-        "db_id": "student_assessment",
-        "question": "How many students are there?",
-        "question_pl": "Ilu jest studentów?",
-        "query": "SELECT count(student_id) FROM student_course_registrations ",
-        "query_pl": "SELECT count(student_id) FROM student_course_registrations "
-    },
-    {
         "db_id": "soccer_2",
         "question": "How many different positions are there?",
         "question_pl": "Ile jest różnych stanowisk?",
@@ -6272,13 +6237,6 @@
         "query_pl": "SELECT count(*) FROM exhibition "
     },
     {
-        "db_id": "riding_club",
-        "question": "What are the names of the players?\n",
-        "question_pl": "Jakie są imiona zawodników?\n",
-        "query": "SELECT player_name from player",
-        "query_pl": "SELECT player_name from player"
-    },
-    {
         "db_id": "baseball_1",
         "question": "what is the average salary for all teams?",
         "question_pl": "Jaka jest średnia pensja dla wszystkich drużyn?",
@@ -6305,13 +6263,6 @@
         "question_pl": "Pokaż mi nazwę restauracji z ResID 1?",
         "query": "select \tResName from  Restaurant where ResID = 1",
         "query_pl": "select \tResName from  Restaurant where ResID = 1"
-    },
-    {
-        "db_id": "college_3",
-        "question": "How many students are there?",
-        "question_pl": "Ilu jest studentów?",
-        "query": "SELECT count(*) FROM STUDENT",
-        "query_pl": "SELECT count(*) FROM STUDENT"
     },
     {
         "db_id": "baseball_1",
@@ -6781,13 +6732,6 @@
         "question_pl": "Ilu artystów nagrało przynajmniej jedną piosenkę w języku angielskim?",
         "query": "select count(*) from (SELECT * FROM artist AS T1 JOIN song AS T2 ON T1.artist_name  =  T2.artist_name WHERE T2.languages  =  \"english\" GROUP BY T2.artist_name HAVING count(*)  >=  1)",
         "query_pl": "select count(*) from (SELECT * FROM artist AS T1 JOIN song AS T2 ON T1.artist_name  =  T2.artist_name WHERE T2.languages  =  \"angielski\" GROUP BY T2.artist_name HAVING count(*)  >=  1)"
-    },
-    {
-        "db_id": "student_1",
-        "question": "Which classroom has the most students?",
-        "question_pl": "Która klasa ma najwięcej uczniów?",
-        "query": "SELECT classroom FROM list GROUP BY classroom ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT classroom FROM list GROUP BY classroom ORDER BY count(*) DESC LIMIT 1"
     },
     {
         "db_id": "department_store",
@@ -7343,13 +7287,6 @@
         "query_pl": "select avg(age) from person"
     },
     {
-        "db_id": "flight_4",
-        "question": "How many airlines are there?",
-        "question_pl": "Ile jest linii lotniczych?",
-        "query": "SELECT count(*) FROM airlines ",
-        "query_pl": "SELECT count(*) FROM airlines "
-    },
-    {
         "db_id": "network_2",
         "question": "who are Dan's friends?",
         "question_pl": "Kim są przyjaciele Dana?",
@@ -7362,13 +7299,6 @@
         "question_pl": "Ile zasobów ma dzienniki błędów?",
         "query": "select count(*) from (SELECT * FROM Assets AS T1 JOIN Fault_Log AS T2 ON T1.asset_id  =  T2.asset_id GROUP BY T1.asset_id HAVING count(*)  >=1)",
         "query_pl": "select count(*) from (SELECT * FROM Assets AS T1 JOIN Fault_Log AS T2 ON T1.asset_id  =  T2.asset_id GROUP BY T1.asset_id HAVING count(*)  >=1)"
-    },
-    {
-        "db_id": "news_report",
-        "question": "how many journalist there",
-        "question_pl": "ilu jest tam dziennikarzy",
-        "query": "select count(*) from journalist;",
-        "query_pl": "select count(*) from journalist;"
     },
     {
         "db_id": "local_govt_mdm",
@@ -8911,13 +8841,6 @@
         "query_pl": "SELECT count(*) FROM airlines"
     },
     {
-        "db_id": "cre_Doc_Tracking_DB",
-        "question": "how many employees are there?",
-        "question_pl": "Ilu masz pracowników?",
-        "query": "SELECT count(*) FROM Employees",
-        "query_pl": "SELECT count(*) FROM Employees"
-    },
-    {
         "db_id": "school_player",
         "question": "Which schools have more than 1 player?",
         "question_pl": "Które szkoły mają więcej niż 1 zawodnika?",
@@ -9996,13 +9919,6 @@
         "query_pl": "SELECT Carrier FROM phone WHERE Memory_in_G  <  32 "
     },
     {
-        "db_id": "college_1",
-        "question": "how many employees there",
-        "question_pl": "ilu jest pracowników",
-        "query": "SELECT count(*) from employee",
-        "query_pl": "SELECT count(*) from employee"
-    },
-    {
         "db_id": "cre_Drama_Workshop_Groups",
         "question": "How many drama workshop groups are in Feliciaberg City?",
         "question_pl": "Ile grup warsztatów teatralnych jest w Feliciaberg City?",
@@ -10920,13 +10836,6 @@
         "query_pl": "SELECT T2.Visit_Details FROM VISITORS AS T1 JOIN VISITS AS T2 ON T1.Tourist_ID  =  T2.Tourist_ID WHERE T1.Tourist_Details  =  \"Vincent\""
     },
     {
-        "db_id": "customers_card_transactions",
-        "question": "how many customers are presented on the table",
-        "question_pl": "ilu klientów jest prezentowanych w tabeli",
-        "query": "SELECT count(*) FROM Customers",
-        "query_pl": "SELECT count(*) FROM Customers"
-    },
-    {
         "db_id": "aircraft",
         "question": "What are the maximum number of transit passengers of all airports?",
         "question_pl": "Jaka jest maksymalna liczba pasażerów tranzytowych na wszystkich lotniskach?",
@@ -11368,13 +11277,6 @@
         "query_pl": "SELECT t2.campus, sum(t1.graduate) FROM discipline_enrollments AS t1 JOIN campuses AS t2 ON t1.campus  =  t2.id WHERE t1.year  =  2004 group by t2.Campus"
     },
     {
-        "db_id": "college_1",
-        "question": "How many schools are there?",
-        "question_pl": "Ile jest szkół?",
-        "query": "SELECT count(school_code) FROM department",
-        "query_pl": "SELECT count(school_code) FROM department"
-    },
-    {
         "db_id": "company_employee",
         "question": "what is the name of the company with more than 200 sales? ",
         "question_pl": "Jak nazywa się firma z ponad 200 sprzedażami?",
@@ -11443,13 +11345,6 @@
         "question_pl": "Jak nazywa się winogrono, którego produkty winiarskie miały najwyższą średnią cenę?",
         "query": "SELECT T1.Grape FROM GRAPES AS T1 JOIN WINE AS T2 ON T1.Grape  =  T2.Grape GROUP BY T2.Grape ORDER BY AVG(Price) DESC LIMIT 1",
         "query_pl": "SELECT T1.Grape FROM GRAPES AS T1 JOIN WINE AS T2 ON T1.Grape  =  T2.Grape GROUP BY T2.Grape ORDER BY AVG(Price) DESC LIMIT 1"
-    },
-    {
-        "db_id": "college_1",
-        "question": "How many professors are there?",
-        "question_pl": "Ilu jest profesorów?",
-        "query": "SELECT count(*) FROM professor",
-        "query_pl": "SELECT count(*) FROM professor"
     },
     {
         "db_id": "tracking_orders",
@@ -11662,13 +11557,6 @@
         "query_pl": "SELECT budget_type_code FROM Documents_with_expenses GROUP BY budget_type_code ORDER BY count(*) DESC LIMIT 1"
     },
     {
-        "db_id": "department_store",
-        "question": "What is the average price of all products?",
-        "question_pl": "Jaka jest średnia cena wszystkich produktów?",
-        "query": "SELECT avg(product_price) FROM products",
-        "query_pl": "SELECT avg(product_price) FROM products"
-    },
-    {
         "db_id": "music_2",
         "question": "Can you list all the instruments used in the song Le Pop?",
         "question_pl": "Czy możesz wymienić wszystkie instrumenty użyte w utworze Le Pop?",
@@ -11725,13 +11613,6 @@
         "query_pl": "SELECT count(DISTINCT t1.clubname) FROM club AS t1 JOIN member_of_club AS t2 ON t1.clubid  =  t2.clubid JOIN student AS t3 ON t2.stuid  =  t3.stuid WHERE t3.fname  =  \"Eric\" AND t3.lname  =  \"Tai\""
     },
     {
-        "db_id": "climbing",
-        "question": "How many mountains in this table?",
-        "question_pl": "Ile gór znajduje się w tej tabeli?",
-        "query": "SELECT count(*) FROM mountain ",
-        "query_pl": "SELECT count(*) FROM mountain "
-    },
-    {
         "db_id": "store_1",
         "question": "How many invoices in this table?",
         "question_pl": "Ile faktur znajduje się w tej tabeli?",
@@ -11751,13 +11632,6 @@
         "question_pl": "jak znaleźć całkowitą stawkę rynkową mebli",
         "query": "SELECT sum(market_rate) FROM furniture ",
         "query_pl": "SELECT sum(market_rate) FROM furniture "
-    },
-    {
-        "db_id": "tracking_grants_for_research",
-        "question": "How many projects are there?",
-        "question_pl": "Ile jest projektów?",
-        "query": "SELECT count(project_id) from Project_Staff",
-        "query_pl": "SELECT count(project_id) from Project_Staff"
     },
     {
         "db_id": "activity_1",

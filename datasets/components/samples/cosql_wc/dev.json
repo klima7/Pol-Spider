@@ -1618,13 +1618,6 @@
     },
     {
         "db_id": "world_1",
-        "question": "how many country there",
-        "question_pl": "ile jest krajów",
-        "query": "select count(*) from Country;",
-        "query_pl": "select count(*) from Country;"
-    },
-    {
-        "db_id": "world_1",
         "question": "Hi, what is the population of the Caribbean?\n",
         "question_pl": "Cześć, jaka jest populacja Karaiby?\n",
         "query": "SELECT sum(Population) FROM country WHERE Region = \"Caribbean\"",
