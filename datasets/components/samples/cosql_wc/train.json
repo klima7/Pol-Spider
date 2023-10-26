@@ -2278,8 +2278,8 @@
         "db_id": "tracking_grants_for_research",
         "question": "Can you list all document descriptions that contain the word \"Initial\"?",
         "question_pl": "Czy możesz wymienić wszystkie opisy dokumentów, które zawierają słowo \"Początkowy\"?",
-        "query": "SELECT document_description FROM Document_Types WHERE document_description LIKE 'Initial%'",
-        "query_pl": "SELECT document_description FROM Document_Types WHERE document_description LIKE 'Initial%'"
+        "query": "SELECT document_description FROM Document_Types WHERE document_description LIKE 'Początkowy%'",
+        "query_pl": "SELECT document_description FROM Document_Types WHERE document_description LIKE 'Początkowy%'"
     },
     {
         "db_id": "decoration_competition",
@@ -2299,8 +2299,8 @@
         "db_id": "station_weather",
         "question": "how many trains have express in their names? ",
         "question_pl": "Ile pociągów ma w nazwie ekspres?",
-        "query": "SELECT count(*) FROM train WHERE name LIKE \"%Express%\"",
-        "query_pl": "SELECT count(*) FROM train WHERE name LIKE \"%Express%\""
+        "query": "SELECT count(*) FROM train WHERE name LIKE \"%ekspres%\"",
+        "query_pl": "SELECT count(*) FROM train WHERE name LIKE \"%ekspres%\""
     },
     {
         "db_id": "music_4",
@@ -3209,8 +3209,8 @@
         "db_id": "store_1",
         "question": "How many employees have the job title Manager?",
         "question_pl": "Ilu pracowników ma stanowisko kierownika?",
-        "query": "SELECT count(*) from employees where title like \"%manager%\"",
-        "query_pl": "SELECT count(*) from employees where title like \"%manager%\""
+        "query": "SELECT count(*) from employees where title like \"%kierownik%\"",
+        "query_pl": "SELECT count(*) from employees where title like \"%kierownik%\""
     },
     {
         "db_id": "insurance_policies",
@@ -4777,8 +4777,8 @@
         "db_id": "csu_1",
         "question": "Which California State University is located in Kern County?\n",
         "question_pl": "Który Kalifornijski Uniwersytet Stanowy znajduje się w hrabstwie Kern?\n",
-        "query": "SELECT campus from campuses where campus like \"%California State University%\" and county = \"Kern\"",
-        "query_pl": "SELECT campus from campuses where campus like \"%California State University%\" and county = \"Kern\""
+        "query": "SELECT campus from campuses where campus like \"%Kalifornijski uniwersytet stanowy%\" and county = \"Kern\"",
+        "query_pl": "SELECT campus from campuses where campus like \"%Kalifornijski uniwersytet stanowy%\" and county = \"Kern\""
     },
     {
         "db_id": "formula_1",
@@ -6380,8 +6380,8 @@
         "db_id": "sakila_1",
         "question": "What movies contain the words \"deleted scenes\" in the column Special Features?",
         "question_pl": "Jakie filmy zawierają słowa \"usunięte sceny\" w kolumnie Funkcje specjalne?",
-        "query": "SELECT * FROM film WHERE special_features LIKE '%Deleted Scenes%'",
-        "query_pl": "SELECT * FROM film WHERE special_features LIKE '%Deleted Scenes%'"
+        "query": "SELECT * FROM film WHERE special_features LIKE '%usunięte sceny%'",
+        "query_pl": "SELECT * FROM film WHERE special_features LIKE '%usunięte sceny%'"
     },
     {
         "db_id": "game_1",
@@ -6758,8 +6758,8 @@
         "db_id": "aircraft",
         "question": "What are the total number of domestic passengers of airports that contain the word \"London\"?",
         "question_pl": "Jaka jest łączna liczba pasażerów krajowych na lotniskach zawierających słowo \"Londyn\"?",
-        "query": "SELECT sum(Domestic_Passengers) FROM airport WHERE Airport_Name LIKE \"%London%\"",
-        "query_pl": "SELECT sum(Domestic_Passengers) FROM airport WHERE Airport_Name LIKE \"%London%\""
+        "query": "SELECT sum(Domestic_Passengers) FROM airport WHERE Airport_Name LIKE \"%Londyn%\"",
+        "query_pl": "SELECT sum(Domestic_Passengers) FROM airport WHERE Airport_Name LIKE \"%Londyn%\""
     },
     {
         "db_id": "news_report",
@@ -8004,8 +8004,8 @@
         "db_id": "flight_4",
         "question": "Can you list the number of airports whose names contain the word \"International\"?",
         "question_pl": "Czy potrafisz wymienić liczbę lotnisk, których nazwy zawierają słowo \"Międzynarodowy\"?",
-        "query": "SELECT count(*) FROM airports WHERE name LIKE '%International%'",
-        "query_pl": "SELECT count(*) FROM airports WHERE name LIKE '%International%'"
+        "query": "SELECT count(*) FROM airports WHERE name LIKE '%Międzynarodowy%'",
+        "query_pl": "SELECT count(*) FROM airports WHERE name LIKE '%Międzynarodowy%'"
     },
     {
         "db_id": "flight_4",
@@ -9074,9 +9074,9 @@
     {
         "db_id": "twitter_1",
         "question": "How many tweets are on the topic intern",
-        "question_pl": "Ile tweetów dotyczy danego tematu?",
-        "query": "SELECT count(*) FROM tweets WHERE text LIKE '%intern%'",
-        "query_pl": "SELECT count(*) FROM tweets WHERE text LIKE '%intern%'"
+        "question_pl": "Ile tweetów dotyczy tematu stażysta?",
+        "query": "SELECT count(*) FROM tweets WHERE text LIKE '%stażysta%'",
+        "query_pl": "SELECT count(*) FROM tweets WHERE text LIKE '%stażysta%'"
     },
     {
         "db_id": "hospital_1",

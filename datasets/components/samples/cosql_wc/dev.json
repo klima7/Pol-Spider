@@ -1248,9 +1248,9 @@
     {
         "db_id": "student_transcripts_tracking",
         "question": "What is the full name of the department that has the substring computer in its name?",
-        "question_pl": "Jaka jest pełna nazwa działu, który ma w nazwie podciąg computer?",
-        "query": "SELECT department_name FROM Departments WHERE department_name LIKE '%computer%'",
-        "query_pl": "SELECT department_name FROM Departments WHERE department_name LIKE '%computer%'"
+        "question_pl": "Jaka jest pełna nazwa działu, który ma w nazwie podciąg komputer?",
+        "query": "SELECT department_name FROM Departments WHERE department_name LIKE '%komputer%'",
+        "query_pl": "SELECT department_name FROM Departments WHERE department_name LIKE '%komputer%'"
     },
     {
         "db_id": "car_1",
