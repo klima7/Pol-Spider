@@ -45,8 +45,8 @@
         "db_id": "battle_death",
         "question": "What is the Latin commander of Battle of Serres?",
         "question_pl": "Jaki jest łaciński dowódca bitwy pod Serres?",
-        "query": "SELECT latin_commander\t FROM battle WHERE name = \"Battle of Serres\"",
-        "query_pl": "SELECT latin_commander\t FROM battle WHERE name = \"Bitwa pod Serres\""
+        "query": "SELECT latin_commander FROM battle WHERE name = \"Battle of Serres\"",
+        "query_pl": "SELECT latin_commander FROM battle WHERE name = \"Bitwa pod Serres\""
     },
     {
         "db_id": "employee_hire_evaluation",
@@ -1109,8 +1109,8 @@
         "db_id": "museum_visit",
         "question": "Whats the level of membership customer id 1 has?",
         "question_pl": "Jaki jest poziom członkostwa klienta o identyfikatorze 1?",
-        "query": "SELECT \tLevel_of_membership FROM visitor WHERE ID = 1",
-        "query_pl": "SELECT \tLevel_of_membership FROM visitor WHERE ID = 1"
+        "query": "SELECT Level_of_membership FROM visitor WHERE ID = 1",
+        "query_pl": "SELECT Level_of_membership FROM visitor WHERE ID = 1"
     },
     {
         "db_id": "flight_2",
