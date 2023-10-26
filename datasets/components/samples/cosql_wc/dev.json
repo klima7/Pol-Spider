@@ -57,8 +57,8 @@
     },
     {
         "db_id": "world_1",
-        "question": "I want to know the average population of all cities please\n",
-        "question_pl": "Chcę znać średnią populację wszystkich miast.\n",
+        "question": "I want to know the average population of all cities please",
+        "question_pl": "Chcę znać średnią populację wszystkich miast.",
         "query": "SELECT avg(Population) FROM city",
         "query_pl": "SELECT avg(Population) FROM city"
     },
@@ -71,8 +71,8 @@
     },
     {
         "db_id": "world_1",
-        "question": "give me the total surface area of the continent\n Asia ",
-        "question_pl": "Podaj całkowitą powierzchnię kontynentu\n Azja",
+        "question": "give me the total surface area of the continent Asia ",
+        "question_pl": "Podaj całkowitą powierzchnię kontynentu Azja",
         "query": "SELECT sum(SurfaceArea) FROM country WHERE Continent = \"Asia\"",
         "query_pl": "SELECT sum(SurfaceArea) FROM country WHERE Continent = \"Azja\""
     },
@@ -127,8 +127,8 @@
     },
     {
         "db_id": "flight_2",
-        "question": "delta airline is from which country?\n",
-        "question_pl": "Linie lotnicze delta pochodzą z jakiego kraju?\n",
+        "question": "delta airline is from which country?",
+        "question_pl": "Linie lotnicze delta pochodzą z jakiego kraju?",
         "query": "SELECT country FROM AIRLINES where Airline = 'Delta Airlines'",
         "query_pl": "SELECT country FROM AIRLINES where Airline = \"Delta Airlines\""
     },
@@ -204,8 +204,8 @@
     },
     {
         "db_id": "flight_2",
-        "question": "what is the source airport for United Airlines?\n",
-        "question_pl": "Jakie jest lotnisko źródłowe dla United Airlines?\n",
+        "question": "what is the source airport for United Airlines?",
+        "question_pl": "Jakie jest lotnisko źródłowe dla United Airlines?",
         "query": "SELECT T1.SourceAirport FROM FLIGHTS AS T1 JOIN AIRLINES AS T2 ON T2.uid  =  T1.Airline WHERE T2.Airline  =  \"United Airlines\"",
         "query_pl": "SELECT T1.SourceAirport FROM FLIGHTS AS T1 JOIN AIRLINES AS T2 ON T2.uid  =  T1.Airline WHERE T2.Airline  =  \"United Airlines\""
     },
@@ -281,8 +281,8 @@
     },
     {
         "db_id": "employee_hire_evaluation",
-        "question": "I'd like to see Shop names.\n",
-        "question_pl": "Chciałbym zobaczyć nazwy sklepów.\n",
+        "question": "I'd like to see Shop names.",
+        "question_pl": "Chciałbym zobaczyć nazwy sklepów.",
         "query": "select name from shop",
         "query_pl": "select name from shop"
     },
@@ -337,8 +337,8 @@
     },
     {
         "db_id": "car_1",
-        "question": "What is the average horsepower?\n",
-        "question_pl": "Jaka jest średnia moc?\n",
+        "question": "What is the average horsepower?",
+        "question_pl": "Jaka jest średnia moc?",
         "query": "SELECT avg(Horsepower) FROM cars_data",
         "query_pl": "SELECT avg(Horsepower) FROM cars_data"
     },
@@ -442,8 +442,8 @@
     },
     {
         "db_id": "network_1",
-        "question": "what is the average of friend id?\n",
-        "question_pl": "Jaki jest średni identyfikator znajomego?\n",
+        "question": "what is the average of friend id?",
+        "question_pl": "Jaki jest średni identyfikator znajomego?",
         "query": "SELECT AVG(friend_id) FROM friend",
         "query_pl": "SELECT AVG(friend_id) FROM friend"
     },
@@ -505,8 +505,8 @@
     },
     {
         "db_id": "world_1",
-        "question": "Which country speaks the largest number of languages?\n",
-        "question_pl": "W którym kraju mówi się największą liczbą języków?\n",
+        "question": "Which country speaks the largest number of languages?",
+        "question_pl": "W którym kraju mówi się największą liczbą języków?",
         "query": "SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Name ORDER BY COUNT(*) DESC LIMIT 1",
         "query_pl": "SELECT T1.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Name ORDER BY COUNT(*) DESC LIMIT 1"
     },
@@ -547,8 +547,8 @@
     },
     {
         "db_id": "flight_2",
-        "question": "How many airports are there?\n",
-        "question_pl": "Ile jest lotnisk?\n",
+        "question": "How many airports are there?",
+        "question_pl": "Ile jest lotnisk?",
         "query": "SELECT count(*) from airports",
         "query_pl": "SELECT count(*) from airports"
     },
@@ -589,8 +589,8 @@
     },
     {
         "db_id": "battle_death",
-        "question": "How many battles did not lose any ship with tonnage 225?\n",
-        "question_pl": "W ilu bitwach nie zginął żaden okręt o tonażu 225?\n",
+        "question": "How many battles did not lose any ship with tonnage 225?",
+        "question_pl": "W ilu bitwach nie zginął żaden okręt o tonażu 225?",
         "query": "SELECT count(*) FROM battle WHERE id NOT IN ( SELECT lost_in_battle FROM ship WHERE tonnage  =  '225' );",
         "query_pl": "SELECT count(*) FROM battle WHERE id NOT IN ( SELECT lost_in_battle FROM ship WHERE tonnage  =  \"225\" );"
     },
@@ -631,8 +631,8 @@
     },
     {
         "db_id": "world_1",
-        "question": "What is the average life expectancy for each government form?\n",
-        "question_pl": "Jaka jest średnia długość życia dla każdej formy rządu?\n",
+        "question": "What is the average life expectancy for each government form?",
+        "question_pl": "Jaka jest średnia długość życia dla każdej formy rządu?",
         "query": "SELECT GovernmentForm, avg(LifeExpectancy) FROM country GROUP BY GovernmentForm ",
         "query_pl": "SELECT GovernmentForm, avg(LifeExpectancy) FROM country GROUP BY GovernmentForm "
     },
@@ -708,8 +708,8 @@
     },
     {
         "db_id": "world_1",
-        "question": "What are the countries where either English or Dutch is the official language?\n",
-        "question_pl": "W jakich krajach językiem urzędowym jest angielski lub niderlandzki?\n",
+        "question": "What are the countries where either English or Dutch is the official language?",
+        "question_pl": "W jakich krajach językiem urzędowym jest angielski lub niderlandzki?",
         "query": "SELECT * FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"English\" AND IsOfficial  =  \"T\" UNION SELECT * FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"Dutch\" AND IsOfficial  =  \"T\"",
         "query_pl": "SELECT * FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"Angielski\" AND IsOfficial  =  \"T\" UNION SELECT * FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode WHERE T2.Language  =  \"Holenderski\" AND IsOfficial  =  \"T\""
     },
@@ -764,8 +764,8 @@
     },
     {
         "db_id": "world_1",
-        "question": "HOW MANY LANGUAGE ARE THERE?\n ",
-        "question_pl": "ILE JEST JĘZYKÓW?\n ",
+        "question": "HOW MANY LANGUAGE ARE THERE? ",
+        "question_pl": "ILE JEST JĘZYKÓW? ",
         "query": "SELECT count(distinct language) from countrylanguage ",
         "query_pl": "SELECT count(distinct language) from countrylanguage "
     },
@@ -862,8 +862,8 @@
     },
     {
         "db_id": "car_1",
-        "question": "what models are produced by the make General Motors?\n",
-        "question_pl": "Jakie modele są produkowane przez markę General Motors?\n",
+        "question": "what models are produced by the make General Motors?",
+        "question_pl": "Jakie modele są produkowane przez markę General Motors?",
         "query": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors'",
         "query_pl": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  \"General Motors\""
     },
@@ -913,8 +913,8 @@
         "db_id": "battle_death",
         "question": "What are the death situations caused by the ship with tonnage 't' ?",
         "question_pl": "Jakie są sytuacje śmierci spowodowane przez statek o tonażu \"t\"?",
-        "query": "SELECT T1.killed FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id = T2.id WHERE T2.tonnage = 't'\n\n",
-        "query_pl": "SELECT T1.killed FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id = T2.id WHERE T2.tonnage = \"t\"\n\n"
+        "query": "SELECT T1.killed FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id = T2.id WHERE T2.tonnage = 't'",
+        "query_pl": "SELECT T1.killed FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id = T2.id WHERE T2.tonnage = \"t\""
     },
     {
         "db_id": "car_1",
@@ -962,8 +962,8 @@
         "db_id": "concert_singer",
         "question": "show the name and theme for all concerts and the number of singers in each concert.",
         "question_pl": "Pokaż nazwę i temat wszystkich koncertów oraz liczbę wokalistów w każdym koncercie.",
-        "query": "SELECT T2.concert_name , T2.theme , count(*) FROM singer_in_concert AS T1 JOIN concert AS T2 ON T1.concert_id = T2.concert_id GROUP BY T2.concert_id\n\n",
-        "query_pl": "SELECT T2.concert_name , T2.theme , count(*) FROM singer_in_concert AS T1 JOIN concert AS T2 ON T1.concert_id = T2.concert_id GROUP BY T2.concert_id\n\n"
+        "query": "SELECT T2.concert_name , T2.theme , count(*) FROM singer_in_concert AS T1 JOIN concert AS T2 ON T1.concert_id = T2.concert_id GROUP BY T2.concert_id",
+        "query_pl": "SELECT T2.concert_name , T2.theme , count(*) FROM singer_in_concert AS T1 JOIN concert AS T2 ON T1.concert_id = T2.concert_id GROUP BY T2.concert_id"
     },
     {
         "db_id": "world_1",
@@ -1023,8 +1023,8 @@
     },
     {
         "db_id": "dog_kennels",
-        "question": "What are the ids of the professionals?\n",
-        "question_pl": "Jakie są identyfikatory specjalistów?\n",
+        "question": "What are the ids of the professionals?",
+        "question_pl": "Jakie są identyfikatory specjalistów?",
         "query": "SELECT professional_id  FROM Professionals ",
         "query_pl": "SELECT professional_id  FROM Professionals "
     },
@@ -1205,8 +1205,8 @@
     },
     {
         "db_id": "tvshow",
-        "question": "What is the TV Channel of TV series \"A love of a lifetime\"?\n",
-        "question_pl": "Jaki jest kanał telewizyjny serialu \"Miłość na całe życie\"?\n",
+        "question": "What is the TV Channel of TV series \"A love of a lifetime\"?",
+        "question_pl": "Jaki jest kanał telewizyjny serialu \"Miłość na całe życie\"?",
         "query": "SELECT T1.series_name FROM TV_Channel AS T1 JOIN TV_series AS T2 ON T1.id = T2.Channel WHERE T2.Episode = \"A Love of a Lifetime\";",
         "query_pl": "SELECT T1.series_name FROM TV_Channel AS T1 JOIN TV_series AS T2 ON T1.id = T2.Channel WHERE T2.Episode = \"Miłość na całe życie\";"
     },
@@ -1373,15 +1373,15 @@
     },
     {
         "db_id": "student_transcripts_tracking",
-        "question": "What are the release dates for transcripts?\n",
-        "question_pl": "Jakie są daty wydania transkrypcji?\n",
+        "question": "What are the release dates for transcripts?",
+        "question_pl": "Jakie są daty wydania transkrypcji?",
         "query": "select transcript_date from Transcripts",
         "query_pl": "select transcript_date from Transcripts"
     },
     {
         "db_id": "tvshow",
-        "question": "which is the most recently aired cartoon?\n",
-        "question_pl": "Która kreskówka była ostatnio emitowana?\n",
+        "question": "which is the most recently aired cartoon?",
+        "question_pl": "Która kreskówka była ostatnio emitowana?",
         "query": "SELECT Title FROM cartoon ORDER BY original_air_date LIMIT 1",
         "query_pl": "SELECT Title FROM cartoon ORDER BY original_air_date LIMIT 1"
     },
@@ -1429,8 +1429,8 @@
     },
     {
         "db_id": "dog_kennels",
-        "question": "whats is total cost of treatment?\n",
-        "question_pl": "Jaki jest całkowity koszt leczenia?\n",
+        "question": "whats is total cost of treatment?",
+        "question_pl": "Jaki jest całkowity koszt leczenia?",
         "query": "SELECT sum(cost_of_treatment) from treatments",
         "query_pl": "SELECT sum(cost_of_treatment) from treatments"
     },
@@ -1569,8 +1569,8 @@
     },
     {
         "db_id": "network_1",
-        "question": "which grade has the \nmost high schoolers",
-        "question_pl": "Która klasa ma\nnajwięcej licealistów",
+        "question": "which grade has the most high schoolers",
+        "question_pl": "Która klasa manajwięcej licealistów",
         "query": "SELECT grade FROM Highschooler GROUP BY grade ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT grade FROM Highschooler GROUP BY grade ORDER BY count(*) DESC LIMIT 1"
     },
@@ -1604,8 +1604,8 @@
     },
     {
         "db_id": "tvshow",
-        "question": "Which cartoon aired first?\n",
-        "question_pl": "Która kreskówka została wyemitowana jako pierwsza?\n",
+        "question": "Which cartoon aired first?",
+        "question_pl": "Która kreskówka została wyemitowana jako pierwsza?",
         "query": "SELECT title  FROM cartoon ORDER BY original_air_date LIMIT 1",
         "query_pl": "SELECT title  FROM cartoon ORDER BY original_air_date LIMIT 1"
     },
@@ -1618,8 +1618,8 @@
     },
     {
         "db_id": "world_1",
-        "question": "Hi, what is the population of the Caribbean?\n",
-        "question_pl": "Cześć, jaka jest populacja Karaiby?\n",
+        "question": "Hi, what is the population of the Caribbean?",
+        "question_pl": "Cześć, jaka jest populacja Karaiby?",
         "query": "SELECT sum(Population) FROM country WHERE Region = \"Caribbean\"",
         "query_pl": "SELECT sum(Population) FROM country WHERE Region = \"Karaiby\""
     },
@@ -1646,8 +1646,8 @@
     },
     {
         "db_id": "tvshow",
-        "question": "which countries tv channels are not playing any cartoon written todd casey\n",
-        "question_pl": "W których krajach kanały telewizyjne nie puszczają żadnych kreskówek napisał todd casey\n",
+        "question": "which countries tv channels are not playing any cartoon written todd casey",
+        "question_pl": "W których krajach kanały telewizyjne nie puszczają żadnych kreskówek napisał todd casey",
         "query": "SELECT country FROM TV_Channel EXCEPT SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'",
         "query_pl": "SELECT country FROM TV_Channel EXCEPT SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  \"Todd Casey\""
     },
