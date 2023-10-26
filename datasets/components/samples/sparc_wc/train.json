@@ -4091,8 +4091,8 @@
         "db_id": "manufacturer",
         "question": "What is the furniture id number of the most expensive furniture?",
         "question_pl": "Jaki jest numer identyfikacyjny najdroższych mebli?",
-        "query": "SELECT furniture_id FROM furniture_manufacte ORDER BY Price_in_Dollar DESC 1",
-        "query_pl": "SELECT furniture_id FROM furniture_manufacte ORDER BY Price_in_Dollar DESC 1"
+        "query": "SELECT furniture_id FROM furniture_manufacte ORDER BY Price_in_Dollar DESC",
+        "query_pl": "SELECT furniture_id FROM furniture_manufacte ORDER BY Price_in_Dollar DESC"
     },
     {
         "db_id": "manufacturer",
@@ -20877,15 +20877,15 @@
         "db_id": "climbing",
         "question": "List all the climber names",
         "question_pl": "Wymień wszystkie nazwy wspinaczy",
-        "query": "SELECT Name FROM climber mountain",
-        "query_pl": "SELECT Name FROM climber mountain"
+        "query": "SELECT Name FROM climber",
+        "query_pl": "SELECT Name FROM climber"
     },
     {
         "db_id": "climbing",
         "question": "Show all the climber names",
         "question_pl": "Pokaż wszystkie nazwy wspinaczy",
-        "query": "SELECT Name FROM climber mountain",
-        "query_pl": "SELECT Name FROM climber mountain"
+        "query": "SELECT Name FROM climber",
+        "query_pl": "SELECT Name FROM climber"
     },
     {
         "db_id": "climbing",
