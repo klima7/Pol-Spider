@@ -79,8 +79,30 @@ def spider_syn(output_name, schema_translation, with_db):
 @click.option('-s', '--schema-translation', type=str, default='english')
 @click.option('-d', '--with-db', is_flag=True, help='Translate databases')
 def sparc_wc(output_name, schema_translation, with_db):
-    """Synthesize spider_dk dataset"""
+    """Synthesize sparc_wc dataset"""
     samples_path = SAMPLES_PATH / 'sparc_wc'
+    synthesize_everything(
+        output_name=output_name,
+        samples_paths=[
+            samples_path / 'dev.json',
+            samples_path / 'train.json',
+        ],
+        gold_mapping={
+            'dev_gold.sql': ['dev.json'],
+            'train_gold.sql': ['train.json'],
+        },
+        schema_translation_name=schema_translation,
+        with_db=with_db
+    )
+    
+    
+@cli.command()
+@click.argument("output_name", type=click.STRING)
+@click.option('-s', '--schema-translation', type=str, default='english')
+@click.option('-d', '--with-db', is_flag=True, help='Translate databases')
+def cosql_wc(output_name, schema_translation, with_db):
+    """Synthesize cosql_wc dataset"""
+    samples_path = SAMPLES_PATH / 'cosql_wc'
     synthesize_everything(
         output_name=output_name,
         samples_paths=[
