@@ -8,3 +8,5 @@ sqlparse
 sqlglot
 click
 unidecode
+seaborn
+matplotlib
