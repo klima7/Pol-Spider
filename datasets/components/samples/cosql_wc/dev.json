@@ -8,8 +8,8 @@
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
-        "question": "Hi!  Can you tell me how many unique template IDs there are?",
-        "question_pl": "Cześć! Czy możesz mi powiedzieć, ile jest unikalnych identyfikatorów szablonów?",
+        "question": "Can you tell me how many unique template IDs there are?",
+        "question_pl": "Czy możesz mi powiedzieć, ile jest unikalnych identyfikatorów szablonów?",
         "query": "SELECT count(distinct template_id) FROM Documents ",
         "query_pl": "SELECT count(distinct template_id) FROM Documents "
     },
@@ -148,8 +148,8 @@
     },
     {
         "db_id": "poker_player",
-        "question": "Hello!  Which nationalities are shared by more than one person?",
-        "question_pl": "Witaj!  Które narodowości są wspólne dla więcej niż jednej osoby?",
+        "question": "Which nationalities are shared by more than one person?",
+        "question_pl": "Które narodowości są wspólne dla więcej niż jednej osoby?",
         "query": "SELECT Nationality FROM people GROUP BY Nationality HAVING COUNT(*)  >  1",
         "query_pl": "SELECT Nationality FROM people GROUP BY Nationality HAVING COUNT(*)  >  1"
     },
@@ -260,8 +260,8 @@
     },
     {
         "db_id": "dog_kennels",
-        "question": "Hello, how many dogs have gone through treatments?",
-        "question_pl": "Witaj, ile psów przeszło leczenie?",
+        "question": "How many dogs have gone through treatments?",
+        "question_pl": "Ile psów przeszło leczenie?",
         "query": "SELECT count(*) FROM Dogs WHERE dog_id IN ( SELECT dog_id FROM Treatments )",
         "query_pl": "SELECT count(*) FROM Dogs WHERE dog_id IN ( SELECT dog_id FROM Treatments )"
     },
@@ -400,8 +400,8 @@
     },
     {
         "db_id": "student_transcripts_tracking",
-        "question": "Hello!  Can you tell me how many students in total there are on this list?",
-        "question_pl": "Witaj!  Czy możesz mi powiedzieć, ilu studentów znajduje się na tej liście?",
+        "question": "Can you tell me how many students in total there are on this list?",
+        "question_pl": "Czy możesz mi powiedzieć, ilu studentów znajduje się na tej liście?",
         "query": "SELECT count(*) FROM Students ",
         "query_pl": "SELECT count(*) FROM Students "
     },
@@ -414,8 +414,8 @@
     },
     {
         "db_id": "pets_1",
-        "question": "Hello!  Can you show me a list of all of the student IDs for students who have pets?",
-        "question_pl": "Witaj!  Czy możesz mi pokazać listę wszystkich legitymacji studenckich dla studentów, którzy mają zwierzęta?",
+        "question": "Can you show me a list of all of the student IDs for students who have pets?",
+        "question_pl": "Czy możesz mi pokazać listę wszystkich legitymacji studenckich dla studentów, którzy mają zwierzęta?",
         "query": "SELECT distinct T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid",
         "query_pl": "SELECT distinct T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid"
     },
@@ -519,8 +519,8 @@
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
-        "question": "Hello!  How many template IDs have the description of \"Presentation\"?",
-        "question_pl": "Witaj! Ile identyfikatorów szablonów ma opis \"Prezentacja\"?",
+        "question": "How many template IDs have the description of \"Presentation\"?",
+        "question_pl": "Ile identyfikatorów szablonów ma opis \"Prezentacja\"?",
         "query": "SELECT count(*) FROM Ref_template_types AS T1 JOIN Templates AS T2 ON T1.template_type_code  = T2.template_type_code WHERE T1.template_type_description  =  \"Presentation\"",
         "query_pl": "SELECT count(*) FROM Ref_template_types AS T1 JOIN Templates AS T2 ON T1.template_type_code  = T2.template_type_code WHERE T1.template_type_description  =  \"Prezentacja\""
     },
@@ -722,8 +722,8 @@
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
-        "question": "Hello there!  Can you please list all the template IDs and which document IDs they are associated with?",
-        "question_pl": "Witaj!  Czy możesz wymienić wszystkie identyfikatory szablonów i identyfikatory dokumentów, z którymi są powiązane?",
+        "question": "Can you please list all the template IDs and which document IDs they are associated with?",
+        "question_pl": "Czy możesz wymienić wszystkie identyfikatory szablonów i identyfikatory dokumentów, z którymi są powiązane?",
         "query": "SELECT template_id FROM Documents",
         "query_pl": "SELECT template_id FROM Documents"
     },
@@ -1002,8 +1002,8 @@
     },
     {
         "db_id": "student_transcripts_tracking",
-        "question": "Hello!  Can you list all of the deparatment names and department IDs?",
-        "question_pl": "Witaj!  Czy możesz wymienić wszystkie nazwy oddziałów i identyfikatory działów?",
+        "question": "Can you list all of the deparatment names and department IDs?",
+        "question_pl": "Czy możesz wymienić wszystkie nazwy oddziałów i identyfikatory działów?",
         "query": "select department_id,department_name from Departments",
         "query_pl": "select department_id,department_name from Departments"
     },
@@ -1156,8 +1156,8 @@
     },
     {
         "db_id": "network_1",
-        "question": "Hello!  Can you see all of the ids of the high school students?",
-        "question_pl": "Witaj!  Czy widzisz wszystkie identyfikatory licealistów?",
+        "question": "Can you see all of the ids of the high school students?",
+        "question_pl": "Czy widzisz wszystkie identyfikatory licealistów?",
         "query": "select student_id from Friend",
         "query_pl": "select student_id from Friend"
     },
@@ -1282,8 +1282,8 @@
     },
     {
         "db_id": "employee_hire_evaluation",
-        "question": "Hello!  Can you please provide me with a list of all of the cities in this database?",
-        "question_pl": "Witaj!  Czy możesz podać mi listę wszystkich miast w tej bazie danych?",
+        "question": "Can you please provide me with a list of all of the cities in this database?",
+        "question_pl": "Czy możesz podać mi listę wszystkich miast w tej bazie danych?",
         "query": "SELECT city FROM employee",
         "query_pl": "SELECT city FROM employee"
     },
@@ -1401,8 +1401,8 @@
     },
     {
         "db_id": "dog_kennels",
-        "question": "Hello!  Can you tell me how many dogs have not gone through any treatment?",
-        "question_pl": "Witaj!  Czy możesz mi powiedzieć, ile psów nie przeszło żadnego leczenia?",
+        "question": "Can you tell me how many dogs have not gone through any treatment?",
+        "question_pl": "Czy możesz mi powiedzieć, ile psów nie przeszło żadnego leczenia?",
         "query": "SELECT count(*) FROM Dogs WHERE dog_id NOT IN ( SELECT dog_id FROM Treatments )",
         "query_pl": "SELECT count(*) FROM Dogs WHERE dog_id NOT IN ( SELECT dog_id FROM Treatments )"
     },
@@ -1429,15 +1429,15 @@
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
-        "question": "Hello!  How are you?  First, I'll start with a straightforward request...  Can you show me all document IDs and their corresponding document names and number of paragraphs?",
-        "question_pl": "Witaj, jak się masz?  Najpierw zacznę od prostej prośby...  Czy możesz pokazać mi wszystkie identyfikatory dokumentów i odpowiadające im nazwy dokumentów oraz liczbę akapitów?",
+        "question": "Can you show me all document IDs and their corresponding document names and number of paragraphs?",
+        "question_pl": "Czy możesz pokazać mi wszystkie identyfikatory dokumentów i odpowiadające im nazwy dokumentów oraz liczbę akapitów?",
         "query": "SELECT T1.document_id ,  T2.document_name ,  count(*) FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id GROUP BY T1.document_id",
         "query_pl": "SELECT T1.document_id ,  T2.document_name ,  count(*) FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id GROUP BY T1.document_id"
     },
     {
         "db_id": "tvshow",
-        "question": "Hello!  Can you provide me with a list of all cartoons written by Todd Casey?",
-        "question_pl": "Witaj!  Czy możesz podać mi listę wszystkich komiksów napisanych przez Todda Caseya?",
+        "question": "Can you provide me with a list of all cartoons written by Todd Casey?",
+        "question_pl": "Czy możesz podać mi listę wszystkich komiksów napisanych przez Todda Caseya?",
         "query": "select * from Cartoon where Written_by = 'Todd Casey'",
         "query_pl": "select * from Cartoon where Written_by = \"Todd Casey\""
     },
@@ -1569,22 +1569,22 @@
     },
     {
         "db_id": "car_1",
-        "question": "Hi! which countries are in europe?",
-        "question_pl": "Cześć! Które kraje są w Europie?",
+        "question": "Which countries are in europe?",
+        "question_pl": "Które kraje są w Europie?",
         "query": "SELECT distinct T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europe'",
         "query_pl": "SELECT distinct T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  \"europa\""
     },
     {
         "db_id": "museum_visit",
-        "question": "Hello there!  Can you tell me the total number of visitors who did not visit any museum that was opened after 2010?",
-        "question_pl": "Witajcie!  Czy możesz mi podać całkowitą liczbę odwiedzających, którzy nie odwiedzili żadnego muzeum otwartego po 2010 roku?",
+        "question": "Can you tell me the total number of visitors who did not visit any museum that was opened after 2010?",
+        "question_pl": "Czy możesz mi podać całkowitą liczbę odwiedzających, którzy nie odwiedzili żadnego muzeum otwartego po 2010 roku?",
         "query": "SELECT count(*) FROM visitor WHERE id NOT IN (SELECT t2.visitor_id FROM museum AS t1 JOIN visit AS t2 ON t1.Museum_ID  =  t2.Museum_ID WHERE t1.open_year  >  2010)",
         "query_pl": "SELECT count(*) FROM visitor WHERE id NOT IN (SELECT t2.visitor_id FROM museum AS t1 JOIN visit AS t2 ON t1.Museum_ID  =  t2.Museum_ID WHERE t1.open_year  >  2010)"
     },
     {
         "db_id": "dog_kennels",
-        "question": "Hi! How many owners temporarily do not have dogs?",
-        "question_pl": "Cześć! Ilu właścicieli tymczasowo nie ma psów?",
+        "question": "How many owners temporarily do not have dogs?",
+        "question_pl": "Ilu właścicieli tymczasowo nie ma psów?",
         "query": "SELECT count(*) FROM Owners WHERE owner_id NOT IN ( SELECT owner_id FROM Dogs )",
         "query_pl": "SELECT count(*) FROM Owners WHERE owner_id NOT IN ( SELECT owner_id FROM Dogs )"
     },
