@@ -35,13 +35,6 @@
         "query_pl": "SELECT count(*) FROM Dogs WHERE dog_id IN ( SELECT dog_id FROM Treatments )"
     },
     {
-        "db_id": "course_teach",
-        "question": "How many teachers are there?",
-        "question_pl": "Ilu jest nauczycieli?",
-        "query": "SELECT COUNT(*) FROM teacher",
-        "query_pl": "SELECT COUNT(*) FROM teacher"
-    },
-    {
         "db_id": "battle_death",
         "question": "What is the Latin commander of Battle of Serres?",
         "question_pl": "Jaki jest łaciński dowódca bitwy pod Serres?",
@@ -196,13 +189,6 @@
         "query_pl": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid = T2.stuid JOIN pets AS T3 ON T3.petid = T2.petid WHERE T3.pettype = \"kot\""
     },
     {
-        "db_id": "museum_visit",
-        "question": "What is the name of the visitor who visited both a museum opened before 2009 and a museum opened after 2011?",
-        "question_pl": "Jak nazywa się zwiedzający, który odwiedził zarówno muzeum otwarte przed 2009 r., jak i muzeum otwarte po 2011 r.?",
-        "query": "SELECT t1.name FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id JOIN museum AS t3 ON t3.Museum_ID  =  t2.Museum_ID WHERE t3.open_year  <  2009 INTERSECT SELECT t1.name FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id JOIN museum AS t3 ON t3.Museum_ID  =  t2.Museum_ID WHERE t3.open_year  >  2011",
-        "query_pl": "SELECT t1.name FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id JOIN museum AS t3 ON t3.Museum_ID  =  t2.Museum_ID WHERE t3.open_year  <  2009 INTERSECT SELECT t1.name FROM visitor AS t1 JOIN visit AS t2 ON t1.id  =  t2.visitor_id JOIN museum AS t3 ON t3.Museum_ID  =  t2.Museum_ID WHERE t3.open_year  >  2011"
-    },
-    {
         "db_id": "flight_2",
         "question": "what is the source airport for United Airlines?",
         "question_pl": "Jakie jest lotnisko źródłowe dla United Airlines?",
@@ -222,13 +208,6 @@
         "question_pl": "Ile lotów United Airlines odbywa się do miasta o nazwie Aberdeen?",
         "query": "SELECT count(*) FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport  =  T2.AirportCode JOIN AIRLINES AS T3 ON T3.uid  =  T1.Airline WHERE T2.City  =  \"Aberdeen\" AND T3.Airline  =  \"United Airlines\"",
         "query_pl": "SELECT count(*) FROM FLIGHTS AS T1 JOIN AIRPORTS AS T2 ON T1.DestAirport  =  T2.AirportCode JOIN AIRLINES AS T3 ON T3.uid  =  T1.Airline WHERE T2.City  =  \"Aberdeen\" AND T3.Airline  =  \"United Airlines\""
-    },
-    {
-        "db_id": "poker_player",
-        "question": "What is the birth date of the poker player with the lowest earnings?",
-        "question_pl": "Jaka jest data urodzenia pokerzysty z najniższymi zarobkami?",
-        "query": "SELECT T1.Birth_Date FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T2.Earnings ASC LIMIT 1",
-        "query_pl": "SELECT T1.Birth_Date FROM people AS T1 JOIN poker_player AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T2.Earnings ASC LIMIT 1"
     },
     {
         "db_id": "poker_player",
@@ -306,13 +285,6 @@
         "question_pl": "Ile jest ras psów?",
         "query": "SELECT count(*) from Breeds",
         "query_pl": "SELECT count(*) from Breeds"
-    },
-    {
-        "db_id": "orchestra",
-        "question": "List the name of the conductor with the most years of work.",
-        "question_pl": "Wymień nazwisko dyrygenta z największą liczbą lat pracy.",
-        "query": "SELECT Name FROM conductor ORDER BY Year_of_Work DESC LIMIT 1",
-        "query_pl": "SELECT Name FROM conductor ORDER BY Year_of_Work DESC LIMIT 1"
     },
     {
         "db_id": "voter_1",
@@ -425,13 +397,6 @@
         "question_pl": "ile psów na stole",
         "query": "SELECT count(*) FROM Dogs",
         "query_pl": "SELECT count(*) FROM Dogs"
-    },
-    {
-        "db_id": "world_1",
-        "question": "What are the names of the nations with the 3 lowest populations?",
-        "question_pl": "Jak nazywają się kraje o 3 najniższych populacjach?",
-        "query": "SELECT Name FROM country ORDER BY Population ASC LIMIT 3",
-        "query_pl": "SELECT Name FROM country ORDER BY Population ASC LIMIT 3"
     },
     {
         "db_id": "network_1",
@@ -553,13 +518,6 @@
         "query_pl": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  \"niemcy\";"
     },
     {
-        "db_id": "employee_hire_evaluation",
-        "question": "Which cities do more than one employee under age 30 come from?",
-        "question_pl": "Z których miast pochodzi więcej niż jeden pracownik w wieku poniżej 30 lat?",
-        "query": "SELECT city FROM employee WHERE age  <  30 GROUP BY city HAVING count(*)  >  1",
-        "query_pl": "SELECT city FROM employee WHERE age  <  30 GROUP BY city HAVING count(*)  >  1"
-    },
-    {
         "db_id": "dog_kennels",
         "question": "How many dog owner's are there?",
         "question_pl": "Ilu jest właścicieli psów?",
@@ -595,25 +553,11 @@
         "query_pl": "SELECT Fullname FROM car_makers WHERE maker = \"amc\""
     },
     {
-        "db_id": "poker_player",
-        "question": "What is the money rank of the poker player with the highest earnings?",
-        "question_pl": "Jaka jest ranga pieniężna pokerzysty z najwyższymi zarobkami?",
-        "query": "SELECT Money_Rank FROM poker_player ORDER BY Earnings DESC LIMIT 1",
-        "query_pl": "SELECT Money_Rank FROM poker_player ORDER BY Earnings DESC LIMIT 1"
-    },
-    {
         "db_id": "orchestra",
         "question": "How many orchestras are there?",
         "question_pl": "Ile jest orkiestr?",
         "query": "SELECT COUNT(DISTINCT Orchestra) FROM orchestra",
         "query_pl": "SELECT COUNT(DISTINCT Orchestra) FROM orchestra"
-    },
-    {
-        "db_id": "concert_singer",
-        "question": "Find the name and location of the stadiums which some concerts happened in the years of both 2014 and 2015.",
-        "question_pl": "Znajdź nazwy i lokalizacje stadionów, na których odbyły się koncerty w latach 2014 i 2015.",
-        "query": "SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2014 INTERSECT SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2015",
-        "query_pl": "SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2014 INTERSECT SELECT T2.name ,  T2.location FROM concert AS T1 JOIN stadium AS T2 ON T1.stadium_id  =  T2.stadium_id WHERE T1.Year  =  2015"
     },
     {
         "db_id": "student_transcripts_tracking",
@@ -943,13 +887,6 @@
         "question_pl": "JAKIE JEST PRZYSPIESZENIE SAMOCHODU MARKI AMC HORNET SPORTABOUT(SW)",
         "query": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  'amc hornet sportabout (sw)';",
         "query_pl": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  \"amc hornet sportabout (sw)\";"
-    },
-    {
-        "db_id": "concert_singer",
-        "question": "show the name and theme for all concerts and the number of singers in each concert.",
-        "question_pl": "Pokaż nazwę i temat wszystkich koncertów oraz liczbę wokalistów w każdym koncercie.",
-        "query": "SELECT T2.concert_name , T2.theme , count(*) FROM singer_in_concert AS T1 JOIN concert AS T2 ON T1.concert_id = T2.concert_id GROUP BY T2.concert_id",
-        "query_pl": "SELECT T2.concert_name , T2.theme , count(*) FROM singer_in_concert AS T1 JOIN concert AS T2 ON T1.concert_id = T2.concert_id GROUP BY T2.concert_id"
     },
     {
         "db_id": "world_1",
@@ -1323,20 +1260,6 @@
         "query_pl": "SELECT transcript_date FROM Transcripts group by transcript_date order by count(*) asc limit 1"
     },
     {
-        "db_id": "car_1",
-        "question": "how many car models are produced in the USA?",
-        "question_pl": "Ile modeli samochodów jest produkowanych w USA?",
-        "query": "SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  'usa';",
-        "query_pl": "SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  \"uSA\";"
-    },
-    {
-        "db_id": "network_1",
-        "question": "Show the names of students who have at least 2 likes.",
-        "question_pl": "Pokaż imiona uczniów, którzy mają co najmniej 2 polubienia.",
-        "query": "SELECT T2.name FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id HAVING count(*)  >=  2",
-        "query_pl": "SELECT T2.name FROM Likes AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id HAVING count(*)  >=  2"
-    },
-    {
         "db_id": "flight_2",
         "question": "what is the dest airport of airline 1",
         "question_pl": "Jakie jest lotnisko docelowe linii lotniczej 1",
@@ -1405,13 +1328,6 @@
         "question_pl": "Czy możesz mi powiedzieć, ile psów nie przeszło żadnego leczenia?",
         "query": "SELECT count(*) FROM Dogs WHERE dog_id NOT IN ( SELECT dog_id FROM Treatments )",
         "query_pl": "SELECT count(*) FROM Dogs WHERE dog_id NOT IN ( SELECT dog_id FROM Treatments )"
-    },
-    {
-        "db_id": "student_transcripts_tracking",
-        "question": "Find the program which most number of students are enrolled in. List both the id and the summary.",
-        "question_pl": "Znajdź program, do którego zapisało się najwięcej studentów. Wymień zarówno identyfikator, jak i podsumowanie.",
-        "query": "SELECT T1.degree_program_id ,  T1.degree_summary_name FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id GROUP BY T1.degree_program_id ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT T1.degree_program_id ,  T1.degree_summary_name FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id GROUP BY T1.degree_program_id ORDER BY count(*) DESC LIMIT 1"
     },
     {
         "db_id": "dog_kennels",
@@ -1615,13 +1531,6 @@
         "question_pl": "Na której ulicy mieszka Nora Haley?",
         "query": "SELECT street FROM Owners WHERE first_name = \"Nora\" and last_name = \"Haley\"",
         "query_pl": "SELECT street FROM Owners WHERE first_name = \"Nora\" and last_name = \"Haley\""
-    },
-    {
-        "db_id": "cre_Doc_Template_Mgt",
-        "question": "What is the document id with least number of paragraphs?",
-        "question_pl": "Jaki jest identyfikator dokumentu z najmniejszą liczbą akapitów?",
-        "query": "SELECT document_id FROM Paragraphs GROUP BY document_id ORDER BY count(*) ASC LIMIT 1",
-        "query_pl": "SELECT document_id FROM Paragraphs GROUP BY document_id ORDER BY count(*) ASC LIMIT 1"
     },
     {
         "db_id": "wta_1",

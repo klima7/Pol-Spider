@@ -260,13 +260,6 @@
     },
     {
         "db_id": "game_1",
-        "question": "What are the different types of video games?",
-        "question_pl": "Jakie są różne rodzaje gier wideo?",
-        "query": "SELECT gtype FROM Video_games",
-        "query_pl": "SELECT gtype FROM Video_games"
-    },
-    {
-        "db_id": "game_1",
         "question": "What are the game types?",
         "question_pl": "Jakie są rodzaje gier?",
         "query": "SELECT gtype FROM Video_games",
@@ -768,13 +761,6 @@
         "question_pl": "Znajdź liczbę kursów w każdym semestrze i roku.",
         "query": "SELECT semester ,  YEAR ,  count(*) FROM SECTION GROUP BY semester ,  YEAR",
         "query_pl": "SELECT semester ,  YEAR ,  count(*) FROM SECTION GROUP BY semester ,  YEAR"
-    },
-    {
-        "db_id": "college_2",
-        "question": "How many students are in each department?",
-        "question_pl": "Ilu studentów jest w każdym dziale?",
-        "query": "SELECT dept_name ,  count(*) FROM student GROUP BY dept_name",
-        "query_pl": "SELECT dept_name ,  count(*) FROM student GROUP BY dept_name"
     },
     {
         "db_id": "college_2",
@@ -1856,13 +1842,6 @@
     },
     {
         "db_id": "allergy_1",
-        "question": "What are the different allergy types?",
-        "question_pl": "Jakie są różne rodzaje alergii?",
-        "query": "SELECT DISTINCT allergytype FROM Allergy_type",
-        "query_pl": "SELECT DISTINCT allergytype FROM Allergy_type"
-    },
-    {
-        "db_id": "allergy_1",
         "question": "What are all the different allergy types?",
         "question_pl": "Jakie są różne rodzaje alergii?",
         "query": "SELECT DISTINCT allergytype FROM Allergy_type",
@@ -1958,13 +1937,6 @@
         "question_pl": "Kto jest najstarszym uczniem?",
         "query": "SELECT * FROM Student WHERE age  =  (SELECT max(age) FROM Student)",
         "query_pl": "SELECT * FROM Student WHERE age  =  (SELECT max(age) FROM Student)"
-    },
-    {
-        "db_id": "allergy_1",
-        "question": "What are the different majors?",
-        "question_pl": "Jakie są różne kierunki studiów?",
-        "query": "SELECT DISTINCT major FROM Student",
-        "query_pl": "SELECT DISTINCT major FROM Student"
     },
     {
         "db_id": "allergy_1",
@@ -3669,24 +3641,10 @@
     },
     {
         "db_id": "swimming",
-        "question": "How many events are there?",
-        "question_pl": "Ile jest wydarzeń?",
-        "query": "SELECT count(*) FROM event",
-        "query_pl": "SELECT count(*) FROM event"
-    },
-    {
-        "db_id": "swimming",
         "question": "How many swimming records are there in the system?",
         "question_pl": "Ile rekordów pływackich znajduje się w systemie?",
         "query": "SELECT count(*) FROM record",
         "query_pl": "SELECT count(*) FROM record"
-    },
-    {
-        "db_id": "swimming",
-        "question": "How many stadiums are there?",
-        "question_pl": "Ile jest stadionów?",
-        "query": "SELECT count(*) FROM stadium",
-        "query_pl": "SELECT count(*) FROM stadium"
     },
     {
         "db_id": "manufacturer",
@@ -3757,13 +3715,6 @@
         "question_pl": "Ile jest różnych mebli?",
         "query": "SELECT count(DISTINCT furniture_id) FROM furniture",
         "query_pl": "SELECT count(DISTINCT furniture_id) FROM furniture"
-    },
-    {
-        "db_id": "school_bus",
-        "question": "How many drivers are there?",
-        "question_pl": "Ilu jest kierowców?",
-        "query": "SELECT COUNT(*) FROM driver",
-        "query_pl": "SELECT COUNT(*) FROM driver"
     },
     {
         "db_id": "school_bus",
@@ -4236,13 +4187,6 @@
     },
     {
         "db_id": "performance_attendance",
-        "question": "Show different locations and the number of performances at each location.",
-        "question_pl": "Pokaż różne lokalizacje i liczbę występów w każdej z nich.",
-        "query": "SELECT LOCATION ,  COUNT(*) FROM performance GROUP BY LOCATION",
-        "query_pl": "SELECT LOCATION ,  COUNT(*) FROM performance GROUP BY LOCATION"
-    },
-    {
-        "db_id": "performance_attendance",
         "question": "What are the locations of the performances?",
         "question_pl": "Jakie są lokalizacje występów?",
         "query": "SELECT LOCATION FROM performance",
@@ -4362,13 +4306,6 @@
     },
     {
         "db_id": "music_2",
-        "question": "How many instruments does the song \"Le Pop\" use?",
-        "question_pl": "Ilu instrumentów używa piosenka \"Le Pop\"?",
-        "query": "SELECT count(DISTINCT instrument) FROM instruments AS T1 JOIN songs AS T2 ON T1.songid  =  T2.songid WHERE title  =  \"Le Pop\"",
-        "query_pl": "SELECT count(DISTINCT instrument) FROM instruments AS T1 JOIN songs AS T2 ON T1.songid  =  T2.songid WHERE title  =  \"Le Pop\""
-    },
-    {
-        "db_id": "music_2",
         "question": "What instruments does the song \"Le Pop\" use?",
         "question_pl": "Jakich instrumentów używa piosenka \"Le Pop\"?",
         "query": "SELECT instrument FROM instruments AS T1 JOIN songs AS T2 ON T1.songid  =  T2.songid WHERE title  =  \"Le Pop\"",
@@ -4422,13 +4359,6 @@
         "question_pl": "Jakie rodzaje wokalu są używane w piosence \"Demon Kitty Rag\"?",
         "query": "SELECT TYPE FROM vocals AS T1 JOIN songs AS T2 ON T1.songid  =  T2.songid WHERE title  =  \"Demon Kitty Rag\"",
         "query_pl": "SELECT TYPE FROM vocals AS T1 JOIN songs AS T2 ON T1.songid  =  T2.songid WHERE title  =  \"Demon Kitty Rag\""
-    },
-    {
-        "db_id": "music_2",
-        "question": "How many songs are there?",
-        "question_pl": "Ile jest utworów?",
-        "query": "SELECT count(DISTINCT title) FROM songs",
-        "query_pl": "SELECT count(DISTINCT title) FROM songs"
     },
     {
         "db_id": "music_2",
@@ -4803,13 +4733,6 @@
     },
     {
         "db_id": "insurance_fnol",
-        "question": "What is the name of the customer who has the most policies listed?",
-        "question_pl": "Jak nazywa się klient, który ma najwięcej polis na liście?",
-        "query": "SELECT t1.customer_name FROM customers AS t1 JOIN customers_policies AS t2 ON t1.customer_id  =  t2.customer_id GROUP BY t1.customer_name ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT t1.customer_name FROM customers AS t1 JOIN customers_policies AS t2 ON t1.customer_id  =  t2.customer_id GROUP BY t1.customer_name ORDER BY count(*) DESC LIMIT 1"
-    },
-    {
-        "db_id": "insurance_fnol",
         "question": "Find the ids of customers without first notification of loss record.",
         "question_pl": "Znajdź identyfikatory klientów bez wcześniejszego powiadomienia o utracie danych.",
         "query": "SELECT customer_id FROM customers EXCEPT SELECT t1.customer_name FROM customers AS t1 JOIN first_notification_of_loss AS t2 ON t1.customer_id  =  t2.customer_id",
@@ -4849,13 +4772,6 @@
         "question_pl": "pokaż wszystkie informacje o winach.",
         "query": "SELECT * FROM WINE",
         "query_pl": "SELECT * FROM WINE"
-    },
-    {
-        "db_id": "wine_1",
-        "question": "what is the name of the highest rated wine?",
-        "question_pl": "Jak nazywa się najwyżej ocenione wino?",
-        "query": "SELECT Name FROM WINE ORDER BY Score DESC LIMIT 1",
-        "query_pl": "SELECT Name FROM WINE ORDER BY Score DESC LIMIT 1"
     },
     {
         "db_id": "wine_1",
@@ -5213,13 +5129,6 @@
         "question_pl": "Która wystawa ma więcej niż 100 uczestników?",
         "query": "SELECT * FROM exhibition_record AS T1 JOIN exhibition AS T2 ON T1.exhibition_id  =  T2.exhibition_id WHERE T1.attendance  >  100",
         "query_pl": "SELECT * FROM exhibition_record AS T1 JOIN exhibition AS T2 ON T1.exhibition_id  =  T2.exhibition_id WHERE T1.attendance  >  100"
-    },
-    {
-        "db_id": "county_public_safety",
-        "question": "How many counties are there?",
-        "question_pl": "Ile jest okręgów?",
-        "query": "SELECT COUNT(*) FROM county_public_safety",
-        "query_pl": "SELECT COUNT(*) FROM county_public_safety"
     },
     {
         "db_id": "county_public_safety",
@@ -6154,20 +6063,6 @@
     },
     {
         "db_id": "perpetrator",
-        "question": "What are the countries of perpetrators? Show each country and the corresponding number of perpetrators there.",
-        "question_pl": "Z jakich krajów pochodzą sprawcy? Pokaż każdy kraj i odpowiadającą mu liczbę sprawców.",
-        "query": "SELECT Country ,  COUNT(*) FROM perpetrator GROUP BY Country;",
-        "query_pl": "SELECT Country ,  COUNT(*) FROM perpetrator GROUP BY Country;"
-    },
-    {
-        "db_id": "perpetrator",
-        "question": "What is the country that has the most perpetrators?",
-        "question_pl": "W jakim kraju jest najwięcej sprawców?",
-        "query": "SELECT Country ,  COUNT(*) FROM perpetrator GROUP BY Country ORDER BY COUNT(*) DESC LIMIT 1;",
-        "query_pl": "SELECT Country ,  COUNT(*) FROM perpetrator GROUP BY Country ORDER BY COUNT(*) DESC LIMIT 1;"
-    },
-    {
-        "db_id": "perpetrator",
         "question": "For each perpetrator, show the year that corresponds?",
         "question_pl": "Dla każdego sprawcy wskaż odpowiadający mu rok.",
         "query": "SELECT Year FROM perpetrator;",
@@ -6844,13 +6739,6 @@
         "question_pl": "Jaka jest średnia suma punktów gimnastyczek?",
         "query": "SELECT AVG(Total_Points) FROM gymnast",
         "query_pl": "SELECT AVG(Total_Points) FROM gymnast"
-    },
-    {
-        "db_id": "gymnast",
-        "question": "How many gymnasts are there?",
-        "question_pl": "Ilu jest gimnastyków?",
-        "query": "SELECT COUNT(*) FROM gymnast AS T1 JOIN people AS T2 ON T1.Gymnast_ID  =  T2.People_ID",
-        "query_pl": "SELECT COUNT(*) FROM gymnast AS T1 JOIN people AS T2 ON T1.Gymnast_ID  =  T2.People_ID"
     },
     {
         "db_id": "gymnast",
@@ -8065,13 +7953,6 @@
     },
     {
         "db_id": "e_learning",
-        "question": "How many tests have result \"Fail\"?",
-        "question_pl": "Ile testów zakończyło się wynikiem \"Fail\"?",
-        "query": "SELECT COUNT(*) FROM Student_Tests_Taken WHERE test_result  =  \"Fail\"",
-        "query_pl": "SELECT COUNT(*) FROM Student_Tests_Taken WHERE test_result  =  \"Niepowodzenie\""
-    },
-    {
-        "db_id": "e_learning",
         "question": "Tell me Karson's registration date.",
         "question_pl": "Podaj mi datę rejestracji Karsona.",
         "query": "SELECT date_of_registration FROM Students WHERE personal_name = \"Karson\"",
@@ -8792,13 +8673,6 @@
         "query_pl": "SELECT AVG(amount) FROM endowment"
     },
     {
-        "db_id": "school_finance",
-        "question": "How many schools are there?",
-        "question_pl": "Ile jest szkół?",
-        "query": "SELECT COUNT(*) FROM school",
-        "query_pl": "SELECT COUNT(*) FROM school"
-    },
-    {
         "db_id": "film_rank",
         "question": "What countries are there in the market?",
         "question_pl": "Jakie kraje są obecne na rynku?",
@@ -8909,13 +8783,6 @@
         "question_pl": "Jak nazywają się wszystkie statki?",
         "query": "SELECT NAME FROM ship",
         "query_pl": "SELECT NAME FROM ship"
-    },
-    {
-        "db_id": "ship_mission",
-        "question": "How many ships are there?",
-        "question_pl": "Ile jest statków?",
-        "query": "SELECT COUNT(*) FROM ship",
-        "query_pl": "SELECT COUNT(*) FROM ship"
     },
     {
         "db_id": "ship_mission",
@@ -9105,13 +8972,6 @@
         "question_pl": "Pokaż kod typu transakcji, który występuje najczęściej.",
         "query": "SELECT transaction_type_code FROM TRANSACTIONS GROUP BY transaction_type_code ORDER BY COUNT(*) DESC LIMIT 1",
         "query_pl": "SELECT transaction_type_code FROM TRANSACTIONS GROUP BY transaction_type_code ORDER BY COUNT(*) DESC LIMIT 1"
-    },
-    {
-        "db_id": "tracking_share_transactions",
-        "question": "Show the transaction type code that occurs the fewest times.",
-        "question_pl": "Pokaż kod typu transakcji, który występuje najmniej razy.",
-        "query": "SELECT transaction_type_code FROM TRANSACTIONS GROUP BY transaction_type_code ORDER BY COUNT(*) ASC LIMIT 1",
-        "query_pl": "SELECT transaction_type_code FROM TRANSACTIONS GROUP BY transaction_type_code ORDER BY COUNT(*) ASC LIMIT 1"
     },
     {
         "db_id": "tracking_share_transactions",
@@ -10116,13 +9976,6 @@
     },
     {
         "db_id": "twitter_1",
-        "question": "How many users are there?",
-        "question_pl": "Ilu jest użytkowników?",
-        "query": "SELECT COUNT(*) FROM user_profiles",
-        "query_pl": "SELECT COUNT(*) FROM user_profiles"
-    },
-    {
-        "db_id": "twitter_1",
         "question": "How many tweets are there?",
         "question_pl": "Ile jest tych tweetów?",
         "query": "SELECT COUNT(*) FROM tweets",
@@ -10155,13 +10008,6 @@
         "question_pl": "Kto ma najwięcej obserwujących?",
         "query": "SELECT name FROM user_profiles ORDER BY followers DESC LIMIT 1",
         "query_pl": "SELECT name FROM user_profiles ORDER BY followers DESC LIMIT 1"
-    },
-    {
-        "db_id": "twitter_1",
-        "question": "How many followers does each user have?",
-        "question_pl": "Ilu obserwujących ma każdy użytkownik?",
-        "query": "SELECT name, followers FROM user_profiles",
-        "query_pl": "SELECT name, followers FROM user_profiles"
     },
     {
         "db_id": "twitter_1",
@@ -10211,13 +10057,6 @@
         "question_pl": "Jaki jest identyfikator klienta, który ma najwięcej zamówień?",
         "query": "SELECT T1.customer_id FROM customers AS T1 JOIN orders AS T2 ON T1.customer_id  =  T2.customer_id GROUP BY T1.customer_id ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT T1.customer_id FROM customers AS T1 JOIN orders AS T2 ON T1.customer_id  =  T2.customer_id GROUP BY T1.customer_id ORDER BY count(*) DESC LIMIT 1"
-    },
-    {
-        "db_id": "tracking_orders",
-        "question": "What is the name of the customer who has the most orders?",
-        "question_pl": "Jak nazywa się klient, który ma najwięcej zamówień?",
-        "query": "SELECT T1.customer_name FROM customers AS T1 JOIN orders AS T2 ON T1.customer_id  =  T2.customer_id GROUP BY T1.customer_id ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT T1.customer_name FROM customers AS T1 JOIN orders AS T2 ON T1.customer_id  =  T2.customer_id GROUP BY T1.customer_id ORDER BY count(*) DESC LIMIT 1"
     },
     {
         "db_id": "tracking_orders",
@@ -10750,13 +10589,6 @@
         "question_pl": "Jakie są ceny poszczególnych katalogów w USD?",
         "query": "SELECT catalog_entry_id, price_in_dollars FROM catalog_contents",
         "query_pl": "SELECT catalog_entry_id, price_in_dollars FROM catalog_contents"
-    },
-    {
-        "db_id": "product_catalog",
-        "question": "What are all the catalog entry names?",
-        "question_pl": "Jakie są wszystkie nazwy wpisów w katalogu?",
-        "query": "SELECT catalog_entry_name FROM catalog_contents",
-        "query_pl": "SELECT catalog_entry_name FROM catalog_contents"
     },
     {
         "db_id": "product_catalog",
@@ -13126,13 +12958,6 @@
     },
     {
         "db_id": "school_player",
-        "question": "How many schools are there?",
-        "question_pl": "Ile jest szkół?",
-        "query": "SELECT count(*) FROM school;",
-        "query_pl": "SELECT count(*) FROM school;"
-    },
-    {
-        "db_id": "school_player",
         "question": "Which school has the least number of players?",
         "question_pl": "Która szkoła ma najmniej graczy?",
         "query": "SELECT T2.School FROM player AS T1 JOIN school AS T2 ON T1.School_ID  =  T2.School_ID GROUP BY T1.School_ID ORDER BY COUNT(*) ASC LIMIT 1;",
@@ -13601,13 +13426,6 @@
         "query_pl": "SELECT T1.Name FROM country AS T1 JOIN roller_coaster AS T2 ON T1.Country_ID  =  T2.Country_ID"
     },
     {
-        "db_id": "roller_coaster",
-        "question": "Show the names of countries that have more than one roller coaster.",
-        "question_pl": "Pokaż nazwy krajów, które mają więcej niż jedną kolejkę górską.",
-        "query": "SELECT T1.Name FROM country AS T1 JOIN roller_coaster AS T2 ON T1.Country_ID  =  T2.Country_ID",
-        "query_pl": "SELECT T1.Name FROM country AS T1 JOIN roller_coaster AS T2 ON T1.Country_ID  =  T2.Country_ID"
-    },
-    {
         "db_id": "dorm_1",
         "question": "how many students are below age 25?",
         "question_pl": "Ilu studentów ma mniej niż 25 lat?",
@@ -13683,13 +13501,6 @@
         "question_pl": "Znajdź całkowitą liczbę studentów we wszystkich akademikach.",
         "query": "SELECT sum(student_capacity) FROM dorm",
         "query_pl": "SELECT sum(student_capacity) FROM dorm"
-    },
-    {
-        "db_id": "dorm_1",
-        "question": "how many students are there?",
-        "question_pl": "Ilu jest studentów?",
-        "query": "SELECT count(*) FROM student",
-        "query_pl": "SELECT count(*) FROM student"
     },
     {
         "db_id": "dorm_1",
@@ -14950,13 +14761,6 @@
         "question_pl": "Jak nazywają się wszyscy zwycięscy piloci?",
         "query": "SELECT T1.Name FROM pilot AS T1 JOIN MATCH AS T2 ON T1.Pilot_ID  =  T2.Winning_Pilot",
         "query_pl": "SELECT T1.Name FROM pilot AS T1 JOIN MATCH AS T2 ON T1.Pilot_ID  =  T2.Winning_Pilot"
-    },
-    {
-        "db_id": "aircraft",
-        "question": "How many aircrafts are there?",
-        "question_pl": "Ile jest samolotów?",
-        "query": "SELECT count(*) FROM aircraft",
-        "query_pl": "SELECT count(*) FROM aircraft"
     },
     {
         "db_id": "aircraft",
@@ -17270,13 +17074,6 @@
     },
     {
         "db_id": "machine_repair",
-        "question": "How many technicians are there?",
-        "question_pl": "Ilu jest techników?",
-        "query": "SELECT count(*) FROM technician",
-        "query_pl": "SELECT count(*) FROM technician"
-    },
-    {
-        "db_id": "machine_repair",
         "question": "How many repair assignments are there in file?",
         "question_pl": "Ile zleceń naprawy znajduje się w pliku?",
         "query": "SELECT count(*) FROM repair_assignment",
@@ -17778,13 +17575,6 @@
         "question_pl": "Jakie są łączne wyniki kulturysty?",
         "query": "SELECT Total FROM body_builder",
         "query_pl": "SELECT Total FROM body_builder"
-    },
-    {
-        "db_id": "body_builder",
-        "question": "What are the names of body builders?",
-        "question_pl": "Jakie są imiona kulturystów?",
-        "query": "SELECT T2.Name FROM body_builder AS T1 JOIN people AS T2 ON T1.People_ID  =  T2.People_ID",
-        "query_pl": "SELECT T2.Name FROM body_builder AS T1 JOIN people AS T2 ON T1.People_ID  =  T2.People_ID"
     },
     {
         "db_id": "body_builder",
@@ -18296,13 +18086,6 @@
         "question_pl": "Wymień nazwiska graczy",
         "query": "SELECT Player_name FROM player",
         "query_pl": "SELECT Player_name FROM player"
-    },
-    {
-        "db_id": "riding_club",
-        "question": "How many players are there?",
-        "question_pl": "Ilu jest graczy?",
-        "query": "SELECT count(*) FROM player",
-        "query_pl": "SELECT count(*) FROM player"
     },
     {
         "db_id": "riding_club",

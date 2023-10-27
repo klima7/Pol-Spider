@@ -988,13 +988,6 @@
     },
     {
         "db_id": "car_1",
-        "question": "How many continents are there?",
-        "question_pl": "Ile jest kontynentów?",
-        "query": "SELECT count(*) FROM CONTINENTS;",
-        "query_pl": "SELECT count(*) FROM CONTINENTS;"
-    },
-    {
-        "db_id": "car_1",
         "question": "What are the names and ids of the different car makers?",
         "question_pl": "Jakie są nazwy i identyfikatory różnych producentów samochodów?",
         "query": "Select FullName, ID From CAR_MAKERS;",
@@ -1254,13 +1247,6 @@
     },
     {
         "db_id": "wta_1",
-        "question": "How many players are there?",
-        "question_pl": "Ilu jest graczy?",
-        "query": "SELECT count(*) FROM players",
-        "query_pl": "SELECT count(*) FROM players"
-    },
-    {
-        "db_id": "wta_1",
         "question": "What is the birth date of the oldest player?",
         "question_pl": "Jaka jest data urodzenia najstarszego gracza?",
         "query": "SELECT birth_date FROM players ORDER BY birth_date DESC LIMIT 1",
@@ -1307,13 +1293,6 @@
         "question_pl": "Podaj liczbę tur dla każdego gracza.",
         "query": "SELECT tours FROM players AS T1 JOIN rankings AS T2 ON T1.player_id  =  T2.player_id GROUP BY T1.first_name",
         "query_pl": "SELECT tours FROM players AS T1 JOIN rankings AS T2 ON T1.player_id  =  T2.player_id GROUP BY T1.first_name"
-    },
-    {
-        "db_id": "wta_1",
-        "question": "Find the number of players for each country.",
-        "question_pl": "Znajdź liczbę graczy w każdym kraju.",
-        "query": "SELECT count(*) FROM players GROUP BY country_code",
-        "query_pl": "SELECT count(*) FROM players GROUP BY country_code"
     },
     {
         "db_id": "wta_1",
@@ -1587,13 +1566,6 @@
         "question_pl": "Pokaż kody typów dla wszystkich szablonów.",
         "query": "SELECT template_type_code FROM Templates",
         "query_pl": "SELECT template_type_code FROM Templates"
-    },
-    {
-        "db_id": "cre_Doc_Template_Mgt",
-        "question": "Show all template type codes and descriptions.",
-        "question_pl": "Pokaż wszystkie kody i opisy typów szablonów.",
-        "query": "SELECT template_type_code ,  template_type_description FROM Ref_template_types",
-        "query_pl": "SELECT template_type_code ,  template_type_description FROM Ref_template_types"
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
@@ -2024,13 +1996,6 @@
     },
     {
         "db_id": "network_1",
-        "question": "How many high schoolers are there?",
-        "question_pl": "Ilu jest licealistów?",
-        "query": "SELECT count(*) FROM Highschooler",
-        "query_pl": "SELECT count(*) FROM Highschooler"
-    },
-    {
-        "db_id": "network_1",
         "question": "How many distinct grades are there?",
         "question_pl": "Ile jest różnych klas?",
         "query": "SELECT count(distinct grade) FROM Highschooler",
@@ -2189,13 +2154,6 @@
         "question_pl": "Posortuj wszystkich nauczycieli według wieku.",
         "query": "SELECT * FROM teacher ORDER BY Age",
         "query_pl": "SELECT * FROM teacher ORDER BY Age"
-    },
-    {
-        "db_id": "course_teach",
-        "question": "How many teachers are there?",
-        "question_pl": "Ilu jest nauczycieli?",
-        "query": "SELECT COUNT(*) FROM teacher",
-        "query_pl": "SELECT COUNT(*) FROM teacher"
     },
     {
         "db_id": "course_teach",

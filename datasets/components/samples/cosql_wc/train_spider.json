@@ -140,13 +140,6 @@
         "query_pl": "SELECT T1.fname FROM student AS T1 JOIN lives_in AS T2 ON T1.stuid  =  T2.stuid JOIN dorm AS T3 ON T3.dormid  =  T2.dormid WHERE T3.dorm_name  =  \"Smith Hall\""
     },
     {
-        "db_id": "movie_1",
-        "question": "What is the lowest and highest rating star?",
-        "question_pl": "Jaka jest najniższa i najwyższa gwiazdka oceny?",
-        "query": "SELECT max(stars) ,  min(stars) FROM Rating",
-        "query_pl": "SELECT max(stars) ,  min(stars) FROM Rating"
-    },
-    {
         "db_id": "wrestler",
         "question": "what are the elimination time of wrestlers",
         "question_pl": "Jakie są czasy eliminacji wrestlerów",
@@ -159,13 +152,6 @@
         "question_pl": "Wymień stan i zapisy na wszystkie uczelnie, na których studenci zostali przyjęci w ramach decyzji o wypróbowaniu.",
         "query": "SELECT DISTINCT T1.state ,  T1.enr FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.decision  =  'yes'",
         "query_pl": "SELECT DISTINCT T1.state ,  T1.enr FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.decision  =  \"tak\""
-    },
-    {
-        "db_id": "products_gen_characteristics",
-        "question": "How many distinct characteristic names does the product \"cumin\" have?",
-        "question_pl": "Ile różnych charakterystycznych nazw ma produkt \"kminek\"?",
-        "query": "SELECT count(DISTINCT t3.characteristic_name) FROM products AS t1 JOIN product_characteristics AS t2 ON t1.product_id  =  t2.product_id JOIN CHARACTERISTICS AS t3 ON t2.characteristic_id  =  t3.characteristic_id WHERE t1.product_name  =  \"cumin\"",
-        "query_pl": "SELECT count(DISTINCT t3.characteristic_name) FROM products AS t1 JOIN product_characteristics AS t2 ON t1.product_id  =  t2.product_id JOIN CHARACTERISTICS AS t3 ON t2.characteristic_id  =  t3.characteristic_id WHERE t1.product_name  =  \"kminek\""
     },
     {
         "db_id": "club_1",
@@ -231,13 +217,6 @@
         "query_pl": "SELECT Author FROM submission"
     },
     {
-        "db_id": "products_gen_characteristics",
-        "question": "How many characteristics does the product named \"sesame\" have?",
-        "question_pl": "Ile cech ma produkt o nazwie \"sezam\"?",
-        "query": "SELECT count(*) FROM products AS t1 JOIN product_characteristics AS t2 ON t1.product_id  =  t2.product_id WHERE t1.product_name  =  \"sesame\"",
-        "query_pl": "SELECT count(*) FROM products AS t1 JOIN product_characteristics AS t2 ON t1.product_id  =  t2.product_id WHERE t1.product_name  =  \"sezam\""
-    },
-    {
         "db_id": "wine_1",
         "question": "Show the country of appelations Alexander Valley?",
         "question_pl": "Pokaż kraj apelacji Alexander Valley?",
@@ -257,13 +236,6 @@
         "question_pl": "Ile jest zamówień?",
         "query": "SELECT count(*) FROM orders",
         "query_pl": "SELECT count(*) FROM orders"
-    },
-    {
-        "db_id": "insurance_and_eClaims",
-        "question": "What is the name of the customer who has made the minimum amount of payment in one claim?",
-        "question_pl": "Jak nazywa się klient, który dokonał minimalnej kwoty płatności w jednym wniosku?",
-        "query": "SELECT t3.customer_details FROM claim_headers AS t1 JOIN policies AS t2 ON t1.policy_id  =  t2.policy_id JOIN customers AS t3 ON t2.customer_id  =  t3.customer_id WHERE t1.amount_piad  =  (SELECT min(amount_piad) FROM claim_headers)",
-        "query_pl": "SELECT t3.customer_details FROM claim_headers AS t1 JOIN policies AS t2 ON t1.policy_id  =  t2.policy_id JOIN customers AS t3 ON t2.customer_id  =  t3.customer_id WHERE t1.amount_piad  =  (SELECT min(amount_piad) FROM claim_headers)"
     },
     {
         "db_id": "cinema",
@@ -404,13 +376,6 @@
         "question_pl": "Jaki jest dimenson Plustek MobileOffice D28 Corporate?",
         "query": "SELECT dimensions FROM product WHERE product = \"Plustek MobileOffice D28 Corporate\"",
         "query_pl": "SELECT dimensions FROM product WHERE product = \"Plustek MobileOffice D28 Corporate\""
-    },
-    {
-        "db_id": "medicine_enzyme_interaction",
-        "question": "What are the ids and names of the medicine that can interact with two or more enzymes? ",
-        "question_pl": "Jakie są identyfikatory i nazwy leków, które mogą wchodzić w interakcje z dwoma lub więcej enzymami?",
-        "query": "SELECT T1.id ,  T1.Name FROM medicine AS T1 JOIN medicine_enzyme_interaction AS T2 ON T2.medicine_id  =  T1.id GROUP BY T1.id HAVING count(*)  >=  2",
-        "query_pl": "SELECT T1.id ,  T1.Name FROM medicine AS T1 JOIN medicine_enzyme_interaction AS T2 ON T2.medicine_id  =  T1.id GROUP BY T1.id HAVING count(*)  >=  2"
     },
     {
         "db_id": "twitter_1",
@@ -693,13 +658,6 @@
         "query_pl": "SELECT country FROM competition GROUP BY country ORDER BY COUNT(*) DESC LIMIT 1"
     },
     {
-        "db_id": "e_learning",
-        "question": "What are the enrollment dates of all the tests that have result \"Pass\"?",
-        "question_pl": "Jakie są daty zapisów do wszystkich testów z wynikiem \"Pass\"?",
-        "query": "SELECT T1.date_of_enrolment FROM Student_Course_Enrolment AS T1 JOIN Student_Tests_Taken AS T2 ON T1.registration_id  =  T2.registration_id WHERE T2.test_result  =  \"Pass\"",
-        "query_pl": "SELECT T1.date_of_enrolment FROM Student_Course_Enrolment AS T1 JOIN Student_Tests_Taken AS T2 ON T1.registration_id  =  T2.registration_id WHERE T2.test_result  =  \"Przełęcz\""
-    },
-    {
         "db_id": "musical",
         "question": "Give me the list of nominees that has been nominated multiple times for musicals",
         "question_pl": "Podaj mi listę nominowanych, którzy byli wielokrotnie nominowani do musicali",
@@ -733,13 +691,6 @@
         "question_pl": "Ile jest lotnisk?",
         "query": "SELECT count(*) FROM airport",
         "query_pl": "SELECT count(*) FROM airport"
-    },
-    {
-        "db_id": "cre_Drama_Workshop_Groups",
-        "question": "what are the actual delivery dates of orders with quantity 1?",
-        "question_pl": "Jakie są rzeczywiste daty dostawy zamówień z ilością 1?",
-        "query": "SELECT T1.Actual_Delivery_Date FROM Customer_Orders AS T1 JOIN ORDER_ITEMS AS T2 ON T1.Order_ID  =  T2.Order_ID WHERE T2.Order_Quantity  =  1",
-        "query_pl": "SELECT T1.Actual_Delivery_Date FROM Customer_Orders AS T1 JOIN ORDER_ITEMS AS T2 ON T1.Order_ID  =  T2.Order_ID WHERE T2.Order_Quantity  =  1"
     },
     {
         "db_id": "behavior_monitoring",
@@ -810,13 +761,6 @@
         "question_pl": "Ilu jest redaktorów?",
         "query": "SELECT COUNT(Author_or_Editor) from book_club",
         "query_pl": "SELECT COUNT(Author_or_Editor) from book_club"
-    },
-    {
-        "db_id": "baseball_1",
-        "question": "Which cities have 2 to 4 parks?",
-        "question_pl": "Które miasta mają od 2 do 4 parków?",
-        "query": "SELECT city FROM park GROUP BY city HAVING count(*) BETWEEN 2 AND 4;",
-        "query_pl": "SELECT city FROM park GROUP BY city HAVING count(*) BETWEEN 2 AND 4;"
     },
     {
         "db_id": "college_1",
@@ -1008,13 +952,6 @@
         "query_pl": "SELECT TYPE , count(*) FROM institution GROUP BY TYPE"
     },
     {
-        "db_id": "flight_1",
-        "question": "What is average and maximum salary of all employees.",
-        "question_pl": "Jakie jest średnie i maksymalne wynagrodzenie wszystkich pracowników.",
-        "query": "SELECT avg(salary) ,  max(salary) FROM Employee",
-        "query_pl": "SELECT avg(salary) ,  max(salary) FROM Employee"
-    },
-    {
         "db_id": "music_1",
         "question": "Give me the names of the English Artist",
         "question_pl": "Podaj mi nazwiska angielskich artystów",
@@ -1027,13 +964,6 @@
         "question_pl": "Czy możesz wymienić imiona osób i ich przyjaciół?",
         "query": "SELECT name, friend from personFriend",
         "query_pl": "SELECT name, friend from personFriend"
-    },
-    {
-        "db_id": "architecture",
-        "question": "What is the location of the bridge named 'Kolob Arch' or 'Rainbow Bridge'?",
-        "question_pl": "Jaka jest lokalizacja mostu o nazwie \"Kolob Arch\" lub \"Rainbow Bridge\"?",
-        "query": "SELECT LOCATION FROM bridge WHERE name  =  'Kolob Arch' OR name  =  'Rainbow Bridge'",
-        "query_pl": "SELECT LOCATION FROM bridge WHERE name  =  \"Kolob Arch\" OR name  =  \"Tęczowy Most\""
     },
     {
         "db_id": "csu_1",
@@ -1183,13 +1113,6 @@
         "query_pl": "SELECT city FROM airports GROUP BY city HAVING count(*)  =  2"
     },
     {
-        "db_id": "baseball_1",
-        "question": "How many home games did the team  Boston Red Stockings play from 1990 to 2000 in total? ",
-        "question_pl": "Ile meczów u siebie rozegrała drużyna Boston Red Stockings w latach 1990-2000?",
-        "query": "SELECT sum(T1.games) FROM home_game AS T1 JOIN team AS T2 ON T1.team_id = T2.team_id_br WHERE T2.name = 'Boston Red Stockings' AND T1.year BETWEEN 1990 AND 2000;",
-        "query_pl": "SELECT sum(T1.games) FROM home_game AS T1 JOIN team AS T2 ON T1.team_id = T2.team_id_br WHERE T2.name = \"Czerwone pończochy Boston\" AND T1.year BETWEEN 1990 AND 2000;"
-    },
-    {
         "db_id": "college_2",
         "question": "Find the year that offers the largest number of courses?",
         "question_pl": "Znajdź rok, który oferuje największą liczbę kursów?",
@@ -1246,13 +1169,6 @@
         "query_pl": "SELECT * FROM customers where customer_id in (select customer_id from Orders)"
     },
     {
-        "db_id": "musical",
-        "question": "What is the duration of the oldest actor?",
-        "question_pl": "Jaki jest czas trwania najstarszego aktora?",
-        "query": "SELECT Duration FROM actor ORDER BY Age DESC LIMIT 1",
-        "query_pl": "SELECT Duration FROM actor ORDER BY Age DESC LIMIT 1"
-    },
-    {
         "db_id": "county_public_safety",
         "question": "show the names of cities",
         "question_pl": "pokaż nazwy miast",
@@ -1300,13 +1216,6 @@
         "question_pl": "Którzy użytkownicy mieli kilka tweetów?",
         "query": "SELECT name FROM user_profiles WHERE UID IN (SELECT UID FROM tweets)",
         "query_pl": "SELECT name FROM user_profiles WHERE UID IN (SELECT UID FROM tweets)"
-    },
-    {
-        "db_id": "flight_4",
-        "question": "How many airlines are there?",
-        "question_pl": "Ile jest linii lotniczych?",
-        "query": "SELECT COUNT(*) FROM airlines",
-        "query_pl": "SELECT COUNT(*) FROM airlines"
     },
     {
         "db_id": "cre_Theme_park",
@@ -1449,13 +1358,6 @@
         "query_pl": "SELECT first_name FROM employees "
     },
     {
-        "db_id": "browser_web",
-        "question": "what are the ids and names of the web accelerators that are compatible with two or more browsers?",
-        "question_pl": "Jakie są identyfikatory i nazwy akceleratorów sieci, które są kompatybilne z dwiema lub więcej przeglądarkami?",
-        "query": "SELECT T1.id ,  T1.Name FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id GROUP BY T1.id HAVING count(*)  >=  2",
-        "query_pl": "SELECT T1.id ,  T1.Name FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id GROUP BY T1.id HAVING count(*)  >=  2"
-    },
-    {
         "db_id": "insurance_and_eClaims",
         "question": "Hi, can I see the list of customers?",
         "question_pl": "Cześć, czy mogę zobaczyć listę klientów?",
@@ -1552,13 +1454,6 @@
         "question_pl": "Proszę, pokaż mi, ile studentek ma kierunek 600",
         "query": "SELECT count(*) FROM student WHERE sex  =  'F' AND Major = 600",
         "query_pl": "SELECT count(*) FROM student WHERE sex  =  \"F\" AND Major = 600"
-    },
-    {
-        "db_id": "twitter_1",
-        "question": "List the names of 5 users followed by the largest number of other users.",
-        "question_pl": "Wymień nazwy 5 użytkowników, po których następuje największa liczba innych użytkowników.",
-        "query": "SELECT name FROM user_profiles ORDER BY followers DESC LIMIT 5",
-        "query_pl": "SELECT name FROM user_profiles ORDER BY followers DESC LIMIT 5"
     },
     {
         "db_id": "insurance_and_eClaims",
@@ -1897,13 +1792,6 @@
         "query_pl": "SELECT count(distinct country) FROM customers"
     },
     {
-        "db_id": "allergy_1",
-        "question": "How many students are there?",
-        "question_pl": "Ilu jest studentów?",
-        "query": "SELECT count(distinct StuID) FROM Has_allergy",
-        "query_pl": "SELECT count(distinct StuID) FROM Has_allergy"
-    },
-    {
         "db_id": "coffee_shop",
         "question": "What is the membership card of Breton,Robert?",
         "question_pl": "Jaka jest karta członkowska Breton,Robert?",
@@ -2226,25 +2114,11 @@
         "query_pl": "SELECT count(course_id) FROM Student_Course_Registrations WHERE student_id = 121"
     },
     {
-        "db_id": "wine_1",
-        "question": "Find the distinct names of all wines that have prices higher than some wines from John Anthony winery.",
-        "question_pl": "Znajdź odrębne nazwy wszystkich win, których ceny są wyższe niż niektórych win z winiarni John Anthony.",
-        "query": "SELECT DISTINCT Name FROM WINE WHERE Price  >  (SELECT min(Price) FROM wine WHERE Winery  =  \"John Anthony\")",
-        "query_pl": "SELECT DISTINCT Name FROM WINE WHERE Price  >  (SELECT min(Price) FROM wine WHERE Winery  =  \"John Anthony\")"
-    },
-    {
         "db_id": "flight_1",
         "question": "show names of all aircrafts? ",
         "question_pl": "Pokaż nazwy wszystkich samolotów?",
         "query": "select name from aircraft",
         "query_pl": "select name from aircraft"
-    },
-    {
-        "db_id": "ship_1",
-        "question": "what are the names and classes of the ships that do not have any captain yet?",
-        "question_pl": "Jakie są nazwy i klasy statków, które nie mają jeszcze kapitana?",
-        "query": "SELECT name ,  CLASS FROM ship WHERE ship_id NOT IN (SELECT ship_id FROM captain)",
-        "query_pl": "SELECT name ,  CLASS FROM ship WHERE ship_id NOT IN (SELECT ship_id FROM captain)"
     },
     {
         "db_id": "railway",
@@ -2331,20 +2205,6 @@
         "query_pl": "SELECT count(*) FROM Student"
     },
     {
-        "db_id": "ship_mission",
-        "question": "List the name of ships that are not involved in any mission",
-        "question_pl": "Wymień nazwy statków, które nie biorą udziału w żadnej misji.",
-        "query": "SELECT Name FROM ship WHERE Ship_ID NOT IN (SELECT Ship_ID FROM mission)",
-        "query_pl": "SELECT Name FROM ship WHERE Ship_ID NOT IN (SELECT Ship_ID FROM mission)"
-    },
-    {
-        "db_id": "local_govt_and_lot",
-        "question": "How many distinct locations have the things with service detail 'Unsatisfied' been located in?",
-        "question_pl": "W ilu różnych lokalizacjach znajdowały się rzeczy ze szczegółem usługi \"Niezadowolony\"?",
-        "query": "SELECT count(DISTINCT T2.Location_Code) FROM Things AS T1 JOIN Timed_Locations_of_Things AS T2 ON T1.thing_id  =  T2.thing_id WHERE T1.service_details  =  'Unsatisfied'",
-        "query_pl": "SELECT count(DISTINCT T2.Location_Code) FROM Things AS T1 JOIN Timed_Locations_of_Things AS T2 ON T1.thing_id  =  T2.thing_id WHERE T1.service_details  =  \"Niezadowolony\""
-    },
-    {
         "db_id": "coffee_shop",
         "question": "whats he average number of staffs in charge",
         "question_pl": "Jaka jest średnia liczba odpowiedzialnych pracowników?",
@@ -2392,13 +2252,6 @@
         "question_pl": "Czy możesz mi podać imiona i nazwiska wszystkich pracowników, którzy pracują w jakimkolwiek dziale w Londynie?",
         "query": "SELECT first_name ,  last_name  FROM employees AS T1 JOIN departments AS T2 ON T1.department_id  =  T2.department_id JOIN  locations AS T3 ON T2.location_id  =  T3.location_id WHERE  T3.city  =  'London'",
         "query_pl": "SELECT first_name ,  last_name  FROM employees AS T1 JOIN departments AS T2 ON T1.department_id  =  T2.department_id JOIN  locations AS T3 ON T2.location_id  =  T3.location_id WHERE  T3.city  =  \"Londyn\""
-    },
-    {
-        "db_id": "cre_Docs_and_Epenses",
-        "question": "What is the project detail for the project with document \"King Book\"?",
-        "question_pl": "Jakie są szczegóły projektu z dokumentem \"King Book\"?",
-        "query": "SELECT T1.project_details FROM Projects AS T1 JOIN Documents AS T2 ON T1.project_id  =  T2.project_id WHERE T2.document_name  =  \"King Book\"",
-        "query_pl": "SELECT T1.project_details FROM Projects AS T1 JOIN Documents AS T2 ON T1.project_id  =  T2.project_id WHERE T2.document_name  =  \"King Book\""
     },
     {
         "db_id": "bike_1",
@@ -2569,13 +2422,6 @@
         "query_pl": "SELECT count(Poll_Source) from candidate"
     },
     {
-        "db_id": "candidate_poll",
-        "question": "Find the average height and weight for all males (sex is M).",
-        "question_pl": "Znajdź średni wzrost i wagę dla wszystkich mężczyzn (płeć to M).",
-        "query": "SELECT avg(height) ,  avg(weight) FROM people WHERE sex  =  'M'",
-        "query_pl": "SELECT avg(height) ,  avg(weight) FROM people WHERE sex  =  \"M\""
-    },
-    {
         "db_id": "customers_and_invoices",
         "question": "How many products are there?",
         "question_pl": "Ile jest produktów?",
@@ -2590,32 +2436,11 @@
         "query_pl": "SELECT customer_status_code  FROM Customers WHERE first_name = \"Marina\" OR last_name  =  \"Kohler\""
     },
     {
-        "db_id": "customer_complaints",
-        "question": "Which state has the most customers?",
-        "question_pl": "Który stan ma najwięcej klientów?",
-        "query": "SELECT state FROM customers GROUP BY state ORDER BY count(*) LIMIT 1",
-        "query_pl": "SELECT state FROM customers GROUP BY state ORDER BY count(*) LIMIT 1"
-    },
-    {
         "db_id": "protein_institute",
         "question": "show the maximum number of floors for all buildings?",
         "question_pl": "Pokaż maksymalną liczbę pięter dla wszystkich budynków?",
         "query": "SELECT  max(floors)FROM building",
         "query_pl": "SELECT  max(floors)FROM building"
-    },
-    {
-        "db_id": "body_builder",
-        "question": "What is the most common birth place of people?",
-        "question_pl": "Jakie jest najczęstsze miejsce urodzenia ludzi?",
-        "query": "SELECT Birth_Place FROM people GROUP BY Birth_Place ORDER BY COUNT(*) DESC LIMIT 1",
-        "query_pl": "SELECT Birth_Place FROM people GROUP BY Birth_Place ORDER BY COUNT(*) DESC LIMIT 1"
-    },
-    {
-        "db_id": "ship_mission",
-        "question": "Show the types of ships that have both ships with tonnage larger than 6000 and ships with tonnage smaller than 4000.",
-        "question_pl": "Pokaż typy statków, które mają zarówno statki o tonażu większym niż 6000, jak i statki o tonażu mniejszym niż 4000.",
-        "query": "SELECT TYPE FROM ship WHERE Tonnage > 6000 INTERSECT SELECT TYPE FROM ship WHERE Tonnage < 4000",
-        "query_pl": "SELECT TYPE FROM ship WHERE Tonnage > 6000 INTERSECT SELECT TYPE FROM ship WHERE Tonnage < 4000"
     },
     {
         "db_id": "roller_coaster",
@@ -2644,13 +2469,6 @@
         "question_pl": "Czy możesz mi powiedzieć, który pokój ma najtańszą cenę podstawową?",
         "query": "SELECT * FROM Rooms ORDER BY basePrice ASC LIMIT 1;",
         "query_pl": "SELECT * FROM Rooms ORDER BY basePrice ASC LIMIT 1;"
-    },
-    {
-        "db_id": "music_4",
-        "question": "Please show the results of music festivals and the number of music festivals that have had each, ordered by this count.",
-        "question_pl": "Pokaż wyniki festiwali muzycznych i liczbę festiwali muzycznych, które miały miejsce, uporządkowane według tej liczby.",
-        "query": "SELECT RESULT ,  COUNT(*) FROM music_festival GROUP BY RESULT ORDER BY COUNT(*) DESC",
-        "query_pl": "SELECT RESULT ,  COUNT(*) FROM music_festival GROUP BY RESULT ORDER BY COUNT(*) DESC"
     },
     {
         "db_id": "allergy_1",
@@ -2863,13 +2681,6 @@
         "query_pl": "SELECT song_name FROM song ORDER BY releasedate DESC LIMIT 1"
     },
     {
-        "db_id": "hr_1",
-        "question": "Find the first name and last name and department id for those employees who earn such amount of salary which is the smallest salary of any of the departments.",
-        "question_pl": "Znajdź imię i nazwisko oraz identyfikator działu dla tych pracowników, którzy zarabiają taką kwotę wynagrodzenia, która jest najmniejszą pensją spośród wszystkich działów.",
-        "query": "SELECT first_name ,  last_name ,  department_id FROM employees WHERE salary IN (SELECT MIN(salary) FROM employees GROUP BY department_id)",
-        "query_pl": "SELECT first_name ,  last_name ,  department_id FROM employees WHERE salary IN (SELECT MIN(salary) FROM employees GROUP BY department_id)"
-    },
-    {
         "db_id": "college_1",
         "question": "what is the first and last name of the profesor in biology department?",
         "question_pl": "Jakie jest imię i nazwisko profesora na wydziale biologii?",
@@ -2889,13 +2700,6 @@
         "question_pl": "Jaki jest kraj kodu pocztowego 416?",
         "query": "SELECT country from Addresses where zip_postcode = 416 ",
         "query_pl": "SELECT country from Addresses where zip_postcode = 416 "
-    },
-    {
-        "db_id": "store_1",
-        "question": "What is the title, phone and hire date of Nancy Edwards?",
-        "question_pl": "Jaki jest tytuł, telefon i data zatrudnienia Nancy Edwards?",
-        "query": "SELECT title ,  phone ,  hire_date FROM employees WHERE first_name = \"Nancy\" AND last_name = \"Edwards\";",
-        "query_pl": "SELECT title ,  phone ,  hire_date FROM employees WHERE first_name = \"Nancy\" AND last_name = \"Edwards\";"
     },
     {
         "db_id": "flight_company",
@@ -2933,13 +2737,6 @@
         "query_pl": "SELECT min(membership_amount) FROM branch WHERE open_year  =  2011 OR city  =  \"Londyn\""
     },
     {
-        "db_id": "hr_1",
-        "question": "display the emails of the employees who have no commission percentage and salary within the range 7000 to 12000 and works in that department which number is 50. ",
-        "question_pl": "Wyświetl e-maile pracowników, którzy nie mają procentowej prowizji i wynagrodzenia w przedziale od 7000 do 12000 i pracują w tym dziale, którego liczba wynosi 50.",
-        "query": "SELECT email FROM employees WHERE commission_pct  =  \"null\" AND salary BETWEEN 7000 AND 12000 AND department_id = 50",
-        "query_pl": "SELECT email FROM employees WHERE commission_pct  =  \"null\" AND salary BETWEEN 7000 AND 12000 AND department_id = 50"
-    },
-    {
         "db_id": "wedding",
         "question": "which females had a wedding in 2016?",
         "question_pl": "Które kobiety miały ślub w 2016 roku?",
@@ -2966,20 +2763,6 @@
         "question_pl": "Jaka jest populacja miasta Id 2?",
         "query": "SELECT population FROM city WHERE City_ID = 2",
         "query_pl": "SELECT population FROM city WHERE City_ID = 2"
-    },
-    {
-        "db_id": "insurance_fnol",
-        "question": "What are all the policy types of the customer that has the most policies listed?",
-        "question_pl": "Jakie są wszystkie typy polis klienta, który ma najwięcej polis na liście?",
-        "query": "SELECT DISTINCT t3.policy_type_code FROM customers AS t1 JOIN customers_policies AS t2 ON t1.customer_id  =  t2.customer_id JOIN available_policies AS t3 ON t2.policy_id  =  t3.policy_id WHERE t1.customer_name  =  (SELECT t1.customer_name FROM customers AS t1 JOIN customers_policies AS t2 ON t1.customer_id  =  t2.customer_id GROUP BY t1.customer_name ORDER BY count(*) DESC LIMIT 1)",
-        "query_pl": "SELECT DISTINCT t3.policy_type_code FROM customers AS t1 JOIN customers_policies AS t2 ON t1.customer_id  =  t2.customer_id JOIN available_policies AS t3 ON t2.policy_id  =  t3.policy_id WHERE t1.customer_name  =  (SELECT t1.customer_name FROM customers AS t1 JOIN customers_policies AS t2 ON t1.customer_id  =  t2.customer_id GROUP BY t1.customer_name ORDER BY count(*) DESC LIMIT 1)"
-    },
-    {
-        "db_id": "assets_maintenance",
-        "question": "Which gender makes up the majority of the staff?",
-        "question_pl": "Która płeć stanowi większość pracowników?",
-        "query": "SELECT gender FROM staff GROUP BY gender ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT gender FROM staff GROUP BY gender ORDER BY count(*) DESC LIMIT 1"
     },
     {
         "db_id": "scientist_1",
@@ -3029,13 +2812,6 @@
         "question_pl": "Pokaż nazwiska wszystkich pracowników z wynagrodzeniem wyższym niż średnie.",
         "query": "SELECT name FROM Employee WHERE salary  >  (SELECT avg(salary) FROM Employee)",
         "query_pl": "SELECT name FROM Employee WHERE salary  >  (SELECT avg(salary) FROM Employee)"
-    },
-    {
-        "db_id": "phone_market",
-        "question": "Show the names of phones and the districts of markets they are on, in ascending order of the ranking of the market.",
-        "question_pl": "Pokaż nazwy telefonów i dzielnice rynków, na których się znajdują, w kolejności rosnącej według rankingu rynku.",
-        "query": "SELECT T3.Name ,  T2.District FROM phone_market AS T1 JOIN market AS T2 ON T1.Market_ID  =  T2.Market_ID JOIN phone AS T3 ON T1.Phone_ID  =  T3.Phone_ID ORDER BY T2.Ranking",
-        "query_pl": "SELECT T3.Name ,  T2.District FROM phone_market AS T1 JOIN market AS T2 ON T1.Market_ID  =  T2.Market_ID JOIN phone AS T3 ON T1.Phone_ID  =  T3.Phone_ID ORDER BY T2.Ranking"
     },
     {
         "db_id": "university_basketball",
@@ -3099,13 +2875,6 @@
         "question_pl": "Pokaż kod typu zatrzymania dla zatrzymania o identyfikatorze 1?",
         "query": "SELECT T1.detention_type_code FROM Detention AS T1 JOIN Ref_Detention_Type AS T2 ON T1.detention_type_code  =  T2.detention_type_code where detention_id = 1",
         "query_pl": "SELECT T1.detention_type_code FROM Detention AS T1 JOIN Ref_Detention_Type AS T2 ON T1.detention_type_code  =  T2.detention_type_code where detention_id = 1"
-    },
-    {
-        "db_id": "perpetrator",
-        "question": "How many perpetrators are there?",
-        "question_pl": "Ilu jest sprawców?",
-        "query": "SELECT count(*) FROM perpetrator ",
-        "query_pl": "SELECT count(*) FROM perpetrator "
     },
     {
         "db_id": "station_weather",
@@ -3241,13 +3010,6 @@
         "query_pl": "SELECT COUNT(*) FROM GENRE AS T1 JOIN TRACK AS T2 ON T1.GenreId  =  T2.GenreId WHERE T1.Name  =  \"Skała\""
     },
     {
-        "db_id": "music_1",
-        "question": "Find the distinct names of all songs that have a higher resolution than some songs in English.",
-        "question_pl": "Znajdź różne nazwy wszystkich utworów, które mają wyższą rozdzielczość niż niektóre utwory w języku angielskim.",
-        "query": "SELECT DISTINCT song_name FROM song WHERE resolution  >  (SELECT min(resolution) FROM song WHERE languages  =  \"english\")",
-        "query_pl": "SELECT DISTINCT song_name FROM song WHERE resolution  >  (SELECT min(resolution) FROM song WHERE languages  =  \"angielski\")"
-    },
-    {
         "db_id": "game_1",
         "question": "list all the game type",
         "question_pl": "wymień wszystkie typy gier",
@@ -3365,13 +3127,6 @@
         "question_pl": "Ile tytułów naukowych nadał \"San Jose State University\" w 2000 roku?",
         "query": "SELECT degrees FROM campuses AS T1 JOIN degrees AS T2 ON t1.id  =  t2.campus WHERE t1.campus  =  \"San Jose State University\" AND t2.year  =  2000",
         "query_pl": "SELECT degrees FROM campuses AS T1 JOIN degrees AS T2 ON t1.id  =  t2.campus WHERE t1.campus  =  \"Uniwersytet Stanowy San Jose\" AND t2.year  =  2000"
-    },
-    {
-        "db_id": "customers_and_invoices",
-        "question": "Show the first name and last name for the customer with account name 900.",
-        "question_pl": "Pokaż imię i nazwisko klienta z nazwą konta 900.",
-        "query": "SELECT T2.customer_first_name ,  T2.customer_last_name FROM Accounts AS T1 JOIN Customers AS T2 ON T1.customer_id  =  T2.customer_id WHERE T1.account_name  =  \"900\"",
-        "query_pl": "SELECT T2.customer_first_name ,  T2.customer_last_name FROM Accounts AS T1 JOIN Customers AS T2 ON T1.customer_id  =  T2.customer_id WHERE T1.account_name  =  \"900\""
     },
     {
         "db_id": "college_2",
@@ -3535,13 +3290,6 @@
         "query_pl": "SELECT count(*) FROM web_client_accelerator"
     },
     {
-        "db_id": "customers_and_products_contacts",
-        "question": "How many products have a price higher than the average?",
-        "question_pl": "Ile produktów ma cenę wyższą niż średnia?",
-        "query": "SELECT count(*) FROM products WHERE product_price  >  (SELECT avg(product_price) FROM products)",
-        "query_pl": "SELECT count(*) FROM products WHERE product_price  >  (SELECT avg(product_price) FROM products)"
-    },
-    {
         "db_id": "document_management",
         "question": "Can you show me how many documents there are in total?",
         "question_pl": "Czy możesz mi pokazać, ile jest w sumie dokumentów?",
@@ -3584,13 +3332,6 @@
         "query_pl": "select district_name from district"
     },
     {
-        "db_id": "school_bus",
-        "question": "How many drivers are there?",
-        "question_pl": "Ilu jest kierowców?",
-        "query": "SELECT count(*) FROM driver ",
-        "query_pl": "SELECT count(*) FROM driver "
-    },
-    {
         "db_id": "e_learning",
         "question": "What is the latest test completion date?",
         "question_pl": "Jaka jest ostateczna data zakończenia testu?",
@@ -3605,20 +3346,6 @@
         "query_pl": "SELECT product_description FROM Products_for_Hire"
     },
     {
-        "db_id": "baseball_1",
-        "question": "What is the full name and id of the college with the largest number of baseball players?",
-        "question_pl": "Jaka jest pełna nazwa i identyfikator uczelni z największą liczbą graczy w baseball?",
-        "query": "SELECT T1.name_full ,  T1.college_id FROM college AS T1 JOIN player_college AS T2 ON T1.college_id  =  T2.college_id GROUP BY T1.college_id ORDER BY count(*) DESC LIMIT 1;",
-        "query_pl": "SELECT T1.name_full ,  T1.college_id FROM college AS T1 JOIN player_college AS T2 ON T1.college_id  =  T2.college_id GROUP BY T1.college_id ORDER BY count(*) DESC LIMIT 1;"
-    },
-    {
-        "db_id": "customers_and_invoices",
-        "question": "Show all product names and the number of customers having an order on each product.",
-        "question_pl": "Pokaż wszystkie nazwy produktów i liczbę klientów, którzy złożyli zamówienie na każdy produkt.",
-        "query": "SELECT T2.product_name ,  count(*) FROM Order_items AS T1 JOIN Products AS T2 ON T1.product_id  =  T2.product_id JOIN Orders AS T3 ON T3.order_id  =  T1.order_id GROUP BY T2.product_name",
-        "query_pl": "SELECT T2.product_name ,  count(*) FROM Order_items AS T1 JOIN Products AS T2 ON T1.product_id  =  T2.product_id JOIN Orders AS T3 ON T3.order_id  =  T1.order_id GROUP BY T2.product_name"
-    },
-    {
         "db_id": "college_2",
         "question": "how many courses have prerequisite?",
         "question_pl": "Ile kursów ma wymagania wstępne?",
@@ -3631,13 +3358,6 @@
         "question_pl": "Na ilu lotniskach pilot Thompson prowadził samolot?",
         "query": "SELECT count(*) FROM airport WHERE id IN ( SELECT airport_id FROM flight WHERE pilot  =  'Thompson' );",
         "query_pl": "SELECT count(*) FROM airport WHERE id IN ( SELECT airport_id FROM flight WHERE pilot  =  \"Thompson\" );"
-    },
-    {
-        "db_id": "solvency_ii",
-        "question": "Show the names of products that are in at least two events in ascending alphabetical order of product name.",
-        "question_pl": "Pokaż nazwy produktów, które biorą udział w co najmniej dwóch wydarzeniach, w porządku alfabetycznym rosnąco według nazwy produktu.",
-        "query": "SELECT T1.Product_Name FROM Products AS T1 JOIN Products_in_Events AS T2 ON T1.Product_ID  =  T2.Product_ID GROUP BY T1.Product_Name HAVING COUNT(*)  >=  2 ORDER BY T1.Product_Name",
-        "query_pl": "SELECT T1.Product_Name FROM Products AS T1 JOIN Products_in_Events AS T2 ON T1.Product_ID  =  T2.Product_ID GROUP BY T1.Product_Name HAVING COUNT(*)  >=  2 ORDER BY T1.Product_Name"
     },
     {
         "db_id": "sports_competition",
@@ -3682,13 +3402,6 @@
         "query_pl": "SELECT name FROM program"
     },
     {
-        "db_id": "chinook_1",
-        "question": "What is the average unit price of Rock tracks?",
-        "question_pl": "Jaka jest średnia cena jednostkowa utworów Rock?",
-        "query": "SELECT AVG(T2.UnitPrice) FROM GENRE AS T1 JOIN TRACK AS T2 ON T1.GenreId  =  T2.GenreId WHERE T1.Name  =  \"Rock\"",
-        "query_pl": "SELECT AVG(T2.UnitPrice) FROM GENRE AS T1 JOIN TRACK AS T2 ON T1.GenreId  =  T2.GenreId WHERE T1.Name  =  \"Skała\""
-    },
-    {
         "db_id": "wine_1",
         "question": "Which is the most expensive wine?",
         "question_pl": "Które wino jest najdroższe?",
@@ -3722,13 +3435,6 @@
         "question_pl": "Czy możesz mi podać kwotę i kod zadania z największą liczbą pracowników?",
         "query": "SELECT emp_jobcode ,  count(*) FROM employee GROUP BY emp_jobcode ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT emp_jobcode ,  count(*) FROM employee GROUP BY emp_jobcode ORDER BY count(*) DESC LIMIT 1"
-    },
-    {
-        "db_id": "culture_company",
-        "question": "What is the publisher with most number of books?",
-        "question_pl": "Jaki jest wydawca z największą liczbą książek?",
-        "query": "SELECT publisher FROM book_club GROUP BY publisher ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT publisher FROM book_club GROUP BY publisher ORDER BY count(*) DESC LIMIT 1"
     },
     {
         "db_id": "music_4",
@@ -3778,13 +3484,6 @@
         "question_pl": "Ilu jest klientów",
         "query": "SELECT count(*) from Customers",
         "query_pl": "SELECT count(*) from Customers"
-    },
-    {
-        "db_id": "formula_1",
-        "question": "Find the id, forename and number of races of all drivers who have at least participated in two races?",
-        "question_pl": "Znajdź identyfikator, imię i liczbę wyścigów wszystkich kierowców, którzy wzięli udział w co najmniej dwóch wyścigach?",
-        "query": "SELECT T1.driverid ,  T1.forename ,  count(*) FROM drivers AS T1 JOIN results AS T2 ON T1.driverid = T2.driverid JOIN races AS T3 ON T2.raceid = T3.raceid GROUP BY T1.driverid HAVING count(*)  >=  2",
-        "query_pl": "SELECT T1.driverid ,  T1.forename ,  count(*) FROM drivers AS T1 JOIN results AS T2 ON T1.driverid = T2.driverid JOIN races AS T3 ON T2.raceid = T3.raceid GROUP BY T1.driverid HAVING count(*)  >=  2"
     },
     {
         "db_id": "college_1",
@@ -3925,13 +3624,6 @@
         "question_pl": "Jak nazywają się wszyscy uczniowie?",
         "query": "select lastname,firstname from list",
         "query_pl": "select lastname,firstname from list"
-    },
-    {
-        "db_id": "journal_committee",
-        "question": "Show the names of editors of age either 24 or 25.",
-        "question_pl": "Pokaż nazwiska redaktorów w wieku 24 lub 25 lat.",
-        "query": "SELECT Name FROM editor WHERE Age  =  24 OR Age  =  25",
-        "query_pl": "SELECT Name FROM editor WHERE Age  =  24 OR Age  =  25"
     },
     {
         "db_id": "assets_maintenance",
@@ -4116,13 +3808,6 @@
         "query_pl": "SELECT max(stars) FROM Rating"
     },
     {
-        "db_id": "riding_club",
-        "question": "What is the name of the player with the largest number of votes?",
-        "question_pl": "Jak nazywa się gracz z największą liczbą głosów?",
-        "query": "SELECT Player_name FROM player ORDER BY Votes DESC LIMIT 1",
-        "query_pl": "SELECT Player_name FROM player ORDER BY Votes DESC LIMIT 1"
-    },
-    {
         "db_id": "small_bank_1",
         "question": "Hi, could you please let me know what is the average savings balance of all customers?",
         "question_pl": "Cześć, czy możesz mi powiedzieć, jakie jest średnie saldo oszczędności wszystkich klientów?",
@@ -4291,13 +3976,6 @@
         "query_pl": "select pilot_name from pilot where pilot_ID = 1 or pilot_ID = 2"
     },
     {
-        "db_id": "document_management",
-        "question": "Find the total access count of all documents in the most popular document type.",
-        "question_pl": "Znajdź całkowitą liczbę dostępów do wszystkich dokumentów w najpopularniejszym typie dokumentu.",
-        "query": "SELECT sum(access_count) FROM documents GROUP BY document_type_code ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT sum(access_count) FROM documents GROUP BY document_type_code ORDER BY count(*) DESC LIMIT 1"
-    },
-    {
         "db_id": "assets_maintenance",
         "question": "How many fault logs are there in total?",
         "question_pl": "Ile jest w sumie dzienników błędów?",
@@ -4354,13 +4032,6 @@
         "query_pl": "SELECT count(*) from student"
     },
     {
-        "db_id": "college_1",
-        "question": "What is the name of the department that has the largest number of students enrolled?",
-        "question_pl": "Jak nazywa się wydział z największą liczbą zapisanych studentów?",
-        "query": "SELECT T4.dept_name FROM CLASS AS T1 JOIN enroll AS T2 ON T1.class_code  =  T2.class_code JOIN course AS T3 ON T1.crs_code  =  T3.crs_code JOIN department AS T4 ON T3.dept_code  =  T4.dept_code GROUP BY T3.dept_code ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT T4.dept_name FROM CLASS AS T1 JOIN enroll AS T2 ON T1.class_code  =  T2.class_code JOIN course AS T3 ON T1.crs_code  =  T3.crs_code JOIN department AS T4 ON T3.dept_code  =  T4.dept_code GROUP BY T3.dept_code ORDER BY count(*) DESC LIMIT 1"
-    },
-    {
         "db_id": "news_report",
         "question": "how many journalist there",
         "question_pl": "ilu jest tam dziennikarzy",
@@ -4373,13 +4044,6 @@
         "question_pl": "Witaj! Ilu klientów ma status zamówienia \"W drodze\"?",
         "query": "SELECT count(*) FROM customers AS T1 JOIN orders AS T2 ON T1.customer_id = T2.customer_id WHERE T2.order_status = \"On Road\"",
         "query_pl": "SELECT count(*) FROM customers AS T1 JOIN orders AS T2 ON T1.customer_id = T2.customer_id WHERE T2.order_status = \"Na drodze\""
-    },
-    {
-        "db_id": "activity_1",
-        "question": "Find the ids of the students who participate in Canoeing and Kayaking.",
-        "question_pl": "Znajdź identyfikatory uczniów, którzy uczestniczą w spływach kajakowych.",
-        "query": "SELECT T1.stuid FROM participates_in AS T1 JOIN activity AS T2 ON T2.actid  =  T2.actid WHERE T2.activity_name  =  'Canoeing' INTERSECT SELECT T1.stuid FROM participates_in AS T1 JOIN activity AS T2 ON T2.actid  =  T2.actid WHERE T2.activity_name  =  'Kayaking'",
-        "query_pl": "SELECT T1.stuid FROM participates_in AS T1 JOIN activity AS T2 ON T2.actid  =  T2.actid WHERE T2.activity_name  =  \"Kajakarstwo\" INTERSECT SELECT T1.stuid FROM participates_in AS T1 JOIN activity AS T2 ON T2.actid  =  T2.actid WHERE T2.activity_name  =  \"Kajakarstwo\""
     },
     {
         "db_id": "products_gen_characteristics",
@@ -4429,13 +4093,6 @@
         "question_pl": "Jakie są rodzaje organizacji?",
         "query": "SELECT organisation_type FROM organisation_Types ",
         "query_pl": "SELECT organisation_type FROM organisation_Types "
-    },
-    {
-        "db_id": "game_1",
-        "question": "Show the game name that has most number of hours played.",
-        "question_pl": "Pokaż nazwę gry z największą liczbą rozegranych godzin.",
-        "query": "SELECT gname FROM Plays_games AS T1 JOIN Video_games AS T2 ON T1.gameid  =  T2.gameid GROUP BY T1.gameid ORDER BY sum(hours_played) DESC LIMIT 1",
-        "query_pl": "SELECT gname FROM Plays_games AS T1 JOIN Video_games AS T2 ON T1.gameid  =  T2.gameid GROUP BY T1.gameid ORDER BY sum(hours_played) DESC LIMIT 1"
     },
     {
         "db_id": "school_finance",
@@ -4557,13 +4214,6 @@
         "query_pl": "SELECT count(*) from representative where party = \"Republikanin\""
     },
     {
-        "db_id": "restaurant_1",
-        "question": "Which major has between 2 and 30 number of students? List major and the number of students.",
-        "question_pl": "Który kierunek ma od 2 do 30 studentów? Wymień kierunek i liczbę studentów.",
-        "query": "SELECT Major ,  count(*) FROM Student GROUP BY Major HAVING count(Major) BETWEEN 2 AND 30;",
-        "query_pl": "SELECT Major ,  count(*) FROM Student GROUP BY Major HAVING count(Major) BETWEEN 2 AND 30;"
-    },
-    {
         "db_id": "music_1",
         "question": "How many songs have a resolution below 800?",
         "question_pl": "Ile utworów ma rozdzielczość poniżej 800?",
@@ -4583,13 +4233,6 @@
         "question_pl": "Witam, czy możesz podać mi listę wszystkich nazw działów?",
         "query": "SELECT dept_name from department",
         "query_pl": "SELECT dept_name from department"
-    },
-    {
-        "db_id": "baseball_1",
-        "question": "List the 3 highest salaries of the players in 2001?",
-        "question_pl": "Wymień 3 najwyższe pensje zawodników w 2001 roku?",
-        "query": "SELECT salary FROM salary WHERE YEAR  =  2001 ORDER BY salary DESC LIMIT 3;",
-        "query_pl": "SELECT salary FROM salary WHERE YEAR  =  2001 ORDER BY salary DESC LIMIT 3;"
     },
     {
         "db_id": "e_learning",
@@ -4660,13 +4303,6 @@
         "question_pl": "Kto jest najwyższym gimnastykiem?",
         "query": "SELECT T2.Name FROM gymnast AS T1 JOIN people AS T2 ON T1.Gymnast_ID = T2.People_ID ORDER BY T2.Height desc limit 1",
         "query_pl": "SELECT T2.Name FROM gymnast AS T1 JOIN people AS T2 ON T1.Gymnast_ID = T2.People_ID ORDER BY T2.Height desc limit 1"
-    },
-    {
-        "db_id": "student_1",
-        "question": "Which classroom has the most students?",
-        "question_pl": "Która klasa ma najwięcej uczniów?",
-        "query": "SELECT classroom FROM list GROUP BY classroom ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT classroom FROM list GROUP BY classroom ORDER BY count(*) DESC LIMIT 1"
     },
     {
         "db_id": "insurance_fnol",
@@ -4744,13 +4380,6 @@
         "question_pl": "Który Kalifornijski Uniwersytet Stanowy znajduje się w hrabstwie Kern?",
         "query": "SELECT campus from campuses where campus like \"%Kalifornijski uniwersytet stanowy%\" and county = \"Kern\"",
         "query_pl": "SELECT campus from campuses where campus like \"%Kalifornijski uniwersytet stanowy%\" and county = \"Kern\""
-    },
-    {
-        "db_id": "formula_1",
-        "question": "What is the id and last name of the driver who participated in the most races after 2010?",
-        "question_pl": "Jaki jest identyfikator i nazwisko kierowcy, który wziął udział w największej liczbie wyścigów po 2010 roku?",
-        "query": "SELECT T1.driverid , T1.surname FROM drivers AS T1 JOIN results AS T2 ON T1.driverid = T2.driverid JOIN races AS T3 ON T2.raceid = T3.raceid WHERE T3.year > 2010 GROUP BY T1.driverid ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT T1.driverid , T1.surname FROM drivers AS T1 JOIN results AS T2 ON T1.driverid = T2.driverid JOIN races AS T3 ON T2.raceid = T3.raceid WHERE T3.year > 2010 GROUP BY T1.driverid ORDER BY count(*) DESC LIMIT 1"
     },
     {
         "db_id": "wedding",
@@ -5096,13 +4725,6 @@
         "query_pl": "SELECT count(distinct Nationality) FROM pilot "
     },
     {
-        "db_id": "wrestler",
-        "question": "How many wrestlers are there?",
-        "question_pl": "Ilu jest zapaśników?",
-        "query": "SELECT count(*) FROM wrestler ",
-        "query_pl": "SELECT count(*) FROM wrestler "
-    },
-    {
         "db_id": "network_2",
         "question": "Hi can you tell me in witch city does Alice live?",
         "question_pl": "Cześć, możesz mi powiedzieć, w którym mieście mieszka Alice?",
@@ -5129,13 +4751,6 @@
         "question_pl": "Który tor ma największą liczbę wyścigów?",
         "query": "SELECT T2.name FROM race AS T1 JOIN track AS T2 ON T1.track_id  =  T2.track_id GROUP BY T1.track_id ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT T2.name FROM race AS T1 JOIN track AS T2 ON T1.track_id  =  T2.track_id GROUP BY T1.track_id ORDER BY count(*) DESC LIMIT 1"
-    },
-    {
-        "db_id": "baseball_1",
-        "question": "What were all the salary values of players in 2010 and 2001?",
-        "question_pl": "Jakie były wartości wynagrodzeń zawodników w 2010 i 2001 roku?",
-        "query": "SELECT salary FROM salary WHERE YEAR  =  2010 UNION SELECT salary FROM salary WHERE YEAR  =  2001",
-        "query_pl": "SELECT salary FROM salary WHERE YEAR  =  2010 UNION SELECT salary FROM salary WHERE YEAR  =  2001"
     },
     {
         "db_id": "news_report",
@@ -5178,13 +4793,6 @@
         "question_pl": "Jaka jest średnia liczba godzin treningowych?",
         "query": "SELECT avg(HS) FROM player",
         "query_pl": "SELECT avg(HS) FROM player"
-    },
-    {
-        "db_id": "small_bank_1",
-        "question": "Find the saving balance of the account with the highest checking balance.",
-        "question_pl": "Znajdź saldo oszczędności na koncie z najwyższym saldem rozliczeniowym.",
-        "query": "SELECT T3.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid = T2.custid JOIN savings AS T3 ON T1.custid = T3.custid ORDER BY T2.balance DESC LIMIT 1",
-        "query_pl": "SELECT T3.balance FROM accounts AS T1 JOIN checking AS T2 ON T1.custid = T2.custid JOIN savings AS T3 ON T1.custid = T3.custid ORDER BY T2.balance DESC LIMIT 1"
     },
     {
         "db_id": "products_for_hire",
@@ -5376,20 +4984,6 @@
         "query_pl": "SELECT Channel_ID from  broadcast WHERE Time_of_day  =  \"Poranek\""
     },
     {
-        "db_id": "hr_1",
-        "question": "display the department id and the total salary for those departments which contains at least two employees.",
-        "question_pl": "wyświetl identyfikator działu i łączne wynagrodzenie dla tych działów, które zawierają co najmniej dwóch pracowników.",
-        "query": "SELECT department_id ,  SUM(salary) FROM employees GROUP BY department_id HAVING count(*)  >=  2",
-        "query_pl": "SELECT department_id ,  SUM(salary) FROM employees GROUP BY department_id HAVING count(*)  >=  2"
-    },
-    {
-        "db_id": "soccer_2",
-        "question": "Find the names of either colleges in LA with greater than 15000 size or in state AZ with less than 13000 enrollment.",
-        "question_pl": "Znajdź nazwy uczelni w LA z liczbą studentów większą niż 15000 lub w stanie AZ z liczbą studentów mniejszą niż 13000.",
-        "query": "SELECT cName FROM College WHERE enr  <  13000 AND state = \"AZ\" UNION SELECT cName FROM College WHERE enr  >  15000 AND state = \"LA\"",
-        "query_pl": "SELECT cName FROM College WHERE enr  <  13000 AND state = \"AZ\" UNION SELECT cName FROM College WHERE enr  >  15000 AND state = \"LA\""
-    },
-    {
         "db_id": "store_1",
         "question": "what is the name of the employee that supported the most number of customers? ",
         "question_pl": "Jak nazywa się pracownik, który obsłużył największą liczbę klientów?",
@@ -5500,13 +5094,6 @@
         "question_pl": "Ile usług zażądał każdy mieszkaniec",
         "query": "SELECT T1.resident_id ,count(*) FROM Residents AS T1 JOIN Residents_Services AS T2 ON T1.resident_id  =  T2.resident_id GROUP BY T1.resident_id",
         "query_pl": "SELECT T1.resident_id ,count(*) FROM Residents AS T1 JOIN Residents_Services AS T2 ON T1.resident_id  =  T2.resident_id GROUP BY T1.resident_id"
-    },
-    {
-        "db_id": "entertainment_awards",
-        "question": "Show the number of audience in year 2008 or 2010.",
-        "question_pl": "Pokaż liczbę widzów w roku 2008 lub 2010.",
-        "query": "SELECT Num_of_Audience FROM festival_detail WHERE YEAR  =  2008 OR YEAR  =  2010",
-        "query_pl": "SELECT Num_of_Audience FROM festival_detail WHERE YEAR  =  2008 OR YEAR  =  2010"
     },
     {
         "db_id": "bike_1",
@@ -5628,13 +5215,6 @@
         "query_pl": "SELECT event_id, event_name from party_events"
     },
     {
-        "db_id": "assets_maintenance",
-        "question": "How many engineer visits are required at most for a single fault log? List the number and the log entry id.",
-        "question_pl": "Ile wizyt inżyniera jest wymaganych dla pojedynczego dziennika usterek? Wymień liczbę i identyfikator wpisu w dzienniku.",
-        "query": "SELECT count(*) ,  T1.fault_log_entry_id FROM Fault_Log AS T1 JOIN Engineer_Visits AS T2 ON T1.fault_log_entry_id  =  T2.fault_log_entry_id GROUP BY T1.fault_log_entry_id ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT count(*) ,  T1.fault_log_entry_id FROM Fault_Log AS T1 JOIN Engineer_Visits AS T2 ON T1.fault_log_entry_id  =  T2.fault_log_entry_id GROUP BY T1.fault_log_entry_id ORDER BY count(*) DESC LIMIT 1"
-    },
-    {
         "db_id": "document_management",
         "question": "how many Document Sections on the table? ",
         "question_pl": "Ile sekcji dokumentów znajduje się na stole? ",
@@ -5661,20 +5241,6 @@
         "question_pl": "Jaka jest średnia populacja miasta?",
         "query": "SELECT avg(City_Population) FROM district ",
         "query_pl": "SELECT avg(City_Population) FROM district "
-    },
-    {
-        "db_id": "shop_membership",
-        "question": "What is the total number of purchases for members with level 6?",
-        "question_pl": "Jaka jest łączna liczba zakupów dokonanych przez członków z poziomem 6?",
-        "query": "SELECT count(*) FROM purchase AS T1 JOIN member AS T2 ON T1.member_id  =  T2.member_id WHERE T2.level  =  6",
-        "query_pl": "SELECT count(*) FROM purchase AS T1 JOIN member AS T2 ON T1.member_id  =  T2.member_id WHERE T2.level  =  6"
-    },
-    {
-        "db_id": "roller_coaster",
-        "question": "HOW MANY COUNTRIES DO NOT HAVE AN ROLLER COASTER LONGER THAN 3000?",
-        "question_pl": "ILE KRAJÓW NIE MA KOLEJKI GÓRSKIEJ DŁUŻSZEJ NIŻ 3000?",
-        "query": "SELECT count(*) FROM country WHERE country_id NOT IN ( SELECT country_id FROM roller_coaster WHERE LENGTH  >  3000 )",
-        "query_pl": "SELECT count(*) FROM country WHERE country_id NOT IN ( SELECT country_id FROM roller_coaster WHERE LENGTH  >  3000 )"
     },
     {
         "db_id": "tracking_orders",
@@ -5738,13 +5304,6 @@
         "question_pl": "Jaki jest id gry balls to the walls?",
         "query": "SELECT distinct T2.id FROM albums AS T1 JOIN tracks AS T2 ON T1.id = T2.genre_id WHERE T1.title = \"Balls to the Wall\";",
         "query_pl": "SELECT distinct T2.id FROM albums AS T1 JOIN tracks AS T2 ON T1.id = T2.genre_id WHERE T1.title = \"Balls to the Wall\";"
-    },
-    {
-        "db_id": "match_season",
-        "question": "Show the players and years played for players from team \"Columbus Crew\".",
-        "question_pl": "Pokaż zawodników i lata gry zawodników z drużyny \"Columbus Crew\".",
-        "query": "SELECT T1.Player , T1.Years_Played FROM player AS T1 JOIN team AS T2 ON T1.Team  =  T2.Team_id WHERE T2.Name  =  \"Columbus Crew\"",
-        "query_pl": "SELECT T1.Player , T1.Years_Played FROM player AS T1 JOIN team AS T2 ON T1.Team  =  T2.Team_id WHERE T2.Name  =  \"Columbus Crew\""
     },
     {
         "db_id": "program_share",
@@ -6006,25 +5565,11 @@
         "query_pl": "SELECT count(*) from Employees"
     },
     {
-        "db_id": "network_2",
-        "question": "Who is the person that has no friend?",
-        "question_pl": "Kim jest osoba, która nie ma przyjaciela?",
-        "query": "SELECT name FROM person EXCEPT SELECT name FROM PersonFriend",
-        "query_pl": "SELECT name FROM person EXCEPT SELECT name FROM PersonFriend"
-    },
-    {
         "db_id": "university_basketball",
         "question": "what location are the clemson teams?",
         "question_pl": "W jakiej lokalizacji znajdują się drużyny Clemson?",
         "query": "SELECT t1.location FROM university AS t1 JOIN basketball_match AS t2 ON t1.school_id  =  t2.school_id WHERE team_name  =  'Clemson'",
         "query_pl": "SELECT t1.location FROM university AS t1 JOIN basketball_match AS t2 ON t1.school_id  =  t2.school_id WHERE team_name  =  \"Clemson\""
-    },
-    {
-        "db_id": "election",
-        "question": "Which committees have delegates from the democratic party?",
-        "question_pl": "Które komitety mają delegatów z partii demokratycznej?",
-        "query": "SELECT T1.Committee FROM election AS T1 JOIN party AS T2 ON T1.Party  =  T2.Party_ID WHERE T2.Party  =  \"Democratic\"",
-        "query_pl": "SELECT T1.Committee FROM election AS T1 JOIN party AS T2 ON T1.Party  =  T2.Party_ID WHERE T2.Party  =  \"Demokratyczny\""
     },
     {
         "db_id": "loan_1",
@@ -6060,20 +5605,6 @@
         "question_pl": "Ile krajów bierze udział?",
         "query": "SELECT count(distinct country) from match_season",
         "query_pl": "SELECT count(distinct country) from match_season"
-    },
-    {
-        "db_id": "insurance_policies",
-        "question": "Which kind of policy type was chosen by the most customers?",
-        "question_pl": "Który rodzaj polisy został wybrany przez największą liczbę klientów?",
-        "query": "SELECT Policy_Type_Code FROM Customer_Policies GROUP BY Policy_Type_Code ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT Policy_Type_Code FROM Customer_Policies GROUP BY Policy_Type_Code ORDER BY count(*) DESC LIMIT 1"
-    },
-    {
-        "db_id": "voter_2",
-        "question": "Which major has the most students?",
-        "question_pl": "Który kierunek ma najwięcej studentów?",
-        "query": "SELECT Major FROM STUDENT GROUP BY major ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT Major FROM STUDENT GROUP BY major ORDER BY count(*) DESC LIMIT 1"
     },
     {
         "db_id": "cre_Docs_and_Epenses",
@@ -6165,20 +5696,6 @@
         "question_pl": "Ile jest kierunków studiów na kierunku informatyka?",
         "query": "SELECT COUNT(*) FROM Courses AS T1 JOIN Subjects AS T2 ON T1.subject_id  =  T2.subject_id WHERE T2.subject_name = \"Computer Science\"",
         "query_pl": "SELECT COUNT(*) FROM Courses AS T1 JOIN Subjects AS T2 ON T1.subject_id  =  T2.subject_id WHERE T2.subject_name = \"Informatyka\""
-    },
-    {
-        "db_id": "store_product",
-        "question": "Which district has the largest population?",
-        "question_pl": "Która dzielnica ma największą populację?",
-        "query": "SELECT district_name FROM district ORDER BY city_population DESC LIMIT 1",
-        "query_pl": "SELECT district_name FROM district ORDER BY city_population DESC LIMIT 1"
-    },
-    {
-        "db_id": "music_1",
-        "question": "what are the shortest duration and lowest rating of songs grouped by genre and ordered by genre?",
-        "question_pl": "Jaki jest najkrótszy czas trwania i najniższa ocena utworów pogrupowanych według gatunku i uporządkowanych według gatunku?",
-        "query": "SELECT min(T1.duration) ,  min(T2.rating) ,  T2.genre_is FROM files AS T1 JOIN song AS T2 ON T1.f_id  =  T2.f_id GROUP BY T2.genre_is ORDER BY T2.genre_is",
-        "query_pl": "SELECT min(T1.duration) ,  min(T2.rating) ,  T2.genre_is FROM files AS T1 JOIN song AS T2 ON T1.f_id  =  T2.f_id GROUP BY T2.genre_is ORDER BY T2.genre_is"
     },
     {
         "db_id": "architecture",
@@ -6524,20 +6041,6 @@
         "query_pl": "SELECT count(*) FROM course"
     },
     {
-        "db_id": "sakila_1",
-        "question": "How many stores are there?",
-        "question_pl": "Ile jest sklepów?",
-        "query": "SELECT count(distinct store_id) FROM inventory ",
-        "query_pl": "SELECT count(distinct store_id) FROM inventory "
-    },
-    {
-        "db_id": "body_builder",
-        "question": "What are the birth places that are shared by at least two people?",
-        "question_pl": "Które miejsca urodzenia są wspólne dla co najmniej dwóch osób?",
-        "query": "SELECT Birth_Place FROM people GROUP BY Birth_Place HAVING COUNT(*)  >=  2",
-        "query_pl": "SELECT Birth_Place FROM people GROUP BY Birth_Place HAVING COUNT(*)  >=  2"
-    },
-    {
         "db_id": "wine_1",
         "question": "Hi, could you find the appellations that produce wines after the year of 2008 but not in Central Coast area.",
         "question_pl": "Cześć, czy możesz znaleźć apelacje, które produkują wina po roku 2008, ale nie w regionie Central Coast.",
@@ -6564,13 +6067,6 @@
         "question_pl": "Do ilu uczelni zapisuje się więcej niż 18000 osób?",
         "query": "SELECT count(*) FROM College WHERE enr  >  18000",
         "query_pl": "SELECT count(*) FROM College WHERE enr  >  18000"
-    },
-    {
-        "db_id": "department_management",
-        "question": "Which department has more than 1 head at a time? List the ID, Name  and the number of heads.",
-        "question_pl": "Który dział ma więcej niż 1 kierownika jednocześnie? Wymień identyfikator, nazwę i liczbę kierowników.",
-        "query": "SELECT T1.department_id ,  T1.name ,  count(*) FROM management AS T2 JOIN department AS T1 ON T1.department_id  =  T2.department_id GROUP BY T1.department_id HAVING count(*)  >  1",
-        "query_pl": "SELECT T1.department_id ,  T1.name ,  count(*) FROM management AS T2 JOIN department AS T1 ON T1.department_id  =  T2.department_id GROUP BY T1.department_id HAVING count(*)  >  1"
     },
     {
         "db_id": "e_learning",
@@ -6601,25 +6097,11 @@
         "query_pl": "SELECT count(*) from apartments"
     },
     {
-        "db_id": "customer_complaints",
-        "question": "How many customers are there?",
-        "question_pl": "Ilu masz klientów?",
-        "query": "SELECT COUNT(*) FROM Customers",
-        "query_pl": "SELECT COUNT(*) FROM Customers"
-    },
-    {
         "db_id": "voter_2",
         "question": "how many females have president votes?",
         "question_pl": "Ile kobiet ma głosy prezydenckie?",
         "query": "SELECT count(*) FROM STUDENT AS T1 JOIN VOTING_RECORD AS T2 ON T1.StuID  =  T2.President_VOTE WHERE T1.sex  =  \"F\"",
         "query_pl": "SELECT count(*) FROM STUDENT AS T1 JOIN VOTING_RECORD AS T2 ON T1.StuID  =  T2.President_VOTE WHERE T1.sex  =  \"F\""
-    },
-    {
-        "db_id": "department_management",
-        "question": "In which year were most departments established?",
-        "question_pl": "W którym roku utworzono większość działów?",
-        "query": "SELECT creation FROM department GROUP BY creation ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT creation FROM department GROUP BY creation ORDER BY count(*) DESC LIMIT 1"
     },
     {
         "db_id": "sports_competition",
@@ -6727,25 +6209,11 @@
         "query_pl": "SELECT dorm_name FROM dorm WHERE dormid NOT IN (SELECT dormid FROM has_amenity)"
     },
     {
-        "db_id": "e_learning",
-        "question": "What is the name of the course that has the most student enrollment?",
-        "question_pl": "Jak nazywa się kurs, na który zapisało się najwięcej studentów?",
-        "query": "SELECT T1.course_name FROM Courses AS T1 JOIN Student_Course_Enrolment AS T2 ON T1.course_id = T2.course_id GROUP BY T1.course_name ORDER BY COUNT(*) DESC LIMIT 1",
-        "query_pl": "SELECT T1.course_name FROM Courses AS T1 JOIN Student_Course_Enrolment AS T2 ON T1.course_id = T2.course_id GROUP BY T1.course_name ORDER BY COUNT(*) DESC LIMIT 1"
-    },
-    {
         "db_id": "soccer_1",
         "question": "Hello!  Can you tell me how many left footed players there are?",
         "question_pl": "Witaj!  Czy możesz mi powiedzieć, ilu jest lewonożnych graczy?",
         "query": "SELECT COUNT(*) FROM Player_Attributes WHERE preferred_foot  =  \"left\"",
         "query_pl": "SELECT COUNT(*) FROM Player_Attributes WHERE preferred_foot  =  \"lewy\""
-    },
-    {
-        "db_id": "county_public_safety",
-        "question": "Show the name of cities in the county that has the largest number of police officers.",
-        "question_pl": "Wskaż nazwy miast w hrabstwie, które mają największą liczbę funkcjonariuszy policji.",
-        "query": "SELECT name FROM city WHERE county_ID = (SELECT county_ID FROM county_public_safety ORDER BY Police_officers DESC LIMIT 1)",
-        "query_pl": "SELECT name FROM city WHERE county_ID = (SELECT county_ID FROM county_public_safety ORDER BY Police_officers DESC LIMIT 1)"
     },
     {
         "db_id": "flight_4",
@@ -6909,13 +6377,6 @@
         "query_pl": "SELECT T2.dept_store_id FROM departments AS T1 JOIN department_stores AS T2 ON T1.dept_store_id  =  T2.dept_store_id WHERE T1.department_name  =  \"marketing\" INTERSECT SELECT T2.dept_store_id FROM departments AS T1 JOIN department_stores AS T2 ON T1.dept_store_id  =  T2.dept_store_id WHERE T1.department_name  =  \"zarządzający\""
     },
     {
-        "db_id": "movie_1",
-        "question": "How many reviewers are there?",
-        "question_pl": "Ilu jest recenzentów?",
-        "query": "SELECT count(DISTINCT RID) FROM Rating",
-        "query_pl": "SELECT count(DISTINCT RID) FROM Rating"
-    },
-    {
         "db_id": "department_store",
         "question": "what is the name of the most expensive hardware product? ",
         "question_pl": "Jak nazywa się najdroższy produkt sprzętowy?",
@@ -7035,13 +6496,6 @@
         "query_pl": "SELECT transaction_type_code from transactions where investor_id = 18"
     },
     {
-        "db_id": "network_2",
-        "question": "Who is the youngest male?",
-        "question_pl": "Kto jest najmłodszym mężczyzną?",
-        "query": "SELECT name FROM Person WHERE gender  =  'male' AND age  =  (SELECT min(age) FROM person WHERE gender  =  'male' )",
-        "query_pl": "SELECT name FROM Person WHERE gender  =  \"mężczyzna\" AND age  =  (SELECT min(age) FROM person WHERE gender  =  \"mężczyzna\" )"
-    },
-    {
         "db_id": "train_station",
         "question": "what is the Number_of_Platforms does Main_Services South Western Main Line West of England Main Line have?",
         "question_pl": "Jaka jest Number_of_Platforms, którą posiada Main_Services South Western Main Line West of England Main Line?",
@@ -7140,13 +6594,6 @@
         "query_pl": "SELECT Team FROM institution WHERE Institution  =  \"Uniwersytet Ave Maria\""
     },
     {
-        "db_id": "customers_and_addresses",
-        "question": "Find the state and country of all cities with post code starting with 4.",
-        "question_pl": "Znajdź stan i kraj wszystkich miast z kodem pocztowym zaczynającym się od 4.",
-        "query": "SELECT state_province_county ,  country FROM addresses WHERE zip_postcode LIKE \"4%\"",
-        "query_pl": "SELECT state_province_county ,  country FROM addresses WHERE zip_postcode LIKE \"4%\""
-    },
-    {
         "db_id": "college_1",
         "question": "Hi - Can you tell me which department has the most students?",
         "question_pl": "Cześć - Czy możesz mi powiedzieć, który wydział ma najwięcej studentów?",
@@ -7203,13 +6650,6 @@
         "query_pl": "SELECT name FROM PersonFriend GROUP BY name HAVING count(*)  =  1"
     },
     {
-        "db_id": "department_store",
-        "question": "How many department stores does the store chain South have?",
-        "question_pl": "Ile domów towarowych posiada sieć sklepów South?",
-        "query": "SELECT count(*) FROM department_stores AS T1 JOIN department_store_chain AS T2 ON T1.dept_store_chain_id  =  T2.dept_store_chain_id WHERE T2.dept_store_chain_name  =  \"South\"",
-        "query_pl": "SELECT count(*) FROM department_stores AS T1 JOIN department_store_chain AS T2 ON T1.dept_store_chain_id  =  T2.dept_store_chain_id WHERE T2.dept_store_chain_name  =  \"Południe\""
-    },
-    {
         "db_id": "sports_competition",
         "question": "What is the name of the country that participated in the greatest number of tournaments?",
         "question_pl": "Jak nazywa się kraj, który brał udział w największej liczbie turniejów?",
@@ -7222,13 +6662,6 @@
         "question_pl": "Pokaż mi wszystkie informacje o każdym apartamencie",
         "query": "select * from apartments",
         "query_pl": "select * from apartments"
-    },
-    {
-        "db_id": "tracking_software_problems",
-        "question": "Find the first and last name of the staff members who reported problems from the product \"rem\" but not \"aut\"?",
-        "question_pl": "Znajdź imię i nazwisko pracownika, który zgłosił problemy z produktem \"rem\", ale nie \"aut\"?",
-        "query": "SELECT T3.staff_first_name ,  T3.staff_last_name FROM problems AS T1 JOIN product AS T2 JOIN staff AS T3 ON T1.product_id = T2.product_id AND T1.reported_by_staff_id = T3.staff_id WHERE T2.product_name = \"rem\" EXCEPT SELECT T3.staff_first_name ,  T3.staff_last_name FROM problems AS T1 JOIN product AS T2 JOIN staff AS T3 ON T1.product_id = T2.product_id AND T1.reported_by_staff_id = T3.staff_id WHERE T2.product_name = \"aut\"",
-        "query_pl": "SELECT T3.staff_first_name ,  T3.staff_last_name FROM problems AS T1 JOIN product AS T2 JOIN staff AS T3 ON T1.product_id = T2.product_id AND T1.reported_by_staff_id = T3.staff_id WHERE T2.product_name = \"rem\" EXCEPT SELECT T3.staff_first_name ,  T3.staff_last_name FROM problems AS T1 JOIN product AS T2 JOIN staff AS T3 ON T1.product_id = T2.product_id AND T1.reported_by_staff_id = T3.staff_id WHERE T2.product_name = \"aut\""
     },
     {
         "db_id": "school_finance",
@@ -7420,20 +6853,6 @@
         "query_pl": "select name from technician"
     },
     {
-        "db_id": "soccer_1",
-        "question": "List all player names who have an overall rating higher than the average.",
-        "question_pl": "Wymień wszystkich graczy, których ogólna ocena jest wyższa niż średnia.",
-        "query": "SELECT DISTINCT T1.player_name FROM Player AS T1 JOIN Player_Attributes AS T2 ON T1.player_api_id = T2.player_api_id WHERE T2.overall_rating  >  ( SELECT avg(overall_rating) FROM Player_Attributes )",
-        "query_pl": "SELECT DISTINCT T1.player_name FROM Player AS T1 JOIN Player_Attributes AS T2 ON T1.player_api_id = T2.player_api_id WHERE T2.overall_rating  >  ( SELECT avg(overall_rating) FROM Player_Attributes )"
-    },
-    {
-        "db_id": "cre_Doc_Tracking_DB",
-        "question": "Show the names of employees with role name Editor.",
-        "question_pl": "Pokaż nazwiska pracowników z nazwą roli Edytor.",
-        "query": "SELECT T1.employee_name FROM Employees AS T1 JOIN ROLES AS T2 ON T1.role_code  =  T2.role_code WHERE T2.role_name  =  \"Editor\"",
-        "query_pl": "SELECT T1.employee_name FROM Employees AS T1 JOIN ROLES AS T2 ON T1.role_code  =  T2.role_code WHERE T2.role_name  =  \"Edytor\""
-    },
-    {
         "db_id": "activity_1",
         "question": "Find the first names of the faculty members who participate in Caonoeing and Kayaking.",
         "question_pl": "Znajdź imiona członków wydziału, którzy uczestniczą w kajakarstwie i kajakarstwie.",
@@ -7546,13 +6965,6 @@
         "query_pl": "SELECT T1.title  FROM film AS T1 JOIN inventory AS T2 ON T1.film_id  =  T2.film_id JOIN rental AS T3 ON T2.inventory_id  =  T3.inventory_id GROUP BY T2.inventory_id"
     },
     {
-        "db_id": "company_office",
-        "question": "Show the names of the buildings that have more than one company offices.",
-        "question_pl": "Pokaż nazwy budynków, w których znajduje się więcej niż jedno biuro firmy.",
-        "query": "SELECT T2.name FROM Office_locations AS T1 JOIN buildings AS T2 ON T1.building_id  =  T2.id JOIN Companies AS T3 ON T1.company_id  =  T3.id GROUP BY T1.building_id HAVING COUNT(*)  >  1",
-        "query_pl": "SELECT T2.name FROM Office_locations AS T1 JOIN buildings AS T2 ON T1.building_id  =  T2.id JOIN Companies AS T3 ON T1.company_id  =  T3.id GROUP BY T1.building_id HAVING COUNT(*)  >  1"
-    },
-    {
         "db_id": "customers_and_products_contacts",
         "question": "Hello! Can you please provide me with a list of all of customer IDs in the Customer Address History table?",
         "question_pl": "Witaj! Czy możesz podać mi listę wszystkich identyfikatorów klientów w tabeli Historia adresów klientów?",
@@ -7623,13 +7035,6 @@
         "query_pl": "SELECT avg(price_in_euros) ,  min(price_in_euros) FROM catalog_contents"
     },
     {
-        "db_id": "county_public_safety",
-        "question": "How many counties are there?",
-        "question_pl": "Ile jest okręgów?",
-        "query": "SELECT count(*) FROM county_public_safety",
-        "query_pl": "SELECT count(*) FROM county_public_safety"
-    },
-    {
         "db_id": "sakila_1",
         "question": "What is the name of the city with the most addresses?",
         "question_pl": "Jak nazywa się miasto z największą liczbą adresów?",
@@ -7658,13 +7063,6 @@
         "query_pl": "SELECT avg(T1.salary) FROM salary AS T1 JOIN team AS T2 ON T1.team_id  =  T2.team_id_br WHERE T2.name  = \"Czerwone pończochy Boston\""
     },
     {
-        "db_id": "department_store",
-        "question": "What are the highest and lowest prices of products, grouped by and alphabetically ordered by product type?",
-        "question_pl": "Jakie są najwyższe i najniższe ceny produktów, pogrupowane i uporządkowane alfabetycznie według typu produktu?",
-        "query": "SELECT max(product_price) ,  min(product_price) FROM products GROUP BY product_type_code ORDER BY product_type_code",
-        "query_pl": "SELECT max(product_price) ,  min(product_price) FROM products GROUP BY product_type_code ORDER BY product_type_code"
-    },
-    {
         "db_id": "twitter_1",
         "question": "show me the name of the users.",
         "question_pl": "pokaż mi nazwy użytkowników.",
@@ -7691,13 +7089,6 @@
         "question_pl": "Czy możesz pokazać mi numery telefonów wszystkich klientów?",
         "query": "SELECT customer_phone FROM customers ",
         "query_pl": "SELECT customer_phone FROM customers "
-    },
-    {
-        "db_id": "ship_mission",
-        "question": "How many ships are there?",
-        "question_pl": "Ile jest statków?",
-        "query": "SELECT count(*) FROM ship ",
-        "query_pl": "SELECT count(*) FROM ship "
     },
     {
         "db_id": "school_player",
@@ -7735,13 +7126,6 @@
         "query_pl": "SELECT t2.customer_details FROM policies AS t1 JOIN customers AS t2 ON t1.customer_id  =  t2.customer_id GROUP BY t2.customer_details ORDER BY count(*) DESC LIMIT 1"
     },
     {
-        "db_id": "device",
-        "question": "List the software platform shared by the greatest number of devices.",
-        "question_pl": "Wymień platformę oprogramowania współdzieloną przez największą liczbę urządzeń.",
-        "query": "SELECT Software_Platform FROM device GROUP BY Software_Platform ORDER BY COUNT(*) DESC LIMIT 1",
-        "query_pl": "SELECT Software_Platform FROM device GROUP BY Software_Platform ORDER BY COUNT(*) DESC LIMIT 1"
-    },
-    {
         "db_id": "wine_1",
         "question": "what is the average price of wine not produced in Sanoma county ",
         "question_pl": "Jaka jest średnia cena wina nieprodukowanego w hrabstwie Sanoma?",
@@ -7761,13 +7145,6 @@
         "question_pl": "Które utwory są w formacie mp3?",
         "query": "SELECT T2.song_name FROM files AS T1 JOIN song AS T2 ON T1.f_id  =  T2.f_id WHERE T1.formats  =  \"mp3\"",
         "query_pl": "SELECT T2.song_name FROM files AS T1 JOIN song AS T2 ON T1.f_id  =  T2.f_id WHERE T1.formats  =  \"mp3\""
-    },
-    {
-        "db_id": "activity_1",
-        "question": "Show the names of all the activities Mark Giuliano participates in.",
-        "question_pl": "Pokaż nazwy wszystkich aktywności, w których uczestniczy Mark Giuliano.",
-        "query": "SELECT T3.activity_name FROM Faculty AS T1 JOIN Faculty_participates_in AS T2 ON T1.facID  =  T2.facID JOIN Activity AS T3 ON T3.actid  =  T2.actid WHERE T1.fname  =  \"Mark\" AND T1.lname  =  \"Giuliano\"",
-        "query_pl": "SELECT T3.activity_name FROM Faculty AS T1 JOIN Faculty_participates_in AS T2 ON T1.facID  =  T2.facID JOIN Activity AS T3 ON T3.actid  =  T2.actid WHERE T1.fname  =  \"Mark\" AND T1.lname  =  \"Giuliano\""
     },
     {
         "db_id": "debate",
@@ -7831,13 +7208,6 @@
         "question_pl": "Ile formatów plików jest obsługiwanych?",
         "query": "SELECT count (distinct formats) FROM files ",
         "query_pl": "SELECT count (distinct formats) FROM files "
-    },
-    {
-        "db_id": "customers_and_addresses",
-        "question": "List the countries having more than 4 addresses listed.",
-        "question_pl": "Wymień kraje posiadające więcej niż 4 adresy na liście.",
-        "query": "SELECT country FROM addresses GROUP BY country HAVING count(address_id) > 4",
-        "query_pl": "SELECT country FROM addresses GROUP BY country HAVING count(address_id) > 4"
     },
     {
         "db_id": "soccer_2",
@@ -7908,13 +7278,6 @@
         "question_pl": "Cześć, jaka jest minimalna pensja prezesa?",
         "query": "select min_salary from jobs where JOB_TITLE = 'president'",
         "query_pl": "select min_salary from jobs where JOB_TITLE = \"prezes\""
-    },
-    {
-        "db_id": "pilot_record",
-        "question": "show the pilot positions that have both pilots joining after year 2005 and pilots joining before 2000.",
-        "question_pl": "pokaż stanowiska pilotów, do których dołączyli zarówno piloci po roku 2005, jak i piloci, którzy dołączyli przed rokiem 2000.",
-        "query": "SELECT POSITION FROM pilot WHERE Join_Year <  2000 INTERSECT SELECT POSITION FROM pilot WHERE Join_Year >  2005",
-        "query_pl": "SELECT POSITION FROM pilot WHERE Join_Year <  2000 INTERSECT SELECT POSITION FROM pilot WHERE Join_Year >  2005"
     },
     {
         "db_id": "mountain_photos",
@@ -8106,25 +7469,11 @@
         "query_pl": "SELECT T1.Name FROM Tourist_Attractions AS T1 JOIN VISITS AS T2 ON T1.Tourist_Attraction_ID  =  T2.Tourist_Attraction_ID GROUP BY T2.Tourist_Attraction_ID HAVING count(*)  =  1"
     },
     {
-        "db_id": "small_bank_1",
-        "question": "Find the name of account that has the lowest total checking and saving balance.",
-        "question_pl": "Znajdź nazwę konta, którego łączne saldo na rachunkach bieżących i oszczędnościowych jest najniższe.",
-        "query": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T2.balance + T3.balance LIMIT 1",
-        "query_pl": "SELECT T1.name FROM accounts AS T1 JOIN checking AS T2 ON T1.custid  =  T2.custid JOIN savings AS T3 ON T1.custid  =  T3.custid ORDER BY T2.balance + T3.balance LIMIT 1"
-    },
-    {
         "db_id": "products_gen_characteristics",
         "question": "Can you please list all the characteristics of the product named sesame?",
         "question_pl": "Czy możesz wymienić wszystkie cechy produktu o nazwie sezam?",
         "query": "SELECT t3.characteristic_name FROM products AS t1 JOIN product_characteristics AS t2 ON t1.product_id  =  t2.product_id JOIN CHARACTERISTICS AS t3 ON t2.characteristic_id  =  t3.characteristic_id WHERE t1.product_name  =  \"sesame\" ",
         "query_pl": "SELECT t3.characteristic_name FROM products AS t1 JOIN product_characteristics AS t2 ON t1.product_id  =  t2.product_id JOIN CHARACTERISTICS AS t3 ON t2.characteristic_id  =  t3.characteristic_id WHERE t1.product_name  =  \"sezam\" "
-    },
-    {
-        "db_id": "soccer_1",
-        "question": "Who are the top 3 players in terms of overall rating?",
-        "question_pl": "Kim są trzej najlepsi gracze pod względem ogólnej oceny?",
-        "query": "SELECT DISTINCT T1.player_name FROM Player AS T1 JOIN Player_Attributes AS T2 ON T1.player_api_id  =  T2.player_api_id ORDER BY overall_rating DESC LIMIT 3",
-        "query_pl": "SELECT DISTINCT T1.player_name FROM Player AS T1 JOIN Player_Attributes AS T2 ON T1.player_api_id  =  T2.player_api_id ORDER BY overall_rating DESC LIMIT 3"
     },
     {
         "db_id": "cre_Theme_park",
@@ -8230,13 +7579,6 @@
         "question_pl": "Możesz mi pokazać listę pseudonimów?",
         "query": "SELECT nickname FROM Staff",
         "query_pl": "SELECT nickname FROM Staff"
-    },
-    {
-        "db_id": "inn_1",
-        "question": "Find the names of all modern rooms with a base price below $160 and two beds.",
-        "question_pl": "Znajdź nazwy wszystkich nowoczesnych pokoi z ceną podstawową poniżej 160 USD i dwoma łóżkami.",
-        "query": "SELECT roomName FROM Rooms WHERE basePrice  <  160 AND beds =  2 AND decor  =  'modern';",
-        "query_pl": "SELECT roomName FROM Rooms WHERE basePrice  <  160 AND beds =  2 AND decor  =  \"nowoczesny\";"
     },
     {
         "db_id": "manufactory_1",
@@ -8386,25 +7728,11 @@
         "query_pl": "SELECT T1.Name FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID WHERE T2.Country != \"Chiny\""
     },
     {
-        "db_id": "gas_company",
-        "question": "find the rank, company names, market values of the companies in the banking industry order by their sales and profits in billion.",
-        "question_pl": "Znajdź rangę, nazwy firm, wartości rynkowe firm z branży bankowej uporządkowane według ich sprzedaży i zysków w miliardach.",
-        "query": "SELECT rank ,  company ,  market_value FROM company WHERE main_industry  =  'Banking' ORDER BY sales_billion ,  profits_billion",
-        "query_pl": "SELECT rank ,  company ,  market_value FROM company WHERE main_industry  =  \"Bankowość\" ORDER BY sales_billion ,  profits_billion"
-    },
-    {
         "db_id": "tracking_software_problems",
         "question": "Can you show me the total number of problem logs?",
         "question_pl": "Czy możesz mi pokazać całkowitą liczbę dzienników problemów?",
         "query": "SELECT COUNT(*) FROM problem_log ",
         "query_pl": "SELECT COUNT(*) FROM problem_log "
-    },
-    {
-        "db_id": "college_2",
-        "question": "Find the title of course that is provided by Statistics but not Psychology departments.",
-        "question_pl": "Znajdź tytuł kursu prowadzonego przez wydziały statystyki, ale nie psychologii.",
-        "query": "SELECT title FROM course WHERE dept_name  =  'Statistics' EXCEPT SELECT title FROM course WHERE dept_name  =  'Psychology'",
-        "query_pl": "SELECT title FROM course WHERE dept_name  =  \"Statystyki\" EXCEPT SELECT title FROM course WHERE dept_name  =  \"Psychologia\""
     },
     {
         "db_id": "riding_club",
@@ -8547,13 +7875,6 @@
         "query_pl": "SELECT Category FROM music_festival"
     },
     {
-        "db_id": "gymnast",
-        "question": "Show the ages of gymnasts in descending order of total points.",
-        "question_pl": "Pokaż wiek gimnastyczek w porządku malejącym według łącznej liczby punktów.",
-        "query": "SELECT T2.Age FROM gymnast AS T1 JOIN people AS T2 ON T1.Gymnast_ID  =  T2.People_ID ORDER BY T1.Total_Points DESC",
-        "query_pl": "SELECT T2.Age FROM gymnast AS T1 JOIN people AS T2 ON T1.Gymnast_ID  =  T2.People_ID ORDER BY T1.Total_Points DESC"
-    },
-    {
         "db_id": "tracking_orders",
         "question": "how many customers are presented on the table",
         "question_pl": "ilu klientów jest prezentowanych w tabeli",
@@ -8580,13 +7901,6 @@
         "question_pl": "Który stan ma najwięcej pracowników?",
         "query": "select T1.state_province_county from Addresses as T1 join Employees as T2 on T1.address_id = T2.employee_address_id group by T1.state_province_county order by count(*) desc limit 1",
         "query_pl": "select T1.state_province_county from Addresses as T1 join Employees as T2 on T1.address_id = T2.employee_address_id group by T1.state_province_county order by count(*) desc limit 1"
-    },
-    {
-        "db_id": "ship_1",
-        "question": "How many ships are there?",
-        "question_pl": "Ile jest statków?",
-        "query": "SELECT count(*) FROM ship",
-        "query_pl": "SELECT count(*) FROM ship"
     },
     {
         "db_id": "college_1",
@@ -8820,13 +8134,6 @@
         "query_pl": "SELECT T1.Customer_Event_ID FROM Customer_Events AS T1 JOIN Customer_Event_Notes AS T2 ON T1.Customer_Event_ID  =  T2.Customer_Event_ID GROUP BY T1.customer_event_id HAVING count(*) = 1"
     },
     {
-        "db_id": "small_bank_1",
-        "question": "how many accounts have a savings balance above the average savings balance?",
-        "question_pl": "Ile kont ma saldo oszczędności powyżej średniego salda oszczędności?",
-        "query": "SELECT count(*) FROM savings WHERE balance  >  (SELECT avg(balance) FROM savings)",
-        "query_pl": "SELECT count(*) FROM savings WHERE balance  >  (SELECT avg(balance) FROM savings)"
-    },
-    {
         "db_id": "tracking_share_transactions",
         "question": "hi! How many transactions have greater than 10 share count?",
         "question_pl": "Cześć! Ile transakcji ma liczbę akcji większą niż 10?",
@@ -8839,13 +8146,6 @@
         "question_pl": "Ile zamówień ma klient z największą liczbą zamówień?",
         "query": "SELECT count(*) FROM Orders AS T1 JOIN Customers AS T2 ON T1.customer_id  =  T2.customer_id GROUP BY T1.customer_id ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT count(*) FROM Orders AS T1 JOIN Customers AS T2 ON T1.customer_id  =  T2.customer_id GROUP BY T1.customer_id ORDER BY count(*) DESC LIMIT 1"
-    },
-    {
-        "db_id": "music_1",
-        "question": "What are the maximum duration and resolution of songs grouped and ordered by languages?",
-        "question_pl": "Jaki jest maksymalny czas trwania i rozdzielczość utworów pogrupowanych i uporządkowanych według języków?",
-        "query": "SELECT max(T1.duration) ,  max(T2.resolution) ,  T2.languages FROM files AS T1 JOIN song AS T2 ON T1.f_id  =  T2.f_id GROUP BY T2.languages ORDER BY T2.languages",
-        "query_pl": "SELECT max(T1.duration) ,  max(T2.resolution) ,  T2.languages FROM files AS T1 JOIN song AS T2 ON T1.f_id  =  T2.f_id GROUP BY T2.languages ORDER BY T2.languages"
     },
     {
         "db_id": "entrepreneur",
@@ -9030,13 +8330,6 @@
         "query_pl": "SELECT T1.id  FROM browser AS T1 JOIN accelerator_compatible_browser AS T2 ON T1.id = T2.browser_id GROUP BY T1.id ORDER BY count(*) DESC LIMIT 1"
     },
     {
-        "db_id": "hr_1",
-        "question": "What are the first and last name for those employees who works either in department  70 or 90?",
-        "question_pl": "Jakie są imiona i nazwiska pracowników, którzy pracują w dziale 70 lub 90?",
-        "query": "SELECT first_name ,  last_name FROM employees WHERE department_id  =  70 OR department_id  =  90",
-        "query_pl": "SELECT first_name ,  last_name FROM employees WHERE department_id  =  70 OR department_id  =  90"
-    },
-    {
         "db_id": "city_record",
         "question": "Find the cities which were once a host city after 2009?",
         "question_pl": "Znajdź miasta, które były gospodarzami po 2009 roku?",
@@ -9091,13 +8384,6 @@
         "question_pl": "Jacy są pracownicy, których imię nie zawiera litery M?",
         "query": "SELECT first_name FROM employees WHERE first_name NOT LIKE '%M%'",
         "query_pl": "SELECT first_name FROM employees WHERE first_name NOT LIKE \"%M%\""
-    },
-    {
-        "db_id": "tracking_share_transactions",
-        "question": "What are the lot details of lots associated with transactions whose share count is bigger than 100 and whose type code is \"PUR\"?",
-        "question_pl": "Jakie są szczegóły lotów powiązanych z transakcjami, których liczba akcji jest większa niż 100 i których kod typu to \"PUR\"?",
-        "query": "SELECT T1.lot_details FROM LOTS AS T1 JOIN TRANSACTIONS_LOTS AS T2 ON  T1.lot_id  =  T2.transaction_id JOIN TRANSACTIONS AS T3 ON T2.transaction_id  =  T3.transaction_id WHERE T3.share_count  >  100 AND T3.transaction_type_code  =  \"PUR\"",
-        "query_pl": "SELECT T1.lot_details FROM LOTS AS T1 JOIN TRANSACTIONS_LOTS AS T2 ON  T1.lot_id  =  T2.transaction_id JOIN TRANSACTIONS AS T3 ON T2.transaction_id  =  T3.transaction_id WHERE T3.share_count  >  100 AND T3.transaction_type_code  =  \"PUR\""
     },
     {
         "db_id": "tracking_grants_for_research",
@@ -9224,13 +8510,6 @@
         "question_pl": "Jakimi statkami steruje kapitan ze stopniem midszypmana?",
         "query": "SELECT t1.name FROM ship AS t1 JOIN captain AS t2 ON t1.ship_id  =  t2.ship_id WHERE t2.rank  =  'Midshipman'",
         "query_pl": "SELECT t1.name FROM ship AS t1 JOIN captain AS t2 ON t1.ship_id  =  t2.ship_id WHERE t2.rank  =  \"Midshipman\""
-    },
-    {
-        "db_id": "gas_company",
-        "question": "find the location and Representative name of the gas stations owned by the companies with top 3 Asset amounts.",
-        "question_pl": "znajdź lokalizację i reprezentatywną nazwę stacji benzynowych należących do firm z 3 najwyższymi kwotami aktywów.",
-        "query": "SELECT T3.location ,  T3.Representative_Name FROM station_company AS T1 JOIN company AS T2 ON T1.company_id  =  T2.company_id JOIN gas_station AS T3 ON T1.station_id  =  T3.station_id ORDER BY T2.Assets_billion DESC LIMIT 3",
-        "query_pl": "SELECT T3.location ,  T3.Representative_Name FROM station_company AS T1 JOIN company AS T2 ON T1.company_id  =  T2.company_id JOIN gas_station AS T3 ON T1.station_id  =  T3.station_id ORDER BY T2.Assets_billion DESC LIMIT 3"
     },
     {
         "db_id": "assets_maintenance",
@@ -9485,13 +8764,6 @@
         "query_pl": "SELECT Country FROM manager WHERE Age  >  50 INTERSECT SELECT Country FROM manager WHERE Age  <  46"
     },
     {
-        "db_id": "csu_1",
-        "question": "Find the campus fee of \"San Jose State University\" in year 2000.",
-        "question_pl": "Znajdź opłatę kampusową \"San Jose State University\" w 2000 roku.",
-        "query": "SELECT t1.campusfee FROM csu_fees AS t1 JOIN campuses AS t2 ON t1.campus  =  t2.id WHERE t2.campus  =  \"San Jose State University\" AND t1.year = 2000",
-        "query_pl": "SELECT t1.campusfee FROM csu_fees AS t1 JOIN campuses AS t2 ON t1.campus  =  t2.id WHERE t2.campus  =  \"Uniwersytet Stanowy San Jose\" AND t1.year = 2000"
-    },
-    {
         "db_id": "allergy_1",
         "question": "Which allergy has the most number of students affected?",
         "question_pl": "Która alergia dotyczy największej liczby uczniów?",
@@ -9576,13 +8848,6 @@
         "query_pl": "SELECT min(T2.HS) FROM tryout AS T1 JOIN player AS T2 ON T1.pID  =  T2.pID and T1.pPos = \"bramkarz\" GROUP BY T1.pPos"
     },
     {
-        "db_id": "customers_and_addresses",
-        "question": "how many customers are there?",
-        "question_pl": "Ilu masz klientów?",
-        "query": "SELECT count(*) FROM customers",
-        "query_pl": "SELECT count(*) FROM customers"
-    },
-    {
         "db_id": "college_1",
         "question": "What is the school code for the accounting department?",
         "question_pl": "Jaki jest kod szkoły dla działu księgowości?",
@@ -9595,13 +8860,6 @@
         "question_pl": "Jaki jest początkowy rok najstarszego technika?",
         "query": "SELECT Starting_Year FROM technician ORDER BY Age DESC LIMIT 1",
         "query_pl": "SELECT Starting_Year FROM technician ORDER BY Age DESC LIMIT 1"
-    },
-    {
-        "db_id": "wrestler",
-        "question": "Show the times of elimination by \"Punk\" or \"Orton\".",
-        "question_pl": "Pokaż czasy eliminacji przez \"Punka\" lub \"Ortona\".",
-        "query": "SELECT TIME FROM elimination WHERE Eliminated_By  =  \"Punk\" OR Eliminated_By  =  \"Orton\"",
-        "query_pl": "SELECT TIME FROM elimination WHERE Eliminated_By  =  \"Punk\" OR Eliminated_By  =  \"Orton\""
     },
     {
         "db_id": "e_government",
@@ -9891,25 +9149,11 @@
         "query_pl": "SELECT min(T1.duration) FROM files AS T1 JOIN song AS T2 ON T1.f_id  =  T2.f_id WHERE T1.formats  =  \"mp3\" AND T2.resolution   <  800"
     },
     {
-        "db_id": "chinook_1",
-        "question": "Which artist has the most albums? ",
-        "question_pl": "Który artysta ma najwięcej albumów? ",
-        "query": "SELECT T2.Name FROM ALBUM AS T1 JOIN ARTIST AS T2 ON T1.ArtistId  =  T2.ArtistId GROUP BY T2.Name ORDER BY COUNT(*) DESC LIMIT 1",
-        "query_pl": "SELECT T2.Name FROM ALBUM AS T1 JOIN ARTIST AS T2 ON T1.ArtistId  =  T2.ArtistId GROUP BY T2.Name ORDER BY COUNT(*) DESC LIMIT 1"
-    },
-    {
         "db_id": "activity_1",
         "question": "I want to know the names of advisors available",
         "question_pl": "Chcę poznać nazwiska dostępnych doradców",
         "query": "SELECT fname ,  lname FROM Faculty",
         "query_pl": "SELECT fname ,  lname FROM Faculty"
-    },
-    {
-        "db_id": "inn_1",
-        "question": "How many rooms are there?",
-        "question_pl": "Ile jest pokoi?",
-        "query": "SELECT count(*) FROM Rooms ;",
-        "query_pl": "SELECT count(*) FROM Rooms ;"
     },
     {
         "db_id": "news_report",
@@ -10024,13 +9268,6 @@
         "query_pl": "SELECT T2.contract_start_date FROM Third_Party_Companies AS T1 JOIN Maintenance_Contracts AS T2 ON T1.company_id  =  T2.maintenance_contract_company_id ORDER BY T2.contract_start_date ASC LIMIT 1"
     },
     {
-        "db_id": "assets_maintenance",
-        "question": "Which assets have 2 parts and have less than 2 fault logs? List the asset id and detail.",
-        "question_pl": "Które zasoby mają 2 części i mniej niż 2 dzienniki błędów? Wymień identyfikator zasobu i szczegóły.",
-        "query": "SELECT T1.asset_id ,  T1.asset_details FROM Assets AS T1 JOIN Asset_Parts AS T2 ON T1.asset_id  =  T2.asset_id GROUP BY T1.asset_id HAVING count(*)  =  2 INTERSECT SELECT T1.asset_id ,  T1.asset_details FROM Assets AS T1 JOIN Fault_Log AS T2 ON T1.asset_id  =  T2.asset_id GROUP BY T1.asset_id HAVING count(*)  <  2",
-        "query_pl": "SELECT T1.asset_id ,  T1.asset_details FROM Assets AS T1 JOIN Asset_Parts AS T2 ON T1.asset_id  =  T2.asset_id GROUP BY T1.asset_id HAVING count(*)  =  2 INTERSECT SELECT T1.asset_id ,  T1.asset_details FROM Assets AS T1 JOIN Fault_Log AS T2 ON T1.asset_id  =  T2.asset_id GROUP BY T1.asset_id HAVING count(*)  <  2"
-    },
-    {
         "db_id": "musical",
         "question": "which musical ids showed up at least three times in the actor table?",
         "question_pl": "Które identyfikatory muzyczne pojawiły się co najmniej trzy razy w tabeli aktorów?",
@@ -10073,20 +9310,6 @@
         "query_pl": "SELECT count(*) FROM BOOKINGS"
     },
     {
-        "db_id": "election",
-        "question": "Return all the committees that have delegates from Democratic Party.",
-        "question_pl": "Zwróć wszystkie komitety, które mają delegatów z Partii Demokratycznej.",
-        "query": "SELECT T1.Committee FROM election AS T1 JOIN party AS T2 ON T1.Party  =  T2.Party_ID WHERE T2.Party  =  \"Democratic\"",
-        "query_pl": "SELECT T1.Committee FROM election AS T1 JOIN party AS T2 ON T1.Party  =  T2.Party_ID WHERE T2.Party  =  \"Demokratyczny\""
-    },
-    {
-        "db_id": "perpetrator",
-        "question": "show the date of the tallest perpetrator.",
-        "question_pl": "pokaż datę najwyższego sprawcy.",
-        "query": "SELECT T2.Date FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T1.Height DESC LIMIT 1",
-        "query_pl": "SELECT T2.Date FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID ORDER BY T1.Height DESC LIMIT 1"
-    },
-    {
         "db_id": "shop_membership",
         "question": "Which cities have a branch?",
         "question_pl": "Które miasta mają oddział?",
@@ -10120,13 +9343,6 @@
         "question_pl": "Jak nazywają się członkowie klubu?",
         "query": "SELECT t3.lname FROM club AS t1 JOIN member_of_club AS t2 ON t1.clubid  =  t2.clubid JOIN student AS t3 ON t2.stuid  =  t3.stuid ",
         "query_pl": "SELECT t3.lname FROM club AS t1 JOIN member_of_club AS t2 ON t1.clubid  =  t2.clubid JOIN student AS t3 ON t2.stuid  =  t3.stuid "
-    },
-    {
-        "db_id": "e_learning",
-        "question": "What is the date of enrollment of the course named \"Spanish\"?",
-        "question_pl": "Jaka jest data zapisu na kurs o nazwie \"Hiszpański\"?",
-        "query": "SELECT T2.date_of_enrolment FROM Courses AS T1 JOIN Student_Course_Enrolment AS T2 ON T1.course_id  =  T2.course_id WHERE T1.course_name  =  \"Spanish\"",
-        "query_pl": "SELECT T2.date_of_enrolment FROM Courses AS T1 JOIN Student_Course_Enrolment AS T2 ON T1.course_id  =  T2.course_id WHERE T1.course_name  =  \"Hiszpański\""
     },
     {
         "db_id": "soccer_2",
@@ -10269,13 +9485,6 @@
         "query_pl": "SELECT count(*) from professor"
     },
     {
-        "db_id": "tracking_share_transactions",
-        "question": "what are the details of the lots which are not used in any transactions?",
-        "question_pl": "Jakie są szczegóły partii, które nie są używane w żadnych transakcjach?",
-        "query": "SELECT lot_details FROM Lots EXCEPT SELECT T1.lot_details FROM Lots AS T1 JOIN transactions_lots AS T2 ON T1.lot_id = T2.lot_id",
-        "query_pl": "SELECT lot_details FROM Lots EXCEPT SELECT T1.lot_details FROM Lots AS T1 JOIN transactions_lots AS T2 ON T1.lot_id = T2.lot_id"
-    },
-    {
         "db_id": "tracking_grants_for_research",
         "question": "What are the response received dates for the documents described as 'Regular'?",
         "question_pl": "Jakie są daty otrzymania odpowiedzi dla dokumentów opisanych jako \"Regularne\"?",
@@ -10374,13 +9583,6 @@
         "query_pl": "SELECT payment_method FROM customers WHERE customer_name = \"Dr Julia Wuckert MD\""
     },
     {
-        "db_id": "medicine_enzyme_interaction",
-        "question": "How many enzymes do not have any interactions?",
-        "question_pl": "Ile enzymów nie wchodzi w żadne interakcje?",
-        "query": "SELECT count(*) FROM enzyme WHERE id NOT IN ( SELECT enzyme_id FROM medicine_enzyme_interaction );",
-        "query_pl": "SELECT count(*) FROM enzyme WHERE id NOT IN ( SELECT enzyme_id FROM medicine_enzyme_interaction );"
-    },
-    {
         "db_id": "election",
         "question": "Tell me the Lieutenant Governor name for the year 1998 ?",
         "question_pl": "Podaj mi nazwisko gubernatora porucznika na rok 1998?",
@@ -10449,13 +9651,6 @@
         "question_pl": "Witaj!  Jak się masz?  Czy możesz podać mi listę wszystkich identyfikatorów podróży dla kodu pocztowego 94002?",
         "query": "SELECT id FROM trip WHERE zip_code  =  94002 ",
         "query_pl": "SELECT id FROM trip WHERE zip_code  =  94002 "
-    },
-    {
-        "db_id": "music_4",
-        "question": "What are the issue dates of volumes associated with the artist aged 23 or younger?",
-        "question_pl": "Jakie są daty wydania tomów związanych z artystą w wieku 23 lat lub młodszym?",
-        "query": "SELECT Issue_Date FROM artist AS T1 JOIN volume AS T2 ON T1.Artist_ID  =  T2.Artist_ID WHERE T1.age  <=  23",
-        "query_pl": "SELECT Issue_Date FROM artist AS T1 JOIN volume AS T2 ON T1.Artist_ID  =  T2.Artist_ID WHERE T1.age  <=  23"
     },
     {
         "db_id": "college_1",
@@ -10563,20 +9758,6 @@
         "query_pl": "SELECT Age FROM Student WHERE Fname = \"Linda\" AND Lname = \"Smith\";"
     },
     {
-        "db_id": "baseball_1",
-        "question": "what is the number of wins the team Boston Red Stockings got in the postseasons each year in history?",
-        "question_pl": "Jaka jest liczba zwycięstw drużyny Boston Red Stockings w postseason każdego roku w historii?",
-        "query": "SELECT count(*) ,  T1.year FROM postseason AS T1 JOIN team AS T2 ON T1.team_id_winner  =  T2.team_id_br WHERE T2.name  =  'Boston Red Stockings' GROUP BY T1.year",
-        "query_pl": "SELECT count(*) ,  T1.year FROM postseason AS T1 JOIN team AS T2 ON T1.team_id_winner  =  T2.team_id_br WHERE T2.name  =  \"Czerwone pończochy Boston\" GROUP BY T1.year"
-    },
-    {
-        "db_id": "customer_complaints",
-        "question": "What is the phone number of the customer who has filed the most recent complaint?",
-        "question_pl": "Jaki jest numer telefonu klienta, który złożył ostatnią skargę?",
-        "query": "SELECT t1.phone_number FROM customers AS t1 JOIN complaints AS t2 ON t1.customer_id  =  t2.customer_id ORDER BY t2.date_complaint_raised DESC LIMIT 1",
-        "query_pl": "SELECT t1.phone_number FROM customers AS t1 JOIN complaints AS t2 ON t1.customer_id  =  t2.customer_id ORDER BY t2.date_complaint_raised DESC LIMIT 1"
-    },
-    {
         "db_id": "cre_Drama_Workshop_Groups",
         "question": "What is the description of the type of service that is performed the most often?",
         "question_pl": "Jaki jest opis rodzaju usługi, która jest wykonywana najczęściej?",
@@ -10647,13 +9828,6 @@
         "query_pl": "SELECT school FROM university ORDER BY enrollment DESC LIMIT 1"
     },
     {
-        "db_id": "mountain_photos",
-        "question": "How many camera lenses are not used in taking any photos?",
-        "question_pl": "Ile obiektywów aparatu nie jest używanych do robienia zdjęć?",
-        "query": "SELECT count(*) FROM camera_lens WHERE id NOT IN ( SELECT camera_lens_id FROM photos )",
-        "query_pl": "SELECT count(*) FROM camera_lens WHERE id NOT IN ( SELECT camera_lens_id FROM photos )"
-    },
-    {
         "db_id": "voter_2",
         "question": "Number of students in each major?",
         "question_pl": "Liczba studentów na każdym kierunku?",
@@ -10666,13 +9840,6 @@
         "question_pl": "Jaki jest identyfikator najdłuższej piosenki?",
         "query": "SELECT f_id FROM files ORDER BY duration DESC LIMIT 1",
         "query_pl": "SELECT f_id FROM files ORDER BY duration DESC LIMIT 1"
-    },
-    {
-        "db_id": "candidate_poll",
-        "question": "What are the top 3 highest support rates?",
-        "question_pl": "Jakie są 3 najwyższe wskaźniki wsparcia?",
-        "query": "SELECT support_rate FROM candidate ORDER BY support_rate DESC LIMIT 3",
-        "query_pl": "SELECT support_rate FROM candidate ORDER BY support_rate DESC LIMIT 3"
     },
     {
         "db_id": "insurance_policies",
@@ -10724,13 +9891,6 @@
         "query_pl": "SELECT TYPE FROM ship GROUP BY TYPE ORDER BY COUNT(*) DESC LIMIT 1"
     },
     {
-        "db_id": "dorm_1",
-        "question": "How many students are there?",
-        "question_pl": "Ilu jest studentów?",
-        "query": "SELECT count(*) FROM student",
-        "query_pl": "SELECT count(*) FROM student"
-    },
-    {
         "db_id": "customers_campaigns_ecommerce",
         "question": "what are the names of the payment method of customers who have both mailshot in 'Order' outcome and mailshot in 'No response' outcome.",
         "question_pl": "Jakie są nazwy metod płatności klientów, którzy otrzymali zarówno wiadomość e-mail w wyniku \"Zamówienie\", jak i wiadomość e-mail w wyniku \"Brak odpowiedzi\".",
@@ -10757,13 +9917,6 @@
         "question_pl": "Jaka jest maksymalna liczba pasażerów tranzytowych na wszystkich lotniskach?",
         "query": "SELECT max(Transit_Passengers) FROM airport",
         "query_pl": "SELECT max(Transit_Passengers) FROM airport"
-    },
-    {
-        "db_id": "student_1",
-        "question": "How many students does KAWA GORDON teaches?",
-        "question_pl": "Ilu studentów uczy KAWA GORDON?",
-        "query": "SELECT count(*) FROM list AS T1 JOIN teachers AS T2 ON T1.classroom  =  T2.classroom WHERE T2.firstname  =  \"KAWA\" AND T2.lastname  =  \"GORDON\"",
-        "query_pl": "SELECT count(*) FROM list AS T1 JOIN teachers AS T2 ON T1.classroom  =  T2.classroom WHERE T2.firstname  =  \"KAWA\" AND T2.lastname  =  \"GORDON\""
     },
     {
         "db_id": "store_1",
@@ -11165,13 +10318,6 @@
         "query_pl": "SELECT count(name) FROM instructor WHERE id IN (SELECT id FROM teaches)"
     },
     {
-        "db_id": "sakila_1",
-        "question": "What is the largest payment amount?",
-        "question_pl": "Jaka jest największa kwota płatności?",
-        "query": "SELECT amount FROM payment ORDER BY amount DESC LIMIT 1",
-        "query_pl": "SELECT amount FROM payment ORDER BY amount DESC LIMIT 1"
-    },
-    {
         "db_id": "flight_4",
         "question": "Can you show me the total number of airports?",
         "question_pl": "Czy możesz mi pokazać całkowitą liczbę lotnisk?",
@@ -11205,13 +10351,6 @@
         "question_pl": "Jaka jest łączna liczba seansów w każdym kinie?",
         "query": "SELECT T2.name ,  sum(T1.show_times_per_day) FROM schedule AS T1 JOIN cinema AS T2 ON T1.cinema_id  =  T2.cinema_id GROUP BY T1.cinema_id",
         "query_pl": "SELECT T2.name ,  sum(T1.show_times_per_day) FROM schedule AS T1 JOIN cinema AS T2 ON T1.cinema_id  =  T2.cinema_id GROUP BY T1.cinema_id"
-    },
-    {
-        "db_id": "activity_1",
-        "question": "Show the faculty id of each faculty member, along with the number of students he or she advises.",
-        "question_pl": "Pokaż identyfikator każdego członka wydziału wraz z liczbą studentów, którym doradza.",
-        "query": "SELECT T1.FacID , count(*) FROM Faculty AS T1 JOIN Student AS T2 ON T1.FacID = T2.advisor GROUP BY T1.FacID",
-        "query_pl": "SELECT T1.FacID , count(*) FROM Faculty AS T1 JOIN Student AS T2 ON T1.FacID = T2.advisor GROUP BY T1.FacID"
     },
     {
         "db_id": "school_finance",
@@ -11394,13 +10533,6 @@
         "question_pl": "Witaj. Ile osób ma wagę wyższą niż 85?",
         "query": "SELECT count(*)  FROM people WHERE weight  >  85",
         "query_pl": "SELECT count(*)  FROM people WHERE weight  >  85"
-    },
-    {
-        "db_id": "coffee_shop",
-        "question": "What are the average score and average staff number of all shops?",
-        "question_pl": "Jaki jest średni wynik i średnia liczba pracowników we wszystkich sklepach?",
-        "query": "SELECT avg(num_of_staff) ,  avg(score) FROM shop",
-        "query_pl": "SELECT avg(num_of_staff) ,  avg(score) FROM shop"
     },
     {
         "db_id": "assets_maintenance",
@@ -11655,25 +10787,11 @@
         "query_pl": "SELECT title FROM film WHERE rental_rate = 0.99"
     },
     {
-        "db_id": "ship_mission",
-        "question": "show names of ships involved in a mission launched after 1928.",
-        "question_pl": "Pokaż nazwy statków biorących udział w misji rozpoczętej po 1928 roku.",
-        "query": "SELECT T2.Name FROM mission AS T1 JOIN ship AS T2 ON T1.Ship_ID  =  T2.Ship_ID WHERE T1.Launched_Year  >  1928",
-        "query_pl": "SELECT T2.Name FROM mission AS T1 JOIN ship AS T2 ON T1.Ship_ID  =  T2.Ship_ID WHERE T1.Launched_Year  >  1928"
-    },
-    {
         "db_id": "music_4",
         "question": "What is the maximum weeks on top in the table?",
         "question_pl": "Ile maksymalnie tygodni możesz spędzić na szczycie tabeli?",
         "query": "SELECT Weeks_on_Top FROM volume ORDER BY Weeks_on_Top DESC LIMIT 1",
         "query_pl": "SELECT Weeks_on_Top FROM volume ORDER BY Weeks_on_Top DESC LIMIT 1"
-    },
-    {
-        "db_id": "network_2",
-        "question": "Find the name and age of the person who is a friend of both Dan and Alice.",
-        "question_pl": "Znajdź imię i wiek osoby, która jest przyjacielem Dana i Alice.",
-        "query": "SELECT T1.name ,  T1.age FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend  =  'Dan' INTERSECT SELECT T1.name ,   T1.age FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend  =  'Alice'",
-        "query_pl": "SELECT T1.name ,  T1.age FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend  =  \"Dan\" INTERSECT SELECT T1.name ,   T1.age FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend  =  \"Alice\""
     },
     {
         "db_id": "product_catalog",
@@ -11751,13 +10869,6 @@
         "question_pl": "Witaj!  Czy możesz dostarczyć mi listę wszystkich identyfikatorów klientów i powiązanych z nimi kodów typów polis?",
         "query": "select T2.Customer_ID, T1.Policy_Type_Code from Policies AS t1 JOIN customers AS t2 ON t1.customer_id = t2.customer_id",
         "query_pl": "select T2.Customer_ID, T1.Policy_Type_Code from Policies AS t1 JOIN customers AS t2 ON t1.customer_id = t2.customer_id"
-    },
-    {
-        "db_id": "csu_1",
-        "question": "For each Orange county campus, report the number of degrees granted after 2000.",
-        "question_pl": "Dla każdego kampusu w hrabstwie Orange podaj liczbę stopni naukowych przyznanych po 2000 roku.",
-        "query": "SELECT T1.campus ,  sum(T2.degrees) FROM campuses AS T1 JOIN degrees AS T2 ON T1.id  =  T2.campus WHERE T1.county  =  \"Orange\" AND T2.year  >=  2000 GROUP BY T1.campus",
-        "query_pl": "SELECT T1.campus ,  sum(T2.degrees) FROM campuses AS T1 JOIN degrees AS T2 ON T1.id  =  T2.campus WHERE T1.county  =  \"Pomarańczowy\" AND T2.year  >=  2000 GROUP BY T1.campus"
     },
     {
         "db_id": "driving_school",
