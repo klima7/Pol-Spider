@@ -6,7 +6,7 @@ from pathlib import Path
 from tqdm import tqdm
 from joblib import Parallel, delayed
 
-from common import load_json, save_json, load_txt, load_column_translations, load_table_translations
+from common import load_json, save_json, load_column_translations, load_table_translations
 from common.constants import *
 from .sql_parsing import create_sql, get_schemas_from_json, SQLParseException
 from .tokenization import tokenize_question, tokenize_query, tokenize_query_no_value
@@ -80,19 +80,19 @@ def synthesize_samples(
 def get_paths_from_schema_translation_name(schema_translation_name):
     available_names = [path.name for path in TRANS_PATH.glob('*/')]
     if not schema_translation_name in available_names:
-        return None, None, ''
+        return None, None
     else:
         return (
             TRANS_PATH / schema_translation_name / 'column_trans.json',
             TRANS_PATH / schema_translation_name / 'table_trans.json',
-            load_txt(TRANS_PATH / schema_translation_name / 'db_prefix.txt')
         )
 
 
 def synthesize_everything(
     output_name, samples_paths, gold_mapping, schema_translation_name='', with_db=False
     ):
-    column_trans_path, table_trans_path, db_prefix = get_paths_from_schema_translation_name(schema_translation_name)
+    column_trans_path, table_trans_path = get_paths_from_schema_translation_name(schema_translation_name)
+    db_prefix = schema_translation_name
     
     complete_dir_path = COMPLETE_PATH / output_name
     
