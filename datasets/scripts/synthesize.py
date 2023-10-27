@@ -85,11 +85,11 @@ def sparc_wc(output_name, schema_translation, with_db):
         output_name=output_name,
         samples_paths=[
             samples_path / 'dev.json',
-            samples_path / 'train.json',
+            samples_path / 'train_spider.json',
         ],
         gold_mapping={
             'dev_gold.sql': ['dev.json'],
-            'train_gold.sql': ['train.json'],
+            'train_gold.sql': ['train_spider.json'],
         },
         schema_translation_name=schema_translation,
         with_db=with_db
@@ -107,11 +107,11 @@ def cosql_wc(output_name, schema_translation, with_db):
         output_name=output_name,
         samples_paths=[
             samples_path / 'dev.json',
-            samples_path / 'train.json',
+            samples_path / 'train_spider.json',
         ],
         gold_mapping={
             'dev_gold.sql': ['dev.json'],
-            'train_gold.sql': ['train.json'],
+            'train_gold.sql': ['train_spider.json'],
         },
         schema_translation_name=schema_translation,
         with_db=with_db
@@ -120,4 +120,3 @@ def cosql_wc(output_name, schema_translation, with_db):
 
 if __name__ == "__main__":
     cli()
-
