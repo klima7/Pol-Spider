@@ -1,3 +1,4 @@
+import os
 import sqlite3
 import shutil
 from pathlib import Path
@@ -7,7 +8,7 @@ from tqdm import tqdm
 from common import load_column_translations, load_table_translations
 
 
-def translate_db(src_db_path, out_db_path, column_trans_path, table_trans_path):
+def translate_db(src_db_path, out_db_path, column_trans_path, table_trans_path, db_prefix):
     shutil.copytree(src_db_path, out_db_path)
     
     if column_trans_path is None or table_trans_path is None:
@@ -20,6 +21,10 @@ def translate_db(src_db_path, out_db_path, column_trans_path, table_trans_path):
         script = _generate_renaming_sql_script(db_id, column_trans, table_trans)
         db_path = str(Path(out_db_path) / db_id / f'{db_id}.sqlite')
         _execute_sql_script(db_path, script)
+        os.rename(
+            src=str(Path(out_db_path) / db_id),
+            dst=str(Path(out_db_path) / f'{db_prefix}_{db_id}')
+        )
 
 
 def _execute_sql_script(db_path, script):

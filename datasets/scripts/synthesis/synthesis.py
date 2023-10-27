@@ -6,7 +6,7 @@ from pathlib import Path
 from tqdm import tqdm
 from joblib import Parallel, delayed
 
-from common import load_json, save_json, load_column_translations, load_table_translations
+from common import load_json, save_json, load_txt, load_column_translations, load_table_translations
 from common.constants import *
 from .sql_parsing import create_sql, get_schemas_from_json, SQLParseException
 from .tokenization import tokenize_question, tokenize_query, tokenize_query_no_value
@@ -60,7 +60,7 @@ def create_gold_sql(samples_paths, output_path):
 
 
 def synthesize_samples(
-    samples_path, output_path, tables_path, column_trans_path=None, table_trans_path=None,
+    samples_path, output_path, tables_path, column_trans_path, table_trans_path, db_prefix
 ):
     samples = load_json(samples_path)
     
@@ -68,6 +68,9 @@ def synthesize_samples(
         table_trans = load_table_translations(table_trans_path)
         column_trans = load_column_translations(column_trans_path)
         samples = translate_samples(samples, table_trans, column_trans)
+        
+    for sample in samples:
+        sample['db_id'] = f"{db_prefix}_{sample['db_id']}"
         
     tables = load_json(tables_path)
     samples = add_calculated_attributes(samples, tables)
@@ -77,18 +80,19 @@ def synthesize_samples(
 def get_paths_from_schema_translation_name(schema_translation_name):
     available_names = [path.name for path in TRANS_PATH.glob('*/')]
     if not schema_translation_name in available_names:
-        return None, None
+        return None, None, ''
     else:
         return (
             TRANS_PATH / schema_translation_name / 'column_trans.json',
-            TRANS_PATH / schema_translation_name / 'table_trans.json'
+            TRANS_PATH / schema_translation_name / 'table_trans.json',
+            load_txt(TRANS_PATH / schema_translation_name / 'db_prefix.txt')
         )
 
 
 def synthesize_everything(
     output_name, samples_paths, gold_mapping, schema_translation_name='', with_db=False
     ):
-    column_trans_path, table_trans_path = get_paths_from_schema_translation_name(schema_translation_name)
+    column_trans_path, table_trans_path, db_prefix = get_paths_from_schema_translation_name(schema_translation_name)
     
     complete_dir_path = COMPLETE_PATH / output_name
     
@@ -100,6 +104,7 @@ def synthesize_everything(
         translate_tables(
             column_trans_path=column_trans_path,
             table_trans_path=table_trans_path,
+            db_prefix=db_prefix,
             output_path=str(complete_dir_path / 'tables.json'),
         )
         
@@ -115,7 +120,8 @@ def synthesize_everything(
             output_path=complete_dir_path / Path(samples_path).name,
             tables_path= str(complete_dir_path / 'tables.json'),
             column_trans_path=column_trans_path,
-            table_trans_path=table_trans_path
+            table_trans_path=table_trans_path,
+            db_prefix=db_prefix
         )
         
     for gold_name, samples_names in gold_mapping.items():
@@ -129,5 +135,6 @@ def synthesize_everything(
             src_db_path=str(DATABASE_PATH),
             out_db_path=str(complete_dir_path / 'database'),
             column_trans_path=column_trans_path,
-            table_trans_path=table_trans_path
+            table_trans_path=table_trans_path,
+            db_prefix=db_prefix
         )
