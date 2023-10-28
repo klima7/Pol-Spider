@@ -100,19 +100,12 @@ def synthesize_everything(
         shutil.rmtree(str(complete_dir_path))
     complete_dir_path.mkdir(parents=True, exist_ok=False)
     
-    if column_trans_path is not None:
-        translate_tables(
-            column_trans_path=column_trans_path,
-            table_trans_path=table_trans_path,
-            db_prefix=db_prefix,
-            output_path=str(complete_dir_path / 'tables.json'),
-        )
-        
-    else:
-        shutil.copyfile(
-            str(BASE_PATH / 'tables.json'),
-            str(complete_dir_path / 'tables.json')
-        )
+    translate_tables(
+        column_trans_path=column_trans_path,
+        table_trans_path=table_trans_path,
+        db_prefix=db_prefix,
+        output_path=str(complete_dir_path / 'tables.json'),
+    )
         
     for samples_path in samples_paths:
         synthesize_samples(

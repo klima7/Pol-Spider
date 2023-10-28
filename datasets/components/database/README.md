@@ -22,4 +22,5 @@ database
 │   ├── allergy_1.sqlite
 │   └── schema.sql
 ...
+└── README.md
 ```

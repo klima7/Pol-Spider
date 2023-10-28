@@ -13,7 +13,7 @@ from common import load_json, save_json, load_column_translations, load_table_tr
 from common.constants import *
 
 
-def translate_tables_list(tables, table_trans, column_trans, db_prefix):
+def translate_tables_list(tables, table_trans, column_trans):
     translated_tables = deepcopy(tables)
 
     for db in tqdm(translated_tables, desc="Translating tables"):
@@ -37,18 +37,22 @@ def translate_tables_list(tables, table_trans, column_trans, db_prefix):
             translations = table_trans[db_id][table_name.lower()]
             db["table_names_original"][i] = translations["name_original"]
             db["table_names"][i] = translations["name"]
-            
-        db["db_id"] = f'{db_prefix}_{db_id}'
     
     return translated_tables
 
 
 def translate_tables(column_trans_path, table_trans_path, db_prefix, output_path):
-    table_trans = load_table_translations(table_trans_path)
-    column_trans = load_column_translations(column_trans_path)
     tables = load_json(BASE_PATH / "tables.json")
-    trans_tables = translate_tables_list(tables, table_trans, column_trans, db_prefix)
-    save_json(output_path, trans_tables)
+    
+    if table_trans_path is not None:
+        table_trans = load_table_translations(table_trans_path)
+        column_trans = load_column_translations(column_trans_path)
+        tables = translate_tables_list(tables, table_trans, column_trans)
+        
+    for schema in tables:
+        schema["db_id"] = f'{db_prefix}_{schema["db_id"]}'
+        
+    save_json(output_path, tables)
 
 
 def get_tables_aliasing(sql):

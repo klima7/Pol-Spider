@@ -11,16 +11,16 @@ from common import load_column_translations, load_table_translations
 def translate_db(src_db_path, out_db_path, column_trans_path, table_trans_path, db_prefix):
     shutil.copytree(src_db_path, out_db_path)
     
-    if column_trans_path is None or table_trans_path is None:
-        return
-    
-    column_trans = load_column_translations(column_trans_path)
-    table_trans = load_table_translations(table_trans_path)
-    
-    for db_id in tqdm(table_trans.keys(), desc='Translating databases'):
-        script = _generate_renaming_sql_script(db_id, column_trans, table_trans)
-        db_path = str(Path(out_db_path) / db_id / f'{db_id}.sqlite')
-        _execute_sql_script(db_path, script)
+    if column_trans_path is not None or table_trans_path is not None:
+        column_trans = load_column_translations(column_trans_path)
+        table_trans = load_table_translations(table_trans_path)
+        
+        for db_id in tqdm(table_trans.keys(), desc='Translating databases'):
+            script = _generate_renaming_sql_script(db_id, column_trans, table_trans)
+            db_path = str(Path(out_db_path) / db_id / f'{db_id}.sqlite')
+            _execute_sql_script(db_path, script)
+            
+    for db_id in [path.name for path in Path(src_db_path).glob('*/') if path.is_dir()]:
         os.rename(
             src=str(Path(out_db_path) / db_id),
             dst=str(Path(out_db_path) / f'{db_prefix}_{db_id}')
