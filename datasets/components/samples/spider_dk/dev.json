@@ -37,7 +37,7 @@
         "question": "What is the average, minimum, and maximum id of all French singers?",
         "question_pl": "Jaki jest średni, minimalny i maksymalny id wszystkich francuskich piosenkarzy?",
         "query": "SELECT avg(Singer_ID) ,  min(Singer_ID) ,  max(Singer_ID) FROM singer WHERE country  =  'France'",
-        "query_pl": "SELECT avg(Singer_ID) ,  min(Singer_ID) ,  max(Singer_ID) FROM singer WHERE country  =  \"Francja\""
+        "query_pl": "SELECT avg(Singer_ID) ,  min(Singer_ID) ,  max(Singer_ID) FROM singer WHERE country  =  'Francja'"
     },
     {
         "type": 3,
@@ -45,7 +45,7 @@
         "question": "What is the average, minimum, and maximum id for French singers?",
         "question_pl": "Jaka jest średnia, minimalna i maksymalna id dla francuskich piosenkarzy?",
         "query": "SELECT avg(Singer_ID) ,  min(Singer_ID) ,  max(Singer_ID) FROM singer WHERE country  =  'France'",
-        "query_pl": "SELECT avg(Singer_ID) ,  min(Singer_ID) ,  max(Singer_ID) FROM singer WHERE country  =  \"Francja\""
+        "query_pl": "SELECT avg(Singer_ID) ,  min(Singer_ID) ,  max(Singer_ID) FROM singer WHERE country  =  'Francja'"
     },
     {
         "type": 2,
@@ -429,7 +429,7 @@
         "question": "Find the number of puppy pets that are raised by female students (with sex F).",
         "question_pl": "Znajdź liczbę szczeniąt wychowywanych przez studentki (z płcią F).",
         "query": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  'F' AND T3.pettype  =  'dog'",
-        "query_pl": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  \"F\" AND T3.pettype  =  \"pies\""
+        "query_pl": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  'F' AND T3.pettype  =  'pies'"
     },
     {
         "type": 34,
@@ -437,7 +437,7 @@
         "question": "How many puppy pets are raised by female students?",
         "question_pl": "Ile szczeniąt jest wychowywanych przez studentki?",
         "query": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  'F' AND T3.pettype  =  'dog'",
-        "query_pl": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  \"F\" AND T3.pettype  =  \"pies\""
+        "query_pl": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  'F' AND T3.pettype  =  'pies'"
     },
     {
         "type": 0,
@@ -461,7 +461,7 @@
         "question": "Find the first name of students who have kitten or puppy pet.",
         "question_pl": "Znajdź imiona uczniów, którzy mają kociaka lub szczeniaka.",
         "query": "SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' OR T3.pettype  =  'dog'",
-        "query_pl": "SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\" OR T3.pettype  =  \"pies\""
+        "query_pl": "SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot' OR T3.pettype  =  'pies'"
     },
     {
         "type": 3,
@@ -469,7 +469,7 @@
         "question": "What are the first names of every student who has a kitten or puppy as a pet?",
         "question_pl": "Jakie są imiona każdego ucznia, który ma kociaka lub szczeniaka jako zwierzę domowe?",
         "query": "SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' OR T3.pettype  =  'dog'",
-        "query_pl": "SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\" OR T3.pettype  =  \"pies\""
+        "query_pl": "SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot' OR T3.pettype  =  'pies'"
     },
     {
         "type": 3,
@@ -477,7 +477,7 @@
         "question": "Find the name of students who have both Kitten and puppy pets.",
         "question_pl": "Znajdź imiona uczniów, którzy mają zarówno kociaka, jak i szczeniaka.",
         "query": "SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' INTERSECT SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog'",
-        "query_pl": "SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\" INTERSECT SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"pies\""
+        "query_pl": "SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot' INTERSECT SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'pies'"
     },
     {
         "type": 3,
@@ -485,7 +485,7 @@
         "question": "What are the students' first names who have both kitten and puppy as pets?",
         "question_pl": "Jak mają na imię uczniowie, którzy mają zarówno kociaka, jak i szczeniaka?",
         "query": "SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' INTERSECT SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog'",
-        "query_pl": "SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\" INTERSECT SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"pies\""
+        "query_pl": "SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot' INTERSECT SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'pies'"
     },
     {
         "type": 3,
@@ -493,7 +493,7 @@
         "question": "Find the major and age of students who do not have a kitten pet.",
         "question_pl": "Znajdź kierunek studiów i wiek studentów, którzy nie mają kociaka.",
         "query": "SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')",
-        "query_pl": "SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\")"
+        "query_pl": "SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot')"
     },
     {
         "type": 3,
@@ -501,7 +501,7 @@
         "question": "What major is every student who does not own a kitten as a pet, and also how old are they?",
         "question_pl": "Na jakim kierunku jest każdy student, który nie posiada kociaka jako zwierzaka, a także ile ma lat?",
         "query": "SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')",
-        "query_pl": "SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\")"
+        "query_pl": "SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot')"
     },
     {
         "type": 3,
@@ -509,7 +509,7 @@
         "question": "Find the id of students who do not have a kitten pet.",
         "question_pl": "Znajdź identyfikator uczniów, którzy nie mają kociaka.",
         "query": "SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat'",
-        "query_pl": "SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\""
+        "query_pl": "SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot'"
     },
     {
         "type": 3,
@@ -517,7 +517,7 @@
         "question": "What are the ids of the students who do not own kittens as pets?",
         "question_pl": "Jakie są identyfikatory uczniów, którzy nie posiadają kociąt jako zwierząt domowych?",
         "query": "SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat'",
-        "query_pl": "SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\""
+        "query_pl": "SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot'"
     },
     {
         "type": 3,
@@ -525,7 +525,7 @@
         "question": "Find the first name and age of students who have a dog but do not have a puppy as a pet.",
         "question_pl": "Znajdź imię i wiek uczniów, którzy mają psa, ale nie mają szczeniaka.",
         "query": "SELECT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog' AND T1.stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')",
-        "query_pl": "SELECT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"pies\" AND T1.stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\")"
+        "query_pl": "SELECT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'pies' AND T1.stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot')"
     },
     {
         "type": 3,
@@ -533,7 +533,7 @@
         "question": "What is the first name of every student who has a puppy but does not have a kitten?",
         "question_pl": "Jak ma na imię każdy uczeń, który ma szczeniaka, ale nie ma kociaka?",
         "query": "SELECT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog' AND T1.stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')",
-        "query_pl": "SELECT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"pies\" AND T1.stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\")"
+        "query_pl": "SELECT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'pies' AND T1.stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot')"
     },
     {
         "type": 2,
@@ -557,7 +557,7 @@
         "question": "Find the id and weight of all pets older than that born in 2020.",
         "question_pl": "Znajdź identyfikator i wagę wszystkich zwierząt starszych niż urodzone w 2020 roku.",
         "query": "SELECT petid ,  weight FROM pets WHERE birthdate  <  '2020-01-01'",
-        "query_pl": "SELECT petid ,  weight FROM pets WHERE birthdate  <  \"2020-01-01\""
+        "query_pl": "SELECT petid ,  weight FROM pets WHERE birthdate  <  '2020-01-01'"
     },
     {
         "type": 2,
@@ -565,7 +565,7 @@
         "question": "What is the id and weight of every pet who is older than that born in 2020?",
         "question_pl": "Jaki jest identyfikator i waga każdego zwierzaka, który jest starszy niż urodzony w 2020 roku?",
         "query": "SELECT petid ,  weight FROM pets WHERE birthdate  <  '2020-05-01'",
-        "query_pl": "SELECT petid ,  weight FROM pets WHERE birthdate  <  \"2020-05-01\""
+        "query_pl": "SELECT petid ,  weight FROM pets WHERE birthdate  <  '2020-05-01'"
     },
     {
         "type": 5,
@@ -621,7 +621,7 @@
         "question": "Find the id of the pet owned by student whose last name is ‘Smith’.",
         "question_pl": "Znajdź identyfikator zwierzęcia należącego do ucznia, którego nazwisko to \"Smith\".",
         "query": "SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  'Smith'",
-        "query_pl": "SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  \"Smith\""
+        "query_pl": "SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  'Smith'"
     },
     {
         "type": 0,
@@ -629,7 +629,7 @@
         "question": "What is the id of the pet owned by the student whose last name is 'Smith'?",
         "question_pl": "Jaki jest identyfikator zwierzęcia należącego do ucznia o nazwisku \"Smith\"?",
         "query": "SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  'Smith'",
-        "query_pl": "SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  \"Smith\""
+        "query_pl": "SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  'Smith'"
     },
     {
         "type": 0,
@@ -669,7 +669,7 @@
         "question": "Find the last name of the student who has a cat that born in 2001.",
         "question_pl": "Znajdź nazwisko ucznia, który ma kota urodzonego w 2001 roku.",
         "query": "SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.birthdate  like  '2001%' AND T3.pettype  =  'cat'",
-        "query_pl": "SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.birthdate  like  '2001%' AND T3.pettype  =  \"kot\""
+        "query_pl": "SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.birthdate  like  '2001%' AND T3.pettype  =  'kot'"
     },
     {
         "type": 23,
@@ -677,7 +677,7 @@
         "question": "What is the last name of the student who has a cat that born in 2001?",
         "question_pl": "Jak nazywa się uczeń, który ma kota urodzonego w 2001 roku?",
         "query": "SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.birthdate  like '2001%' AND T3.pettype  =  'cat'",
-        "query_pl": "SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.birthdate  like '2001%' AND T3.pettype  =  \"kot\""
+        "query_pl": "SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.birthdate  like '2001%' AND T3.pettype  =  'kot'"
     },
     {
         "type": 0,
@@ -797,7 +797,7 @@
         "question": "Find the name of the makers that produced some cars in the past two years?",
         "question_pl": "Znajdź nazwy producentów, którzy wyprodukowali kilka samochodów w ciągu ostatnich dwóch lat?",
         "query": "SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  >=  '2019';",
-        "query_pl": "SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  >=  \"2019\";"
+        "query_pl": "SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  >=  '2019';"
     },
     {
         "type": 2,
@@ -805,7 +805,7 @@
         "question": "What is the name of the different car makers who produced a car in the past two years?",
         "question_pl": "Jak nazywają się różni producenci samochodów, którzy wyprodukowali samochód w ciągu ostatnich dwóch lat?",
         "query": "SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  >=  '2019';",
-        "query_pl": "SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  >=  \"2019\";"
+        "query_pl": "SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  >=  '2019';"
     },
     {
         "type": 0,
@@ -893,7 +893,7 @@
         "question": "What is the accelerate of the car make amc hornet sportabout (sw)?",
         "question_pl": "Jakie jest przyspieszenie samochodu marki amc hornet sportabout (sw)?",
         "query": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  'amc hornet sportabout (sw)';",
-        "query_pl": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  \"amc hornet sportabout (sw)\";"
+        "query_pl": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  'amc hornet sportabout (sw)';"
     },
     {
         "type": 0,
@@ -901,7 +901,7 @@
         "question": "How much does the car accelerate that makes amc hornet sportabout (sw)?",
         "question_pl": "Jak bardzo przyspiesza samochód, który robi amc hornet sportabout (sw)?",
         "query": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  'amc hornet sportabout (sw)';",
-        "query_pl": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  \"amc hornet sportabout (sw)\";"
+        "query_pl": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  'amc hornet sportabout (sw)';"
     },
     {
         "type": 3,
@@ -909,7 +909,7 @@
         "question": "How many Japanese car makers are there?",
         "question_pl": "Ilu jest japońskich producentów samochodów?",
         "query": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  'Japan';",
-        "query_pl": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  \"Japonia\";"
+        "query_pl": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  'Japonia';"
     },
     {
         "type": 3,
@@ -917,7 +917,7 @@
         "question": "What is the number of makers of Japanese care?",
         "question_pl": "Jaka jest liczba producentów japońskiej opieki?",
         "query": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  'Japan';",
-        "query_pl": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  \"Japonia\";"
+        "query_pl": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  'Japonia';"
     },
     {
         "type": 3,
@@ -925,7 +925,7 @@
         "question": "How many car models are produced in the america?",
         "question_pl": "Ile modeli samochodów jest produkowanych w Ameryce?",
         "query": "SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  'usa';",
-        "query_pl": "SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  \"uSA\";"
+        "query_pl": "SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  'uSA';"
     },
     {
         "type": 0,
@@ -933,7 +933,7 @@
         "question": "What is the count of the car models produced in the United States?",
         "question_pl": "Jaka jest liczba modeli samochodów produkowanych w Stanach Zjednoczonych?",
         "query": "SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  'usa';",
-        "query_pl": "SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  \"uSA\";"
+        "query_pl": "SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  'uSA';"
     },
     {
         "type": 0,
@@ -1037,7 +1037,7 @@
         "question": "Which European countries have at least 3 car manufacturers?",
         "question_pl": "Które kraje europejskie mają co najmniej 3 producentów samochodów?",
         "query": "SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europe' GROUP BY T1.CountryName HAVING count(*)  >=  3;",
-        "query_pl": "SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  \"europa\" GROUP BY T1.CountryName HAVING count(*)  >=  3;"
+        "query_pl": "SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europa' GROUP BY T1.CountryName HAVING count(*)  >=  3;"
     },
     {
         "type": 0,
@@ -1045,7 +1045,7 @@
         "question": "What are the names of all European countries with at least 3 manufacturers?",
         "question_pl": "Jak nazywają się wszystkie kraje europejskie z co najmniej 3 producentami?",
         "query": "SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europe' GROUP BY T1.CountryName HAVING count(*)  >=  3;",
-        "query_pl": "SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  \"europa\" GROUP BY T1.CountryName HAVING count(*)  >=  3;"
+        "query_pl": "SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europa' GROUP BY T1.CountryName HAVING count(*)  >=  3;"
     },
     {
         "type": 0,
@@ -1101,7 +1101,7 @@
         "question": "What is the average edispl of the cars of model tesla?",
         "question_pl": "Jaki jest średni edispl samochodów modelu tesla?",
         "query": "SELECT avg(T2.edispl) FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T1.Model  =  'tesla';",
-        "query_pl": "SELECT avg(T2.edispl) FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T1.Model  =  \"tesla\";"
+        "query_pl": "SELECT avg(T2.edispl) FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T1.Model  =  'tesla';"
     },
     {
         "type": 3,
@@ -1109,7 +1109,7 @@
         "question": "What is the average edispl for all teslas?",
         "question_pl": "Jaki jest średni edispl dla wszystkich tesli?",
         "query": "SELECT avg(T2.edispl) FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T1.Model  =  'tesla';",
-        "query_pl": "SELECT avg(T2.edispl) FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T1.Model  =  \"tesla\";"
+        "query_pl": "SELECT avg(T2.edispl) FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T1.Model  =  'tesla';"
     },
     {
         "type": 0,
@@ -1181,7 +1181,7 @@
         "question": "How many car models were produced by American Motor?",
         "question_pl": "Ile modeli samochodów wyprodukowała firma American Motor?",
         "query": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker WHERE T1.FullName  =  'American Motor Company';",
-        "query_pl": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker WHERE T1.FullName  =  \"American Motor Company\";"
+        "query_pl": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker WHERE T1.FullName  =  'American Motor Company';"
     },
     {
         "type": 3,
@@ -1189,7 +1189,7 @@
         "question": "What is the number of car models created by American Motor?",
         "question_pl": "Jaka jest liczba modeli samochodów stworzonych przez American Motor?",
         "query": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker WHERE T1.FullName  =  'American Motor Company';",
-        "query_pl": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker WHERE T1.FullName  =  \"American Motor Company\";"
+        "query_pl": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker WHERE T1.FullName  =  'American Motor Company';"
     },
     {
         "type": 0,
@@ -1213,7 +1213,7 @@
         "question": "Which distinctive models are produced by maker with the full name General Motors or weighing more than 3500?",
         "question_pl": "Jakie charakterystyczne modele są produkowane przez producenta o pełnej nazwie General Motors lub ważą więcej niż 3500?",
         "query": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors' OR T4.weight  >  3500;",
-        "query_pl": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  \"General Motors\" OR T4.weight  >  3500;"
+        "query_pl": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors' OR T4.weight  >  3500;"
     },
     {
         "type": 0,
@@ -1221,7 +1221,7 @@
         "question": "What are the different models created by either the car maker General Motors or weighed more than 3500?",
         "question_pl": "Jakie są różne modele stworzone przez producenta samochodów General Motors lub ważące ponad 3500?",
         "query": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors' OR T4.weight  >  3500;",
-        "query_pl": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  \"General Motors\" OR T4.weight  >  3500;"
+        "query_pl": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors' OR T4.weight  >  3500;"
     },
     {
         "type": 0,
@@ -1261,7 +1261,7 @@
         "question": "For model tesla, how many cylinders does the car with the least accelerate have?",
         "question_pl": "Dla modelu tesla, ile cylindrów ma samochód z najmniejszym przyspieszeniem?",
         "query": "SELECT T1.cylinders FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Model  =  'tesla' ORDER BY T1.accelerate ASC LIMIT 1;",
-        "query_pl": "SELECT T1.cylinders FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Model  =  \"tesla\" ORDER BY T1.accelerate ASC LIMIT 1;"
+        "query_pl": "SELECT T1.cylinders FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Model  =  'tesla' ORDER BY T1.accelerate ASC LIMIT 1;"
     },
     {
         "type": 3,
@@ -1269,7 +1269,7 @@
         "question": "For a tesla model, how many cylinders does the version with least accelerate have?",
         "question_pl": "Ile cylindrów w modelu Tesla ma wersja z najmniejszym przyspieszeniem?",
         "query": "SELECT T1.cylinders FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Model  =  'tesla' ORDER BY T1.accelerate ASC LIMIT 1;",
-        "query_pl": "SELECT T1.cylinders FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Model  =  \"tesla\" ORDER BY T1.accelerate ASC LIMIT 1;"
+        "query_pl": "SELECT T1.cylinders FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Model  =  'tesla' ORDER BY T1.accelerate ASC LIMIT 1;"
     },
     {
         "type": 0,
@@ -1373,7 +1373,7 @@
         "question": "Which models are lighter than 3500 but not built by the 'Ford Motor'?",
         "question_pl": "Które modele są lżejsze niż 3500, ale nie są produkowane przez \"Ford Motor\"?",
         "query": "SELECT DISTINCT T1.model FROM MODEL_LIST AS T1 JOIN CAR_NAMES AS T2 ON T1.Model  =  T2.Model JOIN CARS_DATA AS T3 ON T2.MakeId  =  T3.Id JOIN CAR_MAKERS AS T4 ON T1.Maker  =  T4.Id WHERE T3.weight  <  3500 AND T4.FullName != 'Ford Motor Company';",
-        "query_pl": "SELECT DISTINCT T1.model FROM MODEL_LIST AS T1 JOIN CAR_NAMES AS T2 ON T1.Model  =  T2.Model JOIN CARS_DATA AS T3 ON T2.MakeId  =  T3.Id JOIN CAR_MAKERS AS T4 ON T1.Maker  =  T4.Id WHERE T3.weight  <  3500 AND T4.FullName != \"Ford Motor Company\";"
+        "query_pl": "SELECT DISTINCT T1.model FROM MODEL_LIST AS T1 JOIN CAR_NAMES AS T2 ON T1.Model  =  T2.Model JOIN CARS_DATA AS T3 ON T2.MakeId  =  T3.Id JOIN CAR_MAKERS AS T4 ON T1.Maker  =  T4.Id WHERE T3.weight  <  3500 AND T4.FullName != 'Ford Motor Company';"
     },
     {
         "type": 3,
@@ -1381,7 +1381,7 @@
         "question": "What are the different models wthat are lighter than 3500 but were not built by the Ford Motor?",
         "question_pl": "Jakie są różne modele, które są lżejsze niż 3500, ale nie zostały zbudowane przez Ford Motor?",
         "query": "SELECT DISTINCT T1.model FROM MODEL_LIST AS T1 JOIN CAR_NAMES AS T2 ON T1.Model  =  T2.Model JOIN CARS_DATA AS T3 ON T2.MakeId  =  T3.Id JOIN CAR_MAKERS AS T4 ON T1.Maker  =  T4.Id WHERE T3.weight  <  3500 AND T4.FullName != 'Ford Motor Company';",
-        "query_pl": "SELECT DISTINCT T1.model FROM MODEL_LIST AS T1 JOIN CAR_NAMES AS T2 ON T1.Model  =  T2.Model JOIN CARS_DATA AS T3 ON T2.MakeId  =  T3.Id JOIN CAR_MAKERS AS T4 ON T1.Maker  =  T4.Id WHERE T3.weight  <  3500 AND T4.FullName != \"Ford Motor Company\";"
+        "query_pl": "SELECT DISTINCT T1.model FROM MODEL_LIST AS T1 JOIN CAR_NAMES AS T2 ON T1.Model  =  T2.Model JOIN CARS_DATA AS T3 ON T2.MakeId  =  T3.Id JOIN CAR_MAKERS AS T4 ON T1.Maker  =  T4.Id WHERE T3.weight  <  3500 AND T4.FullName != 'Ford Motor Company';"
     },
     {
         "type": 0,
@@ -1421,7 +1421,7 @@
         "question": "What are the id and names of the countries which have more than 3 car makers or produce the 'tesla' model?",
         "question_pl": "Jakie są identyfikatory i nazwy krajów, które mają więcej niż 3 producentów samochodów lub produkują model \"Tesla\"?",
         "query": "SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country GROUP BY T1.countryId HAVING count(*)  >  3 UNION SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country JOIN MODEL_LIST AS T3 ON T2.Id  =  T3.Maker WHERE T3.Model  =  'tesla';",
-        "query_pl": "SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country GROUP BY T1.countryId HAVING count(*)  >  3 UNION SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country JOIN MODEL_LIST AS T3 ON T2.Id  =  T3.Maker WHERE T3.Model  =  \"tesla\";"
+        "query_pl": "SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country GROUP BY T1.countryId HAVING count(*)  >  3 UNION SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country JOIN MODEL_LIST AS T3 ON T2.Id  =  T3.Maker WHERE T3.Model  =  'tesla';"
     },
     {
         "type": 3,
@@ -1429,7 +1429,7 @@
         "question": "What are the ids and names of all countries that either have more than 3 car makers or produce teslas?",
         "question_pl": "Jakie są identyfikatory i nazwy wszystkich krajów, które mają więcej niż 3 producentów samochodów lub produkują tesle?",
         "query": "SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country GROUP BY T1.countryId HAVING count(*)  >  3 UNION SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country JOIN MODEL_LIST AS T3 ON T2.Id  =  T3.Maker WHERE T3.Model  =  'tesla';",
-        "query_pl": "SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country GROUP BY T1.countryId HAVING count(*)  >  3 UNION SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country JOIN MODEL_LIST AS T3 ON T2.Id  =  T3.Maker WHERE T3.Model  =  \"tesla\";"
+        "query_pl": "SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country GROUP BY T1.countryId HAVING count(*)  >  3 UNION SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country JOIN MODEL_LIST AS T3 ON T2.Id  =  T3.Maker WHERE T3.Model  =  'tesla';"
     },
     {
         "type": 3,
@@ -2157,7 +2157,7 @@
         "question": "How many documents are using the PPT template?",
         "question_pl": "Ile dokumentów korzysta z szablonu PPT?",
         "query": "SELECT count(*) FROM Documents AS T1 JOIN Templates AS T2 ON T1.Template_ID  =  T2.Template_ID WHERE T2.Template_Type_Code  =  'PPT'",
-        "query_pl": "SELECT count(*) FROM Documents AS T1 JOIN Templates AS T2 ON T1.Template_ID  =  T2.Template_ID WHERE T2.Template_Type_Code  =  \"PPT\""
+        "query_pl": "SELECT count(*) FROM Documents AS T1 JOIN Templates AS T2 ON T1.Template_ID  =  T2.Template_ID WHERE T2.Template_Type_Code  =  'PPT'"
     },
     {
         "type": 0,
@@ -2165,7 +2165,7 @@
         "question": "Count the number of documents that use the PPT template type.",
         "question_pl": "Policz liczbę dokumentów korzystających z szablonu typu PPT.",
         "query": "SELECT count(*) FROM Documents AS T1 JOIN Templates AS T2 ON T1.Template_ID  =  T2.Template_ID WHERE T2.Template_Type_Code  =  'PPT'",
-        "query_pl": "SELECT count(*) FROM Documents AS T1 JOIN Templates AS T2 ON T1.Template_ID  =  T2.Template_ID WHERE T2.Template_Type_Code  =  \"PPT\""
+        "query_pl": "SELECT count(*) FROM Documents AS T1 JOIN Templates AS T2 ON T1.Template_ID  =  T2.Template_ID WHERE T2.Template_Type_Code  =  'PPT'"
     },
     {
         "type": 5,
@@ -2589,7 +2589,7 @@
         "question": "List the first name and birth date of all American players.",
         "question_pl": "Wymień imię i datę urodzenia wszystkich amerykańskich graczy.",
         "query": "SELECT first_name ,  birth_date FROM players WHERE country_code  =  'USA'",
-        "query_pl": "SELECT first_name ,  birth_date FROM players WHERE country_code  =  \"USA\""
+        "query_pl": "SELECT first_name ,  birth_date FROM players WHERE country_code  =  'USA'"
     },
     {
         "type": 3,
@@ -2597,7 +2597,7 @@
         "question": "What are the first names and birth dates of American players?",
         "question_pl": "Jakie są imiona i daty urodzenia amerykańskich graczy?",
         "query": "SELECT first_name ,  birth_date FROM players WHERE country_code  =  'USA'",
-        "query_pl": "SELECT first_name ,  birth_date FROM players WHERE country_code  =  \"USA\""
+        "query_pl": "SELECT first_name ,  birth_date FROM players WHERE country_code  =  'USA'"
     },
     {
         "type": 5,
@@ -2733,7 +2733,7 @@
         "question": "What are the country code and first name of the players who won in both tourney WTA Championships and Australian Open?",
         "question_pl": "Jaki jest kod kraju i imię zawodniczek, które wygrały w turniejach WTA Championships i Australian Open?",
         "query": "SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'WTA Championships' INTERSECT SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'Australian Open'",
-        "query_pl": "SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  \"Mistrzostwa WTA\" INTERSECT SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  \"Australian Open\""
+        "query_pl": "SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'Mistrzostwa WTA' INTERSECT SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'Australian Open'"
     },
     {
         "type": 0,
@@ -2741,7 +2741,7 @@
         "question": "What are the first names and country codes for players who won both the WTA Championships and the Australian Open?",
         "question_pl": "Jakie są imiona i kody krajów zawodniczek, które wygrały zarówno WTA Championships, jak i Australian Open?",
         "query": "SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'WTA Championships' INTERSECT SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'Australian Open'",
-        "query_pl": "SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  \"Mistrzostwa WTA\" INTERSECT SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  \"Australian Open\""
+        "query_pl": "SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'Mistrzostwa WTA' INTERSECT SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'Australian Open'"
     },
     {
         "type": 0,
@@ -2781,7 +2781,7 @@
         "question": "List the first and last name of all players who are left / L hand in the order of their date of birth from the oldest to the youngest.",
         "question_pl": "Wymień imię i nazwisko wszystkich graczy, którzy są leworęczni / lewonożni, w kolejności od najstarszego do najmłodszego według daty urodzenia.",
         "query": "SELECT first_name ,  last_name FROM players WHERE hand  =  'L' ORDER BY birth_date",
-        "query_pl": "SELECT first_name ,  last_name FROM players WHERE hand  =  \"L\" ORDER BY birth_date"
+        "query_pl": "SELECT first_name ,  last_name FROM players WHERE hand  =  'L' ORDER BY birth_date"
     },
     {
         "type": 2,
@@ -2789,7 +2789,7 @@
         "question": "What are the name of all left handed players, in order of date of birth from the young to the old?",
         "question_pl": "Jak nazywają się wszyscy leworęczni gracze w kolejności od najmłodszych do najstarszych?",
         "query": "SELECT first_name ,  last_name FROM players WHERE hand  =  'L' ORDER BY birth_date desc",
-        "query_pl": "SELECT first_name ,  last_name FROM players WHERE hand  =  \"L\" ORDER BY birth_date desc"
+        "query_pl": "SELECT first_name ,  last_name FROM players WHERE hand  =  'L' ORDER BY birth_date desc"
     },
     {
         "type": 0,
@@ -2845,7 +2845,7 @@
         "question": "Find all match player name including winner and loser where the winner has the highest rank points and participated in the Australian Open tourney.",
         "question_pl": "Znajdź wszystkie nazwiska graczy, w tym zwycięzcę i przegranego, gdzie zwycięzca ma najwięcej punktów rankingowych i brał udział w turnieju Australian Open.",
         "query": "SELECT loser_name, winner_name FROM matches WHERE tourney_name  =  'Australian Open' ORDER BY winner_rank_points DESC LIMIT 1",
-        "query_pl": "SELECT loser_name, winner_name FROM matches WHERE tourney_name  =  \"Australian Open\" ORDER BY winner_rank_points DESC LIMIT 1"
+        "query_pl": "SELECT loser_name, winner_name FROM matches WHERE tourney_name  =  'Australian Open' ORDER BY winner_rank_points DESC LIMIT 1"
     },
     {
         "type": 1,
@@ -2853,7 +2853,7 @@
         "question": "What are the match player names including winner and loser where the winner had the most rank points and participated in the Australian Open tournament?",
         "question_pl": "Jakie są nazwiska graczy, w tym zwycięzcy i przegranego meczu, w którym zwycięzca miał najwięcej punktów rankingowych i brał udział w turnieju Australian Open?",
         "query": "SELECT loser_name, winner_name FROM matches WHERE tourney_name  =  'Australian Open' ORDER BY winner_rank_points DESC LIMIT 1",
-        "query_pl": "SELECT loser_name, winner_name FROM matches WHERE tourney_name  =  \"Australian Open\" ORDER BY winner_rank_points DESC LIMIT 1"
+        "query_pl": "SELECT loser_name, winner_name FROM matches WHERE tourney_name  =  'Australian Open' ORDER BY winner_rank_points DESC LIMIT 1"
     },
     {
         "type": 1,
@@ -3005,7 +3005,7 @@
         "question": "How many different winners both participated in the WTA Championships and were left handed?",
         "question_pl": "Ilu różnych zwycięzców brało udział w Mistrzostwach WTA i było leworęcznych?",
         "query": "SELECT count(DISTINCT winner_name) FROM matches WHERE tourney_name  =  'WTA Championships' AND winner_hand  =  'L'",
-        "query_pl": "SELECT count(DISTINCT winner_name) FROM matches WHERE tourney_name  =  \"Mistrzostwa WTA\" AND winner_hand  =  \"L\""
+        "query_pl": "SELECT count(DISTINCT winner_name) FROM matches WHERE tourney_name  =  'Mistrzostwa WTA' AND winner_hand  =  'L'"
     },
     {
         "type": 0,
@@ -3013,7 +3013,7 @@
         "question": "Find the number of left handed winners who participated in the WTA Championships.",
         "question_pl": "Znajdź liczbę leworęcznych zwycięzców, którzy wzięli udział w Mistrzostwach WTA.",
         "query": "SELECT count(DISTINCT winner_name) FROM matches WHERE tourney_name  =  'WTA Championships' AND winner_hand  =  'L'",
-        "query_pl": "SELECT count(DISTINCT winner_name) FROM matches WHERE tourney_name  =  \"Mistrzostwa WTA\" AND winner_hand  =  \"L\""
+        "query_pl": "SELECT count(DISTINCT winner_name) FROM matches WHERE tourney_name  =  'Mistrzostwa WTA' AND winner_hand  =  'L'"
     },
     {
         "type": 1,
@@ -3069,7 +3069,7 @@
         "question": "How many first shows?",
         "question_pl": "Ile pierwszych występów?",
         "query": "SELECT count(*) FROM show where If_first_show = 'T'",
-        "query_pl": "SELECT count(*) FROM show where If_first_show = \"T\""
+        "query_pl": "SELECT count(*) FROM show where If_first_show = 'T'"
     },
     {
         "type": 4,
@@ -3077,7 +3077,7 @@
         "question": "Count the number of first show.",
         "question_pl": "Policz liczbę pierwszych pokazów.",
         "query": "SELECT count(*) FROM show where If_first_show = 'T'",
-        "query_pl": "SELECT count(*) FROM show where If_first_show = \"T\""
+        "query_pl": "SELECT count(*) FROM show where If_first_show = 'T'"
     },
     {
         "type": 2,
@@ -3101,7 +3101,7 @@
         "question": "What are the names of american conductors?",
         "question_pl": "Jak nazywają się amerykańscy dyrygenci?",
         "query": "SELECT Name FROM conductor WHERE Nationality = 'USA'",
-        "query_pl": "SELECT Name FROM conductor WHERE Nationality = \"USA\""
+        "query_pl": "SELECT Name FROM conductor WHERE Nationality = 'USA'"
     },
     {
         "type": 3,
@@ -3109,7 +3109,7 @@
         "question": "Return the names of american conductors.",
         "question_pl": "Zwróć nazwiska amerykańskich dyrygentów.",
         "query": "SELECT Name FROM conductor WHERE Nationality = 'USA'",
-        "query_pl": "SELECT Name FROM conductor WHERE Nationality = \"USA\""
+        "query_pl": "SELECT Name FROM conductor WHERE Nationality = 'USA'"
     },
     {
         "type": 2,
@@ -3133,7 +3133,7 @@
         "question": "What is the average attendance of non-first shows?",
         "question_pl": "Jaka jest średnia frekwencja na pokazach innych niż pierwsze?",
         "query": "SELECT avg(Attendance) FROM SHOW where If_first_show = 'F'",
-        "query_pl": "SELECT avg(Attendance) FROM SHOW where If_first_show = \"F\""
+        "query_pl": "SELECT avg(Attendance) FROM SHOW where If_first_show = 'F'"
     },
     {
         "type": 4,
@@ -3141,7 +3141,7 @@
         "question": "Return the average attendance across all non-first shows.",
         "question_pl": "Zwróć średnią frekwencję we wszystkich pokazach innych niż pierwsze.",
         "query": "SELECT avg(Attendance) FROM SHOW where If_first_show = 'F'",
-        "query_pl": "SELECT avg(Attendance) FROM SHOW where If_first_show = \"F\""
+        "query_pl": "SELECT avg(Attendance) FROM SHOW where If_first_show = 'F'"
     },
     {
         "type": 0,
@@ -3373,7 +3373,7 @@
         "question": "Show the type in which performance that have given more than one non-first show.",
         "question_pl": "Wskaż typ występu, w którym dano więcej niż jeden występ niepierwszy.",
         "query": "SELECT Type FROM performance AS T1 JOIN show AS T2 ON T1.Performance_ID  =  T2.Performance_ID WHERE If_first_show = 'F' GROUP BY T2.Performance_ID HAVING COUNT(*)  >  1",
-        "query_pl": "SELECT Type FROM performance AS T1 JOIN show AS T2 ON T1.Performance_ID  =  T2.Performance_ID WHERE If_first_show = \"F\" GROUP BY T2.Performance_ID HAVING COUNT(*)  >  1"
+        "query_pl": "SELECT Type FROM performance AS T1 JOIN show AS T2 ON T1.Performance_ID  =  T2.Performance_ID WHERE If_first_show = 'F' GROUP BY T2.Performance_ID HAVING COUNT(*)  >  1"
     },
     {
         "type": 4,
@@ -3381,7 +3381,7 @@
         "question": "What are type of performances that have had more than one non-first show?",
         "question_pl": "Jakie są rodzaje występów, które miały więcej niż jeden niepierwszy występ?",
         "query": "SELECT Type FROM performance AS T1 JOIN show AS T2 ON T1.Performance_ID  =  T2.Performance_ID Where If_first_show = 'F' GROUP BY T2.Performance_ID HAVING COUNT(*)  >  1",
-        "query_pl": "SELECT Type FROM performance AS T1 JOIN show AS T2 ON T1.Performance_ID  =  T2.Performance_ID Where If_first_show = \"F\" GROUP BY T2.Performance_ID HAVING COUNT(*)  >  1"
+        "query_pl": "SELECT Type FROM performance AS T1 JOIN show AS T2 ON T1.Performance_ID  =  T2.Performance_ID Where If_first_show = 'F' GROUP BY T2.Performance_ID HAVING COUNT(*)  >  1"
     },
     {
         "type": 0,
@@ -3421,7 +3421,7 @@
         "question": "Which professionals live in the state of Indiana or have done treatment on more than 2 treatments? List his or her id, last name and cell phone.",
         "question_pl": "Którzy specjaliści mieszkają w stanie Indiana lub przeprowadzili więcej niż 2 zabiegi? Wymień jego imię, nazwisko i telefon komórkowy.",
         "query": "SELECT professional_id ,  last_name ,  cell_number FROM Professionals WHERE state  =  'Indiana' UNION SELECT T1.professional_id ,  T1.last_name ,  T1.cell_number FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >  2",
-        "query_pl": "SELECT professional_id ,  last_name ,  cell_number FROM Professionals WHERE state  =  \"Indiana\" UNION SELECT T1.professional_id ,  T1.last_name ,  T1.cell_number FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >  2"
+        "query_pl": "SELECT professional_id ,  last_name ,  cell_number FROM Professionals WHERE state  =  'Indiana' UNION SELECT T1.professional_id ,  T1.last_name ,  T1.cell_number FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >  2"
     },
     {
         "type": 0,
@@ -3429,7 +3429,7 @@
         "question": "Find the id, last name and cell phone of the professionals who live in the state of Indiana or have performed more than two treatments.",
         "question_pl": "Znajdź identyfikator, nazwisko i telefon komórkowy specjalistów, którzy mieszkają w stanie Indiana lub wykonali więcej niż dwa zabiegi.",
         "query": "SELECT professional_id ,  last_name ,  cell_number FROM Professionals WHERE state  =  'Indiana' UNION SELECT T1.professional_id ,  T1.last_name ,  T1.cell_number FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >  2",
-        "query_pl": "SELECT professional_id ,  last_name ,  cell_number FROM Professionals WHERE state  =  \"Indiana\" UNION SELECT T1.professional_id ,  T1.last_name ,  T1.cell_number FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >  2"
+        "query_pl": "SELECT professional_id ,  last_name ,  cell_number FROM Professionals WHERE state  =  'Indiana' UNION SELECT T1.professional_id ,  T1.last_name ,  T1.cell_number FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >  2"
     },
     {
         "type": 0,
@@ -3693,7 +3693,7 @@
         "question": "Which dogs are owned by someone who lives in VA? List the owner's first name and the dog's name.",
         "question_pl": "Które psy są własnością kogoś, kto mieszka w VA? Wymień imię właściciela i imię psa.",
         "query": "SELECT T1.first_name ,  T2.name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  'Virginia'",
-        "query_pl": "SELECT T1.first_name ,  T2.name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  \"Wirginia\""
+        "query_pl": "SELECT T1.first_name ,  T2.name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  'Wirginia'"
     },
     {
         "type": 3,
@@ -3701,7 +3701,7 @@
         "question": "Find the first names of owners living in VA and the names of dogs they own.",
         "question_pl": "Znajdź imiona właścicieli mieszkających w VA i imiona psów, które posiadają.",
         "query": "SELECT T1.first_name ,  T2.name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  'Virginia'",
-        "query_pl": "SELECT T1.first_name ,  T2.name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  \"Wirginia\""
+        "query_pl": "SELECT T1.first_name ,  T2.name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  'Wirginia'"
     },
     {
         "type": 1,
@@ -3741,7 +3741,7 @@
         "question": "List the emails of the professionals who live in the state of HI or WI.",
         "question_pl": "Podaj adresy e-mail specjalistów, którzy mieszkają w stanie HI lub WI.",
         "query": "SELECT email_address FROM Professionals WHERE state  =  'Hawaii' OR state  =  'Wisconsin'",
-        "query_pl": "SELECT email_address FROM Professionals WHERE state  =  \"Hawaje\" OR state  =  \"Wisconsin\""
+        "query_pl": "SELECT email_address FROM Professionals WHERE state  =  'Hawaje' OR state  =  'Wisconsin'"
     },
     {
         "type": 3,
@@ -3749,7 +3749,7 @@
         "question": "What are the emails of the professionals living in either the state of HI or WI?",
         "question_pl": "Jakie są e-maile profesjonalistów mieszkających w stanie HI lub WI?",
         "query": "SELECT email_address FROM Professionals WHERE state  =  'Hawaii' OR state  =  'Wisconsin'",
-        "query_pl": "SELECT email_address FROM Professionals WHERE state  =  \"Hawaje\" OR state  =  \"Wisconsin\""
+        "query_pl": "SELECT email_address FROM Professionals WHERE state  =  'Hawaje' OR state  =  'Wisconsin'"
     },
     {
         "type": 4,

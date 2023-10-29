@@ -18,7 +18,7 @@
         "question": "Find the first name of the students who permanently live in the country Haiti.",
         "question_pl": "Znajdź imiona uczniów, którzy na stałe mieszkają w kraju Haiti.",
         "query": "SELECT T1.first_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.permanent_address_id  =  T2.address_id WHERE T2.country  =  'Haiti' ",
-        "query_pl": "SELECT T1.first_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.permanent_address_id  =  T2.address_id WHERE T2.country  =  \"Haiti\" "
+        "query_pl": "SELECT T1.first_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.permanent_address_id  =  T2.address_id WHERE T2.country  =  'Haiti' "
     },
     {
         "db_id": "concert_singer",
@@ -123,7 +123,7 @@
         "question": "delta airline is from which country?",
         "question_pl": "Linie lotnicze delta pochodzą z jakiego kraju?",
         "query": "SELECT country FROM AIRLINES where Airline = 'Delta Airlines'",
-        "query_pl": "SELECT country FROM AIRLINES where Airline = \"Delta Airlines\""
+        "query_pl": "SELECT country FROM AIRLINES where Airline = 'Delta Airlines'"
     },
     {
         "db_id": "concert_singer",
@@ -186,7 +186,7 @@
         "question": "How many students have a cat pet? ",
         "question_pl": "Ilu uczniów ma kota?",
         "query": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid = T2.stuid JOIN pets AS T3 ON T3.petid = T2.petid WHERE T3.pettype = 'cat'",
-        "query_pl": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid = T2.stuid JOIN pets AS T3 ON T3.petid = T2.petid WHERE T3.pettype = \"kot\""
+        "query_pl": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid = T2.stuid JOIN pets AS T3 ON T3.petid = T2.petid WHERE T3.pettype = 'kot'"
     },
     {
         "db_id": "flight_2",
@@ -221,7 +221,7 @@
         "question": "Can you show me a list of all of the students IDs for students who have dogs as their pet type?",
         "question_pl": "Czy możesz mi pokazać listę wszystkich identyfikatorów uczniów, którzy mają psy jako typ zwierzęcia domowego?",
         "query": "SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid = T2.stuid JOIN pets AS T3 ON T3.petid = T2.petid WHERE T3.pettype = 'dog'",
-        "query_pl": "SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid = T2.stuid JOIN pets AS T3 ON T3.petid = T2.petid WHERE T3.pettype = \"pies\""
+        "query_pl": "SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid = T2.stuid JOIN pets AS T3 ON T3.petid = T2.petid WHERE T3.pettype = 'pies'"
     },
     {
         "db_id": "world_1",
@@ -256,7 +256,7 @@
         "question": "How many different cars on this list were produced in 1974?",
         "question_pl": "Ile różnych samochodów z tej listy zostało wyprodukowanych w 1974 roku?",
         "query": "select count(*) from cars_data where year = '1974'",
-        "query_pl": "select count(*) from cars_data where year = \"1974\""
+        "query_pl": "select count(*) from cars_data where year = '1974'"
     },
     {
         "db_id": "employee_hire_evaluation",
@@ -291,7 +291,7 @@
         "question": "Can you tell me what the total number of votes are for the states of \"NY\" and \"CA\"?",
         "question_pl": "Czy możesz mi powiedzieć, jaka jest łączna liczba głosów w stanach \"NY\" i \"CA\"?",
         "query": "SELECT count(*) FROM votes WHERE state  =  'NY' or  state  =  'CA'",
-        "query_pl": "SELECT count(*) FROM votes WHERE state  =  \"NY\" or  state  =  \"CA\""
+        "query_pl": "SELECT count(*) FROM votes WHERE state  =  'NY' or  state  =  'CA'"
     },
     {
         "db_id": "poker_player",
@@ -333,7 +333,7 @@
         "question": "Can you show the SourceAirport FlightNo 28?",
         "question_pl": "Czy możesz pokazać SourceAirport FlightNo 28?",
         "query": "SELECT SourceAirport FROM Flights WHERE FlightNo = '28'",
-        "query_pl": "SELECT SourceAirport FROM Flights WHERE FlightNo = \"28\""
+        "query_pl": "SELECT SourceAirport FROM Flights WHERE FlightNo = '28'"
     },
     {
         "db_id": "student_transcripts_tracking",
@@ -410,14 +410,14 @@
         "question": "how many students are enrolled in a bachelor degree program?",
         "question_pl": "Ilu studentów jest zapisanych na studia licencjackie?",
         "query": "SELECT count(*) FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1.student_id  =  T2.student_id JOIN Degree_Programs AS T3 ON T2.degree_program_id  =  T3.degree_program_id WHERE T3.degree_summary_name  =  'Bachelor'",
-        "query_pl": "SELECT count(*) FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1.student_id  =  T2.student_id JOIN Degree_Programs AS T3 ON T2.degree_program_id  =  T3.degree_program_id WHERE T3.degree_summary_name  =  \"Licencjat\""
+        "query_pl": "SELECT count(*) FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1.student_id  =  T2.student_id JOIN Degree_Programs AS T3 ON T2.degree_program_id  =  T3.degree_program_id WHERE T3.degree_summary_name  =  'Licencjat'"
     },
     {
         "db_id": "car_1",
         "question": "How many makes are there for Chevrolet?",
         "question_pl": "Ile jest marek Chevroleta?",
         "query": "SELECT count(DISTINCT Make) FROM CAR_NAMES WHERE Model = 'chevrolet'",
-        "query_pl": "SELECT count(DISTINCT Make) FROM CAR_NAMES WHERE Model = \"chevrolet\""
+        "query_pl": "SELECT count(DISTINCT Make) FROM CAR_NAMES WHERE Model = 'chevrolet'"
     },
     {
         "db_id": "course_teach",
@@ -515,7 +515,7 @@
         "question": "how many car makers are their in germany",
         "question_pl": "Ilu producentów samochodów jest w Niemczech?",
         "query": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  'germany';",
-        "query_pl": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  \"niemcy\";"
+        "query_pl": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  'niemcy';"
     },
     {
         "db_id": "dog_kennels",
@@ -543,7 +543,7 @@
         "question": "How many battles did not lose any ship with tonnage 225?",
         "question_pl": "W ilu bitwach nie zginął żaden okręt o tonażu 225?",
         "query": "SELECT count(*) FROM battle WHERE id NOT IN ( SELECT lost_in_battle FROM ship WHERE tonnage  =  '225' );",
-        "query_pl": "SELECT count(*) FROM battle WHERE id NOT IN ( SELECT lost_in_battle FROM ship WHERE tonnage  =  \"225\" );"
+        "query_pl": "SELECT count(*) FROM battle WHERE id NOT IN ( SELECT lost_in_battle FROM ship WHERE tonnage  =  '225' );"
     },
     {
         "db_id": "car_1",
@@ -578,7 +578,7 @@
         "question": "Which TV channels do not play any cartoons by Ben Jones?  List the ids.",
         "question_pl": "Które kanały telewizyjne nie puszczają kreskówek Bena Jonesa?  Wymień ich identyfikatory.",
         "query": "SELECT id FROM TV_Channel EXCEPT SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones'",
-        "query_pl": "SELECT id FROM TV_Channel EXCEPT SELECT channel FROM cartoon WHERE directed_by  =  \"Ben Jones\""
+        "query_pl": "SELECT id FROM TV_Channel EXCEPT SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones'"
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
@@ -620,7 +620,7 @@
         "question": "What are the names of the makers who produced some cars in the year 1970?",
         "question_pl": "Jak nazywają się producenci, którzy wyprodukowali kilka samochodów w 1970 roku?",
         "query": "SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  =  '1970';",
-        "query_pl": "SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  =  \"1970\";"
+        "query_pl": "SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  =  '1970';"
     },
     {
         "db_id": "employee_hire_evaluation",
@@ -690,7 +690,7 @@
         "question": "Which country tv channels some cartoon written by todd casey?",
         "question_pl": "W którym kraju telewizja nadaje kreskówkę napisaną przez Todda Caseya?",
         "query": "SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'",
-        "query_pl": "SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  \"Todd Casey\""
+        "query_pl": "SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'"
     },
     {
         "db_id": "world_1",
@@ -711,7 +711,7 @@
         "question": "Can you please show the names of the battles that had no ships lost in the 'English Channel'?",
         "question_pl": "Czy możesz podać nazwy bitew, w których nie utracono okrętów w \"kanale La Manche\"?",
         "query": "SELECT name FROM battle EXCEPT SELECT T1.name FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.location  =  'English Channel'",
-        "query_pl": "SELECT name FROM battle EXCEPT SELECT T1.name FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.location  =  \"Kanał La Manche\""
+        "query_pl": "SELECT name FROM battle EXCEPT SELECT T1.name FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.location  =  'Kanał La Manche'"
     },
     {
         "db_id": "dog_kennels",
@@ -732,7 +732,7 @@
         "question": "How many dog owners live in Virginia?",
         "question_pl": "Ilu właścicieli psów mieszka w Wirginii?",
         "query": "SELECT count(*) FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  'Virginia'",
-        "query_pl": "SELECT count(*) FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  \"Wirginia\""
+        "query_pl": "SELECT count(*) FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  'Wirginia'"
     },
     {
         "db_id": "orchestra",
@@ -760,7 +760,7 @@
         "question": "Which semester did bachelor students enroll? List the id.",
         "question_pl": "Na który semestr zapisali się studenci studiów licencjackich? Wymień identyfikator.",
         "query": "SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  'Master'",
-        "query_pl": "SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  \"Mistrz\""
+        "query_pl": "SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  'Mistrz'"
     },
     {
         "db_id": "car_1",
@@ -774,7 +774,7 @@
         "question": "what is the age of George Chuter?",
         "question_pl": "Ile lat ma George Chuter?",
         "query": "SELECT Age from employee where Name = 'George Chuter'",
-        "query_pl": "SELECT Age from employee where Name = \"George Chuter\""
+        "query_pl": "SELECT Age from employee where Name = 'George Chuter'"
     },
     {
         "db_id": "poker_player",
@@ -795,7 +795,7 @@
         "question": "what models are produced by the make General Motors?",
         "question_pl": "Jakie modele są produkowane przez markę General Motors?",
         "query": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors'",
-        "query_pl": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  \"General Motors\""
+        "query_pl": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors'"
     },
     {
         "db_id": "poker_player",
@@ -844,7 +844,7 @@
         "question": "What are the death situations caused by the ship with tonnage 't' ?",
         "question_pl": "Jakie są sytuacje śmierci spowodowane przez statek o tonażu \"t\"?",
         "query": "SELECT T1.killed FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id = T2.id WHERE T2.tonnage = 't'",
-        "query_pl": "SELECT T1.killed FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id = T2.id WHERE T2.tonnage = \"t\""
+        "query_pl": "SELECT T1.killed FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id = T2.id WHERE T2.tonnage = 't'"
     },
     {
         "db_id": "car_1",
@@ -886,14 +886,14 @@
         "question": "WHAT IS THE ACCELERATE OF THE CAR MAKE AMC HORNET SPORTABOUT(SW)",
         "question_pl": "JAKIE JEST PRZYSPIESZENIE SAMOCHODU MARKI AMC HORNET SPORTABOUT(SW)",
         "query": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  'amc hornet sportabout (sw)';",
-        "query_pl": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  \"amc hornet sportabout (sw)\";"
+        "query_pl": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  'amc hornet sportabout (sw)';"
     },
     {
         "db_id": "world_1",
         "question": "What is the population in Asian continent?",
         "question_pl": "Jaka jest populacja na kontynencie azjatyckim?",
         "query": "SELECT sum(Population) FROM country where Continent = 'Asia'",
-        "query_pl": "SELECT sum(Population) FROM country where Continent = \"Azja\""
+        "query_pl": "SELECT sum(Population) FROM country where Continent = 'Azja'"
     },
     {
         "db_id": "concert_singer",
@@ -921,7 +921,7 @@
         "question": "how many students live in North Carolina?",
         "question_pl": "Ilu studentów mieszka w Karolinie Północnej?",
         "query": "SELECT count(*) FROM Students AS T1 JOIN Addresses AS T2 ON T1.current_address_id  =  T2.address_id WHERE T2.state_province_county  =  'NorthCarolina'",
-        "query_pl": "SELECT count(*) FROM Students AS T1 JOIN Addresses AS T2 ON T1.current_address_id  =  T2.address_id WHERE T2.state_province_county  =  \"Karolina Północna\""
+        "query_pl": "SELECT count(*) FROM Students AS T1 JOIN Addresses AS T2 ON T1.current_address_id  =  T2.address_id WHERE T2.state_province_county  =  'Karolina Północna'"
     },
     {
         "db_id": "voter_1",
@@ -956,7 +956,7 @@
         "question": "Can you tell me the ID of the american motor company ?",
         "question_pl": "Czy możesz mi podać identyfikator amerykańskiej firmy motoryzacyjnej?",
         "query": "SELECT Id FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker WHERE T1.FullName  =  'American Motor Company';",
-        "query_pl": "SELECT Id FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker WHERE T1.FullName  =  \"American Motor Company\";"
+        "query_pl": "SELECT Id FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker WHERE T1.FullName  =  'American Motor Company';"
     },
     {
         "db_id": "course_teach",
@@ -977,7 +977,7 @@
         "question": "IN WHAT LANGUAGE SKY MUSIC AVAILABLE?",
         "question_pl": "W JAKIM JĘZYKU DOSTĘPNA JEST MUZYKA Z NIEBA?",
         "query": "SELECT Language FROM TV_Channel where series_name = 'Sky Music'",
-        "query_pl": "SELECT Language FROM TV_Channel where series_name = \"Sky Music\""
+        "query_pl": "SELECT Language FROM TV_Channel where series_name = 'Sky Music'"
     },
     {
         "db_id": "tvshow",
@@ -1054,7 +1054,7 @@
         "question": "Hey can you tell me the average age for cats?",
         "question_pl": "Hej, możesz mi podać średni wiek kotów?",
         "query": "SELECT avg(pet_age) FROM pets WHERE PetType = 'cat'",
-        "query_pl": "SELECT avg(pet_age) FROM pets WHERE PetType = \"kot\""
+        "query_pl": "SELECT avg(pet_age) FROM pets WHERE PetType = 'kot'"
     },
     {
         "db_id": "dog_kennels",
@@ -1103,7 +1103,7 @@
         "question": "Please list the emails of all the professionals who live in the state of Hawaii?",
         "question_pl": "Podaj adresy e-mail wszystkich profesjonalistów mieszkających na Hawajach.",
         "query": "SELECT email_address FROM Professionals WHERE state  =  'Hawaii' ",
-        "query_pl": "SELECT email_address FROM Professionals WHERE state  =  \"Hawaje\" "
+        "query_pl": "SELECT email_address FROM Professionals WHERE state  =  'Hawaje' "
     },
     {
         "db_id": "student_transcripts_tracking",
@@ -1194,7 +1194,7 @@
         "question": "Which models are manufactured by the maker with the name \"General Motors\"?",
         "question_pl": "Które modele są produkowane przez producenta o nazwie \"General Motors\"?",
         "query": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors'",
-        "query_pl": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  \"General Motors\""
+        "query_pl": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors'"
     },
     {
         "db_id": "network_1",
@@ -1355,7 +1355,7 @@
         "question": "Can you provide me with a list of all cartoons written by Todd Casey?",
         "question_pl": "Czy możesz podać mi listę wszystkich komiksów napisanych przez Todda Caseya?",
         "query": "select * from Cartoon where Written_by = 'Todd Casey'",
-        "query_pl": "select * from Cartoon where Written_by = \"Todd Casey\""
+        "query_pl": "select * from Cartoon where Written_by = 'Todd Casey'"
     },
     {
         "db_id": "museum_visit",
@@ -1453,7 +1453,7 @@
         "question": "Could you tell me the last names of all the students who live in the state of North Carolina?",
         "question_pl": "Czy możesz podać nazwiska wszystkich uczniów mieszkających w stanie Karolina Północna?",
         "query": "SELECT T1.last_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.current_address_id  =  T2.address_id WHERE T2.state_province_county  =  'NorthCarolina' ",
-        "query_pl": "SELECT T1.last_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.current_address_id  =  T2.address_id WHERE T2.state_province_county  =  \"Karolina Północna\" "
+        "query_pl": "SELECT T1.last_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.current_address_id  =  T2.address_id WHERE T2.state_province_county  =  'Karolina Północna' "
     },
     {
         "db_id": "wta_1",
@@ -1488,7 +1488,7 @@
         "question": "Which countries are in europe?",
         "question_pl": "Które kraje są w Europie?",
         "query": "SELECT distinct T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europe'",
-        "query_pl": "SELECT distinct T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  \"europa\""
+        "query_pl": "SELECT distinct T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europa'"
     },
     {
         "db_id": "museum_visit",
@@ -1544,7 +1544,7 @@
         "question": "which countries tv channels are not playing any cartoon written todd casey",
         "question_pl": "W których krajach kanały telewizyjne nie puszczają żadnych kreskówek napisał todd casey",
         "query": "SELECT country FROM TV_Channel EXCEPT SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'",
-        "query_pl": "SELECT country FROM TV_Channel EXCEPT SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  \"Todd Casey\""
+        "query_pl": "SELECT country FROM TV_Channel EXCEPT SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'"
     },
     {
         "db_id": "concert_singer",
@@ -1558,7 +1558,7 @@
         "question": "What number of students have a dog as a pet?",
         "question_pl": "Ilu studentów ma psa jako zwierzę domowe?",
         "query": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog'",
-        "query_pl": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"pies\""
+        "query_pl": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'pies'"
     },
     {
         "db_id": "dog_kennels",

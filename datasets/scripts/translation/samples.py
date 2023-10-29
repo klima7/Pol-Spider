@@ -40,10 +40,11 @@ def _find_tokens_to_translate(statement):
 
 
 def _translate_token(token):
-    assert "'" in token.value or '"' in token.value
+    quote = token.value[0]
+    assert quote in ['"', "'"]
     value_en = token.value.strip("'\" ")
     value_pl = translate_phrase(value_en)
-    token.value = f'"{value_pl}"'
+    token.value = f'{quote}{value_pl}{quote}'
 
 
 def _translate_quotes(sentence):

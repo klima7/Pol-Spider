@@ -403,14 +403,14 @@
         "question": "What are the ids of all female students?",
         "question_pl": "Jakie są identyfikatory wszystkich studentek?",
         "query": "SELECT StuID FROM Student WHERE sex  =  'F'",
-        "query_pl": "SELECT StuID FROM Student WHERE sex  =  \"F\""
+        "query_pl": "SELECT StuID FROM Student WHERE sex  =  'F'"
     },
     {
         "db_id": "game_1",
         "question": "What are the ids of all the students?",
         "question_pl": "Jakie są identyfikatory wszystkich uczniów?",
         "query": "SELECT StuID FROM Student WHERE sex  =  'M'",
-        "query_pl": "SELECT StuID FROM Student WHERE sex  =  \"M\""
+        "query_pl": "SELECT StuID FROM Student WHERE sex  =  'M'"
     },
     {
         "db_id": "game_1",
@@ -494,7 +494,7 @@
         "question": "Which classrooms are not in Lamberton?",
         "question_pl": "Których sal lekcyjnych nie ma w Lamberton?",
         "query": "SELECT * FROM classroom WHERE building ! =  'Lamberton'",
-        "query_pl": "SELECT * FROM classroom WHERE building ! =  \"Lamberton\""
+        "query_pl": "SELECT * FROM classroom WHERE building ! =  'Lamberton'"
     },
     {
         "db_id": "college_2",
@@ -522,14 +522,14 @@
         "question": "What are the names of students in the History department?",
         "question_pl": "Jak nazywają się studenci na wydziale historii?",
         "query": "SELECT name FROM student WHERE dept_name  =  'History'",
-        "query_pl": "SELECT name FROM student WHERE dept_name  =  \"Historia\""
+        "query_pl": "SELECT name FROM student WHERE dept_name  =  'Historia'"
     },
     {
         "db_id": "college_2",
         "question": "What are all the classrooms in Lamberton?",
         "question_pl": "Jakie są wszystkie sale lekcyjne w Lamberton?",
         "query": "SELECT * FROM classroom WHERE building  =  'Lamberton'",
-        "query_pl": "SELECT * FROM classroom WHERE building  =  \"Lamberton\""
+        "query_pl": "SELECT * FROM classroom WHERE building  =  'Lamberton'"
     },
     {
         "db_id": "college_2",
@@ -550,7 +550,7 @@
         "question": "What are all the courses in the Physics department?",
         "question_pl": "Jakie są wszystkie kursy na wydziale fizyki?",
         "query": "SELECT * FROM course WHERE dept_name  =  'Physics'",
-        "query_pl": "SELECT * FROM course WHERE dept_name  =  \"Fizyka\""
+        "query_pl": "SELECT * FROM course WHERE dept_name  =  'Fizyka'"
     },
     {
         "db_id": "college_2",
@@ -592,7 +592,7 @@
         "question": "What are the budgets of the Marketing department?",
         "question_pl": "Jakie są budżety działu marketingu?",
         "query": "SELECT budget FROM department WHERE dept_name  =  'Marketing'",
-        "query_pl": "SELECT budget FROM department WHERE dept_name  =  \"Marketing\""
+        "query_pl": "SELECT budget FROM department WHERE dept_name  =  'Marketing'"
     },
     {
         "db_id": "college_2",
@@ -606,28 +606,28 @@
         "question": "How many rooms are there in Lamberton?",
         "question_pl": "Ile jest pokoi w obiekcie Lamberton?",
         "query": "SELECT count(*) FROM classroom WHERE building  =  'Lamberton'",
-        "query_pl": "SELECT count(*) FROM classroom WHERE building  =  \"Lamberton\""
+        "query_pl": "SELECT count(*) FROM classroom WHERE building  =  'Lamberton'"
     },
     {
         "db_id": "college_2",
         "question": "What are the names of the professors in the Statistics department?",
         "question_pl": "Jak nazywają się profesorowie w dziale statystyki?",
         "query": "SELECT name FROM instructor WHERE dept_name  =  'Statistics'",
-        "query_pl": "SELECT name FROM instructor WHERE dept_name  =  \"Statystyki\""
+        "query_pl": "SELECT name FROM instructor WHERE dept_name  =  'Statystyki'"
     },
     {
         "db_id": "college_2",
         "question": "What are the titles of Statistics courses?",
         "question_pl": "Jakie są tytuły kursów statystyki?",
         "query": "SELECT title FROM course WHERE dept_name  =  'Statistics'",
-        "query_pl": "SELECT title FROM course WHERE dept_name  =  \"Statystyki\""
+        "query_pl": "SELECT title FROM course WHERE dept_name  =  'Statystyki'"
     },
     {
         "db_id": "college_2",
         "question": "What are the ids of instructors who taught in the Fall of 2009?",
         "question_pl": "Jakie są identyfikatory instruktorów, którzy prowadzili zajęcia jesienią 2009 roku?",
         "query": "SELECT id FROM teaches WHERE semester  =  'Fall' AND YEAR  =  2009",
-        "query_pl": "SELECT id FROM teaches WHERE semester  =  \"Upadek\" AND YEAR  =  2009"
+        "query_pl": "SELECT id FROM teaches WHERE semester  =  'Upadek' AND YEAR  =  2009"
     },
     {
         "db_id": "college_2",
@@ -809,14 +809,14 @@
         "question": "What are the ids of students who took courses in the Fall of 2003?",
         "question_pl": "Jakie są identyfikatory studentów, którzy uczestniczyli w kursach jesienią 2003 roku?",
         "query": "SELECT id FROM takes WHERE semester  =  'Fall' AND YEAR  =  2003",
-        "query_pl": "SELECT id FROM takes WHERE semester  =  \"Upadek\" AND YEAR  =  2003"
+        "query_pl": "SELECT id FROM takes WHERE semester  =  'Upadek' AND YEAR  =  2003"
     },
     {
         "db_id": "college_2",
         "question": "What are the titles of courses offered in the Fall of 2010?",
         "question_pl": "Jakie są tytuły kursów oferowanych jesienią 2010 roku?",
         "query": "SELECT T1.title FROM course AS T1 JOIN SECTION AS T2 ON T1.course_id  =  T2.course_id WHERE semester  =  'Fall' AND YEAR  =  2010",
-        "query_pl": "SELECT T1.title FROM course AS T1 JOIN SECTION AS T2 ON T1.course_id  =  T2.course_id WHERE semester  =  \"Upadek\" AND YEAR  =  2010"
+        "query_pl": "SELECT T1.title FROM course AS T1 JOIN SECTION AS T2 ON T1.course_id  =  T2.course_id WHERE semester  =  'Upadek' AND YEAR  =  2010"
     },
     {
         "db_id": "college_2",
@@ -837,7 +837,7 @@
         "question": "What are the ids of advisors who advise students in the Math department?",
         "question_pl": "Jakie są identyfikatory doradców, którzy doradzają studentom na wydziale matematyki?",
         "query": "SELECT T1.i_id FROM advisor AS T1 JOIN student AS T2 ON T1.s_id  =  T2.id WHERE T2.dept_name  =  'Math'",
-        "query_pl": "SELECT T1.i_id FROM advisor AS T1 JOIN student AS T2 ON T1.s_id  =  T2.id WHERE T2.dept_name  =  \"Matematyka\""
+        "query_pl": "SELECT T1.i_id FROM advisor AS T1 JOIN student AS T2 ON T1.s_id  =  T2.id WHERE T2.dept_name  =  'Matematyka'"
     },
     {
         "db_id": "college_2",
@@ -865,7 +865,7 @@
         "question": "What are the ids of teachers who taught in the Spring?",
         "question_pl": "Jakie są identyfikatory nauczycieli, którzy uczyli wiosną?",
         "query": "SELECT id FROM teaches WHERE semester  =  'Spring'",
-        "query_pl": "SELECT id FROM teaches WHERE semester  =  \"Wiosna\""
+        "query_pl": "SELECT id FROM teaches WHERE semester  =  'Wiosna'"
     },
     {
         "db_id": "college_2",
@@ -886,7 +886,7 @@
         "question": "Which students have taken Biology courses?",
         "question_pl": "Którzy studenci uczestniczyli w kursach biologii?",
         "query": "SELECT * FROM takes AS T1 JOIN course AS T2 ON T1.course_id  =  T2.course_id WHERE T2.dept_name  =  'Biology'",
-        "query_pl": "SELECT * FROM takes AS T1 JOIN course AS T2 ON T1.course_id  =  T2.course_id WHERE T2.dept_name  =  \"Biologia\""
+        "query_pl": "SELECT * FROM takes AS T1 JOIN course AS T2 ON T1.course_id  =  T2.course_id WHERE T2.dept_name  =  'Biologia'"
     },
     {
         "db_id": "college_2",
@@ -900,28 +900,28 @@
         "question": "What is the id of the prerequisite of International Finance?",
         "question_pl": "Jaki jest warunek wstępny na kierunku Finanse Międzynarodowe?",
         "query": "SELECT T2.prereq_id FROM course AS T1 JOIN prereq AS T2 ON T1.course_id  =  T2.course_id WHERE T1.title  =  'International Finance'",
-        "query_pl": "SELECT T2.prereq_id FROM course AS T1 JOIN prereq AS T2 ON T1.course_id  =  T2.course_id WHERE T1.title  =  \"Finanse międzynarodowe\""
+        "query_pl": "SELECT T2.prereq_id FROM course AS T1 JOIN prereq AS T2 ON T1.course_id  =  T2.course_id WHERE T1.title  =  'Finanse międzynarodowe'"
     },
     {
         "db_id": "college_2",
         "question": "What is the average salary of instructors in the Physics department?",
         "question_pl": "Jakie jest średnie wynagrodzenie instruktorów na wydziale fizyki?",
         "query": "SELECT avg(salary) FROM instructor WHERE dept_name  =  'Physics'",
-        "query_pl": "SELECT avg(salary) FROM instructor WHERE dept_name  =  \"Fizyka\""
+        "query_pl": "SELECT avg(salary) FROM instructor WHERE dept_name  =  'Fizyka'"
     },
     {
         "db_id": "college_2",
         "question": "What is all the information about the Statistics courses?",
         "question_pl": "Jakie są wszystkie informacje o kursach statystyki?",
         "query": "SELECT * FROM course WHERE dept_name  =  'Statistics'",
-        "query_pl": "SELECT * FROM course WHERE dept_name  =  \"Statystyki\""
+        "query_pl": "SELECT * FROM course WHERE dept_name  =  'Statystyki'"
     },
     {
         "db_id": "college_2",
         "question": "What is all the information about the courses in the Psychology department, ordered by title?",
         "question_pl": "Jakie są wszystkie informacje o kursach na wydziale psychologii, uporządkowane według tytułów?",
         "query": "SELECT * FROM course WHERE dept_name  =  'Psychology' ORDER BY title",
-        "query_pl": "SELECT * FROM course WHERE dept_name  =  \"Psychologia\" ORDER BY title"
+        "query_pl": "SELECT * FROM course WHERE dept_name  =  'Psychologia' ORDER BY title"
     },
     {
         "db_id": "college_2",
@@ -963,14 +963,14 @@
         "question": "What are the ids for courses offered in the Fall of 2009?",
         "question_pl": "Jakie są identyfikatory kursów oferowanych jesienią 2009 roku?",
         "query": "SELECT course_id FROM SECTION WHERE semester  =  'Fall' AND YEAR  =  2009",
-        "query_pl": "SELECT course_id FROM SECTION WHERE semester  =  \"Upadek\" AND YEAR  =  2009"
+        "query_pl": "SELECT course_id FROM SECTION WHERE semester  =  'Upadek' AND YEAR  =  2009"
     },
     {
         "db_id": "college_2",
         "question": "What are the ids of courses offered in the Fall of 2009?",
         "question_pl": "Jakie są numery kursów oferowanych jesienią 2009 roku?",
         "query": "SELECT course_id FROM SECTION WHERE semester  =  'Fall' AND YEAR  =  2009",
-        "query_pl": "SELECT course_id FROM SECTION WHERE semester  =  \"Upadek\" AND YEAR  =  2009"
+        "query_pl": "SELECT course_id FROM SECTION WHERE semester  =  'Upadek' AND YEAR  =  2009"
     },
     {
         "db_id": "college_2",
@@ -984,7 +984,7 @@
         "question": "What are the distinct ids of instructors teaching in the Spring of 2010?",
         "question_pl": "Jakie są identyfikatory instruktorów prowadzących zajęcia wiosną 2010 roku?",
         "query": "SELECT DISTINCT ID FROM teaches WHERE semester  =  'Spring' AND YEAR  =  2010",
-        "query_pl": "SELECT DISTINCT ID FROM teaches WHERE semester  =  \"Wiosna\" AND YEAR  =  2010"
+        "query_pl": "SELECT DISTINCT ID FROM teaches WHERE semester  =  'Wiosna' AND YEAR  =  2010"
     },
     {
         "db_id": "college_2",
@@ -998,14 +998,14 @@
         "question": "What is the lowest salary of instructors in the Biology department?",
         "question_pl": "Jakie jest najniższe wynagrodzenie instruktorów na wydziale biologii?",
         "query": "SELECT min(salary) FROM instructor WHERE dept_name  =  'Biology'",
-        "query_pl": "SELECT min(salary) FROM instructor WHERE dept_name  =  \"Biologia\""
+        "query_pl": "SELECT min(salary) FROM instructor WHERE dept_name  =  'Biologia'"
     },
     {
         "db_id": "college_2",
         "question": "What is the highest salary of instructors in the Biology department?",
         "question_pl": "Jakie jest najwyższe wynagrodzenie instruktorów na wydziale biologii?",
         "query": "SELECT max(salary) FROM instructor WHERE dept_name  =  'Biology'",
-        "query_pl": "SELECT max(salary) FROM instructor WHERE dept_name  =  \"Biologia\""
+        "query_pl": "SELECT max(salary) FROM instructor WHERE dept_name  =  'Biologia'"
     },
     {
         "db_id": "college_1",
@@ -1040,7 +1040,7 @@
         "question": "Give all details about the professor with the last name Graztevski?",
         "question_pl": "Podaj wszystkie szczegóły dotyczące profesora o nazwisku Graztevski?",
         "query": "SELECT * FROM employee WHERE EMP_LNAME  =  'Graztevski'",
-        "query_pl": "SELECT * FROM employee WHERE EMP_LNAME  =  \"Graztevski\""
+        "query_pl": "SELECT * FROM employee WHERE EMP_LNAME  =  'Graztevski'"
     },
     {
         "db_id": "college_1",
@@ -1068,7 +1068,7 @@
         "question": "What are the names of departments in the school with the code BUS?",
         "question_pl": "Jakie są nazwy działów w szkole z kodem BUS?",
         "query": "SELECT DEPT_NAME FROM department WHERE school_code  =  'BUS'",
-        "query_pl": "SELECT DEPT_NAME FROM department WHERE school_code  =  \"BUS\""
+        "query_pl": "SELECT DEPT_NAME FROM department WHERE school_code  =  'BUS'"
     },
     {
         "db_id": "college_1",
@@ -1145,7 +1145,7 @@
         "question": "How many professors do have a Ph.D.?",
         "question_pl": "Ilu profesorów ma tytuł doktora?",
         "query": "SELECT count(*) FROM professor WHERE prof_high_degree  =  'Ph.D.'",
-        "query_pl": "SELECT count(*) FROM professor WHERE prof_high_degree  =  \"Ph.D.\""
+        "query_pl": "SELECT count(*) FROM professor WHERE prof_high_degree  =  'Ph.D.'"
     },
     {
         "db_id": "college_1",
@@ -1236,14 +1236,14 @@
         "question": "Can you tell me about course ACCT-211?",
         "question_pl": "Czy możesz mi opowiedzieć o kursie ACCT-211?",
         "query": "SELECT * FROM CLASS WHERE crs_code  =  'ACCT-211'",
-        "query_pl": "SELECT * FROM CLASS WHERE crs_code  =  \"ACCT-211\""
+        "query_pl": "SELECT * FROM CLASS WHERE crs_code  =  'ACCT-211'"
     },
     {
         "db_id": "college_1",
         "question": "Which students were enrollment in the course ACCT-211?",
         "question_pl": "Którzy studenci byli zapisani na kurs ACCT-211?",
         "query": "SELECT * FROM CLASS AS T1 JOIN enroll AS T2 ON T1.class_code  =  T2.class_code JOIN student AS T3 ON T2.stu_num  =  T3.stu_num WHERE T1.crs_code  =  'ACCT-211'",
-        "query_pl": "SELECT * FROM CLASS AS T1 JOIN enroll AS T2 ON T1.class_code  =  T2.class_code JOIN student AS T3 ON T2.stu_num  =  T3.stu_num WHERE T1.crs_code  =  \"ACCT-211\""
+        "query_pl": "SELECT * FROM CLASS AS T1 JOIN enroll AS T2 ON T1.class_code  =  T2.class_code JOIN student AS T3 ON T2.stu_num  =  T3.stu_num WHERE T1.crs_code  =  'ACCT-211'"
     },
     {
         "db_id": "college_1",
@@ -1264,7 +1264,7 @@
         "question": "Find the all info about the accounting department.",
         "question_pl": "Znajdź wszystkie informacje o dziale księgowości.",
         "query": "SELECT * FROM department WHERE dept_name  =  'Accounting'",
-        "query_pl": "SELECT * FROM department WHERE dept_name  =  \"Księgowość\""
+        "query_pl": "SELECT * FROM department WHERE dept_name  =  'Księgowość'"
     },
     {
         "db_id": "college_1",
@@ -1320,7 +1320,7 @@
         "question": "What are the student ids of all students who received an enrollment grade of C?",
         "question_pl": "Jakie są identyfikatory wszystkich studentów, którzy otrzymali ocenę C?",
         "query": "SELECT stu_num FROM enroll WHERE enroll_grade  =  'C'",
-        "query_pl": "SELECT stu_num FROM enroll WHERE enroll_grade  =  \"C\""
+        "query_pl": "SELECT stu_num FROM enroll WHERE enroll_grade  =  'C'"
     },
     {
         "db_id": "college_1",
@@ -1334,14 +1334,14 @@
         "question": "Which professors do have a Ph.D. degree?",
         "question_pl": "Którzy profesorowie mają stopień doktora?",
         "query": "SELECT * FROM professor WHERE prof_high_degree  =  'Ph.D.'",
-        "query_pl": "SELECT * FROM professor WHERE prof_high_degree  =  \"Ph.D.\""
+        "query_pl": "SELECT * FROM professor WHERE prof_high_degree  =  'Ph.D.'"
     },
     {
         "db_id": "college_1",
         "question": "What is the first names of employees whose job code is PROF?",
         "question_pl": "Jakie są imiona pracowników, których kod stanowiska to PROF?",
         "query": "SELECT emp_fname FROM employee WHERE emp_jobcode  =  'PROF'",
-        "query_pl": "SELECT emp_fname FROM employee WHERE emp_jobcode  =  \"PROF\""
+        "query_pl": "SELECT emp_fname FROM employee WHERE emp_jobcode  =  'PROF'"
     },
     {
         "db_id": "college_1",
@@ -1355,21 +1355,21 @@
         "question": "What is all the information about the history department?",
         "question_pl": "Jakie są wszystkie informacje na temat działu historycznego?",
         "query": "SELECT * FROM department WHERE dept_name  =  'History'",
-        "query_pl": "SELECT * FROM department WHERE dept_name  =  \"Historia\""
+        "query_pl": "SELECT * FROM department WHERE dept_name  =  'Historia'"
     },
     {
         "db_id": "college_1",
         "question": "Find me all employees with the last name 'Heffington'?",
         "question_pl": "Znajdź wszystkich pracowników o nazwisku \"Heffington\"?",
         "query": "SELECT * FROM employee WHERE emp_lname  =  'Heffington'",
-        "query_pl": "SELECT * FROM employee WHERE emp_lname  =  \"Heffington\""
+        "query_pl": "SELECT * FROM employee WHERE emp_lname  =  'Heffington'"
     },
     {
         "db_id": "college_1",
         "question": "Find the professors whose office is located in room DRE 102?",
         "question_pl": "Znajdź profesorów, których biuro znajduje się w pokoju DRE 102?",
         "query": "SELECT * FROM professor WHERE prof_office  =  'DRE 102'",
-        "query_pl": "SELECT * FROM professor WHERE prof_office  =  \"DRE 102\""
+        "query_pl": "SELECT * FROM professor WHERE prof_office  =  'DRE 102'"
     },
     {
         "db_id": "college_1",
@@ -1390,28 +1390,28 @@
         "question": "What information do you have on professors who got a Ph.D.?",
         "question_pl": "Jakie masz informacje na temat profesorów, którzy uzyskali tytuł doktora?",
         "query": "SELECT * FROM professor WHERE prof_high_degree  =  'Ph.D.'",
-        "query_pl": "SELECT * FROM professor WHERE prof_high_degree  =  \"Ph.D.\""
+        "query_pl": "SELECT * FROM professor WHERE prof_high_degree  =  'Ph.D.'"
     },
     {
         "db_id": "college_1",
         "question": "What information do you have on professors in the Accounting department?",
         "question_pl": "Jakie masz informacje na temat profesorów w dziale księgowości?",
         "query": "SELECT * FROM professor AS T1 JOIN department AS T2 ON T1.dept_code  =  T2.dept_code WHERE T2.dept_name  =  'Accounting'",
-        "query_pl": "SELECT * FROM professor AS T1 JOIN department AS T2 ON T1.dept_code  =  T2.dept_code WHERE T2.dept_name  =  \"Księgowość\""
+        "query_pl": "SELECT * FROM professor AS T1 JOIN department AS T2 ON T1.dept_code  =  T2.dept_code WHERE T2.dept_name  =  'Księgowość'"
     },
     {
         "db_id": "college_1",
         "question": "What are the first names of all professors teaching CIS-220?",
         "question_pl": "Jak nazywają się wszyscy profesorowie prowadzący zajęcia z przedmiotu CIS-220?",
         "query": "SELECT T1.emp_fname FROM employee AS T1 JOIN CLASS AS T2 ON T1.emp_num  =  T2.prof_num WHERE crs_code  =  'CIS-220'",
-        "query_pl": "SELECT T1.emp_fname FROM employee AS T1 JOIN CLASS AS T2 ON T1.emp_num  =  T2.prof_num WHERE crs_code  =  \"CIS-220\""
+        "query_pl": "SELECT T1.emp_fname FROM employee AS T1 JOIN CLASS AS T2 ON T1.emp_num  =  T2.prof_num WHERE crs_code  =  'CIS-220'"
     },
     {
         "db_id": "college_1",
         "question": "What are the first names of all students taking some classes from the Accounting department?",
         "question_pl": "Jak nazywają się wszyscy studenci biorący udział w zajęciach z działu księgowości?",
         "query": "SELECT T1.stu_fname FROM student AS T1 JOIN enroll AS T2 ON T1.stu_num  =  T2.stu_num JOIN CLASS AS T3 ON T2.class_code  =  T3.class_code JOIN course AS T4 ON T3.crs_code  =  T4.crs_code JOIN department AS T5 ON T5.dept_code  =  T4.dept_code WHERE T5.dept_name  =  'Accounting'",
-        "query_pl": "SELECT T1.stu_fname FROM student AS T1 JOIN enroll AS T2 ON T1.stu_num  =  T2.stu_num JOIN CLASS AS T3 ON T2.class_code  =  T3.class_code JOIN course AS T4 ON T3.crs_code  =  T4.crs_code JOIN department AS T5 ON T5.dept_code  =  T4.dept_code WHERE T5.dept_name  =  \"Księgowość\""
+        "query_pl": "SELECT T1.stu_fname FROM student AS T1 JOIN enroll AS T2 ON T1.stu_num  =  T2.stu_num JOIN CLASS AS T3 ON T2.class_code  =  T3.class_code JOIN course AS T4 ON T3.crs_code  =  T4.crs_code JOIN department AS T5 ON T5.dept_code  =  T4.dept_code WHERE T5.dept_name  =  'Księgowość'"
     },
     {
         "db_id": "college_1",
@@ -1460,7 +1460,7 @@
         "question": "Which professors do have a Ph.D.?",
         "question_pl": "Którzy profesorowie mają tytuł doktora?",
         "query": "SELECT * FROM professor WHERE prof_high_degree  =  'Ph.D.'",
-        "query_pl": "SELECT * FROM professor WHERE prof_high_degree  =  \"Ph.D.\""
+        "query_pl": "SELECT * FROM professor WHERE prof_high_degree  =  'Ph.D.'"
     },
     {
         "db_id": "college_1",
@@ -1502,7 +1502,7 @@
         "question": "Which students did receive an A in any courses?",
         "question_pl": "Którzy uczniowie otrzymali piątkę z jakiegokolwiek przedmiotu?",
         "query": "SELECT * FROM student AS T1 JOIN enroll AS T2 ON T1.stu_num  =  T2.stu_num WHERE T2.enroll_grade  =  'A'",
-        "query_pl": "SELECT * FROM student AS T1 JOIN enroll AS T2 ON T1.stu_num  =  T2.stu_num WHERE T2.enroll_grade  =  \"A\""
+        "query_pl": "SELECT * FROM student AS T1 JOIN enroll AS T2 ON T1.stu_num  =  T2.stu_num WHERE T2.enroll_grade  =  'A'"
     },
     {
         "db_id": "college_1",
@@ -1565,7 +1565,7 @@
         "question": "Find all the modern rooms.",
         "question_pl": "Znajdź wszystkie nowoczesne pokoje.",
         "query": "SELECT * FROM Rooms WHERE decor  =  'modern'",
-        "query_pl": "SELECT * FROM Rooms WHERE decor  =  \"nowoczesny\""
+        "query_pl": "SELECT * FROM Rooms WHERE decor  =  'nowoczesny'"
     },
     {
         "db_id": "inn_1",
@@ -1614,7 +1614,7 @@
         "question": "Return all the rooms with king beds.",
         "question_pl": "Zwróć wszystkie pokoje z łóżkami typu king-size.",
         "query": "SELECT * FROM Rooms WHERE bedtype  =  'King';",
-        "query_pl": "SELECT * FROM Rooms WHERE bedtype  =  \"Król\";"
+        "query_pl": "SELECT * FROM Rooms WHERE bedtype  =  'Król';"
     },
     {
         "db_id": "inn_1",
@@ -1642,7 +1642,7 @@
         "question": "For each modern room, find the maximum number of people who can stay in.",
         "question_pl": "Dla każdego nowoczesnego pokoju znajdź maksymalną liczbę osób, które mogą w nim przebywać.",
         "query": "SELECT maxOccupancy FROM Rooms WHERE decor  =  'modern';",
-        "query_pl": "SELECT maxOccupancy FROM Rooms WHERE decor  =  \"nowoczesny\";"
+        "query_pl": "SELECT maxOccupancy FROM Rooms WHERE decor  =  'nowoczesny';"
     },
     {
         "db_id": "inn_1",
@@ -1873,14 +1873,14 @@
         "question": "Who are the female students?",
         "question_pl": "Kim są studentki?",
         "query": "SELECT * FROM Student WHERE Sex  =  'F'",
-        "query_pl": "SELECT * FROM Student WHERE Sex  =  \"F\""
+        "query_pl": "SELECT * FROM Student WHERE Sex  =  'F'"
     },
     {
         "db_id": "allergy_1",
         "question": "Which students are male?",
         "question_pl": "Którzy uczniowie są płci męskiej?",
         "query": "SELECT * FROM Student WHERE Sex  =  'M'",
-        "query_pl": "SELECT * FROM Student WHERE Sex  =  \"M\""
+        "query_pl": "SELECT * FROM Student WHERE Sex  =  'M'"
     },
     {
         "db_id": "allergy_1",
@@ -2055,7 +2055,7 @@
         "question": "Who are all the male students?",
         "question_pl": "Kim są wszyscy studenci płci męskiej?",
         "query": "SELECT * FROM Student WHERE sex  =  'M'",
-        "query_pl": "SELECT * FROM Student WHERE sex  =  \"M\""
+        "query_pl": "SELECT * FROM Student WHERE sex  =  'M'"
     },
     {
         "db_id": "allergy_1",
@@ -2251,7 +2251,7 @@
         "question": "Which customers use email as the contact channel?",
         "question_pl": "Którzy klienci korzystają z poczty e-mail jako kanału kontaktu?",
         "query": "SELECT * FROM customer_contact_channels WHERE channel_code  =  'Email'",
-        "query_pl": "SELECT * FROM customer_contact_channels WHERE channel_code  =  \"Email\""
+        "query_pl": "SELECT * FROM customer_contact_channels WHERE channel_code  =  'Email'"
     },
     {
         "db_id": "customers_and_addresses",
@@ -2321,7 +2321,7 @@
         "question": "Find all the customer orders that made before 2018-03-17 07:13:53.",
         "question_pl": "Znajdź wszystkie zamówienia klientów złożone przed 2018-03-17 07:13:53.",
         "query": "SELECT * FROM customer_orders WHERE order_date  <  '2018-03-17 07:13:53'",
-        "query_pl": "SELECT * FROM customer_orders WHERE order_date  <  \"2018-03-17 07:13:53\""
+        "query_pl": "SELECT * FROM customer_orders WHERE order_date  <  '2018-03-17 07:13:53'"
     },
     {
         "db_id": "customers_and_addresses",
@@ -2377,7 +2377,7 @@
         "question": "List the names of customers who have purchased Latte.",
         "question_pl": "Wymień nazwiska klientów, którzy kupili Latte.",
         "query": "SELECT t1.customer_name FROM customers AS t1 JOIN customer_orders AS t2 ON t1.customer_id  =  t2.customer_id JOIN order_items AS t3 ON t2.order_id  =  t3.order_id JOIN products AS t4 ON t3.product_id  =  t4.product_id WHERE product_details  =  'Latte'",
-        "query_pl": "SELECT t1.customer_name FROM customers AS t1 JOIN customer_orders AS t2 ON t1.customer_id  =  t2.customer_id JOIN order_items AS t3 ON t2.order_id  =  t3.order_id JOIN products AS t4 ON t3.product_id  =  t4.product_id WHERE product_details  =  \"Latte\""
+        "query_pl": "SELECT t1.customer_name FROM customers AS t1 JOIN customer_orders AS t2 ON t1.customer_id  =  t2.customer_id JOIN order_items AS t3 ON t2.order_id  =  t3.order_id JOIN products AS t4 ON t3.product_id  =  t4.product_id WHERE product_details  =  'Latte'"
     },
     {
         "db_id": "hr_1",
@@ -2419,7 +2419,7 @@
         "question": "Which employees do not have the letter M in their first names?",
         "question_pl": "Którzy pracownicy nie mają litery M w swoich imionach?",
         "query": "SELECT * FROM employees WHERE first_name NOT LIKE '%M%'",
-        "query_pl": "SELECT * FROM employees WHERE first_name NOT LIKE \"%M%\""
+        "query_pl": "SELECT * FROM employees WHERE first_name NOT LIKE '%M%'"
     },
     {
         "db_id": "hr_1",
@@ -2440,7 +2440,7 @@
         "question": "Which employees were hired between November 5th, 2007 and July 5th, 2009?",
         "question_pl": "Którzy pracownicy zostali zatrudnieni w okresie od 5 listopada 2007 r. do 5 lipca 2009 r.?",
         "query": "SELECT * FROM employees WHERE hire_date BETWEEN '2007-11-05' AND '2009-07-05'",
-        "query_pl": "SELECT * FROM employees WHERE hire_date BETWEEN \"2007-11-05\" AND \"2009-07-05\""
+        "query_pl": "SELECT * FROM employees WHERE hire_date BETWEEN '2007-11-05' AND '2009-07-05'"
     },
     {
         "db_id": "hr_1",
@@ -2580,7 +2580,7 @@
         "question": "What are the id for the employee whose first name is Payam?",
         "question_pl": "Jaki jest identyfikator pracownika o imieniu Payam?",
         "query": "SELECT employee_id FROM employees WHERE first_name  =  'Payam'",
-        "query_pl": "SELECT employee_id FROM employees WHERE first_name  =  \"Payam\""
+        "query_pl": "SELECT employee_id FROM employees WHERE first_name  =  'Payam'"
     },
     {
         "db_id": "hr_1",
@@ -2629,7 +2629,7 @@
         "question": "Who are the employees working in the Finance department?",
         "question_pl": "Kim są pracownicy działu finansowego?",
         "query": "SELECT * FROM employees AS T1 JOIN departments AS T2 ON T1.department_id  =  T2.department_id WHERE T2.department_name  =  'Finance'",
-        "query_pl": "SELECT * FROM employees AS T1 JOIN departments AS T2 ON T1.department_id  =  T2.department_id WHERE T2.department_name  =  \"Finanse\""
+        "query_pl": "SELECT * FROM employees AS T1 JOIN departments AS T2 ON T1.department_id  =  T2.department_id WHERE T2.department_name  =  'Finanse'"
     },
     {
         "db_id": "hr_1",
@@ -2657,14 +2657,14 @@
         "question": "What is the lowest salary for someone with the title MK_MAN?",
         "question_pl": "Jaka jest najniższa pensja dla osoby z tytułem MK_MAN?",
         "query": "SELECT min(salary) FROM employees WHERE job_id  =  'MK_MAN'",
-        "query_pl": "SELECT min(salary) FROM employees WHERE job_id  =  \"MK_MAN\""
+        "query_pl": "SELECT min(salary) FROM employees WHERE job_id  =  'MK_MAN'"
     },
     {
         "db_id": "hr_1",
         "question": "What is the highest salary for someone with the title PU_MAN?",
         "question_pl": "Jakie jest najwyższe wynagrodzenie dla osoby z tytułem PU_MAN?",
         "query": "SELECT max(salary) FROM employees WHERE job_id  =  'PU_MAN'",
-        "query_pl": "SELECT max(salary) FROM employees WHERE job_id  =  \"PU_MAN\""
+        "query_pl": "SELECT max(salary) FROM employees WHERE job_id  =  'PU_MAN'"
     },
     {
         "db_id": "hr_1",
@@ -2720,7 +2720,7 @@
         "question": "Who are all the employees working in the city of London?",
         "question_pl": "Kim są wszyscy pracownicy pracujący w Londynie?",
         "query": "SELECT * FROM employees AS T1 JOIN departments AS T2 ON T1.department_id  =  T2.department_id JOIN  locations AS T3 ON T2.location_id  =  T3.location_id WHERE  T3.city  =  'London'",
-        "query_pl": "SELECT * FROM employees AS T1 JOIN departments AS T2 ON T1.department_id  =  T2.department_id JOIN  locations AS T3 ON T2.location_id  =  T3.location_id WHERE  T3.city  =  \"Londyn\""
+        "query_pl": "SELECT * FROM employees AS T1 JOIN departments AS T2 ON T1.department_id  =  T2.department_id JOIN  locations AS T3 ON T2.location_id  =  T3.location_id WHERE  T3.city  =  'Londyn'"
     },
     {
         "db_id": "college_3",
@@ -3007,7 +3007,7 @@
         "question": "What information exists for players tried for the position of goalie?",
         "question_pl": "Jakie informacje są dostępne dla zawodników przymierzanych na pozycję bramkarza?",
         "query": "SELECT * FROM tryout WHERE pPos  =  'goalie'",
-        "query_pl": "SELECT * FROM tryout WHERE pPos  =  \"bramkarz\""
+        "query_pl": "SELECT * FROM tryout WHERE pPos  =  'bramkarz'"
     },
     {
         "db_id": "soccer_2",
@@ -3140,7 +3140,7 @@
         "question": "Which colleges did the students who tried out for the position of striker attend?",
         "question_pl": "Na jakie uczelnie uczęszczali studenci, którzy starali się o stanowisko strikera?",
         "query": "SELECT T1.cName FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.pPos  =  'striker'",
-        "query_pl": "SELECT T1.cName FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.pPos  =  \"napastnik\""
+        "query_pl": "SELECT T1.cName FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.pPos  =  'napastnik'"
     },
     {
         "db_id": "soccer_2",
@@ -3154,21 +3154,21 @@
         "question": "What information is there on the player named Charles?",
         "question_pl": "Jakie są informacje na temat gracza o imieniu Charles?",
         "query": "SELECT * FROM player WHERE pName  =  'Charles'",
-        "query_pl": "SELECT * FROM player WHERE pName  =  \"Charles\""
+        "query_pl": "SELECT * FROM player WHERE pName  =  'Charles'"
     },
     {
         "db_id": "soccer_2",
         "question": "What are the player ids of all students who made the team?",
         "question_pl": "Jakie są identyfikatory graczy wszystkich uczniów, którzy znaleźli się w drużynie?",
         "query": "SELECT T1.pID FROM player AS T1 JOIN tryout AS T2 ON T1.pID  =  T2.pID WHERE T2.decision  =  'yes'",
-        "query_pl": "SELECT T1.pID FROM player AS T1 JOIN tryout AS T2 ON T1.pID  =  T2.pID WHERE T2.decision  =  \"tak\""
+        "query_pl": "SELECT T1.pID FROM player AS T1 JOIN tryout AS T2 ON T1.pID  =  T2.pID WHERE T2.decision  =  'tak'"
     },
     {
         "db_id": "soccer_2",
         "question": "Which players received a decision of no from tryouts?",
         "question_pl": "Którzy zawodnicy otrzymali decyzję odmowną na tryoutach?",
         "query": "SELECT T1.pNAME FROM player AS T1 JOIN tryout AS T2 ON T1.pID  =  T2.pID WHERE T2.decision  =  'no'",
-        "query_pl": "SELECT T1.pNAME FROM player AS T1 JOIN tryout AS T2 ON T1.pID  =  T2.pID WHERE T2.decision  =  \"nie\""
+        "query_pl": "SELECT T1.pNAME FROM player AS T1 JOIN tryout AS T2 ON T1.pID  =  T2.pID WHERE T2.decision  =  'nie'"
     },
     {
         "db_id": "soccer_2",
@@ -3189,7 +3189,7 @@
         "question": "What can you tell me about the students who made the team?",
         "question_pl": "Co możesz powiedzieć o uczniach, którzy znaleźli się w drużynie?",
         "query": "SELECT * FROM  tryout WHERE decision  =  'yes'",
-        "query_pl": "SELECT * FROM  tryout WHERE decision  =  \"tak\""
+        "query_pl": "SELECT * FROM  tryout WHERE decision  =  'tak'"
     },
     {
         "db_id": "soccer_2",
@@ -3203,7 +3203,7 @@
         "question": "What are the names of colleges that have students who made the team?",
         "question_pl": "Jakie są nazwy uczelni, których studenci dostali się do drużyny?",
         "query": "SELECT T1.cName FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.decision  =  'yes'",
-        "query_pl": "SELECT T1.cName FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.decision  =  \"tak\""
+        "query_pl": "SELECT T1.cName FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.decision  =  'tak'"
     },
     {
         "db_id": "soccer_2",
@@ -3217,35 +3217,35 @@
         "question": "What are the names of colleges that have students who tried out for the goalie?",
         "question_pl": "Jak nazywają się uczelnie, których studenci próbowali swoich sił jako bramkarze?",
         "query": "SELECT cName FROM  tryout WHERE pPos  =  'goalie'",
-        "query_pl": "SELECT cName FROM  tryout WHERE pPos  =  \"bramkarz\""
+        "query_pl": "SELECT cName FROM  tryout WHERE pPos  =  'bramkarz'"
     },
     {
         "db_id": "soccer_2",
         "question": "What are the names of colleges where students tried for the goalie position?",
         "question_pl": "Jak nazywają się uczelnie, w których studenci starali się o pozycję bramkarza?",
         "query": "SELECT cName FROM  tryout WHERE pPos  =  'goalie'",
-        "query_pl": "SELECT cName FROM  tryout WHERE pPos  =  \"bramkarz\""
+        "query_pl": "SELECT cName FROM  tryout WHERE pPos  =  'bramkarz'"
     },
     {
         "db_id": "soccer_2",
         "question": "What schools have players that tried out for goalies?",
         "question_pl": "Jakie szkoły mają zawodników, którzy próbowali swoich sił jako bramkarze?",
         "query": "SELECT cName FROM  tryout WHERE pPos  =  'goalie'",
-        "query_pl": "SELECT cName FROM  tryout WHERE pPos  =  \"bramkarz\""
+        "query_pl": "SELECT cName FROM  tryout WHERE pPos  =  'bramkarz'"
     },
     {
         "db_id": "soccer_2",
         "question": "What schools have players that tried out for the mid position but not as goalies?",
         "question_pl": "Jakie szkoły mają zawodników, którzy próbowali swoich sił na pozycji środkowego, ale nie bramkarza?",
         "query": "SELECT cName FROM tryout WHERE pPos  =  'mid' EXCEPT SELECT cName FROM tryout WHERE pPos  =  'goalie'",
-        "query_pl": "SELECT cName FROM tryout WHERE pPos  =  \"środek\" EXCEPT SELECT cName FROM tryout WHERE pPos  =  \"bramkarz\""
+        "query_pl": "SELECT cName FROM tryout WHERE pPos  =  'środek' EXCEPT SELECT cName FROM tryout WHERE pPos  =  'bramkarz'"
     },
     {
         "db_id": "soccer_2",
         "question": "What information is there on colleges in Florida?",
         "question_pl": "Jakie informacje są dostępne na temat szkół wyższych na Florydzie?",
         "query": "SELECT * FROM college WHERE state  =  'FL'",
-        "query_pl": "SELECT * FROM college WHERE state  =  \"FL\""
+        "query_pl": "SELECT * FROM college WHERE state  =  'FL'"
     },
     {
         "db_id": "soccer_2",
@@ -3308,7 +3308,7 @@
         "question": "what is the number of hours spent on the project named 'Matter of Time’?",
         "question_pl": "Jaka jest liczba godzin spędzonych nad projektem o nazwie \"Matter of Time\"?",
         "query": "SELECT hours FROM projects WHERE name  =  'A Matter of Time'",
-        "query_pl": "SELECT hours FROM projects WHERE name  =  \"Kwestia czasu\""
+        "query_pl": "SELECT hours FROM projects WHERE name  =  'Kwestia czasu'"
     },
     {
         "db_id": "scientist_1",
@@ -3791,7 +3791,7 @@
         "question": "How many drivers are from Hartford?",
         "question_pl": "Ilu kierowców pochodzi z Hartford?",
         "query": "SELECT COUNT(*) FROM driver WHERE home_city  =  'Hartford'",
-        "query_pl": "SELECT COUNT(*) FROM driver WHERE home_city  =  \"Hartford\""
+        "query_pl": "SELECT COUNT(*) FROM driver WHERE home_city  =  'Hartford'"
     },
     {
         "db_id": "cre_Doc_Tracking_DB",
@@ -5191,7 +5191,7 @@
         "question": "What is the id of the medicine 'Amisulpride'?",
         "question_pl": "Jaki jest identyfikator leku \"Amisulpryd\"?",
         "query": "SELECT id from medicine WHERE name = 'Amisulpride'",
-        "query_pl": "SELECT id from medicine WHERE name = \"Amisulpryd\""
+        "query_pl": "SELECT id from medicine WHERE name = 'Amisulpryd'"
     },
     {
         "db_id": "medicine_enzyme_interaction",
@@ -5219,7 +5219,7 @@
         "question": "What is the enzyme id of 'ALA synthase'?",
         "question_pl": "Jaki jest identyfikator enzymu \"syntazy ALA\"?",
         "query": "SELECT id from enzyme WHERE name = 'ALA synthase'",
-        "query_pl": "SELECT id from enzyme WHERE name = \"Syntaza ALA\""
+        "query_pl": "SELECT id from enzyme WHERE name = 'Syntaza ALA'"
     },
     {
         "db_id": "medicine_enzyme_interaction",
@@ -5247,21 +5247,21 @@
         "question": "Which enzyme ids have any 'inhibitor' interaction?",
         "question_pl": "Które enzymy wchodzą w interakcje z inhibitorami?",
         "query": "SELECT DISTINCT enzyme_id from medicine_enzyme_interaction WHERE interaction_type = 'inhibitor'",
-        "query_pl": "SELECT DISTINCT enzyme_id from medicine_enzyme_interaction WHERE interaction_type = \"inhibitor\""
+        "query_pl": "SELECT DISTINCT enzyme_id from medicine_enzyme_interaction WHERE interaction_type = 'inhibitor'"
     },
     {
         "db_id": "medicine_enzyme_interaction",
         "question": "Which medicine id can interact both as 'inhibitor' and as 'activitor'?",
         "question_pl": "Który id leku może oddziaływać zarówno jako \"inhibitor\", jak i \"aktywator\"?",
         "query": "SELECT medicine_id from medicine_enzyme_interaction WHERE interaction_type = 'inhibitor' INTERSECT SELECT medicine_id from medicine_enzyme_interaction WHERE interaction_type = 'activitor'",
-        "query_pl": "SELECT medicine_id from medicine_enzyme_interaction WHERE interaction_type = \"inhibitor\" INTERSECT SELECT medicine_id from medicine_enzyme_interaction WHERE interaction_type = \"aktywator\""
+        "query_pl": "SELECT medicine_id from medicine_enzyme_interaction WHERE interaction_type = 'inhibitor' INTERSECT SELECT medicine_id from medicine_enzyme_interaction WHERE interaction_type = 'aktywator'"
     },
     {
         "db_id": "medicine_enzyme_interaction",
         "question": "Which medicine ids can interact with enzyme with product 'Protoporphyrinogen IX'?",
         "question_pl": "Które leki mogą wchodzić w interakcje z enzymem z produktem \"Protoporfirynogen IX\"?",
         "query": "SELECT medicine_id FROM medicine_enzyme_interaction AS T1 JOIN enzyme AS T2 ON T2.id  =  T1.enzyme_id WHERE T2.product  =  'Protoporphyrinogen IX'",
-        "query_pl": "SELECT medicine_id FROM medicine_enzyme_interaction AS T1 JOIN enzyme AS T2 ON T2.id  =  T1.enzyme_id WHERE T2.product  =  \"Protoporfirynogen IX\""
+        "query_pl": "SELECT medicine_id FROM medicine_enzyme_interaction AS T1 JOIN enzyme AS T2 ON T2.id  =  T1.enzyme_id WHERE T2.product  =  'Protoporfirynogen IX'"
     },
     {
         "db_id": "sakila_1",
@@ -5408,7 +5408,7 @@
         "question": "What is the length of the film titled AIRPORT POLLOCK?",
         "question_pl": "Jaka jest długość filmu zatytułowanego AIRPORT POLLOCK?",
         "query": "SELECT length FROM film WHERE title  =  'AIRPORT POLLOCK'",
-        "query_pl": "SELECT length FROM film WHERE title  =  \"LOTNISKO POLLOCK\""
+        "query_pl": "SELECT length FROM film WHERE title  =  'LOTNISKO POLLOCK'"
     },
     {
         "db_id": "sakila_1",
@@ -5471,7 +5471,7 @@
         "question": "Tell me the store in which the staff member with first name \"Elsa\" works.",
         "question_pl": "Powiedz mi, w którym sklepie pracuje pracownik o imieniu \"Elsa\".",
         "query": "SELECT * FROM staff AS T1 JOIN store AS T2 ON T1.store_id  =  T2.store_id WHERE T1.first_name  =  'Elsa'",
-        "query_pl": "SELECT * FROM staff AS T1 JOIN store AS T2 ON T1.store_id  =  T2.store_id WHERE T1.first_name  =  \"Elsa\""
+        "query_pl": "SELECT * FROM staff AS T1 JOIN store AS T2 ON T1.store_id  =  T2.store_id WHERE T1.first_name  =  'Elsa'"
     },
     {
         "db_id": "customers_and_invoices",
@@ -5975,7 +5975,7 @@
         "question": "How many members' hometown is in Louisville, Kentucky?",
         "question_pl": "Miasto rodzinne ilu użytkowników znajduje się w Louisville, Kentucky?",
         "query": "SELECT count(*) FROM MEMBER WHERE hometown = 'Louisville ,  Kentucky'",
-        "query_pl": "SELECT count(*) FROM MEMBER WHERE hometown = \"Louisville , Kentucky\""
+        "query_pl": "SELECT count(*) FROM MEMBER WHERE hometown = 'Louisville , Kentucky'"
     },
     {
         "db_id": "perpetrator",
@@ -6129,7 +6129,7 @@
         "question": "How many captains are either Midshipman or Lieutenant?",
         "question_pl": "Ilu kapitanów jest w stopniu midszypmana lub porucznika?",
         "query": "SELECT count(*) FROM captain WHERE rank  =  'Midshipman' OR rank  =  'Lieutenant'",
-        "query_pl": "SELECT count(*) FROM captain WHERE rank  =  \"Midshipman\" OR rank  =  \"Porucznik\""
+        "query_pl": "SELECT count(*) FROM captain WHERE rank  =  'Midshipman' OR rank  =  'Porucznik'"
     },
     {
         "db_id": "ship_1",
@@ -6143,7 +6143,7 @@
         "question": "Which ranks of captains are in the Cutter class?",
         "question_pl": "Które rangi kapitanów należą do klasy Cutter?",
         "query": "SELECT DISTINCT rank FROM captain WHERE CLASS  =  'Cutter'",
-        "query_pl": "SELECT DISTINCT rank FROM captain WHERE CLASS  =  \"Przecinak\""
+        "query_pl": "SELECT DISTINCT rank FROM captain WHERE CLASS  =  'Przecinak'"
     },
     {
         "db_id": "ship_1",
@@ -6178,7 +6178,7 @@
         "question": "Which type of ship has flag Panama?",
         "question_pl": "Który typ statku ma banderę Panamy?",
         "query": "SELECT DISTINCT TYPE FROM ship WHERE flag  =  'Panama'",
-        "query_pl": "SELECT DISTINCT TYPE FROM ship WHERE flag  =  \"Panama\""
+        "query_pl": "SELECT DISTINCT TYPE FROM ship WHERE flag  =  'Panama'"
     },
     {
         "db_id": "ship_1",
@@ -6213,7 +6213,7 @@
         "question": "Which ship ids are steered by captains with the Midshipman rank?",
         "question_pl": "Którymi statkami sterują kapitanowie ze stopniem midszypmana?",
         "query": "SELECT DISTINCT ship_id FROM captain WHERE rank  =  'Midshipman'",
-        "query_pl": "SELECT DISTINCT ship_id FROM captain WHERE rank  =  \"Midshipman\""
+        "query_pl": "SELECT DISTINCT ship_id FROM captain WHERE rank  =  'Midshipman'"
     },
     {
         "db_id": "game_injury",
@@ -7228,14 +7228,14 @@
         "question": "What is the address id of Janessa Sawayn?",
         "question_pl": "Jaki jest identyfikator adresu Janessy Sawayn?",
         "query": "SELECT staff_address_id from staff where first_name = 'Janessa' and last_name = 'Sawayn'",
-        "query_pl": "SELECT staff_address_id from staff where first_name = \"Janessa\" and last_name = \"Sawayn\""
+        "query_pl": "SELECT staff_address_id from staff where first_name = 'Janessa' and last_name = 'Sawayn'"
     },
     {
         "db_id": "driving_school",
         "question": "Which address ids correspond to the city Damianfort?",
         "question_pl": "Które identyfikatory adresów odpowiadają miastu Damianfort?",
         "query": "SELECT address_id from Addresses where city = 'Damianfort'",
-        "query_pl": "SELECT address_id from Addresses where city = \"Damianfort\""
+        "query_pl": "SELECT address_id from Addresses where city = 'Damianfort'"
     },
     {
         "db_id": "driving_school",
@@ -7256,7 +7256,7 @@
         "question": "Give records on the customer with last name Kohler.",
         "question_pl": "Podaj dane klienta o nazwisku Kohler.",
         "query": "SELECT * from customers where last_name = 'Kohler'",
-        "query_pl": "SELECT * from customers where last_name = \"Kohler\""
+        "query_pl": "SELECT * from customers where last_name = 'Kohler'"
     },
     {
         "db_id": "driving_school",
@@ -7599,7 +7599,7 @@
         "question": "How many left-handed batters are there?",
         "question_pl": "Ilu jest leworęcznych pałkarzy?",
         "query": "SELECT count(*) FROM player WHERE bats  =  'L';",
-        "query_pl": "SELECT count(*) FROM player WHERE bats  =  \"L\";"
+        "query_pl": "SELECT count(*) FROM player WHERE bats  =  'L';"
     },
     {
         "db_id": "baseball_1",
@@ -7634,7 +7634,7 @@
         "question": "How many times did the Boston Red Stockings win in postseason?",
         "question_pl": "Ile razy Boston Red Stockings wygrali w postseason?",
         "query": "SELECT COUNT(*) FROM postseason AS T1 JOIN team AS T2 ON T1.team_id_winner  =  T2.team_id_br WHERE T2.name  =  'Boston Red Stockings';",
-        "query_pl": "SELECT COUNT(*) FROM postseason AS T1 JOIN team AS T2 ON T1.team_id_winner  =  T2.team_id_br WHERE T2.name  =  \"Czerwone pończochy Boston\";"
+        "query_pl": "SELECT COUNT(*) FROM postseason AS T1 JOIN team AS T2 ON T1.team_id_winner  =  T2.team_id_br WHERE T2.name  =  'Czerwone pończochy Boston';"
     },
     {
         "db_id": "baseball_1",
@@ -7648,7 +7648,7 @@
         "question": "How many wins does the team Boston Red Stockings have?",
         "question_pl": "Ile zwycięstw ma na swoim koncie drużyna Boston Red Stockings?",
         "query": "SELECT count(*) FROM postseason AS T1 JOIN team AS T2 ON T1.team_id_winner  =  T2.team_id_br WHERE T2.name  =  'Boston Red Stockings'",
-        "query_pl": "SELECT count(*) FROM postseason AS T1 JOIN team AS T2 ON T1.team_id_winner  =  T2.team_id_br WHERE T2.name  =  \"Czerwone pończochy Boston\""
+        "query_pl": "SELECT count(*) FROM postseason AS T1 JOIN team AS T2 ON T1.team_id_winner  =  T2.team_id_br WHERE T2.name  =  'Czerwone pończochy Boston'"
     },
     {
         "db_id": "baseball_1",
@@ -7662,14 +7662,14 @@
         "question": "What is the average salary paid by team Boston Red Stockings?",
         "question_pl": "Jaka jest średnia pensja płacona przez zespół Boston Red Stockings?",
         "query": "SELECT avg(T1.salary) FROM salary AS T1 JOIN team AS T2 ON T1.team_id  =  T2.team_id_br WHERE T2.name  = 'Boston Red Stockings'",
-        "query_pl": "SELECT avg(T1.salary) FROM salary AS T1 JOIN team AS T2 ON T1.team_id  =  T2.team_id_br WHERE T2.name  = \"Czerwone pończochy Boston\""
+        "query_pl": "SELECT avg(T1.salary) FROM salary AS T1 JOIN team AS T2 ON T1.team_id  =  T2.team_id_br WHERE T2.name  = 'Czerwone pończochy Boston'"
     },
     {
         "db_id": "baseball_1",
         "question": "Show the player ids of the players in the team Boston Red Stockings in 2001.",
         "question_pl": "Wyświetl identyfikatory zawodników drużyny Boston Red Stockings w 2001 roku.",
         "query": "SELECT player_id FROM salary AS T1 JOIN team AS T2 ON T1.team_id  =  T2.team_id_br WHERE T2.name  = 'Boston Red Stockings' AND T1.year  =  2001 GROUP BY player_id",
-        "query_pl": "SELECT player_id FROM salary AS T1 JOIN team AS T2 ON T1.team_id  =  T2.team_id_br WHERE T2.name  = \"Czerwone pończochy Boston\" AND T1.year  =  2001 GROUP BY player_id"
+        "query_pl": "SELECT player_id FROM salary AS T1 JOIN team AS T2 ON T1.team_id  =  T2.team_id_br WHERE T2.name  = 'Czerwone pończochy Boston' AND T1.year  =  2001 GROUP BY player_id"
     },
     {
         "db_id": "baseball_1",
@@ -7704,21 +7704,21 @@
         "question": "Which park is located in Atlanta?",
         "question_pl": "Który park znajduje się w Atlancie?",
         "query": "SELECT park_name FROM park WHERE city  =  'Atlanta'",
-        "query_pl": "SELECT park_name FROM park WHERE city  =  \"Atlanta\""
+        "query_pl": "SELECT park_name FROM park WHERE city  =  'Atlanta'"
     },
     {
         "db_id": "baseball_1",
         "question": "What is the total home game attendance of team Cleveland Forest Citys?",
         "question_pl": "Jaka jest łączna frekwencja na meczach u siebie drużyny Cleveland Forest Citys?",
         "query": "SELECT sum(T1.attendance) FROM home_game AS T1 JOIN team AS T2 ON T1.team_id  =  T2.team_id_br WHERE T2.name  =  'Cleveland Forest Citys'",
-        "query_pl": "SELECT sum(T1.attendance) FROM home_game AS T1 JOIN team AS T2 ON T1.team_id  =  T2.team_id_br WHERE T2.name  =  \"Cleveland Forest Citys\""
+        "query_pl": "SELECT sum(T1.attendance) FROM home_game AS T1 JOIN team AS T2 ON T1.team_id  =  T2.team_id_br WHERE T2.name  =  'Cleveland Forest Citys'"
     },
     {
         "db_id": "baseball_1",
         "question": "How many players with first name Len and last name Barker are there?",
         "question_pl": "Ilu jest graczy o imieniu Len i nazwisku Barker?",
         "query": "SELECT COUNT(*) FROM player WHERE name_first  =  'Len' AND name_last = 'Barker'",
-        "query_pl": "SELECT COUNT(*) FROM player WHERE name_first  =  \"Len\" AND name_last = \"Barker\""
+        "query_pl": "SELECT COUNT(*) FROM player WHERE name_first  =  'Len' AND name_last = 'Barker'"
     },
     {
         "db_id": "baseball_1",
@@ -7795,7 +7795,7 @@
         "question": "Which school has North Carolina as its team name?",
         "question_pl": "Która szkoła ma w swojej nazwie drużynę z Karoliny Północnej?",
         "query": "SELECT t1.School FROM university AS t1 JOIN basketball_match AS t2 ON t1.school_id  =  t2.school_id WHERE team_name  =  'North Carolina'",
-        "query_pl": "SELECT t1.School FROM university AS t1 JOIN basketball_match AS t2 ON t1.school_id  =  t2.school_id WHERE team_name  =  \"Karolina Północna\""
+        "query_pl": "SELECT t1.School FROM university AS t1 JOIN basketball_match AS t2 ON t1.school_id  =  t2.school_id WHERE team_name  =  'Karolina Północna'"
     },
     {
         "db_id": "university_basketball",
@@ -7816,7 +7816,7 @@
         "question": "How many public schools are there?",
         "question_pl": "Ile jest szkół publicznych?",
         "query": "SELECT COUNT(school) FROM university WHERE affiliation  =  'Public'",
-        "query_pl": "SELECT COUNT(school) FROM university WHERE affiliation  =  \"Publiczny\""
+        "query_pl": "SELECT COUNT(school) FROM university WHERE affiliation  =  'Publiczny'"
     },
     {
         "db_id": "university_basketball",
@@ -8068,7 +8068,7 @@
         "question": "How many competitions are there where the competition type is 'Friendly'?",
         "question_pl": "Ile jest zawodów, w których typem rywalizacji jest \"Przyjazny\"?",
         "query": "SELECT count(*) FROM competition WHERE competition_type  =  'Friendly'",
-        "query_pl": "SELECT count(*) FROM competition WHERE competition_type  =  \"Przyjazny\""
+        "query_pl": "SELECT count(*) FROM competition WHERE competition_type  =  'Przyjazny'"
     },
     {
         "db_id": "assets_maintenance",
@@ -8250,7 +8250,7 @@
         "question": "What's time for trains going to Mumbai?",
         "question_pl": "Jaki jest czas dla pociągów jadących do Bombaju?",
         "query": "SELECT time FROM train WHERE destination  =  'Mumbai';",
-        "query_pl": "SELECT time FROM train WHERE destination  =  \"Bombaj\";"
+        "query_pl": "SELECT time FROM train WHERE destination  =  'Bombaj';"
     },
     {
         "db_id": "station_weather",
@@ -8264,7 +8264,7 @@
         "question": "How many trains are going from Chennai to Guruvayur?",
         "question_pl": "Ile pociągów jedzie z Chennai do Guruvayur?",
         "query": "SELECT count(*) FROM train WHERE origin  =  'Chennai' AND destination  =  'Guruvayur';",
-        "query_pl": "SELECT count(*) FROM train WHERE origin  =  \"Chennai\" AND destination  =  \"Guruvayur\";"
+        "query_pl": "SELECT count(*) FROM train WHERE origin  =  'Chennai' AND destination  =  'Guruvayur';"
     },
     {
         "db_id": "station_weather",
@@ -8446,14 +8446,14 @@
         "question": "Find all female architects.",
         "question_pl": "Znajdź wszystkie kobiety-architektów.",
         "query": "SELECT * FROM architect WHERE gender  =  'female'",
-        "query_pl": "SELECT * FROM architect WHERE gender  =  \"kobieta\""
+        "query_pl": "SELECT * FROM architect WHERE gender  =  'kobieta'"
     },
     {
         "db_id": "architecture",
         "question": "Return all the male architects.",
         "question_pl": "Zwróć wszystkich architektów płci męskiej.",
         "query": "SELECT * FROM architect WHERE gender  =  'male'",
-        "query_pl": "SELECT * FROM architect WHERE gender  =  \"mężczyzna\""
+        "query_pl": "SELECT * FROM architect WHERE gender  =  'mężczyzna'"
     },
     {
         "db_id": "architecture",
@@ -8495,7 +8495,7 @@
         "question": "Which architects have nationality 'American' or 'Canadian'?",
         "question_pl": "Którzy architekci mają obywatelstwo \"amerykańskie\" lub \"kanadyjskie\"?",
         "query": "SELECT * FROM architect  WHERE nationality  =  'American' OR nationality  =  'Canadian'",
-        "query_pl": "SELECT * FROM architect  WHERE nationality  =  \"Amerykanin\" OR nationality  =  \"Kanadyjczyk\""
+        "query_pl": "SELECT * FROM architect  WHERE nationality  =  'Amerykanin' OR nationality  =  'Kanadyjczyk'"
     },
     {
         "db_id": "architecture",
@@ -8621,7 +8621,7 @@
         "question": "Who has donated to \"Glenn\"?",
         "question_pl": "Kto przekazał darowiznę na rzecz \"Glenna\"?",
         "query": "SELECT T1.donator_name FROM endowment AS T1 JOIN school AS T2 ON T1.school_id  =  T2.school_id WHERE T2.school_name  =  'Glenn'",
-        "query_pl": "SELECT T1.donator_name FROM endowment AS T1 JOIN school AS T2 ON T1.school_id  =  T2.school_id WHERE T2.school_name  =  \"Glenn\""
+        "query_pl": "SELECT T1.donator_name FROM endowment AS T1 JOIN school AS T2 ON T1.school_id  =  T2.school_id WHERE T2.school_name  =  'Glenn'"
     },
     {
         "db_id": "school_finance",
@@ -8656,7 +8656,7 @@
         "question": "What is the mascot of the school 'Glenn'?",
         "question_pl": "Jak nazywa się maskotka szkoły \"Glenn\"?",
         "query": "SELECT mascot FROM school WHERE school_name  =  'Glenn'",
-        "query_pl": "SELECT mascot FROM school WHERE school_name  =  \"Glenn\""
+        "query_pl": "SELECT mascot FROM school WHERE school_name  =  'Glenn'"
     },
     {
         "db_id": "school_finance",
@@ -9104,7 +9104,7 @@
         "question": "Can you list the id of region named Denmark.",
         "question_pl": "Czy możesz podać nazwę regionu o nazwie Dania.",
         "query": "SELECT region_id FROM region WHERE region_name = 'Denmark';",
-        "query_pl": "SELECT region_id FROM region WHERE region_name = \"Dania\";"
+        "query_pl": "SELECT region_id FROM region WHERE region_name = 'Dania';"
     },
     {
         "db_id": "storm_record",
@@ -9321,7 +9321,7 @@
         "question": "Show the headquarters with a company in banking industry.",
         "question_pl": "Pokaż siedzibę firmy z branży bankowej.",
         "query": "SELECT headquarters FROM company WHERE main_industry  =  'Banking'",
-        "query_pl": "SELECT headquarters FROM company WHERE main_industry  =  \"Bankowość\""
+        "query_pl": "SELECT headquarters FROM company WHERE main_industry  =  'Bankowość'"
     },
     {
         "db_id": "gas_company",
@@ -9902,7 +9902,7 @@
         "question": "show all males.",
         "question_pl": "pokaż wszystkich mężczyzn.",
         "query": "SELECT * FROM people WHERE sex  =  'M'",
-        "query_pl": "SELECT * FROM people WHERE sex  =  \"M\""
+        "query_pl": "SELECT * FROM people WHERE sex  =  'M'"
     },
     {
         "db_id": "candidate_poll",
@@ -9972,7 +9972,7 @@
         "question": "show info for all females (sex is F).",
         "question_pl": "pokaż informacje dla wszystkich kobiet (płeć to F).",
         "query": "SELECT * FROM people WHERE sex  =  'F'",
-        "query_pl": "SELECT * FROM people WHERE sex  =  \"F\""
+        "query_pl": "SELECT * FROM people WHERE sex  =  'F'"
     },
     {
         "db_id": "twitter_1",
@@ -9986,7 +9986,7 @@
         "question": "How many followers does the user named \"Tyler Swift\" have?",
         "question_pl": "Ilu obserwujących ma użytkownik o nazwie \"Tyler Swift\"?",
         "query": "SELECT count(*) FROM user_profiles AS T1 JOIN follows AS T2 ON T1.uid  =  T2.f1 WHERE T1.name  =  'Tyler Swift'",
-        "query_pl": "SELECT count(*) FROM user_profiles AS T1 JOIN follows AS T2 ON T1.uid  =  T2.f1 WHERE T1.name  =  \"Tyler Swift\""
+        "query_pl": "SELECT count(*) FROM user_profiles AS T1 JOIN follows AS T2 ON T1.uid  =  T2.f1 WHERE T1.name  =  'Tyler Swift'"
     },
     {
         "db_id": "twitter_1",
@@ -10483,7 +10483,7 @@
         "question": "What is the id of the parent organization to the 'Robel-Schulist Group'?",
         "question_pl": "Jaki jest identyfikator organizacji macierzystej \"Grupa Robel-Schulist\"?",
         "query": "SELECT parent_organization_id FROM organizations WHERE organization_details = 'Robel-Schulist Group'",
-        "query_pl": "SELECT parent_organization_id FROM organizations WHERE organization_details = \"Robel-Schulist Group\""
+        "query_pl": "SELECT parent_organization_id FROM organizations WHERE organization_details = 'Robel-Schulist Group'"
     },
     {
         "db_id": "local_govt_and_lot",
@@ -11036,7 +11036,7 @@
         "question": "Show me the first name of good customers.",
         "question_pl": "Pokaż mi imiona dobrych klientów.",
         "query": "SELECT first_name from CUSTOMERS where good_or_bad_customer = 'good'",
-        "query_pl": "SELECT first_name from CUSTOMERS where good_or_bad_customer = \"dobry\""
+        "query_pl": "SELECT first_name from CUSTOMERS where good_or_bad_customer = 'dobry'"
     },
     {
         "db_id": "products_for_hire",
@@ -11470,21 +11470,21 @@
         "question": "Which mountains are in the country 'Ethiopia'?",
         "question_pl": "Które góry znajdują się w kraju Etiopia?",
         "query": "SELECT * FROM mountain WHERE country  =  'Ethiopia'",
-        "query_pl": "SELECT * FROM mountain WHERE country  =  \"Etiopia\""
+        "query_pl": "SELECT * FROM mountain WHERE country  =  'Etiopia'"
     },
     {
         "db_id": "mountain_photos",
         "question": "Which mountains are in the range 'Toubkal Atlas'?",
         "question_pl": "Które góry należą do pasma \"Atlas Toubkal\"?",
         "query": "SELECT * FROM mountain WHERE range  =  'Toubkal Atlas'",
-        "query_pl": "SELECT * FROM mountain WHERE range  =  \"Atlas Toubkal\""
+        "query_pl": "SELECT * FROM mountain WHERE range  =  'Atlas Toubkal'"
     },
     {
         "db_id": "mountain_photos",
         "question": "Which pictures are taken by a lens of brand 'Sigma'?",
         "question_pl": "Które zdjęcia zostały wykonane obiektywem marki \"Sigma\"?",
         "query": "SELECT * FROM photos AS T2 JOIN camera_lens AS T3 ON T2.camera_lens_id  =  T3.id WHERE T3.brand  =  'Sigma'",
-        "query_pl": "SELECT * FROM photos AS T2 JOIN camera_lens AS T3 ON T2.camera_lens_id  =  T3.id WHERE T3.brand  =  \"Sigma\""
+        "query_pl": "SELECT * FROM photos AS T2 JOIN camera_lens AS T3 ON T2.camera_lens_id  =  T3.id WHERE T3.brand  =  'Sigma'"
     },
     {
         "db_id": "mountain_photos",
@@ -12002,7 +12002,7 @@
         "question": "Show all female people from Canada.",
         "question_pl": "Pokaż wszystkie kobiety z Kanady.",
         "query": "SELECT * FROM people WHERE is_male  =  'F' AND country  =  'Canada'",
-        "query_pl": "SELECT * FROM people WHERE is_male  =  \"F\" AND country  =  \"Kanada\""
+        "query_pl": "SELECT * FROM people WHERE is_male  =  'F' AND country  =  'Kanada'"
     },
     {
         "db_id": "wedding",
@@ -12331,21 +12331,21 @@
         "question": "find the names of customers who have a saving account.",
         "question_pl": "znajdź nazwiska klientów, którzy mają konto oszczędnościowe.",
         "query": "SELECT cust_name FROM customer WHERE acc_type  =  'saving'",
-        "query_pl": "SELECT cust_name FROM customer WHERE acc_type  =  \"oszczędność\""
+        "query_pl": "SELECT cust_name FROM customer WHERE acc_type  =  'oszczędność'"
     },
     {
         "db_id": "loan_1",
         "question": "how many customers have a saving account?",
         "question_pl": "Ilu klientów posiada konto oszczędnościowe?",
         "query": "SELECT count(*) FROM customer WHERE acc_type  =  'saving'",
-        "query_pl": "SELECT count(*) FROM customer WHERE acc_type  =  \"oszczędność\""
+        "query_pl": "SELECT count(*) FROM customer WHERE acc_type  =  'oszczędność'"
     },
     {
         "db_id": "loan_1",
         "question": "Find the names of customers who have a mortgage loan.",
         "question_pl": "Znajdź nazwiska klientów, którzy mają kredyt hipoteczny.",
         "query": "SELECT T1.cust_name FROM customer AS T1 JOIN loan AS T2 ON T1.cust_id  =  T2.cust_id WHERE T2.loan_type  =  'Mortgages'",
-        "query_pl": "SELECT T1.cust_name FROM customer AS T1 JOIN loan AS T2 ON T1.cust_id  =  T2.cust_id WHERE T2.loan_type  =  \"Kredyty hipoteczne\""
+        "query_pl": "SELECT T1.cust_name FROM customer AS T1 JOIN loan AS T2 ON T1.cust_id  =  T2.cust_id WHERE T2.loan_type  =  'Kredyty hipoteczne'"
     },
     {
         "db_id": "loan_1",
@@ -12457,7 +12457,7 @@
         "question": "what is the total amount of all business loans?",
         "question_pl": "Jaka jest łączna kwota wszystkich pożyczek biznesowych?",
         "query": "SELECT sum(amount) FROM loan WHERE loan_type  =  'Business'",
-        "query_pl": "SELECT sum(amount) FROM loan WHERE loan_type  =  \"Biznes\""
+        "query_pl": "SELECT sum(amount) FROM loan WHERE loan_type  =  'Biznes'"
     },
     {
         "db_id": "loan_1",
@@ -12471,7 +12471,7 @@
         "question": "how many bank branches does the state of New York have?",
         "question_pl": "Ile oddziałów bankowych ma stan Nowy Jork?",
         "query": "SELECT count(*) FROM bank WHERE state  =  'New York'",
-        "query_pl": "SELECT count(*) FROM bank WHERE state  =  \"Nowy Jork\""
+        "query_pl": "SELECT count(*) FROM bank WHERE state  =  'Nowy Jork'"
     },
     {
         "db_id": "loan_1",
@@ -13115,7 +13115,7 @@
         "question": "How old is Dan?",
         "question_pl": "Ile lat ma Dan?",
         "query": "SELECT age FROM person WHERE name = 'Dan'",
-        "query_pl": "SELECT age FROM person WHERE name = \"Dan\""
+        "query_pl": "SELECT age FROM person WHERE name = 'Dan'"
     },
     {
         "db_id": "network_2",
@@ -13136,7 +13136,7 @@
         "question": "List all female names.",
         "question_pl": "Wymień wszystkie imiona żeńskie.",
         "query": "SELECT name FROM person WHERE gender = 'female'",
-        "query_pl": "SELECT name FROM person WHERE gender = \"kobieta\""
+        "query_pl": "SELECT name FROM person WHERE gender = 'kobieta'"
     },
     {
         "db_id": "network_2",
@@ -13157,7 +13157,7 @@
         "question": "What is the sum of ages for men?",
         "question_pl": "Jaka jest suma wieku mężczyzn?",
         "query": "SELECT sum(age) FROM person WHERE gender = 'male'",
-        "query_pl": "SELECT sum(age) FROM person WHERE gender = \"mężczyzna\""
+        "query_pl": "SELECT sum(age) FROM person WHERE gender = 'mężczyzna'"
     },
     {
         "db_id": "network_2",
@@ -13171,35 +13171,35 @@
         "question": "What is the minimum age of engineers?",
         "question_pl": "Jaki jest minimalny wiek inżynierów?",
         "query": "SELECT min(age) FROM person WHERE job = 'engineer'",
-        "query_pl": "SELECT min(age) FROM person WHERE job = \"inżynier\""
+        "query_pl": "SELECT min(age) FROM person WHERE job = 'inżynier'"
     },
     {
         "db_id": "network_2",
         "question": "What is the maximum age of engineers?",
         "question_pl": "Jaki jest maksymalny wiek inżynierów?",
         "query": "SELECT max(age) FROM person WHERE job = 'engineer'",
-        "query_pl": "SELECT max(age) FROM person WHERE job = \"inżynier\""
+        "query_pl": "SELECT max(age) FROM person WHERE job = 'inżynier'"
     },
     {
         "db_id": "network_2",
         "question": "Show all names of the men.",
         "question_pl": "Pokaż wszystkie imiona mężczyzn.",
         "query": "SELECT name FROM person WHERE gender = 'male'",
-        "query_pl": "SELECT name FROM person WHERE gender = \"mężczyzna\""
+        "query_pl": "SELECT name FROM person WHERE gender = 'mężczyzna'"
     },
     {
         "db_id": "network_2",
         "question": "Show name and age of the people who are friends with Dan.",
         "question_pl": "Pokaż imiona i wiek osób zaprzyjaźnionych z Danem.",
         "query": "SELECT T1.name ,  T1.age FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend  =  'Dan'",
-        "query_pl": "SELECT T1.name ,  T1.age FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend  =  \"Dan\""
+        "query_pl": "SELECT T1.name ,  T1.age FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend  =  'Dan'"
     },
     {
         "db_id": "network_2",
         "question": "How many people are friends with Dan?",
         "question_pl": "Ile osób przyjaźni się z Danem?",
         "query": "SELECT count(*) FROM personfriend WHERE friend = 'Dan'",
-        "query_pl": "SELECT count(*) FROM personfriend WHERE friend = \"Dan\""
+        "query_pl": "SELECT count(*) FROM personfriend WHERE friend = 'Dan'"
     },
     {
         "db_id": "network_2",
@@ -13220,7 +13220,7 @@
         "question": "Show all student names.",
         "question_pl": "Pokaż nazwiska wszystkich uczniów.",
         "query": "SELECT name FROM person WHERE job = 'student'",
-        "query_pl": "SELECT name FROM person WHERE job = \"uczeń\""
+        "query_pl": "SELECT name FROM person WHERE job = 'uczeń'"
     },
     {
         "db_id": "network_2",
@@ -13234,7 +13234,7 @@
         "question": "How many people does Bob consider a friend?",
         "question_pl": "Ile osób Bob uważa za swoich przyjaciół?",
         "query": "SELECT count(*) FROM personfriend WHERE name = 'Bob'",
-        "query_pl": "SELECT count(*) FROM personfriend WHERE name = \"Bob\""
+        "query_pl": "SELECT count(*) FROM personfriend WHERE name = 'Bob'"
     },
     {
         "db_id": "network_2",
@@ -13248,28 +13248,28 @@
         "question": "Who does Zach consider to be his friend?",
         "question_pl": "Kogo Zach uważa za swojego przyjaciela?",
         "query": "SELECT friend FROM personfriend WHERE name = 'Zach'",
-        "query_pl": "SELECT friend FROM personfriend WHERE name = \"Zach\""
+        "query_pl": "SELECT friend FROM personfriend WHERE name = 'Zach'"
     },
     {
         "db_id": "network_2",
         "question": "Who considers Alice to be their friend?",
         "question_pl": "Kto uważa Alice za swoją przyjaciółkę?",
         "query": "SELECT name FROM personfriend WHERE friend = 'Alice'",
-        "query_pl": "SELECT name FROM personfriend WHERE friend = \"Alice\""
+        "query_pl": "SELECT name FROM personfriend WHERE friend = 'Alice'"
     },
     {
         "db_id": "network_2",
         "question": "How many people are a friend of Alice?",
         "question_pl": "Ile osób przyjaźni się z Alice?",
         "query": "SELECT count(*) FROM personfriend WHERE name = 'Alice'",
-        "query_pl": "SELECT count(*) FROM personfriend WHERE name = \"Alice\""
+        "query_pl": "SELECT count(*) FROM personfriend WHERE name = 'Alice'"
     },
     {
         "db_id": "network_2",
         "question": "Who is from Chicago?",
         "question_pl": "Kto jest z Chicago?",
         "query": "SELECT name FROM person WHERE city = 'chicago'",
-        "query_pl": "SELECT name FROM person WHERE city = \"chicago\""
+        "query_pl": "SELECT name FROM person WHERE city = 'chicago'"
     },
     {
         "db_id": "network_2",
@@ -13290,14 +13290,14 @@
         "question": "How many people is Zach friends with?",
         "question_pl": "Z iloma osobami przyjaźni się Zach?",
         "query": "SELECT count(*) FROM personfriend WHERE name = 'Zach'",
-        "query_pl": "SELECT count(*) FROM personfriend WHERE name = \"Zach\""
+        "query_pl": "SELECT count(*) FROM personfriend WHERE name = 'Zach'"
     },
     {
         "db_id": "network_2",
         "question": "Who has the shortest relationship among the people Zach is friends with?",
         "question_pl": "Z kim Zach przyjaźni się najkrócej?",
         "query": "SELECT name FROM personfriend WHERE name = 'Zach' ORDER BY year LIMIT 1",
-        "query_pl": "SELECT name FROM personfriend WHERE name = \"Zach\" ORDER BY year LIMIT 1"
+        "query_pl": "SELECT name FROM personfriend WHERE name = 'Zach' ORDER BY year LIMIT 1"
     },
     {
         "db_id": "network_2",
@@ -13311,7 +13311,7 @@
         "question": "What is the maximum length of friendships with Alice?",
         "question_pl": "Jaka jest maksymalna długość znajomości z Alice?",
         "query": "SELECT max(year) FROM personfriend WHERE friend = 'Alice'",
-        "query_pl": "SELECT max(year) FROM personfriend WHERE friend = \"Alice\""
+        "query_pl": "SELECT max(year) FROM personfriend WHERE friend = 'Alice'"
     },
     {
         "db_id": "network_2",
@@ -13346,7 +13346,7 @@
         "question": "Which browsers are compatible with CProxy?",
         "question_pl": "Które przeglądarki są kompatybilne z CProxy?",
         "query": "SELECT T1.name FROM browser AS T1 JOIN accelerator_compatible_browser AS T2 ON T1.id  =  T2.browser_id JOIN web_client_accelerator AS T3 ON T2.accelerator_id  =  T3.id WHERE T3.name  =  'CProxy'",
-        "query_pl": "SELECT T1.name FROM browser AS T1 JOIN accelerator_compatible_browser AS T2 ON T1.id  =  T2.browser_id JOIN web_client_accelerator AS T3 ON T2.accelerator_id  =  T3.id WHERE T3.name  =  \"CProxy\""
+        "query_pl": "SELECT T1.name FROM browser AS T1 JOIN accelerator_compatible_browser AS T2 ON T1.id  =  T2.browser_id JOIN web_client_accelerator AS T3 ON T2.accelerator_id  =  T3.id WHERE T3.name  =  'CProxy'"
     },
     {
         "db_id": "browser_web",
@@ -13367,7 +13367,7 @@
         "question": "How many times did CACHEbox and Internet Explorer become compatible?",
         "question_pl": "Ile razy CACHEbox i Internet Explorer stały się kompatybilne?",
         "query": "SELECT count(*) FROM accelerator_compatible_browser AS T1 JOIN browser AS T2 ON T1.browser_id  =  T2.id JOIN web_client_accelerator AS T3 ON T1.accelerator_id  =  T3.id WHERE T3.name  =  'CACHEbox' AND T2.name  =  'Internet Explorer'",
-        "query_pl": "SELECT count(*) FROM accelerator_compatible_browser AS T1 JOIN browser AS T2 ON T1.browser_id  =  T2.id JOIN web_client_accelerator AS T3 ON T1.accelerator_id  =  T3.id WHERE T3.name  =  \"CACHEbox\" AND T2.name  =  \"Internet Explorer\""
+        "query_pl": "SELECT count(*) FROM accelerator_compatible_browser AS T1 JOIN browser AS T2 ON T1.browser_id  =  T2.id JOIN web_client_accelerator AS T3 ON T1.accelerator_id  =  T3.id WHERE T3.name  =  'CACHEbox' AND T2.name  =  'Internet Explorer'"
     },
     {
         "db_id": "browser_web",
@@ -13388,14 +13388,14 @@
         "question": "Which browser ids are compatible with CACHEbox?",
         "question_pl": "Które identyfikatory przeglądarek są kompatybilne z CACHEbox?",
         "query": "SELECT T1.id FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id WHERE T1.name  =  'CACHEbox'",
-        "query_pl": "SELECT T1.id FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id WHERE T1.name  =  \"CACHEbox\""
+        "query_pl": "SELECT T1.id FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id WHERE T1.name  =  'CACHEbox'"
     },
     {
         "db_id": "browser_web",
         "question": "Which accelerator ids are not compatible with Opera?",
         "question_pl": "Które identyfikatory akceleratorów nie są kompatybilne z Operą?",
         "query": "SELECT id from web_client_accelerator where id not in (SELECT t1.accelerator_id from accelerator_compatible_browser as t1 join browser as t2 on t1.browser_id = t2.id where t2.name = 'Opera')",
-        "query_pl": "SELECT id from web_client_accelerator where id not in (SELECT t1.accelerator_id from accelerator_compatible_browser as t1 join browser as t2 on t1.browser_id = t2.id where t2.name = \"Opera\")"
+        "query_pl": "SELECT id from web_client_accelerator where id not in (SELECT t1.accelerator_id from accelerator_compatible_browser as t1 join browser as t2 on t1.browser_id = t2.id where t2.name = 'Opera')"
     },
     {
         "db_id": "browser_web",
@@ -13486,14 +13486,14 @@
         "question": "find the names of dorms that do not have a Study Room.",
         "question_pl": "znajdź nazwy akademików, w których nie ma pokoju do nauki.",
         "query": "SELECT dorm_name FROM dorm EXCEPT SELECT T1.dorm_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T3.amenity_name  =  'Study Room'",
-        "query_pl": "SELECT dorm_name FROM dorm EXCEPT SELECT T1.dorm_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T3.amenity_name  =  \"Pokój do nauki\""
+        "query_pl": "SELECT dorm_name FROM dorm EXCEPT SELECT T1.dorm_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T3.amenity_name  =  'Pokój do nauki'"
     },
     {
         "db_id": "dorm_1",
         "question": "how many female students are living in the city of code BAL?",
         "question_pl": "Ile studentek mieszka w mieście code BAL?",
         "query": "SELECT count(*) FROM student WHERE sex  =  'F' AND city_code  =  'BAL'",
-        "query_pl": "SELECT count(*) FROM student WHERE sex  =  \"F\" AND city_code  =  \"BAL\""
+        "query_pl": "SELECT count(*) FROM student WHERE sex  =  'F' AND city_code  =  'BAL'"
     },
     {
         "db_id": "dorm_1",
@@ -13584,7 +13584,7 @@
         "question": "how many students are living in Smith Hall?",
         "question_pl": "Ilu studentów mieszka w Smith Hall?",
         "query": "SELECT count(*) FROM student AS T1 JOIN lives_in AS T2 ON T1.stuid  =  T2.stuid JOIN dorm AS T3 ON T3.dormid  =  T2.dormid WHERE T3.dorm_name  =  'Smith Hall'",
-        "query_pl": "SELECT count(*) FROM student AS T1 JOIN lives_in AS T2 ON T1.stuid  =  T2.stuid JOIN dorm AS T3 ON T3.dormid  =  T2.dormid WHERE T3.dorm_name  =  \"Smith Hall\""
+        "query_pl": "SELECT count(*) FROM student AS T1 JOIN lives_in AS T2 ON T1.stuid  =  T2.stuid JOIN dorm AS T3 ON T3.dormid  =  T2.dormid WHERE T3.dorm_name  =  'Smith Hall'"
     },
     {
         "db_id": "dorm_1",
@@ -13598,28 +13598,28 @@
         "question": "list the names of all male dorms (with gender M).",
         "question_pl": "wymień nazwy wszystkich akademików męskich (z płcią M).",
         "query": "SELECT dorm_name FROM dorm WHERE gender  =  'M'",
-        "query_pl": "SELECT dorm_name FROM dorm WHERE gender  =  \"M\""
+        "query_pl": "SELECT dorm_name FROM dorm WHERE gender  =  'M'"
     },
     {
         "db_id": "dorm_1",
         "question": "what is the capacity of Smith Hall dorm?",
         "question_pl": "Jaka jest pojemność akademika Smith Hall?",
         "query": "SELECT student_capacity FROM dorm WHERE dorm_name  =  'Smith Hall'",
-        "query_pl": "SELECT student_capacity FROM dorm WHERE dorm_name  =  \"Smith Hall\""
+        "query_pl": "SELECT student_capacity FROM dorm WHERE dorm_name  =  'Smith Hall'"
     },
     {
         "db_id": "dorm_1",
         "question": "how many students are living in Smith Hall dorm?",
         "question_pl": "Ilu studentów mieszka w akademiku Smith Hall?",
         "query": "SELECT count(*) FROM student AS T1 JOIN lives_in AS T2 ON T1.stuid  =  T2.stuid JOIN dorm AS T3 ON T3.dormid  =  T2.dormid WHERE T3.dorm_name  =  'Smith Hall'",
-        "query_pl": "SELECT count(*) FROM student AS T1 JOIN lives_in AS T2 ON T1.stuid  =  T2.stuid JOIN dorm AS T3 ON T3.dormid  =  T2.dormid WHERE T3.dorm_name  =  \"Smith Hall\""
+        "query_pl": "SELECT count(*) FROM student AS T1 JOIN lives_in AS T2 ON T1.stuid  =  T2.stuid JOIN dorm AS T3 ON T3.dormid  =  T2.dormid WHERE T3.dorm_name  =  'Smith Hall'"
     },
     {
         "db_id": "dorm_1",
         "question": "What are the amenities in Smith Hall?",
         "question_pl": "Jakie są udogodnienia w obiekcie Smith Hall?",
         "query": "SELECT T3.amenity_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T1.dorm_name  =  'Smith Hall'",
-        "query_pl": "SELECT T3.amenity_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T1.dorm_name  =  \"Smith Hall\""
+        "query_pl": "SELECT T3.amenity_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T1.dorm_name  =  'Smith Hall'"
     },
     {
         "db_id": "dorm_1",
@@ -13647,14 +13647,14 @@
         "question": "how many dorms have a TV Lounge?",
         "question_pl": "Ile akademików ma salon telewizyjny?",
         "query": "SELECT count(*) FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T3.amenity_name  =  'TV Lounge'",
-        "query_pl": "SELECT count(*) FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T3.amenity_name  =  \"Salon telewizyjny\""
+        "query_pl": "SELECT count(*) FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T3.amenity_name  =  'Salon telewizyjny'"
     },
     {
         "db_id": "dorm_1",
         "question": "Find the names of dorms that do not have a TV Lounge.",
         "question_pl": "Znajdź nazwy akademików, w których nie ma salonu telewizyjnego.",
         "query": "SELECT dorm_name FROM dorm EXCEPT SELECT T1.dorm_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T3.amenity_name  =  'TV Lounge'",
-        "query_pl": "SELECT dorm_name FROM dorm EXCEPT SELECT T1.dorm_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T3.amenity_name  =  \"Salon telewizyjny\""
+        "query_pl": "SELECT dorm_name FROM dorm EXCEPT SELECT T1.dorm_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T3.amenity_name  =  'Salon telewizyjny'"
     },
     {
         "db_id": "cre_Doc_Control_Systems",
@@ -14102,7 +14102,7 @@
         "question": "Give me movies that are directed by James Cameron.",
         "question_pl": "Daj mi filmy wyreżyserowane przez Jamesa Camerona.",
         "query": "SELECT title FROM MOVIE WHERE director = 'James Cameron'",
-        "query_pl": "SELECT title FROM MOVIE WHERE director = \"James Cameron\""
+        "query_pl": "SELECT title FROM MOVIE WHERE director = 'James Cameron'"
     },
     {
         "db_id": "movie_1",
@@ -14179,7 +14179,7 @@
         "question": "Show me the ratings for Gone with the Wind.",
         "question_pl": "Pokaż oceny gry Przeminęło z wiatrem.",
         "query": "SELECT * FROM Rating AS T1 JOIN Movie AS T2 ON T1.mID  =  T2.mID JOIN Reviewer AS T3 ON T1.rID  =  T3.rID WHERE T2.title  =  'Gone with the Wind'",
-        "query_pl": "SELECT * FROM Rating AS T1 JOIN Movie AS T2 ON T1.mID  =  T2.mID JOIN Reviewer AS T3 ON T1.rID  =  T3.rID WHERE T2.title  =  \"Przeminęło z wiatrem\""
+        "query_pl": "SELECT * FROM Rating AS T1 JOIN Movie AS T2 ON T1.mID  =  T2.mID JOIN Reviewer AS T3 ON T1.rID  =  T3.rID WHERE T2.title  =  'Przeminęło z wiatrem'"
     },
     {
         "db_id": "movie_1",
@@ -14207,7 +14207,7 @@
         "question": "Give me the ratings given by Chris Jackson.",
         "question_pl": "Podaj mi oceny wystawione przez Chrisa Jacksona.",
         "query": "SELECT * FROM rating as t1 JOIN reviewer as t2 on t1.rID = t2.rID and t2.name = 'Chris Jackson'",
-        "query_pl": "SELECT * FROM rating as t1 JOIN reviewer as t2 on t1.rID = t2.rID and t2.name = \"Chris Jackson\""
+        "query_pl": "SELECT * FROM rating as t1 JOIN reviewer as t2 on t1.rID = t2.rID and t2.name = 'Chris Jackson'"
     },
     {
         "db_id": "movie_1",
@@ -15068,7 +15068,7 @@
         "question": "find the names of manufactures that are based in Tokyo.",
         "question_pl": "znajdź nazwy producentów z siedzibą w Tokio.",
         "query": "SELECT name FROM manufacturers WHERE headquarter  =  'Tokyo'",
-        "query_pl": "SELECT name FROM manufacturers WHERE headquarter  =  \"Tokio\""
+        "query_pl": "SELECT name FROM manufacturers WHERE headquarter  =  'Tokio'"
     },
     {
         "db_id": "manufactory_1",
@@ -15082,7 +15082,7 @@
         "question": "find the names of companies whose main office is in Tokyo.",
         "question_pl": "znajdź nazwy firm, których główna siedziba znajduje się w Tokio.",
         "query": "SELECT name FROM manufacturers WHERE Headquarter  =  'Tokyo'",
-        "query_pl": "SELECT name FROM manufacturers WHERE Headquarter  =  \"Tokio\""
+        "query_pl": "SELECT name FROM manufacturers WHERE Headquarter  =  'Tokio'"
     },
     {
         "db_id": "manufactory_1",
@@ -15110,14 +15110,14 @@
         "question": "how many companies are based in Austin?",
         "question_pl": "Ile firm ma siedzibę w Austin?",
         "query": "SELECT count(*) FROM manufacturers WHERE headquarter  =  'Austin'",
-        "query_pl": "SELECT count(*) FROM manufacturers WHERE headquarter  =  \"Austin\""
+        "query_pl": "SELECT count(*) FROM manufacturers WHERE headquarter  =  'Austin'"
     },
     {
         "db_id": "manufactory_1",
         "question": "what are the names of the companies based in Austin?",
         "question_pl": "Jakie są nazwy firm z siedzibą w Austin?",
         "query": "SELECT name FROM manufacturers WHERE headquarter  =  'Austin'",
-        "query_pl": "SELECT name FROM manufacturers WHERE headquarter  =  \"Austin\""
+        "query_pl": "SELECT name FROM manufacturers WHERE headquarter  =  'Austin'"
     },
     {
         "db_id": "manufactory_1",
@@ -15145,7 +15145,7 @@
         "question": "Find the names of companies that produce DVD drives.",
         "question_pl": "Znajdź nazwy firm produkujących napędy DVD.",
         "query": "SELECT T2.name FROM products AS T1 JOIN manufacturers AS T2 ON T1.Manufacturer  =  T2.code WHERE T1.name  =  'DVD drive'",
-        "query_pl": "SELECT T2.name FROM products AS T1 JOIN manufacturers AS T2 ON T1.Manufacturer  =  T2.code WHERE T1.name  =  \"Napęd DVD\""
+        "query_pl": "SELECT T2.name FROM products AS T1 JOIN manufacturers AS T2 ON T1.Manufacturer  =  T2.code WHERE T1.name  =  'Napęd DVD'"
     },
     {
         "db_id": "manufactory_1",
@@ -15215,7 +15215,7 @@
         "question": "what is the icao code for American Airlines?",
         "question_pl": "Jaki jest kod icao dla American Airlines?",
         "query": "SELECT icao FROM airlines WHERE name  =  'American Airlines'",
-        "query_pl": "SELECT icao FROM airlines WHERE name  =  \"American Airlines\""
+        "query_pl": "SELECT icao FROM airlines WHERE name  =  'American Airlines'"
     },
     {
         "db_id": "flight_4",
@@ -15264,7 +15264,7 @@
         "question": "how many routes does American Airlines have?",
         "question_pl": "Ile tras obsługują linie American Airlines?",
         "query": "SELECT count(*) FROM airlines AS T1 JOIN routes AS T2 ON T1.alid  =  T2.alid WHERE T1.name  =  'American Airlines'",
-        "query_pl": "SELECT count(*) FROM airlines AS T1 JOIN routes AS T2 ON T1.alid  =  T2.alid WHERE T1.name  =  \"American Airlines\""
+        "query_pl": "SELECT count(*) FROM airlines AS T1 JOIN routes AS T2 ON T1.alid  =  T2.alid WHERE T1.name  =  'American Airlines'"
     },
     {
         "db_id": "flight_4",
@@ -15299,7 +15299,7 @@
         "question": "how many airports does the US has?",
         "question_pl": "Ile lotnisk mają Stany Zjednoczone?",
         "query": "SELECT count(*) FROM airports WHERE country  =  'United States'",
-        "query_pl": "SELECT count(*) FROM airports WHERE country  =  \"Stany Zjednoczone\""
+        "query_pl": "SELECT count(*) FROM airports WHERE country  =  'Stany Zjednoczone'"
     },
     {
         "db_id": "flight_4",
@@ -15348,35 +15348,35 @@
         "question": "how many airports are in Italy?",
         "question_pl": "Ile lotnisk znajduje się we Włoszech?",
         "query": "SELECT count(*) FROM airports WHERE country  =  'Italy'",
-        "query_pl": "SELECT count(*) FROM airports WHERE country  =  \"Włochy\""
+        "query_pl": "SELECT count(*) FROM airports WHERE country  =  'Włochy'"
     },
     {
         "db_id": "flight_4",
         "question": "how many routes are operated by the airline with name 'American Airlines'.",
         "question_pl": "Ile tras obsługuje linia lotnicza o nazwie \"American Airlines\".",
         "query": "SELECT count(*) FROM routes AS T1 JOIN airlines AS T2 ON T1.alid  =  T2.alid WHERE T2.name  =  'American Airlines'",
-        "query_pl": "SELECT count(*) FROM routes AS T1 JOIN airlines AS T2 ON T1.alid  =  T2.alid WHERE T2.name  =  \"American Airlines\""
+        "query_pl": "SELECT count(*) FROM routes AS T1 JOIN airlines AS T2 ON T1.alid  =  T2.alid WHERE T2.name  =  'American Airlines'"
     },
     {
         "db_id": "flight_4",
         "question": "which city is John F Kennedy International Airport located in?",
         "question_pl": "W którym mieście znajduje się międzynarodowe lotnisko Johna F. Kennedy'ego?",
         "query": "SELECT city FROM airports WHERE name  =  'John F Kennedy International Airport'",
-        "query_pl": "SELECT city FROM airports WHERE name  =  \"Międzynarodowy port lotniczy im. Johna F. Kennedyego\""
+        "query_pl": "SELECT city FROM airports WHERE name  =  'Międzynarodowy port lotniczy im. Johna F. Kennedyego'"
     },
     {
         "db_id": "flight_4",
         "question": "Find the number of routes from the United States.",
         "question_pl": "Znajdź liczbę tras ze Stanów Zjednoczonych.",
         "query": "SELECT count(*) FROM routes WHERE src_apid IN (SELECT apid FROM airports WHERE country  =  'United States')",
-        "query_pl": "SELECT count(*) FROM routes WHERE src_apid IN (SELECT apid FROM airports WHERE country  =  \"Stany Zjednoczone\")"
+        "query_pl": "SELECT count(*) FROM routes WHERE src_apid IN (SELECT apid FROM airports WHERE country  =  'Stany Zjednoczone')"
     },
     {
         "db_id": "flight_4",
         "question": "how many routes end in the United States?",
         "question_pl": "Ile tras kończy się w Stanach Zjednoczonych?",
         "query": "SELECT count(*) FROM routes WHERE dst_apid IN (SELECT apid FROM airports WHERE country  =  'United States')",
-        "query_pl": "SELECT count(*) FROM routes WHERE dst_apid IN (SELECT apid FROM airports WHERE country  =  \"Stany Zjednoczone\")"
+        "query_pl": "SELECT count(*) FROM routes WHERE dst_apid IN (SELECT apid FROM airports WHERE country  =  'Stany Zjednoczone')"
     },
     {
         "db_id": "flight_4",
@@ -15390,7 +15390,7 @@
         "question": "show all airports in China.",
         "question_pl": "pokaż wszystkie lotniska w Chinach.",
         "query": "SELECT * FROM airports WHERE country  =  'China'",
-        "query_pl": "SELECT * FROM airports WHERE country  =  \"Chiny\""
+        "query_pl": "SELECT * FROM airports WHERE country  =  'Chiny'"
     },
     {
         "db_id": "store_1",
@@ -15740,7 +15740,7 @@
         "question": "How many institutions have type Tribal?",
         "question_pl": "Ile instytucji ma typ Tribal?",
         "query": "SELECT count(*) FROM institution WHERE type = 'Tribal'",
-        "query_pl": "SELECT count(*) FROM institution WHERE type = \"Plemienny\""
+        "query_pl": "SELECT count(*) FROM institution WHERE type = 'Plemienny'"
     },
     {
         "db_id": "protein_institute",
@@ -15768,7 +15768,7 @@
         "question": "How many institutions are in Citizens Bank Building?",
         "question_pl": "Ile instytucji znajduje się w Citizens Bank Building?",
         "query": "SELECT  count(*) FROM building AS T1 JOIN institution AS T2 ON T1.building_id  =  T2.building_id GROUP BY T1.building_id HAVING T1.name = 'Citizens Bank Building'",
-        "query_pl": "SELECT  count(*) FROM building AS T1 JOIN institution AS T2 ON T1.building_id  =  T2.building_id GROUP BY T1.building_id HAVING T1.name = \"Citizens Bank Building\""
+        "query_pl": "SELECT  count(*) FROM building AS T1 JOIN institution AS T2 ON T1.building_id  =  T2.building_id GROUP BY T1.building_id HAVING T1.name = 'Citizens Bank Building'"
     },
     {
         "db_id": "protein_institute",
@@ -15831,7 +15831,7 @@
         "question": "show the names of members living in Hartford.",
         "question_pl": "pokaż nazwiska członków mieszkających w Hartford.",
         "query": "SELECT name FROM member WHERE address  =  'Hartford'",
-        "query_pl": "SELECT name FROM member WHERE address  =  \"Hartford\""
+        "query_pl": "SELECT name FROM member WHERE address  =  'Hartford'"
     },
     {
         "db_id": "coffee_shop",
@@ -16524,7 +16524,7 @@
         "question": "How many races has the class 'GT'?",
         "question_pl": "Ile wyścigów ma klasa \"GT\"?",
         "query": "SELECT count(*) FROM race where class = 'GT'",
-        "query_pl": "SELECT count(*) FROM race where class = \"GT\""
+        "query_pl": "SELECT count(*) FROM race where class = 'GT'"
     },
     {
         "db_id": "race_track",
@@ -16741,7 +16741,7 @@
         "question": "Show the country whose capital is Baghdad.",
         "question_pl": "Wskaż kraj, którego stolicą jest Bagdad.",
         "query": "select country_name from country where capital = 'Baghdad'",
-        "query_pl": "select country_name from country where capital = \"Bagdad\""
+        "query_pl": "select country_name from country where capital = 'Bagdad'"
     },
     {
         "db_id": "match_season",
@@ -16986,7 +16986,7 @@
         "question": "How many UK male artists?",
         "question_pl": "Ilu brytyjskich artystów płci męskiej?",
         "query": "SELECT artist_name FROM artist WHERE country  =  \"UK\" and gender = 'Male'",
-        "query_pl": "SELECT artist_name FROM artist WHERE country  =  \"WIELKA BRYTANIA\" and gender = \"Mężczyzna\""
+        "query_pl": "SELECT artist_name FROM artist WHERE country  =  \"WIELKA BRYTANIA\" and gender = 'Mężczyzna'"
     },
     {
         "db_id": "music_1",
@@ -17070,7 +17070,7 @@
         "question": "How many artists have Bangla songs?",
         "question_pl": "Ilu artystów ma piosenki w języku Bangla?",
         "query": "SELECT count(DISTINCT artist_name) FROM song WHERE languages  = 'bangla'",
-        "query_pl": "SELECT count(DISTINCT artist_name) FROM song WHERE languages  = \"bangla\""
+        "query_pl": "SELECT count(DISTINCT artist_name) FROM song WHERE languages  = 'bangla'"
     },
     {
         "db_id": "machine_repair",
@@ -17084,7 +17084,7 @@
         "question": "Show me the grant id for grants where the documents were sent before '1986-08-26 20:49:27'.",
         "question_pl": "Pokaż mi identyfikator dotacji, w przypadku których dokumenty zostały wysłane przed \"1986-08-26 20:49:27\".",
         "query": "SELECT T1.grant_id FROM Grants AS T1 JOIN Documents AS T2 ON T1.grant_id  =  T2.grant_id WHERE T2.sent_date  <  '1986-08-26 20:49:27';",
-        "query_pl": "SELECT T1.grant_id FROM Grants AS T1 JOIN Documents AS T2 ON T1.grant_id  =  T2.grant_id WHERE T2.sent_date  <  \"1986-08-26 20:49:27\";"
+        "query_pl": "SELECT T1.grant_id FROM Grants AS T1 JOIN Documents AS T2 ON T1.grant_id  =  T2.grant_id WHERE T2.sent_date  <  '1986-08-26 20:49:27';"
     },
     {
         "db_id": "tracking_grants_for_research",
@@ -17098,7 +17098,7 @@
         "question": "Show me the grant amount of the organisations described as sponser?",
         "question_pl": "Pokaż mi kwotę dotacji organizacji opisanych jako sponsorzy?",
         "query": "SELECT grant_amount FROM Grants AS T1 JOIN Organisations AS T2 ON T1.organisation_id  =  T2.organisation_id JOIN organisation_Types AS T3 ON T2.organisation_type  =  T3.organisation_type WHERE T3.organisation_type_description  =  'Sponsor';",
-        "query_pl": "SELECT grant_amount FROM Grants AS T1 JOIN Organisations AS T2 ON T1.organisation_id  =  T2.organisation_id JOIN organisation_Types AS T3 ON T2.organisation_type  =  T3.organisation_type WHERE T3.organisation_type_description  =  \"Sponsor\";"
+        "query_pl": "SELECT grant_amount FROM Grants AS T1 JOIN Organisations AS T2 ON T1.organisation_id  =  T2.organisation_id JOIN organisation_Types AS T3 ON T2.organisation_type  =  T3.organisation_type WHERE T3.organisation_type_description  =  'Sponsor';"
     },
     {
         "db_id": "tracking_grants_for_research",
@@ -17140,21 +17140,21 @@
         "question": "What're the response received dates for the documents described as 'Initial Application'?",
         "question_pl": "Jakie są daty otrzymania odpowiedzi na dokumenty opisane jako \"Wniosek wstępny\"?",
         "query": "SELECT T1.response_received_date FROM Documents AS T1 JOIN Document_Types AS T2 ON T1.document_type_code  =  T2.document_type_code WHERE T2.document_description  =  'Initial Application';",
-        "query_pl": "SELECT T1.response_received_date FROM Documents AS T1 JOIN Document_Types AS T2 ON T1.document_type_code  =  T2.document_type_code WHERE T2.document_description  =  \"Aplikacja początkowa\";"
+        "query_pl": "SELECT T1.response_received_date FROM Documents AS T1 JOIN Document_Types AS T2 ON T1.document_type_code  =  T2.document_type_code WHERE T2.document_description  =  'Aplikacja początkowa';"
     },
     {
         "db_id": "tracking_grants_for_research",
         "question": "Show me the project ids of the projects which did not hire any staff for a leader role.",
         "question_pl": "Pokaż mi identyfikatory projektów, w których nie zatrudniono żadnego pracownika na stanowisko lidera.",
         "query": "SELECT project_id FROM Projects WHERE project_id NOT IN ( SELECT project_id FROM Project_Staff WHERE role_code  =  'leader' )",
-        "query_pl": "SELECT project_id FROM Projects WHERE project_id NOT IN ( SELECT project_id FROM Project_Staff WHERE role_code  =  \"lider\" )"
+        "query_pl": "SELECT project_id FROM Projects WHERE project_id NOT IN ( SELECT project_id FROM Project_Staff WHERE role_code  =  'lider' )"
     },
     {
         "db_id": "tracking_grants_for_research",
         "question": "Show me the task ids for projects detailed as 'omnis'.",
         "question_pl": "Pokaż mi identyfikatory zadań dla projektów wyszczególnionych jako \"omnis\".",
         "query": "SELECT  T1.task_id FROM Tasks AS T1 JOIN Projects AS T2 ON T1.project_id  =  T2.project_id WHERE T2.project_details  =  'omnis';",
-        "query_pl": "SELECT  T1.task_id FROM Tasks AS T1 JOIN Projects AS T2 ON T1.project_id  =  T2.project_id WHERE T2.project_details  =  \"omnis\";"
+        "query_pl": "SELECT  T1.task_id FROM Tasks AS T1 JOIN Projects AS T2 ON T1.project_id  =  T2.project_id WHERE T2.project_details  =  'omnis';"
     },
     {
         "db_id": "tracking_grants_for_research",
@@ -17427,7 +17427,7 @@
         "question": "List all the event ids with the type code being \"Death Proof\".",
         "question_pl": "Wymień wszystkie identyfikatory zdarzeń z kodem typu \"Death Proof\".",
         "query": "SELECT T1.event_id FROM EVENTS AS T1 JOIN Services AS T2 ON T1.Service_ID  =  T2.Service_ID WHERE T2.Service_Type_Code  =  'Death Proof'",
-        "query_pl": "SELECT T1.event_id FROM EVENTS AS T1 JOIN Services AS T2 ON T1.Service_ID  =  T2.Service_ID WHERE T2.Service_Type_Code  =  \"Death Proof\""
+        "query_pl": "SELECT T1.event_id FROM EVENTS AS T1 JOIN Services AS T2 ON T1.Service_ID  =  T2.Service_ID WHERE T2.Service_Type_Code  =  'Death Proof'"
     },
     {
         "db_id": "local_govt_in_alabama",
@@ -18092,7 +18092,7 @@
         "question": "How many female players are there?",
         "question_pl": "Ile jest kobiet wśród graczy?",
         "query": "SELECT count(*) FROM player where gender = 'F'",
-        "query_pl": "SELECT count(*) FROM player where gender = \"F\""
+        "query_pl": "SELECT count(*) FROM player where gender = 'F'"
     },
     {
         "db_id": "riding_club",
@@ -18554,6 +18554,6 @@
         "question": "Show all the information about the musical that has the award of 'Tony Award'?",
         "question_pl": "Pokaż wszystkie informacje o musicalu, który otrzymał nagrodę \"Nagroda Tony\"?",
         "query": "SELECT * FROM musical WHERE Award = 'Tony Award'",
-        "query_pl": "SELECT * FROM musical WHERE Award = \"Nagroda Tony\""
+        "query_pl": "SELECT * FROM musical WHERE Award = 'Nagroda Tony'"
     }
 ]

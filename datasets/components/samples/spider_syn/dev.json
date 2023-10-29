@@ -33,7 +33,7 @@
         "question": "What is the average, minimum, and maximum age of all vocalists from France?",
         "question_pl": "Jaki jest średni, minimalny i maksymalny wiek wszystkich wokalistów z Francja?",
         "query": "SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'France'",
-        "query_pl": "SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  \"Francja\""
+        "query_pl": "SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'Francja'"
     },
     {
         "db_id": "concert_singer",
@@ -42,7 +42,7 @@
         "question": "What is the average, minimum, and maximum age for all French musicians?",
         "question_pl": "Jaki jest średni, minimalny i maksymalny wiek wszystkich francuskich muzyków?",
         "query": "SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'France'",
-        "query_pl": "SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  \"Francja\""
+        "query_pl": "SELECT avg(age) ,  min(age) ,  max(age) FROM singer WHERE country  =  'Francja'"
     },
     {
         "db_id": "concert_singer",
@@ -447,7 +447,7 @@
         "question": "Find the number of puppies that are raised by female students (with gender F).",
         "question_pl": "Znajdź liczbę szczeniąt wychowanych przez studentki (z płcią F).",
         "query": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  'F' AND T3.pettype  =  'dog'",
-        "query_pl": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  \"F\" AND T3.pettype  =  \"pies\""
+        "query_pl": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  'F' AND T3.pettype  =  'pies'"
     },
     {
         "db_id": "pets_1",
@@ -456,7 +456,7 @@
         "question": "How many puppies are raised by female students?",
         "question_pl": "Ile szczeniąt jest wychowywanych przez studentki?",
         "query": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  'F' AND T3.pettype  =  'dog'",
-        "query_pl": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  \"F\" AND T3.pettype  =  \"pies\""
+        "query_pl": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T2.petid  =  T3.petid WHERE T1.sex  =  'F' AND T3.pettype  =  'pies'"
     },
     {
         "db_id": "pets_1",
@@ -483,7 +483,7 @@
         "question": "Find the given name of students who have kitten or puppy pet.",
         "question_pl": "Znajdź imiona uczniów, którzy mają kociaka lub szczeniaka.",
         "query": "SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' OR T3.pettype  =  'dog'",
-        "query_pl": "SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\" OR T3.pettype  =  \"pies\""
+        "query_pl": "SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot' OR T3.pettype  =  'pies'"
     },
     {
         "db_id": "pets_1",
@@ -492,7 +492,7 @@
         "question": "What are the given names of every student who has a kitten or puppy as a pet?",
         "question_pl": "Jakie są imiona każdego ucznia, który ma kociaka lub szczeniaka jako zwierzę domowe?",
         "query": "SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' OR T3.pettype  =  'dog'",
-        "query_pl": "SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\" OR T3.pettype  =  \"pies\""
+        "query_pl": "SELECT DISTINCT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot' OR T3.pettype  =  'pies'"
     },
     {
         "db_id": "pets_1",
@@ -501,7 +501,7 @@
         "question": "Find the name of students who have both kitten and puppy pets.",
         "question_pl": "Znajdź imiona uczniów, którzy mają zarówno kociaka, jak i szczeniaka.",
         "query": "SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' INTERSECT SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog'",
-        "query_pl": "select t1.fname from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid join pets as t3 on t3.petid  =  t2.petid where t3.pettype  =  \"kot\" intersect select t1.fname from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid join pets as t3 on t3.petid  =  t2.petid where t3.pettype  =  \"pies\""
+        "query_pl": "select t1.fname from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid join pets as t3 on t3.petid  =  t2.petid where t3.pettype  =  'kot' intersect select t1.fname from student as t1 join has_pet as t2 on t1.stuid  =  t2.stuid join pets as t3 on t3.petid  =  t2.petid where t3.pettype  =  'pies'"
     },
     {
         "db_id": "pets_1",
@@ -510,7 +510,7 @@
         "question": "What are the students' given names who have both kittens and puppies as pets?",
         "question_pl": "Jak nazywają się uczniowie, którzy mają zarówno kocięta, jak i szczenięta?",
         "query": "SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat' INTERSECT SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog'",
-        "query_pl": "SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\" INTERSECT SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"pies\""
+        "query_pl": "SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot' INTERSECT SELECT T1.Fname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'pies'"
     },
     {
         "db_id": "pets_1",
@@ -519,7 +519,7 @@
         "question": "Find the major and age of students who do not have a kitten pet.",
         "question_pl": "Znajdź kierunek studiów i wiek studentów, którzy nie mają kociaka.",
         "query": "SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')",
-        "query_pl": "SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\")"
+        "query_pl": "SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot')"
     },
     {
         "db_id": "pets_1",
@@ -528,7 +528,7 @@
         "question": "What discipline is every student who does not own a kitten as a pet, and also how old are they?",
         "question_pl": "Jaką dyscyplinę ma każdy uczeń, który nie posiada kociaka jako zwierzątka domowego, a także ile ma lat?",
         "query": "SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')",
-        "query_pl": "SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\")"
+        "query_pl": "SELECT major ,  age FROM student WHERE stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot')"
     },
     {
         "db_id": "pets_1",
@@ -537,7 +537,7 @@
         "question": "Find the id of students who do not have a kitten pet.",
         "question_pl": "Znajdź identyfikator uczniów, którzy nie mają kociaka.",
         "query": "SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat'",
-        "query_pl": "SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\""
+        "query_pl": "SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot'"
     },
     {
         "db_id": "pets_1",
@@ -546,7 +546,7 @@
         "question": "What are the ids of the students who do not own kittens as pets?",
         "question_pl": "Jakie są identyfikatory uczniów, którzy nie posiadają kociąt jako zwierząt domowych?",
         "query": "SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat'",
-        "query_pl": "SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\""
+        "query_pl": "SELECT stuid FROM student EXCEPT SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot'"
     },
     {
         "db_id": "pets_1",
@@ -555,7 +555,7 @@
         "question": "Find the given name and age of students who have a puppy but do not have a cat as a pet.",
         "question_pl": "Znajdź imię i wiek uczniów, którzy mają szczeniaka, ale nie mają kota.",
         "query": "SELECT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog' AND T1.stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')",
-        "query_pl": "SELECT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"pies\" AND T1.stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\")"
+        "query_pl": "SELECT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'pies' AND T1.stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot')"
     },
     {
         "db_id": "pets_1",
@@ -564,7 +564,7 @@
         "question": "What is the given name of every student who has a dog but does not have a kitten?",
         "question_pl": "Jak nazywa się każdy uczeń, który ma psa, ale nie ma kociaka?",
         "query": "SELECT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog' AND T1.stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'cat')",
-        "query_pl": "SELECT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"pies\" AND T1.stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"kot\")"
+        "query_pl": "SELECT T1.fname ,  T1.age FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'pies' AND T1.stuid NOT IN (SELECT T1.stuid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'kot')"
     },
     {
         "db_id": "pets_1",
@@ -636,7 +636,7 @@
         "question": "Find the id of the animals owned by student whose family name is 'Smith'.",
         "question_pl": "Znajdź identyfikatory zwierząt należących do ucznia, którego nazwisko brzmi \"Smith\".",
         "query": "SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  'Smith'",
-        "query_pl": "SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  \"Smith\""
+        "query_pl": "SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  'Smith'"
     },
     {
         "db_id": "pets_1",
@@ -645,7 +645,7 @@
         "question": "What is the id of the animals owned by the student whose family name is 'Smith'?",
         "question_pl": "Jaki jest identyfikator zwierząt należących do ucznia, którego nazwisko brzmi \"Smith\"?",
         "query": "SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  'Smith'",
-        "query_pl": "SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  \"Smith\""
+        "query_pl": "SELECT T2.petid FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid WHERE T1.Lname  =  'Smith'"
     },
     {
         "db_id": "pets_1",
@@ -672,7 +672,7 @@
         "question": "Find the family name of the student who has a kitten that is age 3.",
         "question_pl": "Znajdź nazwisko ucznia, który ma kociaka w wieku 3 lat.",
         "query": "SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pet_age  =  3 AND T3.pettype  =  'cat'",
-        "query_pl": "SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pet_age  =  3 AND T3.pettype  =  \"kot\""
+        "query_pl": "SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pet_age  =  3 AND T3.pettype  =  'kot'"
     },
     {
         "db_id": "pets_1",
@@ -681,7 +681,7 @@
         "question": "What is the family name of the student who has a kitten that is 3 years old?",
         "question_pl": "Jak nazywa się rodzina ucznia, który ma kociaka w wieku 3 lat?",
         "query": "SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pet_age  =  3 AND T3.pettype  =  'cat'",
-        "query_pl": "SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pet_age  =  3 AND T3.pettype  =  \"kot\""
+        "query_pl": "SELECT T1.lname FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pet_age  =  3 AND T3.pettype  =  'kot'"
     },
     {
         "db_id": "pets_1",
@@ -780,7 +780,7 @@
         "question": "Find the name of the manufacturer that produced some vehicles in the year of 1970?",
         "question_pl": "Znajdź nazwę producenta, który wyprodukował kilka pojazdów w 1970 roku?",
         "query": "SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  =  '1970';",
-        "query_pl": "SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  =  \"1970\";"
+        "query_pl": "SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  =  '1970';"
     },
     {
         "db_id": "car_1",
@@ -789,7 +789,7 @@
         "question": "What is the name of the different car manufacturers who produced a vehicle in 1970?",
         "question_pl": "Jak nazywają się różni producenci samochodów, którzy wyprodukowali pojazd w 1970 roku?",
         "query": "SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  =  '1970';",
-        "query_pl": "SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  =  \"1970\";"
+        "query_pl": "SELECT DISTINCT T1.Maker FROM CAR_MAKERS AS T1 JOIN MODEL_LIST AS T2 ON T1.Id  =  T2.Maker JOIN CAR_NAMES AS T3 ON T2.model  =  T3.model JOIN CARS_DATA AS T4 ON T3.MakeId  =  T4.id WHERE T4.year  =  '1970';"
     },
     {
         "db_id": "car_1",
@@ -879,7 +879,7 @@
         "question": "What is the accelerate of the vehicle make amc hornet sportabout (sw)?",
         "question_pl": "Jakie jest przyspieszenie pojazdu marki amc hornet sportabout (sw)?",
         "query": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  'amc hornet sportabout (sw)';",
-        "query_pl": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  \"amc hornet sportabout (sw)\";"
+        "query_pl": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  'amc hornet sportabout (sw)';"
     },
     {
         "db_id": "car_1",
@@ -888,7 +888,7 @@
         "question": "How much does the vehicle accelerate that makes out amc hornet sportabout (sw)?",
         "question_pl": "Jak bardzo przyspiesza pojazd, który tworzy amc hornet sportabout (sw)?",
         "query": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  'amc hornet sportabout (sw)';",
-        "query_pl": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  \"amc hornet sportabout (sw)\";"
+        "query_pl": "SELECT T1.Accelerate FROM CARS_DATA AS T1 JOIN CAR_NAMES AS T2 ON T1.Id  =  T2.MakeId WHERE T2.Make  =  'amc hornet sportabout (sw)';"
     },
     {
         "db_id": "car_1",
@@ -897,7 +897,7 @@
         "question": "How many French car manufacturers are there?",
         "question_pl": "Ilu jest francuskich producentów samochodów?",
         "query": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  'france';",
-        "query_pl": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  \"francja\";"
+        "query_pl": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  'francja';"
     },
     {
         "db_id": "car_1",
@@ -906,7 +906,7 @@
         "question": "What is the number of manufacturers of vehicle in France?",
         "question_pl": "Jaka jest liczba producentów pojazdów w Francja?",
         "query": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  'france';",
-        "query_pl": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  \"francja\";"
+        "query_pl": "SELECT count(*) FROM CAR_MAKERS AS T1 JOIN COUNTRIES AS T2 ON T1.Country  =  T2.CountryId WHERE T2.CountryName  =  'francja';"
     },
     {
         "db_id": "car_1",
@@ -915,7 +915,7 @@
         "question": "How many vehicle models are produced in the usa?",
         "question_pl": "Ile modeli pojazdów jest produkowanych w USA?",
         "query": "SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  'usa';",
-        "query_pl": "SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  \"uSA\";"
+        "query_pl": "SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  'uSA';"
     },
     {
         "db_id": "car_1",
@@ -924,7 +924,7 @@
         "question": "What is the count of the vehicle models produced in the United States?",
         "question_pl": "Jaka jest liczba modeli pojazdów produkowanych w Stanach Zjednoczonych?",
         "query": "SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  'usa';",
-        "query_pl": "SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  \"uSA\";"
+        "query_pl": "SELECT count(*) FROM MODEL_LIST AS T1 JOIN CAR_MAKERS AS T2 ON T1.Maker  =  T2.Id JOIN COUNTRIES AS T3 ON T2.Country  =  T3.CountryId WHERE T3.CountryName  =  'uSA';"
     },
     {
         "db_id": "car_1",
@@ -1005,7 +1005,7 @@
         "question": "Which States in europe have at least 3 vehicle manufacturers?",
         "question_pl": "Które państwa w Europie mają co najmniej 3 producentów pojazdów?",
         "query": "SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europe' GROUP BY T1.CountryName HAVING count(*)  >=  3;",
-        "query_pl": "SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  \"europa\" GROUP BY T1.CountryName HAVING count(*)  >=  3;"
+        "query_pl": "SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europa' GROUP BY T1.CountryName HAVING count(*)  >=  3;"
     },
     {
         "db_id": "car_1",
@@ -1014,7 +1014,7 @@
         "question": "What are the names of all European States with at least 3 manufacturers?",
         "question_pl": "Jak nazywają się wszystkie państwa europejskie z co najmniej 3 producentami?",
         "query": "SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europe' GROUP BY T1.CountryName HAVING count(*)  >=  3;",
-        "query_pl": "SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  \"europa\" GROUP BY T1.CountryName HAVING count(*)  >=  3;"
+        "query_pl": "SELECT T1.CountryName FROM COUNTRIES AS T1 JOIN CONTINENTS AS T2 ON T1.Continent  =  T2.ContId JOIN CAR_MAKERS AS T3 ON T1.CountryId  =  T3.Country WHERE T2.Continent  =  'europa' GROUP BY T1.CountryName HAVING count(*)  >=  3;"
     },
     {
         "db_id": "car_1",
@@ -1059,7 +1059,7 @@
         "question": "What is the average edispl of the automobile of model volvo?",
         "question_pl": "Jaka jest średnia cena samochodu modelu volvo?",
         "query": "SELECT avg(T2.edispl) FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T1.Model  =  'volvo';",
-        "query_pl": "SELECT avg(T2.edispl) FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T1.Model  =  \"volvo\";"
+        "query_pl": "SELECT avg(T2.edispl) FROM CAR_NAMES AS T1 JOIN CARS_DATA AS T2 ON T1.MakeId  =  T2.Id WHERE T1.Model  =  'volvo';"
     },
     {
         "db_id": "car_1",
@@ -1095,7 +1095,7 @@
         "question": "Which distinctive types are produced by manufacturer with the full name General Motors or weighing more than 3500?",
         "question_pl": "Jakie charakterystyczne typy są produkowane przez producenta o pełnej nazwie General Motors lub ważące więcej niż 3500?",
         "query": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors' OR T4.weight  >  3500;",
-        "query_pl": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  \"General Motors\" OR T4.weight  >  3500;"
+        "query_pl": "SELECT DISTINCT T2.Model FROM CAR_NAMES AS T1 JOIN MODEL_LIST AS T2 ON T1.Model  =  T2.Model JOIN CAR_MAKERS AS T3 ON T2.Maker  =  T3.Id JOIN CARS_DATA AS T4 ON T1.MakeId  =  T4.Id WHERE T3.FullName  =  'General Motors' OR T4.weight  >  3500;"
     },
     {
         "db_id": "car_1",
@@ -1203,7 +1203,7 @@
         "question": "What are the id and names of the nations which have more than 3 vehicle manufacturers or produce the 'fiat' model?",
         "question_pl": "Jakie są identyfikatory i nazwy krajów, które mają więcej niż 3 producentów pojazdów lub produkują model \"fiat\"?",
         "query": "SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country GROUP BY T1.countryId HAVING count(*)  >  3 UNION SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country JOIN MODEL_LIST AS T3 ON T2.Id  =  T3.Maker WHERE T3.Model  =  'fiat';",
-        "query_pl": "SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country GROUP BY T1.countryId HAVING count(*)  >  3 UNION SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country JOIN MODEL_LIST AS T3 ON T2.Id  =  T3.Maker WHERE T3.Model  =  \"fiat\";"
+        "query_pl": "SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country GROUP BY T1.countryId HAVING count(*)  >  3 UNION SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country JOIN MODEL_LIST AS T3 ON T2.Id  =  T3.Maker WHERE T3.Model  =  'fiat';"
     },
     {
         "db_id": "car_1",
@@ -1212,7 +1212,7 @@
         "question": "What are the ids and names of all States that either have more than 3 automobile manufacturers or produce fiats?",
         "question_pl": "Jakie są identyfikatory i nazwy wszystkich stanów, które mają więcej niż 3 producentów samochodów lub produkują fiaty?",
         "query": "SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country GROUP BY T1.countryId HAVING count(*)  >  3 UNION SELECT T1.countryId ,  T1.CountryName FROM Countries AS T1 JOIN CAR_MAKERS AS T2 ON T1.CountryId  =  T2.Country JOIN MODEL_LIST AS T3 ON T2.Id  =  T3.Maker WHERE T3.Model  =  'fiat';",
-        "query_pl": "select t1.countryid ,  t1.countryname from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country group by t1.countryid having count(*)  >  3 union select t1.countryid ,  t1.countryname from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country join model_list as t3 on t2.id  =  t3.maker where t3.model  =  \"fiat\";"
+        "query_pl": "select t1.countryid ,  t1.countryname from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country group by t1.countryid having count(*)  >  3 union select t1.countryid ,  t1.countryname from countries as t1 join car_makers as t2 on t1.countryid  =  t2.country join model_list as t3 on t2.id  =  t3.maker where t3.model  =  'fiat';"
     },
     {
         "db_id": "flight_2",
@@ -1860,7 +1860,7 @@
         "question": "How many text files are using the layout with type code 'PPT'?",
         "question_pl": "Ile plików tekstowych używa układu z kodem typu \"PPT\"?",
         "query": "SELECT count(*) FROM Documents AS T1 JOIN Templates AS T2 ON T1.Template_ID  =  T2.Template_ID WHERE T2.Template_Type_Code  =  'PPT'",
-        "query_pl": "SELECT count(*) FROM Documents AS T1 JOIN Templates AS T2 ON T1.Template_ID  =  T2.Template_ID WHERE T2.Template_Type_Code  =  \"PPT\""
+        "query_pl": "SELECT count(*) FROM Documents AS T1 JOIN Templates AS T2 ON T1.Template_ID  =  T2.Template_ID WHERE T2.Template_Type_Code  =  'PPT'"
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
@@ -1869,7 +1869,7 @@
         "question": "Count the number of text files that use the PPT template type.",
         "question_pl": "Policz liczbę plików tekstowych korzystających z szablonu typu PPT.",
         "query": "SELECT count(*) FROM Documents AS T1 JOIN Templates AS T2 ON T1.Template_ID  =  T2.Template_ID WHERE T2.Template_Type_Code  =  'PPT'",
-        "query_pl": "SELECT count(*) FROM Documents AS T1 JOIN Templates AS T2 ON T1.Template_ID  =  T2.Template_ID WHERE T2.Template_Type_Code  =  \"PPT\""
+        "query_pl": "SELECT count(*) FROM Documents AS T1 JOIN Templates AS T2 ON T1.Template_ID  =  T2.Template_ID WHERE T2.Template_Type_Code  =  'PPT'"
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
@@ -2301,7 +2301,7 @@
         "question": "How many paragraphs for the text file with name 'Summer Show'?",
         "question_pl": "Ile akapitów zawiera plik tekstowy o nazwie \"Summer Show\"?",
         "query": "SELECT count(*) FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_ID  =  T2.document_ID WHERE T2.document_name  =  'Summer Show'",
-        "query_pl": "SELECT count(*) FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_ID  =  T2.document_ID WHERE T2.document_name  =  \"Summer Show\""
+        "query_pl": "SELECT count(*) FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_ID  =  T2.document_ID WHERE T2.document_name  =  'Summer Show'"
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
@@ -2310,7 +2310,7 @@
         "question": "Count the number of paragraphs in the text file named 'Summer Show'.",
         "question_pl": "Policz liczbę akapitów w pliku tekstowym o nazwie \"Summer Show\".",
         "query": "SELECT count(*) FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_ID  =  T2.document_ID WHERE T2.document_name  =  'Summer Show'",
-        "query_pl": "SELECT count(*) FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_ID  =  T2.document_ID WHERE T2.document_name  =  \"Summer Show\""
+        "query_pl": "SELECT count(*) FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_ID  =  T2.document_ID WHERE T2.document_name  =  'Summer Show'"
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
@@ -2319,7 +2319,7 @@
         "question": "Show all paragraph ids and content for the text file with name 'Welcome to NY'.",
         "question_pl": "Wyświetl identyfikatory wszystkich akapitów i zawartość pliku tekstowego o nazwie \"Witaj w Nowym Jorku\".",
         "query": "SELECT T1.paragraph_id ,   T1.paragraph_text FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id WHERE T2.Document_Name  =  'Welcome to NY'",
-        "query_pl": "SELECT T1.paragraph_id ,   T1.paragraph_text FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id WHERE T2.Document_Name  =  \"Witamy w Nowym Jorku\""
+        "query_pl": "SELECT T1.paragraph_id ,   T1.paragraph_text FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id WHERE T2.Document_Name  =  'Witamy w Nowym Jorku'"
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
@@ -2328,7 +2328,7 @@
         "question": "What are the ids and content of paragraphs in the text file titled 'Welcome to NY'?",
         "question_pl": "Jakie są identyfikatory i zawartość akapitów w pliku tekstowym zatytułowanym \"Witaj w Nowym Jorku\"?",
         "query": "SELECT T1.paragraph_id ,   T1.paragraph_text FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id WHERE T2.Document_Name  =  'Welcome to NY'",
-        "query_pl": "SELECT T1.paragraph_id ,   T1.paragraph_text FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id WHERE T2.Document_Name  =  \"Witamy w Nowym Jorku\""
+        "query_pl": "SELECT T1.paragraph_id ,   T1.paragraph_text FROM Paragraphs AS T1 JOIN Documents AS T2 ON T1.document_id  =  T2.document_id WHERE T2.Document_Name  =  'Witamy w Nowym Jorku'"
     },
     {
         "db_id": "cre_Doc_Template_Mgt",
@@ -2463,7 +2463,7 @@
         "question": "What are the ids of text files that contain the paragraph text 'Brazil' and 'Ireland'?",
         "question_pl": "Jakie są identyfikatory plików tekstowych zawierających tekst akapitu \"Brazylia\" i \"Irlandia\"?",
         "query": "SELECT document_id FROM Paragraphs WHERE paragraph_text  =  'Brazil' INTERSECT SELECT document_id FROM Paragraphs WHERE paragraph_text  =  'Ireland'",
-        "query_pl": "SELECT document_id FROM Paragraphs WHERE paragraph_text  =  \"Brazylia\" INTERSECT SELECT document_id FROM Paragraphs WHERE paragraph_text  =  \"Irlandia\""
+        "query_pl": "SELECT document_id FROM Paragraphs WHERE paragraph_text  =  'Brazylia' INTERSECT SELECT document_id FROM Paragraphs WHERE paragraph_text  =  'Irlandia'"
     },
     {
         "db_id": "course_teach",
@@ -2787,7 +2787,7 @@
         "question": "What are the opening year and worker number of the museum named Plaza Museum?",
         "question_pl": "Jaki jest rok otwarcia i numer pracownika muzeum o nazwie Plaza Museum?",
         "query": "SELECT Num_of_Staff ,  Open_Year FROM museum WHERE name  =  'Plaza Museum'",
-        "query_pl": "SELECT Num_of_Staff ,  Open_Year FROM museum WHERE name  =  \"Muzeum Plaza\""
+        "query_pl": "SELECT Num_of_Staff ,  Open_Year FROM museum WHERE name  =  'Muzeum Plaza'"
     },
     {
         "db_id": "museum_visit",
@@ -2913,7 +2913,7 @@
         "question": "List the given name and birth date of all participants from the country with code USA.",
         "question_pl": "Wymień imię i nazwisko oraz datę urodzenia wszystkich uczestników z kraju z kodem USA.",
         "query": "SELECT first_name ,  birth_date FROM players WHERE country_code  =  'USA'",
-        "query_pl": "SELECT first_name ,  birth_date FROM players WHERE country_code  =  \"USA\""
+        "query_pl": "SELECT first_name ,  birth_date FROM players WHERE country_code  =  'USA'"
     },
     {
         "db_id": "wta_1",
@@ -2922,7 +2922,7 @@
         "question": "What are the given names and birth dates of participants from the USA?",
         "question_pl": "Jakie są imiona i daty urodzenia uczestników z USA?",
         "query": "SELECT first_name ,  birth_date FROM players WHERE country_code  =  'USA'",
-        "query_pl": "SELECT first_name ,  birth_date FROM players WHERE country_code  =  \"USA\""
+        "query_pl": "SELECT first_name ,  birth_date FROM players WHERE country_code  =  'USA'"
     },
     {
         "db_id": "wta_1",
@@ -3048,7 +3048,7 @@
         "question": "What are the nation code and given name of the participants who won in both tourney WTA Championships and Australian Open?",
         "question_pl": "Jaki jest kod kraju i imię uczestniczek, które wygrały w obu turniejach WTA Championships i Australian Open?",
         "query": "SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'WTA Championships' INTERSECT SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'Australian Open'",
-        "query_pl": "SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  \"Mistrzostwa WTA\" INTERSECT SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  \"Australian Open\""
+        "query_pl": "SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'Mistrzostwa WTA' INTERSECT SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'Australian Open'"
     },
     {
         "db_id": "wta_1",
@@ -3057,7 +3057,7 @@
         "question": "What are the given names and State codes for participants who won both the WTA Championships and the Australian Open?",
         "question_pl": "Jakie są imiona i nazwiska oraz kody stanowe uczestniczek, które wygrały zarówno WTA Championships, jak i Australian Open?",
         "query": "SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'WTA Championships' INTERSECT SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'Australian Open'",
-        "query_pl": "SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  \"Mistrzostwa WTA\" INTERSECT SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  \"Australian Open\""
+        "query_pl": "SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'Mistrzostwa WTA' INTERSECT SELECT T1.country_code ,  T1.first_name FROM players AS T1 JOIN matches AS T2 ON T1.player_id  =  T2.winner_id WHERE T2.tourney_name  =  'Australian Open'"
     },
     {
         "db_id": "wta_1",
@@ -3102,7 +3102,7 @@
         "question": "List the given and family name of all participants who are left / L hand in the order of birth date.",
         "question_pl": "Wymień imiona i nazwiska wszystkich uczestników, którzy są leworęczni / leworęczni, w kolejności daty urodzenia.",
         "query": "SELECT first_name ,  last_name FROM players WHERE hand  =  'L' ORDER BY birth_date",
-        "query_pl": "SELECT first_name ,  last_name FROM players WHERE hand  =  \"L\" ORDER BY birth_date"
+        "query_pl": "SELECT first_name ,  last_name FROM players WHERE hand  =  'L' ORDER BY birth_date"
     },
     {
         "db_id": "wta_1",
@@ -3111,7 +3111,7 @@
         "question": "What are the full names of all left handed participants, in order of birth date?",
         "question_pl": "Jakie są pełne imiona i nazwiska wszystkich leworęcznych uczestników, w kolejności od daty urodzenia?",
         "query": "SELECT first_name ,  last_name FROM players WHERE hand  =  'L' ORDER BY birth_date",
-        "query_pl": "SELECT first_name ,  last_name FROM players WHERE hand  =  \"L\" ORDER BY birth_date"
+        "query_pl": "SELECT first_name ,  last_name FROM players WHERE hand  =  'L' ORDER BY birth_date"
     },
     {
         "db_id": "wta_1",
@@ -3336,7 +3336,7 @@
         "question": "What are the death and hurt situations caused by the vessel with tonnage 't'?",
         "question_pl": "Jakie są sytuacje śmierci i obrażeń spowodowane przez statek o tonażu \"t\"?",
         "query": "SELECT T1.killed ,  T1.injured FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id  =  T2.id WHERE T2.tonnage  =  't'",
-        "query_pl": "SELECT T1.killed ,  T1.injured FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id  =  T2.id WHERE T2.tonnage  =  \"t\""
+        "query_pl": "SELECT T1.killed ,  T1.injured FROM death AS T1 JOIN ship AS t2 ON T1.caused_by_ship_id  =  T2.id WHERE T2.tonnage  =  't'"
     },
     {
         "db_id": "battle_death",
@@ -3345,7 +3345,7 @@
         "question": "What are the different ids and names of the combat that lost any 'Brig' type vessels?",
         "question_pl": "Jakie są różne identyfikatory i nazwy walk, w których utracono statki typu \"Brig\"?",
         "query": "SELECT DISTINCT T1.id ,  T1.name FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.ship_type  =  'Brig'",
-        "query_pl": "SELECT DISTINCT T1.id ,  T1.name FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.ship_type  =  \"Brig\""
+        "query_pl": "SELECT DISTINCT T1.id ,  T1.name FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.ship_type  =  'Brig'"
     },
     {
         "db_id": "battle_death",
@@ -3363,7 +3363,7 @@
         "question": "What are the distinct combat names which are between bulgarian commander 'Kaloyan' and latin commander 'Baldwin I'?",
         "question_pl": "Jakie są różnice w nazwach bojowych między bułgarskim dowódcą \"Kaloyanem\" a łacińskim dowódcą \"Baldwinem I\"?",
         "query": "SELECT name FROM battle WHERE bulgarian_commander  =  'Kaloyan' AND latin_commander  =  'Baldwin I'",
-        "query_pl": "SELECT name FROM battle WHERE bulgarian_commander  =  \"Kaloyan\" AND latin_commander  =  \"Baldwin I\""
+        "query_pl": "SELECT name FROM battle WHERE bulgarian_commander  =  'Kaloyan' AND latin_commander  =  'Baldwin I'"
     },
     {
         "db_id": "battle_death",
@@ -3381,7 +3381,7 @@
         "question": "How many combats did not lose any vessel with tonnage '225'?",
         "question_pl": "W ilu bitwach nie zginął żaden statek o tonażu \"225\"?",
         "query": "SELECT count(*) FROM battle WHERE id NOT IN ( SELECT lost_in_battle FROM ship WHERE tonnage  =  '225' );",
-        "query_pl": "SELECT count(*) FROM battle WHERE id NOT IN ( SELECT lost_in_battle FROM ship WHERE tonnage  =  \"225\" );"
+        "query_pl": "SELECT count(*) FROM battle WHERE id NOT IN ( SELECT lost_in_battle FROM ship WHERE tonnage  =  '225' );"
     },
     {
         "db_id": "battle_death",
@@ -3390,7 +3390,7 @@
         "question": "List the name and date the combat that has lost the vessel named 'Lettice' and the vessel named 'HMS Atalanta'",
         "question_pl": "Wymień nazwę i datę bitwy, w której utracono statek o nazwie \"Lettice\" i statek o nazwie \"HMS Atalanta\".",
         "query": "SELECT T1.name ,  T1.date FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.name  =  'Lettice' INTERSECT SELECT T1.name ,  T1.date FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.name  =  'HMS Atalanta'",
-        "query_pl": "SELECT T1.name ,  T1.date FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.name  =  \"Lettice\" INTERSECT SELECT T1.name ,  T1.date FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.name  =  \"HMS Atalanta\""
+        "query_pl": "SELECT T1.name ,  T1.date FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.name  =  'Lettice' INTERSECT SELECT T1.name ,  T1.date FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.name  =  'HMS Atalanta'"
     },
     {
         "db_id": "battle_death",
@@ -3399,7 +3399,7 @@
         "question": "Show names, results and bulgarian commanders of the combats with no vessels lost in the 'English Channel'.",
         "question_pl": "Pokaż nazwy, wyniki i bułgarskich dowódców bitew, w których nie utracono żadnych statków w \"kanale La Manche\".",
         "query": "SELECT name ,  RESULT ,  bulgarian_commander FROM battle EXCEPT SELECT T1.name ,  T1.result ,  T1.bulgarian_commander FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.location  =  'English Channel'",
-        "query_pl": "SELECT name ,  RESULT ,  bulgarian_commander FROM battle EXCEPT SELECT T1.name ,  T1.result ,  T1.bulgarian_commander FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.location  =  \"Kanał La Manche\""
+        "query_pl": "SELECT name ,  RESULT ,  bulgarian_commander FROM battle EXCEPT SELECT T1.name ,  T1.result ,  T1.bulgarian_commander FROM battle AS T1 JOIN ship AS T2 ON T1.id  =  T2.lost_in_battle WHERE T2.location  =  'Kanał La Manche'"
     },
     {
         "db_id": "battle_death",
@@ -3435,7 +3435,7 @@
         "question": "How is the math curriculum described?",
         "question_pl": "Jak opisany jest program nauczania matematyki?",
         "query": "SELECT course_description FROM Courses WHERE course_name  =  'math'",
-        "query_pl": "SELECT course_description FROM Courses WHERE course_name  =  \"matematyka\""
+        "query_pl": "SELECT course_description FROM Courses WHERE course_name  =  'matematyka'"
     },
     {
         "db_id": "student_transcripts_tracking",
@@ -3444,7 +3444,7 @@
         "question": "What are the describing content for all the math curriculums?",
         "question_pl": "Jakie treści opisują wszystkie programy nauczania matematyki?",
         "query": "SELECT course_description FROM Courses WHERE course_name  =  'math'",
-        "query_pl": "SELECT course_description FROM Courses WHERE course_name  =  \"matematyka\""
+        "query_pl": "SELECT course_description FROM Courses WHERE course_name  =  'matematyka'"
     },
     {
         "db_id": "student_transcripts_tracking",
@@ -3453,7 +3453,7 @@
         "question": "What is the zip code of the position in the city Port Chelsea?",
         "question_pl": "Jaki jest kod pocztowy pozycji w mieście Port Chelsea?",
         "query": "SELECT zip_postcode FROM Addresses WHERE city  =  'Port Chelsea'",
-        "query_pl": "SELECT zip_postcode FROM Addresses WHERE city  =  \"Port Chelsea\""
+        "query_pl": "SELECT zip_postcode FROM Addresses WHERE city  =  'Port Chelsea'"
     },
     {
         "db_id": "student_transcripts_tracking",
@@ -3471,7 +3471,7 @@
         "question": "How many degrees does the engineering division offer?",
         "question_pl": "Ile stopni oferuje wydział inżynierii?",
         "query": "SELECT count(*) FROM Departments AS T1 JOIN Degree_Programs AS T2 ON T1.department_id  =  T2.department_id WHERE T1.department_name  =  'engineer'",
-        "query_pl": "SELECT count(*) FROM Departments AS T1 JOIN Degree_Programs AS T2 ON T1.department_id  =  T2.department_id WHERE T1.department_name  =  \"inżynier\""
+        "query_pl": "SELECT count(*) FROM Departments AS T1 JOIN Degree_Programs AS T2 ON T1.department_id  =  T2.department_id WHERE T1.department_name  =  'inżynier'"
     },
     {
         "db_id": "student_transcripts_tracking",
@@ -3561,7 +3561,7 @@
         "question": "What are the given, middle, and family names for everybody enrolled in a Bachelors program?",
         "question_pl": "Jakie są imiona, nazwiska i nazwiska rodowe wszystkich osób zapisanych na studia licencjackie?",
         "query": "SELECT DISTINCT T1.first_name ,  T1.middle_name ,  T1.last_name FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1.student_id  =  T2.student_id JOIN Degree_Programs AS T3 ON T2.degree_program_id  =  T3.degree_program_id WHERE T3.degree_summary_name  =  'Bachelor'",
-        "query_pl": "SELECT DISTINCT T1.first_name ,  T1.middle_name ,  T1.last_name FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1.student_id  =  T2.student_id JOIN Degree_Programs AS T3 ON T2.degree_program_id  =  T3.degree_program_id WHERE T3.degree_summary_name  =  \"Licencjat\""
+        "query_pl": "SELECT DISTINCT T1.first_name ,  T1.middle_name ,  T1.last_name FROM Students AS T1 JOIN Student_Enrolment AS T2 ON T1.student_id  =  T2.student_id JOIN Degree_Programs AS T3 ON T2.degree_program_id  =  T3.degree_program_id WHERE T3.degree_summary_name  =  'Licencjat'"
     },
     {
         "db_id": "student_transcripts_tracking",
@@ -3633,7 +3633,7 @@
         "question": "What are the family name of the students who live in North Carolina but have not registered in any degree programs?",
         "question_pl": "Jak nazywają się rodziny studentów, którzy mieszkają w Karolinie Północnej, ale nie zarejestrowali się na żadne studia?",
         "query": "SELECT T1.last_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.current_address_id  =  T2.address_id WHERE T2.state_province_county  =  'NorthCarolina' EXCEPT SELECT DISTINCT T3.last_name FROM Students AS T3 JOIN Student_Enrolment AS T4 ON T3.student_id  =  T4.student_id",
-        "query_pl": "SELECT T1.last_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.current_address_id  =  T2.address_id WHERE T2.state_province_county  =  \"Karolina Północna\" EXCEPT SELECT DISTINCT T3.last_name FROM Students AS T3 JOIN Student_Enrolment AS T4 ON T3.student_id  =  T4.student_id"
+        "query_pl": "SELECT T1.last_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.current_address_id  =  T2.address_id WHERE T2.state_province_county  =  'Karolina Północna' EXCEPT SELECT DISTINCT T3.last_name FROM Students AS T3 JOIN Student_Enrolment AS T4 ON T3.student_id  =  T4.student_id"
     },
     {
         "db_id": "student_transcripts_tracking",
@@ -3660,7 +3660,7 @@
         "question": "What is the phone number of the student named Timothy Ward?",
         "question_pl": "Jaki jest numer telefonu ucznia o imieniu Timothy Ward?",
         "query": "SELECT cell_mobile_number FROM Students WHERE first_name  =  'Timmothy' AND last_name  =  'Ward'",
-        "query_pl": "select cell_mobile_number from students where first_name  =  \"timmothy\" and last_name  =  \"oddział\""
+        "query_pl": "select cell_mobile_number from students where first_name  =  'timmothy' and last_name  =  'oddział'"
     },
     {
         "db_id": "student_transcripts_tracking",
@@ -3795,7 +3795,7 @@
         "question": "Find the academic session when both Master students and Bachelor students got enrolled in.",
         "question_pl": "Znajdź sesję akademicką, w której zapisali się zarówno studenci studiów magisterskich, jak i licencjackich.",
         "query": "SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  'Master' INTERSECT SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  'Bachelor'",
-        "query_pl": "SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  \"Mistrz\" INTERSECT SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  \"Licencjat\""
+        "query_pl": "SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  'Mistrz' INTERSECT SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  'Licencjat'"
     },
     {
         "db_id": "student_transcripts_tracking",
@@ -3804,7 +3804,7 @@
         "question": "What is the id of the academic session that had both Masters and Bachelors students enrolled?",
         "question_pl": "Jaki jest identyfikator sesji akademickiej, na którą zapisali się zarówno studenci studiów magisterskich, jak i licencjackich?",
         "query": "SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  'Master' INTERSECT SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  'Bachelor'",
-        "query_pl": "SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  \"Mistrz\" INTERSECT SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  \"Licencjat\""
+        "query_pl": "SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  'Mistrz' INTERSECT SELECT DISTINCT T2.semester_id FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id WHERE degree_summary_name  =  'Licencjat'"
     },
     {
         "db_id": "student_transcripts_tracking",
@@ -3831,7 +3831,7 @@
         "question": "Find the given name of the students who permanently live in the country Haiti or have the phone number 09700166582.",
         "question_pl": "Znajdź imię i nazwisko uczniów, którzy na stałe mieszkają w kraju Haiti lub mają numer telefonu 09700166582.",
         "query": "SELECT T1.first_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.permanent_address_id  =  T2.address_id WHERE T2.country  =  'Haiti' UNION SELECT first_name FROM Students WHERE cell_mobile_number  =  '09700166582'",
-        "query_pl": "select t1.first_name from students as t1 join addresses as t2 on t1.permanent_address_id  =  t2.address_id where t2.country  =  \"haiti\" or t1.cell_mobile_number  =  \"09700166582\""
+        "query_pl": "select t1.first_name from students as t1 join addresses as t2 on t1.permanent_address_id  =  t2.address_id where t2.country  =  'haiti' or t1.cell_mobile_number  =  '09700166582'"
     },
     {
         "db_id": "student_transcripts_tracking",
@@ -3840,7 +3840,7 @@
         "question": "What are the given names of the students who live in Haiti permanently or have the phone number 09700166582?",
         "question_pl": "Jakie są imiona i nazwiska studentów, którzy mieszkają na Haiti na stałe lub mają numer telefonu 09700166582?",
         "query": "SELECT T1.first_name FROM Students AS T1 JOIN Addresses AS T2 ON T1.permanent_address_id  =  T2.address_id WHERE T2.country  =  'Haiti' UNION SELECT first_name FROM Students WHERE cell_mobile_number  =  '09700166582'",
-        "query_pl": "select t1.first_name from students as t1 join addresses as t2 on t1.permanent_address_id  =  t2.address_id where t2.country  =  \"haiti\" or t1.cell_mobile_number  =  \"09700166582\""
+        "query_pl": "select t1.first_name from students as t1 join addresses as t2 on t1.permanent_address_id  =  t2.address_id where t2.country  =  'haiti' or t1.cell_mobile_number  =  '09700166582'"
     },
     {
         "db_id": "tvshow",
@@ -4083,7 +4083,7 @@
         "question": "which countries' tv channels are playing some animation written by Todd Casey?",
         "question_pl": "Kanały telewizyjne w których krajach puszczają animację napisaną przez Todda Caseya?",
         "query": "SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'",
-        "query_pl": "SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  \"Todd Casey\""
+        "query_pl": "SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'"
     },
     {
         "db_id": "tvshow",
@@ -4092,7 +4092,7 @@
         "question": "What are the State that have animations on TV that were written by Todd Casey?",
         "question_pl": "Jakie państwo ma animacje w telewizji, które zostały napisane przez Todda Caseya?",
         "query": "SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'",
-        "query_pl": "SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  \"Todd Casey\""
+        "query_pl": "SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'"
     },
     {
         "db_id": "tvshow",
@@ -4101,7 +4101,7 @@
         "question": "which countries' tv channels are not playing any animation written by Todd Casey?",
         "question_pl": "Kanały telewizyjne w których krajach nie puszczają animacji napisanych przez Todda Caseya?",
         "query": "SELECT country FROM TV_Channel EXCEPT SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'",
-        "query_pl": "SELECT country FROM TV_Channel EXCEPT SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  \"Todd Casey\""
+        "query_pl": "SELECT country FROM TV_Channel EXCEPT SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'"
     },
     {
         "db_id": "tvshow",
@@ -4110,7 +4110,7 @@
         "question": "What are the States that are not playing animations written by Todd Casey?",
         "question_pl": "Jakie są Stany, w których nie odtwarzasz animacji napisanych przez Todda Caseya?",
         "query": "SELECT country FROM TV_Channel EXCEPT SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'",
-        "query_pl": "SELECT country FROM TV_Channel EXCEPT SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  \"Todd Casey\""
+        "query_pl": "SELECT country FROM TV_Channel EXCEPT SELECT T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.written_by  =  'Todd Casey'"
     },
     {
         "db_id": "tvshow",
@@ -4119,7 +4119,7 @@
         "question": "Find the serial name and State of the tv channel that is playing some animation directed by Ben Jones and Michael Chang?",
         "question_pl": "Znajdź nazwę serialu i stan kanału telewizyjnego, który puszcza animację wyreżyserowaną przez Bena Jonesa i Michaela Changa?",
         "query": "SELECT T1.series_name ,  T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.directed_by  =  'Michael Chang' INTERSECT SELECT T1.series_name ,  T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.directed_by  =  'Ben Jones'",
-        "query_pl": "SELECT T1.series_name ,  T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.directed_by  =  \"Michael Chang\" INTERSECT SELECT T1.series_name ,  T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.directed_by  =  \"Ben Jones\""
+        "query_pl": "SELECT T1.series_name ,  T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.directed_by  =  'Michael Chang' INTERSECT SELECT T1.series_name ,  T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.directed_by  =  'Ben Jones'"
     },
     {
         "db_id": "tvshow",
@@ -4128,7 +4128,7 @@
         "question": "What is the serial name and nation of all TV channels that are playing animations directed by Ben Jones and animations directed by Michael Chang?",
         "question_pl": "Jaka jest nazwa serialu i kraj wszystkich kanałów telewizyjnych, które puszczają animacje wyreżyserowane przez Bena Jonesa i animacje wyreżyserowane przez Michaela Changa?",
         "query": "SELECT T1.series_name ,  T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.directed_by  =  'Michael Chang' INTERSECT SELECT T1.series_name ,  T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.directed_by  =  'Ben Jones'",
-        "query_pl": "SELECT T1.series_name ,  T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.directed_by  =  \"Michael Chang\" INTERSECT SELECT T1.series_name ,  T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.directed_by  =  \"Ben Jones\""
+        "query_pl": "SELECT T1.series_name ,  T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.directed_by  =  'Michael Chang' INTERSECT SELECT T1.series_name ,  T1.country FROM TV_Channel AS T1 JOIN cartoon AS T2 ON T1.id = T2.Channel WHERE T2.directed_by  =  'Ben Jones'"
     },
     {
         "db_id": "tvshow",
@@ -4146,7 +4146,7 @@
         "question": "find the id of tv channels that do not play any animation directed by Ben Jones.",
         "question_pl": "Znajdź identyfikatory kanałów telewizyjnych, które nie puszczają żadnych animacji wyreżyserowanych przez Bena Jonesa.",
         "query": "SELECT id FROM TV_Channel EXCEPT SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones'",
-        "query_pl": "SELECT id FROM TV_Channel EXCEPT SELECT channel FROM cartoon WHERE directed_by  =  \"Ben Jones\""
+        "query_pl": "SELECT id FROM TV_Channel EXCEPT SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones'"
     },
     {
         "db_id": "tvshow",
@@ -4155,7 +4155,7 @@
         "question": "What are the ids of the TV channels that do not have any animations directed by Ben Jones?",
         "question_pl": "Jakie są identyfikatory kanałów telewizyjnych, które nie mają żadnych animacji wyreżyserowanych przez Bena Jonesa?",
         "query": "SELECT id FROM TV_Channel EXCEPT SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones'",
-        "query_pl": "SELECT id FROM TV_Channel EXCEPT SELECT channel FROM cartoon WHERE directed_by  =  \"Ben Jones\""
+        "query_pl": "SELECT id FROM TV_Channel EXCEPT SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones'"
     },
     {
         "db_id": "tvshow",
@@ -4164,7 +4164,7 @@
         "question": "find the package option of the tv channel that do not have any animation directed by Ben Jones.",
         "question_pl": "Znajdź opcję pakietu kanału telewizyjnego, który nie ma żadnej animacji wyreżyserowanej przez Bena Jonesa.",
         "query": "SELECT package_option FROM TV_Channel WHERE id NOT IN (SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones')",
-        "query_pl": "SELECT package_option FROM TV_Channel WHERE id NOT IN (SELECT channel FROM cartoon WHERE directed_by  =  \"Ben Jones\")"
+        "query_pl": "SELECT package_option FROM TV_Channel WHERE id NOT IN (SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones')"
     },
     {
         "db_id": "tvshow",
@@ -4173,7 +4173,7 @@
         "question": "What are the package options of all tv channels that are not playing any animations directed by Ben Jones?",
         "question_pl": "Jakie są opcje pakietów wszystkich kanałów telewizyjnych, które nie odtwarzają żadnych animacji wyreżyserowanych przez Bena Jonesa?",
         "query": "SELECT package_option FROM TV_Channel WHERE id NOT IN (SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones')",
-        "query_pl": "SELECT package_option FROM TV_Channel WHERE id NOT IN (SELECT channel FROM cartoon WHERE directed_by  =  \"Ben Jones\")"
+        "query_pl": "SELECT package_option FROM TV_Channel WHERE id NOT IN (SELECT channel FROM cartoon WHERE directed_by  =  'Ben Jones')"
     },
     {
         "db_id": "poker_player",
@@ -4497,7 +4497,7 @@
         "question": "What are the names of the participants whose names are not 'Jessie Alloway'",
         "question_pl": "Jak nazywają się uczestnicy, których nazwiska nie brzmią \"Jessie Alloway\"?",
         "query": "SELECT contestant_name FROM contestants WHERE contestant_name != 'Jessie Alloway'",
-        "query_pl": "SELECT contestant_name FROM contestants WHERE contestant_name != \"Jessie Alloway\""
+        "query_pl": "SELECT contestant_name FROM contestants WHERE contestant_name != 'Jessie Alloway'"
     },
     {
         "db_id": "voter_1",
@@ -4524,7 +4524,7 @@
         "question": "What are the number of votes from nation 'NY' or 'CA'?",
         "question_pl": "Jaka jest liczba głosów z kraju \"NY\" lub \"CA\"?",
         "query": "SELECT count(*) FROM votes WHERE state  =  'NY' OR state  =  'CA'",
-        "query_pl": "SELECT count(*) FROM votes WHERE state  =  \"NY\" OR state  =  \"CA\""
+        "query_pl": "SELECT count(*) FROM votes WHERE state  =  'NY' OR state  =  'CA'"
     },
     {
         "db_id": "voter_1",
@@ -4551,7 +4551,7 @@
         "question": "What are the set up dates, states, and telephone numbers of the votes that were for the competitor named 'Tabatha Gehling'?",
         "question_pl": "Jakie są daty ustawienia, stany i numery telefonów głosów oddanych na zawodniczkę o imieniu \"Tabatha Gehling\"?",
         "query": "SELECT T2.created ,  T2.state ,  T2.phone_number FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number WHERE T1.contestant_name  =  'Tabatha Gehling'",
-        "query_pl": "SELECT T2.created ,  T2.state ,  T2.phone_number FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number WHERE T1.contestant_name  =  \"Tabatha Gehling\""
+        "query_pl": "SELECT T2.created ,  T2.state ,  T2.phone_number FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number WHERE T1.contestant_name  =  'Tabatha Gehling'"
     },
     {
         "db_id": "voter_1",
@@ -4560,7 +4560,7 @@
         "question": "List the area codes in which voters voted both for the participant 'Tabatha Gehling' and the participant 'Kelly Clauss'.",
         "question_pl": "Wymień numery kierunkowe, pod którymi głosujący oddali głos zarówno na uczestnika \"Tabatha Gehling\", jak i na uczestnika \"Kelly Clauss\".",
         "query": "SELECT T3.area_code FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number JOIN area_code_state AS T3 ON T2.state  =  T3.state WHERE T1.contestant_name  =  'Tabatha Gehling' INTERSECT SELECT T3.area_code FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number JOIN area_code_state AS T3 ON T2.state  =  T3.state WHERE T1.contestant_name  =  'Kelly Clauss'",
-        "query_pl": "SELECT T3.area_code FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number JOIN area_code_state AS T3 ON T2.state  =  T3.state WHERE T1.contestant_name  =  \"Tabatha Gehling\" INTERSECT SELECT T3.area_code FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number JOIN area_code_state AS T3 ON T2.state  =  T3.state WHERE T1.contestant_name  =  \"Kelly Clauss\""
+        "query_pl": "SELECT T3.area_code FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number JOIN area_code_state AS T3 ON T2.state  =  T3.state WHERE T1.contestant_name  =  'Tabatha Gehling' INTERSECT SELECT T3.area_code FROM contestants AS T1 JOIN votes AS T2 ON T1.contestant_number  =  T2.contestant_number JOIN area_code_state AS T3 ON T2.state  =  T3.state WHERE T1.contestant_name  =  'Kelly Clauss'"
     },
     {
         "db_id": "voter_1",
@@ -4992,7 +4992,7 @@
         "question": "What are the names of towns in Europe for which English is not the official language?",
         "question_pl": "Jak nazywają się miasta w Europie, w których angielski nie jest językiem urzędowym?",
         "query": "SELECT DISTINCT T2.Name FROM country AS T1 JOIN city AS T2 ON T2.CountryCode  =  T1.Code WHERE T1.Continent  =  'Europe' AND T1.Name NOT IN (SELECT T3.Name FROM country AS T3 JOIN countrylanguage AS T4 ON T3.Code  =  T4.CountryCode WHERE T4.IsOfficial  =  'T' AND T4.Language  =  'English')",
-        "query_pl": "SELECT DISTINCT T2.Name FROM country AS T1 JOIN city AS T2 ON T2.CountryCode  =  T1.Code WHERE T1.Continent  =  \"Europa\" AND T1.Name NOT IN (SELECT T3.Name FROM country AS T3 JOIN countrylanguage AS T4 ON T3.Code  =  T4.CountryCode WHERE T4.IsOfficial  =  \"T\" AND T4.Language  =  \"Angielski\")"
+        "query_pl": "SELECT DISTINCT T2.Name FROM country AS T1 JOIN city AS T2 ON T2.CountryCode  =  T1.Code WHERE T1.Continent  =  'Europa' AND T1.Name NOT IN (SELECT T3.Name FROM country AS T3 JOIN countrylanguage AS T4 ON T3.Code  =  T4.CountryCode WHERE T4.IsOfficial  =  'T' AND T4.Language  =  'Angielski')"
     },
     {
         "db_id": "world_1",
@@ -5001,7 +5001,7 @@
         "question": "Whic`h unique towns are in  Asian States where Chinese is the official language?",
         "question_pl": "Jakie wyjątkowe miasta znajdują się w państwach azjatyckich, w których językiem urzędowym jest chiński?",
         "query": "SELECT DISTINCT T3.Name FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode JOIN city AS T3 ON T1.Code  =  T3.CountryCode WHERE T2.IsOfficial  =  'T' AND T2.Language  =  'Chinese' AND T1.Continent  =  \"Asia\"",
-        "query_pl": "select distinct t3.name from country as t1 join countrylanguage as t2 on t1.code  =  t2.countrycode join city as t3 on t1.code  =  t3.countrycode where t2.isofficial  =  \"t\" and t2.language  =  \"chiński\" and t1.continent  =  \"azja\""
+        "query_pl": "select distinct t3.name from country as t1 join countrylanguage as t2 on t1.code  =  t2.countrycode join city as t3 on t1.code  =  t3.countrycode where t2.isofficial  =  't' and t2.language  =  'chiński' and t1.continent  =  \"azja\""
     },
     {
         "db_id": "world_1",
@@ -5334,7 +5334,7 @@
         "question": "What are the names of directors whose countries are not \"USA\"?",
         "question_pl": "Jakie są nazwiska dyrektorów, których kraje nie są \"USA\"?",
         "query": "SELECT Name FROM conductor WHERE Nationality != 'USA'",
-        "query_pl": "SELECT Name FROM conductor WHERE Nationality != \"USA\""
+        "query_pl": "SELECT Name FROM conductor WHERE Nationality != 'USA'"
     },
     {
         "db_id": "orchestra",
@@ -5343,7 +5343,7 @@
         "question": "Return the names of directors that do not have the country \"USA\".",
         "question_pl": "Zwróć nazwiska dyrektorów, którzy nie mają kraju \"USA\".",
         "query": "SELECT Name FROM conductor WHERE Nationality != 'USA'",
-        "query_pl": "SELECT Name FROM conductor WHERE Nationality != \"USA\""
+        "query_pl": "SELECT Name FROM conductor WHERE Nationality != 'USA'"
     },
     {
         "db_id": "orchestra",
@@ -6018,7 +6018,7 @@
         "question": "Which veterinarians live in the state of Indiana or have done more than 2 medical cares? List his or her id, family name and cell phone.",
         "question_pl": "Którzy weterynarze mieszkają w stanie Indiana lub wykonali więcej niż 2 zabiegi medyczne? Wymień jego nazwisko, imię i telefon komórkowy.",
         "query": "SELECT professional_id ,  last_name ,  cell_number FROM Professionals WHERE state  =  'Indiana' UNION SELECT T1.professional_id ,  T1.last_name ,  T1.cell_number FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >  2",
-        "query_pl": "SELECT professional_id ,  last_name ,  cell_number FROM Professionals WHERE state  =  \"Indiana\" UNION SELECT T1.professional_id ,  T1.last_name ,  T1.cell_number FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >  2"
+        "query_pl": "SELECT professional_id ,  last_name ,  cell_number FROM Professionals WHERE state  =  'Indiana' UNION SELECT T1.professional_id ,  T1.last_name ,  T1.cell_number FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >  2"
     },
     {
         "db_id": "dog_kennels",
@@ -6027,7 +6027,7 @@
         "question": "Find the id, last name and cell phone of the veterinarians who live in the state of Indiana or have performed more than two health-cares.",
         "question_pl": "Znajdź identyfikator, nazwisko i telefon komórkowy weterynarzy, którzy mieszkają w stanie Indiana lub wykonali więcej niż dwa zabiegi medyczne.",
         "query": "SELECT professional_id ,  last_name ,  cell_number FROM Professionals WHERE state  =  'Indiana' UNION SELECT T1.professional_id ,  T1.last_name ,  T1.cell_number FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >  2",
-        "query_pl": "SELECT professional_id ,  last_name ,  cell_number FROM Professionals WHERE state  =  \"Indiana\" UNION SELECT T1.professional_id ,  T1.last_name ,  T1.cell_number FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >  2"
+        "query_pl": "SELECT professional_id ,  last_name ,  cell_number FROM Professionals WHERE state  =  'Indiana' UNION SELECT T1.professional_id ,  T1.last_name ,  T1.cell_number FROM Professionals AS T1 JOIN Treatments AS T2 ON T1.professional_id  =  T2.professional_id GROUP BY T1.professional_id HAVING count(*)  >  2"
     },
     {
         "db_id": "dog_kennels",
@@ -6324,7 +6324,7 @@
         "question": "Which dogs are owned by someone who lives in Virginia? List the guardian's first name and the dog's name.",
         "question_pl": "Które psy są własnością osoby mieszkającej w Wirginii? Wymień imię opiekuna i imię psa.",
         "query": "SELECT T1.first_name ,  T2.name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  'Virginia'",
-        "query_pl": "SELECT T1.first_name ,  T2.name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  \"Wirginia\""
+        "query_pl": "SELECT T1.first_name ,  T2.name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  'Wirginia'"
     },
     {
         "db_id": "dog_kennels",
@@ -6333,7 +6333,7 @@
         "question": "Find the given names of guardians living in Virginia and the names of dogs they own.",
         "question_pl": "Znajdź imiona opiekunów mieszkających w Wirginii i imiona psów, których są właścicielami.",
         "query": "SELECT T1.first_name ,  T2.name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  'Virginia'",
-        "query_pl": "SELECT T1.first_name ,  T2.name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  \"Wirginia\""
+        "query_pl": "SELECT T1.first_name ,  T2.name FROM Owners AS T1 JOIN Dogs AS T2 ON T1.owner_id  =  T2.owner_id WHERE T1.state  =  'Wirginia'"
     },
     {
         "db_id": "dog_kennels",
@@ -6378,7 +6378,7 @@
         "question": "List the emails of the veterinarians who live in the state of Hawaii or the state of Wisconsin.",
         "question_pl": "Podaj adresy e-mail lekarzy weterynarii mieszkających na Hawajach lub w stanie Wisconsin.",
         "query": "SELECT email_address FROM Professionals WHERE state  =  'Hawaii' OR state  =  'Wisconsin'",
-        "query_pl": "SELECT email_address FROM Professionals WHERE state  =  \"Hawaje\" OR state  =  \"Wisconsin\""
+        "query_pl": "SELECT email_address FROM Professionals WHERE state  =  'Hawaje' OR state  =  'Wisconsin'"
     },
     {
         "db_id": "dog_kennels",
@@ -6387,7 +6387,7 @@
         "question": "What are the emails of the veterinarians living in either the state of Hawaii or the state of Wisconsin?",
         "question_pl": "Jakie są e-maile weterynarzy mieszkających na Hawajach lub w stanie Wisconsin?",
         "query": "SELECT email_address FROM Professionals WHERE state  =  'Hawaii' OR state  =  'Wisconsin'",
-        "query_pl": "SELECT email_address FROM Professionals WHERE state  =  \"Hawaje\" OR state  =  \"Wisconsin\""
+        "query_pl": "SELECT email_address FROM Professionals WHERE state  =  'Hawaje' OR state  =  'Wisconsin'"
     },
     {
         "db_id": "dog_kennels",

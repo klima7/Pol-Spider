@@ -39,7 +39,7 @@
         "question": "Who are the technicians from team \"CLE\" and \"CWS\"?",
         "question_pl": "Kim są technicy z drużyn \"CLE\" i \"CWS\"?",
         "query": "select Name from technician where Team = 'CLE' or team = 'CWS'",
-        "query_pl": "select Name from technician where Team = \"CLE\" or team = \"CWS\""
+        "query_pl": "select Name from technician where Team = 'CLE' or team = 'CWS'"
     },
     {
         "db_id": "student_1",
@@ -74,7 +74,7 @@
         "question": "What is the total grant amount of the organizations described as research?",
         "question_pl": "Jaka jest łączna kwota dotacji dla organizacji opisanych jako badawcze?",
         "query": "SELECT sum(grant_amount) FROM Grants AS T1 JOIN Organisations AS T2 ON T1.organisation_id  =  T2.organisation_id JOIN organisation_Types AS T3 ON T2.organisation_type  =  T3.organisation_type WHERE T3.organisation_type_description  =  'Research'",
-        "query_pl": "SELECT sum(grant_amount) FROM Grants AS T1 JOIN Organisations AS T2 ON T1.organisation_id  =  T2.organisation_id JOIN organisation_Types AS T3 ON T2.organisation_type  =  T3.organisation_type WHERE T3.organisation_type_description  =  \"Badania\""
+        "query_pl": "SELECT sum(grant_amount) FROM Grants AS T1 JOIN Organisations AS T2 ON T1.organisation_id  =  T2.organisation_id JOIN organisation_Types AS T3 ON T2.organisation_type  =  T3.organisation_type WHERE T3.organisation_type_description  =  'Badania'"
     },
     {
         "db_id": "film_rank",
@@ -109,7 +109,7 @@
         "question": "Can you provide me with the names of the dorms that have both TV Lounge and Study Room as amenities?",
         "question_pl": "Czy możesz podać mi nazwy akademików, które mają zarówno salon telewizyjny, jak i pokój do nauki jako udogodnienia?",
         "query": "SELECT T1.dorm_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T3.amenity_name  =  'TV Lounge' INTERSECT SELECT T1.dorm_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T3.amenity_name  =  'Study Room'",
-        "query_pl": "SELECT T1.dorm_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T3.amenity_name  =  \"Salon telewizyjny\" INTERSECT SELECT T1.dorm_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T3.amenity_name  =  \"Pokój do nauki\""
+        "query_pl": "SELECT T1.dorm_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T3.amenity_name  =  'Salon telewizyjny' INTERSECT SELECT T1.dorm_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T3.amenity_name  =  'Pokój do nauki'"
     },
     {
         "db_id": "hr_1",
@@ -137,7 +137,7 @@
         "question": "What are the First names of students living in smith hall?",
         "question_pl": "Jakie są pierwsze imiona uczniów mieszkających w Smith Hall?",
         "query": "SELECT T1.fname FROM student AS T1 JOIN lives_in AS T2 ON T1.stuid  =  T2.stuid JOIN dorm AS T3 ON T3.dormid  =  T2.dormid WHERE T3.dorm_name  =  'Smith Hall'",
-        "query_pl": "SELECT T1.fname FROM student AS T1 JOIN lives_in AS T2 ON T1.stuid  =  T2.stuid JOIN dorm AS T3 ON T3.dormid  =  T2.dormid WHERE T3.dorm_name  =  \"Smith Hall\""
+        "query_pl": "SELECT T1.fname FROM student AS T1 JOIN lives_in AS T2 ON T1.stuid  =  T2.stuid JOIN dorm AS T3 ON T3.dormid  =  T2.dormid WHERE T3.dorm_name  =  'Smith Hall'"
     },
     {
         "db_id": "wrestler",
@@ -151,14 +151,14 @@
         "question": "List the state and enrollment of all the colleges where any students got accepted in the tryout decision.",
         "question_pl": "Wymień stan i zapisy na wszystkie uczelnie, na których studenci zostali przyjęci w ramach decyzji o wypróbowaniu.",
         "query": "SELECT DISTINCT T1.state ,  T1.enr FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.decision  =  'yes'",
-        "query_pl": "SELECT DISTINCT T1.state ,  T1.enr FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.decision  =  \"tak\""
+        "query_pl": "SELECT DISTINCT T1.state ,  T1.enr FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.decision  =  'tak'"
     },
     {
         "db_id": "club_1",
         "question": "what is the location of Bootup Baltimore",
         "question_pl": "Jaka jest lokalizacja Bootup Baltimore?",
         "query": "select ClubLocation from Club where ClubName = 'Bootup Baltimore'",
-        "query_pl": "select ClubLocation from Club where ClubName = \"Bootup Baltimore\""
+        "query_pl": "select ClubLocation from Club where ClubName = 'Bootup Baltimore'"
     },
     {
         "db_id": "network_2",
@@ -221,14 +221,14 @@
         "question": "Show the country of appelations Alexander Valley?",
         "question_pl": "Pokaż kraj apelacji Alexander Valley?",
         "query": "SELECT county FROM APPELLATIONS WHERE appelation = 'Alexander Valley'",
-        "query_pl": "SELECT county FROM APPELLATIONS WHERE appelation = \"Alexander Valley\""
+        "query_pl": "SELECT county FROM APPELLATIONS WHERE appelation = 'Alexander Valley'"
     },
     {
         "db_id": "gas_company",
         "question": "Please show me the headquarters with at least two companies in the banking industry?",
         "question_pl": "Wskaż mi proszę siedzibę przynajmniej dwóch firm z branży bankowej?",
         "query": "SELECT headquarters FROM company WHERE main_industry  =  'Banking' GROUP BY headquarters HAVING count(*)  >=  2",
-        "query_pl": "SELECT headquarters FROM company WHERE main_industry  =  \"Bankowość\" GROUP BY headquarters HAVING count(*)  >=  2"
+        "query_pl": "SELECT headquarters FROM company WHERE main_industry  =  'Bankowość' GROUP BY headquarters HAVING count(*)  >=  2"
     },
     {
         "db_id": "tracking_orders",
@@ -270,7 +270,7 @@
         "question": "Who are the delegates on the Appropriations committee?",
         "question_pl": "Kim są delegaci w komisji ds. środków finansowych?",
         "query": "select Delegate from election where Committee = 'Appropriations'",
-        "query_pl": "select Delegate from election where Committee = \"Środki\""
+        "query_pl": "select Delegate from election where Committee = 'Środki'"
     },
     {
         "db_id": "driving_school",
@@ -291,7 +291,7 @@
         "question": "Which colleges students played in the try out in striker position?",
         "question_pl": "Studenci których uczelni grali w testach na pozycji napastnika?",
         "query": "select cName from Tryout where pPos = 'striker'",
-        "query_pl": "select cName from Tryout where pPos = \"napastnik\""
+        "query_pl": "select cName from Tryout where pPos = 'napastnik'"
     },
     {
         "db_id": "phone_market",
@@ -515,7 +515,7 @@
         "question": "How many heads are temporary acting?",
         "question_pl": "Ile głów działa tymczasowo?",
         "query": "SELECT count(*) FROM management WHERE temporary_acting  =  'Yes'",
-        "query_pl": "SELECT count(*) FROM management WHERE temporary_acting  =  \"Tak\""
+        "query_pl": "SELECT count(*) FROM management WHERE temporary_acting  =  'Tak'"
     },
     {
         "db_id": "customers_card_transactions",
@@ -550,7 +550,7 @@
         "question": "Can you please show me a list of all of the school names for all schools that are not of the Public affiliation?",
         "question_pl": "Czy możesz mi pokazać listę wszystkich nazw szkół dla wszystkich szkół, które nie są stowarzyszone z publicznymi?",
         "query": "SELECT School FROM university WHERE affiliation != 'Public'",
-        "query_pl": "SELECT School FROM university WHERE affiliation != \"Publiczny\""
+        "query_pl": "SELECT School FROM university WHERE affiliation != 'Publiczny'"
     },
     {
         "db_id": "election_representative",
@@ -620,7 +620,7 @@
         "question": "Which browsers are compatible with firefox?",
         "question_pl": "Które przeglądarki są kompatybilne z Firefoksem?",
         "query": "SELECT T3.name FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id JOIN browser AS T3 ON T2.browser_id  =  T3.id WHERE T1.name  =  'Firefox'",
-        "query_pl": "SELECT T3.name FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id JOIN browser AS T3 ON T2.browser_id  =  T3.id WHERE T1.name  =  \"Firefox\""
+        "query_pl": "SELECT T3.name FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id JOIN browser AS T3 ON T2.browser_id  =  T3.id WHERE T1.name  =  'Firefox'"
     },
     {
         "db_id": "sports_competition",
@@ -648,7 +648,7 @@
         "question": "how many locations have shops that opened before 2008?",
         "question_pl": "W ilu lokalizacjach znajdują się sklepy otwarte przed 2008 rokiem?",
         "query": "select count(Location) from shop where Open_Year = '2008'",
-        "query_pl": "select count(Location) from shop where Open_Year = \"2008\""
+        "query_pl": "select count(Location) from shop where Open_Year = '2008'"
     },
     {
         "db_id": "sports_competition",
@@ -795,7 +795,7 @@
         "question": "What are the result descriptions of the project whose detail is \"sint\"?",
         "question_pl": "Jakie są opisy wyników projektu, którego szczegółem jest \"sint\"?",
         "query": "SELECT T1.outcome_description FROM Research_outcomes AS T1 JOIN Project_outcomes AS T2 ON T1.outcome_code  =  T2.outcome_code JOIN Projects AS T3 ON T2.project_id  =  T3.project_id WHERE T3.project_details  =  'sint'",
-        "query_pl": "SELECT T1.outcome_description FROM Research_outcomes AS T1 JOIN Project_outcomes AS T2 ON T1.outcome_code  =  T2.outcome_code JOIN Projects AS T3 ON T2.project_id  =  T3.project_id WHERE T3.project_details  =  \"sint\""
+        "query_pl": "SELECT T1.outcome_description FROM Research_outcomes AS T1 JOIN Project_outcomes AS T2 ON T1.outcome_code  =  T2.outcome_code JOIN Projects AS T3 ON T2.project_id  =  T3.project_id WHERE T3.project_details  =  'sint'"
     },
     {
         "db_id": "club_1",
@@ -816,7 +816,7 @@
         "question": "State the location of flower awards held?",
         "question_pl": "Podaj lokalizację rozdania nagród kwiatowych?",
         "query": "select Location from festival_detail where Festival_Name = 'Flower Awards'",
-        "query_pl": "select Location from festival_detail where Festival_Name = \"Nagrody kwiatowe\""
+        "query_pl": "select Location from festival_detail where Festival_Name = 'Nagrody kwiatowe'"
     },
     {
         "db_id": "icfp_1",
@@ -879,7 +879,7 @@
         "question": "Can you please provide me with the name of the founder for Sony?",
         "question_pl": "Czy możesz podać mi nazwisko założyciela Sony?",
         "query": "SELECT founder FROM manufacturers WHERE name = 'Sony'",
-        "query_pl": "SELECT founder FROM manufacturers WHERE name = \"Sony\""
+        "query_pl": "SELECT founder FROM manufacturers WHERE name = 'Sony'"
     },
     {
         "db_id": "csu_1",
@@ -928,7 +928,7 @@
         "question": "which rooms have a king bed?",
         "question_pl": "Które pokoje mają łóżko typu king-size?",
         "query": "SELECT * FROM Rooms WHERE bedtype  =  'King'",
-        "query_pl": "SELECT * FROM Rooms WHERE bedtype  =  \"Król\""
+        "query_pl": "SELECT * FROM Rooms WHERE bedtype  =  'Król'"
     },
     {
         "db_id": "activity_1",
@@ -942,7 +942,7 @@
         "question": "Can you provide me with a list of the first names of all customers who rented films before '2005-08-23 02:06:01'?",
         "question_pl": "Czy możesz dostarczyć mi listę imion wszystkich klientów, którzy wypożyczyli filmy przed '2005-08-23 02:06:01'?",
         "query": "SELECT first_name FROM customer WHERE customer_id IN ( SELECT customer_id FROM rental WHERE rental_date  <  '2005-08-23 02:06:01' )",
-        "query_pl": "SELECT first_name FROM customer WHERE customer_id IN ( SELECT customer_id FROM rental WHERE rental_date  <  \"2005-08-23 02:06:01\" )"
+        "query_pl": "SELECT first_name FROM customer WHERE customer_id IN ( SELECT customer_id FROM rental WHERE rental_date  <  '2005-08-23 02:06:01' )"
     },
     {
         "db_id": "protein_institute",
@@ -977,7 +977,7 @@
         "question": "find the student id and personal name of the student whose course id is 2",
         "question_pl": "znajdź identyfikator studenta i imię i nazwisko studenta, którego identyfikator kursu to 2",
         "query": "SELECT T1.student_id , T2.personal_name FROM Student_Course_Enrolment AS T1 JOIN Students AS T2 ON T1.student_id = T2.student_id where T1.course_id = '2'",
-        "query_pl": "SELECT T1.student_id , T2.personal_name FROM Student_Course_Enrolment AS T1 JOIN Students AS T2 ON T1.student_id = T2.student_id where T1.course_id = \"2\""
+        "query_pl": "SELECT T1.student_id , T2.personal_name FROM Student_Course_Enrolment AS T1 JOIN Students AS T2 ON T1.student_id = T2.student_id where T1.course_id = '2'"
     },
     {
         "db_id": "game_1",
@@ -1033,7 +1033,7 @@
         "question": "Name the airport in Madang city?",
         "question_pl": "Podaj nazwę lotniska w mieście Madang?",
         "query": "SELECT name from airports where city = 'Madang'",
-        "query_pl": "SELECT name from airports where city = \"Madang\""
+        "query_pl": "SELECT name from airports where city = 'Madang'"
     },
     {
         "db_id": "baseball_1",
@@ -1054,7 +1054,7 @@
         "question": "What is the average salary for the physics department?",
         "question_pl": "Jakie jest średnie wynagrodzenie w dziale fizyki?",
         "query": "SELECT avg(salary) FROM instructor WHERE  dept_name  =  'Physics'",
-        "query_pl": "SELECT avg(salary) FROM instructor WHERE  dept_name  =  \"Fizyka\""
+        "query_pl": "SELECT avg(salary) FROM instructor WHERE  dept_name  =  'Fizyka'"
     },
     {
         "db_id": "e_learning",
@@ -1082,14 +1082,14 @@
         "question": "Find the name of Physicians who are affiliate with surgery or Psychiatry department.",
         "question_pl": "Znajdź nazwiska lekarzy, którzy są powiązani z oddziałem chirurgii lub psychiatrii.",
         "query": "SELECT T1.name FROM physician AS T1 JOIN affiliated_with AS T2 ON T1.EmployeeID  =  T2.physician JOIN department AS T3 ON T2.department  =  T3.DepartmentID WHERE T3.name  =  'Surgery' OR T3.name  =  'Psychiatry'",
-        "query_pl": "SELECT T1.name FROM physician AS T1 JOIN affiliated_with AS T2 ON T1.EmployeeID  =  T2.physician JOIN department AS T3 ON T2.department  =  T3.DepartmentID WHERE T3.name  =  \"Chirurgia\" OR T3.name  =  \"Psychiatria\""
+        "query_pl": "SELECT T1.name FROM physician AS T1 JOIN affiliated_with AS T2 ON T1.EmployeeID  =  T2.physician JOIN department AS T3 ON T2.department  =  T3.DepartmentID WHERE T3.name  =  'Chirurgia' OR T3.name  =  'Psychiatria'"
     },
     {
         "db_id": "flight_4",
         "question": "Which countries have the most number of airlines whose active status is Y?",
         "question_pl": "Które kraje mają najwięcej linii lotniczych o statusie aktywnym Y?",
         "query": "SELECT country FROM airlines WHERE active  =  'Y' GROUP BY country ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT country FROM airlines WHERE active  =  \"Y\" GROUP BY country ORDER BY count(*) DESC LIMIT 1"
+        "query_pl": "SELECT country FROM airlines WHERE active  =  'Y' GROUP BY country ORDER BY count(*) DESC LIMIT 1"
     },
     {
         "db_id": "election",
@@ -1103,7 +1103,7 @@
         "question": "Can you show the artist name of f id 2?",
         "question_pl": "Czy możesz pokazać nazwę artysty f id 2?",
         "query": "SELECT artist_name FROM files WHERE f_id = '2'",
-        "query_pl": "SELECT artist_name FROM files WHERE f_id = \"2\""
+        "query_pl": "SELECT artist_name FROM files WHERE f_id = '2'"
     },
     {
         "db_id": "flight_4",
@@ -1145,7 +1145,7 @@
         "question": "How many friends does Zach have?",
         "question_pl": "Ilu przyjaciół ma Zach?",
         "query": "SELECT count(friend) from PersonFriend  where name = 'Zach'",
-        "query_pl": "SELECT count(friend) from PersonFriend  where name = \"Zach\""
+        "query_pl": "SELECT count(friend) from PersonFriend  where name = 'Zach'"
     },
     {
         "db_id": "soccer_2",
@@ -1257,7 +1257,7 @@
         "question": "What are all the names of the pilots who flew a flight in the United States?",
         "question_pl": "Jakie są wszystkie nazwiska pilotów, którzy odbyli lot w Stanach Zjednoczonych?",
         "query": "SELECT DISTINCT T2.pilot FROM airport AS T1 JOIN flight AS T2 ON T1.id  =  T2.airport_id WHERE T1.country  =  'United States' ",
-        "query_pl": "SELECT DISTINCT T2.pilot FROM airport AS T1 JOIN flight AS T2 ON T1.id  =  T2.airport_id WHERE T1.country  =  \"Stany Zjednoczone\" "
+        "query_pl": "SELECT DISTINCT T2.pilot FROM airport AS T1 JOIN flight AS T2 ON T1.id  =  T2.airport_id WHERE T1.country  =  'Stany Zjednoczone' "
     },
     {
         "db_id": "candidate_poll",
@@ -1285,7 +1285,7 @@
         "question": "What are the names of all companies whose revenue is smaller than the revenue of all companies based in Austin?",
         "question_pl": "Jakie są nazwy wszystkich firm, których przychody są mniejsze niż przychody wszystkich firm z siedzibą w Austin?",
         "query": "SELECT name FROM manufacturers WHERE revenue  <  (SELECT min(revenue) FROM manufacturers WHERE headquarter  =  'Austin')",
-        "query_pl": "SELECT name FROM manufacturers WHERE revenue  <  (SELECT min(revenue) FROM manufacturers WHERE headquarter  =  \"Austin\")"
+        "query_pl": "SELECT name FROM manufacturers WHERE revenue  <  (SELECT min(revenue) FROM manufacturers WHERE headquarter  =  'Austin')"
     },
     {
         "db_id": "musical",
@@ -1348,7 +1348,7 @@
         "question": "Can you please show me the names of all male architects by their names lexicographically?",
         "question_pl": "Czy możesz pokazać mi nazwiska wszystkich architektów płci męskiej według ich nazwisk leksykograficznie?",
         "query": "SELECT name FROM architect WHERE gender = 'male' ORDER BY name",
-        "query_pl": "SELECT name FROM architect WHERE gender = \"mężczyzna\" ORDER BY name"
+        "query_pl": "SELECT name FROM architect WHERE gender = 'mężczyzna' ORDER BY name"
     },
     {
         "db_id": "hr_1",
@@ -1453,7 +1453,7 @@
         "question": "Please show me how many female students have the major 600",
         "question_pl": "Proszę, pokaż mi, ile studentek ma kierunek 600",
         "query": "SELECT count(*) FROM student WHERE sex  =  'F' AND Major = 600",
-        "query_pl": "SELECT count(*) FROM student WHERE sex  =  \"F\" AND Major = 600"
+        "query_pl": "SELECT count(*) FROM student WHERE sex  =  'F' AND Major = 600"
     },
     {
         "db_id": "insurance_and_eClaims",
@@ -1481,21 +1481,21 @@
         "question": "What is the first name of each student entrolled in class ACCT-211?",
         "question_pl": "Jakie jest imię każdego ucznia zapisanego na zajęcia ACCT-211?",
         "query": "SELECT T3.stu_fname FROM CLASS AS T1 JOIN enroll AS T2 ON T1.class_code  =  T2.class_code JOIN student AS T3 ON T2.stu_num  =  T3.stu_num WHERE T1.crs_code  =  'ACCT-211'",
-        "query_pl": "SELECT T3.stu_fname FROM CLASS AS T1 JOIN enroll AS T2 ON T1.class_code  =  T2.class_code JOIN student AS T3 ON T2.stu_num  =  T3.stu_num WHERE T1.crs_code  =  \"ACCT-211\""
+        "query_pl": "SELECT T3.stu_fname FROM CLASS AS T1 JOIN enroll AS T2 ON T1.class_code  =  T2.class_code JOIN student AS T3 ON T2.stu_num  =  T3.stu_num WHERE T1.crs_code  =  'ACCT-211'"
     },
     {
         "db_id": "manufactory_1",
         "question": "Can you list all companies based in Austin and their revenues?",
         "question_pl": "Czy możesz wymienić wszystkie firmy z siedzibą w Austin i ich przychody?",
         "query": "select Name,Revenue from Manufacturers where Headquarter = 'Austin'",
-        "query_pl": "select Name,Revenue from Manufacturers where Headquarter = \"Austin\""
+        "query_pl": "select Name,Revenue from Manufacturers where Headquarter = 'Austin'"
     },
     {
         "db_id": "university_basketball",
         "question": "When was the University of Delaware founded?",
         "question_pl": "Kiedy został założony Uniwersytet Delaware?",
         "query": "SELECT founded FROM university WHERE school = 'University of Delaware'",
-        "query_pl": "SELECT founded FROM university WHERE school = \"Uniwersytet Delaware\""
+        "query_pl": "SELECT founded FROM university WHERE school = 'Uniwersytet Delaware'"
     },
     {
         "db_id": "match_season",
@@ -1530,21 +1530,21 @@
         "question": "Show me the attendance of the team_id CH1?",
         "question_pl": "Pokaż mi frekwencję team_id CH1?",
         "query": "SELECT attendance FROM home_game where team_id = 'CH1'",
-        "query_pl": "SELECT attendance FROM home_game where team_id = \"CH1\""
+        "query_pl": "SELECT attendance FROM home_game where team_id = 'CH1'"
     },
     {
         "db_id": "flight_4",
         "question": "What is the name of the airport in Mount Hagen city?",
         "question_pl": "Jak nazywa się lotnisko w mieście Mount Hagen?",
         "query": "SELECT name from airports where city = 'Mount Hagen'",
-        "query_pl": "SELECT name from airports where city = \"Mount Hagen\""
+        "query_pl": "SELECT name from airports where city = 'Mount Hagen'"
     },
     {
         "db_id": "dorm_1",
         "question": "Oh, sorry. I meant to ask what dorm does the student with the last name of Smith live in?",
         "question_pl": "Przepraszam. Chciałem zapytać, w którym akademiku mieszka student o nazwisku Smith?",
         "query": "SELECT T1.dorm_name FROM dorm AS T1 JOIN lives_in AS T4 ON T4.dormid  =  T1.dormid JOIN student AS T5 ON T5.stuid  =  T4.stuid WHERE T5.lname  =  'Smith'",
-        "query_pl": "SELECT T1.dorm_name FROM dorm AS T1 JOIN lives_in AS T4 ON T4.dormid  =  T1.dormid JOIN student AS T5 ON T5.stuid  =  T4.stuid WHERE T5.lname  =  \"Smith\""
+        "query_pl": "SELECT T1.dorm_name FROM dorm AS T1 JOIN lives_in AS T4 ON T4.dormid  =  T1.dormid JOIN student AS T5 ON T5.stuid  =  T4.stuid WHERE T5.lname  =  'Smith'"
     },
     {
         "db_id": "student_assessment",
@@ -1642,7 +1642,7 @@
         "question": "Can you list the color code that has a color description of 'white'?",
         "question_pl": "Czy możesz wymienić kod koloru, który ma opis koloru \"biały\"?",
         "query": "select color_code from Ref_Colors where color_description = 'white'",
-        "query_pl": "select color_code from Ref_Colors where color_description = \"biały\""
+        "query_pl": "select color_code from Ref_Colors where color_description = 'biały'"
     },
     {
         "db_id": "apartment_rentals",
@@ -1712,7 +1712,7 @@
         "question": "which friend of zachs has the longest year relationship? ",
         "question_pl": "Który przyjaciel zachsa jest w najdłuższym związku?",
         "query": "SELECT T1.name FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.friend WHERE T2.name =  'Zach' AND T2.year  =  (SELECT max(YEAR) FROM PersonFriend WHERE name =  'Zach')",
-        "query_pl": "SELECT T1.name FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.friend WHERE T2.name =  \"Zach\" AND T2.year  =  (SELECT max(YEAR) FROM PersonFriend WHERE name =  \"Zach\")"
+        "query_pl": "SELECT T1.name FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.friend WHERE T2.name =  'Zach' AND T2.year  =  (SELECT max(YEAR) FROM PersonFriend WHERE name =  'Zach')"
     },
     {
         "db_id": "driving_school",
@@ -1761,7 +1761,7 @@
         "question": "Show the Document code for document type code Book?",
         "question_pl": "Pokaż kod dokumentu dla kodu typu dokumentu Książka?",
         "query": "SELECT document_code FROM documents WHERE document_type_code = 'Book'",
-        "query_pl": "SELECT document_code FROM documents WHERE document_type_code = \"Książka\""
+        "query_pl": "SELECT document_code FROM documents WHERE document_type_code = 'Książka'"
     },
     {
         "db_id": "shop_membership",
@@ -1775,7 +1775,7 @@
         "question": "What are the names of the states that have some college students playing in the mid position but not the goalie position?",
         "question_pl": "Jak nazywają się państwa, w których niektórzy studenci grają na pozycji środkowego, ale nie bramkarza?",
         "query": "SELECT T1.state FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.pPos  =  'mid' EXCEPT SELECT T1.state FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.pPos  =  'goalie'",
-        "query_pl": "SELECT T1.state FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.pPos  =  \"środek\" EXCEPT SELECT T1.state FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.pPos  =  \"bramkarz\""
+        "query_pl": "SELECT T1.state FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.pPos  =  'środek' EXCEPT SELECT T1.state FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.pPos  =  'bramkarz'"
     },
     {
         "db_id": "small_bank_1",
@@ -1796,7 +1796,7 @@
         "question": "What is the membership card of Breton,Robert?",
         "question_pl": "Jaka jest karta członkowska Breton,Robert?",
         "query": "SELECT Membership_card FROM member where Name = 'Breton, Robert'",
-        "query_pl": "SELECT Membership_card FROM member where Name = \"Breton, Robert\""
+        "query_pl": "SELECT Membership_card FROM member where Name = 'Breton, Robert'"
     },
     {
         "db_id": "flight_1",
@@ -1810,7 +1810,7 @@
         "question": "Whsts the name of the student thst took prerequisite course  title internatoinal finance?",
         "question_pl": "Jak nazywa się student, który wziął udział w kursie wstępnym o tytule finanse międzynarodowe?",
         "query": "SELECT T1.name FROM student AS T1 JOIN takes AS T2 ON T1.id  =  T2.id WHERE T2.course_id IN (SELECT T4.prereq_id FROM course AS T3 JOIN prereq AS T4 ON T3.course_id  =  T4.course_id WHERE T3.title  =  'International Finance')",
-        "query_pl": "SELECT T1.name FROM student AS T1 JOIN takes AS T2 ON T1.id  =  T2.id WHERE T2.course_id IN (SELECT T4.prereq_id FROM course AS T3 JOIN prereq AS T4 ON T3.course_id  =  T4.course_id WHERE T3.title  =  \"Finanse międzynarodowe\")"
+        "query_pl": "SELECT T1.name FROM student AS T1 JOIN takes AS T2 ON T1.id  =  T2.id WHERE T2.course_id IN (SELECT T4.prereq_id FROM course AS T3 JOIN prereq AS T4 ON T3.course_id  =  T4.course_id WHERE T3.title  =  'Finanse międzynarodowe')"
     },
     {
         "db_id": "college_2",
@@ -1852,7 +1852,7 @@
         "question": "Can you tell me how many school have an affiliation type that is not public?",
         "question_pl": "Czy możesz mi powiedzieć, ile szkół ma typ przynależności, który nie jest publiczny?",
         "query": "SELECT COUNT(*) FROM university WHERE affiliation != 'Public'",
-        "query_pl": "SELECT COUNT(*) FROM university WHERE affiliation != \"Publiczny\""
+        "query_pl": "SELECT COUNT(*) FROM university WHERE affiliation != 'Publiczny'"
     },
     {
         "db_id": "tracking_grants_for_research",
@@ -1943,7 +1943,7 @@
         "question": "What are the names of all the persons who are friends with Alice?",
         "question_pl": "Jak nazywają się wszystkie osoby, które przyjaźnią się z Alicją?",
         "query": "SELECT T1.name FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend =  'Alice'",
-        "query_pl": "SELECT T1.name FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend =  \"Alice\""
+        "query_pl": "SELECT T1.name FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend =  'Alice'"
     },
     {
         "db_id": "student_1",
@@ -1992,7 +1992,7 @@
         "question": "Find the name of instructors who are advisors of students from the Math department, and sort the results by students' total credit.",
         "question_pl": "Znajdź nazwiska instruktorów, którzy są doradcami studentów z wydziału matematyki i posortuj wyniki według łącznej liczby punktów uzyskanych przez studentów.",
         "query": "SELECT T2.name FROM advisor AS T1 JOIN instructor AS T2 ON T1.i_id = T2.id JOIN student AS T3 ON T1.s_id = T3.id WHERE T3.dept_name = 'Math' ORDER BY T3.tot_cred",
-        "query_pl": "SELECT T2.name FROM advisor AS T1 JOIN instructor AS T2 ON T1.i_id = T2.id JOIN student AS T3 ON T1.s_id = T3.id WHERE T3.dept_name = \"Matematyka\" ORDER BY T3.tot_cred"
+        "query_pl": "SELECT T2.name FROM advisor AS T1 JOIN instructor AS T2 ON T1.i_id = T2.id JOIN student AS T3 ON T1.s_id = T3.id WHERE T3.dept_name = 'Matematyka' ORDER BY T3.tot_cred"
     },
     {
         "db_id": "music_1",
@@ -2020,7 +2020,7 @@
         "question": "What're the names of the enzymes in the medicine \"Amisulpride\"?",
         "question_pl": "Jak nazywają się enzymy w leku \"Amisulpryd\"?",
         "query": "SELECT T1.name FROM enzyme AS T1 JOIN medicine_enzyme_interaction AS T2 ON T1.id  =  T2.enzyme_id JOIN medicine AS T3 ON T2.medicine_id  =  T3.id WHERE T3.name  =  'Amisulpride'",
-        "query_pl": "SELECT T1.name FROM enzyme AS T1 JOIN medicine_enzyme_interaction AS T2 ON T1.id  =  T2.enzyme_id JOIN medicine AS T3 ON T2.medicine_id  =  T3.id WHERE T3.name  =  \"Amisulpryd\""
+        "query_pl": "SELECT T1.name FROM enzyme AS T1 JOIN medicine_enzyme_interaction AS T2 ON T1.id  =  T2.enzyme_id JOIN medicine AS T3 ON T2.medicine_id  =  T3.id WHERE T3.name  =  'Amisulpryd'"
     },
     {
         "db_id": "tracking_grants_for_research",
@@ -2104,7 +2104,7 @@
         "question": "what country is Vijay Singh from?",
         "question_pl": "Z jakiego kraju pochodzi Vijay Singh?",
         "query": "SELECT Country FROM artist where Name = 'Vijay Singh'",
-        "query_pl": "SELECT Country FROM artist where Name = \"Vijay Singh\""
+        "query_pl": "SELECT Country FROM artist where Name = 'Vijay Singh'"
     },
     {
         "db_id": "student_assessment",
@@ -2230,7 +2230,7 @@
         "question": "how many students enrolled for the accounting department  ",
         "question_pl": "ilu studentów zapisało się do działu księgowości",
         "query": "SELECT count(*) FROM CLASS AS T1 JOIN enroll AS T2 ON T1.class_code  =  T2.class_code JOIN course AS T3 ON T1.crs_code  =  T3.crs_code JOIN department AS T4 ON T3.dept_code  =  T4.dept_code WHERE T4.dept_name  =  'Accounting'",
-        "query_pl": "SELECT count(*) FROM CLASS AS T1 JOIN enroll AS T2 ON T1.class_code  =  T2.class_code JOIN course AS T3 ON T1.crs_code  =  T3.crs_code JOIN department AS T4 ON T3.dept_code  =  T4.dept_code WHERE T4.dept_name  =  \"Księgowość\""
+        "query_pl": "SELECT count(*) FROM CLASS AS T1 JOIN enroll AS T2 ON T1.class_code  =  T2.class_code JOIN course AS T3 ON T1.crs_code  =  T3.crs_code JOIN department AS T4 ON T3.dept_code  =  T4.dept_code WHERE T4.dept_name  =  'Księgowość'"
     },
     {
         "db_id": "tracking_orders",
@@ -2251,7 +2251,7 @@
         "question": "Can you show me the first and last names of all employees who work in any department located in London please?",
         "question_pl": "Czy możesz mi podać imiona i nazwiska wszystkich pracowników, którzy pracują w jakimkolwiek dziale w Londynie?",
         "query": "SELECT first_name ,  last_name  FROM employees AS T1 JOIN departments AS T2 ON T1.department_id  =  T2.department_id JOIN  locations AS T3 ON T2.location_id  =  T3.location_id WHERE  T3.city  =  'London'",
-        "query_pl": "SELECT first_name ,  last_name  FROM employees AS T1 JOIN departments AS T2 ON T1.department_id  =  T2.department_id JOIN  locations AS T3 ON T2.location_id  =  T3.location_id WHERE  T3.city  =  \"Londyn\""
+        "query_pl": "SELECT first_name ,  last_name  FROM employees AS T1 JOIN departments AS T2 ON T1.department_id  =  T2.department_id JOIN  locations AS T3 ON T2.location_id  =  T3.location_id WHERE  T3.city  =  'Londyn'"
     },
     {
         "db_id": "bike_1",
@@ -2321,7 +2321,7 @@
         "question": "What is the department id for the Finance department?",
         "question_pl": "Jaki jest identyfikator działu finansowego?",
         "query": "SELECT DEPARTMENT_ID FROM  departments where department_name  =  'Finance'",
-        "query_pl": "SELECT DEPARTMENT_ID FROM  departments where department_name  =  \"Finanse\""
+        "query_pl": "SELECT DEPARTMENT_ID FROM  departments where department_name  =  'Finanse'"
     },
     {
         "db_id": "insurance_policies",
@@ -2335,7 +2335,7 @@
         "question": "What is is the number of patients who are not using Procrastin-X?",
         "question_pl": "Jaka jest liczba pacjentów, którzy nie stosują Procrastin-X?",
         "query": "SELECT count(*) FROM patient WHERE SSN NOT IN ( SELECT T1.patient FROM Prescribes AS T1 JOIN Medication AS T2 ON T1.Medication  =  T2.Code WHERE T2.name  =  'Procrastin-X' )",
-        "query_pl": "SELECT count(*) FROM patient WHERE SSN NOT IN ( SELECT T1.patient FROM Prescribes AS T1 JOIN Medication AS T2 ON T1.Medication  =  T2.Code WHERE T2.name  =  \"Procrastin-X\" )"
+        "query_pl": "SELECT count(*) FROM patient WHERE SSN NOT IN ( SELECT T1.patient FROM Prescribes AS T1 JOIN Medication AS T2 ON T1.Medication  =  T2.Code WHERE T2.name  =  'Procrastin-X' )"
     },
     {
         "db_id": "game_1",
@@ -2384,7 +2384,7 @@
         "question": "Give me the times of all trains that go to Chennai",
         "question_pl": "Podaj mi godziny wszystkich pociągów jadących do Chennai",
         "query": "SELECT TIME  FROM train WHERE destination  =  'Chennai'",
-        "query_pl": "SELECT TIME  FROM train WHERE destination  =  \"Chennai\""
+        "query_pl": "SELECT TIME  FROM train WHERE destination  =  'Chennai'"
     },
     {
         "db_id": "railway",
@@ -2398,7 +2398,7 @@
         "question": "Can you list the names of all the swimmers who have won more than once?",
         "question_pl": "Czy możesz wymienić nazwiska wszystkich pływaków, którzy wygrali więcej niż raz?",
         "query": "SELECT t1.name  FROM swimmer AS t1 JOIN record AS t2 ON t1.id  =  t2.swimmer_id WHERE RESULT  =  'Win' GROUP BY t2.swimmer_id HAVING count(*)  >  1",
-        "query_pl": "SELECT t1.name  FROM swimmer AS t1 JOIN record AS t2 ON t1.id  =  t2.swimmer_id WHERE RESULT  =  \"Wygraj\" GROUP BY t2.swimmer_id HAVING count(*)  >  1"
+        "query_pl": "SELECT t1.name  FROM swimmer AS t1 JOIN record AS t2 ON t1.id  =  t2.swimmer_id WHERE RESULT  =  'Wygraj' GROUP BY t2.swimmer_id HAVING count(*)  >  1"
     },
     {
         "db_id": "company_employee",
@@ -2524,7 +2524,7 @@
         "question": "What are the times of trains that go to chennai?",
         "question_pl": "Jakie są godziny kursowania pociągów do Chennai?",
         "query": "SELECT TIME  FROM train WHERE destination  =  'Chennai' ",
-        "query_pl": "SELECT TIME  FROM train WHERE destination  =  \"Chennai\" "
+        "query_pl": "SELECT TIME  FROM train WHERE destination  =  'Chennai' "
     },
     {
         "db_id": "game_1",
@@ -2594,7 +2594,7 @@
         "question": "what is the color code of basil?",
         "question_pl": "Jaki jest kod koloru bazylii?",
         "query": "SELECT color_code from products where product_name = 'basil'",
-        "query_pl": "SELECT color_code from products where product_name = \"bazylia\""
+        "query_pl": "SELECT color_code from products where product_name = 'bazylia'"
     },
     {
         "db_id": "baseball_1",
@@ -2608,7 +2608,7 @@
         "question": "what is the name of all males? ",
         "question_pl": "Jak nazywają się wszyscy mężczyźni?",
         "query": "SELECT name FROM Person WHERE gender  =  'male'",
-        "query_pl": "SELECT name FROM Person WHERE gender  =  \"mężczyzna\""
+        "query_pl": "SELECT name FROM Person WHERE gender  =  'mężczyzna'"
     },
     {
         "db_id": "apartment_rentals",
@@ -2657,7 +2657,7 @@
         "question": "State the email id of custormer id 1?",
         "question_pl": "Podaj identyfikator e-mail klienta o identyfikatorze 1?",
         "query": "select email from customer where customerid = '1'",
-        "query_pl": "select email from customer where customerid = \"1\""
+        "query_pl": "select email from customer where customerid = '1'"
     },
     {
         "db_id": "tracking_share_transactions",
@@ -2692,7 +2692,7 @@
         "question": "List the names of all the customers that use email as a contact channel. ",
         "question_pl": "Wymień nazwy wszystkich klientów, którzy używają poczty e-mail jako kanału kontaktu.",
         "query": "SELECT t1.customer_name FROM customers AS t1 JOIN customer_contact_channels AS t2 ON t1.customer_id  =  t2.customer_id WHERE t2.channel_code  =  'Email'",
-        "query_pl": "SELECT t1.customer_name FROM customers AS t1 JOIN customer_contact_channels AS t2 ON t1.customer_id  =  t2.customer_id WHERE t2.channel_code  =  \"Email\""
+        "query_pl": "SELECT t1.customer_name FROM customers AS t1 JOIN customer_contact_channels AS t2 ON t1.customer_id  =  t2.customer_id WHERE t2.channel_code  =  'Email'"
     },
     {
         "db_id": "customers_and_addresses",
@@ -2727,21 +2727,21 @@
         "question": "Can you show me the number of drivers who are from Hartford City?",
         "question_pl": "Czy możesz podać liczbę kierowców z Hartford City?",
         "query": "SELECT count(*) FROM driver WHERE home_city  =  'Hartford' ",
-        "query_pl": "SELECT count(*) FROM driver WHERE home_city  =  \"Hartford\" "
+        "query_pl": "SELECT count(*) FROM driver WHERE home_city  =  'Hartford' "
     },
     {
         "db_id": "shop_membership",
         "question": "show the minimum amount of memberships for all branches opened in 2011 or located at city location",
         "question_pl": "pokaż minimalną liczbę członków dla wszystkich oddziałów otwartych w 2011 roku lub zlokalizowanych w mieście",
         "query": "SELECT min(membership_amount) FROM branch WHERE open_year  =  2011 OR city  =  'London'",
-        "query_pl": "SELECT min(membership_amount) FROM branch WHERE open_year  =  2011 OR city  =  \"Londyn\""
+        "query_pl": "SELECT min(membership_amount) FROM branch WHERE open_year  =  2011 OR city  =  'Londyn'"
     },
     {
         "db_id": "wedding",
         "question": "which females had a wedding in 2016?",
         "question_pl": "Które kobiety miały ślub w 2016 roku?",
         "query": "SELECT T2.name FROM wedding AS T1 JOIN people AS T2 ON T1.female_id  =  T2.people_id WHERE T1.year  =  2016 AND T2.is_male  =  'F'",
-        "query_pl": "SELECT T2.name FROM wedding AS T1 JOIN people AS T2 ON T1.female_id  =  T2.people_id WHERE T1.year  =  2016 AND T2.is_male  =  \"F\""
+        "query_pl": "SELECT T2.name FROM wedding AS T1 JOIN people AS T2 ON T1.female_id  =  T2.people_id WHERE T1.year  =  2016 AND T2.is_male  =  'F'"
     },
     {
         "db_id": "storm_record",
@@ -2797,7 +2797,7 @@
         "question": "what is the date assigned to of the department managers?",
         "question_pl": "Jaka jest data przypisana do kierowników działów?",
         "query": "select date_assigned_to from  Staff_Department_Assignments where job_title_code = 'Department Manager'",
-        "query_pl": "select date_assigned_to from  Staff_Department_Assignments where job_title_code = \"Kierownik działu\""
+        "query_pl": "select date_assigned_to from  Staff_Department_Assignments where job_title_code = 'Kierownik działu'"
     },
     {
         "db_id": "tracking_orders",
@@ -2818,7 +2818,7 @@
         "question": "I want to know the number of public universities",
         "question_pl": "Chcę znać liczbę publicznych uniwersytetów",
         "query": "SELECT count(*) FROM university WHERE affiliation = 'Public'",
-        "query_pl": "SELECT count(*) FROM university WHERE affiliation = \"Publiczny\""
+        "query_pl": "SELECT count(*) FROM university WHERE affiliation = 'Publiczny'"
     },
     {
         "db_id": "scientist_1",
@@ -2937,7 +2937,7 @@
         "question": "In which country  Swan River ' Perth located ?",
         "question_pl": "W jakim kraju znajduje się Swan River ' Perth?",
         "query": "SELECT country FROM MATCH where Location = 'Swan River , Perth'",
-        "query_pl": "SELECT country FROM MATCH where Location = \"Swan River , Perth\""
+        "query_pl": "SELECT country FROM MATCH where Location = 'Swan River , Perth'"
     },
     {
         "db_id": "cre_Docs_and_Epenses",
@@ -3231,7 +3231,7 @@
         "question": "What is the name of the document on project \"Graph Database project\"?",
         "question_pl": "Jak nazywa się dokument dotyczący projektu \"Projekt graficznej bazy danych\"?",
         "query": "SELECT document_name  FROM Documents AS T1 JOIN projects AS T2 ON T1.project_id  =  T2.project_id WHERE T2.project_details  =  'Graph Database project'",
-        "query_pl": "SELECT document_name  FROM Documents AS T1 JOIN projects AS T2 ON T1.project_id  =  T2.project_id WHERE T2.project_details  =  \"Projekt graficznej bazy danych\""
+        "query_pl": "SELECT document_name  FROM Documents AS T1 JOIN projects AS T2 ON T1.project_id  =  T2.project_id WHERE T2.project_details  =  'Projekt graficznej bazy danych'"
     },
     {
         "db_id": "bike_1",
@@ -3245,7 +3245,7 @@
         "question": "show student ids who are female and play football",
         "question_pl": "pokaż identyfikatory studentów, którzy są kobietami i grają w piłkę nożną",
         "query": "SELECT StuID FROM Student WHERE sex  =  'F' INTERSECT SELECT StuID FROM Sportsinfo WHERE sportname  =  \"Football\"",
-        "query_pl": "SELECT StuID FROM Student WHERE sex  =  \"F\" INTERSECT SELECT StuID FROM Sportsinfo WHERE sportname  =  \"Piłka nożna\""
+        "query_pl": "SELECT StuID FROM Student WHERE sex  =  'F' INTERSECT SELECT StuID FROM Sportsinfo WHERE sportname  =  \"Piłka nożna\""
     },
     {
         "db_id": "dorm_1",
@@ -3266,7 +3266,7 @@
         "question": "Find the destination of the airport least number of routes in china?",
         "question_pl": "Znajdź lotnisko docelowe z najmniejszą liczbą tras w Chinach?",
         "query": "SELECT T1.name FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE T1.country  =  'China' GROUP BY T1.name ORDER BY count(*) ASC LIMIT 1",
-        "query_pl": "SELECT T1.name FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE T1.country  =  \"Chiny\" GROUP BY T1.name ORDER BY count(*) ASC LIMIT 1"
+        "query_pl": "SELECT T1.name FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE T1.country  =  'Chiny' GROUP BY T1.name ORDER BY count(*) ASC LIMIT 1"
     },
     {
         "db_id": "cinema",
@@ -3357,7 +3357,7 @@
         "question": "How many airports has pilot Thompson driven an aircraft?",
         "question_pl": "Na ilu lotniskach pilot Thompson prowadził samolot?",
         "query": "SELECT count(*) FROM airport WHERE id IN ( SELECT airport_id FROM flight WHERE pilot  =  'Thompson' );",
-        "query_pl": "SELECT count(*) FROM airport WHERE id IN ( SELECT airport_id FROM flight WHERE pilot  =  \"Thompson\" );"
+        "query_pl": "SELECT count(*) FROM airport WHERE id IN ( SELECT airport_id FROM flight WHERE pilot  =  'Thompson' );"
     },
     {
         "db_id": "sports_competition",
@@ -3462,7 +3462,7 @@
         "question": "What 1986 movie was nominated for a Tony Award for Best Book of a Musical?",
         "question_pl": "Który film z 1986 roku był nominowany do nagrody Tony za najlepszą książkę do musicalu?",
         "query": "select name from musical where year = 1986 and category = 'Best Book of a Musical' and Result = 'Nominated'",
-        "query_pl": "select name from musical where year = 1986 and category = \"Najlepsza książka do musicalu\" and Result = \"Nominowany\""
+        "query_pl": "select name from musical where year = 1986 and category = 'Najlepsza książka do musicalu' and Result = 'Nominowany'"
     },
     {
         "db_id": "tracking_share_transactions",
@@ -3490,7 +3490,7 @@
         "question": "How many students are enrolled in the class with the course code of ACCT-211?",
         "question_pl": "Ilu studentów jest zapisanych na zajęcia z kodem przedmiotu ACCT-211?",
         "query": "SELECT count(*) FROM CLASS AS T1 JOIN enroll AS T2 ON T1.class_code  =  T2.class_code WHERE T1.crs_code  =  'ACCT-211'",
-        "query_pl": "SELECT count(*) FROM CLASS AS T1 JOIN enroll AS T2 ON T1.class_code  =  T2.class_code WHERE T1.crs_code  =  \"ACCT-211\""
+        "query_pl": "SELECT count(*) FROM CLASS AS T1 JOIN enroll AS T2 ON T1.class_code  =  T2.class_code WHERE T1.crs_code  =  'ACCT-211'"
     },
     {
         "db_id": "customers_and_addresses",
@@ -3560,7 +3560,7 @@
         "question": "What are the names of all students who took any course in the fall semester of the year 2003?",
         "question_pl": "Jakie są nazwiska wszystkich studentów, którzy uczestniczyli w jakimkolwiek kursie w semestrze jesiennym 2003 roku?",
         "query": "SELECT name FROM student WHERE id IN (SELECT id FROM takes WHERE semester  =  'Fall' AND YEAR  =  2003)",
-        "query_pl": "SELECT name FROM student WHERE id IN (SELECT id FROM takes WHERE semester  =  \"Upadek\" AND YEAR  =  2003)"
+        "query_pl": "SELECT name FROM student WHERE id IN (SELECT id FROM takes WHERE semester  =  'Upadek' AND YEAR  =  2003)"
     },
     {
         "db_id": "match_season",
@@ -3616,7 +3616,7 @@
         "question": "Show the School name with School_ID 1?",
         "question_pl": "Pokaż nazwę szkoły z identyfikatorem School_ID 1?",
         "query": "SELECT School FROM school WHERE School_ID = '1'",
-        "query_pl": "SELECT School FROM school WHERE School_ID = \"1\""
+        "query_pl": "SELECT School FROM school WHERE School_ID = '1'"
     },
     {
         "db_id": "student_1",
@@ -3651,7 +3651,7 @@
         "question": "what is height of Kibo (Uhuru Pk)",
         "question_pl": "Jaka jest wysokość Kibo (Uhuru Pk)?",
         "query": "SELECT height FROM mountain where name = 'Kibo (Uhuru Pk)'",
-        "query_pl": "SELECT height FROM mountain where name = \"Kibo (Uhuru Pk)\""
+        "query_pl": "SELECT height FROM mountain where name = 'Kibo (Uhuru Pk)'"
     },
     {
         "db_id": "department_management",
@@ -3819,7 +3819,7 @@
         "question": "How many instructors are in the statistics department?",
         "question_pl": "Ilu instruktorów pracuje w dziale statystyki?",
         "query": "SELECT count(*) FROM instructor WHERE dept_name  =  'Statistics'",
-        "query_pl": "SELECT count(*) FROM instructor WHERE dept_name  =  \"Statystyki\""
+        "query_pl": "SELECT count(*) FROM instructor WHERE dept_name  =  'Statystyki'"
     },
     {
         "db_id": "department_store",
@@ -3861,7 +3861,7 @@
         "question": "Could you find how many friends Alice has?",
         "question_pl": "Możesz sprawdzić ilu przyjaciół ma Alice?",
         "query": "SELECT count(*) FROM PersonFriend where name = 'Alice' ",
-        "query_pl": "SELECT count(*) FROM PersonFriend where name = \"Alice\" "
+        "query_pl": "SELECT count(*) FROM PersonFriend where name = 'Alice' "
     },
     {
         "db_id": "railway",
@@ -3910,7 +3910,7 @@
         "question": "How many professors have either a Ph.D. or a MA degree?",
         "question_pl": "Ilu profesorów ma tytuł doktora lub magistra?",
         "query": "SELECT count(*) FROM professor WHERE prof_high_degree  =  'Ph.D.' OR prof_high_degree  =  'MA'",
-        "query_pl": "SELECT count(*) FROM professor WHERE prof_high_degree  =  \"Ph.D.\" OR prof_high_degree  =  \"MA\""
+        "query_pl": "SELECT count(*) FROM professor WHERE prof_high_degree  =  'Ph.D.' OR prof_high_degree  =  'MA'"
     },
     {
         "db_id": "flight_1",
@@ -3952,7 +3952,7 @@
         "question": "WHAT IS THE EMAIL ADDRESS OF LYLA WILSON MEDHURST ?",
         "question_pl": "JAKI JEST ADRES E-MAIL LYLA WILSON MEDHURST?",
         "query": "SELECT email_address FROM Teachers WHERE first_name = 'Lyla' and middle_name = 'Wilson' and last_name = 'Medhurst'",
-        "query_pl": "SELECT email_address FROM Teachers WHERE first_name = \"Lyla\" and middle_name = \"Wilson\" and last_name = \"Medhurst\""
+        "query_pl": "SELECT email_address FROM Teachers WHERE first_name = 'Lyla' and middle_name = 'Wilson' and last_name = 'Medhurst'"
     },
     {
         "db_id": "csu_1",
@@ -4071,14 +4071,14 @@
         "question": "What are the first names of all students who are taking classes from the accounting department?",
         "question_pl": "Jakie są imiona wszystkich studentów, którzy uczęszczają na zajęcia z działu księgowości?",
         "query": "SELECT T1.stu_fname FROM student AS T1 JOIN enroll AS T2 ON T1.stu_num  =  T2.stu_num JOIN CLASS AS T3 ON T2.class_code  =  T3.class_code JOIN course AS T4 ON T3.crs_code  =  T4.crs_code JOIN department AS T5 ON T5.dept_code  =  T4.dept_code WHERE T5.dept_name  =  'Accounting'",
-        "query_pl": "SELECT T1.stu_fname FROM student AS T1 JOIN enroll AS T2 ON T1.stu_num  =  T2.stu_num JOIN CLASS AS T3 ON T2.class_code  =  T3.class_code JOIN course AS T4 ON T3.crs_code  =  T4.crs_code JOIN department AS T5 ON T5.dept_code  =  T4.dept_code WHERE T5.dept_name  =  \"Księgowość\""
+        "query_pl": "SELECT T1.stu_fname FROM student AS T1 JOIN enroll AS T2 ON T1.stu_num  =  T2.stu_num JOIN CLASS AS T3 ON T2.class_code  =  T3.class_code JOIN course AS T4 ON T3.crs_code  =  T4.crs_code JOIN department AS T5 ON T5.dept_code  =  T4.dept_code WHERE T5.dept_name  =  'Księgowość'"
     },
     {
         "db_id": "college_1",
         "question": "Could you please find all the names of the students who took some course and got an A?",
         "question_pl": "Czy mógłbyś znaleźć nazwiska wszystkich studentów, którzy wzięli udział w jakimś kursie i otrzymali piątkę?",
         "query": "SELECT T1.stu_fname ,  T1.stu_lname FROM student AS T1 JOIN enroll AS T2 ON T1.stu_num  =  T2.stu_num WHERE T2.enroll_grade  =  'A'",
-        "query_pl": "SELECT T1.stu_fname ,  T1.stu_lname FROM student AS T1 JOIN enroll AS T2 ON T1.stu_num  =  T2.stu_num WHERE T2.enroll_grade  =  \"A\""
+        "query_pl": "SELECT T1.stu_fname ,  T1.stu_lname FROM student AS T1 JOIN enroll AS T2 ON T1.stu_num  =  T2.stu_num WHERE T2.enroll_grade  =  'A'"
     },
     {
         "db_id": "sports_competition",
@@ -4309,7 +4309,7 @@
         "question": " What is the customer ID of America Jaskolski",
         "question_pl": " Jaki jest identyfikator klienta America Jaskolski?",
         "query": "SELECT Customer_ID FROM customers where Customer_name = 'America Jaskolski'",
-        "query_pl": "SELECT Customer_ID FROM customers where Customer_name = \"America Jaskolski\""
+        "query_pl": "SELECT Customer_ID FROM customers where Customer_name = 'America Jaskolski'"
     },
     {
         "db_id": "cre_Theme_park",
@@ -4491,7 +4491,7 @@
         "question": "Which services type had successful event details?",
         "question_pl": "Który typ usług miał udane szczegóły wydarzenia?",
         "query": "SELECT T1.service_type_code FROM services AS T1 JOIN EVENTS AS T2 ON T1.service_id = T2.service_id WHERE T2.event_details = 'Success'",
-        "query_pl": "SELECT T1.service_type_code FROM services AS T1 JOIN EVENTS AS T2 ON T1.service_id = T2.service_id WHERE T2.event_details = \"Sukces\""
+        "query_pl": "SELECT T1.service_type_code FROM services AS T1 JOIN EVENTS AS T2 ON T1.service_id = T2.service_id WHERE T2.event_details = 'Sukces'"
     },
     {
         "db_id": "assets_maintenance",
@@ -4589,7 +4589,7 @@
         "question": "What are the names of the movies that was reviewed by brittany harris?",
         "question_pl": "Jak nazywają się filmy zrecenzowane przez Brittany Harris?",
         "query": "SELECT DISTINCT T2.title FROM Rating AS T1 JOIN Movie AS T2 ON T1.mID  =  T2.mID JOIN Reviewer AS T3 ON T1.rID  =  T3.rID WHERE T3.name  =  'Brittany Harris' ",
-        "query_pl": "SELECT DISTINCT T2.title FROM Rating AS T1 JOIN Movie AS T2 ON T1.mID  =  T2.mID JOIN Reviewer AS T3 ON T1.rID  =  T3.rID WHERE T3.name  =  \"Brittany Harris\" "
+        "query_pl": "SELECT DISTINCT T2.title FROM Rating AS T1 JOIN Movie AS T2 ON T1.mID  =  T2.mID JOIN Reviewer AS T3 ON T1.rID  =  T3.rID WHERE T3.name  =  'Brittany Harris' "
     },
     {
         "db_id": "soccer_2",
@@ -4638,7 +4638,7 @@
         "question": "How many students are on scholarship?",
         "question_pl": "Ilu studentów otrzymuje stypendium?",
         "query": "SELECT count(*) FROM Sportsinfo AS T1 JOIN Student AS T2 ON T1.StuID  =  T2.StuID WHERE T1.onscholarship  =  'Y'",
-        "query_pl": "SELECT count(*) FROM Sportsinfo AS T1 JOIN Student AS T2 ON T1.StuID  =  T2.StuID WHERE T1.onscholarship  =  \"Y\""
+        "query_pl": "SELECT count(*) FROM Sportsinfo AS T1 JOIN Student AS T2 ON T1.StuID  =  T2.StuID WHERE T1.onscholarship  =  'Y'"
     },
     {
         "db_id": "wedding",
@@ -4673,7 +4673,7 @@
         "question": "can you please tell me if Alice is friends with Bob?",
         "question_pl": "Czy możesz mi powiedzieć, czy Alice jest przyjaciółką Boba?",
         "query": "SELECT T1.name FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend  =  'Bob'",
-        "query_pl": "SELECT T1.name FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend  =  \"Bob\""
+        "query_pl": "SELECT T1.name FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend  =  'Bob'"
     },
     {
         "db_id": "soccer_2",
@@ -4771,7 +4771,7 @@
         "question": "What are the names of stadiums that some Australian swimmers have been to?",
         "question_pl": "Jak nazywają się stadiony, na których byli niektórzy australijscy pływacy?",
         "query": "SELECT t4.name FROM swimmer AS t1 JOIN record AS t2 ON t1.id  =  t2.swimmer_id JOIN event AS t3 ON t2.event_id  =  t3.id JOIN stadium AS t4 ON t4.id  =  t3.stadium_id WHERE t1.nationality  =  'Australia'",
-        "query_pl": "SELECT t4.name FROM swimmer AS t1 JOIN record AS t2 ON t1.id  =  t2.swimmer_id JOIN event AS t3 ON t2.event_id  =  t3.id JOIN stadium AS t4 ON t4.id  =  t3.stadium_id WHERE t1.nationality  =  \"Australia\""
+        "query_pl": "SELECT t4.name FROM swimmer AS t1 JOIN record AS t2 ON t1.id  =  t2.swimmer_id JOIN event AS t3 ON t2.event_id  =  t3.id JOIN stadium AS t4 ON t4.id  =  t3.stadium_id WHERE t1.nationality  =  'Australia'"
     },
     {
         "db_id": "party_people",
@@ -4799,7 +4799,7 @@
         "question": "How many 'Cutlery' type products are there?",
         "question_pl": "Ile jest produktów typu \"sztućce\"?",
         "query": "SELECT COUNT(product_id) FROM products_for_hire WHERE product_type_code  =  'Cutlery'",
-        "query_pl": "SELECT COUNT(product_id) FROM products_for_hire WHERE product_type_code  =  \"Sztućce\""
+        "query_pl": "SELECT COUNT(product_id) FROM products_for_hire WHERE product_type_code  =  'Sztućce'"
     },
     {
         "db_id": "debate",
@@ -4813,7 +4813,7 @@
         "question": "What cities have more than 3 airports in the United States?",
         "question_pl": "Jakie miasta w Stanach Zjednoczonych mają więcej niż 3 lotniska?",
         "query": "SELECT city FROM airports WHERE country  =  'United States' GROUP BY city HAVING count(*)  >  3",
-        "query_pl": "SELECT city FROM airports WHERE country  =  \"Stany Zjednoczone\" GROUP BY city HAVING count(*)  >  3"
+        "query_pl": "SELECT city FROM airports WHERE country  =  'Stany Zjednoczone' GROUP BY city HAVING count(*)  >  3"
     },
     {
         "db_id": "roller_coaster",
@@ -4925,14 +4925,14 @@
         "question": "Which event id does not have any participant with the detail Kneyatta Kuhn?",
         "question_pl": "Który identyfikator wydarzenia nie ma żadnego uczestnika z danymi Kneyatta Kuhn?",
         "query": "SELECT event_id FROM EVENTS EXCEPT SELECT T1.event_id FROM Participants_in_Events AS T1 JOIN Participants AS T2 ON T1.Participant_ID = T2.Participant_ID WHERE Participant_Details = 'Kenyatta Kuhn'",
-        "query_pl": "SELECT event_id FROM EVENTS EXCEPT SELECT T1.event_id FROM Participants_in_Events AS T1 JOIN Participants AS T2 ON T1.Participant_ID = T2.Participant_ID WHERE Participant_Details = \"Kenyatta Kuhn\""
+        "query_pl": "SELECT event_id FROM EVENTS EXCEPT SELECT T1.event_id FROM Participants_in_Events AS T1 JOIN Participants AS T2 ON T1.Participant_ID = T2.Participant_ID WHERE Participant_Details = 'Kenyatta Kuhn'"
     },
     {
         "db_id": "college_2",
         "question": "What is the course id for the International Finance course?",
         "question_pl": "Jaki jest identyfikator kursu Finanse Międzynarodowe?",
         "query": "SELECT course_id FROM course WHERE title  =  'International Finance'",
-        "query_pl": "SELECT course_id FROM course WHERE title  =  \"Finanse międzynarodowe\""
+        "query_pl": "SELECT course_id FROM course WHERE title  =  'Finanse międzynarodowe'"
     },
     {
         "db_id": "customers_campaigns_ecommerce",
@@ -4981,7 +4981,7 @@
         "question": "Could you provide me with a list of all of the channel IDs for which the \"time of day\" is morning?",
         "question_pl": "Czy możesz dostarczyć mi listę wszystkich identyfikatorów kanałów, dla których \"pora dnia\" jest poranna?",
         "query": "SELECT Channel_ID from  broadcast WHERE Time_of_day  =  'Morning'",
-        "query_pl": "SELECT Channel_ID from  broadcast WHERE Time_of_day  =  \"Poranek\""
+        "query_pl": "SELECT Channel_ID from  broadcast WHERE Time_of_day  =  'Poranek'"
     },
     {
         "db_id": "store_1",
@@ -5051,7 +5051,7 @@
         "question": "Show average sales of the journals that have an editor whose work type is photo",
         "question_pl": "Pokaż średnią sprzedaż czasopism, które mają redaktora zajmującego się fotografią.",
         "query": "SELECT avg(T1.sales) FROM journal AS T1 JOIN journal_committee AS T2 ON T1.journal_ID  =  T2.journal_ID WHERE T2.work_type  =  'Photo'",
-        "query_pl": "SELECT avg(T1.sales) FROM journal AS T1 JOIN journal_committee AS T2 ON T1.journal_ID  =  T2.journal_ID WHERE T2.work_type  =  \"Zdjęcie\""
+        "query_pl": "SELECT avg(T1.sales) FROM journal AS T1 JOIN journal_committee AS T2 ON T1.journal_ID  =  T2.journal_ID WHERE T2.work_type  =  'Zdjęcie'"
     },
     {
         "db_id": "local_govt_mdm",
@@ -5247,7 +5247,7 @@
         "question": "What is the product ID for food?",
         "question_pl": "Jaki jest identyfikator produktu dla żywności?",
         "query": "select product_id from Products where product_name = 'food';",
-        "query_pl": "select product_id from Products where product_name = \"jedzenie\";"
+        "query_pl": "select product_id from Products where product_name = 'jedzenie';"
     },
     {
         "db_id": "protein_institute",
@@ -5268,7 +5268,7 @@
         "question": "How many women are there?",
         "question_pl": "Ile jest kobiet?",
         "query": "SELECT count(*) FROM people WHERE is_male  =  'F' ",
-        "query_pl": "SELECT count(*) FROM people WHERE is_male  =  \"F\" "
+        "query_pl": "SELECT count(*) FROM people WHERE is_male  =  'F' "
     },
     {
         "db_id": "customer_deliveries",
@@ -5324,7 +5324,7 @@
         "question": "What is the region id for region name Denmark?",
         "question_pl": "Jaki jest identyfikator regionu dla nazwy regionu Dania?",
         "query": "SELECT region_id FROM region  WHERE region_name  =  'Denmark'",
-        "query_pl": "SELECT region_id FROM region  WHERE region_name  =  \"Dania\""
+        "query_pl": "SELECT region_id FROM region  WHERE region_name  =  'Dania'"
     },
     {
         "db_id": "hr_1",
@@ -5345,7 +5345,7 @@
         "question": "Find the countries that have never participated in any competition with Friendly type",
         "question_pl": "Znajdź kraje, które nigdy nie brały udziału w zawodach typu Friendly.",
         "query": "SELECT country FROM competition EXCEPT SELECT country FROM competition WHERE competition_type  =  'Friendly'",
-        "query_pl": "SELECT country FROM competition EXCEPT SELECT country FROM competition WHERE competition_type  =  \"Przyjazny\""
+        "query_pl": "SELECT country FROM competition EXCEPT SELECT country FROM competition WHERE competition_type  =  'Przyjazny'"
     },
     {
         "db_id": "cre_Doc_Tracking_DB",
@@ -5527,7 +5527,7 @@
         "question": "Can you find the name of the most expensive hardware product please?",
         "question_pl": "Czy możesz podać nazwę najdroższego produktu sprzętowego?",
         "query": "SELECT product_name FROM products WHERE product_type_code  =  'Hardware' ORDER BY product_price DESC LIMIT 1",
-        "query_pl": "SELECT product_name FROM products WHERE product_type_code  =  \"Sprzęt\" ORDER BY product_price DESC LIMIT 1"
+        "query_pl": "SELECT product_name FROM products WHERE product_type_code  =  'Sprzęt' ORDER BY product_price DESC LIMIT 1"
     },
     {
         "db_id": "shop_membership",
@@ -5569,7 +5569,7 @@
         "question": "what location are the clemson teams?",
         "question_pl": "W jakiej lokalizacji znajdują się drużyny Clemson?",
         "query": "SELECT t1.location FROM university AS t1 JOIN basketball_match AS t2 ON t1.school_id  =  t2.school_id WHERE team_name  =  'Clemson'",
-        "query_pl": "SELECT t1.location FROM university AS t1 JOIN basketball_match AS t2 ON t1.school_id  =  t2.school_id WHERE team_name  =  \"Clemson\""
+        "query_pl": "SELECT t1.location FROM university AS t1 JOIN basketball_match AS t2 ON t1.school_id  =  t2.school_id WHERE team_name  =  'Clemson'"
     },
     {
         "db_id": "loan_1",
@@ -5674,7 +5674,7 @@
         "question": "Show me the destination details of John F Kennedy International Airport",
         "question_pl": "Pokaż mi szczegóły miejsca docelowego Międzynarodowe lotnisko im. Johna F. Kennedy'ego",
         "query": "SELECT dst_apid, dst_ap FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE T1.name  =  'John F Kennedy International Airport'",
-        "query_pl": "SELECT dst_apid, dst_ap FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE T1.name  =  \"Międzynarodowy port lotniczy im. Johna F. Kennedyego\""
+        "query_pl": "SELECT dst_apid, dst_ap FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE T1.name  =  'Międzynarodowy port lotniczy im. Johna F. Kennedyego'"
     },
     {
         "db_id": "sakila_1",
@@ -5758,7 +5758,7 @@
         "question": "Tell me class code for class room BUS311 ?",
         "question_pl": "Podaj mi kod klasy dla sali lekcyjnej BUS311?",
         "query": "SELECT class_code  FROM CLASS where CLASS_ROOM = 'BUS311'",
-        "query_pl": "SELECT class_code  FROM CLASS where CLASS_ROOM = \"BUS311\""
+        "query_pl": "SELECT class_code  FROM CLASS where CLASS_ROOM = 'BUS311'"
     },
     {
         "db_id": "college_2",
@@ -5828,7 +5828,7 @@
         "question": "What organization id Denesik and Sons Party?",
         "question_pl": "Jaką organizacją jest Denesik and Sons Party?",
         "query": "SELECT organization_id FROM Organizations where organization_details  =  'Denesik and Sons Party'",
-        "query_pl": "SELECT organization_id FROM Organizations where organization_details  =  \"Impreza Denesik i Synowie\""
+        "query_pl": "SELECT organization_id FROM Organizations where organization_details  =  'Impreza Denesik i Synowie'"
     },
     {
         "db_id": "small_bank_1",
@@ -6003,7 +6003,7 @@
         "question": "What is the average age of all males?",
         "question_pl": "Jaki jest średni wiek wszystkich mężczyzn?",
         "query": "SELECT avg(age) FROM Person WHERE gender  =  'male'",
-        "query_pl": "SELECT avg(age) FROM Person WHERE gender  =  \"mężczyzna\""
+        "query_pl": "SELECT avg(age) FROM Person WHERE gender  =  'mężczyzna'"
     },
     {
         "db_id": "hr_1",
@@ -6017,7 +6017,7 @@
         "question": "WHAT IS THE AIRPORT NAME OF GORKA CITY IN AIRPORT TABLE?",
         "question_pl": "JAKA JEST NAZWA LOTNISKA W MIEŚCIE GORKA W TABELI LOTNISK?",
         "query": "select name from airports where city = 'Goroka'",
-        "query_pl": "select name from airports where city = \"Goroka\""
+        "query_pl": "select name from airports where city = 'Goroka'"
     },
     {
         "db_id": "voter_2",
@@ -6031,7 +6031,7 @@
         "question": "Can you show me the first names of customers who have a rental date on or before 2005-08-23?",
         "question_pl": "Czy możesz pokazać mi imiona klientów, którzy mają datę wypożyczenia w dniu 2005-08-23 lub wcześniej?",
         "query": "SELECT first_name FROM customer WHERE customer_id IN( SELECT customer_id FROM rental WHERE rental_date  <=  '2005-08-23 00:00:00' )",
-        "query_pl": "SELECT first_name FROM customer WHERE customer_id IN( SELECT customer_id FROM rental WHERE rental_date  <=  \"2005-08-23 00:00:00\" )"
+        "query_pl": "SELECT first_name FROM customer WHERE customer_id IN( SELECT customer_id FROM rental WHERE rental_date  <=  '2005-08-23 00:00:00' )"
     },
     {
         "db_id": "college_2",
@@ -6115,7 +6115,7 @@
         "question": "List the order cancelled customer id from the table?",
         "question_pl": "Wymień identyfikator anulowanego klienta z tabeli?",
         "query": "select order_id ,customer_id from Customer_Orders where order_status = 'Cancelled'",
-        "query_pl": "select order_id ,customer_id from Customer_Orders where order_status = \"Anulowane\""
+        "query_pl": "select order_id ,customer_id from Customer_Orders where order_status = 'Anulowane'"
     },
     {
         "db_id": "cre_Theme_park",
@@ -6360,7 +6360,7 @@
         "question": "Can you please tell me the number of routes with the destination airport Italy?",
         "question_pl": "Czy możesz podać liczbę tras z lotniskiem docelowym we Włoszech?",
         "query": "SELECT count(*) FROM routes AS T1 JOIN airports AS T2 ON T1.dst_apid  =  T2.apid WHERE T2.country  =  'Italy'",
-        "query_pl": "SELECT count(*) FROM routes AS T1 JOIN airports AS T2 ON T1.dst_apid  =  T2.apid WHERE T2.country  =  \"Włochy\""
+        "query_pl": "SELECT count(*) FROM routes AS T1 JOIN airports AS T2 ON T1.dst_apid  =  T2.apid WHERE T2.country  =  'Włochy'"
     },
     {
         "db_id": "hospital_1",
@@ -6381,7 +6381,7 @@
         "question": "what is the name of the most expensive hardware product? ",
         "question_pl": "Jak nazywa się najdroższy produkt sprzętowy?",
         "query": "SELECT product_name FROM products WHERE product_type_code  =  'Hardware' ORDER BY product_price DESC LIMIT 1",
-        "query_pl": "SELECT product_name FROM products WHERE product_type_code  =  \"Sprzęt\" ORDER BY product_price DESC LIMIT 1"
+        "query_pl": "SELECT product_name FROM products WHERE product_type_code  =  'Sprzęt' ORDER BY product_price DESC LIMIT 1"
     },
     {
         "db_id": "election_representative",
@@ -6402,21 +6402,21 @@
         "question": "I was wondering how many accounts are listed under the first name of John?",
         "question_pl": "Zastanawiałem się, ile kont jest wymienionych pod imieniem John?",
         "query": "select count(distinct account_id) from Customers AS T1 JOIN Accounts AS T2 ON T2.customer_id = T1.customer_id WHERE customer_first_name = 'John'",
-        "query_pl": "select count(distinct account_id) from Customers AS T1 JOIN Accounts AS T2 ON T2.customer_id = T1.customer_id WHERE customer_first_name = \"John\""
+        "query_pl": "select count(distinct account_id) from Customers AS T1 JOIN Accounts AS T2 ON T2.customer_id = T1.customer_id WHERE customer_first_name = 'John'"
     },
     {
         "db_id": "solvency_ii",
         "question": "Show me the prices of the products named \"Dining\"",
         "question_pl": "Pokaż mi ceny produktów o nazwie \"Wyżywienie\"",
         "query": "SELECT Product_Price FROM Products WHERE Product_Name = 'Dinning'",
-        "query_pl": "SELECT Product_Price FROM Products WHERE Product_Name = \"Kolacja\""
+        "query_pl": "SELECT Product_Price FROM Products WHERE Product_Name = 'Kolacja'"
     },
     {
         "db_id": "baseball_1",
         "question": "What are the names of some public parks in the United States?",
         "question_pl": "Jak nazywają się niektóre parki publiczne w Stanach Zjednoczonych?",
         "query": "SELECT park_name FROM park where country = 'US'",
-        "query_pl": "SELECT park_name FROM park where country = \"US\""
+        "query_pl": "SELECT park_name FROM park where country = 'US'"
     },
     {
         "db_id": "ship_mission",
@@ -6458,7 +6458,7 @@
         "question": "Show the name of the company with company id 1?",
         "question_pl": "Pokaż nazwę firmy z identyfikatorem firmy 1?",
         "query": "SELECT company  FROM company WHERE company_id = '1'",
-        "query_pl": "SELECT company  FROM company WHERE company_id = \"1\""
+        "query_pl": "SELECT company  FROM company WHERE company_id = '1'"
     },
     {
         "db_id": "soccer_2",
@@ -6535,14 +6535,14 @@
         "question": "find the name of the Track 2?",
         "question_pl": "Znajdź nazwę ścieżki 2?",
         "query": "SELECT Name from  Track where TrackId = '2'",
-        "query_pl": "SELECT Name from  Track where TrackId = \"2\""
+        "query_pl": "SELECT Name from  Track where TrackId = '2'"
     },
     {
         "db_id": "tracking_grants_for_research",
         "question": "For the documents with the description \"Regular\", what are all of their response received dates?",
         "question_pl": "W przypadku dokumentów z opisem \"Regularne\", jakie są wszystkie daty otrzymania odpowiedzi?",
         "query": "SELECT T1.response_received_date FROM Documents AS T1 JOIN Document_Types AS T2 ON T1.document_type_code  =  T2.document_type_code JOIN Grants AS T3 ON T1.grant_id  =  T3.grant_id WHERE T2.document_description  =  'Regular'",
-        "query_pl": "SELECT T1.response_received_date FROM Documents AS T1 JOIN Document_Types AS T2 ON T1.document_type_code  =  T2.document_type_code JOIN Grants AS T3 ON T1.grant_id  =  T3.grant_id WHERE T2.document_description  =  \"Regularny\""
+        "query_pl": "SELECT T1.response_received_date FROM Documents AS T1 JOIN Document_Types AS T2 ON T1.document_type_code  =  T2.document_type_code JOIN Grants AS T3 ON T1.grant_id  =  T3.grant_id WHERE T2.document_description  =  'Regularny'"
     },
     {
         "db_id": "student_assessment",
@@ -6556,7 +6556,7 @@
         "question": "Could you tell me how many employees have the job title PU_MAN?",
         "question_pl": "Czy możesz mi powiedzieć, ilu pracowników ma stanowisko PU_MAN?",
         "query": " SELECT count(*) FROM employees WHERE job_id  =  'PU_MAN' ",
-        "query_pl": " SELECT count(*) FROM employees WHERE job_id  =  \"PU_MAN\" "
+        "query_pl": " SELECT count(*) FROM employees WHERE job_id  =  'PU_MAN' "
     },
     {
         "db_id": "cre_Doc_Control_Systems",
@@ -6591,7 +6591,7 @@
         "question": "which team performed in Ave Maria university ?",
         "question_pl": "Który zespół wystąpił na uniwersytecie Ave Maria?",
         "query": "SELECT Team FROM institution WHERE Institution  =  'Ave Maria University'",
-        "query_pl": "SELECT Team FROM institution WHERE Institution  =  \"Uniwersytet Ave Maria\""
+        "query_pl": "SELECT Team FROM institution WHERE Institution  =  'Uniwersytet Ave Maria'"
     },
     {
         "db_id": "college_1",
@@ -6612,14 +6612,14 @@
         "question": "What is the nationality of Zaha Hadid?",
         "question_pl": "Jakiej narodowości jest Zaha Hadid?",
         "query": "SELECT nationality FROM architect WHERE name = 'Zaha Hadid'",
-        "query_pl": "SELECT nationality FROM architect WHERE name = \"Zaha Hadid\""
+        "query_pl": "SELECT nationality FROM architect WHERE name = 'Zaha Hadid'"
     },
     {
         "db_id": "tracking_grants_for_research",
         "question": "Give me the details of the organizations described as \"Sponsor\" in alphabetical order",
         "question_pl": "Podaj mi szczegóły organizacji opisanych jako \"Sponsor\" w kolejności alfabetycznej",
         "query": "SELECT organisation_details FROM Organisations AS T1 JOIN organisation_Types AS T2 ON T1.organisation_type  =  T2.organisation_type WHERE T2.organisation_type_description  =  'Sponsor' ORDER BY organisation_details",
-        "query_pl": "SELECT organisation_details FROM Organisations AS T1 JOIN organisation_Types AS T2 ON T1.organisation_type  =  T2.organisation_type WHERE T2.organisation_type_description  =  \"Sponsor\" ORDER BY organisation_details"
+        "query_pl": "SELECT organisation_details FROM Organisations AS T1 JOIN organisation_Types AS T2 ON T1.organisation_type  =  T2.organisation_type WHERE T2.organisation_type_description  =  'Sponsor' ORDER BY organisation_details"
     },
     {
         "db_id": "university_basketball",
@@ -6654,7 +6654,7 @@
         "question": "What is the name of the country that participated in the greatest number of tournaments?",
         "question_pl": "Jak nazywa się kraj, który brał udział w największej liczbie turniejów?",
         "query": "SELECT country FROM competition WHERE competition_type  =  'Tournament' GROUP BY country ORDER BY count(*) DESC LIMIT 1",
-        "query_pl": "SELECT country FROM competition WHERE competition_type  =  \"Turniej\" GROUP BY country ORDER BY count(*) DESC LIMIT 1"
+        "query_pl": "SELECT country FROM competition WHERE competition_type  =  'Turniej' GROUP BY country ORDER BY count(*) DESC LIMIT 1"
     },
     {
         "db_id": "apartment_rentals",
@@ -6682,7 +6682,7 @@
         "question": "who are Dan's friends?",
         "question_pl": "Kim są przyjaciele Dana?",
         "query": "SELECT DISTINCT T1.name FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend  =  'Dan'",
-        "query_pl": "SELECT DISTINCT T1.name FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend  =  \"Dan\""
+        "query_pl": "SELECT DISTINCT T1.name FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend  =  'Dan'"
     },
     {
         "db_id": "assets_maintenance",
@@ -6717,7 +6717,7 @@
         "question": "How many ships does United Kingdom have?",
         "question_pl": "Ile statków ma Wielka Brytania?",
         "query": "SELECT Nationality,count(*) FROM ship  WHERE Nationality = 'United Kingdom' GROUP BY Nationality",
-        "query_pl": "SELECT Nationality,count(*) FROM ship  WHERE Nationality = \"Wielka Brytania\" GROUP BY Nationality"
+        "query_pl": "SELECT Nationality,count(*) FROM ship  WHERE Nationality = 'Wielka Brytania' GROUP BY Nationality"
     },
     {
         "db_id": "wine_1",
@@ -6822,7 +6822,7 @@
         "question": "How many routes have a destination airport in Canada, please?",
         "question_pl": "Ile tras ma lotnisko docelowe w Kanadzie?",
         "query": "SELECT count(*) FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE country  =  'Canada'",
-        "query_pl": "SELECT count(*) FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE country  =  \"Kanada\""
+        "query_pl": "SELECT count(*) FROM airports AS T1 JOIN routes AS T2 ON T1.apid  =  T2.dst_apid WHERE country  =  'Kanada'"
     },
     {
         "db_id": "csu_1",
@@ -6850,7 +6850,7 @@
         "question": "Find the first names of the faculty members who participate in Caonoeing and Kayaking.",
         "question_pl": "Znajdź imiona członków wydziału, którzy uczestniczą w kajakarstwie i kajakarstwie.",
         "query": "SELECT T1.lname FROM Faculty AS T1 JOIN Faculty_participates_in AS T2 ON T1.facID  =  T2.facID JOIN activity AS T3 ON T2.actid  =  T2.actid WHERE T3.activity_name  =  'Canoeing' INTERSECT SELECT T1.lname FROM Faculty AS T1 JOIN Faculty_participates_in AS T2 ON T1.facID  =  T2.facID JOIN activity AS T3 ON T2.actid  =  T2.actid WHERE T3.activity_name  =  'Kayaking'",
-        "query_pl": "SELECT T1.lname FROM Faculty AS T1 JOIN Faculty_participates_in AS T2 ON T1.facID  =  T2.facID JOIN activity AS T3 ON T2.actid  =  T2.actid WHERE T3.activity_name  =  \"Kajakarstwo\" INTERSECT SELECT T1.lname FROM Faculty AS T1 JOIN Faculty_participates_in AS T2 ON T1.facID  =  T2.facID JOIN activity AS T3 ON T2.actid  =  T2.actid WHERE T3.activity_name  =  \"Kajakarstwo\""
+        "query_pl": "SELECT T1.lname FROM Faculty AS T1 JOIN Faculty_participates_in AS T2 ON T1.facID  =  T2.facID JOIN activity AS T3 ON T2.actid  =  T2.actid WHERE T3.activity_name  =  'Kajakarstwo' INTERSECT SELECT T1.lname FROM Faculty AS T1 JOIN Faculty_participates_in AS T2 ON T1.facID  =  T2.facID JOIN activity AS T3 ON T2.actid  =  T2.actid WHERE T3.activity_name  =  'Kajakarstwo'"
     },
     {
         "db_id": "entertainment_awards",
@@ -6899,7 +6899,7 @@
         "question": "Show the name of the product with product id 1?",
         "question_pl": "Pokaż nazwę produktu z identyfikatorem produktu 1?",
         "query": "SELECT product_name FROM products WHERE product_id = '1'",
-        "query_pl": "SELECT product_name FROM products WHERE product_id = \"1\""
+        "query_pl": "SELECT product_name FROM products WHERE product_id = '1'"
     },
     {
         "db_id": "twitter_1",
@@ -7053,7 +7053,7 @@
         "question": "what is the average salary of Boston Red Stockings?",
         "question_pl": "Jakie jest średnie wynagrodzenie Boston Red Stockings?",
         "query": "SELECT avg(T1.salary) FROM salary AS T1 JOIN team AS T2 ON T1.team_id  =  T2.team_id_br WHERE T2.name  = 'Boston Red Stockings'",
-        "query_pl": "SELECT avg(T1.salary) FROM salary AS T1 JOIN team AS T2 ON T1.team_id  =  T2.team_id_br WHERE T2.name  = \"Czerwone pończochy Boston\""
+        "query_pl": "SELECT avg(T1.salary) FROM salary AS T1 JOIN team AS T2 ON T1.team_id  =  T2.team_id_br WHERE T2.name  = 'Czerwone pończochy Boston'"
     },
     {
         "db_id": "twitter_1",
@@ -7067,14 +7067,14 @@
         "question": "list the canceled product customer id?",
         "question_pl": "Wymień identyfikator klienta anulowanego produktu?",
         "query": "SELECT product_id FROM customer_orders AS t1 JOIN order_items AS t2 ON t1.order_id  =  t2.order_id WHERE order_status = 'Cancelled'",
-        "query_pl": "SELECT product_id FROM customer_orders AS t1 JOIN order_items AS t2 ON t1.order_id  =  t2.order_id WHERE order_status = \"Anulowane\""
+        "query_pl": "SELECT product_id FROM customer_orders AS t1 JOIN order_items AS t2 ON t1.order_id  =  t2.order_id WHERE order_status = 'Anulowane'"
     },
     {
         "db_id": "hr_1",
         "question": "show me the first and last names of employees whose first name does not contain letter M",
         "question_pl": "Pokaż mi imiona i nazwiska pracowników, których imiona nie zawierają litery M.",
         "query": "SELECT first_name ,  last_name FROM employees WHERE first_name NOT LIKE '%M%'",
-        "query_pl": "SELECT first_name ,  last_name FROM employees WHERE first_name NOT LIKE \"%M%\""
+        "query_pl": "SELECT first_name ,  last_name FROM employees WHERE first_name NOT LIKE '%M%'"
     },
     {
         "db_id": "department_store",
@@ -7095,7 +7095,7 @@
         "question": "find the state of the college which player Charles is attending",
         "question_pl": "znajdź stan uczelni, do której uczęszcza gracz Charles.",
         "query": "SELECT T1.state FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName JOIN player AS T3 ON T2.pID  =  T3.pID WHERE T3.pName  =  'Charles'",
-        "query_pl": "SELECT T1.state FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName JOIN player AS T3 ON T2.pID  =  T3.pID WHERE T3.pName  =  \"Charles\""
+        "query_pl": "SELECT T1.state FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName JOIN player AS T3 ON T2.pID  =  T3.pID WHERE T3.pName  =  'Charles'"
     },
     {
         "db_id": "college_1",
@@ -7123,7 +7123,7 @@
         "question": "what is the average price of wine not produced in Sanoma county ",
         "question_pl": "Jaka jest średnia cena wina nieprodukowanego w hrabstwie Sanoma?",
         "query": "SELECT avg(t2.price) FROM APPELLATIONS AS T1 JOIN WINE AS T2 ON T1.Appelation  =  T2.Appelation WHERE T1.County !=  'Sonoma'",
-        "query_pl": "SELECT avg(t2.price) FROM APPELLATIONS AS T1 JOIN WINE AS T2 ON T1.Appelation  =  T2.Appelation WHERE T1.County !=  \"Sonoma\""
+        "query_pl": "SELECT avg(t2.price) FROM APPELLATIONS AS T1 JOIN WINE AS T2 ON T1.Appelation  =  T2.Appelation WHERE T1.County !=  'Sonoma'"
     },
     {
         "db_id": "tracking_grants_for_research",
@@ -7158,7 +7158,7 @@
         "question": "Names of browsers that are compartable with cachebox?",
         "question_pl": "Nazwy przeglądarek, które są kompatybilne z cachebox?",
         "query": "SELECT T3.name FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id JOIN browser AS T3 ON T2.browser_id  =  T3.id WHERE T1.name  =  'CACHEbox' ",
-        "query_pl": "SELECT T3.name FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id JOIN browser AS T3 ON T2.browser_id  =  T3.id WHERE T1.name  =  \"CACHEbox\" "
+        "query_pl": "SELECT T3.name FROM web_client_accelerator AS T1 JOIN accelerator_compatible_browser AS T2 ON T2.accelerator_id  =  T1.id JOIN browser AS T3 ON T2.browser_id  =  T3.id WHERE T1.name  =  'CACHEbox' "
     },
     {
         "db_id": "swimming",
@@ -7207,7 +7207,7 @@
         "question": "list the name of college in az?",
         "question_pl": "Wymień nazwę uczelni w az?",
         "query": "SELECT cName FROM College WHERE state = 'AZ'",
-        "query_pl": "SELECT cName FROM College WHERE state = \"AZ\""
+        "query_pl": "SELECT cName FROM College WHERE state = 'AZ'"
     },
     {
         "db_id": "tracking_share_transactions",
@@ -7256,28 +7256,28 @@
         "question": "Show the route id of the destination airport id 2990?",
         "question_pl": "Pokaż identyfikator trasy lotniska docelowego o identyfikatorze 2990?",
         "query": "select rid from routes where dst_apid = '2990'",
-        "query_pl": "select rid from routes where dst_apid = \"2990\""
+        "query_pl": "select rid from routes where dst_apid = '2990'"
     },
     {
         "db_id": "music_1",
         "question": "what is the artist name of india",
         "question_pl": "Jak nazywa się artysta z indii?",
         "query": "SELECT artist_name from song where country = 'India'",
-        "query_pl": "SELECT artist_name from song where country = \"Indie\""
+        "query_pl": "SELECT artist_name from song where country = 'Indie'"
     },
     {
         "db_id": "hr_1",
         "question": "What is the president min salary?",
         "question_pl": "Jaka jest minimalna pensja prezesa?",
         "query": "select min_salary from jobs where JOB_TITLE = 'president'",
-        "query_pl": "select min_salary from jobs where JOB_TITLE = \"prezes\""
+        "query_pl": "select min_salary from jobs where JOB_TITLE = 'prezes'"
     },
     {
         "db_id": "mountain_photos",
         "question": "How many distinct kinds of camera lenses are used to take photos of mountain ranges in the country \"Ethiopia\"?",
         "question_pl": "Ile różnych rodzajów obiektywów jest używanych do robienia zdjęć pasm górskich w kraju \"Etiopia\"?",
         "query": "SELECT count(DISTINCT T2.camera_lens_id) FROM mountain AS T1 JOIN photos AS T2 ON T1.id  =  T2.mountain_id WHERE T1.country  =  'Ethiopia'",
-        "query_pl": "SELECT count(DISTINCT T2.camera_lens_id) FROM mountain AS T1 JOIN photos AS T2 ON T1.id  =  T2.mountain_id WHERE T1.country  =  \"Etiopia\""
+        "query_pl": "SELECT count(DISTINCT T2.camera_lens_id) FROM mountain AS T1 JOIN photos AS T2 ON T1.id  =  T2.mountain_id WHERE T1.country  =  'Etiopia'"
     },
     {
         "db_id": "company_employee",
@@ -7298,7 +7298,7 @@
         "question": "Could you please let me know the name of instructors in Comp. Sci. department whose salary is higher than 80000?",
         "question_pl": "Czy mógłbyś podać mi nazwiska instruktorów na wydziale Comp. Sci. dział, którego pensja jest wyższa niż 80000?",
         "query": "SELECT name FROM instructor WHERE dept_name  =  'Comp. Sci.'  AND salary  >  80000",
-        "query_pl": "SELECT name FROM instructor WHERE dept_name  =  \"Comp. Sci.\"  AND salary  >  80000"
+        "query_pl": "SELECT name FROM instructor WHERE dept_name  =  'Comp. Sci.'  AND salary  >  80000"
     },
     {
         "db_id": "university_basketball",
@@ -7403,7 +7403,7 @@
         "question": "Can you list all the names of the students who have the position of striker?",
         "question_pl": "Czy możesz wymienić wszystkie nazwiska uczniów, którzy mają pozycję napastnika?",
         "query": "SELECT T1.pName FROM player AS T1 JOIN tryout AS T2 ON T1.pID  =  T2.pID WHERE T2.pPos  =  'striker'",
-        "query_pl": "SELECT T1.pName FROM player AS T1 JOIN tryout AS T2 ON T1.pID  =  T2.pID WHERE T2.pPos  =  \"napastnik\""
+        "query_pl": "SELECT T1.pName FROM player AS T1 JOIN tryout AS T2 ON T1.pID  =  T2.pID WHERE T2.pPos  =  'napastnik'"
     },
     {
         "db_id": "flight_4",
@@ -7522,7 +7522,7 @@
         "question": "What is the number of projects that Sony doesn't manufacture?",
         "question_pl": "Jaka jest liczba projektów, których Sony nie produkuje?",
         "query": "SELECT count(DISTINCT name) FROM products WHERE name NOT IN (SELECT T1.name FROM products AS T1 JOIN manufacturers AS T2 ON T1.Manufacturer  =  T2.code WHERE T2.name  =  'Sony')",
-        "query_pl": "SELECT count(DISTINCT name) FROM products WHERE name NOT IN (SELECT T1.name FROM products AS T1 JOIN manufacturers AS T2 ON T1.Manufacturer  =  T2.code WHERE T2.name  =  \"Sony\")"
+        "query_pl": "SELECT count(DISTINCT name) FROM products WHERE name NOT IN (SELECT T1.name FROM products AS T1 JOIN manufacturers AS T2 ON T1.Manufacturer  =  T2.code WHERE T2.name  =  'Sony')"
     },
     {
         "db_id": "department_store",
@@ -7564,7 +7564,7 @@
         "question": "Which buildings are in a studio?",
         "question_pl": "Które budynki znajdują się w studio?",
         "query": "SELECT building_full_name FROM Apartment_Buildings WHERE building_description = 'Studio'",
-        "query_pl": "SELECT building_full_name FROM Apartment_Buildings WHERE building_description = \"Studio\""
+        "query_pl": "SELECT building_full_name FROM Apartment_Buildings WHERE building_description = 'Studio'"
     },
     {
         "db_id": "phone_market",
@@ -7627,7 +7627,7 @@
         "question": "How many female students (sex is F) live in BAL",
         "question_pl": "Ile studentek (płeć to F) mieszka w BAL?",
         "query": "SELECT count(*) FROM student WHERE sex  =  'F' AND city_code  =  'BAL' ",
-        "query_pl": "SELECT count(*) FROM student WHERE sex  =  \"F\" AND city_code  =  \"BAL\" "
+        "query_pl": "SELECT count(*) FROM student WHERE sex  =  'F' AND city_code  =  'BAL' "
     },
     {
         "db_id": "workshop_paper",
@@ -7641,7 +7641,7 @@
         "question": "What is the highest age of the the Artists from the United States?",
         "question_pl": "Jaki jest najwyższy wiek artystów ze Stanów Zjednoczonych?",
         "query": "SELECT  max(age) FROM artist WHERE country  =  'United States'",
-        "query_pl": "SELECT  max(age) FROM artist WHERE country  =  \"Stany Zjednoczone\""
+        "query_pl": "SELECT  max(age) FROM artist WHERE country  =  'Stany Zjednoczone'"
     },
     {
         "db_id": "student_1",
@@ -7662,7 +7662,7 @@
         "question": "How many photos use Olympus camera lenses?",
         "question_pl": "Na ilu zdjęciach używasz obiektywów do aparatów Olympus?",
         "query": "SELECT count(*) FROM photos AS T1 JOIN camera_lens AS T2 ON T1.camera_lens_id  =  T2.id WHERE T2.brand  =  'Olympus'",
-        "query_pl": "SELECT count(*) FROM photos AS T1 JOIN camera_lens AS T2 ON T1.camera_lens_id  =  T2.id WHERE T2.brand  =  \"Olympus\""
+        "query_pl": "SELECT count(*) FROM photos AS T1 JOIN camera_lens AS T2 ON T1.camera_lens_id  =  T2.id WHERE T2.brand  =  'Olympus'"
     },
     {
         "db_id": "e_government",
@@ -7718,14 +7718,14 @@
         "question": "How many devices are in stock at Dinas Device?",
         "question_pl": "Ile urządzeń znajduje się w magazynie Dinas Device?",
         "query": "SELECT count(Device_ID) FROM stock AS T1 JOIN shop AS T2 ON T1.Shop_ID  =  T2.Shop_ID where Shop_Name = 'Dinas Device'",
-        "query_pl": "SELECT count(Device_ID) FROM stock AS T1 JOIN shop AS T2 ON T1.Shop_ID  =  T2.Shop_ID where Shop_Name = \"Urządzenie Dinas\""
+        "query_pl": "SELECT count(Device_ID) FROM stock AS T1 JOIN shop AS T2 ON T1.Shop_ID  =  T2.Shop_ID where Shop_Name = 'Urządzenie Dinas'"
     },
     {
         "db_id": "network_2",
         "question": "Can you please tell me who the friends of Alice's friends are?",
         "question_pl": "Czy możesz mi powiedzieć, kim są przyjaciele przyjaciół Alice?",
         "query": "SELECT DISTINCT T4.name FROM PersonFriend AS T1 JOIN Person AS T2 ON T1.name  =  T2.name JOIN PersonFriend AS T3 ON T1.friend  =  T3.name JOIN PersonFriend AS T4 ON T3.friend  =  T4.name WHERE T2.name  =  'Alice' AND T4.name != 'Alice'",
-        "query_pl": "SELECT DISTINCT T4.name FROM PersonFriend AS T1 JOIN Person AS T2 ON T1.name  =  T2.name JOIN PersonFriend AS T3 ON T1.friend  =  T3.name JOIN PersonFriend AS T4 ON T3.friend  =  T4.name WHERE T2.name  =  \"Alice\" AND T4.name != \"Alice\""
+        "query_pl": "SELECT DISTINCT T4.name FROM PersonFriend AS T1 JOIN Person AS T2 ON T1.name  =  T2.name JOIN PersonFriend AS T3 ON T1.friend  =  T3.name JOIN PersonFriend AS T4 ON T3.friend  =  T4.name WHERE T2.name  =  'Alice' AND T4.name != 'Alice'"
     },
     {
         "db_id": "baseball_1",
@@ -7781,7 +7781,7 @@
         "question": "Find the name of customers who do not have a saving account.",
         "question_pl": "Znajdź nazwiska klientów, którzy nie mają konta oszczędnościowego.",
         "query": "SELECT cust_name FROM customer EXCEPT SELECT cust_name FROM customer WHERE acc_type  =  'saving'",
-        "query_pl": "SELECT cust_name FROM customer EXCEPT SELECT cust_name FROM customer WHERE acc_type  =  \"oszczędność\""
+        "query_pl": "SELECT cust_name FROM customer EXCEPT SELECT cust_name FROM customer WHERE acc_type  =  'oszczędność'"
     },
     {
         "db_id": "product_catalog",
@@ -7809,7 +7809,7 @@
         "question": "how many flights have pilot Thompson flown?",
         "question_pl": "Ile lotów odbył pilot Thompson?",
         "query": "SELECT count(*) FROM flight WHERE pilot  =  'Thompson'",
-        "query_pl": "SELECT count(*) FROM flight WHERE pilot  =  \"Thompson\""
+        "query_pl": "SELECT count(*) FROM flight WHERE pilot  =  'Thompson'"
     },
     {
         "db_id": "music_1",
@@ -7963,7 +7963,7 @@
         "question": "Show the names of customers who use Credit Card payment method",
         "question_pl": "Pokaż nazwy klientów korzystających z metody płatności kartą kredytową.",
         "query": "SELECT customer_name from customers where payment_method_code = 'Credit Card'",
-        "query_pl": "SELECT customer_name from customers where payment_method_code = \"Karta kredytowa\""
+        "query_pl": "SELECT customer_name from customers where payment_method_code = 'Karta kredytowa'"
     },
     {
         "db_id": "hospital_1",
@@ -8250,7 +8250,7 @@
         "question": "Find the movie id of Gone with the Wind?",
         "question_pl": "Znajdź id filmu Przeminęło z wiatrem?",
         "query": "SELECT mid FROM Movie WHERE title = 'Gone with the Wind'",
-        "query_pl": "SELECT mid FROM Movie WHERE title = \"Przeminęło z wiatrem\""
+        "query_pl": "SELECT mid FROM Movie WHERE title = 'Przeminęło z wiatrem'"
     },
     {
         "db_id": "entrepreneur",
@@ -8285,7 +8285,7 @@
         "question": "Find the names of all directors whose movies are rated by Sarah Martinez",
         "question_pl": "Znajdź nazwiska wszystkich reżyserów, których filmy zostały ocenione przez Sarah Martinez",
         "query": "SELECT DISTINCT T2.director FROM Rating AS T1 JOIN Movie AS T2 ON T1.mID  =  T2.mID JOIN Reviewer AS T3 ON T1.rID  =  T3.rID WHERE T3.name  =  'Sarah Martinez'",
-        "query_pl": "SELECT DISTINCT T2.director FROM Rating AS T1 JOIN Movie AS T2 ON T1.mID  =  T2.mID JOIN Reviewer AS T3 ON T1.rID  =  T3.rID WHERE T3.name  =  \"Sarah Martinez\""
+        "query_pl": "SELECT DISTINCT T2.director FROM Rating AS T1 JOIN Movie AS T2 ON T1.mID  =  T2.mID JOIN Reviewer AS T3 ON T1.rID  =  T3.rID WHERE T3.name  =  'Sarah Martinez'"
     },
     {
         "db_id": "small_bank_1",
@@ -8355,14 +8355,14 @@
         "question": "What are the employees whose first name does not containing the letter M?",
         "question_pl": "Jacy są pracownicy, których imię nie zawiera litery M?",
         "query": "SELECT first_name FROM employees WHERE first_name NOT LIKE '%M%'",
-        "query_pl": "SELECT first_name FROM employees WHERE first_name NOT LIKE \"%M%\""
+        "query_pl": "SELECT first_name FROM employees WHERE first_name NOT LIKE '%M%'"
     },
     {
         "db_id": "tracking_grants_for_research",
         "question": "List out projects which did not hire staff for researcher role ?",
         "question_pl": "Wymień projekty, w których nie zatrudniono pracowników w roli badaczy?",
         "query": "SELECT project_id FROM Projects WHERE project_id NOT IN ( SELECT project_id FROM Project_Staff WHERE role_code  =  'researcher' )",
-        "query_pl": "SELECT project_id FROM Projects WHERE project_id NOT IN ( SELECT project_id FROM Project_Staff WHERE role_code  =  \"badacz\" )"
+        "query_pl": "SELECT project_id FROM Projects WHERE project_id NOT IN ( SELECT project_id FROM Project_Staff WHERE role_code  =  'badacz' )"
     },
     {
         "db_id": "local_govt_and_lot",
@@ -8481,7 +8481,7 @@
         "question": "What are the ships that are steered by a captain with Midshipman rank?",
         "question_pl": "Jakimi statkami steruje kapitan ze stopniem midszypmana?",
         "query": "SELECT t1.name FROM ship AS t1 JOIN captain AS t2 ON t1.ship_id  =  t2.ship_id WHERE t2.rank  =  'Midshipman'",
-        "query_pl": "SELECT t1.name FROM ship AS t1 JOIN captain AS t2 ON t1.ship_id  =  t2.ship_id WHERE t2.rank  =  \"Midshipman\""
+        "query_pl": "SELECT t1.name FROM ship AS t1 JOIN captain AS t2 ON t1.ship_id  =  t2.ship_id WHERE t2.rank  =  'Midshipman'"
     },
     {
         "db_id": "assets_maintenance",
@@ -8635,7 +8635,7 @@
         "question": "find the name and college of students whose player position are goalie in the tryout",
         "question_pl": "znajdź imię i nazwisko oraz uczelnię studentów, których pozycją zawodnika jest bramkarz w próbie",
         "query": "SELECT T1.pName ,  T2.cName FROM player AS T1 JOIN tryout AS T2 ON T1.pID  =  T2.pID WHERE T2.pPos  =  'goalie'",
-        "query_pl": "SELECT T1.pName ,  T2.cName FROM player AS T1 JOIN tryout AS T2 ON T1.pID  =  T2.pID WHERE T2.pPos  =  \"bramkarz\""
+        "query_pl": "SELECT T1.pName ,  T2.cName FROM player AS T1 JOIN tryout AS T2 ON T1.pID  =  T2.pID WHERE T2.pPos  =  'bramkarz'"
     },
     {
         "db_id": "mountain_photos",
@@ -8712,7 +8712,7 @@
         "question": "How many states that have some college students playing in the mid position?",
         "question_pl": "W ilu stanach na pozycji środkowego obrońcy grają studenci?",
         "query": "SELECT COUNT(*) FROM (SELECT T1.state FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.pPos  =  'mid' )",
-        "query_pl": "SELECT COUNT(*) FROM (SELECT T1.state FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.pPos  =  \"środek\" )"
+        "query_pl": "SELECT COUNT(*) FROM (SELECT T1.state FROM college AS T1 JOIN tryout AS T2 ON T1.cName  =  T2.cName WHERE T2.pPos  =  'środek' )"
     },
     {
         "db_id": "game_injury",
@@ -8817,14 +8817,14 @@
         "question": "How many hours does a goalie need to play to meet the minimum?",
         "question_pl": "Ile godzin musi rozegrać bramkarz, aby spełnić minimum?",
         "query": "SELECT min(T2.HS) FROM tryout AS T1 JOIN player AS T2 ON T1.pID  =  T2.pID and T1.pPos = 'goalie' GROUP BY T1.pPos",
-        "query_pl": "SELECT min(T2.HS) FROM tryout AS T1 JOIN player AS T2 ON T1.pID  =  T2.pID and T1.pPos = \"bramkarz\" GROUP BY T1.pPos"
+        "query_pl": "SELECT min(T2.HS) FROM tryout AS T1 JOIN player AS T2 ON T1.pID  =  T2.pID and T1.pPos = 'bramkarz' GROUP BY T1.pPos"
     },
     {
         "db_id": "college_1",
         "question": "What is the school code for the accounting department?",
         "question_pl": "Jaki jest kod szkoły dla działu księgowości?",
         "query": "SELECT School_Code FROM Department WHERE Dept_Name = 'Accounting'",
-        "query_pl": "SELECT School_Code FROM Department WHERE Dept_Name = \"Księgowość\""
+        "query_pl": "SELECT School_Code FROM Department WHERE Dept_Name = 'Księgowość'"
     },
     {
         "db_id": "machine_repair",
@@ -8859,7 +8859,7 @@
         "question": "WHAT IS ROOM ID OF MODERN DECOR?",
         "question_pl": "JAKI JEST IDENTYFIKATOR POKOJU O NOWOCZESNYM WYSTROJU?",
         "query": "SELECT roomId FROM Rooms WHERE decor = 'modern' ",
-        "query_pl": "SELECT roomId FROM Rooms WHERE decor = \"nowoczesny\" "
+        "query_pl": "SELECT roomId FROM Rooms WHERE decor = 'nowoczesny' "
     },
     {
         "db_id": "party_host",
@@ -8908,7 +8908,7 @@
         "question": "what are the name of the countries who have participated in both the friendly and tournament type competitions",
         "question_pl": "Jak nazywają się kraje, które brały udział zarówno w rozgrywkach towarzyskich, jak i turniejowych?",
         "query": "SELECT country FROM competition WHERE competition_type  =  'Friendly' INTERSECT SELECT country FROM competition WHERE competition_type  =  'Tournament'",
-        "query_pl": "SELECT country FROM competition WHERE competition_type  =  \"Przyjazny\" INTERSECT SELECT country FROM competition WHERE competition_type  =  \"Turniej\""
+        "query_pl": "SELECT country FROM competition WHERE competition_type  =  'Przyjazny' INTERSECT SELECT country FROM competition WHERE competition_type  =  'Turniej'"
     },
     {
         "db_id": "city_record",
@@ -9006,14 +9006,14 @@
         "question": "Show me the medicine name which can interact as 'inhibitor'?",
         "question_pl": "Pokaż mi nazwę leku, który może oddziaływać jako \"inhibitor\"?",
         "query": "SELECT T1.name FROM medicine AS T1 JOIN medicine_enzyme_interaction AS T2 ON T2.medicine_id  =  T1.id WHERE interaction_type  =  'inhibitor'",
-        "query_pl": "SELECT T1.name FROM medicine AS T1 JOIN medicine_enzyme_interaction AS T2 ON T2.medicine_id  =  T1.id WHERE interaction_type  =  \"inhibitor\""
+        "query_pl": "SELECT T1.name FROM medicine AS T1 JOIN medicine_enzyme_interaction AS T2 ON T2.medicine_id  =  T1.id WHERE interaction_type  =  'inhibitor'"
     },
     {
         "db_id": "customer_deliveries",
         "question": "Can you show me a list of all customer IDs for customers not located in the state of California?",
         "question_pl": "Czy możesz pokazać mi listę wszystkich identyfikatorów klientów spoza stanu Kalifornia?",
         "query": "SELECT customer_id FROM customers EXCEPT SELECT t1.customer_id FROM customers AS t1 JOIN customer_addresses AS t2 ON t1.customer_id  =  t2.customer_id JOIN addresses AS t3 ON t2.address_id  =  t3.address_id WHERE t3.state_province_county  =  'California'",
-        "query_pl": "SELECT customer_id FROM customers EXCEPT SELECT t1.customer_id FROM customers AS t1 JOIN customer_addresses AS t2 ON t1.customer_id  =  t2.customer_id JOIN addresses AS t3 ON t2.address_id  =  t3.address_id WHERE t3.state_province_county  =  \"Kalifornia\""
+        "query_pl": "SELECT customer_id FROM customers EXCEPT SELECT t1.customer_id FROM customers AS t1 JOIN customer_addresses AS t2 ON t1.customer_id  =  t2.customer_id JOIN addresses AS t3 ON t2.address_id  =  t3.address_id WHERE t3.state_province_county  =  'Kalifornia'"
     },
     {
         "db_id": "solvency_ii",
@@ -9034,7 +9034,7 @@
         "question": "Show me the location ID of the Tourist Attraction ID 2113?",
         "question_pl": "Pokaż mi identyfikator lokalizacji atrakcji turystycznej ID 2113?",
         "query": "SELECT Location_ID FROM Tourist_Attractions WHERE Tourist_Attraction_ID = '2113'",
-        "query_pl": "SELECT Location_ID FROM Tourist_Attractions WHERE Tourist_Attraction_ID = \"2113\""
+        "query_pl": "SELECT Location_ID FROM Tourist_Attractions WHERE Tourist_Attraction_ID = '2113'"
     },
     {
         "db_id": "shop_membership",
@@ -9069,7 +9069,7 @@
         "question": "what is the lname of linda",
         "question_pl": "Jak nazywa się Linda?",
         "query": "SELECT LName FROM Student where Fname = 'Linda'",
-        "query_pl": "SELECT LName FROM Student where Fname = \"Linda\""
+        "query_pl": "SELECT LName FROM Student where Fname = 'Linda'"
     },
     {
         "db_id": "phone_market",
@@ -9090,7 +9090,7 @@
         "question": "Find the names of all instructors in the Art department who have taught some course and the course id.",
         "question_pl": "Znajdź nazwiska wszystkich instruktorów na wydziale sztuki, którzy prowadzili jakiś kurs, oraz identyfikator kursu.",
         "query": "SELECT T1.name , T2.course_id FROM instructor AS T1 JOIN teaches AS T2 ON T1.ID  =  T2.ID WHERE T1.dept_name  =  'Art'",
-        "query_pl": "SELECT T1.name , T2.course_id FROM instructor AS T1 JOIN teaches AS T2 ON T1.ID  =  T2.ID WHERE T1.dept_name  =  \"Sztuka\""
+        "query_pl": "SELECT T1.name , T2.course_id FROM instructor AS T1 JOIN teaches AS T2 ON T1.ID  =  T2.ID WHERE T1.dept_name  =  'Sztuka'"
     },
     {
         "db_id": "behavior_monitoring",
@@ -9153,7 +9153,7 @@
         "question": "Which courses ran in Fall 2009 and in Spring 2010?",
         "question_pl": "Które kursy były prowadzone jesienią 2009 i wiosną 2010?",
         "query": "SELECT * FROM SECTION WHERE semester  =  'Fall' AND YEAR  =  2009 INTERSECT SELECT course_id FROM SECTION WHERE semester  =  'Spring' AND YEAR  =  2010",
-        "query_pl": "SELECT * FROM SECTION WHERE semester  =  \"Upadek\" AND YEAR  =  2009 INTERSECT SELECT course_id FROM SECTION WHERE semester  =  \"Wiosna\" AND YEAR  =  2010"
+        "query_pl": "SELECT * FROM SECTION WHERE semester  =  'Upadek' AND YEAR  =  2009 INTERSECT SELECT course_id FROM SECTION WHERE semester  =  'Wiosna' AND YEAR  =  2010"
     },
     {
         "db_id": "e_learning",
@@ -9195,14 +9195,14 @@
         "question": "What is the genre name of the film HUNGER ROOF, please?",
         "question_pl": "Jaka jest nazwa gatunkowa filmu HUNGER ROOF?",
         "query": "SELECT T1.name FROM category AS T1 JOIN film_category AS T2 ON T1.category_id  =  T2.category_id JOIN film AS T3 ON T2.film_id  =  T3.film_id WHERE T3.title  =  'HUNGER ROOF'",
-        "query_pl": "SELECT T1.name FROM category AS T1 JOIN film_category AS T2 ON T1.category_id  =  T2.category_id JOIN film AS T3 ON T2.film_id  =  T3.film_id WHERE T3.title  =  \"HUNGER ROOF\""
+        "query_pl": "SELECT T1.name FROM category AS T1 JOIN film_category AS T2 ON T1.category_id  =  T2.category_id JOIN film AS T3 ON T2.film_id  =  T3.film_id WHERE T3.title  =  'HUNGER ROOF'"
     },
     {
         "db_id": "dorm_1",
         "question": "Find the name of the amenities that Smith Hall dorm has. ",
         "question_pl": "Znajdź nazwy udogodnień w akademiku Smith Hall.",
         "query": "SELECT T3.amenity_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T1.dorm_name  =  'Smith Hall'",
-        "query_pl": "SELECT T3.amenity_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T1.dorm_name  =  \"Smith Hall\""
+        "query_pl": "SELECT T3.amenity_name FROM dorm AS T1 JOIN has_amenity AS T2 ON T1.dormid  =  T2.dormid JOIN dorm_amenity AS T3 ON T2.amenid  =  T3.amenid WHERE T1.dorm_name  =  'Smith Hall'"
     },
     {
         "db_id": "workshop_paper",
@@ -9265,7 +9265,7 @@
         "question": "Display the employee ID and salary of all employees who report to payam (First name)",
         "question_pl": "Wyświetl identyfikator pracownika i wynagrodzenie wszystkich pracowników, którzy zgłaszają się do payam (Imię)",
         "query": "SELECT employee_id ,  salary FROM employees WHERE manager_id  =  (SELECT employee_id FROM employees WHERE first_name  =  'Payam' )",
-        "query_pl": "SELECT employee_id ,  salary FROM employees WHERE manager_id  =  (SELECT employee_id FROM employees WHERE first_name  =  \"Payam\" )"
+        "query_pl": "SELECT employee_id ,  salary FROM employees WHERE manager_id  =  (SELECT employee_id FROM employees WHERE first_name  =  'Payam' )"
     },
     {
         "db_id": "performance_attendance",
@@ -9321,7 +9321,7 @@
         "question": "What are the enrollments of all colleges in the state of FL?",
         "question_pl": "Jakie są zapisy na wszystkie uczelnie w stanie Floryda?",
         "query": "SELECT SUM(enr) FROM college WHERE state = 'FL'",
-        "query_pl": "SELECT SUM(enr) FROM college WHERE state = \"FL\""
+        "query_pl": "SELECT SUM(enr) FROM college WHERE state = 'FL'"
     },
     {
         "db_id": "hospital_1",
@@ -9405,7 +9405,7 @@
         "question": "What is the name of the student who has the highest total credits in the History department?",
         "question_pl": "Jak nazywa się student, który ma największą łączną liczbę punktów na wydziale historii?",
         "query": "SELECT name FROM student WHERE dept_name  =  'History' ORDER BY tot_cred DESC LIMIT 1",
-        "query_pl": "SELECT name FROM student WHERE dept_name  =  \"Historia\" ORDER BY tot_cred DESC LIMIT 1"
+        "query_pl": "SELECT name FROM student WHERE dept_name  =  'Historia' ORDER BY tot_cred DESC LIMIT 1"
     },
     {
         "db_id": "apartment_rentals",
@@ -9461,7 +9461,7 @@
         "question": "What are the response received dates for the documents described as 'Regular'?",
         "question_pl": "Jakie są daty otrzymania odpowiedzi dla dokumentów opisanych jako \"Regularne\"?",
         "query": "SELECT T1.response_received_date FROM Documents AS T1 JOIN Document_Types AS T2 ON T1.document_type_code  =  T2.document_type_code JOIN Grants AS T3 ON T1.grant_id  =  T3.grant_id WHERE T2.document_description  =  'Regular'",
-        "query_pl": "SELECT T1.response_received_date FROM Documents AS T1 JOIN Document_Types AS T2 ON T1.document_type_code  =  T2.document_type_code JOIN Grants AS T3 ON T1.grant_id  =  T3.grant_id WHERE T2.document_description  =  \"Regularny\""
+        "query_pl": "SELECT T1.response_received_date FROM Documents AS T1 JOIN Document_Types AS T2 ON T1.document_type_code  =  T2.document_type_code JOIN Grants AS T3 ON T1.grant_id  =  T3.grant_id WHERE T2.document_description  =  'Regularny'"
     },
     {
         "db_id": "party_people",
@@ -9594,14 +9594,14 @@
         "question": "What are courses provided by Statistics deparment?",
         "question_pl": "Jakie kursy oferuje Wydział Statystyki?",
         "query": "SELECT title FROM course WHERE dept_name  =  'Statistics'",
-        "query_pl": "SELECT title FROM course WHERE dept_name  =  \"Statystyki\""
+        "query_pl": "SELECT title FROM course WHERE dept_name  =  'Statystyki'"
     },
     {
         "db_id": "csu_1",
         "question": "ID 1 is for which Campus?",
         "question_pl": "ID 1 dla którego kampusu?",
         "query": "SELECT campus FROM campuses where id = '1'",
-        "query_pl": "SELECT campus FROM campuses where id = \"1\""
+        "query_pl": "SELECT campus FROM campuses where id = '1'"
     },
     {
         "db_id": "department_store",
@@ -9615,7 +9615,7 @@
         "question": "How many customers used Visa?",
         "question_pl": "Ilu klientów korzystało z Visa?",
         "query": "SELECT count(DISTINCT customer_name) FROM Customers WHERE payment_method = 'Visa'",
-        "query_pl": "SELECT count(DISTINCT customer_name) FROM Customers WHERE payment_method = \"Wiza\""
+        "query_pl": "SELECT count(DISTINCT customer_name) FROM Customers WHERE payment_method = 'Wiza'"
     },
     {
         "db_id": "bike_1",
@@ -9839,7 +9839,7 @@
         "question": "How many failed the exam? ",
         "question_pl": "Ilu z nich nie zdało egzaminu?",
         "query": "SELECT count(*) FROM Student_Tests_Taken where test_result = 'Fail'",
-        "query_pl": "SELECT count(*) FROM Student_Tests_Taken where test_result = \"Niepowodzenie\""
+        "query_pl": "SELECT count(*) FROM Student_Tests_Taken where test_result = 'Niepowodzenie'"
     },
     {
         "db_id": "products_for_hire",
@@ -9867,14 +9867,14 @@
         "question": "what are the names of the payment method of customers who have both mailshot in 'Order' outcome and mailshot in 'No response' outcome.",
         "question_pl": "Jakie są nazwy metod płatności klientów, którzy otrzymali zarówno wiadomość e-mail w wyniku \"Zamówienie\", jak i wiadomość e-mail w wyniku \"Brak odpowiedzi\".",
         "query": "SELECT T2.customer_name ,  T2.payment_method FROM mailshot_customers AS T1 JOIN customers AS T2 ON T1.customer_id  =  T2.customer_id WHERE T1.outcome_code  =  'Order' INTERSECT SELECT T2.customer_name ,  T2.payment_method FROM mailshot_customers AS T1 JOIN customers AS T2 ON T1.customer_id  =  T2.customer_id WHERE T1.outcome_code  =  'No Response'",
-        "query_pl": "SELECT T2.customer_name ,  T2.payment_method FROM mailshot_customers AS T1 JOIN customers AS T2 ON T1.customer_id  =  T2.customer_id WHERE T1.outcome_code  =  \"Zamówienie\" INTERSECT SELECT T2.customer_name ,  T2.payment_method FROM mailshot_customers AS T1 JOIN customers AS T2 ON T1.customer_id  =  T2.customer_id WHERE T1.outcome_code  =  \"Brak odpowiedzi\""
+        "query_pl": "SELECT T2.customer_name ,  T2.payment_method FROM mailshot_customers AS T1 JOIN customers AS T2 ON T1.customer_id  =  T2.customer_id WHERE T1.outcome_code  =  'Zamówienie' INTERSECT SELECT T2.customer_name ,  T2.payment_method FROM mailshot_customers AS T1 JOIN customers AS T2 ON T1.customer_id  =  T2.customer_id WHERE T1.outcome_code  =  'Brak odpowiedzi'"
     },
     {
         "db_id": "sports_competition",
         "question": "What countries have not participated in any competition with Friendly type?",
         "question_pl": "Jakie kraje nie brały udziału w żadnych zawodach typu Friendly?",
         "query": "SELECT country FROM competition EXCEPT SELECT country FROM competition WHERE competition_type  =  'Friendly'",
-        "query_pl": "SELECT country FROM competition EXCEPT SELECT country FROM competition WHERE competition_type  =  \"Przyjazny\""
+        "query_pl": "SELECT country FROM competition EXCEPT SELECT country FROM competition WHERE competition_type  =  'Przyjazny'"
     },
     {
         "db_id": "cre_Theme_park",
@@ -9986,7 +9986,7 @@
         "question": "What is the prerequisite for Mobile computing?",
         "question_pl": "Jaki jest warunek wstępny dla komputerów mobilnych?",
         "query": "SELECT title FROM course WHERE course_id IN (SELECT T1.prereq_id FROM prereq AS T1 JOIN course AS T2 ON T1.course_id  =  T2.course_id WHERE T2.title  =  'Mobile Computing')",
-        "query_pl": "SELECT title FROM course WHERE course_id IN (SELECT T1.prereq_id FROM prereq AS T1 JOIN course AS T2 ON T1.course_id  =  T2.course_id WHERE T2.title  =  \"Komputery mobilne\")"
+        "query_pl": "SELECT title FROM course WHERE course_id IN (SELECT T1.prereq_id FROM prereq AS T1 JOIN course AS T2 ON T1.course_id  =  T2.course_id WHERE T2.title  =  'Komputery mobilne')"
     },
     {
         "db_id": "phone_1",
@@ -10070,7 +10070,7 @@
         "question": "How many mills are built by American architects?",
         "question_pl": "Ile młynów zostało zbudowanych przez amerykańskich architektów?",
         "query": "SELECT count(*) FROM mill AS T1 JOIN architect AS t2 ON T1.architect_id  =  T2.id WHERE T2.nationality  =  'American' ",
-        "query_pl": "SELECT count(*) FROM mill AS T1 JOIN architect AS t2 ON T1.architect_id  =  T2.id WHERE T2.nationality  =  \"Amerykanin\" "
+        "query_pl": "SELECT count(*) FROM mill AS T1 JOIN architect AS t2 ON T1.architect_id  =  T2.id WHERE T2.nationality  =  'Amerykanin' "
     },
     {
         "db_id": "club_1",
@@ -10091,7 +10091,7 @@
         "question": "What is the total pounds of purchases in the year 2018 for all branches in London?",
         "question_pl": "Jaka jest łączna kwota zakupów w funtach w roku 2018 dla wszystkich oddziałów w Londynie?",
         "query": "SELECT sum(total_pounds) FROM purchase AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id WHERE T2.city  =  'London' AND T1.year  =  2018",
-        "query_pl": "SELECT sum(total_pounds) FROM purchase AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id WHERE T2.city  =  \"Londyn\" AND T1.year  =  2018"
+        "query_pl": "SELECT sum(total_pounds) FROM purchase AS T1 JOIN branch AS T2 ON T1.branch_id  =  T2.branch_id WHERE T2.city  =  'Londyn' AND T1.year  =  2018"
     },
     {
         "db_id": "music_1",
@@ -10168,14 +10168,14 @@
         "question": "How many games were played at Columbia Park?",
         "question_pl": "Ile meczów rozegrano w Columbia Park?",
         "query": "SELECT count(*) FROM home_game AS T1 JOIN park AS T2 ON T1.park_id  =  T2.park_id WHERE T2.park_name = 'Columbia Park';",
-        "query_pl": "SELECT count(*) FROM home_game AS T1 JOIN park AS T2 ON T1.park_id  =  T2.park_id WHERE T2.park_name = \"Columbia Park\";"
+        "query_pl": "SELECT count(*) FROM home_game AS T1 JOIN park AS T2 ON T1.park_id  =  T2.park_id WHERE T2.park_name = 'Columbia Park';"
     },
     {
         "db_id": "local_govt_and_lot",
         "question": "How many things are there with status \"close\"?",
         "question_pl": "Ile jest rzeczy ze statusem \"blisko\"?",
         "query": "select count(*) from Timed_Status_of_Things where Status_of_Thing_Code = 'Close'",
-        "query_pl": "select count(*) from Timed_Status_of_Things where Status_of_Thing_Code = \"Zamknij\""
+        "query_pl": "select count(*) from Timed_Status_of_Things where Status_of_Thing_Code = 'Zamknij'"
     },
     {
         "db_id": "store_1",
@@ -10294,7 +10294,7 @@
         "question": "How many employees are IT Staff?",
         "question_pl": "Ilu pracowników zatrudnia dział IT?",
         "query": "SELECT count(*) FROM employees WHERE title  =  'IT Staff'",
-        "query_pl": "SELECT count(*) FROM employees WHERE title  =  \"Personel IT\""
+        "query_pl": "SELECT count(*) FROM employees WHERE title  =  'Personel IT'"
     },
     {
         "db_id": "csu_1",
@@ -10329,7 +10329,7 @@
         "question": "Please show the names of all members who go to Saskatchewan School",
         "question_pl": "Podaj nazwiska wszystkich członków, którzy uczęszczają do szkoły w Saskatchewan.",
         "query": "SELECT T2.Name FROM college AS T1 JOIN member AS T2 ON T1.College_ID  =  T2.College_ID WHERE T1.Name = 'Saskatchewan School'",
-        "query_pl": "SELECT T2.Name FROM college AS T1 JOIN member AS T2 ON T1.College_ID  =  T2.College_ID WHERE T1.Name = \"Szkoła Saskatchewan\""
+        "query_pl": "SELECT T2.Name FROM college AS T1 JOIN member AS T2 ON T1.College_ID  =  T2.College_ID WHERE T1.Name = 'Szkoła Saskatchewan'"
     },
     {
         "db_id": "train_station",
@@ -10539,7 +10539,7 @@
         "question": "How many females are under age 40?",
         "question_pl": "Ile kobiet jest w wieku poniżej 40 lat?",
         "query": "select count(*) from person where gender = 'female' and age < 40",
-        "query_pl": "select count(*) from person where gender = \"kobieta\" and age < 40"
+        "query_pl": "select count(*) from person where gender = 'kobieta' and age < 40"
     },
     {
         "db_id": "movie_1",
@@ -10553,7 +10553,7 @@
         "question": "Show the document name and the document date for all documents on project with details 'Graph Database project'",
         "question_pl": "Pokaż nazwę dokumentu i datę dokumentu dla wszystkich dokumentów w projekcie ze szczegółami \"Projekt graficznej bazy danych\".",
         "query": "SELECT document_name ,  document_date FROM Documents AS T1 JOIN projects AS T2 ON T1.project_id  =  T2.project_id WHERE T2.project_details  =  'Graph Database project'",
-        "query_pl": "SELECT document_name ,  document_date FROM Documents AS T1 JOIN projects AS T2 ON T1.project_id  =  T2.project_id WHERE T2.project_details  =  \"Projekt graficznej bazy danych\""
+        "query_pl": "SELECT document_name ,  document_date FROM Documents AS T1 JOIN projects AS T2 ON T1.project_id  =  T2.project_id WHERE T2.project_details  =  'Projekt graficznej bazy danych'"
     },
     {
         "db_id": "bike_1",
@@ -10581,7 +10581,7 @@
         "question": "Display the employee number and job id for all employees whose salary is smaller than any salary of those employees whose job title is MK_MAN",
         "question_pl": "Wyświetl numer pracownika i identyfikator stanowiska dla wszystkich pracowników, których wynagrodzenie jest niższe niż wynagrodzenie pracowników, których stanowisko to MK_MAN.",
         "query": "SELECT employee_id ,  job_id FROM employees WHERE salary  <  ( SELECT min(salary) FROM employees WHERE job_id  =  'MK_MAN' )",
-        "query_pl": "SELECT employee_id ,  job_id FROM employees WHERE salary  <  ( SELECT min(salary) FROM employees WHERE job_id  =  \"MK_MAN\" )"
+        "query_pl": "SELECT employee_id ,  job_id FROM employees WHERE salary  <  ( SELECT min(salary) FROM employees WHERE job_id  =  'MK_MAN' )"
     },
     {
         "db_id": "driving_school",
@@ -10616,7 +10616,7 @@
         "question": "Show the shipping charge and customer id for customer orders with order status \"Cancelled\"",
         "question_pl": "Pokaż opłatę za wysyłkę i identyfikator klienta dla zamówień klientów ze statusem \"Anulowane\".",
         "query": "SELECT order_shipping_charges ,  customer_id FROM customer_orders WHERE order_status_code  =  'Cancelled' ",
-        "query_pl": "SELECT order_shipping_charges ,  customer_id FROM customer_orders WHERE order_status_code  =  \"Anulowane\" "
+        "query_pl": "SELECT order_shipping_charges ,  customer_id FROM customer_orders WHERE order_status_code  =  'Anulowane' "
     },
     {
         "db_id": "club_1",
@@ -10665,7 +10665,7 @@
         "question": "Can you list the states where the secretaries of the Treasury department were born?",
         "question_pl": "Czy możesz wymienić stany, w których urodzili się sekretarze Departamentu Skarbu?",
         "query": "SELECT T3.born_state FROM department AS T1 JOIN management AS T2 ON T1.department_id  =  T2.department_id JOIN head AS T3 ON T2.head_id  =  T3.head_id WHERE T1.name  =  'Treasury'",
-        "query_pl": "SELECT T3.born_state FROM department AS T1 JOIN management AS T2 ON T1.department_id  =  T2.department_id JOIN head AS T3 ON T2.head_id  =  T3.head_id WHERE T1.name  =  \"Skarb Państwa\""
+        "query_pl": "SELECT T3.born_state FROM department AS T1 JOIN management AS T2 ON T1.department_id  =  T2.department_id JOIN head AS T3 ON T2.head_id  =  T3.head_id WHERE T1.name  =  'Skarb Państwa'"
     },
     {
         "db_id": "cinema",
@@ -10707,7 +10707,7 @@
         "question": "Can you list driver iDs for all drivers that had first position in laptime at least twice?",
         "question_pl": "Czy możesz podać identyfikatory wszystkich kierowców, którzy przynajmniej dwa razy zajęli pierwsze miejsce w czasie okrążenia?",
         "query": "SELECT T1.driverid FROM drivers AS T1 JOIN laptimes AS T2 ON T1.driverid = T2.driverid WHERE POSITION  =  '1' GROUP BY T1.driverid HAVING count(*)  >=  2",
-        "query_pl": "SELECT T1.driverid FROM drivers AS T1 JOIN laptimes AS T2 ON T1.driverid = T2.driverid WHERE POSITION  =  \"1\" GROUP BY T1.driverid HAVING count(*)  >=  2"
+        "query_pl": "SELECT T1.driverid FROM drivers AS T1 JOIN laptimes AS T2 ON T1.driverid = T2.driverid WHERE POSITION  =  '1' GROUP BY T1.driverid HAVING count(*)  >=  2"
     },
     {
         "db_id": "game_injury",
@@ -10847,7 +10847,7 @@
         "question": "What game id did the player Walter Samuel get injured during, please?",
         "question_pl": "W którym meczu Walter Samuel doznał kontuzji?",
         "query": "SELECT  game_id FROM injury_accident where Player = 'Walter Samuel'",
-        "query_pl": "SELECT  game_id FROM injury_accident where Player = \"Walter Samuel\""
+        "query_pl": "SELECT  game_id FROM injury_accident where Player = 'Walter Samuel'"
     },
     {
         "db_id": "voter_2",
