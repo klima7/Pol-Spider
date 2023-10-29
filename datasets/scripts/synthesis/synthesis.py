@@ -14,33 +14,33 @@ from .sql_translation import translate_samples, translate_tables
 from .db_translation import translate_db
 
 
-def add_calculated_attributes(samples, tables):
+def add_calculated_attributes(samples, tables, query_key, question_key):
     _, tables_path = tempfile.mkstemp()
     with open(tables_path, "w") as f:
         json.dump(tables, f, indent=4, ensure_ascii=False)
     schemas, _, tables = get_schemas_from_json(tables_path)
 
     return Parallel(-1, backend="multiprocessing")(
-        delayed(add_calculated_attributes_single)(sample, schemas, tables)
+        delayed(add_calculated_attributes_single)(sample, query_key, question_key, schemas, tables)
         for sample in tqdm(samples, desc="Adding calculated attributes")
     )
 
 
-def add_calculated_attributes_single(sample, schemas, tables):
+def add_calculated_attributes_single(sample, query_key, question_key, schemas, tables):
     try:
-        sql = create_sql(sample["db_id"], sample["query_pl"], schemas, tables)
+        sql = create_sql(sample["db_id"], sample[query_key], schemas, tables)
     except SQLParseException as e:
-        print(f"WARNING Unable to parse SQL for sample '{sample['query_pl']}'")
+        print(f"WARNING Unable to parse SQL for sample '{sample[query_key]}'")
         sql = create_sql(sample["db_id"], f"select count(*) from {list(schemas[sample['db_id']].keys())[0]}", schemas, tables)
 
 
     new_sample = {
         "db_id": sample["db_id"],
-        "question": sample["question_pl"],
-        "question_toks": tokenize_question(sample["question_pl"]),
-        "query": sample["query_pl"],
-        "query_toks": tokenize_query(sample["query_pl"]),
-        "query_toks_no_value": tokenize_query_no_value(sample["query_pl"]),
+        "question": sample[question_key],
+        "question_toks": tokenize_question(sample[question_key]),
+        "query": sample[query_key],
+        "query_toks": tokenize_query(sample[query_key]),
+        "query_toks_no_value": tokenize_query_no_value(sample[query_key]),
         "sql": sql,
     }
     
@@ -60,20 +60,20 @@ def create_gold_sql(samples_paths, output_path):
 
 
 def synthesize_samples(
-    samples_path, output_path, tables_path, column_trans_path, table_trans_path, db_prefix
+    samples_path, output_path, tables_path, column_trans_path, table_trans_path, db_prefix, query_key, question_key
 ):
     samples = load_json(samples_path)
     
     if column_trans_path and table_trans_path:
         table_trans = load_table_translations(table_trans_path)
         column_trans = load_column_translations(column_trans_path)
-        samples = translate_samples(samples, table_trans, column_trans)
+        samples = translate_samples(samples, table_trans, column_trans, query_key)
         
     for sample in samples:
         sample['db_id'] = f"{db_prefix}_{sample['db_id']}"
         
     tables = load_json(tables_path)
-    samples = add_calculated_attributes(samples, tables)
+    samples = add_calculated_attributes(samples, tables, query_key, question_key)
     save_json(output_path, samples)
     
     
@@ -89,7 +89,7 @@ def get_paths_from_schema_translation_name(schema_translation_name):
 
 
 def synthesize_everything(
-    output_name, samples_paths, gold_mapping, schema_translation_name='', with_db=False
+    output_name, samples_paths, gold_mapping, schema_translation_name='', with_db=False, query_lang='pl', question_lang='pl'
     ):
     column_trans_path, table_trans_path = get_paths_from_schema_translation_name(schema_translation_name)
     db_prefix = schema_translation_name
@@ -99,6 +99,9 @@ def synthesize_everything(
     if complete_dir_path.exists():
         shutil.rmtree(str(complete_dir_path))
     complete_dir_path.mkdir(parents=True, exist_ok=False)
+    
+    query_key = f"query_{query_lang}" if query_lang != "en" else "query"
+    question_key = f"question_{question_lang}" if question_lang != "en" else "question"
     
     translate_tables(
         column_trans_path=column_trans_path,
@@ -114,7 +117,9 @@ def synthesize_everything(
             tables_path= str(complete_dir_path / 'tables.json'),
             column_trans_path=column_trans_path,
             table_trans_path=table_trans_path,
-            db_prefix=db_prefix
+            db_prefix=db_prefix,
+            query_key=query_key,
+            question_key=question_key
         )
         
     for gold_name, samples_names in gold_mapping.items():
