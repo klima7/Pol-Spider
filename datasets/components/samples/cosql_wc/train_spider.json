@@ -176,8 +176,8 @@
     },
     {
         "db_id": "cre_Doc_Tracking_DB",
-        "question": "Hello!  Can you tell me which role code has the largest number of employees associated with it?",
-        "question_pl": "Witaj!  Czy możesz mi powiedzieć, który kod roli ma największą liczbę powiązanych z nim pracowników?",
+        "question": "Can you tell me which role code has the largest number of employees associated with it?",
+        "question_pl": "Czy możesz mi powiedzieć, który kod roli ma największą liczbę powiązanych z nim pracowników?",
         "query": "SELECT role_code FROM Employees GROUP BY role_code ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT role_code FROM Employees GROUP BY role_code ORDER BY count(*) DESC LIMIT 1"
     },
@@ -309,8 +309,8 @@
     },
     {
         "db_id": "school_finance",
-        "question": "Hello, can you provide me with the names of the donors?",
-        "question_pl": "Witaj, czy możesz podać mi nazwiska darczyńców?",
+        "question": "Can you provide me with the names of the donors?",
+        "question_pl": "Czy możesz podać mi nazwiska darczyńców?",
         "query": "SELECT donator_name FROM endowment ",
         "query_pl": "SELECT donator_name FROM endowment "
     },
@@ -323,15 +323,15 @@
     },
     {
         "db_id": "protein_institute",
-        "question": "Hello!  Can you provide me with a list of all building names?",
-        "question_pl": "Witaj!  Czy możesz podać mi listę wszystkich nazw budynków?",
+        "question": "Can you provide me with a list of all building names?",
+        "question_pl": "Czy możesz podać mi listę wszystkich nazw budynków?",
         "query": "SELECT name FROM building",
         "query_pl": "SELECT name FROM building"
     },
     {
         "db_id": "college_1",
-        "question": "Hello, what courses are currently being taught?",
-        "question_pl": "Witaj, jakie kursy są obecnie prowadzone?",
+        "question": "What courses are currently being taught?",
+        "question_pl": "Jakie kursy są obecnie prowadzone?",
         "query": "SELECT * from course",
         "query_pl": "SELECT * from course"
     },
@@ -358,8 +358,8 @@
     },
     {
         "db_id": "culture_company",
-        "question": "Hello!  Can you show a list of all publishers who did not publish any books in 1989?",
-        "question_pl": "Witaj!  Czy możesz pokazać listę wszystkich wydawców, którzy nie wydali żadnych książek w 1989 roku?",
+        "question": "Can you show a list of all publishers who did not publish any books in 1989?",
+        "question_pl": "Czy możesz pokazać listę wszystkich wydawców, którzy nie wydali żadnych książek w 1989 roku?",
         "query": "SELECT publisher FROM book_club EXCEPT SELECT publisher FROM book_club WHERE YEAR = 1989",
         "query_pl": "SELECT publisher FROM book_club EXCEPT SELECT publisher FROM book_club WHERE YEAR = 1989"
     },
@@ -379,8 +379,8 @@
     },
     {
         "db_id": "twitter_1",
-        "question": "hi. I would like to know how many users are followed by Mary?",
-        "question_pl": "Cześć. Chciałbym wiedzieć, ilu użytkowników śledzi Mary?",
+        "question": "I would like to know how many users are followed by Mary?",
+        "question_pl": "Chciałbym wiedzieć, ilu użytkowników śledzi Mary?",
         "query": "SELECT count(t2.f1) FROM user_profiles AS T1 JOIN follows AS T2 ON T1.uid  =  T2.f2 WHERE T1.name  =  \"Mary\"",
         "query_pl": "SELECT count(t2.f1) FROM user_profiles AS T1 JOIN follows AS T2 ON T1.uid  =  T2.f2 WHERE T1.name  =  \"Mary\""
     },
@@ -393,8 +393,8 @@
     },
     {
         "db_id": "products_gen_characteristics",
-        "question": "hi,List out the all color description",
-        "question_pl": "Cześć, wymień wszystkie opisy kolorów",
+        "question": "List out the all color description",
+        "question_pl": "Wymień wszystkie opisy kolorów",
         "query": "SELECT color_description FROM ref_colors",
         "query_pl": "SELECT color_description FROM ref_colors"
     },
@@ -484,15 +484,15 @@
     },
     {
         "db_id": "formula_1",
-        "question": "Hello, how many circuits belong to France?",
-        "question_pl": "Witaj, ile obwodów należy do Francji?",
+        "question": "How many circuits belong to France?",
+        "question_pl": "Ile obwodów należy do Francji?",
         "query": "SELECT count(*) FROM circuits WHERE country = \"France\" ",
         "query_pl": "SELECT count(*) FROM circuits WHERE country = \"Francja\" "
     },
     {
         "db_id": "station_weather",
-        "question": "Hi, can you please tell me what is the ID of the station whose maximum precipitation is higher than 50?",
-        "question_pl": "Cześć, czy możesz mi powiedzieć, jaki jest identyfikator stacji, której maksymalny opad jest wyższy niż 50?",
+        "question": "Can you please tell me what is the ID of the station whose maximum precipitation is higher than 50?",
+        "question_pl": "Czy możesz mi powiedzieć, jaki jest identyfikator stacji, której maksymalny opad jest wyższy niż 50?",
         "query": "SELECT t2.id FROM weekly_weather AS t1 JOIN station AS t2 ON t1.station_id  =  t2.id GROUP BY t1.station_id HAVING max(t1.precipitation)  >  50",
         "query_pl": "SELECT t2.id FROM weekly_weather AS t1 JOIN station AS t2 ON t1.station_id  =  t2.id GROUP BY t1.station_id HAVING max(t1.precipitation)  >  50"
     },
@@ -547,8 +547,8 @@
     },
     {
         "db_id": "university_basketball",
-        "question": "Hello!  Can you please show me a list of all of the school names for all schools that are not of the Public affiliation?",
-        "question_pl": "Witaj!  Czy możesz mi pokazać listę wszystkich nazw szkół dla wszystkich szkół, które nie są stowarzyszone z publicznymi?",
+        "question": "Can you please show me a list of all of the school names for all schools that are not of the Public affiliation?",
+        "question_pl": "Czy możesz mi pokazać listę wszystkich nazw szkół dla wszystkich szkół, które nie są stowarzyszone z publicznymi?",
         "query": "SELECT School FROM university WHERE affiliation != 'Public'",
         "query_pl": "SELECT School FROM university WHERE affiliation != \"Publiczny\""
     },
@@ -568,8 +568,8 @@
     },
     {
         "db_id": "railway",
-        "question": "Hi, can you please tell me which country has a manager of age above 50?",
-        "question_pl": "Cześć, czy możesz mi powiedzieć, który kraj ma menedżera w wieku powyżej 50 lat?",
+        "question": "Can you please tell me which country has a manager of age above 50?",
+        "question_pl": "Czy możesz mi powiedzieć, który kraj ma menedżera w wieku powyżej 50 lat?",
         "query": "SELECT Country FROM manager WHERE Age  >  50",
         "query_pl": "SELECT Country FROM manager WHERE Age  >  50"
     },
@@ -666,8 +666,8 @@
     },
     {
         "db_id": "movie_1",
-        "question": "Hello, how many ratings have the same reviewer and director name?",
-        "question_pl": "Witaj, ile ocen ma to samo nazwisko recenzenta i reżysera?",
+        "question": "How many ratings have the same reviewer and director name?",
+        "question_pl": "Ile ocen ma to samo nazwisko recenzenta i reżysera?",
         "query": "SELECT count(*) FROM Rating AS T1 JOIN Movie AS T2 ON T1.mID  =  T2.mID JOIN Reviewer AS T3 ON T1.rID  =  T3.rID WHERE T2.director  =  T3.name",
         "query_pl": "SELECT count(*) FROM Rating AS T1 JOIN Movie AS T2 ON T1.mID  =  T2.mID JOIN Reviewer AS T3 ON T1.rID  =  T3.rID WHERE T2.director  =  T3.name"
     },
@@ -708,15 +708,15 @@
     },
     {
         "db_id": "formula_1",
-        "question": "Hi, What are the unique names of races that are held in Spain?",
-        "question_pl": "Cześć, Jakie są unikalne nazwy wyścigów rozgrywanych w Hiszpanii?",
+        "question": "What are the unique names of races that are held in Spain?",
+        "question_pl": "Jakie są unikalne nazwy wyścigów rozgrywanych w Hiszpanii?",
         "query": "SELECT DISTINCT T1.name FROM races AS T1 JOIN circuits AS T2 ON T1.circuitid = T2.circuitid WHERE T2.country = \"Spain\"",
         "query_pl": "SELECT DISTINCT T1.name FROM races AS T1 JOIN circuits AS T2 ON T1.circuitid = T2.circuitid WHERE T2.country = \"Hiszpania\""
     },
     {
         "db_id": "insurance_policies",
-        "question": "Hi there! From this database, what is the most popular payment method?",
-        "question_pl": "Witaj! Z tej bazy danych, jaka jest najpopularniejsza metoda płatności?",
+        "question": "From this database, what is the most popular payment method?",
+        "question_pl": "Z tej bazy danych, jaka jest najpopularniejsza metoda płatności?",
         "query": "SELECT Payment_Method_Code FROM Payments GROUP BY Payment_Method_Code ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT Payment_Method_Code FROM Payments GROUP BY Payment_Method_Code ORDER BY count(*) DESC LIMIT 1"
     },
@@ -806,8 +806,8 @@
     },
     {
         "db_id": "soccer_2",
-        "question": "Hi there! Can you provide me with a list of all of the player names?",
-        "question_pl": "Cześć! Czy możesz podać mi listę wszystkich nazwisk graczy?",
+        "question": "Can you provide me with a list of all of the player names?",
+        "question_pl": "Czy możesz podać mi listę wszystkich nazwisk graczy?",
         "query": "SELECT pName  FROM player",
         "query_pl": "SELECT pName  FROM player"
     },
@@ -862,8 +862,8 @@
     },
     {
         "db_id": "gymnast",
-        "question": "Hello there! Can you list all of the hometowns listed in this database?",
-        "question_pl": "Witajcie! Czy możesz wymienić wszystkie miasta rodzinne wymienione w tej bazie danych?",
+        "question": "Can you list all of the hometowns listed in this database?",
+        "question_pl": "Czy możesz wymienić wszystkie miasta rodzinne wymienione w tej bazie danych?",
         "query": "SELECT DISTINCT Hometown FROM people",
         "query_pl": "SELECT DISTINCT Hometown FROM people"
     },
@@ -876,8 +876,8 @@
     },
     {
         "db_id": "manufactory_1",
-        "question": "Hello!  Can you please provide me with the name of the founder for Sony?",
-        "question_pl": "Witaj!  Czy możesz podać mi nazwisko założyciela Sony?",
+        "question": "Can you please provide me with the name of the founder for Sony?",
+        "question_pl": "Czy możesz podać mi nazwisko założyciela Sony?",
         "query": "SELECT founder FROM manufacturers WHERE name = 'Sony'",
         "query_pl": "SELECT founder FROM manufacturers WHERE name = \"Sony\""
     },
@@ -911,8 +911,8 @@
     },
     {
         "db_id": "hr_1",
-        "question": "Hello!  Can you provide me with a list of all employee IDs and their corresponding salaries?",
-        "question_pl": "Witaj!  Czy możesz dostarczyć mi listę wszystkich identyfikatorów pracowników i odpowiadających im wynagrodzeń?",
+        "question": "Can you provide me with a list of all employee IDs and their corresponding salaries?",
+        "question_pl": "Czy możesz dostarczyć mi listę wszystkich identyfikatorów pracowników i odpowiadających im wynagrodzeń?",
         "query": "SELECT employee_id ,  salary FROM employees;",
         "query_pl": "SELECT employee_id ,  salary FROM employees;"
     },
@@ -939,8 +939,8 @@
     },
     {
         "db_id": "sakila_1",
-        "question": "Hello!  Can you provide me with a list of the first names of all customers who rented films before '2005-08-23 02:06:01'?",
-        "question_pl": "Witam!!!  Czy możesz dostarczyć mi listę imion wszystkich klientów, którzy wypożyczyli filmy przed '2005-08-23 02:06:01'?",
+        "question": "Can you provide me with a list of the first names of all customers who rented films before '2005-08-23 02:06:01'?",
+        "question_pl": "Czy możesz dostarczyć mi listę imion wszystkich klientów, którzy wypożyczyli filmy przed '2005-08-23 02:06:01'?",
         "query": "SELECT first_name FROM customer WHERE customer_id IN ( SELECT customer_id FROM rental WHERE rental_date  <  '2005-08-23 02:06:01' )",
         "query_pl": "SELECT first_name FROM customer WHERE customer_id IN ( SELECT customer_id FROM rental WHERE rental_date  <  \"2005-08-23 02:06:01\" )"
     },
@@ -1002,8 +1002,8 @@
     },
     {
         "db_id": "activity_1",
-        "question": "Hello!  Can you provide me with a list of first name, last name, and faculty ID of all faculty?",
-        "question_pl": "Witaj!  Czy możesz podać mi listę imion, nazwisk i identyfikatorów wszystkich wydziałów?",
+        "question": "Can you provide me with a list of first name, last name, and faculty ID of all faculty?",
+        "question_pl": "Czy możesz podać mi listę imion, nazwisk i identyfikatorów wszystkich wydziałów?",
         "query": "SELECT Fname, Lname, FacID from Faculty",
         "query_pl": "SELECT Fname, Lname, FacID from Faculty"
     },
@@ -1016,8 +1016,8 @@
     },
     {
         "db_id": "body_builder",
-        "question": "Hi there!  Can you show me a list of all body builder names and their associated birth dates?",
-        "question_pl": "Cześć!  Czy możesz mi pokazać listę wszystkich nazwisk kulturystów i powiązanych z nimi dat urodzenia?",
+        "question": "Can you show me a list of all body builder names and their associated birth dates?",
+        "question_pl": "Czy możesz mi pokazać listę wszystkich nazwisk kulturystów i powiązanych z nimi dat urodzenia?",
         "query": "SELECT T2.name, T2.birth_date FROM body_builder AS T1 JOIN people AS T2 ON T1.people_id  =  T2.people_id",
         "query_pl": "SELECT T2.name, T2.birth_date FROM body_builder AS T1 JOIN people AS T2 ON T1.people_id  =  T2.people_id"
     },
@@ -1037,15 +1037,15 @@
     },
     {
         "db_id": "baseball_1",
-        "question": "hi, can you tell me the first and last name for the player with player ID: gomezle01?",
-        "question_pl": "Cześć, czy możesz mi podać imię i nazwisko gracza z ID gracza: gomezle01?",
+        "question": "Can you tell me the first and last name for the player with player ID: gomezle01?",
+        "question_pl": "Czy możesz mi podać imię i nazwisko gracza z ID gracza: gomezle01?",
         "query": "SELECT name_first ,  name_last FROM player where player_id = \"gomezle01\"",
         "query_pl": "SELECT name_first ,  name_last FROM player where player_id = \"gomezle01\""
     },
     {
         "db_id": "chinook_1",
-        "question": "Hi, could you please let me know the genre ID for Latin and Pop?",
-        "question_pl": "Cześć, czy możesz dać mi znać identyfikator gatunku dla Latin i Pop?",
+        "question": "Could you please let me know the genre ID for Latin and Pop?",
+        "question_pl": "Czy możesz dać mi znać identyfikator gatunku dla Latin i Pop?",
         "query": "SELECT GenreId FROM Genre WHERE Name = \"Latin\" OR Name = \"Pop\"",
         "query_pl": "SELECT GenreId FROM Genre WHERE Name = \"Łacina\" OR Name = \"Pop\""
     },
@@ -1184,8 +1184,8 @@
     },
     {
         "db_id": "riding_club",
-        "question": "Hello. Can you list the top three vote getters?",
-        "question_pl": "Witaj. Czy możesz wymienić trzech najlepszych głosujących?",
+        "question": "Can you list the top three vote getters?",
+        "question_pl": "Czy możesz wymienić trzech najlepszych głosujących?",
         "query": "SELECT Player_name FROM player ORDER BY Votes DESC LIMIT 3",
         "query_pl": "SELECT Player_name FROM player ORDER BY Votes DESC LIMIT 3"
     },
@@ -1268,8 +1268,8 @@
     },
     {
         "db_id": "icfp_1",
-        "question": "Hi! What is the name of the institution that \"Mathias Blume\" is associated with?",
-        "question_pl": "Cześć! Jak nazywa się instytucja, z którą związany jest \"Mathias Blume\"?",
+        "question": "What is the name of the institution that \"Mathias Blume\" is associated with?",
+        "question_pl": "Jak nazywa się instytucja, z którą związany jest \"Mathias Blume\"?",
         "query": "SELECT DISTINCT t3.name FROM authors AS t1 JOIN authorship AS t2 ON t1.authid  =  t2.authid JOIN inst AS t3 ON t2.instid  =  t3.instid WHERE t1.fname  =  \"Matthias\" AND t1.lname  =  \"Blume\"",
         "query_pl": "SELECT DISTINCT t3.name FROM authors AS t1 JOIN authorship AS t2 ON t1.authid  =  t2.authid JOIN inst AS t3 ON t2.instid  =  t3.instid WHERE t1.fname  =  \"Matthias\" AND t1.lname  =  \"Blume\""
     },
@@ -1338,8 +1338,8 @@
     },
     {
         "db_id": "candidate_poll",
-        "question": "Hello, how many candidates total are there?",
-        "question_pl": "Witaj, ilu jest łącznie kandydatów?",
+        "question": "How many candidates total are there?",
+        "question_pl": "Ilu jest łącznie kandydatów?",
         "query": "SELECT count(*) FROM candidate",
         "query_pl": "SELECT count(*) FROM candidate"
     },
@@ -1359,8 +1359,8 @@
     },
     {
         "db_id": "insurance_and_eClaims",
-        "question": "Hi, can I see the list of customers?",
-        "question_pl": "Cześć, czy mogę zobaczyć listę klientów?",
+        "question": "Can I see the list of customers?",
+        "question_pl": "Czy mogę zobaczyć listę klientów?",
         "query": "Select * from customers",
         "query_pl": "Select * from customers"
     },
@@ -1471,8 +1471,8 @@
     },
     {
         "db_id": "entrepreneur",
-        "question": "Hi, could you please let me know the date of birth of the investors Simon Woodroffe and Peter Jones?",
-        "question_pl": "Cześć, czy możesz podać mi datę urodzenia inwestorów Simona Woodroffe'a i Petera Jonesa?",
+        "question": "Could you please let me know the date of birth of the investors Simon Woodroffe and Peter Jones?",
+        "question_pl": "Czy możesz podać mi datę urodzenia inwestorów Simona Woodroffe'a i Petera Jonesa?",
         "query": "SELECT T2.Date_of_Birth FROM entrepreneur AS T1 JOIN people AS T2 ON T1.People_ID  =  T2.People_ID WHERE T1.Investor  =  \"Simon Woodroffe\" OR T1.Investor  =  \"Peter Jones\"",
         "query_pl": "SELECT T2.Date_of_Birth FROM entrepreneur AS T1 JOIN people AS T2 ON T1.People_ID  =  T2.People_ID WHERE T1.Investor  =  \"Simon Woodroffe\" OR T1.Investor  =  \"Peter Jones\""
     },
@@ -1492,8 +1492,8 @@
     },
     {
         "db_id": "university_basketball",
-        "question": "Hi, when was the University of Delaware founded?",
-        "question_pl": "Cześć, kiedy został założony Uniwersytet Delaware?",
+        "question": "When was the University of Delaware founded?",
+        "question_pl": "Kiedy został założony Uniwersytet Delaware?",
         "query": "SELECT founded FROM university WHERE school = 'University of Delaware'",
         "query_pl": "SELECT founded FROM university WHERE school = \"Uniwersytet Delaware\""
     },
@@ -1849,8 +1849,8 @@
     },
     {
         "db_id": "university_basketball",
-        "question": "Hi there! Can you tell me how many school have an affiliation type that is not public?",
-        "question_pl": "Cześć! Czy możesz mi powiedzieć, ile szkół ma typ przynależności, który nie jest publiczny?",
+        "question": "Can you tell me how many school have an affiliation type that is not public?",
+        "question_pl": "Czy możesz mi powiedzieć, ile szkół ma typ przynależności, który nie jest publiczny?",
         "query": "SELECT COUNT(*) FROM university WHERE affiliation != 'Public'",
         "query_pl": "SELECT COUNT(*) FROM university WHERE affiliation != \"Publiczny\""
     },
@@ -1863,8 +1863,8 @@
     },
     {
         "db_id": "match_season",
-        "question": "Hello Yes, I'm interested to know which college has two players",
-        "question_pl": "WitajTak, interesuje mnie, która uczelnia ma dwóch graczy",
+        "question": "I'm interested to know which college has two players",
+        "question_pl": "Interesuje mnie, która uczelnia ma dwóch graczy",
         "query": "SELECT College FROM match_season GROUP BY College HAVING count(*)  =  2",
         "query_pl": "SELECT College FROM match_season GROUP BY College HAVING count(*)  =  2"
     },
@@ -1947,8 +1947,8 @@
     },
     {
         "db_id": "student_1",
-        "question": "Hello! Can you please list all of the first and last names for all of the students in the database?",
-        "question_pl": "Witaj! Czy możesz wymienić wszystkie imiona i nazwiska wszystkich uczniów w bazie danych?",
+        "question": "Can you please list all of the first and last names for all of the students in the database?",
+        "question_pl": "Czy możesz wymienić wszystkie imiona i nazwiska wszystkich uczniów w bazie danych?",
         "query": "SELECT LastName,FirstName from list",
         "query_pl": "SELECT LastName,FirstName from list"
     },
@@ -2010,8 +2010,8 @@
     },
     {
         "db_id": "department_store",
-        "question": "Hello there!  Can you provide me with a list of all customer names and addresses?",
-        "question_pl": "Witajcie!  Czy możesz dostarczyć mi listę nazwisk i adresów wszystkich klientów?",
+        "question": "Can you provide me with a list of all customer names and addresses?",
+        "question_pl": "Czy możesz dostarczyć mi listę nazwisk i adresów wszystkich klientów?",
         "query": "select customer_name,customer_address from Customers;",
         "query_pl": "select customer_name,customer_address from Customers;"
     },
@@ -2038,8 +2038,8 @@
     },
     {
         "db_id": "wrestler",
-        "question": "hi. can you tell me how many wrestlers were eliminated?",
-        "question_pl": "Cześć, możesz mi powiedzieć ilu wrestlerów zostało wyeliminowanych?",
+        "question": "Can you tell me how many wrestlers were eliminated?",
+        "question_pl": "Możesz mi powiedzieć ilu wrestlerów zostało wyeliminowanych?",
         "query": "SELECT COUNT(*) FROM Elimination",
         "query_pl": "SELECT COUNT(*) FROM Elimination"
     },
@@ -2066,8 +2066,8 @@
     },
     {
         "db_id": "document_management",
-        "question": "Hello! How many documents are there total?",
-        "question_pl": "Witaj! Ile jest łącznie dokumentów?",
+        "question": "How many documents are there total?",
+        "question_pl": "Ile jest łącznie dokumentów?",
         "query": "SELECT count(document_name) FROM documents",
         "query_pl": "SELECT count(document_name) FROM documents"
     },
@@ -2080,8 +2080,8 @@
     },
     {
         "db_id": "department_management",
-        "question": "Hello!  How are you?  Can you please provide me with a list of all department IDs, department names, and their respective years of creation?",
-        "question_pl": "Witaj! Jak się masz?  Czy możesz podać mi listę wszystkich identyfikatorów działów, nazw działów i lat ich utworzenia?",
+        "question": "Can you please provide me with a list of all department IDs, department names, and their respective years of creation?",
+        "question_pl": "Czy możesz podać mi listę wszystkich identyfikatorów działów, nazw działów i lat ich utworzenia?",
         "query": "SELECT department_id, name, creation FROM department ",
         "query_pl": "SELECT department_id, name, creation FROM department "
     },
@@ -2150,8 +2150,8 @@
     },
     {
         "db_id": "solvency_ii",
-        "question": "Hello!  Can you show me a list of the various product type codes?",
-        "question_pl": "Witaj!  Czy możesz pokazać mi listę różnych kodów typów produktów?",
+        "question": "Can you show me a list of the various product type codes?",
+        "question_pl": "Czy możesz pokazać mi listę różnych kodów typów produktów?",
         "query": "SELECT Product_Type_Code FROM Products",
         "query_pl": "SELECT Product_Type_Code FROM Products"
     },
@@ -2171,8 +2171,8 @@
     },
     {
         "db_id": "medicine_enzyme_interaction",
-        "question": "Hello!  Can you please list the different interaction types for me?",
-        "question_pl": "Witaj!  Czy możesz wymienić dla mnie różne typy interakcji?",
+        "question": "Can you please list the different interaction types for me?",
+        "question_pl": "Czy możesz wymienić dla mnie różne typy interakcji?",
         "query": "SELECT DISTINCT interaction_type from medicine_enzyme_interaction",
         "query_pl": "SELECT DISTINCT interaction_type from medicine_enzyme_interaction"
     },
@@ -2241,8 +2241,8 @@
     },
     {
         "db_id": "gymnast",
-        "question": "Hello!  Can you show me a list of all of the hometowns?",
-        "question_pl": "Witaj!  Czy możesz mi pokazać listę wszystkich rodzinnych miast?",
+        "question": "Can you show me a list of all of the hometowns?",
+        "question_pl": "Czy możesz mi pokazać listę wszystkich rodzinnych miast?",
         "query": "SELECT Hometown FROM people ",
         "query_pl": "SELECT Hometown FROM people "
     },
@@ -2346,8 +2346,8 @@
     },
     {
         "db_id": "loan_1",
-        "question": "Hello!  Can you provide me with a list of all of the customers with a credit score below 100?",
-        "question_pl": "Witaj!  Czy możesz dostarczyć mi listę wszystkich klientów z oceną kredytową poniżej 100?",
+        "question": "Can you provide me with a list of all of the customers with a credit score below 100?",
+        "question_pl": "Czy możesz dostarczyć mi listę wszystkich klientów z oceną kredytową poniżej 100?",
         "query": "select * from customer where credit_score < 100",
         "query_pl": "select * from customer where credit_score < 100"
     },
@@ -2507,8 +2507,8 @@
     },
     {
         "db_id": "club_1",
-        "question": "Hi. How many different clubs are there in total?",
-        "question_pl": "Cześć, ile jest w sumie różnych klubów?",
+        "question": "How many different clubs are there in total?",
+        "question_pl": "Ile jest w sumie różnych klubów?",
         "query": "select count(*) from club",
         "query_pl": "select count(*) from club"
     },
@@ -2535,8 +2535,8 @@
     },
     {
         "db_id": "wine_1",
-        "question": "Hi, could you please show me the list of all appellations those produce wine after 2008?",
-        "question_pl": "Cześć, czy mógłbyś mi pokazać listę wszystkich apelacji, które produkują wino po 2008 roku?",
+        "question": "Could you please show me the list of all appellations those produce wine after 2008?",
+        "question_pl": "Czy mógłbyś mi pokazać listę wszystkich apelacji, które produkują wino po 2008 roku?",
         "query": "SELECT Appelation FROM WINE WHERE YEAR  >  2008",
         "query_pl": "SELECT Appelation FROM WINE WHERE YEAR  >  2008"
     },
@@ -2640,8 +2640,8 @@
     },
     {
         "db_id": "soccer_1",
-        "question": "Hello!  Can you please provide me with a list of the player IDs and player names?",
-        "question_pl": "Witaj!  Czy możesz podać mi listę identyfikatorów i nazw graczy?",
+        "question": "Can you please provide me with a list of the player IDs and player names?",
+        "question_pl": "Czy możesz podać mi listę identyfikatorów i nazw graczy?",
         "query": "SELECT player_api_id, player_name FROM Player",
         "query_pl": "SELECT player_api_id, player_name FROM Player"
     },
@@ -2668,8 +2668,8 @@
     },
     {
         "db_id": "cre_Doc_Tracking_DB",
-        "question": "Hi, can you tell me the name of an HR employee?",
-        "question_pl": "Cześć, czy możesz mi podać nazwisko pracownika działu HR?",
+        "question": "Can you tell me the name of an HR employee?",
+        "question_pl": "Czy możesz mi podać nazwisko pracownika działu HR?",
         "query": "SELECT employee_name FROM Employees  where Role_code = \"HR\"",
         "query_pl": "SELECT employee_name FROM Employees  where Role_code = \"HR\""
     },
@@ -2717,8 +2717,8 @@
     },
     {
         "db_id": "swimming",
-        "question": "Hello, are there any countries that have two or more stadiums?",
-        "question_pl": "Witajcie, czy są jakieś kraje, które mają dwa lub więcej stadionów?",
+        "question": "Are there any countries that have two or more stadiums?",
+        "question_pl": "Czy są jakieś kraje, które mają dwa lub więcej stadionów?",
         "query": "SELECT country FROM stadium group by country having count(*) >= 2",
         "query_pl": "SELECT country FROM stadium group by country having count(*) >= 2"
     },
@@ -2878,8 +2878,8 @@
     },
     {
         "db_id": "station_weather",
-        "question": "hi, what is the maximum low temperature at Amersham station?",
-        "question_pl": "Cześć, jaka jest maksymalna niska temperatura na stacji Amersham?",
+        "question": "What is the maximum low temperature at Amersham station?",
+        "question_pl": "Jaka jest maksymalna niska temperatura na stacji Amersham?",
         "query": "SELECT max(t1.low_temperature) FROM weekly_weather AS t1 JOIN station AS t2 ON t1.station_id  =  t2.id WHERE t2.network_name  =  \"Amersham\"",
         "query_pl": "SELECT max(t1.low_temperature) FROM weekly_weather AS t1 JOIN station AS t2 ON t1.station_id  =  t2.id WHERE t2.network_name  =  \"Amersham\""
     },
@@ -2913,8 +2913,8 @@
     },
     {
         "db_id": "machine_repair",
-        "question": "Hello!  How many technicians are there in total?",
-        "question_pl": "Witaj! Ilu jest w sumie techników?",
+        "question": "How many technicians are there in total?",
+        "question_pl": "Ilu jest w sumie techników?",
         "query": "SELECT count(*) from technician",
         "query_pl": "SELECT count(*) from technician"
     },
@@ -2941,8 +2941,8 @@
     },
     {
         "db_id": "cre_Docs_and_Epenses",
-        "question": "Hello, how many total documents are there?",
-        "question_pl": "Witaj, ile jest wszystkich dokumentów?",
+        "question": "How many total documents are there?",
+        "question_pl": "Ile jest wszystkich dokumentów?",
         "query": "select count(*) from documents",
         "query_pl": "select count(*) from documents"
     },
@@ -2983,8 +2983,8 @@
     },
     {
         "db_id": "city_record",
-        "question": "Hi there! Can you tell me which three cities have the highest regional populations, and list the population totals too?",
-        "question_pl": "Cześć! Czy możesz mi powiedzieć, które trzy miasta mają największą populację w regionie, a także podać łączną liczbę ludności?",
+        "question": "There! Can you tell me which three cities have the highest regional populations, and list the population totals too?",
+        "question_pl": "Czy możesz mi powiedzieć, które trzy miasta mają największą populację w regionie, a także podać łączną liczbę ludności?",
         "query": "SELECT city, regional_population FROM city ORDER BY regional_population DESC LIMIT 3",
         "query_pl": "SELECT city, regional_population FROM city ORDER BY regional_population DESC LIMIT 3"
     },
@@ -3032,8 +3032,8 @@
     },
     {
         "db_id": "document_management",
-        "question": "hi, can you list me the user name and the password of the most popular role user?",
-        "question_pl": "Cześć, czy możesz podać mi nazwę użytkownika i hasło najpopularniejszego użytkownika roli?",
+        "question": "Can you list me the user name and the password of the most popular role user?",
+        "question_pl": "Czy możesz podać mi nazwę użytkownika i hasło najpopularniejszego użytkownika roli?",
         "query": "SELECT user_name ,  password FROM users GROUP BY role_code ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT user_name ,  password FROM users GROUP BY role_code ORDER BY count(*) DESC LIMIT 1"
     },
@@ -3053,8 +3053,8 @@
     },
     {
         "db_id": "department_store",
-        "question": "Hi there!  Can you show me a list of all of the customer IDs and the corresponding customer names?",
-        "question_pl": "Cześć!  Czy możesz pokazać mi listę wszystkich identyfikatorów klientów i odpowiadających im nazw klientów?",
+        "question": "Can you show me a list of all of the customer IDs and the corresponding customer names?",
+        "question_pl": "Czy możesz pokazać mi listę wszystkich identyfikatorów klientów i odpowiadających im nazw klientów?",
         "query": "SELECT customer_name ,  customer_id FROM customers",
         "query_pl": "SELECT customer_name ,  customer_id FROM customers"
     },
@@ -3487,8 +3487,8 @@
     },
     {
         "db_id": "college_1",
-        "question": "Hello!  How many students are enrolled in the class with the course code of ACCT-211?",
-        "question_pl": "Witaj! Ilu studentów jest zapisanych na zajęcia z kodem przedmiotu ACCT-211?",
+        "question": "How many students are enrolled in the class with the course code of ACCT-211?",
+        "question_pl": "Ilu studentów jest zapisanych na zajęcia z kodem przedmiotu ACCT-211?",
         "query": "SELECT count(*) FROM CLASS AS T1 JOIN enroll AS T2 ON T1.class_code  =  T2.class_code WHERE T1.crs_code  =  'ACCT-211'",
         "query_pl": "SELECT count(*) FROM CLASS AS T1 JOIN enroll AS T2 ON T1.class_code  =  T2.class_code WHERE T1.crs_code  =  \"ACCT-211\""
     },
@@ -3669,15 +3669,15 @@
     },
     {
         "db_id": "county_public_safety",
-        "question": "Hi there!  Can you show me a list of all of the cities including city IDs and city names?",
-        "question_pl": "Cześć!  Czy możesz pokazać mi listę wszystkich miast wraz z ich identyfikatorami i nazwami?",
+        "question": "Can you show me a list of all of the cities including city IDs and city names?",
+        "question_pl": "Czy możesz pokazać mi listę wszystkich miast wraz z ich identyfikatorami i nazwami?",
         "query": "SELECT City_ID,Name FROM city ",
         "query_pl": "SELECT City_ID,Name FROM city "
     },
     {
         "db_id": "insurance_policies",
-        "question": "Hello, I was wondering how many claims are made?",
-        "question_pl": "Witaj, zastanawiałem się, ile roszczeń jest składanych?",
+        "question": "I was wondering how many claims are made?",
+        "question_pl": "Zastanawiałem się, ile roszczeń jest składanych?",
         "query": "SELECT count(*) FROM Claims",
         "query_pl": "SELECT count(*) FROM Claims"
     },
@@ -3704,22 +3704,22 @@
     },
     {
         "db_id": "customers_and_invoices",
-        "question": "Hello! How many transactions are there total?",
-        "question_pl": "Witaj, ile jest w sumie transakcji?",
+        "question": "How many transactions are there total?",
+        "question_pl": "Ile jest w sumie transakcji?",
         "query": "SELECT count(*) FROM Financial_transactions ",
         "query_pl": "SELECT count(*) FROM Financial_transactions "
     },
     {
         "db_id": "station_weather",
-        "question": "Hello!  Can you provide me with a list of all train names for trains that are associated with the local authority of Chiltern?",
-        "question_pl": "Witajcie!  Czy możesz dostarczyć mi listę wszystkich nazw pociągów, które są powiązane z lokalnymi władzami Chiltern?",
+        "question": "Can you provide me with a list of all train names for trains that are associated with the local authority of Chiltern?",
+        "question_pl": "Czy możesz dostarczyć mi listę wszystkich nazw pociągów, które są powiązane z lokalnymi władzami Chiltern?",
         "query": "SELECT distinct t3.name  FROM station AS t1 JOIN route AS t2 ON t1.id  =  t2.station_id JOIN train AS t3 ON t2.train_id  =  t3.id WHERE t1.local_authority  =  \"Chiltern\"",
         "query_pl": "SELECT distinct t3.name  FROM station AS t1 JOIN route AS t2 ON t1.id  =  t2.station_id JOIN train AS t3 ON t2.train_id  =  t3.id WHERE t1.local_authority  =  \"Chiltern\""
     },
     {
         "db_id": "insurance_policies",
-        "question": "hi I was wondering how many policies Ellsworth Paucek has?",
-        "question_pl": "Cześć, zastanawiałem się, ile polis ma Ellsworth Paucek?",
+        "question": "I was wondering how many policies Ellsworth Paucek has?",
+        "question_pl": "Zastanawiałem się, ile polis ma Ellsworth Paucek?",
         "query": "SELECT count(*) FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.Customer_id  =  T2.Customer_id WHERE T1.customer_details = \"Ellsworth Paucek\"",
         "query_pl": "SELECT count(*) FROM Customers AS T1 JOIN Customer_Policies AS T2 ON T1.Customer_id  =  T2.Customer_id WHERE T1.customer_details = \"Ellsworth Paucek\""
     },
@@ -3809,8 +3809,8 @@
     },
     {
         "db_id": "small_bank_1",
-        "question": "Hi, could you please let me know what is the average savings balance of all customers?",
-        "question_pl": "Cześć, czy możesz mi powiedzieć, jakie jest średnie saldo oszczędności wszystkich klientów?",
+        "question": "Could you please let me know what is the average savings balance of all customers?",
+        "question_pl": "Czy możesz mi powiedzieć, jakie jest średnie saldo oszczędności wszystkich klientów?",
         "query": "SELECT avg(balance) from savings",
         "query_pl": "SELECT avg(balance) from savings"
     },
@@ -3823,8 +3823,8 @@
     },
     {
         "db_id": "department_store",
-        "question": "Hello!  Can you provide me with a list of all the different product types?",
-        "question_pl": "Witaj!  Czy możesz dostarczyć mi listę wszystkich typów produktów?",
+        "question": "Can you provide me with a list of all the different product types?",
+        "question_pl": "Czy możesz dostarczyć mi listę wszystkich typów produktów?",
         "query": "SELECT distinct product_type_code  FROM products GROUP BY product_type_code",
         "query_pl": "SELECT distinct product_type_code  FROM products GROUP BY product_type_code"
     },
@@ -3858,8 +3858,8 @@
     },
     {
         "db_id": "network_2",
-        "question": "Hello, could you find how many friends Alice has?",
-        "question_pl": "Witaj, możesz sprawdzić ilu przyjaciół ma Alice?",
+        "question": "Could you find how many friends Alice has?",
+        "question_pl": "Możesz sprawdzić ilu przyjaciół ma Alice?",
         "query": "SELECT count(*) FROM PersonFriend where name = 'Alice' ",
         "query_pl": "SELECT count(*) FROM PersonFriend where name = \"Alice\" "
     },
@@ -3879,8 +3879,8 @@
     },
     {
         "db_id": "soccer_2",
-        "question": "Hello!  Can you provide me with a list of all of the colleges located in the state of LA?",
-        "question_pl": "Witaj!  Czy możesz podać mi listę wszystkich uczelni znajdujących się w stanie Los Angeles?",
+        "question": "Can you provide me with a list of all of the colleges located in the state of LA?",
+        "question_pl": "Czy możesz podać mi listę wszystkich uczelni znajdujących się w stanie Los Angeles?",
         "query": "SELECT cName FROM College WHERE state = \"LA\"",
         "query_pl": "SELECT cName FROM College WHERE state = \"LA\""
     },
@@ -4012,8 +4012,8 @@
     },
     {
         "db_id": "tracking_grants_for_research",
-        "question": "Hello there!  Which roll code on this list is the most common?",
-        "question_pl": "Witaj!  Który kod rolki z tej listy jest najbardziej popularny?",
+        "question": "Which roll code on this list is the most common?",
+        "question_pl": "Który kod rolki z tej listy jest najbardziej popularny?",
         "query": "SELECT role_code FROM Project_Staff GROUP BY role_code ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT role_code FROM Project_Staff GROUP BY role_code ORDER BY count(*) DESC LIMIT 1"
     },
@@ -4040,8 +4040,8 @@
     },
     {
         "db_id": "tracking_orders",
-        "question": "Hello!  How many customers have an order status of \"On Road\"?",
-        "question_pl": "Witaj! Ilu klientów ma status zamówienia \"W drodze\"?",
+        "question": "How many customers have an order status of \"On Road\"?",
+        "question_pl": "Ilu klientów ma status zamówienia \"W drodze\"?",
         "query": "SELECT count(*) FROM customers AS T1 JOIN orders AS T2 ON T1.customer_id = T2.customer_id WHERE T2.order_status = \"On Road\"",
         "query_pl": "SELECT count(*) FROM customers AS T1 JOIN orders AS T2 ON T1.customer_id = T2.customer_id WHERE T2.order_status = \"Na drodze\""
     },
@@ -4222,15 +4222,15 @@
     },
     {
         "db_id": "store_product",
-        "question": "Hello there!  Can you tell me what is the sum total of the populations of the three districts with the largest area?",
-        "question_pl": "Witajcie!  Czy możesz mi powiedzieć, jaka jest suma populacji trzech dzielnic o największej powierzchni?",
+        "question": "Can you tell me what is the sum total of the populations of the three districts with the largest area?",
+        "question_pl": "Czy możesz mi powiedzieć, jaka jest suma populacji trzech dzielnic o największej powierzchni?",
         "query": "SELECT sum(city_population) FROM district ORDER BY city_area DESC LIMIT 3",
         "query_pl": "SELECT sum(city_population) FROM district ORDER BY city_area DESC LIMIT 3"
     },
     {
         "db_id": "college_1",
-        "question": "Hello  Can you provide me with a list of all of the different department names?",
-        "question_pl": "Witam, czy możesz podać mi listę wszystkich nazw działów?",
+        "question": "Can you provide me with a list of all of the different department names?",
+        "question_pl": "Czy możesz podać mi listę wszystkich nazw działów?",
         "query": "SELECT dept_name from department",
         "query_pl": "SELECT dept_name from department"
     },
@@ -4327,8 +4327,8 @@
     },
     {
         "db_id": "twitter_1",
-        "question": "Hi, I was wondering how many users do not have tweets?",
-        "question_pl": "Cześć, zastanawiałem się, ilu użytkowników nie ma tweetów?",
+        "question": "I was wondering how many users do not have tweets?",
+        "question_pl": "Zastanawiałem się, ilu użytkowników nie ma tweetów?",
         "query": "SELECT count(*) FROM user_profiles WHERE UID NOT IN (SELECT UID FROM tweets)",
         "query_pl": "SELECT count(*) FROM user_profiles WHERE UID NOT IN (SELECT UID FROM tweets)"
     },
@@ -4362,8 +4362,8 @@
     },
     {
         "db_id": "music_1",
-        "question": "hi. how many countries of origin are represented by the artists?",
-        "question_pl": "Cześć. Ile krajów pochodzenia reprezentują artyści?",
+        "question": "How many countries of origin are represented by the artists?",
+        "question_pl": "Ile krajów pochodzenia reprezentują artyści?",
         "query": "SELECT count(country) from artist",
         "query_pl": "SELECT count(country) from artist"
     },
@@ -4425,15 +4425,15 @@
     },
     {
         "db_id": "music_1",
-        "question": "Hello there!  How are you doing tonight!?  Can you provide me with a list of all of the artist names in this database?",
-        "question_pl": "Witajcie!  Jak się dzisiaj macie!?  Czy możesz podać mi listę wszystkich nazwisk artystów w tej bazie danych?",
+        "question": "Can you provide me with a list of all of the artist names in this database?",
+        "question_pl": "Czy możesz podać mi listę wszystkich nazwisk artystów w tej bazie danych?",
         "query": "SELECT artist_name FROM artist ",
         "query_pl": "SELECT artist_name FROM artist "
     },
     {
         "db_id": "bike_1",
-        "question": "Hi, can you tell me how many trips there have been, starting from August?",
-        "question_pl": "Cześć, czy możesz mi powiedzieć, ile było podróży, począwszy od sierpnia?",
+        "question": "Can you tell me how many trips there have been, starting from August?",
+        "question_pl": "Czy możesz mi powiedzieć, ile było podróży, począwszy od sierpnia?",
         "query": "SELECT count(*) FROM trip WHERE start_date LIKE \"8/%\"",
         "query_pl": "SELECT count(*) FROM trip WHERE start_date LIKE \"8/%\""
     },
@@ -4453,8 +4453,8 @@
     },
     {
         "db_id": "flight_4",
-        "question": "Hello!  Can you first give me a list of all of the countries?",
-        "question_pl": "Witaj!  Czy możesz najpierw podać mi listę wszystkich krajów?",
+        "question": "Can you first give me a list of all of the countries?",
+        "question_pl": "Czy możesz najpierw podać mi listę wszystkich krajów?",
         "query": "SELECT country FROM airlines",
         "query_pl": "SELECT country FROM airlines"
     },
@@ -4516,8 +4516,8 @@
     },
     {
         "db_id": "gymnast",
-        "question": "Hello!  Can you please list all of the gymnast IDs and their associated hometowns?",
-        "question_pl": "Witaj!  Czy możesz wymienić wszystkie identyfikatory gimnastyczek i powiązane z nimi miasta rodzinne?",
+        "question": "Can you please list all of the gymnast IDs and their associated hometowns?",
+        "question_pl": "Czy możesz wymienić wszystkie identyfikatory gimnastyczek i powiązane z nimi miasta rodzinne?",
         "query": "SELECT T1.Gymnast_ID, T2.Hometown FROM gymnast AS T1 JOIN people AS T2 ON T1.Gymnast_ID  =  T2.People_ID",
         "query_pl": "SELECT T1.Gymnast_ID, T2.Hometown FROM gymnast AS T1 JOIN people AS T2 ON T1.Gymnast_ID  =  T2.People_ID"
     },
@@ -4628,8 +4628,8 @@
     },
     {
         "db_id": "movie_1",
-        "question": "Hello!  Can you show me a list of all director names who have directed more than one movie?",
-        "question_pl": "Witajcie!  Czy możesz mi pokazać listę wszystkich nazwisk reżyserów, którzy wyreżyserowali więcej niż jeden film?",
+        "question": "Can you show me a list of all director names who have directed more than one movie?",
+        "question_pl": "Czy możesz mi pokazać listę wszystkich nazwisk reżyserów, którzy wyreżyserowali więcej niż jeden film?",
         "query": "SELECT distinct T1.director FROM Movie AS T1 JOIN Movie AS T2 ON T1.director  =  T2.director WHERE T1.title != T2.title",
         "query_pl": "SELECT distinct T1.director FROM Movie AS T1 JOIN Movie AS T2 ON T1.director  =  T2.director WHERE T1.title != T2.title"
     },
@@ -4663,8 +4663,8 @@
     },
     {
         "db_id": "baseball_1",
-        "question": "Hello!  Can you provide me with a list of all of the player IDs in the database?",
-        "question_pl": "Witaj!  Czy możesz dostarczyć mi listę wszystkich identyfikatorów graczy w bazie danych?",
+        "question": "Can you provide me with a list of all of the player IDs in the database?",
+        "question_pl": "Czy możesz dostarczyć mi listę wszystkich identyfikatorów graczy w bazie danych?",
         "query": "SELECT  player_id FROM hall_of_fame",
         "query_pl": "SELECT  player_id FROM hall_of_fame"
     },
@@ -4719,22 +4719,22 @@
     },
     {
         "db_id": "pilot_record",
-        "question": "Hello, how many different nationalities of pilots are there?",
-        "question_pl": "Witaj, ile jest różnych narodowości pilotów?",
+        "question": "How many different nationalities of pilots are there?",
+        "question_pl": "Ile jest różnych narodowości pilotów?",
         "query": "SELECT count(distinct Nationality) FROM pilot ",
         "query_pl": "SELECT count(distinct Nationality) FROM pilot "
     },
     {
         "db_id": "network_2",
-        "question": "Hi can you tell me in witch city does Alice live?",
-        "question_pl": "Cześć, możesz mi powiedzieć, w którym mieście mieszka Alice?",
+        "question": "Can you tell me in witch city does Alice live?",
+        "question_pl": "Możesz mi powiedzieć, w którym mieście mieszka Alice?",
         "query": "select city from person where name = \"Alice\"",
         "query_pl": "select city from person where name = \"Alice\""
     },
     {
         "db_id": "college_1",
-        "question": "Hello. How many classes are there? ",
-        "question_pl": "Witaj. Ile jest klas?",
+        "question": "How many classes are there? ",
+        "question_pl": "Ile jest klas?",
         "query": "SELECT count(*) FROM  CLASS ",
         "query_pl": "SELECT count(*) FROM  CLASS "
     },
@@ -4845,8 +4845,8 @@
     },
     {
         "db_id": "entertainment_awards",
-        "question": "Hello! Can you tell me how many total nominees there are?",
-        "question_pl": "Witaj! Czy możesz mi powiedzieć, ilu jest wszystkich nominowanych?",
+        "question": "Can you tell me how many total nominees there are?",
+        "question_pl": "Czy możesz mi powiedzieć, ilu jest wszystkich nominowanych?",
         "query": "SELECT COUNT(artwork_id) FROM nomination",
         "query_pl": "SELECT COUNT(artwork_id) FROM nomination"
     },
@@ -4873,8 +4873,8 @@
     },
     {
         "db_id": "apartment_rentals",
-        "question": "Hello!  How many different Apartment Type Codes are there?",
-        "question_pl": "Witaj! Ile jest różnych kodów typów apartamentów?",
+        "question": "How many different Apartment Type Codes are there?",
+        "question_pl": "Ile jest różnych kodów typów apartamentów?",
         "query": "SELECT count(apt_type_code) FROM Apartments ",
         "query_pl": "SELECT count(apt_type_code) FROM Apartments "
     },
@@ -4908,8 +4908,8 @@
     },
     {
         "db_id": "icfp_1",
-        "question": "Hello!  Can you provide me with a list of all paper IDs and paper titles that correspond to \"Indiana University\"?",
-        "question_pl": "Witaj!  Czy możesz dostarczyć mi listę wszystkich identyfikatorów i tytułów artykułów, które odpowiadają \"Indiana University\"?",
+        "question": "Can you provide me with a list of all paper IDs and paper titles that correspond to \"Indiana University\"?",
+        "question_pl": "Czy możesz dostarczyć mi listę wszystkich identyfikatorów i tytułów artykułów, które odpowiadają \"Indiana University\"?",
         "query": "SELECT distinct t1.title,t1.paperID FROM papers AS t1 JOIN authorship AS t2 ON t1.paperid  =  t2.paperid JOIN inst AS t3 ON t2.instid  =  t3.instid WHERE t3.name  =  \"Indiana University\"",
         "query_pl": "SELECT distinct t1.title,t1.paperID FROM papers AS t1 JOIN authorship AS t2 ON t1.paperid  =  t2.paperid JOIN inst AS t3 ON t2.instid  =  t3.instid WHERE t3.name  =  \"Uniwersytet Indiana\""
     },
@@ -4964,8 +4964,8 @@
     },
     {
         "db_id": "chinook_1",
-        "question": "Hello there!  Can you tell me, which media type is the least common associated with all tracks?",
-        "question_pl": "Witajcie!  Czy możesz mi powiedzieć, który typ mediów jest najrzadziej powiązany ze wszystkimi ścieżkami?",
+        "question": "Can you tell me, which media type is the least common associated with all tracks?",
+        "question_pl": "Czy możesz mi powiedzieć, który typ mediów jest najrzadziej powiązany ze wszystkimi ścieżkami?",
         "query": "SELECT T1.Name FROM MEDIATYPE AS T1 JOIN TRACK AS T2 ON T1.MediaTypeId  =  T2.MediaTypeId GROUP BY T2.MediaTypeId ORDER BY COUNT(*) ASC LIMIT 1",
         "query_pl": "SELECT T1.Name FROM MEDIATYPE AS T1 JOIN TRACK AS T2 ON T1.MediaTypeId  =  T2.MediaTypeId GROUP BY T2.MediaTypeId ORDER BY COUNT(*) ASC LIMIT 1"
     },
@@ -4978,8 +4978,8 @@
     },
     {
         "db_id": "program_share",
-        "question": "Hello! Could you provide me with a list of all of the channel IDs for which the \"time of day\" is morning?",
-        "question_pl": "Witaj! Czy możesz dostarczyć mi listę wszystkich identyfikatorów kanałów, dla których \"pora dnia\" jest poranna?",
+        "question": "Could you provide me with a list of all of the channel IDs for which the \"time of day\" is morning?",
+        "question_pl": "Czy możesz dostarczyć mi listę wszystkich identyfikatorów kanałów, dla których \"pora dnia\" jest poranna?",
         "query": "SELECT Channel_ID from  broadcast WHERE Time_of_day  =  'Morning'",
         "query_pl": "SELECT Channel_ID from  broadcast WHERE Time_of_day  =  \"Poranek\""
     },
@@ -5034,15 +5034,15 @@
     },
     {
         "db_id": "sakila_1",
-        "question": "Hi there!  Whew!  That was a long wait to join the chat!  Can you please show me what the largest single payment amount is?",
-        "question_pl": "Witajcie!  Whew!  Długo czekałeś na dołączenie do czatu!  Czy możesz mi pokazać, jaka jest największa pojedyncza kwota płatności?",
+        "question": "Can you please show me what the largest single payment amount is?",
+        "question_pl": "Czy możesz mi pokazać, jaka jest największa pojedyncza kwota płatności?",
         "query": "SELECT amount FROM payment ORDER BY amount DESC LIMIT 1",
         "query_pl": "SELECT amount FROM payment ORDER BY amount DESC LIMIT 1"
     },
     {
         "db_id": "flight_1",
-        "question": "Hi can you tell me what is the average salary?",
-        "question_pl": "Cześć, czy możesz mi powiedzieć, jaka jest średnia pensja?",
+        "question": "can you tell me what is the average salary?",
+        "question_pl": "Czy możesz mi powiedzieć, jaka jest średnia pensja?",
         "query": "SELECT avg(salary) FROM Employee ",
         "query_pl": "SELECT avg(salary) FROM Employee "
     },
@@ -5132,8 +5132,8 @@
     },
     {
         "db_id": "student_assessment",
-        "question": "Hello, how are you!  Can you provide me with a list of all of the email addresses in this database?",
-        "question_pl": "Witaj, jak się masz!  Czy możesz dostarczyć mi listę wszystkich adresów e-mail w tej bazie danych?",
+        "question": "Can you provide me with a list of all of the email addresses in this database?",
+        "question_pl": "Czy możesz dostarczyć mi listę wszystkich adresów e-mail w tej bazie danych?",
         "query": "select email_address from people",
         "query_pl": "select email_address from people"
     },
@@ -5209,8 +5209,8 @@
     },
     {
         "db_id": "party_people",
-        "question": "Hello, can you please provide me with a list of all Event IDs and Event names?",
-        "question_pl": "Witaj, czy możesz dostarczyć mi listę wszystkich identyfikatorów i nazw wydarzeń?",
+        "question": "Can you please provide me with a list of all Event IDs and Event names?",
+        "question_pl": "Czy możesz dostarczyć mi listę wszystkich identyfikatorów i nazw wydarzeń?",
         "query": "SELECT event_id, event_name from party_events",
         "query_pl": "SELECT event_id, event_name from party_events"
     },
@@ -5356,8 +5356,8 @@
     },
     {
         "db_id": "loan_1",
-        "question": "hello. Can you tell me the number of states in which there are customers?",
-        "question_pl": "Witaj. Czy możesz mi podać liczbę stanów, w których są klienci?",
+        "question": "Can you tell me the number of states in which there are customers?",
+        "question_pl": "Czy możesz mi podać liczbę stanów, w których są klienci?",
         "query": "SELECT count(state) FROM bank where no_of_customers>0",
         "query_pl": "SELECT count(state) FROM bank where no_of_customers>0"
     },
@@ -5405,8 +5405,8 @@
     },
     {
         "db_id": "cre_Doc_Control_Systems",
-        "question": "Hello. What is the name of the employee that has showed up the most in circulation history documents?",
-        "question_pl": "Witaj. Jak nazywa się pracownik, który najczęściej pojawiał się w dokumentach historii obiegu?",
+        "question": "What is the name of the employee that has showed up the most in circulation history documents?",
+        "question_pl": "Jak nazywa się pracownik, który najczęściej pojawiał się w dokumentach historii obiegu?",
         "query": "SELECT t1.employee_name FROM Employees as t1 JOIN Circulation_History as t2 ON t2.employee_id = t1.employee_id group by t1.employee_name order by count(*) desc limit 1",
         "query_pl": "SELECT t1.employee_name FROM Employees as t1 JOIN Circulation_History as t2 ON t2.employee_id = t1.employee_id group by t1.employee_name order by count(*) desc limit 1"
     },
@@ -5468,8 +5468,8 @@
     },
     {
         "db_id": "store_product",
-        "question": "Hi there!  Can you show me a list of all store IDs along with the associated store names?",
-        "question_pl": "Cześć!  Czy możesz pokazać mi listę wszystkich identyfikatorów sklepów wraz z powiązanymi nazwami sklepów?",
+        "question": "Can you show me a list of all store IDs along with the associated store names?",
+        "question_pl": "Czy możesz pokazać mi listę wszystkich identyfikatorów sklepów wraz z powiązanymi nazwami sklepów?",
         "query": "SELECT store_id, store_name FROM store",
         "query_pl": "SELECT store_id, store_name FROM store"
     },
@@ -5482,7 +5482,7 @@
     },
     {
         "db_id": "local_govt_mdm",
-        "question": "How are you!  Can you provide me with a list of all of the master customer ids and corresponding cmi details?",
+        "question": "Can you provide me with a list of all of the master customer ids and corresponding cmi details?",
         "question_pl": "Jak się masz!  Czy możesz dostarczyć mi listę wszystkichgłównych identyfikatorów klientów i odpowiadających im szczegółów cmi?",
         "query": "SELECT master_customer_id, cmi_details from Customer_Master_Index",
         "query_pl": "SELECT master_customer_id, cmi_details from Customer_Master_Index"
@@ -5587,15 +5587,15 @@
     },
     {
         "db_id": "activity_1",
-        "question": "Hello, what are the names of the faculty members who don't participate in any activity?",
-        "question_pl": "Witaj, jakie są nazwiska członków wydziału, którzy nie uczestniczą w żadnych zajęciach?",
+        "question": "What are the names of the faculty members who don't participate in any activity?",
+        "question_pl": "Jakie są nazwiska członków wydziału, którzy nie uczestniczą w żadnych zajęciach?",
         "query": "SELECT Lname, Fname FROM Faculty EXCEPT SELECT FacID FROM Faculty_participates_in",
         "query_pl": "SELECT Lname, Fname FROM Faculty EXCEPT SELECT FacID FROM Faculty_participates_in"
     },
     {
         "db_id": "college_3",
-        "question": "Hi, can you tell me how many instructors there are?",
-        "question_pl": "Cześć, możesz mi powiedzieć, ilu jest instruktorów?",
+        "question": "Can you tell me how many instructors there are?",
+        "question_pl": "Możesz mi powiedzieć, ilu jest instruktorów?",
         "query": "SELECT count(distinct instructor) from Course",
         "query_pl": "SELECT count(distinct instructor) from Course"
     },
@@ -5615,8 +5615,8 @@
     },
     {
         "db_id": "company_employee",
-        "question": "Hello!  Can you show me a list of all company IDs, with their names and headquarters locations?",
-        "question_pl": "Witaj!  Czy możesz mi pokazać listę wszystkich identyfikatorów firm wraz z ich nazwami i lokalizacjami siedzib?",
+        "question": "Can you show me a list of all company IDs, with their names and headquarters locations?",
+        "question_pl": "Czy możesz mi pokazać listę wszystkich identyfikatorów firm wraz z ich nazwami i lokalizacjami siedzib?",
         "query": "SELECT Company_ID,Name,Headquarters FROM company",
         "query_pl": "SELECT Company_ID,Name,Headquarters FROM company"
     },
@@ -5685,8 +5685,8 @@
     },
     {
         "db_id": "performance_attendance",
-        "question": "Hello, how many members are there?",
-        "question_pl": "Witaj, ilu masz członków?",
+        "question": "How many members are there?",
+        "question_pl": "Ilu masz członków?",
         "query": "SELECT count(*) FROM member",
         "query_pl": "SELECT count(*) FROM member"
     },
@@ -5797,8 +5797,8 @@
     },
     {
         "db_id": "loan_1",
-        "question": "Hi there!  How are you?  Can you show a list of all customer IDs for customers who have loans in the amount of 5000 or more?",
-        "question_pl": "Cześć!  Jak się masz?  Czy możesz pokazać listę wszystkich identyfikatorów klientów, którzy mają pożyczki w wysokości 5000 lub więcej?",
+        "question": "Can you show a list of all customer IDs for customers who have loans in the amount of 5000 or more?",
+        "question_pl": "Czy możesz pokazać listę wszystkich identyfikatorów klientów, którzy mają pożyczki w wysokości 5000 lub więcej?",
         "query": "SELECT T1.cust_id FROM customer AS T1 JOIN loan AS T2 ON T1.cust_id  =  T2.cust_id GROUP BY T1.cust_name HAVING sum(T2.amount)  >=  5000",
         "query_pl": "SELECT T1.cust_id FROM customer AS T1 JOIN loan AS T2 ON T1.cust_id  =  T2.cust_id GROUP BY T1.cust_name HAVING sum(T2.amount)  >=  5000"
     },
@@ -5818,8 +5818,8 @@
     },
     {
         "db_id": "roller_coaster",
-        "question": "Hi I was wondering if you could tell me what the fastest roller coaster is?",
-        "question_pl": "Cześć, zastanawiałem się, czy możesz mi powiedzieć, jaka jest najszybsza kolejka górska?",
+        "question": "I was wondering if you could tell me what the fastest roller coaster is?",
+        "question_pl": "Zastanawiałem się, czy możesz mi powiedzieć, jaka jest najszybsza kolejka górska?",
         "query": "SELECT name FROM roller_coaster order BY speed desc limit 1",
         "query_pl": "SELECT name FROM roller_coaster order BY speed desc limit 1"
     },
@@ -5832,8 +5832,8 @@
     },
     {
         "db_id": "small_bank_1",
-        "question": "Hello!  Can you display a list of all of the Savings Account customer IDs and the associated balances?",
-        "question_pl": "Witaj!  Czy możesz wyświetlić listę wszystkich identyfikatorów klientów konta oszczędnościowego i powiązanych sald?",
+        "question": "Can you display a list of all of the Savings Account customer IDs and the associated balances?",
+        "question_pl": "Czy możesz wyświetlić listę wszystkich identyfikatorów klientów konta oszczędnościowego i powiązanych sald?",
         "query": "select  custid,balance from savings",
         "query_pl": "select  custid,balance from savings"
     },
@@ -5874,8 +5874,8 @@
     },
     {
         "db_id": "restaurant_1",
-        "question": "Hello, how many students are over 18?",
-        "question_pl": "Witaj, ilu uczniów ma więcej niż 18 lat?",
+        "question": "How many students are over 18?",
+        "question_pl": "Ilu uczniów ma więcej niż 18 lat?",
         "query": "SELECT count(*) from student where age > 18",
         "query_pl": "SELECT count(*) from student where age > 18"
     },
@@ -5937,8 +5937,8 @@
     },
     {
         "db_id": "sakila_1",
-        "question": "Hello!  Can you list the film ID of the film with the most copies in the inventory?",
-        "question_pl": "Witaj!  Czy możesz podać ID filmu z największą liczbą kopii w spisie?",
+        "question": "Can you list the film ID of the film with the most copies in the inventory?",
+        "question_pl": "Czy możesz podać ID filmu z największą liczbą kopii w spisie?",
         "query": "SELECT  T1.film_id FROM film AS T1 JOIN inventory AS T2 ON T1.film_id  =  T2.film_id GROUP BY T1.film_id ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT  T1.film_id FROM film AS T1 JOIN inventory AS T2 ON T1.film_id  =  T2.film_id GROUP BY T1.film_id ORDER BY count(*) DESC LIMIT 1"
     },
@@ -5993,8 +5993,8 @@
     },
     {
         "db_id": "formula_1",
-        "question": "Hello!  Can you give me a list of all of the forenames and surnames of the various drivers?",
-        "question_pl": "Witaj!  Czy możesz podać mi listę wszystkich imion i nazwisk różnych kierowców?",
+        "question": "Can you give me a list of all of the forenames and surnames of the various drivers?",
+        "question_pl": "Czy możesz podać mi listę wszystkich imion i nazwisk różnych kierowców?",
         "query": "SELECT forename ,  surname FROM drivers",
         "query_pl": "SELECT forename ,  surname FROM drivers"
     },
@@ -6042,15 +6042,15 @@
     },
     {
         "db_id": "wine_1",
-        "question": "Hi, could you find the appellations that produce wines after the year of 2008 but not in Central Coast area.",
-        "question_pl": "Cześć, czy możesz znaleźć apelacje, które produkują wina po roku 2008, ale nie w regionie Central Coast.",
+        "question": "Could you find the appellations that produce wines after the year of 2008 but not in Central Coast area.",
+        "question_pl": "Czy możesz znaleźć apelacje, które produkują wina po roku 2008, ale nie w regionie Central Coast.",
         "query": "SELECT Appelation FROM WINE WHERE YEAR > 2008 EXCEPT SELECT Appelation FROM APPELLATIONS WHERE Area = \"Central Coast\"",
         "query_pl": "SELECT Appelation FROM WINE WHERE YEAR > 2008 EXCEPT SELECT Appelation FROM APPELLATIONS WHERE Area = \"Wybrzeże Środkowe\""
     },
     {
         "db_id": "train_station",
-        "question": "Hello there!  Can you show me a list of all of the train station names?",
-        "question_pl": "Witajcie!  Czy możesz mi pokazać listę wszystkich nazw stacji kolejowych?",
+        "question": "Can you show me a list of all of the train station names?",
+        "question_pl": "Czy możesz mi pokazać listę wszystkich nazw stacji kolejowych?",
         "query": "SELECT name FROM station",
         "query_pl": "SELECT name FROM station"
     },
@@ -6084,8 +6084,8 @@
     },
     {
         "db_id": "storm_record",
-        "question": "Hi can you tell me the name of the regions not affected by storms?",
-        "question_pl": "Cześć, czy możesz mi podać nazwy regionów, w których nie występują burze?",
+        "question": "Can you tell me the name of the regions not affected by storms?",
+        "question_pl": "Czy możesz mi podać nazwy regionów, w których nie występują burze?",
         "query": "SELECT region_name FROM region WHERE region_id NOT IN (SELECT region_id FROM affected_region)",
         "query_pl": "SELECT region_name FROM region WHERE region_id NOT IN (SELECT region_id FROM affected_region)"
     },
@@ -6133,8 +6133,8 @@
     },
     {
         "db_id": "customers_and_addresses",
-        "question": "Hello There! Can you provide me with a list of all customer names?",
-        "question_pl": "Witajcie! Czy możesz podać mi listę wszystkich nazwisk klientów?",
+        "question": "Can you provide me with a list of all customer names?",
+        "question_pl": "Czy możesz podać mi listę wszystkich nazwisk klientów?",
         "query": "SELECT customer_name FROM customers ",
         "query_pl": "SELECT customer_name FROM customers "
     },
@@ -6161,8 +6161,8 @@
     },
     {
         "db_id": "network_2",
-        "question": "Hi, how many people have friends with ages above 40?",
-        "question_pl": "Cześć, ile osób ma znajomych w wieku powyżej 40 lat?",
+        "question": "How many people have friends with ages above 40?",
+        "question_pl": "Ile osób ma znajomych w wieku powyżej 40 lat?",
         "query": "SELECT COUNT(*) FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend IN (SELECT name FROM Person WHERE age  >  40) ",
         "query_pl": "SELECT COUNT(*) FROM Person AS T1 JOIN PersonFriend AS T2 ON T1.name  =  T2.name WHERE T2.friend IN (SELECT name FROM Person WHERE age  >  40) "
     },
@@ -6210,8 +6210,8 @@
     },
     {
         "db_id": "soccer_1",
-        "question": "Hello!  Can you tell me how many left footed players there are?",
-        "question_pl": "Witaj!  Czy możesz mi powiedzieć, ilu jest lewonożnych graczy?",
+        "question": "Can you tell me how many left footed players there are?",
+        "question_pl": "Czy możesz mi powiedzieć, ilu jest lewonożnych graczy?",
         "query": "SELECT COUNT(*) FROM Player_Attributes WHERE preferred_foot  =  \"left\"",
         "query_pl": "SELECT COUNT(*) FROM Player_Attributes WHERE preferred_foot  =  \"lewy\""
     },
@@ -6224,8 +6224,8 @@
     },
     {
         "db_id": "customers_and_addresses",
-        "question": "Hello there!  Can you provide me with a list of all of the customer names and their corresponding payment methods?",
-        "question_pl": "Witaj!  Czy możesz dostarczyć mi listę wszystkich nazw klientów i odpowiadających im metod płatności?",
+        "question": "Can you provide me with a list of all of the customer names and their corresponding payment methods?",
+        "question_pl": "Czy możesz dostarczyć mi listę wszystkich nazw klientów i odpowiadających im metod płatności?",
         "query": "SELECT customer_name, payment_method FROM Customers",
         "query_pl": "SELECT customer_name, payment_method FROM Customers"
     },
@@ -6315,8 +6315,8 @@
     },
     {
         "db_id": "railway",
-        "question": "Hi, Can you tell me the most common builder of railways?",
-        "question_pl": "Cześć, Czy możesz mi powiedzieć, jaki jest najpopularniejszy budowniczy kolei?",
+        "question": "Can you tell me the most common builder of railways?",
+        "question_pl": "Czy możesz mi powiedzieć, jaki jest najpopularniejszy budowniczy kolei?",
         "query": "SELECT Builder FROM railway GROUP BY Builder ORDER BY COUNT(*) DESC LIMIT 1",
         "query_pl": "SELECT Builder FROM railway GROUP BY Builder ORDER BY COUNT(*) DESC LIMIT 1"
     },
@@ -6329,8 +6329,8 @@
     },
     {
         "db_id": "csu_1",
-        "question": "hi I was wondering how many counties you have information for?",
-        "question_pl": "Cześć, zastanawiałem się, dla ilu hrabstw masz informacje?",
+        "question": "I was wondering how many counties you have information for?",
+        "question_pl": "Zastanawiałem się, dla ilu hrabstw masz informacje?",
         "query": "SELECT count(DISTINCT T1.county) FROM campuses AS T1 JOIN degrees AS T2 ON T1.id  =  T2.campus",
         "query_pl": "SELECT count(DISTINCT T1.county) FROM campuses AS T1 JOIN degrees AS T2 ON T1.id  =  T2.campus"
     },
@@ -6392,15 +6392,15 @@
     },
     {
         "db_id": "customers_and_invoices",
-        "question": "Hello!  Can you provide me with the first and last name of the customer who has account name 900?",
-        "question_pl": "Witaj!  Czy możesz podać mi imię i nazwisko klienta, który ma konto o nazwie 900?",
+        "question": "Can you provide me with the first and last name of the customer who has account name 900?",
+        "question_pl": "Czy możesz podać mi imię i nazwisko klienta, który ma konto o nazwie 900?",
         "query": "SELECT T2.customer_first_name ,  T2.customer_last_name FROM Accounts AS T1 JOIN Customers AS T2 ON T1.customer_id  =  T2.customer_id WHERE T1.account_name  =  \"900\"",
         "query_pl": "SELECT T2.customer_first_name ,  T2.customer_last_name FROM Accounts AS T1 JOIN Customers AS T2 ON T1.customer_id  =  T2.customer_id WHERE T1.account_name  =  \"900\""
     },
     {
         "db_id": "customers_and_invoices",
-        "question": "Hello, I was wondering how many accounts are listed under the first name of John?",
-        "question_pl": "Witaj, zastanawiałem się, ile kont jest wymienionych pod imieniem John?",
+        "question": "I was wondering how many accounts are listed under the first name of John?",
+        "question_pl": "Zastanawiałem się, ile kont jest wymienionych pod imieniem John?",
         "query": "select count(distinct account_id) from Customers AS T1 JOIN Accounts AS T2 ON T2.customer_id = T1.customer_id WHERE customer_first_name = 'John'",
         "query_pl": "select count(distinct account_id) from Customers AS T1 JOIN Accounts AS T2 ON T2.customer_id = T1.customer_id WHERE customer_first_name = \"John\""
     },
@@ -6420,8 +6420,8 @@
     },
     {
         "db_id": "ship_mission",
-        "question": "Hello!  How are you!  Can you tell me how many missions there are in total?",
-        "question_pl": "Witaj, jak się masz!  Czy możesz mi powiedzieć, ile jest w sumie misji?",
+        "question": "Can you tell me how many missions there are in total?",
+        "question_pl": "Czy możesz mi powiedzieć, ile jest w sumie misji?",
         "query": "SELECT count(*) FROM mission ",
         "query_pl": "SELECT count(*) FROM mission "
     },
@@ -6504,8 +6504,8 @@
     },
     {
         "db_id": "hr_1",
-        "question": "hi! how many employees are there that get a commission percentage?",
-        "question_pl": "Cześć! Ilu jest pracowników, którzy otrzymują prowizję procentową?",
+        "question": "How many employees are there that get a commission percentage?",
+        "question_pl": "Ilu jest pracowników, którzy otrzymują prowizję procentową?",
         "query": "SELECT COUNT(DISTINCT EMPLOYEE_ID) FROM employees WHERE COMMISSION_PCT > 0",
         "query_pl": "SELECT COUNT(DISTINCT EMPLOYEE_ID) FROM employees WHERE COMMISSION_PCT > 0"
     },
@@ -6567,8 +6567,8 @@
     },
     {
         "db_id": "news_report",
-        "question": "Hi, what journalist had worked the most amount of years?",
-        "question_pl": "Cześć, który dziennikarz przepracował najwięcej lat?",
+        "question": "What journalist had worked the most amount of years?",
+        "question_pl": "Który dziennikarz przepracował najwięcej lat?",
         "query": "SELECT journalist_ID FROM journalist ORDER BY Years_working DESC LIMIT 1",
         "query_pl": "SELECT journalist_ID FROM journalist ORDER BY Years_working DESC LIMIT 1"
     },
@@ -6581,8 +6581,8 @@
     },
     {
         "db_id": "college_2",
-        "question": "Hello!  Can you provide me with a list of Instructor IDs for those who did not teach any courses?",
-        "question_pl": "Witaj!  Czy możesz podać mi listę identyfikatorów instruktorów, którzy nie prowadzili żadnych kursów?",
+        "question": "Can you provide me with a list of Instructor IDs for those who did not teach any courses?",
+        "question_pl": "Czy możesz podać mi listę identyfikatorów instruktorów, którzy nie prowadzili żadnych kursów?",
         "query": "SELECT ID FROM instructor WHERE id NOT IN (SELECT id FROM teaches)",
         "query_pl": "SELECT ID FROM instructor WHERE id NOT IN (SELECT id FROM teaches)"
     },
@@ -6595,8 +6595,8 @@
     },
     {
         "db_id": "college_1",
-        "question": "Hi - Can you tell me which department has the most students?",
-        "question_pl": "Cześć - Czy możesz mi powiedzieć, który wydział ma najwięcej studentów?",
+        "question": "Can you tell me which department has the most students?",
+        "question_pl": "Czy możesz mi powiedzieć, który wydział ma najwięcej studentów?",
         "query": "SELECT T2.dept_name  FROM student AS T1 JOIN department AS T2 ON T1.dept_code  =  T2.dept_code GROUP BY T1.dept_code ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT T2.dept_name  FROM student AS T1 JOIN department AS T2 ON T1.dept_code  =  T2.dept_code GROUP BY T1.dept_code ORDER BY count(*) DESC LIMIT 1"
     },
@@ -6735,8 +6735,8 @@
     },
     {
         "db_id": "cre_Theme_park",
-        "question": "Hello!  Can you provide me with a list of all the names and ids for all tourist attractions?",
-        "question_pl": "Witajcie!  Czy możesz podać mi listę wszystkich nazw i identyfikatorów wszystkich atrakcji turystycznych?",
+        "question": "Can you provide me with a list of all the names and ids for all tourist attractions?",
+        "question_pl": "Czy możesz podać mi listę wszystkich nazw i identyfikatorów wszystkich atrakcji turystycznych?",
         "query": "SELECT Name ,  Tourist_Attraction_ID FROM Tourist_Attractions ",
         "query_pl": "SELECT Name ,  Tourist_Attraction_ID FROM Tourist_Attractions "
     },
@@ -6784,8 +6784,8 @@
     },
     {
         "db_id": "wine_1",
-        "question": "hello,what are the maximum price and score of wines in each year?",
-        "question_pl": "witaj,jaka jest maksymalna cena i ocena win w poszczególnych latach?",
+        "question": "What are the maximum price and score of wines in each year?",
+        "question_pl": "Haka jest maksymalna cena i ocena win w poszczególnych latach?",
         "query": "SELECT max(Price) ,  max(Score) ,  YEAR FROM WINE GROUP BY YEAR",
         "query_pl": "SELECT max(Price) ,  max(Score) ,  YEAR FROM WINE GROUP BY YEAR"
     },
@@ -6966,8 +6966,8 @@
     },
     {
         "db_id": "customers_and_products_contacts",
-        "question": "Hello! Can you please provide me with a list of all of customer IDs in the Customer Address History table?",
-        "question_pl": "Witaj! Czy możesz podać mi listę wszystkich identyfikatorów klientów w tabeli Historia adresów klientów?",
+        "question": "Can you please provide me with a list of all of customer IDs in the Customer Address History table?",
+        "question_pl": "Czy możesz podać mi listę wszystkich identyfikatorów klientów w tabeli Historia adresów klientów?",
         "query": "SELECT customer_id FROM Customer_Address_History",
         "query_pl": "SELECT customer_id FROM Customer_Address_History"
     },
@@ -6994,8 +6994,8 @@
     },
     {
         "db_id": "cre_Theme_park",
-        "question": "Hello, can you tell me the tourist attraction id for the photo name \"game1\"?",
-        "question_pl": "Witam, czy możesz mi podać identyfikator atrakcji turystycznej dla zdjęcia o nazwie \"game1\"?",
+        "question": "Can you tell me the tourist attraction id for the photo name \"game1\"?",
+        "question_pl": "Czy możesz mi podać identyfikator atrakcji turystycznej dla zdjęcia o nazwie \"game1\"?",
         "query": "SELECT T2.Tourist_Attraction_ID FROM PHOTOS AS T1 JOIN TOURIST_ATTRACTIONS AS T2 ON T1.Tourist_Attraction_ID = T2.Tourist_Attraction_ID WHERE T1.Name = \"game1\"",
         "query_pl": "SELECT T2.Tourist_Attraction_ID FROM PHOTOS AS T1 JOIN TOURIST_ATTRACTIONS AS T2 ON T1.Tourist_Attraction_ID = T2.Tourist_Attraction_ID WHERE T1.Name = \"game1\""
     },
@@ -7113,8 +7113,8 @@
     },
     {
         "db_id": "student_assessment",
-        "question": "Hello! How many students are there in total?",
-        "question_pl": "Witaj! Ilu jest w sumie uczniów?",
+        "question": "How many students are there in total?",
+        "question_pl": "Ilu jest w sumie uczniów?",
         "query": "SELECT count(*) from students",
         "query_pl": "SELECT count(*) from students"
     },
@@ -7190,8 +7190,8 @@
     },
     {
         "db_id": "manufacturer",
-        "question": "Hello, can you find me the names of the furniture with less then 6 components?",
-        "question_pl": "Witam, czy możesz mi znaleźć nazwy mebli składających się z mniej niż 6 elementów?",
+        "question": "Can you find me the names of the furniture with less then 6 components?",
+        "question_pl": "Czy możesz mi znaleźć nazwy mebli składających się z mniej niż 6 elementów?",
         "query": "SELECT name FROM furniture where Num_of_Component < 6",
         "query_pl": "SELECT name FROM furniture where Num_of_Component < 6"
     },
@@ -7274,8 +7274,8 @@
     },
     {
         "db_id": "hr_1",
-        "question": "hi,what is the president min salary?",
-        "question_pl": "Cześć, jaka jest minimalna pensja prezesa?",
+        "question": "What is the president min salary?",
+        "question_pl": "Jaka jest minimalna pensja prezesa?",
         "query": "select min_salary from jobs where JOB_TITLE = 'president'",
         "query_pl": "select min_salary from jobs where JOB_TITLE = \"prezes\""
     },
@@ -7288,8 +7288,8 @@
     },
     {
         "db_id": "company_employee",
-        "question": "hi, can you show me headquarters that have companies in the banking industry?",
-        "question_pl": "Cześć, czy możesz pokazać mi siedzibę, w której znajdują się firmy z branży bankowej?",
+        "question": "Can you show me headquarters that have companies in the banking industry?",
+        "question_pl": "Czy możesz pokazać mi siedzibę, w której znajdują się firmy z branży bankowej?",
         "query": "SELECT distinct  Headquarters FROM company WHERE Industry  =  \"Banking\" ",
         "query_pl": "SELECT distinct  Headquarters FROM company WHERE Industry  =  \"Bankowość\" "
     },
@@ -7302,15 +7302,15 @@
     },
     {
         "db_id": "college_2",
-        "question": "Hi, could you please let me know the name of instructors in Comp. Sci. department whose salary is higher than 80000?",
-        "question_pl": "Cześć, czy mógłbyś podać mi nazwiska instruktorów na wydziale Comp. Sci. dział, którego pensja jest wyższa niż 80000?",
+        "question": "Could you please let me know the name of instructors in Comp. Sci. department whose salary is higher than 80000?",
+        "question_pl": "Czy mógłbyś podać mi nazwiska instruktorów na wydziale Comp. Sci. dział, którego pensja jest wyższa niż 80000?",
         "query": "SELECT name FROM instructor WHERE dept_name  =  'Comp. Sci.'  AND salary  >  80000",
         "query_pl": "SELECT name FROM instructor WHERE dept_name  =  \"Comp. Sci.\"  AND salary  >  80000"
     },
     {
         "db_id": "customers_and_addresses",
-        "question": "Hi who made the latest order?",
-        "question_pl": "Cześć, kto złożył ostatnie zamówienie?",
+        "question": "Who made the latest order?",
+        "question_pl": "Kto złożył ostatnie zamówienie?",
         "query": "SELECT t1.customer_name FROM customers AS t1 JOIN customer_orders AS t2 ON t1.customer_id  =  t2.customer_id ORDER BY t2.order_date DESC LIMIT 1",
         "query_pl": "SELECT t1.customer_name FROM customers AS t1 JOIN customer_orders AS t2 ON t1.customer_id  =  t2.customer_id ORDER BY t2.order_date DESC LIMIT 1"
     },
@@ -7358,8 +7358,8 @@
     },
     {
         "db_id": "college_2",
-        "question": "Hi, show me the instructors",
-        "question_pl": "Cześć, pokaż mi instruktorów",
+        "question": "Show me the instructors",
+        "question_pl": "Pokaż mi instruktorów",
         "query": "SELECT name FROM instructor",
         "query_pl": "SELECT name FROM instructor"
     },
@@ -7393,8 +7393,8 @@
     },
     {
         "db_id": "hr_1",
-        "question": "Hi what are the first and last name for those employees who works either in department 70 or 90?",
-        "question_pl": "Cześć, jakie są imiona i nazwiska pracowników, którzy pracują w dziale 70 lub 90?",
+        "question": "What are the first and last name for those employees who works either in department 70 or 90?",
+        "question_pl": "Jakie są imiona i nazwiska pracowników, którzy pracują w dziale 70 lub 90?",
         "query": "SELECT first_name ,  last_name FROM employees WHERE department_id  =  70 OR department_id  =  90",
         "query_pl": "SELECT first_name ,  last_name FROM employees WHERE department_id  =  70 OR department_id  =  90"
     },
@@ -7407,8 +7407,8 @@
     },
     {
         "db_id": "cre_Drama_Workshop_Groups",
-        "question": "Hello there!  Can you please provide me with a list of all of the different payment method code types?",
-        "question_pl": "Witajcie!  Czy możesz podać mi listę wszystkich różnych typów kodów metod płatności?",
+        "question": "Can you please provide me with a list of all of the different payment method code types?",
+        "question_pl": "Czy możesz podać mi listę wszystkich różnych typów kodów metod płatności?",
         "query": "SELECT distinct payment_method_code FROM INVOICES",
         "query_pl": "SELECT distinct payment_method_code FROM INVOICES"
     },
@@ -7505,8 +7505,8 @@
     },
     {
         "db_id": "school_bus",
-        "question": "Hello!  Can you show me all school names and bus driver names for each of the school buses in this database?",
-        "question_pl": "Witaj!  Czy możesz pokazać mi wszystkie nazwy szkół i nazwiska kierowców autobusów dla każdego autobusu szkolnego w tej bazie danych?",
+        "question": "Can you show me all school names and bus driver names for each of the school buses in this database?",
+        "question_pl": "Czy możesz pokazać mi wszystkie nazwy szkół i nazwiska kierowców autobusów dla każdego autobusu szkolnego w tej bazie danych?",
         "query": "SELECT T2.school ,  T3.name FROM school_bus AS T1 JOIN school AS T2 ON T1.school_id  =  T2.school_id JOIN driver AS T3 ON T1.driver_id  =  T3.driver_id",
         "query_pl": "SELECT T2.school ,  T3.name FROM school_bus AS T1 JOIN school AS T2 ON T1.school_id  =  T2.school_id JOIN driver AS T3 ON T1.driver_id  =  T3.driver_id"
     },
@@ -7540,8 +7540,8 @@
     },
     {
         "db_id": "driving_school",
-        "question": "Hello, how many customers are there?",
-        "question_pl": "Witaj, ilu masz klientów?",
+        "question": "How many customers are there?",
+        "question_pl": "Ilu masz klientów?",
         "query": "SELECT count(*) FROM Customers",
         "query_pl": "SELECT count(*) FROM Customers"
     },
@@ -7561,8 +7561,8 @@
     },
     {
         "db_id": "theme_gallery",
-        "question": "Hello! Can you provide me with a list of all of the artist names?",
-        "question_pl": "Witaj! Czy możesz podać mi listę wszystkich nazwisk artystów?",
+        "question": "Can you provide me with a list of all of the artist names?",
+        "question_pl": "Czy możesz podać mi listę wszystkich nazwisk artystów?",
         "query": "SELECT Name FROM artist",
         "query_pl": "SELECT Name FROM artist"
     },
@@ -7582,8 +7582,8 @@
     },
     {
         "db_id": "manufactory_1",
-        "question": "hi. How many products are there?",
-        "question_pl": "Cześć. Ile masz produktów?",
+        "question": "How many products are there?",
+        "question_pl": "Ile jest produktów?",
         "query": "SELECT count(*) FROM Products ",
         "query_pl": "SELECT count(*) FROM Products "
     },
@@ -7638,8 +7638,8 @@
     },
     {
         "db_id": "college_1",
-        "question": "Yes, hi, I'd like to know how many professors are in the history department?",
-        "question_pl": "Tak, cześć, chciałbym wiedzieć ilu profesorów jest na wydziale historii?",
+        "question": "I'd like to know how many professors are in the history department?",
+        "question_pl": "Chciałbym wiedzieć ilu profesorów jest na wydziale historii?",
         "query": "SELECT count(*) FROM professor WHERE dept_code = \"HIST\" ",
         "query_pl": "SELECT count(*) FROM professor WHERE dept_code = \"HIST\" "
     },
@@ -7722,8 +7722,8 @@
     },
     {
         "db_id": "perpetrator",
-        "question": "Hi - can you please list the names of perpetrators in all countries except for China?",
-        "question_pl": "Cześć - czy możesz wymienić nazwiska sprawców we wszystkich krajach z wyjątkiem Chin?",
+        "question": "Can you please list the names of perpetrators in all countries except for China?",
+        "question_pl": "Czy możesz wymienić nazwiska sprawców we wszystkich krajach z wyjątkiem Chin?",
         "query": "SELECT T1.Name FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID WHERE T2.Country != \"China\"",
         "query_pl": "SELECT T1.Name FROM people AS T1 JOIN perpetrator AS T2 ON T1.People_ID  =  T2.People_ID WHERE T2.Country != \"Chiny\""
     },
@@ -7778,15 +7778,15 @@
     },
     {
         "db_id": "university_basketball",
-        "question": "Hello!  Can you show me the top 3 school with the largest enrollment?",
-        "question_pl": "Witaj!  Czy możesz pokazać mi 3 najlepsze szkoły z największą liczbą zapisów?",
+        "question": "Can you show me the top 3 school with the largest enrollment?",
+        "question_pl": "Czy możesz pokazać mi 3 najlepsze szkoły z największą liczbą zapisów?",
         "query": "SELECT * FROM university ORDER BY enrollment DESC LIMIT 3",
         "query_pl": "SELECT * FROM university ORDER BY enrollment DESC LIMIT 3"
     },
     {
         "db_id": "assets_maintenance",
-        "question": "Hi! Can you show me a list of all of the product part names?",
-        "question_pl": "Cześć! Czy możesz pokazać mi listę wszystkich nazw części produktu?",
+        "question": "Can you show me a list of all of the product part names?",
+        "question_pl": "Czy możesz pokazać mi listę wszystkich nazw części produktu?",
         "query": "SELECT part_name from parts",
         "query_pl": "SELECT part_name from parts"
     },
@@ -7869,8 +7869,8 @@
     },
     {
         "db_id": "music_4",
-        "question": "Hi.Can you show the categories of the music festivals?",
-        "question_pl": "Cześć, czy możesz pokazać kategorie festiwali muzycznych?",
+        "question": "Can you show the categories of the music festivals?",
+        "question_pl": "Czy możesz pokazać kategorie festiwali muzycznych?",
         "query": "SELECT Category FROM music_festival",
         "query_pl": "SELECT Category FROM music_festival"
     },
@@ -8016,8 +8016,8 @@
     },
     {
         "db_id": "soccer_2",
-        "question": "hi. can you tell me how many players are from OU College?",
-        "question_pl": "Cześć. możesz mi powiedzieć ilu zawodników jest z OU College?",
+        "question": "Can you tell me how many players are from OU College?",
+        "question_pl": "Możesz mi powiedzieć ilu zawodników jest z OU College?",
         "query": "SELECT count(*) FROM  tryout AS T1 JOIN player AS T2 ON T1.pID  =  T2.pID WHERE T1.cName  = \"OU\"",
         "query_pl": "SELECT count(*) FROM  tryout AS T1 JOIN player AS T2 ON T1.pID  =  T2.pID WHERE T1.cName  = \"OU\""
     },
@@ -8058,8 +8058,8 @@
     },
     {
         "db_id": "game_injury",
-        "question": "Hi! May i ask how many total games were played?",
-        "question_pl": "Cześć! Czy mogę zapytać, ile łącznie rozegrano meczów?",
+        "question": "How many total games were played?",
+        "question_pl": "Ile łącznie rozegrano meczów?",
         "query": "SELECT count(*) FROM game ",
         "query_pl": "SELECT count(*) FROM game "
     },
@@ -8135,8 +8135,8 @@
     },
     {
         "db_id": "tracking_share_transactions",
-        "question": "hi! How many transactions have greater than 10 share count?",
-        "question_pl": "Cześć! Ile transakcji ma liczbę akcji większą niż 10?",
+        "question": "How many transactions have greater than 10 share count?",
+        "question_pl": "Ile transakcji ma liczbę akcji większą niż 10?",
         "query": "SELECT count(*) from transactions WHERE share_count  >  10",
         "query_pl": "SELECT count(*) from transactions WHERE share_count  >  10"
     },
@@ -8184,8 +8184,8 @@
     },
     {
         "db_id": "products_for_hire",
-        "question": "Hello!  Can you show me a list of all of the coupon IDs and coupon amounts?",
-        "question_pl": "Witaj!  Czy możesz pokazać mi listę wszystkich identyfikatorów kuponów i kwot kuponów?",
+        "question": "Can you show me a list of all of the coupon IDs and coupon amounts?",
+        "question_pl": "Czy możesz pokazać mi listę wszystkich identyfikatorów kuponów i kwot kuponów?",
         "query": "SELECT coupon_id, coupon_amount FROM Discount_Coupons ",
         "query_pl": "SELECT coupon_id, coupon_amount FROM Discount_Coupons "
     },
@@ -8261,15 +8261,15 @@
     },
     {
         "db_id": "dorm_1",
-        "question": "Hello!  Can you list the dorm names of the various different dorms?",
-        "question_pl": "Witaj!  Czy możesz wymienić nazwy różnych akademików?",
+        "question": "Can you list the dorm names of the various different dorms?",
+        "question_pl": "Czy możesz wymienić nazwy różnych akademików?",
         "query": "SELECT dorm_name FROM dorm ",
         "query_pl": "SELECT dorm_name FROM dorm "
     },
     {
         "db_id": "document_management",
-        "question": "Hi there!  Can you show me a list of all of the different document names and the associated access count for each of them?",
-        "question_pl": "Cześć!  Czy możesz pokazać mi listę wszystkich różnych nazw dokumentów i powiązaną liczbę dostępów dla każdego z nich?",
+        "question": "Can you show me a list of all of the different document names and the associated access count for each of them?",
+        "question_pl": "Czy możesz pokazać mi listę wszystkich różnych nazw dokumentów i powiązaną liczbę dostępów dla każdego z nich?",
         "query": "SELECT document_name, access_count FROM documents ",
         "query_pl": "SELECT document_name, access_count FROM documents "
     },
@@ -8282,8 +8282,8 @@
     },
     {
         "db_id": "entrepreneur",
-        "question": "Hello! Can you show me a list of all investor names?",
-        "question_pl": "Witaj! Czy możesz mi pokazać listę wszystkich nazwisk inwestorów?",
+        "question": "Can you show me a list of all investor names?",
+        "question_pl": "Czy możesz mi pokazać listę wszystkich nazwisk inwestorów?",
         "query": "SELECT distinct Investor FROM entrepreneur ",
         "query_pl": "SELECT distinct Investor FROM entrepreneur "
     },
@@ -8429,8 +8429,8 @@
     },
     {
         "db_id": "college_2",
-        "question": "Hello!  Can you show me a list of all course IDs?",
-        "question_pl": "Witaj!  Czy możesz pokazać mi listę wszystkich identyfikatorów kursów?",
+        "question": "Can you show me a list of all course IDs?",
+        "question_pl": "Czy możesz pokazać mi listę wszystkich identyfikatorów kursów?",
         "query": "SELECT course_id FROM takes ",
         "query_pl": "SELECT course_id FROM takes "
     },
@@ -8478,8 +8478,8 @@
     },
     {
         "db_id": "department_store",
-        "question": "Hello!  Can you provide me with a list of all Job Title Codes present on this list?",
-        "question_pl": "Witaj!  Czy możesz dostarczyć mi listę wszystkich kodów stanowisk znajdujących się na tej liście?",
+        "question": "Can you provide me with a list of all Job Title Codes present on this list?",
+        "question_pl": "Czy możesz dostarczyć mi listę wszystkich kodów stanowisk znajdujących się na tej liście?",
         "query": "SELECT job_title_code from staff_department_assignments",
         "query_pl": "SELECT job_title_code from staff_department_assignments"
     },
@@ -8492,8 +8492,8 @@
     },
     {
         "db_id": "architecture",
-        "question": "Hi there!  Can you show me the name of the architect who built the most mills?",
-        "question_pl": "Cześć!  Czy możesz mi podać nazwisko architekta, który zbudował najwięcej młynów?",
+        "question": "Can you show me the name of the architect who built the most mills?",
+        "question_pl": "Czy możesz mi podać nazwisko architekta, który zbudował najwięcej młynów?",
         "query": "SELECT T1.name  FROM architect AS T1 JOIN mill AS T2 ON T1.id  =  T2.architect_id GROUP BY T1.id ORDER BY count(*) DESC LIMIT 1",
         "query_pl": "SELECT T1.name  FROM architect AS T1 JOIN mill AS T2 ON T1.id  =  T2.architect_id GROUP BY T1.id ORDER BY count(*) DESC LIMIT 1"
     },
@@ -8569,8 +8569,8 @@
     },
     {
         "db_id": "roller_coaster",
-        "question": "Hi! How are you?  Can you show me a list of all of the country names?",
-        "question_pl": "Cześć! Jak się masz?  Czy możesz pokazać mi listę wszystkich nazw krajów?",
+        "question": "Can you show me a list of all of the country names?",
+        "question_pl": "Czy możesz pokazać mi listę wszystkich nazw krajów?",
         "query": "SELECT Name from  country",
         "query_pl": "SELECT Name from  country"
     },
@@ -8618,8 +8618,8 @@
     },
     {
         "db_id": "entrepreneur",
-        "question": "Hi!  Can you show me a list of all people and their people IDs?",
-        "question_pl": "Cześć! Czy możesz pokazać mi listę wszystkich osób i ich identyfikatorów?",
+        "question": "Can you show me a list of all people and their people IDs?",
+        "question_pl": "Czy możesz pokazać mi listę wszystkich osób i ich identyfikatorów?",
         "query": "SELECT Name, people_id FROM people",
         "query_pl": "SELECT Name, people_id FROM people"
     },
@@ -8646,8 +8646,8 @@
     },
     {
         "db_id": "csu_1",
-        "question": "Hello!  Can you show me a list of all of the years for which there is data?",
-        "question_pl": "Witaj!  Czy możesz pokazać mi listę wszystkich lat, dla których istnieją dane?",
+        "question": "Can you show me a list of all of the years for which there is data?",
+        "question_pl": "Czy możesz pokazać mi listę wszystkich lat, dla których istnieją dane?",
         "query": "SELECT DISTINCT YEAR FROM degrees",
         "query_pl": "SELECT DISTINCT YEAR FROM degrees"
     },
@@ -8674,8 +8674,8 @@
     },
     {
         "db_id": "products_gen_characteristics",
-        "question": "Hello!  Can you please list all of the product names that have the color description of \"white\"?",
-        "question_pl": "Witaj!  Czy możesz wymienić wszystkie nazwy produktów, które mają opis koloru \"biały\"?",
+        "question": "Can you please list all of the product names that have the color description of \"white\"?",
+        "question_pl": "Czy możesz wymienić wszystkie nazwy produktów, które mają opis koloru \"biały\"?",
         "query": "SELECT t1.product_name FROM products AS t1 JOIN ref_colors AS t2 ON t1.color_code  =  t2.color_code WHERE t2.color_description  =  \"white\"",
         "query_pl": "SELECT t1.product_name FROM products AS t1 JOIN ref_colors AS t2 ON t1.color_code  =  t2.color_code WHERE t2.color_description  =  \"biały\""
     },
@@ -8709,8 +8709,8 @@
     },
     {
         "db_id": "soccer_2",
-        "question": "hello there!  Can you please provide me with a list of all college names?",
-        "question_pl": "Witajcie!  Czy możesz podać mi listę wszystkich nazw uczelni?",
+        "question": "Can you please provide me with a list of all college names?",
+        "question_pl": "Czy możesz podać mi listę wszystkich nazw uczelni?",
         "query": "SELECT cName FROM college ",
         "query_pl": "SELECT cName FROM college "
     },
@@ -8730,8 +8730,8 @@
     },
     {
         "db_id": "flight_company",
-        "question": "Hi, which companies have operated more than one flight? ",
-        "question_pl": "Cześć, które firmy obsługiwały więcej niż jeden lot?",
+        "question": "Which companies have operated more than one flight? ",
+        "question_pl": "Które firmy obsługiwały więcej niż jeden lot?",
         "query": "SELECT * FROM operate_company AS T1 JOIN flight AS t2 ON T1.id  =  T2.company_id GROUP BY T1.id HAVING count(*)  >  1",
         "query_pl": "SELECT * FROM operate_company AS T1 JOIN flight AS t2 ON T1.id  =  T2.company_id GROUP BY T1.id HAVING count(*)  >  1"
     },
@@ -8814,8 +8814,8 @@
     },
     {
         "db_id": "hr_1",
-        "question": "Hello! Can you tell me how many total employees are on this list?",
-        "question_pl": "Witaj! Czy możesz mi powiedzieć, ilu pracowników znajduje się na tej liście?",
+        "question": "Can you tell me how many total employees are on this list?",
+        "question_pl": "Czy możesz mi powiedzieć, ilu pracowników znajduje się na tej liście?",
         "query": "SELECT count(distinct EMPLOYEE_ID) from  employees",
         "query_pl": "SELECT count(distinct EMPLOYEE_ID) from  employees"
     },
@@ -9003,8 +9003,8 @@
     },
     {
         "db_id": "activity_1",
-        "question": "Hello there!  Thank you for taking the time to work with me!  Can you provide me with a list of all of the different activity names?",
-        "question_pl": "Witaj!  Dziękuję, że poświęciłeś czas na współpracę ze mną!  Czy możesz dostarczyć mi listę wszystkich nazw różnych aktywności?",
+        "question": "Can you provide me with a list of all of the different activity names?",
+        "question_pl": "Czy możesz dostarczyć mi listę wszystkich nazw różnych aktywności?",
         "query": "SELECT activity_name FROM Activity ",
         "query_pl": "SELECT activity_name FROM Activity "
     },
@@ -9038,22 +9038,22 @@
     },
     {
         "db_id": "customer_deliveries",
-        "question": "Hi there!  Can you show me a list of all customer IDs for customers not located in the state of California?",
-        "question_pl": "Cześć!  Czy możesz pokazać mi listę wszystkich identyfikatorów klientów spoza stanu Kalifornia?",
+        "question": "Can you show me a list of all customer IDs for customers not located in the state of California?",
+        "question_pl": "Czy możesz pokazać mi listę wszystkich identyfikatorów klientów spoza stanu Kalifornia?",
         "query": "SELECT customer_id FROM customers EXCEPT SELECT t1.customer_id FROM customers AS t1 JOIN customer_addresses AS t2 ON t1.customer_id  =  t2.customer_id JOIN addresses AS t3 ON t2.address_id  =  t3.address_id WHERE t3.state_province_county  =  'California'",
         "query_pl": "SELECT customer_id FROM customers EXCEPT SELECT t1.customer_id FROM customers AS t1 JOIN customer_addresses AS t2 ON t1.customer_id  =  t2.customer_id JOIN addresses AS t3 ON t2.address_id  =  t3.address_id WHERE t3.state_province_county  =  \"Kalifornia\""
     },
     {
         "db_id": "solvency_ii",
-        "question": "Hello there!  Can you show me a list of all of the different product type codes?",
-        "question_pl": "Witaj!  Czy możesz pokazać mi listę wszystkich kodów różnych typów produktów?",
+        "question": "Can you show me a list of all of the different product type codes?",
+        "question_pl": "Czy możesz pokazać mi listę wszystkich kodów różnych typów produktów?",
         "query": " SELECT Product_Type_Code FROM Products",
         "query_pl": " SELECT Product_Type_Code FROM Products"
     },
     {
         "db_id": "insurance_fnol",
-        "question": "Hello there!  Can you provide me with a list of all of the service names?",
-        "question_pl": "Witajcie!  Czy możesz podać mi listę wszystkich nazw usług?",
+        "question": "Can you provide me with a list of all of the service names?",
+        "question_pl": "Czy możesz podać mi listę wszystkich nazw usług?",
         "query": "SELECT service_name FROM services ",
         "query_pl": "SELECT service_name FROM services "
     },
@@ -9073,8 +9073,8 @@
     },
     {
         "db_id": "products_for_hire",
-        "question": "Hello, what is the total number of bookings?",
-        "question_pl": "Witaj, jaka jest całkowita liczba rezerwacji?",
+        "question": "What is the total number of bookings?",
+        "question_pl": "Jaka jest całkowita liczba rezerwacji?",
         "query": "SELECT COUNT(*) FROM BOOKINGS",
         "query_pl": "SELECT COUNT(*) FROM BOOKINGS"
     },
@@ -9318,8 +9318,8 @@
     },
     {
         "db_id": "customer_complaints",
-        "question": "Hello, how many complaints have we had?",
-        "question_pl": "Witaj, ile mieliśmy skarg?",
+        "question": "How many complaints have we had?",
+        "question_pl": "Ile mieliśmy skarg?",
         "query": " SELECT count(*) FROM complaints",
         "query_pl": " SELECT count(*) FROM complaints"
     },
@@ -9353,15 +9353,15 @@
     },
     {
         "db_id": "hospital_1",
-        "question": "Hello!  How are you!  Can you provide me with a list of all patient names?",
-        "question_pl": "Witaj! Jak się masz!  Czy możesz podać mi listę nazwisk wszystkich pacjentów?",
+        "question": "Can you provide me with a list of all patient names?",
+        "question_pl": "Czy możesz podać mi listę nazwisk wszystkich pacjentów?",
         "query": "SELECT name FROM Patient",
         "query_pl": "SELECT name FROM Patient"
     },
     {
         "db_id": "insurance_fnol",
-        "question": "Hello!  Can you provide me with a list of all of the settlement IDs and the corresponding settlement amounts?",
-        "question_pl": "Witaj!  Czy możesz dostarczyć mi listę wszystkich identyfikatorów rozliczeń i odpowiadających im kwot rozliczeń?",
+        "question": "Can you provide me with a list of all of the settlement IDs and the corresponding settlement amounts?",
+        "question_pl": "Czy możesz dostarczyć mi listę wszystkich identyfikatorów rozliczeń i odpowiadających im kwot rozliczeń?",
         "query": "SELECT Settlement_ID, settlement_amount FROM settlements",
         "query_pl": "SELECT Settlement_ID, settlement_amount FROM settlements"
     },
@@ -9381,8 +9381,8 @@
     },
     {
         "db_id": "device",
-        "question": "Hello!  Can you show me a list of all of the shop names?",
-        "question_pl": "Witaj!  Czy możesz mi pokazać listę wszystkich nazw sklepów?",
+        "question": "Can you show me a list of all of the shop names?",
+        "question_pl": "Czy możesz mi pokazać listę wszystkich nazw sklepów?",
         "query": "SELECT Shop_Name FROM shop ",
         "query_pl": "SELECT Shop_Name FROM shop "
     },
@@ -9472,8 +9472,8 @@
     },
     {
         "db_id": "party_people",
-        "question": "Hi how are you!?  Can you provide me with a list of all of the different member names?",
-        "question_pl": "Cześć, jak się masz!?  Czy możesz podać mi listę wszystkich nazwisk różnych członków?",
+        "question": "Can you provide me with a list of all of the different member names?",
+        "question_pl": "Czy możesz podać mi listę wszystkich nazwisk różnych członków?",
         "query": "SELECT distinct member_name FROM member",
         "query_pl": "SELECT distinct member_name FROM member"
     },
@@ -9591,8 +9591,8 @@
     },
     {
         "db_id": "apartment_rentals",
-        "question": "Hello. What are the IDs of guests with gender code Female?",
-        "question_pl": "Witaj. Jakie są identyfikatory gości z kodem płci Kobieta?",
+        "question": "What are the IDs of guests with gender code Female?",
+        "question_pl": "Jakie są identyfikatory gości z kodem płci Kobieta?",
         "query": "SELECT guest_id FROM Guests WHERE gender_code  =  \"Female\"",
         "query_pl": "SELECT guest_id FROM Guests WHERE gender_code  =  \"Kobieta\""
     },
@@ -9647,8 +9647,8 @@
     },
     {
         "db_id": "bike_1",
-        "question": "Hello there!  How are you?  Could you please provide me with a list of all trip IDs for the zip code 94002?",
-        "question_pl": "Witaj!  Jak się masz?  Czy możesz podać mi listę wszystkich identyfikatorów podróży dla kodu pocztowego 94002?",
+        "question": "Could you please provide me with a list of all trip IDs for the zip code 94002?",
+        "question_pl": "Czy możesz podać mi listę wszystkich identyfikatorów podróży dla kodu pocztowego 94002?",
         "query": "SELECT id FROM trip WHERE zip_code  =  94002 ",
         "query_pl": "SELECT id FROM trip WHERE zip_code  =  94002 "
     },
@@ -9668,8 +9668,8 @@
     },
     {
         "db_id": "network_2",
-        "question": "Hi there!  Can you provide me with a list of all of the names of people on this list?",
-        "question_pl": "Cześć!  Czy możesz podać mi listę wszystkich nazwisk osób znajdujących się na tej liście?",
+        "question": "Can you provide me with a list of all of the names of people on this list?",
+        "question_pl": "Czy możesz podać mi listę wszystkich nazwisk osób znajdujących się na tej liście?",
         "query": "SELECT name FROM Person",
         "query_pl": "SELECT name FROM Person"
     },
@@ -9710,15 +9710,15 @@
     },
     {
         "db_id": "swimming",
-        "question": "hi. what is the average capacity of the stadiums?",
-        "question_pl": "Cześć. jaka jest średnia pojemność stadionów?",
+        "question": "What is the average capacity of the stadiums?",
+        "question_pl": "Jaka jest średnia pojemność stadionów?",
         "query": "SELECT avg(capacity) FROM stadium ",
         "query_pl": "SELECT avg(capacity) FROM stadium "
     },
     {
         "db_id": "apartment_rentals",
-        "question": "Hi - can you please tell me the average room count of all Provisional bookings?",
-        "question_pl": "Cześć - czy możesz mi podać średnią liczbę pokoi we wszystkich rezerwacjach tymczasowych?",
+        "question": "Can you please tell me the average room count of all Provisional bookings?",
+        "question_pl": "Czy możesz mi podać średnią liczbę pokoi we wszystkich rezerwacjach tymczasowych?",
         "query": "SELECT avg(room_count) FROM Apartment_Bookings AS T1 JOIN Apartments AS T2 ON T1.apt_id  =  T2.apt_id WHERE T1.booking_status_code  =  \"Provisional\"",
         "query_pl": "SELECT avg(room_count) FROM Apartment_Bookings AS T1 JOIN Apartments AS T2 ON T1.apt_id  =  T2.apt_id WHERE T1.booking_status_code  =  \"Tymczasowe\""
     },
@@ -9843,8 +9843,8 @@
     },
     {
         "db_id": "insurance_policies",
-        "question": "Hello! Can you show me a list of all the claim IDs and their associated claim amount?",
-        "question_pl": "Witaj! Czy możesz pokazać mi listę wszystkich identyfikatorów roszczeń i powiązanych z nimi kwot roszczeń?",
+        "question": "Can you show me a list of all the claim IDs and their associated claim amount?",
+        "question_pl": "Czy możesz pokazać mi listę wszystkich identyfikatorów roszczeń i powiązanych z nimi kwot roszczeń?",
         "query": "SELECT claim_id, amount_claimed FROM Claims ",
         "query_pl": "SELECT claim_id, amount_claimed FROM Claims "
     },
@@ -9927,8 +9927,8 @@
     },
     {
         "db_id": "journal_committee",
-        "question": "Hello. What is the name of the youngest editor?",
-        "question_pl": "Witaj. Jak nazywa się najmłodszy redaktor?",
+        "question": "What is the name of the youngest editor?",
+        "question_pl": "Jak nazywa się najmłodszy redaktor?",
         "query": "SELECT Name FROM editor ORDER BY Age ASC LIMIT 1",
         "query_pl": "SELECT Name FROM editor ORDER BY Age ASC LIMIT 1"
     },
@@ -9962,8 +9962,8 @@
     },
     {
         "db_id": "hr_1",
-        "question": "hi. show me the names of all of the departments",
-        "question_pl": "cześć. pokaż mi nazwy wszystkich działów",
+        "question": "Show me the names of all of the departments",
+        "question_pl": "Pokaż mi nazwy wszystkich działów",
         "query": "SELECT department_name FROM departments",
         "query_pl": "SELECT department_name FROM departments"
     },
@@ -9997,15 +9997,15 @@
     },
     {
         "db_id": "music_4",
-        "question": "Hello, can you please tell me the most weeks spent on top?",
-        "question_pl": "Witaj, czy możesz mi powiedzieć, ile tygodni spędziłeś na szczycie?",
+        "question": "Can you please tell me the most weeks spent on top?",
+        "question_pl": "Czy możesz mi powiedzieć, ile tygodni spędziłeś na szczycie?",
         "query": "SELECT max(Weeks_on_Top) FROM volume",
         "query_pl": "SELECT max(Weeks_on_Top) FROM volume"
     },
     {
         "db_id": "flight_4",
-        "question": "hi. How many routes are there?",
-        "question_pl": "Cześć. Ile jest tras?",
+        "question": "How many routes are there?",
+        "question_pl": "Ile jest tras?",
         "query": "SELECT count(*) FROM routes AS T1 JOIN airports AS T2 ",
         "query_pl": "SELECT count(*) FROM routes AS T1 JOIN airports AS T2 "
     },
@@ -10053,8 +10053,8 @@
     },
     {
         "db_id": "icfp_1",
-        "question": "Hello! Can you provide me with a list of the First and Last names of all authors with the last name of \"Ohori\"?",
-        "question_pl": "Witaj! Czy możesz podać mi listę imion i nazwisk wszystkich autorów o nazwisku \"Ohori\"?",
+        "question": "Can you provide me with a list of the First and Last names of all authors with the last name of \"Ohori\"?",
+        "question_pl": "Czy możesz podać mi listę imion i nazwisk wszystkich autorów o nazwisku \"Ohori\"?",
         "query": "SELECT fname, lname FROM authors where lname  =  \"Ohori\"",
         "query_pl": "SELECT fname, lname FROM authors where lname  =  \"Ohori\""
     },
@@ -10067,8 +10067,8 @@
     },
     {
         "db_id": "formula_1",
-        "question": "Hello, how many drivers are there in total?",
-        "question_pl": "Witaj, ilu jest w sumie kierowców?",
+        "question": "How many drivers are there in total?",
+        "question_pl": "Ilu jest w sumie kierowców?",
         "query": "SELECT count(*) from drivers",
         "query_pl": "SELECT count(*) from drivers"
     },
@@ -10144,8 +10144,8 @@
     },
     {
         "db_id": "college_2",
-        "question": "Hello there!  Can you show me a list of all of the departments and the budgets?",
-        "question_pl": "Witajcie!  Czy możesz mi pokazać listę wszystkich działów i budżetów?",
+        "question": "Can you show me a list of all of the departments and the budgets?",
+        "question_pl": "Czy możesz mi pokazać listę wszystkich działów i budżetów?",
         "query": "SELECT dept_name,budget FROM department",
         "query_pl": "SELECT dept_name,budget FROM department"
     },
@@ -10256,8 +10256,8 @@
     },
     {
         "db_id": "tracking_software_problems",
-        "question": "Hello!  Can you provide me with a list of all of the staff members first and last names?",
-        "question_pl": "Witaj!  Czy możesz podać mi listę imion i nazwisk wszystkich pracowników?",
+        "question": "Can you provide me with a list of all of the staff members first and last names?",
+        "question_pl": "Czy możesz podać mi listę imion i nazwisk wszystkich pracowników?",
         "query": "SELECT staff_first_name ,  staff_last_name FROM staff",
         "query_pl": "SELECT staff_first_name ,  staff_last_name FROM staff"
     },
@@ -10424,8 +10424,8 @@
     },
     {
         "db_id": "products_gen_characteristics",
-        "question": "Hello!  Can you please show me a list of all of the product names and their associated product IDs?",
-        "question_pl": "Witaj!  Czy możesz pokazać mi listę wszystkich nazw produktów i powiązanych z nimi identyfikatorów produktów?",
+        "question": "Can you please show me a list of all of the product names and their associated product IDs?",
+        "question_pl": "Czy możesz pokazać mi listę wszystkich nazw produktów i powiązanych z nimi identyfikatorów produktów?",
         "query": "SELECT t1.product_id,t1.product_name FROM products AS t1 JOIN ref_product_categories AS t2 ON t1.product_category_code  =  t2.product_category_code",
         "query_pl": "SELECT t1.product_id,t1.product_name FROM products AS t1 JOIN ref_product_categories AS t2 ON t1.product_category_code  =  t2.product_category_code"
     },
@@ -10529,8 +10529,8 @@
     },
     {
         "db_id": "candidate_poll",
-        "question": "Hello. How many people have a weight that is higher than 85?",
-        "question_pl": "Witaj. Ile osób ma wagę wyższą niż 85?",
+        "question": "How many people have a weight that is higher than 85?",
+        "question_pl": "Ile osób ma wagę wyższą niż 85?",
         "query": "SELECT count(*)  FROM people WHERE weight  >  85",
         "query_pl": "SELECT count(*)  FROM people WHERE weight  >  85"
     },
@@ -10830,8 +10830,8 @@
     },
     {
         "db_id": "restaurant_1",
-        "question": "Hello! Can you provide me with the time spent in all restaurants by Linda Smith?",
-        "question_pl": "Witaj! Czy możesz podać mi czas spędzony we wszystkich restauracjach przez Lindę Smith?",
+        "question": "Can you provide me with the time spent in all restaurants by Linda Smith?",
+        "question_pl": "Czy możesz podać mi czas spędzony we wszystkich restauracjach przez Lindę Smith?",
         "query": "SELECT sum(Spent) FROM Student JOIN Visits_Restaurant ON Student.StuID = Visits_Restaurant.StuID WHERE Student.Fname = \"Linda\" AND Student.Lname = \"Smith\";",
         "query_pl": "SELECT sum(Spent) FROM Student JOIN Visits_Restaurant ON Student.StuID = Visits_Restaurant.StuID WHERE Student.Fname = \"Linda\" AND Student.Lname = \"Smith\";"
     },
@@ -10865,8 +10865,8 @@
     },
     {
         "db_id": "insurance_and_eClaims",
-        "question": "Hello!  Can you provide me with a list of all customer ids and their associated policy type codes?",
-        "question_pl": "Witaj!  Czy możesz dostarczyć mi listę wszystkich identyfikatorów klientów i powiązanych z nimi kodów typów polis?",
+        "question": "Can you provide me with a list of all customer ids and their associated policy type codes?",
+        "question_pl": "Czy możesz dostarczyć mi listę wszystkich identyfikatorów klientów i powiązanych z nimi kodów typów polis?",
         "query": "select T2.Customer_ID, T1.Policy_Type_Code from Policies AS t1 JOIN customers AS t2 ON t1.customer_id = t2.customer_id",
         "query_pl": "select T2.Customer_ID, T1.Policy_Type_Code from Policies AS t1 JOIN customers AS t2 ON t1.customer_id = t2.customer_id"
     },
@@ -10907,8 +10907,8 @@
     },
     {
         "db_id": "department_store",
-        "question": "Hi there!  Can you provide me with a list of all Staff Department Assignments \"date assigned to\" values?",
-        "question_pl": "Cześć!  Czy możesz udostępnić mi listę wszystkich wartości \"dane przypisania do\" przypisanych do działów pracowników?",
+        "question": "Can you provide me with a list of all Staff Department Assignments \"date assigned to\" values?",
+        "question_pl": "Czy możesz udostępnić mi listę wszystkich wartości \"dane przypisania do\" przypisanych do działów pracowników?",
         "query": "SELECT date_assigned_to  from Staff_Department_Assignments ",
         "query_pl": "SELECT date_assigned_to  from Staff_Department_Assignments "
     },

@@ -99,8 +99,8 @@
     },
     {
         "db_id": "world_1",
-        "question": "Hi. How many countries are listed in total?",
-        "question_pl": "Cześć, ile krajów jest w sumie wymienionych?",
+        "question": "How many countries are listed in total?",
+        "question_pl": "Ile krajów jest w sumie wymienionych?",
         "query": "SELECT count(*) from country",
         "query_pl": "SELECT count(*) from country"
     },
@@ -197,8 +197,8 @@
     },
     {
         "db_id": "wta_1",
-        "question": "hi, what are the names of the players?",
-        "question_pl": "Cześć, jak nazywają się gracze?",
+        "question": "What are the names of the players?",
+        "question_pl": "Jak nazywają się gracze?",
         "query": "SELECT first_name,  last_name FROM players",
         "query_pl": "SELECT first_name,  last_name FROM players"
     },
@@ -274,8 +274,8 @@
     },
     {
         "db_id": "flight_2",
-        "question": "hi, list out all airport name",
-        "question_pl": "Cześć, wymień wszystkie nazwy lotnisk",
+        "question": "List out all airport name",
+        "question_pl": "Wymień wszystkie nazwy lotnisk",
         "query": "SELECT airportname FROM airports",
         "query_pl": "SELECT airportname FROM airports"
     },
@@ -1037,15 +1037,15 @@
     },
     {
         "db_id": "flight_2",
-        "question": "Hi, What Airline has the largest number of flights?",
-        "question_pl": "Cześć, Która linia lotnicza ma największą liczbę lotów?",
+        "question": "What Airline has the largest number of flights?",
+        "question_pl": "Która linia lotnicza ma największą liczbę lotów?",
         "query": "SELECT T1.airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline GROUP BY T1.Airline ORDER BY count(*) desc LIMIT 1",
         "query_pl": "SELECT T1.airline FROM AIRLINES AS T1 JOIN FLIGHTS AS T2 ON T1.uid  =  T2.Airline GROUP BY T1.Airline ORDER BY count(*) desc LIMIT 1"
     },
     {
         "db_id": "battle_death",
-        "question": "Hi there!  Can you show me a list of all of the battle ids and the corresponding battle names?",
-        "question_pl": "Cześć!  Czy możesz pokazać mi listę wszystkich identyfikatorów bitew i odpowiadających im nazw bitew?",
+        "question": "Can you show me a list of all of the battle ids and the corresponding battle names?",
+        "question_pl": "Czy możesz pokazać mi listę wszystkich identyfikatorów bitew i odpowiadających im nazw bitew?",
         "query": "SELECT T1.id ,  T1.name FROM battle AS T1",
         "query_pl": "SELECT T1.id ,  T1.name FROM battle AS T1"
     },
@@ -1079,8 +1079,8 @@
     },
     {
         "db_id": "student_transcripts_tracking",
-        "question": "Hi what is the latest transcript?",
-        "question_pl": "Cześć, jaka jest najnowsza transkrypcja?",
+        "question": "What is the latest transcript?",
+        "question_pl": "Jaka jest najnowsza transkrypcja?",
         "query": "SELECT transcript_id FROM Transcripts ORDER BY transcript_date DESC LIMIT 1",
         "query_pl": "SELECT transcript_id FROM Transcripts ORDER BY transcript_date DESC LIMIT 1"
     },
@@ -1443,8 +1443,8 @@
     },
     {
         "db_id": "pets_1",
-        "question": "Hi. What are the different types of pets?",
-        "question_pl": "Witam. Jakie są różne rodzaje zwierząt domowych?",
+        "question": "What are the different types of pets?",
+        "question_pl": "Jakie są różne rodzaje zwierząt domowych?",
         "query": "SELECT distinct PetType from Pets",
         "query_pl": "SELECT distinct PetType from Pets"
     },
@@ -1520,8 +1520,8 @@
     },
     {
         "db_id": "world_1",
-        "question": "Hi, what is the population of the Caribbean?",
-        "question_pl": "Cześć, jaka jest populacja Karaiby?",
+        "question": "What is the population of the Caribbean?",
+        "question_pl": "Jaka jest populacja Karaiby?",
         "query": "SELECT sum(Population) FROM country WHERE Region = \"Caribbean\"",
         "query_pl": "SELECT sum(Population) FROM country WHERE Region = \"Karaiby\""
     },
@@ -1555,8 +1555,8 @@
     },
     {
         "db_id": "pets_1",
-        "question": "hi, what number of students have a dog as a pet?",
-        "question_pl": "Cześć, ilu studentów ma psa jako zwierzę domowe?",
+        "question": "What number of students have a dog as a pet?",
+        "question_pl": "Ilu studentów ma psa jako zwierzę domowe?",
         "query": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  'dog'",
         "query_pl": "SELECT count(*) FROM student AS T1 JOIN has_pet AS T2 ON T1.stuid  =  T2.stuid JOIN pets AS T3 ON T3.petid  =  T2.petid WHERE T3.pettype  =  \"pies\""
     },
@@ -1576,8 +1576,8 @@
     },
     {
         "db_id": "dog_kennels",
-        "question": "Hi there! Can you tell me how many different professional IDs are on this list?",
-        "question_pl": "Cześć! Czy możesz mi powiedzieć, ile różnych profesjonalnych identyfikatorów znajduje się na tej liście?",
+        "question": "Can you tell me how many different professional IDs are on this list?",
+        "question_pl": "Czy możesz mi powiedzieć, ile różnych profesjonalnych identyfikatorów znajduje się na tej liście?",
         "query": "SELECT count(distinct professional_id) from professionals",
         "query_pl": "SELECT count(distinct professional_id) from professionals"
     },
