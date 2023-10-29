@@ -294,6 +294,6 @@ def translate_samples(samples, table_trans, column_trans):
 
 def translate_samples_single(sample, table_trans, column_trans):
     sample["query_pl"] = translate_query(
-        sample["query"], sample["db_id"], table_trans, column_trans
+        sample["query_pl"], sample["db_id"], table_trans, column_trans
     )
     return sample
