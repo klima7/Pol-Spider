@@ -67,7 +67,10 @@ def _join_samples(datasets_paths, output_path):
     
     for dataset_path in datasets_paths:
         for split_name, joined_group in zip(split_names, joined_groups):
-            samples = load_json(Path(dataset_path) / split_name)
+            samples_path = Path(dataset_path) / split_name
+            if not samples_path.exists():
+                continue
+            samples = load_json(samples_path)
             joined_group.extend(samples)
     
     for split_name, joined_group in zip(split_names, joined_groups):
@@ -79,13 +82,19 @@ def _join_gold(datasets_paths, output_path):
     joined_train = []
     
     for dataset_path in datasets_paths:
-        with open(Path(dataset_path) / 'dev_gold.sql', encoding='utf-8') as f:
-            joined_dev.extend([line for line in f.readlines() if line.strip()])
-        with open(Path(dataset_path) / 'train_gold.sql', encoding='utf-8') as f:
-            joined_train.extend([line for line in f.readlines() if line.strip()])
+        dev_path = Path(dataset_path) / 'dev_gold.sql'
+        if dev_path.exists():
+            with open(dev_path, encoding='utf-8') as f:
+                joined_dev.extend([line for line in f.readlines() if line.strip()])
+            
+        train_path = Path(dataset_path) / 'train_gold.sql'
+        if train_path.exists():
+            with open(train_path, encoding='utf-8') as f:
+                joined_train.extend([line for line in f.readlines() if line.strip()])
 
     with open(Path(output_path) / 'dev_gold.sql', 'w', encoding='utf-8') as f:
         f.writelines(joined_dev)
+        
     with open(Path(output_path) / 'train_gold.sql', 'w', encoding='utf-8') as f:
         f.writelines(joined_train)
 
