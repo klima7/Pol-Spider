@@ -6783,13 +6783,6 @@
         "query_pl": "SELECT location_code FROM Document_locations GROUP BY location_code ORDER BY count(*) DESC LIMIT 1"
     },
     {
-        "db_id": "wine_1",
-        "question": "What are the maximum price and score of wines in each year?",
-        "question_pl": "Haka jest maksymalna cena i ocena win w poszczególnych latach?",
-        "query": "SELECT max(Price) ,  max(Score) ,  YEAR FROM WINE GROUP BY YEAR",
-        "query_pl": "SELECT max(Price) ,  max(Score) ,  YEAR FROM WINE GROUP BY YEAR"
-    },
-    {
         "db_id": "flight_4",
         "question": "Which cities have more than one airport?",
         "question_pl": "Które miasta mają więcej niż jedno lotnisko?",
@@ -7308,13 +7301,6 @@
         "query_pl": "SELECT name FROM instructor WHERE dept_name  =  \"Comp. Sci.\"  AND salary  >  80000"
     },
     {
-        "db_id": "customers_and_addresses",
-        "question": "Who made the latest order?",
-        "question_pl": "Kto złożył ostatnie zamówienie?",
-        "query": "SELECT t1.customer_name FROM customers AS t1 JOIN customer_orders AS t2 ON t1.customer_id  =  t2.customer_id ORDER BY t2.order_date DESC LIMIT 1",
-        "query_pl": "SELECT t1.customer_name FROM customers AS t1 JOIN customer_orders AS t2 ON t1.customer_id  =  t2.customer_id ORDER BY t2.order_date DESC LIMIT 1"
-    },
-    {
         "db_id": "university_basketball",
         "question": "What is the name of the school that participated in the basketball match?",
         "question_pl": "Jak nazywa się szkoła, która wzięła udział w meczu koszykówki?",
@@ -7390,13 +7376,6 @@
         "question_pl": "Kim są klienci?",
         "query": "SELECT cust_name FROM customer",
         "query_pl": "SELECT cust_name FROM customer"
-    },
-    {
-        "db_id": "hr_1",
-        "question": "What are the first and last name for those employees who works either in department 70 or 90?",
-        "question_pl": "Jakie są imiona i nazwiska pracowników, którzy pracują w dziale 70 lub 90?",
-        "query": "SELECT first_name ,  last_name FROM employees WHERE department_id  =  70 OR department_id  =  90",
-        "query_pl": "SELECT first_name ,  last_name FROM employees WHERE department_id  =  70 OR department_id  =  90"
     },
     {
         "db_id": "baseball_1",
@@ -7537,13 +7516,6 @@
         "question_pl": "W jakim wieku jest Zach?",
         "query": "SELECT age from person where name = \"Zach\"",
         "query_pl": "SELECT age from person where name = \"Zach\""
-    },
-    {
-        "db_id": "driving_school",
-        "question": "How many customers are there?",
-        "question_pl": "Ilu masz klientów?",
-        "query": "SELECT count(*) FROM Customers",
-        "query_pl": "SELECT count(*) FROM Customers"
     },
     {
         "db_id": "manufactory_1",
@@ -9924,13 +9896,6 @@
         "question_pl": "Ile masz wydanych albumów?",
         "query": "SELECT count(*) from albums",
         "query_pl": "SELECT count(*) from albums"
-    },
-    {
-        "db_id": "journal_committee",
-        "question": "What is the name of the youngest editor?",
-        "question_pl": "Jak nazywa się najmłodszy redaktor?",
-        "query": "SELECT Name FROM editor ORDER BY Age ASC LIMIT 1",
-        "query_pl": "SELECT Name FROM editor ORDER BY Age ASC LIMIT 1"
     },
     {
         "db_id": "device",
