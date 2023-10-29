@@ -15362,7 +15362,7 @@
         "question": "which city is John F Kennedy International Airport located in?",
         "question_pl": "W którym mieście znajduje się międzynarodowe lotnisko Johna F. Kennedy'ego?",
         "query": "SELECT city FROM airports WHERE name  =  'John F Kennedy International Airport'",
-        "query_pl": "SELECT city FROM airports WHERE name  =  \"Międzynarodowy port lotniczy im. Johna F. Kennedy'ego\""
+        "query_pl": "SELECT city FROM airports WHERE name  =  \"Międzynarodowy port lotniczy im. Johna F. Kennedyego\""
     },
     {
         "db_id": "flight_4",
