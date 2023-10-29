@@ -1,5 +1,9 @@
 **/__pycache__/**
 .vscode/**
 spider-en/**
+
 datasets/components/database/**
 !datasets/components/database/README.md
+
+datasets/complete/**
+!datasets/complete/README.md
