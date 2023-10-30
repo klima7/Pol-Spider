@@ -20,6 +20,7 @@ def _join_datasets(datasets_paths, output_path):
     if output_path.exists():
         print('Overwriting existing dataset')
         shutil.rmtree(str(output_path))
+    output_path.mkdir()
     
     _join_dbs(datasets_paths, output_path)
     print('Joined databases')
