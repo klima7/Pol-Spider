@@ -1,12 +1,14 @@
 import sys
 from copy import deepcopy
 from statistics import mean, stdev
+from collections import Counter
 
 import click
 import sqlparse
 
 from common import load_json, save_json, get_tables_names, get_columns_names
 from common.constants import *
+from third_party.evaluation import eval_hardness
 
 
 @click.command()
@@ -66,8 +68,12 @@ def _analyse_samples(samples):
     
     
 def _analyse_samples_count(samples):
+    difficulties = [eval_hardness(sample['sql']) for sample in samples]
+    difficulties_counts = dict(Counter(difficulties).most_common())
+    
     return {
-        'total': len(samples),
+        'all': len(samples),
+        **difficulties_counts,
     }
     
     
