@@ -10,6 +10,7 @@ from tqdm import tqdm
 from joblib import Parallel, delayed
 
 from common import load_json, save_json, load_column_translations, load_table_translations
+from common.sql import get_columns_names, get_tables_names
 from common.constants import *
 
 
@@ -63,12 +64,6 @@ def get_tables_aliasing(sql):
         if table.alias
     ]
     return aliasing
-
-
-def get_tables_names(sql):
-    parsed = sqlglot.parse_one(sql)
-    tables = {table.this.output_name for table in parsed.find_all(exp.Table)}
-    return tables
 
 
 def split_nested_query(tokens):
@@ -153,34 +148,11 @@ def get_token_type(tokens, token):
     except Exception:
         return "other"
 
-    before_columns = [
-        col.output_name
-        for col in before_parsed.find_all(exp.Column)
-        if col.this.quoted == False
-    ]
-    after_columns = [
-        col.output_name
-        for col in after_parsed.find_all(exp.Column)
-        if col.this.quoted == False
-    ]
+    before_columns = get_columns_names(before_parsed)
+    after_columns = get_columns_names(after_parsed)
 
-    before_tables_1 = [
-        table.this.output_name for table in before_parsed.find_all(exp.Table)
-    ]
-    before_tables_2 = [col.table for col in before_parsed.find_all(exp.Column)]
-    before_tables_3 = [
-        alias.this.output_name for alias in before_parsed.find_all(exp.TableAlias)
-    ]
-    before_tables = [*before_tables_1, *before_tables_2, *before_tables_3]
-
-    after_tables_1 = [
-        table.this.output_name for table in after_parsed.find_all(exp.Table)
-    ]
-    after_tables_2 = [col.table for col in after_parsed.find_all(exp.Column)]
-    after_tables_3 = [
-        alias.this.output_name for alias in after_parsed.find_all(exp.TableAlias)
-    ]
-    after_tables = [*after_tables_1, *after_tables_2, *after_tables_3]
+    before_tables = get_tables_names(before_parsed)
+    after_tables = get_tables_names(after_parsed)
 
     if (
         token.value in before_columns

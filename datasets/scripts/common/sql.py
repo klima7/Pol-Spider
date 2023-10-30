@@ -8,7 +8,7 @@ def get_tables_names(query: str | sqlglot.Expression):
     tables_1 = [table.this.output_name for table in query.find_all(sqlglot.exp.Table)]
     tables_2 = [col.table for col in query.find_all(sqlglot.exp.Column) if col.table != '']
     tables_3 = [alias.this.output_name for alias in query.find_all(sqlglot.exp.TableAlias)]
-    tables = [*tables_1, *tables_2, *tables_3]
+    tables = list(set([*tables_1, *tables_2, *tables_3]))
     return tables
 
 
@@ -21,4 +21,4 @@ def get_columns_names(query: str | sqlglot.Expression):
         for col in query.find_all(sqlglot.exp.Column)
         if col.this.quoted == False
     ]
-    return columns
+    return list(set(columns))
