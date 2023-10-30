@@ -1,5 +1,5 @@
-from .third_party.process_sql import get_sql
-from .third_party.parse_sql_one import Schema, get_schemas_from_json
+from third_party.process_sql import get_sql
+from third_party.parse_sql_one import Schema, get_schemas_from_json
 
 
 class SQLParseException(Exception):
