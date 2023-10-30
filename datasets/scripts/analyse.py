@@ -57,11 +57,17 @@ def _load_samples(dataset_name):
     
 def _analyse_samples(samples):
     return {
-        'samples count': len(samples),
+        'samples count': _analyse_samples_count(samples),
         'question length': _analyse_question_length(samples),
         'value length': _analyse_value_length(samples),
         'column name length': _analyse_column_name_length(samples),
         'table name length': _analyse_table_name_length(samples)
+    }
+    
+    
+def _analyse_samples_count(samples):
+    return {
+        'total': len(samples),
     }
     
     
