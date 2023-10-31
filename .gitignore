@@ -5,5 +5,7 @@ spider-en/**
 datasets/components/database/**
 !datasets/components/database/README.md
 
+datasets/components/schema_trans/*_sanitized/**
+
 datasets/complete/**
 !datasets/complete/README.md
