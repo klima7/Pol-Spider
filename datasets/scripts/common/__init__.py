@@ -1,4 +1,4 @@
 from .constants import *
 from .helpers import *
-from .translations import *
+from .translation import *
 from .sql import *

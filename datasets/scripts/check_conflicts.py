@@ -1,63 +1,40 @@
 import click
-from pathlib import Path
 
-from common import load_json
-
-
-TRANSLATIONS_DIR_PATH = Path(__file__).parent.parent / 'components' / 'schema_trans'
+from common import SchemaTranslation
+from common.constants import *
 
 
-
-def check_tables_conflicts(table_trans_path):
-    tables = load_json(table_trans_path)
-        
-    db_ids = set(table['db_id'] for table in tables)
-    for db_id in db_ids:
-        tables_names = list(
-            table['name_original_pl'].lower()
-            for table in tables if table['db_id'] == db_id
-        )
-        duplicates = list(set([
-            name for name in tables_names 
-            if len([x for x in tables_names if x == name]) > 1
-        ]))
-        if duplicates:
-            print(f"Conflicting tables {duplicates} in database '{db_id}'")
+def get_duplicates(elements):
+    return list(set([
+        e1 for e1 in elements 
+        if len([e2 for e2 in elements if e2 == e1]) > 1
+    ]))
     
+
+
+def check_conflicts(trans_path):
+    trans = SchemaTranslation.load(trans_path)
     
-def check_columns_conflicts(column_trans_path):
-    columns = load_json(column_trans_path)
-        
-    db_ids = set(column['db_id'] for column in columns)
-    for db_id in db_ids:
-        tables_names = set(
-            column['table_name_original'] 
-            for column in columns 
-            if column['db_id'] == db_id
-        )
-        for table_name in tables_names:
-            columns_names = [
-                column['column_name_original_pl'].lower() 
-                for column in columns 
-                if column['db_id'] == db_id and column['table_name_original'] == table_name
-            ]
-            duplicates = list(set([
-                name for name in columns_names 
-                if len([x for x in columns_names if x == name]) > 1
-            ]))
-            if duplicates:
-                print(f"Conflicting columns {duplicates} in table '{table_name}' in database '{db_id}'")
+    for db_id, db in trans.dbs.items():
+        tables_names = [table.orig.lower() for table in db.tables.values()]
+        tables_duplicates = get_duplicates(tables_names)
+        if tables_duplicates:
+            print(f"Conflicting tables names {tables_duplicates} in database '{db_id}'")
+        for table_name, table in db.tables.items():
+            columns_names = [column.orig.lower() for column in table.columns.values()]
+            columns_duplicates = get_duplicates(columns_names)
+            if columns_duplicates:
+                print(f"Conflicting columns names {columns_duplicates} in database '{db_id}' in table '{table_name}'")
 
 
 @click.command()
 @click.argument('translation_name', type=str)
-def sanitize(translation_name):
+def check_conflicts_cmd(translation_name):
     """Check names conflicts in given translation"""
-    translation_dir = TRANSLATIONS_DIR_PATH / translation_name
-
-    check_tables_conflicts(translation_dir / 'table_trans.json')
-    check_columns_conflicts(translation_dir / 'column_trans.json')
+    
+    trans_path = TRANS_PATH / (translation_name + '.json')
+    check_conflicts(trans_path)
 
 
 if __name__ == '__main__':
-    sanitize()
+    check_conflicts_cmd()
