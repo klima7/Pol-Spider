@@ -4,13 +4,11 @@ import spacy
 import spacy.cli
 
 
-# download spacy model
-spacy_model = "pl_core_news_sm"
-try:
-    nlp_pl = spacy.load(spacy_model)
-except Exception:
-    spacy.cli.download(spacy_model)
-    nlp_pl = spacy.load(spacy_model)
+nlp = spacy.load("xx_sent_ud_sm")
+
+
+def tokenize_text(text):
+    return [str(token) for token in nlp(text)]
 
 
 def tokenize_query_no_value(query):
@@ -45,10 +43,6 @@ def tokenize_query_no_value(query):
     return fine_tokens
 
 
-def tokenize_polish_text(text):
-    return [str(token) for token in nlp_pl(text)]
-
-
 def tokenize_sql_statement(root, tokens=None):
     if tokens is None:
         tokens = []
@@ -56,8 +50,10 @@ def tokenize_sql_statement(root, tokens=None):
     # Create tokens from elements which we can't divide
     if not hasattr(root, "tokens"):
         token = str(root).strip()
-        if token == "" or token == ";":
+        if token == "":
             pass
+        elif str(root.ttype).startswith("Token.Literal.String"):
+            tokens.extend(tokenize_text(str(root)))
         elif len(token.split(" ")) > 1:
             tokens.extend(token.split(" "))
         elif token == "!=":
@@ -70,16 +66,8 @@ def tokenize_sql_statement(root, tokens=None):
             tokens.append(str(root))
 
     # Not split identifiers like "T1.name" into separate tokens
-    elif isinstance(root, sql.Identifier) and "." in str(root):
+    elif isinstance(root, sql.Identifier) and "." in str(root) and str(root).strip("'\"") == str(root):
         tokens.append(str(root))
-
-    # Tokenize strings using polish tokenizer
-    elif (
-        isinstance(root, sql.Identifier)
-        and len(root.tokens) == 1
-        and str(root.tokens[0].ttype) == "Token.Literal.String.Symbol"
-    ):
-        tokens.extend(tokenize_polish_text(str(root)))
 
     # Tokenize other compound elements recursively
     else:
@@ -96,4 +84,4 @@ def tokenize_query(query):
 
 
 def tokenize_question(question):
-    return tokenize_polish_text(question)
+    return tokenize_text(question)
