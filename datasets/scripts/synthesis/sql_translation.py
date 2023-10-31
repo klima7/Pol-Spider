@@ -9,12 +9,12 @@ import sqlglot.expressions as exp
 from tqdm import tqdm
 from joblib import Parallel, delayed
 
-from common import load_json, save_json, load_column_translations, load_table_translations
+from common import load_json, save_json, SchemaTranslation
 from common.sql import get_columns_names, get_tables_names
 from common.constants import *
 
 
-def translate_tables_list(tables, table_trans, column_trans):
+def translate_tables_list(tables, trans):
     translated_tables = deepcopy(tables)
 
     for db in tqdm(translated_tables, desc="Translating tables"):
@@ -26,29 +26,26 @@ def translate_tables_list(tables, table_trans, column_trans):
         for i in range(1, len(db["column_names_original"])):
             table_idx, column_name_original = db["column_names_original"][i]
             table_name = db["table_names_original"][table_idx]
-            translations = column_trans[db_id][table_name.lower()][
-                column_name_original.lower()
-            ]
-            db["column_names_original"][i][1] = translations["name_original"]
-            db["column_names"][i][1] = translations["name"]
+            columns_trans = trans[db_id][table_name][column_name_original]
+            db["column_names_original"][i][1] = columns_trans.orig
+            db["column_names"][i][1] = columns_trans.name
 
         # translate tables
         for i in range(len(db["table_names_original"])):
             table_name = db["table_names_original"][i]
-            translations = table_trans[db_id][table_name.lower()]
-            db["table_names_original"][i] = translations["name_original"]
-            db["table_names"][i] = translations["name"]
+            table_trans = trans[db_id][table_name]
+            db["table_names_original"][i] = table_trans.orig
+            db["table_names"][i] = table_trans.name
     
     return translated_tables
 
 
-def translate_tables(column_trans_path, table_trans_path, db_prefix, output_path):
+def translate_tables(trans_path, db_prefix, output_path):
     tables = load_json(BASE_PATH / "tables.json")
     
-    if table_trans_path is not None:
-        table_trans = load_table_translations(table_trans_path)
-        column_trans = load_column_translations(column_trans_path)
-        tables = translate_tables_list(tables, table_trans, column_trans)
+    if trans_path is not None:
+        trans = SchemaTranslation.load(trans_path)
+        tables = translate_tables_list(tables, trans)
         
     for schema in tables:
         schema["db_id"] = f'{db_prefix}_{schema["db_id"]}'
@@ -167,10 +164,9 @@ def get_token_type(tokens, token):
 
 
 def translate_simple_query(
-    tokens, db_id, tables_trans, columns_trans, parent_aliasing=None
+    tokens, db_id, trans, parent_aliasing=None
 ):
-    tables_trans = tables_trans[db_id]
-    columns_trans = columns_trans[db_id]
+    trans = trans[db_id]
 
     query = " ".join([str(token) for token in tokens])
     tables_names = get_tables_names(query)
@@ -195,8 +191,8 @@ def translate_simple_query(
             if table_name is None:
                 possible_table_names = [
                     table_name
-                    for table_name, table_trans in columns_trans.items()
-                    if table_name in tables_names_low and token_low in table_trans
+                    for table_name, table_trans in trans.tables.items()
+                    if table_name in tables_names_low and token_low in table_trans.columns_names
                 ]
                 assert len(possible_table_names) == 1
                 table_name = possible_table_names[0]
@@ -204,12 +200,12 @@ def translate_simple_query(
             elif table_name.lower() in aliasing_rev:
                 table_name = aliasing_rev[table_name.lower()]
 
-            trans_name = columns_trans[table_name.lower()][token_low]["name_original"]
+            trans_name = trans[table_name][token_low].orig
             trans_name_in_style = copy_name_style(token, trans_name)
             tokens[i].value = trans_name_in_style
 
         elif token_type == "table" and token_low not in aliasing_rev:
-            trans_name = tables_trans[token_low]["name_original"]
+            trans_name = trans[token_low].orig
             trans_name_in_style = copy_name_style(token, trans_name)
             tokens[i].value = trans_name_in_style
 
@@ -235,37 +231,37 @@ def copy_name_style(style, name):
     return name
 
 
-def translate_query_recursively(tokens, db_id, table_trans, column_trans, aliasing):
+def translate_query_recursively(tokens, db_id, trans, aliasing):
     set_queries = split_set_query(tokens)
     for set_query in set_queries:
         outer_query, nested_queries = split_nested_query(set_query)
 
         outer_aliasing = translate_simple_query(
-            outer_query, db_id, table_trans, column_trans, aliasing
+            outer_query, db_id, trans, aliasing
         )
 
         for query in nested_queries:
             translate_query_recursively(
-                query, db_id, table_trans, column_trans, [*aliasing, *outer_aliasing]
+                query, db_id, trans, [*aliasing, *outer_aliasing]
             )
 
 
-def translate_query(query, db_id, table_trans, column_trans):
+def translate_query(query, db_id, trans):
     statement = sqlparse.parse(query)[0]
     tokens = [token for token in statement.flatten() if str(token).strip() != ""]
-    translate_query_recursively(tokens, db_id, table_trans, column_trans, [])
+    translate_query_recursively(tokens, db_id, trans, [])
     return str(statement)
 
 
-def translate_samples(samples, table_trans, column_trans, query_lang):
+def translate_samples(samples, trans, query_lang):
     return Parallel(-1)(
-        delayed(translate_samples_single)(sample, query_lang, table_trans, column_trans)
+        delayed(translate_samples_single)(sample, query_lang, trans)
         for sample in tqdm(samples, desc="Translating SQL queries")
     )
 
 
-def translate_samples_single(sample, query_lang, table_trans, column_trans):
+def translate_samples_single(sample, query_lang, trans):
     sample['query'][query_lang] = translate_query(
-        sample['query'][query_lang], sample["db_id"], table_trans, column_trans
+        sample['query'][query_lang], sample["db_id"], trans
     )
     return sample

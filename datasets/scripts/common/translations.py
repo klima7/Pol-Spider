@@ -1,45 +1,53 @@
-import json
+from common import load_json
 
 
+class SchemaTranslation:
+    
+    def __init__(self, json):
+        self.dbs = {db_id: DbTranslation(db_json) for db_id, db_json in json.items()}
+        
+    @classmethod
+    def load(cls, path):
+        return cls(load_json(path))
+        
+    def __getitem__(self, db_name):
+        return self.dbs[db_name]
+    
+    @property
+    def dbs_names(self):
+        return list(self.dbs.keys())
+    
+    
+class DbTranslation:
+    
+    def __init__(self, db_json):
+        self.tables = {table['orig_src'].lower(): TableTranslation(table) for table in db_json}
+        
+    def __getitem__(self, table_name):
+        return self.tables[table_name.lower()]
+    
+    @property
+    def tables_names(self):
+        return list(self.tables.keys())
+    
 
-def load_table_translations(tables_names_path):
-    with open(tables_names_path, encoding="utf-8") as f:
-        tables_names = json.load(f)
-
-    tables_trans = {}
-
-    for entry in tables_names:
-        if entry["db_id"] not in tables_trans:
-            tables_trans[entry["db_id"]] = {}
-
-        translation = {
-            "name": entry["name_pl"],
-            "name_original": entry["name_original_pl"],
-        }
-        tables_trans[entry["db_id"]][entry["name_original"].lower()] = translation
-
-    return tables_trans
-
-
-def load_column_translations(columns_names_path):
-    with open(columns_names_path, encoding="utf-8") as f:
-        columns_names = json.load(f)
-
-    columns_trans = {}
-
-    for entry in columns_names:
-        if entry["db_id"] not in columns_trans:
-            columns_trans[entry["db_id"]] = {}
-        db_stuff = columns_trans[entry["db_id"]]
-
-        if entry["table_name_original"].lower() not in db_stuff:
-            db_stuff[entry["table_name_original"].lower()] = {}
-        table_stuff = db_stuff[entry["table_name_original"].lower()]
-
-        translation = {
-            "name": entry["column_name_pl"],
-            "name_original": entry["column_name_original_pl"],
-        }
-        table_stuff[entry["column_name_original"].lower()] = translation
-
-    return columns_trans
+class TableTranslation:
+    
+    def __init__(self, table_json):
+        self.name = table_json['name_tgt']
+        self.orig = table_json['orig_tgt']
+        self.columns = {column['orig_src'].lower(): ColumnTranslation(column) for column in table_json['columns']}
+    
+    def __getitem__(self, column_name):
+        return self.columns[column_name.lower()]
+    
+    @property
+    def columns_names(self):
+        return list(self.columns.keys())
+    
+    
+class ColumnTranslation:
+    
+    def __init__(self, column_json):
+        self.name = column_json['name_tgt']
+        self.orig = column_json['orig_tgt']
