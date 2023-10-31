@@ -512,7 +512,7 @@
     {
         "db_id": "student_assessment",
         "question_original": {
-            "en": "What are the first and last names of all the candidates?",
+            "en": "what are the first name and last name of all candidates?",
             "pl": "Jakie są imiona i nazwiska wszystkich kandydatów?"
         },
         "question": {
@@ -3242,7 +3242,7 @@
     {
         "db_id": "flight_1",
         "question_original": {
-            "en": "What is the name and distance for the aircraft that has an id of 12?",
+            "en": "What is the name and distance for aircraft with id 12?",
             "pl": "Jaka jest nazwa i odległość samolotu o identyfikatorze 12?"
         },
         "question": {
@@ -15797,7 +15797,7 @@
     {
         "db_id": "formula_1",
         "question_original": {
-            "en": "What is the id, first name, and last name of the driver who was in the first position for laptime at least twice?",
+            "en": "What is the id, forname and surname of the driver who had the first position in terms of laptime at least twice?",
             "pl": "Jaki jest identyfikator, imię i nazwisko kierowcy, który co najmniej dwa razy zajął pierwsze miejsce pod względem czasu przejazdu?"
         },
         "question": {
@@ -16772,7 +16772,7 @@
     {
         "db_id": "csu_1",
         "question_original": {
-            "en": "What campus has the most faculties in 2003?",
+            "en": "Which campus has the most faculties in year 2003?",
             "pl": "Który kampus ma najwięcej wydziałów w 2003 roku?"
         },
         "question": {
@@ -16937,7 +16937,7 @@
     {
         "db_id": "csu_1",
         "question_original": {
-            "en": "How many faculty, in total, are there in the year 2002?",
+            "en": "How many faculty is there in total in the year of 2002?",
             "pl": "Ile wydziałów jest w sumie w 2002 roku?"
         },
         "question": {
@@ -22097,7 +22097,7 @@
     {
         "db_id": "college_1",
         "question_original": {
-            "en": "How many sections does each course have?",
+            "en": "How many sections does each course has?",
             "pl": "Ile sekcji ma każdy kurs?"
         },
         "question": {
@@ -22382,7 +22382,7 @@
     {
         "db_id": "college_1",
         "question_original": {
-            "en": "What is the name of the department with the most students enrolled?",
+            "en": "What is the name of the department that has the largest number of students enrolled?",
             "pl": "Jak nazywa się wydział z największą liczbą zapisanych studentów?"
         },
         "question": {
@@ -22547,7 +22547,7 @@
     {
         "db_id": "college_1",
         "question_original": {
-            "en": "What is the name of the department and office location for the professor with the last name of Heffington?",
+            "en": "What is department name and office for the professor whose last name is Heffington?",
             "pl": "Jak nazywa się wydział i biuro profesora o nazwisku Heffington?"
         },
         "question": {
@@ -29282,7 +29282,7 @@
     {
         "db_id": "student_1",
         "question_original": {
-            "en": "Which teachers teach the student named EVELINA BROMLEY? Give me the first and last name of the teachers.",
+            "en": "Which teachers teach the student named EVELINA BROMLEY? Give me the first and last name  of the teachers.",
             "pl": "Którzy nauczyciele uczą ucznia o imieniu EVELINA BROMLEY? Podaj imię i nazwisko nauczyciela."
         },
         "question": {
@@ -31187,7 +31187,7 @@
     {
         "db_id": "tracking_grants_for_research",
         "question_original": {
-            "en": "What is the type and id of the organization that has the most research staff?",
+            "en": "What is the organisation type and id of the organisation which has the most number of research staff?",
             "pl": "Jaki jest typ i identyfikator organizacji, która zatrudnia najwięcej pracowników naukowych?"
         },
         "question": {
@@ -51212,7 +51212,7 @@
     {
         "db_id": "driving_school",
         "question_original": {
-            "en": "How many lessons did the customer with the first name Ray take?",
+            "en": "How many lesson does customer with first name Ray took?",
             "pl": "Ile lekcji odbył klient o imieniu Ray?"
         },
         "question": {

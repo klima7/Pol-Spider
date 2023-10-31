@@ -227,7 +227,7 @@
     {
         "db_id": "concert_singer",
         "question_original": {
-            "en": "What is the average and the maximum capacity of all stadiums?",
+            "en": "What is the maximum capacity and the average of all stadiums ?",
             "pl": "Jaka jest maksymalna pojemność i średnia pojemność wszystkich stadionów?"
         },
         "question": {
@@ -242,7 +242,7 @@
     {
         "db_id": "concert_singer",
         "question_original": {
-            "en": "What is the average and maximum capacities for all stations?",
+            "en": "What is the average and maximum capacities for all stadiums ?",
             "pl": "Jaka jest średnia i maksymalna pojemność wszystkich stadionów?"
         },
         "question": {
@@ -332,7 +332,7 @@
     {
         "db_id": "concert_singer",
         "question_original": {
-            "en": "What is the name and capacity of the stadium  with the most concerts after 2013?",
+            "en": "What is the name and capacity of the stadium with the most concerts after 2013 ?",
             "pl": "Jak nazywa się i jaką pojemność ma stadion, na którym odbyło się najwięcej koncertów po 2013 roku?"
         },
         "question": {
@@ -452,7 +452,7 @@
     {
         "db_id": "concert_singer",
         "question_original": {
-            "en": "What are the names, themes, and number of singers for each and every concert?",
+            "en": "What are the names , themes , and number of singers for every concert ?",
             "pl": "Jakie są nazwy, tematy i liczba wokalistów na każdym koncercie?"
         },
         "question": {
@@ -587,7 +587,7 @@
     {
         "db_id": "concert_singer",
         "question_original": {
-            "en": "Find the number of concerts happened in the stadium with the highest capacity.",
+            "en": "Find the number of concerts happened in the stadium with the highest capacity .",
             "pl": "Znajdź liczbę koncertów, które odbyły się na stadionie o największej pojemności."
         },
         "question": {
@@ -602,7 +602,7 @@
     {
         "db_id": "concert_singer",
         "question_original": {
-            "en": "What are the number of concerts that occurred in the stadium with the largest capacity?",
+            "en": "What are the number of concerts that occurred in the stadium with the largest capacity ?",
             "pl": "Jaka jest liczba koncertów, które odbyły się na stadionie o największej pojemności?"
         },
         "question": {
@@ -827,7 +827,7 @@
     {
         "db_id": "pets_1",
         "question_original": {
-            "en": "Find the name of students who have both cat and dog pets.",
+            "en": "Find the first name of students who have both cat and dog pets .",
             "pl": "Znajdź imiona uczniów, którzy mają zarówno kota, jak i psa."
         },
         "question": {
@@ -1052,7 +1052,7 @@
     {
         "db_id": "pets_1",
         "question_original": {
-            "en": "Find the id of the pet owned by student whose last name is 'Smith'.",
+            "en": "Find the id of the pet owned by student whose last name is ‘Smith’.",
             "pl": "Znajdź identyfikator zwierzęcia należącego do ucznia, którego nazwisko to \"Smith\"."
         },
         "question": {
@@ -1097,7 +1097,7 @@
     {
         "db_id": "pets_1",
         "question_original": {
-            "en": "For students who have pets, how many pets does each student have?",
+            "en": "For students who have pets , how many pets does each student have ? list their ids instead of names .",
             "pl": "W przypadku uczniów, którzy mają zwierzęta domowe, ile zwierząt ma każdy uczeń? Wymień ich identyfikatory zamiast imion."
         },
         "question": {
@@ -1142,7 +1142,7 @@
     {
         "db_id": "pets_1",
         "question_original": {
-            "en": "Find the average age of students who do not have any pet.",
+            "en": "Find the average age of students who do not have any pet .",
             "pl": "Znajdź średni wiek uczniów, którzy nie mają zwierząt domowych."
         },
         "question": {
@@ -1157,7 +1157,7 @@
     {
         "db_id": "pets_1",
         "question_original": {
-            "en": "What is the average age for all students who do not own any pets?",
+            "en": "What is the average age for all students who do not own any pets ?",
             "pl": "Jaki jest średni wiek wszystkich studentów, którzy nie posiadają zwierząt domowych?"
         },
         "question": {
@@ -1337,7 +1337,7 @@
     {
         "db_id": "car_1",
         "question_original": {
-            "en": "What is the maker of the car produced in the earliest year and what year was it?",
+            "en": "What is the maker of the carr produced in the earliest year and what year was it?",
             "pl": "Jaki jest producent samochodu wyprodukowanego w najwcześniejszym roku i który to był rok?"
         },
         "question": {
@@ -1427,7 +1427,7 @@
     {
         "db_id": "car_1",
         "question_original": {
-            "en": "How many car models are produced by each maker? List the count and the maker full name.",
+            "en": "How many car models are produced by each maker ? Only list the count and the maker full name .",
             "pl": "Ile modeli samochodów wyprodukowali poszczególni producenci? Wymień tylko liczbę i pełną nazwę producenta."
         },
         "question": {
@@ -1502,7 +1502,7 @@
     {
         "db_id": "car_1",
         "question_original": {
-            "en": "What is the number of makers of car in France?",
+            "en": "What is the number of makers of care in France?",
             "pl": "Jaka jest liczba twórców opieki we Francji?"
         },
         "question": {
@@ -1547,7 +1547,7 @@
     {
         "db_id": "car_1",
         "question_original": {
-            "en": "What is the average miles per gallon of all the cars with 4 cylinders?",
+            "en": "What is the average miles per gallon of all the cards with 4 cylinders?",
             "pl": "Jaka jest średnia mil na galon wszystkich kart z 4 cylindrami?"
         },
         "question": {
@@ -1562,7 +1562,7 @@
     {
         "db_id": "car_1",
         "question_original": {
-            "en": "What is the minimu weight of the car with 8 cylinders produced in 1974?",
+            "en": "What is the minimum weight of the car with 8 cylinders produced in 1974 ?",
             "pl": "Jaka jest minimalna waga samochodu z 8 cylindrami wyprodukowanego w 1974 roku?"
         },
         "question": {
@@ -1637,7 +1637,7 @@
     {
         "db_id": "car_1",
         "question_original": {
-            "en": "What is the number of cars with a horsepower greater than 150?",
+            "en": "What is the number of the cars with horsepower more than 150?",
             "pl": "Jaka jest liczba samochodów o mocy większej niż 150 koni mechanicznych?"
         },
         "question": {
@@ -1727,7 +1727,7 @@
     {
         "db_id": "car_1",
         "question_original": {
-            "en": "What is the car model with the highest mpg?",
+            "en": "What is the car model with the highest mpg ?",
             "pl": "Jaki jest model samochodu o najwyższym mpg?"
         },
         "question": {
@@ -1832,7 +1832,7 @@
     {
         "db_id": "car_1",
         "question_original": {
-            "en": "In which years cars were produced weighing no less than 3000 and no more than 4000?",
+            "en": "In which years cars were produced weighing no less than 3000 and no more than 4000 ?",
             "pl": "W których latach produkowano samochody ważące nie mniej niż 3000 i nie więcej niż 4000?"
         },
         "question": {
@@ -1847,7 +1847,7 @@
     {
         "db_id": "car_1",
         "question_original": {
-            "en": "What are the different years in which there were cars produced that weighed less than 4000 and also cars that weighted more than 3000?",
+            "en": "What are the different years in which there were cars produced that weighed less than 4000 and also cars that weighted more than 3000 ?",
             "pl": "W jakich latach produkowano samochody ważące mniej niż 4000 i samochody ważące więcej niż 3000?"
         },
         "question": {
@@ -1862,7 +1862,7 @@
     {
         "db_id": "car_1",
         "question_original": {
-            "en": "How many countries has more than 2 car makers?",
+            "en": "How many countries has more than 2 car makers ?",
             "pl": "Ile krajów ma więcej niż 2 producentów samochodów?"
         },
         "question": {
@@ -1877,7 +1877,7 @@
     {
         "db_id": "car_1",
         "question_original": {
-            "en": "What is the number of countries with more than 2 car makers?",
+            "en": "What is the number of countries with more than 2 car makers ?",
             "pl": "Jaka jest liczba krajów z więcej niż 2 producentami samochodów?"
         },
         "question": {
@@ -1922,7 +1922,7 @@
     {
         "db_id": "car_1",
         "question_original": {
-            "en": "Among the cars that do not have the minimum horsepower, what are the make ids and names of al those with less than 4 cylinders?",
+            "en": "Among the cars that do not have the minimum horsepower , what are the make ids and names of all those with less than 4 cylinders ?",
             "pl": "Wśród samochodów, które nie mają minimalnej mocy, jakie są identyfikatory marek i nazwy wszystkich tych, które mają mniej niż 4 cylindry?"
         },
         "question": {
@@ -1937,7 +1937,7 @@
     {
         "db_id": "car_1",
         "question_original": {
-            "en": "What is the maximum mpg of the cars that had 8 cylinders or that were produced before 1980?",
+            "en": "What is the maximum mpg of the cars that had 8 cylinders or that were produced before 1980 ?",
             "pl": "Jaki jest maksymalny mpg samochodów, które miały 8 cylindrów lub które zostały wyprodukowane przed 1980 rokiem?"
         },
         "question": {
@@ -1982,7 +1982,7 @@
     {
         "db_id": "car_1",
         "question_original": {
-            "en": "Which are the car makers which produce at least 2 models and more than 3 car makes? List the id and the maker.",
+            "en": "Which are the car makers which produce at least 2 models and more than 3 car makers ? List the id and the maker .",
             "pl": "Którzy producenci samochodów produkują co najmniej 2 modele i więcej niż 3 modele? Wymień id i producenta."
         },
         "question": {
@@ -2012,7 +2012,7 @@
     {
         "db_id": "car_1",
         "question_original": {
-            "en": "What are the ids and names of all countries that either have more than 3 car makers or produce fiats?",
+            "en": "What are the ids and names of all countries that either have more than 3 car makers or produce fiat model ?",
             "pl": "Jakie są identyfikatory i nazwy wszystkich krajów, które mają więcej niż 3 producentów samochodów lub produkują model Fiata?"
         },
         "question": {
@@ -4202,7 +4202,7 @@
     {
         "db_id": "course_teach",
         "question_original": {
-            "en": "List the name of teachers whose hometown is not \"Little Lever Urban District\".",
+            "en": "List the name of teachers whose hometown is not `` Little Lever Urban District '' .",
             "pl": "Wymień nazwiska nauczycieli, których rodzinnym miastem nie jest Little Lever Urban District."
         },
         "question": {
@@ -4217,7 +4217,7 @@
     {
         "db_id": "course_teach",
         "question_original": {
-            "en": "What are the names of the teachers whose hometown is not \"Little Lever Urban District\"?",
+            "en": "What are the names of the teachers whose hometown is not `` Little Lever Urban District '' ?",
             "pl": "Jak nazywają się nauczyciele, których rodzinnym miastem nie jest Little Lever Urban District?"
         },
         "question": {
@@ -5762,7 +5762,7 @@
     {
         "db_id": "student_transcripts_tracking",
         "question_original": {
-            "en": "For each department id, what is the name of the department with the most number of degrees?",
+            "en": "What is the name and id of the department with the most number of degrees ?",
             "pl": "Jaka jest nazwa i identyfikator wydziału z największą liczbą stopni naukowych?"
         },
         "question": {
@@ -5807,7 +5807,7 @@
     {
         "db_id": "student_transcripts_tracking",
         "question_original": {
-            "en": "What are the names and descriptions for all the sections?",
+            "en": "What are the names and descriptions of all the sections?",
             "pl": "Jakie są nazwy i opisy wszystkich sekcji?"
         },
         "question": {
@@ -6092,7 +6092,7 @@
     {
         "db_id": "student_transcripts_tracking",
         "question_original": {
-            "en": "What is the mobile phone number of the student named Timothy Ward?",
+            "en": "What is the mobile phone number of the student named Timmothy Ward ?",
             "pl": "Jaki jest numer telefonu komórkowego ucznia o imieniu Timmothy Ward?"
         },
         "question": {
@@ -6377,7 +6377,7 @@
     {
         "db_id": "student_transcripts_tracking",
         "question_original": {
-            "en": "Find the first name of the students who permanently live in the country Haiti or have the cell phone number 09700166582.",
+            "en": "Find the first name of the students who permanently live in the country Haiti or have the cell phone number 09700166582 .",
             "pl": "Znajdź imiona uczniów, którzy na stałe mieszkają w kraju Haiti lub mają numer telefonu komórkowego 09700166582 ."
         },
         "question": {
@@ -6392,7 +6392,7 @@
     {
         "db_id": "student_transcripts_tracking",
         "question_original": {
-            "en": "What are the first names of the students who live in Haiti permanently or have the cell phone number 09700166582?",
+            "en": "What are the first names of the students who live in Haiti permanently or have the cell phone number 09700166582 ?",
             "pl": "Jakie są imiona studentów, którzy mieszkają na Haiti na stałe lub mają numer telefonu komórkowego 09700166582 ?"
         },
         "question": {
@@ -6737,7 +6737,7 @@
     {
         "db_id": "tvshow",
         "question_original": {
-            "en": "Find the production code and channel of the most recently aired cartoon.",
+            "en": "Find the production code and channel of the most recently aired cartoon .",
             "pl": "Znajdź kod produkcji i kanał ostatnio emitowanej kreskówki."
         },
         "question": {
@@ -6752,7 +6752,7 @@
     {
         "db_id": "tvshow",
         "question_original": {
-            "en": "What is the produdction code and channel of the most recent cartoon?",
+            "en": "What is the produdction code and channel of the most recent cartoon ?",
             "pl": "Jaki jest kod produkcji i kanał najnowszej kreskówki?"
         },
         "question": {
@@ -7607,7 +7607,7 @@
     {
         "db_id": "voter_1",
         "question_original": {
-            "en": "Return the names the contestants whose names contain the substring 'Al'.",
+            "en": "Return the names of the contestants whose names contain the substring 'Al' .",
             "pl": "Zwróć nazwiska zawodników, których nazwiska zawierają podciąg \"Al\"."
         },
         "question": {
@@ -7682,7 +7682,7 @@
     {
         "db_id": "world_1",
         "question_original": {
-            "en": "How much surface area do the countires in the Caribbean cover together?",
+            "en": "How much surface area do the countires in the Carribean cover together?",
             "pl": "Jaką powierzchnię zajmują łącznie kraje Karaibów?"
         },
         "question": {
@@ -7712,7 +7712,7 @@
     {
         "db_id": "world_1",
         "question_original": {
-            "en": "Give me Brazil's population and life expectancies.",
+            "en": "Give me Brazil’s population and life expectancies.",
             "pl": "Podaj mi populację Brazylii i średnią długość życia."
         },
         "question": {
@@ -8147,7 +8147,7 @@
     {
         "db_id": "world_1",
         "question_original": {
-            "en": "Which countries have greater area than that of any country in Europe?",
+            "en": "What are the countries that have greater surface area than any country in Europe?",
             "pl": "Które kraje mają większą powierzchnię niż jakikolwiek kraj w Europie?"
         },
         "question": {
@@ -8207,7 +8207,7 @@
     {
         "db_id": "world_1",
         "question_original": {
-            "en": "What are the Asian countries which have a population larger than that of any country in Africa?",
+            "en": "Which Asian countries have a population that is larger than any country in Africa?",
             "pl": "Które kraje azjatyckie mają populację większą niż jakikolwiek kraj w Afryce?"
         },
         "question": {
@@ -8327,7 +8327,7 @@
     {
         "db_id": "world_1",
         "question_original": {
-            "en": "Whic`h unique cities are in  Asian countries where Chinese is the official language?",
+            "en": "Which unique cities are in Asian countries where Chinese is the official language ?",
             "pl": "Jakie wyjątkowe miasta znajdują się w krajach azjatyckich, w których językiem urzędowym jest chiński?"
         },
         "question": {
@@ -8642,7 +8642,7 @@
     {
         "db_id": "world_1",
         "question_original": {
-            "en": "What is the total population and average area of countries in the continent of North America whose area is bigger than 3000？",
+            "en": "What is the total population and average area of countries in the continent of North America whose area is bigger than 3000 ?",
             "pl": "Jaka jest łączna populacja i średnia powierzchnia krajów na kontynencie Ameryki Północnej, których powierzchnia jest większa niż 3000?"
         },
         "question": {
@@ -8657,7 +8657,7 @@
     {
         "db_id": "world_1",
         "question_original": {
-            "en": "Give the total population and average surface area corresponding to countries in North America that have a surface area greater than 3000.",
+            "en": "Give the total population and average surface area corresponding to countries in North America that have a surface area greater than 3000 .",
             "pl": "Podaj całkowitą liczbę ludności i średnią powierzchnię odpowiadającą krajom w Ameryce Północnej, które mają powierzchnię większą niż 3000 ."
         },
         "question": {
@@ -8687,7 +8687,7 @@
     {
         "db_id": "world_1",
         "question_original": {
-            "en": "Return the names of cities that have a population between 160000 and 900000.",
+            "en": "Return the names of cities that have a population between 160000 and 900000 .",
             "pl": "Zwróć nazwy miast o liczbie mieszkańców między 160000 a 900000."
         },
         "question": {
@@ -10052,7 +10052,7 @@
     {
         "db_id": "dog_kennels",
         "question_original": {
-            "en": "Which dogs have not cost their owner more than 1000 for treatment? List the dog names.",
+            "en": "Which dogs have not cost their owner more than 1000 for treatment ? List the dog names .",
             "pl": "Które psy nie kosztowały swojego właściciela więcej niż 1000 za leczenie? Wymień imiona psów."
         },
         "question": {
@@ -10067,7 +10067,7 @@
     {
         "db_id": "dog_kennels",
         "question_original": {
-            "en": "What are the names of the dogs for which the owner spent more than 1000 for treatment?",
+            "en": "What are the names of the dogs for which the owner has not spend more than 1000 for treatment ?",
             "pl": "Jak nazywają się psy, na których leczenie właściciel nie wydał więcej niż 1000 zł?"
         },
         "question": {
@@ -10877,7 +10877,7 @@
     {
         "db_id": "dog_kennels",
         "question_original": {
-            "en": "Tell me the number of dogs that have received any treatment.",
+            "en": "Tell me the number of dogs that have not received any treatment .",
             "pl": "Podaj liczbę psów, które nie zostały poddane żadnemu leczeniu."
         },
         "question": {
@@ -11342,7 +11342,7 @@
     {
         "db_id": "singer",
         "question_original": {
-            "en": "What is the msot common singer citizenship?",
+            "en": "What is the most common singer citizenship ?",
             "pl": "Jakie jest najpopularniejsze obywatelstwo piosenkarza?"
         },
         "question": {
@@ -11522,7 +11522,7 @@
     {
         "db_id": "singer",
         "question_original": {
-            "en": "What is the name of every sing that does not have any song?",
+            "en": "What is the sname of every sing that does not have any song?",
             "pl": "Jak nazywa się każda piosenka, która nie ma żadnego utworu?"
         },
         "question": {
