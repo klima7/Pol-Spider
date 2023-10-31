@@ -14,33 +14,33 @@ from .sql_translation import translate_samples, translate_tables
 from .db_translation import translate_db
 
 
-def add_calculated_attributes(samples, tables, query_key, question_key):
+def add_calculated_attributes(samples, tables, query_lang, question_lang):
     _, tables_path = tempfile.mkstemp()
     with open(tables_path, "w") as f:
         json.dump(tables, f, indent=4, ensure_ascii=False)
     schemas, _, tables = get_schemas_from_json(tables_path)
 
     return Parallel(-1, backend="multiprocessing")(
-        delayed(add_calculated_attributes_single)(sample, query_key, question_key, schemas, tables)
+        delayed(add_calculated_attributes_single)(sample, query_lang, question_lang, schemas, tables)
         for sample in tqdm(samples, desc="Adding calculated attributes")
     )
 
 
-def add_calculated_attributes_single(sample, query_key, question_key, schemas, tables):
+def add_calculated_attributes_single(sample, query_lang, question_lang, schemas, tables):
     try:
-        sql = create_sql(sample["db_id"], sample[query_key], schemas, tables)
+        sql = create_sql(sample["db_id"], sample['query'][query_lang], schemas, tables)
     except SQLParseException as e:
-        print(f"WARNING Unable to parse SQL for sample '{sample[query_key]}'")
+        print(f"WARNING Unable to parse SQL for sample '{sample['query'][query_lang]}'")
         sql = create_sql(sample["db_id"], f"select count(*) from {list(schemas[sample['db_id']].keys())[0]}", schemas, tables)
 
 
     new_sample = {
         "db_id": sample["db_id"],
-        "question": sample[question_key],
-        "question_toks": tokenize_question(sample[question_key]),
-        "query": sample[query_key],
-        "query_toks": tokenize_query(sample[query_key]),
-        "query_toks_no_value": tokenize_query_no_value(sample[query_key]),
+        "question": sample['question'][question_lang],
+        "question_toks": tokenize_question(sample['question'][question_lang]),
+        "query": sample['query'][query_lang],
+        "query_toks": tokenize_query(sample['query'][query_lang]),
+        "query_toks_no_value": tokenize_query_no_value(sample['query'][query_lang]),
         "sql": sql,
     }
     
@@ -60,20 +60,20 @@ def create_gold_sql(samples_paths, output_path):
 
 
 def synthesize_samples(
-    samples_path, output_path, tables_path, column_trans_path, table_trans_path, db_prefix, query_key, question_key
+    samples_path, output_path, tables_path, column_trans_path, table_trans_path, db_prefix, query_lang, question_lang
 ):
     samples = load_json(samples_path)
     
     if column_trans_path and table_trans_path:
         table_trans = load_table_translations(table_trans_path)
         column_trans = load_column_translations(column_trans_path)
-        samples = translate_samples(samples, table_trans, column_trans, query_key)
+        samples = translate_samples(samples, table_trans, column_trans, query_lang)
         
     for sample in samples:
         sample['db_id'] = f"{db_prefix}_{sample['db_id']}"
         
     tables = load_json(tables_path)
-    samples = add_calculated_attributes(samples, tables, query_key, question_key)
+    samples = add_calculated_attributes(samples, tables, query_lang, question_lang)
     save_json(output_path, samples)
     
     
@@ -100,9 +100,6 @@ def synthesize_everything(
         shutil.rmtree(str(complete_dir_path))
     complete_dir_path.mkdir(parents=True, exist_ok=False)
     
-    query_key = f"query_{query_lang}" if query_lang != "en" else "query"
-    question_key = f"question_{question_lang}" if question_lang != "en" else "question"
-    
     translate_tables(
         column_trans_path=column_trans_path,
         table_trans_path=table_trans_path,
@@ -118,8 +115,8 @@ def synthesize_everything(
             column_trans_path=column_trans_path,
             table_trans_path=table_trans_path,
             db_prefix=db_prefix,
-            query_key=query_key,
-            question_key=question_key
+            query_lang=query_lang,
+            question_lang=question_lang
         )
         
     for gold_name, samples_names in gold_mapping.items():

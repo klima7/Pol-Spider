@@ -257,15 +257,15 @@ def translate_query(query, db_id, table_trans, column_trans):
     return str(statement)
 
 
-def translate_samples(samples, table_trans, column_trans, query_key):
+def translate_samples(samples, table_trans, column_trans, query_lang):
     return Parallel(-1)(
-        delayed(translate_samples_single)(sample, query_key, table_trans, column_trans)
+        delayed(translate_samples_single)(sample, query_lang, table_trans, column_trans)
         for sample in tqdm(samples, desc="Translating SQL queries")
     )
 
 
-def translate_samples_single(sample, query_key, table_trans, column_trans):
-    sample[query_key] = translate_query(
-        sample[query_key], sample["db_id"], table_trans, column_trans
+def translate_samples_single(sample, query_lang, table_trans, column_trans):
+    sample['query'][query_lang] = translate_query(
+        sample['query'][query_lang], sample["db_id"], table_trans, column_trans
     )
     return sample
