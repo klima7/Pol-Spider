@@ -23,7 +23,7 @@ setup(
         'pyrsistent~=0.14.9',
         'pytest~=5.3.2',
         'records~=0.5.3',
-        'stanford-corenlp~=3.9.2',
+        'stanza',
         'tabulate~=0.8.6',
         'torch',
         'torchtext~=0.3.1',

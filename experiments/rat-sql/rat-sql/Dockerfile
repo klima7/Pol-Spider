@@ -26,9 +26,6 @@ RUN pip install --user -r requirements.txt --no-warn-script-location && \
     pip install --user entmax && \
     python -c "import nltk; nltk.download('stopwords'); nltk.download('punkt')"
 
-# Cache the pretrained BERT model
-RUN python -c "from transformers import BertModel; BertModel.from_pretrained('dkleczek/bert-base-polish-uncased-v1')"
-
 # Download & cache StanfordNLP
 RUN mkdir -p /app/third_party && \
     cd /app/third_party && \

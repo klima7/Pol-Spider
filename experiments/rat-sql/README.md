@@ -21,18 +21,18 @@
 
 1. Run dataset preprocessing:
     ```
-    python run.py preprocess experiments/spider-bert-run.jsonnet
+    python run.py preprocess experiments/pol-spider-bert-run.jsonnet
     ```
 2. Run training:
     ```
-    python run.py train experiments/spider-bert-run.jsonnet
+    python run.py train experiments/pol-spider-bert-run.jsonnet
     ```
 
 ### Inference
 
 1. Run evaluation:
     ```
-    python run.py eval experiments/spider-bert-run.jsonnet
+    python run.py eval experiments/pol-spider-bert-run.jsonnet
     ```
 
 ## GLOVE variant
