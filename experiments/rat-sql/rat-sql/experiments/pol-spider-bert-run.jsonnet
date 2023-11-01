@@ -1,11 +1,11 @@
 {
-    logdir: "logdir/bert_run",
+    logdir: "logdir/pol_spider_bert_run",
     model_config: "configs/spider/nl2code-bert.jsonnet",
     model_config_args: {
-        data_path: 'data/spider/',
+        data_path: 'data/pol_spider/',
         bs: 6,
         num_batch_accumulated: 4,
-        bert_version: "bert-large-uncased-whole-word-masking",
+        bert_version: "bert-base-multilingual-uncased",
         summarize_header: "avg",
         use_column_type: false,
         max_steps: 81000,
@@ -25,7 +25,7 @@
     },
 
     eval_name: "bert_run_%s_%d" % [self.eval_use_heuristic, self.eval_beam_size],
-    eval_output: "__LOGDIR__/ie_dirs",
+    eval_output: "data/pol_spider/eval",
     eval_beam_size: 1,
     eval_use_heuristic: true,
     eval_steps: [ 1000 * x + 100 for x in std.range(30, 39)] + [40000],
