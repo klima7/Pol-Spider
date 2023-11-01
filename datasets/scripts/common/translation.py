@@ -1,4 +1,5 @@
 from common import load_json, save_json
+from common.constants import *
 
 
 class SchemaTranslation:
@@ -9,6 +10,13 @@ class SchemaTranslation:
     @classmethod
     def load(cls, path):
         return cls(load_json(path))
+    
+    @classmethod
+    def load_by_name(cls, name):
+        path = TRANS_PATH / (name + '.json')
+        if not path.exists():
+            return None
+        return cls.load(path) 
         
     def __getitem__(self, db_name):
         return self.dbs[db_name]
@@ -25,6 +33,9 @@ class SchemaTranslation:
     
     def save(self, path):
         save_json(path, self.to_json())
+        
+    def save_by_name(self, name):
+        save_json(TRANS_PATH / (name + '.json'))
     
     
 class DbTranslation:

@@ -40,11 +40,10 @@ def translate_tables_list(tables, trans):
     return translated_tables
 
 
-def translate_tables(trans_path, db_prefix, output_path):
+def translate_tables(trans, db_prefix, output_path):
     tables = load_json(BASE_PATH / "tables.json")
     
-    if trans_path is not None:
-        trans = SchemaTranslation.load(trans_path)
+    if trans is not None:
         tables = translate_tables_list(tables, trans)
         
     for schema in tables:
@@ -253,15 +252,17 @@ def translate_query(query, db_id, trans):
     return str(statement)
 
 
-def translate_samples(samples, trans, query_lang):
+def translate_queries(samples, trans, query_lang):
     return Parallel(-1)(
-        delayed(translate_samples_single)(sample, query_lang, trans)
+        delayed(translate_queries_single)(sample, query_lang, trans)
         for sample in tqdm(samples, desc="Translating SQL queries")
     )
 
 
-def translate_samples_single(sample, query_lang, trans):
-    sample['query'][query_lang] = translate_query(
-        sample['query'][query_lang], sample["db_id"], trans
+def translate_queries_single(sample, query_lang, trans):
+    sample.query[query_lang] = translate_query(
+        query=sample.query[query_lang], 
+        db_id=sample.db_id,
+        trans=trans
     )
     return sample

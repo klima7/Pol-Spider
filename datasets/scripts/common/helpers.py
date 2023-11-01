@@ -9,3 +9,7 @@ def load_json(path):
 def save_json(path, json_obj):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(json_obj, f, indent=4, ensure_ascii=False)
+
+
+def sort_dict(dictionary):
+    return dict(sorted(dictionary.items(), key=lambda x: x[0]))

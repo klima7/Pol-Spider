@@ -6,12 +6,81 @@ from pathlib import Path
 from tqdm import tqdm
 from joblib import Parallel, delayed
 
-from common import load_json, save_json, SchemaTranslation
+from common import load_json, save_json, SchemaTranslation, Dataset
 from common.constants import *
 from .sql_parsing import create_sql, get_schemas_from_json, SQLParseException
 from .tokenization import tokenize_question, tokenize_query, tokenize_query_no_value
-from .sql_translation import translate_samples, translate_tables
+from .sql_translation import translate_queries, translate_tables
 from .db_translation import translate_db
+
+
+def synthesize_dataset(
+        output_name,
+        dataset_name,
+        schema_trans_name=None,
+        with_db=False,
+        query_lang='pl',
+        question_lang='pl'
+    ):    
+    complete_dir_path = COMPLETE_PATH / output_name
+    if complete_dir_path.exists():
+        shutil.rmtree(str(complete_dir_path))
+    complete_dir_path.mkdir(parents=True, exist_ok=False)
+    
+    trans = SchemaTranslation.load_by_name(schema_trans_name)
+    dataset = Dataset.load_by_name(dataset_name)
+    
+    translate_tables(
+        trans=trans,
+        db_prefix=schema_trans_name,
+        output_path=complete_dir_path / 'tables.json',
+    )
+        
+    for split_name in dataset:
+        synthesize_samples(
+            samples=dataset[split_name],
+            output_path=complete_dir_path / (split_name + '.json'),
+            tables_path=complete_dir_path / 'tables.json',
+            trans=trans,
+            db_prefix=schema_trans_name,
+            query_lang=query_lang,
+            question_lang=question_lang
+        )
+        
+    create_gold_sql(
+        samples=dataset.train,
+        output_path=complete_dir_path / 'train_gold.sql',
+        query_lang=query_lang
+    )
+    
+    create_gold_sql(
+        samples=dataset.dev,
+        output_path=complete_dir_path / 'dev_gold.sql',
+        query_lang=query_lang
+    )
+
+    if with_db:
+        translate_db(
+            src_db_path=DATABASE_PATH,
+            out_db_path=complete_dir_path / 'database',
+            trans=trans,
+            db_prefix=schema_trans_name
+        )
+
+
+def synthesize_samples(
+    samples, output_path, tables_path, trans, db_prefix, query_lang, question_lang
+):
+    tables = load_json(tables_path)
+    
+    if trans:
+        samples = translate_queries(samples, trans, query_lang)
+        
+    for sample in samples:
+        sample.db_id = f"{db_prefix}_{sample.db_id}"
+        
+    complete_samples = add_calculated_attributes(samples, tables, query_lang, question_lang)
+    save_json(output_path, complete_samples)
 
 
 def add_calculated_attributes(samples, tables, query_lang, question_lang):
@@ -28,102 +97,38 @@ def add_calculated_attributes(samples, tables, query_lang, question_lang):
 
 def add_calculated_attributes_single(sample, query_lang, question_lang, schemas, tables):
     try:
-        sql = create_sql(sample["db_id"], sample['query'][query_lang], schemas, tables)
-    except SQLParseException as e:
-        print(f"WARNING Unable to parse SQL for sample '{sample['query'][query_lang]}'")
-        sql = create_sql(sample["db_id"], f"select count(*) from {list(schemas[sample['db_id']].keys())[0]}", schemas, tables)
-
+        sql = create_sql(
+            db_id=sample.db_id,
+            query=sample.query[query_lang],
+            schemas=schemas,
+            tables=tables
+        )
+    except SQLParseException:
+        print(f"WARNING Unable to parse SQL for sample '{sample.query[query_lang]}'")
+        fake_query=f"select count(*) from {list(schemas[sample.db_id].keys())[0]}"
+        sql = create_sql(
+            db_id=sample.db_id,
+            query=fake_query,
+            schemas=schemas,
+            tables=tables
+        )
 
     new_sample = {
-        "db_id": sample["db_id"],
-        "question": sample['question'][question_lang],
-        "question_toks": tokenize_question(sample['question'][question_lang]),
-        "query": sample['query'][query_lang],
-        "query_toks": tokenize_query(sample['query'][query_lang]),
-        "query_toks_no_value": tokenize_query_no_value(sample['query'][query_lang]),
+        "db_id": sample.db_id,
+        "question": sample.question[question_lang],
+        "question_toks": tokenize_question(sample.question[question_lang]),
+        "query": sample.query[query_lang],
+        "query_toks": tokenize_query(sample.query[query_lang]),
+        "query_toks_no_value": tokenize_query_no_value(sample.query[query_lang]),
         "sql": sql,
     }
     
-    for extra_attr in ["type"]:
-        if extra_attr in sample:
-            new_sample[extra_attr] = sample[extra_attr]
+    new_sample.update(sample.extras)
     
     return new_sample
 
 
-def create_gold_sql(samples_paths, output_path):
-    samples_list = [load_json(path) for path in samples_paths]
+def create_gold_sql(samples, output_path, query_lang):
     with open(output_path, 'w') as f:
-        for samples in samples_list:
-            for sample in samples:
-                f.write(f"{sample['query']}\t{sample['db_id']}\n")
-
-
-def synthesize_samples(
-    samples_path,output_path, tables_path, trans_path, db_prefix, query_lang, question_lang
-):
-    samples = load_json(samples_path)
-    tables = load_json(tables_path)
-    
-    if trans_path:
-        trans = SchemaTranslation.load(trans_path)
-        samples = translate_samples(samples, trans, query_lang)
-        
-    for sample in samples:
-        sample['db_id'] = f"{db_prefix}_{sample['db_id']}"
-        
-    samples = add_calculated_attributes(samples, tables, query_lang, question_lang)
-    
-    save_json(output_path, samples)
-    
-    
-def get_schema_trans_path(trans_name):
-    available_names = [path.name[:-5] for path in TRANS_PATH.glob('*/')]
-    if not trans_name in available_names:
-        return None
-    else:
-        return TRANS_PATH / (trans_name + '.json')
-
-
-def synthesize_everything(
-    output_name, samples_paths, gold_mapping, schema_translation_name='', with_db=False, query_lang='pl', question_lang='pl'
-    ):
-    trans_path = get_schema_trans_path(schema_translation_name)
-    db_prefix = schema_translation_name
-    
-    complete_dir_path = COMPLETE_PATH / output_name
-    
-    if complete_dir_path.exists():
-        shutil.rmtree(str(complete_dir_path))
-    complete_dir_path.mkdir(parents=True, exist_ok=False)
-    
-    translate_tables(
-        trans_path=trans_path,
-        db_prefix=db_prefix,
-        output_path=str(complete_dir_path / 'tables.json'),
-    )
-        
-    for samples_path in samples_paths:
-        synthesize_samples(
-            samples_path=samples_path,
-            output_path=complete_dir_path / Path(samples_path).name,
-            tables_path= str(complete_dir_path / 'tables.json'),
-            trans_path=trans_path,
-            db_prefix=db_prefix,
-            query_lang=query_lang,
-            question_lang=question_lang
-        )
-        
-    for gold_name, samples_names in gold_mapping.items():
-        create_gold_sql(
-            [complete_dir_path / name for name in samples_names],
-            complete_dir_path / gold_name
-        )
-
-    if with_db:
-        translate_db(
-            src_db_path=str(DATABASE_PATH),
-            out_db_path=str(complete_dir_path / 'database'),
-            trans_path=trans_path,
-            db_prefix=db_prefix
-        )
+        for sample in samples:
+            f.write(f"{sample.query[query_lang]}\t{sample.db_id}\n")

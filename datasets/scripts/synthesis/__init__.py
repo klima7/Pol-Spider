@@ -1,1 +1,1 @@
-from .synthesis import synthesize_everything
+from .synthesis import synthesize_dataset

@@ -8,14 +8,12 @@ from tqdm import tqdm
 from common import SchemaTranslation
 
 
-def translate_db(src_db_path, out_db_path, trans_path, db_prefix):
+def translate_db(src_db_path, out_db_path, trans, db_prefix):
     shutil.copytree(src_db_path, out_db_path)
     
-    if trans_path:
-        trans = SchemaTranslation.load(trans_path)
-        
+    if trans:
         for db_id in tqdm(trans.dbs_names, desc='Translating databases'):
-            script = _generate_renaming_sql_script(db_id, trans[db_id])
+            script = _generate_renaming_sql_script(trans[db_id])
             db_path = str(Path(out_db_path) / db_id / f'{db_id}.sqlite')
             _execute_sql_script(db_path, script)
             
@@ -34,7 +32,7 @@ def _execute_sql_script(db_path, script):
     connection.close()
     
     
-def _generate_renaming_sql_script(db_id, trans):
+def _generate_renaming_sql_script(trans):
     statements = []
     
     for table_name, table_trans in trans.tables.items():
