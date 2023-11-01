@@ -1,6 +1,5 @@
 import click
 
-from common import SAMPLES_PATH
 from synthesis import synthesize_dataset
 
 
