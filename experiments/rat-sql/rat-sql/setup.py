@@ -31,7 +31,8 @@ setup(
         'transformers~=2.3.0',
         'sentencepiece',
         'protobuf==3.20',
-        'scikit-learn'
+        'scikit-learn',
+        'unidecode'
     ],
     entry_points={"console_scripts": ["ratsql=run:main"]},
 )

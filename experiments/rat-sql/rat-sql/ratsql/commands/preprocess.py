@@ -26,12 +26,16 @@ class Preprocessor:
 
     def preprocess(self):
         self.model_preproc.clear_items()
+        rejected_count = 0
         for section in self.config['data']:
             data = registry.construct('dataset', self.config['data'][section])
             for item in tqdm.tqdm(data, desc=f"{section} section", dynamic_ncols=True):
                 to_add, validation_info = self.model_preproc.validate_item(item, section)
                 if to_add:
                     self.model_preproc.add_item(item, section, validation_info)
+                else:
+                    print(f'Rejecting sample ({rejected_count})')
+                    rejected_count += 1
         self.model_preproc.save()
 
 
