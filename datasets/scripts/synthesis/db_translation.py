@@ -19,6 +19,10 @@ def translate_db(src_db_path, out_db_path, trans, db_prefix):
             
     for db_id in [path.name for path in Path(src_db_path).glob('*/') if path.is_dir()]:
         os.rename(
+            src=str(Path(out_db_path) / db_id / f'{db_id}.sqlite'),
+            dst=str(Path(out_db_path) / db_id / f'{db_prefix}_{db_id}.sqlite'),
+        )
+        os.rename(
             src=str(Path(out_db_path) / db_id),
             dst=str(Path(out_db_path) / f'{db_prefix}_{db_id}')
         )
