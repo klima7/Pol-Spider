@@ -121,10 +121,10 @@ def _analyse_column_name_length(samples):
 
 def _get_min_max_avg_dev(numbers):
     return {
-        'min': min(numbers),
-        'max': max(numbers),
-        'avg': mean(numbers),
-        'dev': stdev(numbers)
+        'min': min(numbers) if numbers else None,
+        'max': max(numbers) if numbers else None,
+        'avg': mean(numbers) if numbers else None,
+        'dev': stdev(numbers) if numbers else None
     }
     
     
