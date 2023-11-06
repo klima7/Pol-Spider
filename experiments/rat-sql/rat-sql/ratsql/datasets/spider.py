@@ -178,7 +178,7 @@ class SpiderDataset(torch.utils.data.Dataset):
             self.evaluator = evaluation.Evaluator(
                 self.dataset.db_path,
                 self.foreign_key_maps,
-                'match')
+                'all')
             self.results = []
 
         def add(self, item, inferred_code, orig_question=None):
