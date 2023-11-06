@@ -9,7 +9,7 @@ import attr
 import networkx as nx
 
 from ratsql import ast_util
-from ratsql.resources import corenlp
+from ratsql.resources import stanza
 from ratsql.utils import registry
 
 
@@ -47,8 +47,9 @@ class WikiSqlLanguage:
     def tokenize_field_value(cls, field_value):
         assert isinstance(field_value, str)
 
-        # TODO: Tokenization should be customizable
-        ann = corenlp.annotate(field_value, annotators=['tokenize'])
+        # TODO: Bellow two lines not tested
+        ann = stanza.annotate(field_value, lang='pl')
+        ann = [tok['text'].lower() for sent in ann for tok in sent]
         result = []
         for token in ann.sentencelessToken:
             # .before is the string between this token and the previous one (typically whitespace)

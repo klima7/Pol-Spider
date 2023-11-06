@@ -1,11 +1,7 @@
-import os
-import sys
-
-import requests
 import stanza
 
 
-class CoreNLP:
+class Stanza:
     def __init__(self):
         self.nlps = {}
 
@@ -47,5 +43,5 @@ _singleton = None
 def annotate(text, lang='en'):
     global _singleton
     if not _singleton:
-        _singleton = CoreNLP()
+        _singleton = Stanza()
     return _singleton.annotate(text, lang)

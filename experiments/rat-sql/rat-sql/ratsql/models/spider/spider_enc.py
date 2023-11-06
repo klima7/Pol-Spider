@@ -14,7 +14,7 @@ from ratsql.models.spider.spider_match_utils import (
     compute_schema_linking,
     compute_cell_value_linking
 )
-from ratsql.resources import corenlp
+from ratsql.resources import stanza
 from ratsql.utils import registry
 from ratsql.utils import serialization
 from ratsql.utils import vocab
@@ -600,7 +600,7 @@ class Bertokens:
         # lemmatize "abc"
         normalized_toks = []
         for i, tok in enumerate(new_toks):
-            ann = corenlp.annotate(tok, lang='pl')
+            ann = stanza.annotate(tok, lang='pl')
             lemmas = [tok['lemma'].lower() for sent in ann for tok in sent]
             lemma_word = " ".join(lemmas)
             normalized_toks.append(lemma_word)
