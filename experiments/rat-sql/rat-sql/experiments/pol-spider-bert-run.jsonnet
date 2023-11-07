@@ -25,7 +25,7 @@
     },
 
     eval_name: "bert_run_%s_%d" % [self.eval_use_heuristic, self.eval_beam_size],
-    eval_output: "data/pol_spider/eval",
+    eval_output: "logdir/pol_spider/eval",
     eval_beam_size: 1,
     eval_use_heuristic: true,
     eval_steps: [ 1000 * x + 100 for x in std.range(30, 39)] + [40000],
