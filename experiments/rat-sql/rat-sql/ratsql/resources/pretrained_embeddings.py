@@ -56,20 +56,16 @@ class GloVe(Embedder):
 
     @functools.lru_cache(maxsize=1024)
     def tokenize(self, text):
-        ann = corenlp.annotate(text, self.corenlp_annotators)
-        if self.lemmatize:
-            return [tok.lemma.lower() for sent in ann.sentence for tok in sent.token]
-        else:
-            return [tok.word.lower() for sent in ann.sentence for tok in sent.token]
+        ann = stanza.annotate(text)
+        keyword = 'lemma' if self.lemmatize else 'text'
+        return [tok[keyword].lower() for sent in ann for tok in sent]
     
     @functools.lru_cache(maxsize=1024)
     def tokenize_for_copying(self, text):
-        ann = corenlp.annotate(text, self.corenlp_annotators)
-        text_for_copying = [tok.originalText.lower() for sent in ann.sentence for tok in sent.token]
-        if self.lemmatize:
-            text = [tok.lemma.lower() for sent in ann.sentence for tok in sent.token]
-        else:
-            text = [tok.word.lower() for sent in ann.sentence for tok in sent.token]
+        ann = stanza.annotate(text)
+        keyword = 'lemma' if self.lemmatize else 'text'
+        text = [tok[keyword].lower() for sent in ann for tok in sent]
+        text_for_copying = [tok['text'].lower() for sent in ann for tok in sent]
         return text, text_for_copying
 
     def untokenize(self, tokens):
@@ -118,7 +114,7 @@ class BPEmb(Embedder):
 class GloVePolish(Embedder):
 
     def __init__(self, lemmatize=False):
-        cache = os.path.join(os.environ.get('CACHE_DIR', os.getcwd()), '.glove_polish', 'glove_300_3_polish.txt')
+        cache = os.path.join(os.environ.get('CACHE_DIR', os.getcwd()), 'glove_polish', 'glove_300_3_polish.txt')
         print('Loading GloVe')
         self.kv = KeyedVectors.load_word2vec_format(cache)
         self.dim = self.kv.vectors.shape[1]

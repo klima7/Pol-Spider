@@ -1,5 +1,5 @@
 local _base = import 'nl2code-base.libsonnet';
-local _data_path = 'data/pol_spider/';
+local _data_path = 'data/pol_spider_pl/';
 
 function(args, data_path=_data_path) _base(output_from=true, data_path=data_path) + {
     local lr = 0.000743552663260837,
@@ -33,7 +33,7 @@ function(args, data_path=_data_path) _base(output_from=true, data_path=data_path
         },
         encoder_preproc+: {
             word_emb+: {
-                name: 'glove',
+                name: 'glove_pl',
                 lemmatize: true,
             },
             min_freq: 4,
