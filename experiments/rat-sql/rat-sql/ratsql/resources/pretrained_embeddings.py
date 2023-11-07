@@ -6,8 +6,9 @@ import time
 import bpemb
 import torch
 import torchtext
+from gensim.models import KeyedVectors
 
-from ratsql.resources import corenlp
+from ratsql.resources import stanza
 from ratsql.utils import registry
 
 
@@ -111,3 +112,43 @@ class BPEmb(Embedder):
 
     def to(self, device):
         self.vectors = self.vectors.to(device)
+
+
+@registry.register('word_emb', 'glove_pl')
+class GloVePolish(Embedder):
+
+    def __init__(self, lemmatize=False):
+        cache = os.path.join(os.environ.get('CACHE_DIR', os.getcwd()), '.glove_polish', 'glove_300_3_polish.txt')
+        print('Loading GloVe')
+        self.kv = KeyedVectors.load_word2vec_format(cache)
+        self.dim = self.kv.vectors.shape[1]
+        self.lemmatize = lemmatize
+
+    @functools.lru_cache(maxsize=1024)
+    def tokenize(self, text):
+        ann = stanza.annotate(text)
+        keyword = 'lemma' if self.lemmatize else 'text'
+        return [tok[keyword].lower() for sent in ann for tok in sent]
+    
+    @functools.lru_cache(maxsize=1024)
+    def tokenize_for_copying(self, text):
+        ann = stanza.annotate(text)
+        keyword = 'lemma' if self.lemmatize else 'text'
+        text = [tok[keyword].lower() for sent in ann for tok in sent]
+        text_for_copying = [tok['text'].lower() for sent in ann for tok in sent]
+        return text, text_for_copying
+
+    def untokenize(self, tokens):
+        return ' '.join(tokens)
+
+    def lookup(self, token):
+        try:
+            return torch.from_numpy(self.kv[token])
+        except KeyError:
+            return None
+
+    def contains(self, token):
+        return token in self.kv
+
+    def to(self, device):
+        print('Moving GloVePolish to', device)

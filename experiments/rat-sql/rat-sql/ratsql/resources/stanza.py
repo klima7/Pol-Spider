@@ -5,7 +5,7 @@ class Stanza:
     def __init__(self):
         self.nlps = {}
 
-    def annotate(self, text, lang='en'):
+    def annotate(self, text, lang='pl'):
         nlp = self._get_nlp(lang)
         doc = nlp(text)
         return self._get_result(doc)
