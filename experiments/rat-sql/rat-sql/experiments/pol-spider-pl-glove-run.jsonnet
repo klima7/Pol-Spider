@@ -1,5 +1,5 @@
 {
-    logdir: "logdir/pol_spider_glove_run",
+    logdir: "logdir/pol_spider_pl_glove_run",
     model_config: "configs/spider/nl2code-glove-polish-pl.jsonnet",
     model_config_args: {
         att: 0,
