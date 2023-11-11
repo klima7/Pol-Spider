@@ -118,3 +118,5 @@ temp.txt
 *.iml
 .idea
 .DS_Store
+
+!src/eval/wikisql/lib
