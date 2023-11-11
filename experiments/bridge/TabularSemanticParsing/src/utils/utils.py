@@ -223,6 +223,9 @@ def get_sub_token_ids(question_tokens, span_ids, tu):
 
 
 def get_trans_utils(args):
+    if args.pretrained_transformer == 'bert-base-multilingual-uncased':
+        import src.utils.trans.multi_bert_utils as mbu
+        return mbu
     if args.pretrained_transformer.startswith('bert-') and args.pretrained_transformer.endswith('-uncased'):
         import src.utils.trans.bert_utils as bu
         return bu
