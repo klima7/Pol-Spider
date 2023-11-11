@@ -22,11 +22,11 @@ With `bert-large-uncased` requires about 40GB VRAM.
     ```
 3. Run dataset preprocessing:
     ```
-    ./experiment-bridge.sh configs/bridge/spider-bridge-bert-large.sh --process_data 0
+    ./experiment-bridge.sh configs/bridge/spider-bridge.sh --process_data 0
     ```
 4. Run training:
     ```
-    ./experiment-bridge.sh configs/bridge/spider-bridge-bert-large.sh --train 0
+    ./experiment-bridge.sh configs/bridge/spider-bridge.sh --train 0
     ```
 
 ## Inference
