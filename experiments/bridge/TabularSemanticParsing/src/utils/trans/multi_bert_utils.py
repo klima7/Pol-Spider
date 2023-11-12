@@ -10,7 +10,7 @@
 from transformers import AutoTokenizer
 
 
-tokenizer = AutoTokenizer.from_pretrained('efederici/e5-base-multilingual-4096')
+tokenizer = AutoTokenizer.from_pretrained('bert-base-multilingual-uncased')
 tokenizer.model_max_length = 4096
 bt = tokenizer
 
