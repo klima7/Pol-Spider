@@ -9,3 +9,5 @@ datasets/components/schema_trans/*_sanitized.json
 
 datasets/complete/**
 !datasets/complete/README.md
+
+datasets/components/schema_trans/analysis_*.json
