@@ -35,7 +35,7 @@ class SchemaTranslation:
         save_json(path, self.to_json())
         
     def save_by_name(self, name):
-        save_json(TRANS_PATH / (name + '.json'))
+        save_json(TRANS_PATH / (name + '.json'), self.to_json())
     
     
 class DbTranslation:
