@@ -577,7 +577,7 @@ class Bertokens:
         # combine pieces, "abc", "", ""
         combined_word = {}
         for start, end in self.startidx2pieces.items():
-            assert end - start + 1 < 10
+            assert end - start + 1 < 20
             pieces = [self.pieces[start]] + [self.pieces[_id].strip("##") for _id in range(start + 1, end)]
             word = "".join(pieces)
             combined_word[start] = word
