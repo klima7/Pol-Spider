@@ -1,0 +1,19 @@
+services:
+  ratsql:
+    container_name: resdsql
+    build:
+      context: .
+      dockerfile: Dockerfile
+    mem_limit: 16GB
+    volumes:
+      - .:/app
+      - exclude:/app/third_party
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+volumes:
+  exclude:
