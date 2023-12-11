@@ -1,2 +1,4 @@
 data/**
 database/**
+models/**
+tensorboard_log/**
