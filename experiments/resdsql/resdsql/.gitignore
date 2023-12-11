@@ -2,3 +2,6 @@ data/**
 database/**
 models/**
 tensorboard_log/**
+eval_results/**
+
+predicted_sql.txt
