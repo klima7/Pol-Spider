@@ -8,7 +8,8 @@ class MyClassifier(nn.Module):
         self,
         model_name_or_path,
         vocab_size,
-        mode
+        mode,
+        embedding_size=1024 # or 768
     ):
         super(MyClassifier, self).__init__()
         model_class = XLMRobertaModel if "xlm" in model_name_or_path else RobertaModel
@@ -29,7 +30,7 @@ class MyClassifier(nn.Module):
         
         # column bi-lstm layer
         self.column_info_bilstm = nn.LSTM(
-            input_size = 1024,
+            input_size = embedding_size,
             hidden_size = 512,
             num_layers = 2,
             dropout = 0,
@@ -40,12 +41,12 @@ class MyClassifier(nn.Module):
         self.column_info_linear_after_pooling = nn.Linear(1024, 1024)
 
         # table cls head
-        self.table_name_cls_head_linear1 = nn.Linear(1024, 256)
+        self.table_name_cls_head_linear1 = nn.Linear(embedding_size, 256)
         self.table_name_cls_head_linear2 = nn.Linear(256, 2)
         
         # table bi-lstm pooling layer
         self.table_name_bilstm = nn.LSTM(
-            input_size = 1024,
+            input_size = embedding_size,
             hidden_size = 512,
             num_layers = 2,
             dropout = 0,
@@ -115,6 +116,7 @@ class MyClassifier(nn.Module):
         for batch_id in range(batch_size):
             column_number_in_each_table = batch_column_number_in_each_table[batch_id]
             sequence_embeddings = encoder_output["last_hidden_state"][batch_id, :, :] # (seq_length x hidden_size)
+            # sequence_embeddings = sequence_embeddings.float()
             
             # obtain the embeddings of tokens in the question
             question_token_embeddings = sequence_embeddings[batch_aligned_question_ids[batch_id], :]
