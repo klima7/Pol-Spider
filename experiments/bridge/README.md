@@ -32,5 +32,5 @@ With `bert-large-uncased` requires about 40GB VRAM.
 ## Inference
 1. Run command:
     ```
-    ./experiment-bridge.sh configs/bridge/spider-bridge-bert-large.sh --inference 0
+    ./experiment-bridge.sh configs/bridge/spider-bridge.sh --inference 0
     ```
