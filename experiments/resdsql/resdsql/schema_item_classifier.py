@@ -241,7 +241,7 @@ def _train(opt):
     # total training steps
     num_training_steps = int(opt.epochs*len(train_dataset)/opt.batch_size)
     # evaluate model for each 1.42857 epochs (about 1.42857*7000=10000 examples for Spider)
-    num_checkpoint_steps = int(1.42857*len(train_dataset)/opt.batch_size)
+    num_checkpoint_steps = int(1.42857*(len(train_dataset)/3)/opt.batch_size)
 
     optimizer = optim.AdamW(
         params = model.parameters(), 
