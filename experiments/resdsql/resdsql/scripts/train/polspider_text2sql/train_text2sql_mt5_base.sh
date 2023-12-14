@@ -2,8 +2,8 @@ set -e
 
 # train text2sql-mt5-base-cspider model
 python -u text2sql.py \
-    --batch_size 1 \
-    --gradient_descent_step 2 \
+    --batch_size 2 \
+    --gradient_descent_step 16 \
     --device "0" \
     --learning_rate 1e-4 \
     --epochs 128 \
@@ -17,7 +17,7 @@ python -u text2sql.py \
     
 # select the best text2sql-mt5-base-cspider ckpt
 python -u evaluate_text2sql_ckpts.py \
-    --batch_size 32 \
+    --batch_size 1 \
     --device "0" \
     --seed 42 \
     --save_path "./models/mt5-base-polspider" \
