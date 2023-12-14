@@ -4,7 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    mem_limit: 16GB
+    mem_limit: 50GB
+    shm_size: '50gb'
     volumes:
       - .:/app
       - exclude:/app/third_party
@@ -13,7 +14,7 @@ services:
         reservations:
           devices:
             - driver: nvidia
-              count: 1
+              device_ids: ["3"]
               capabilities: [gpu]
 volumes:
   exclude:
