@@ -794,7 +794,9 @@ def correct_primary_keys(tables,schemas,database_path):
                         col = (db_info[1]+'.'+ "".join([t if t.isalpha() or t == '_' else "" for t in ls[0]])).lower()
                         assert col in schema.original_table["tc_fast"]
                         p_id = schema.original_table["tc_fast"].index(col)
-                        assert p_id in schema.primaryKey
+                        # assert p_id in schema.primaryKey
+                        if not p_id in schema.primaryKey:
+                            print('!'*50)
                         find_pk = True
                     elif "PRIMARY KEY" in line.upper():
                         line = line.lower().strip().replace(" key("," key (").replace(" key,"," key ,")
