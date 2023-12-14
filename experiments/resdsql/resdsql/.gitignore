@@ -3,5 +3,6 @@ database/**
 models/**
 tensorboard_log/**
 eval_results/**
+predictions/**
 
 predicted_sql.txt
