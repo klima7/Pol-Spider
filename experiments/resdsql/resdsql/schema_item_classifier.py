@@ -18,9 +18,6 @@ from torch.utils.tensorboard import SummaryWriter
 from utils.load_dataset import ColumnAndTableClassifierDataset
 
 
-DATASET_DIVIDE_FACTOR = 3
-
-
 def parse_option():
     parser = argparse.ArgumentParser("command line arguments for fine-tuning schema item classifier.")
     
@@ -240,12 +237,12 @@ def _train(opt):
     if torch.cuda.is_available():
         model = model.cuda()
 
-    # warm up steps (10% training step)
-    num_warmup_steps = int(0.1*opt.epochs*(len(train_dataset)/DATASET_DIVIDE_FACTOR)/opt.batch_size)
     # total training steps
-    num_training_steps = int(opt.epochs*(len(train_dataset)/DATASET_DIVIDE_FACTOR)/opt.batch_size)
+    num_training_steps = int(opt.epochs*8000/opt.batch_size)
+    # warm up steps (10% training step)
+    num_warmup_steps = int(0.1*num_training_steps)
     # evaluate model for each 1.42857 epochs (about 1.42857*7000=10000 examples for Spider)
-    num_checkpoint_steps = int(1.42857*(len(train_dataset)/3)/opt.batch_size)
+    num_checkpoint_steps = int(1.42857*8000/opt.batch_size)
 
     optimizer = optim.AdamW(
         params = model.parameters(), 

@@ -17,10 +17,6 @@ from utils.spider_metric.evaluator import EvaluateTool
 from utils.load_dataset import Text2SQLDataset
 from utils.text2sql_decoding_utils import decode_sqls, decode_natsqls
 
-
-DATASET_DIVIDE_FACTOR = 3
-
-
 def parse_option():
     parser = argparse.ArgumentParser("command line arguments for fine-tuning pre-trained language model.")
     
@@ -119,12 +115,12 @@ def _train(opt):
     
     print("finished.")
 
-    # warm up steps (10% training step)
-    num_warmup_steps = int(0.1*opt.epochs*(len(train_dataset)/DATASET_DIVIDE_FACTOR)/opt.batch_size)
     # total training steps
-    num_training_steps = int(opt.epochs*(len(train_dataset)/DATASET_DIVIDE_FACTOR)/opt.batch_size)
+    num_training_steps = int(opt.epochs*8000/opt.batch_size)
+    # warm up steps (10% training step)
+    num_warmup_steps = int(0.1*num_training_steps)
     # save checkpoint for each 1.42857 epochs (about 1.42857*7000=10000 examples for Spider's training set)
-    num_checkpoint_steps = int(1.42857 * (len(train_dataset)/DATASET_DIVIDE_FACTOR)/opt.batch_size)
+    num_checkpoint_steps = int(1.42857*8000/opt.batch_size)
 
     if opt.use_adafactor:
         print("Let's use Adafactor!")
