@@ -562,6 +562,7 @@ class Evaluator:
 
 def isValidSQL(sql, db):
     conn = sqlite3.connect(db)
+    conn.text_factory = lambda b: b.decode(errors = 'ignore')
     cursor = conn.cursor()
     try:
         cursor.execute(sql)
@@ -633,6 +634,7 @@ def eval_exec_match(db, p_str, g_str, pred, gold):
     in the corresponding index. Currently not support multiple col_unit(pairs).
     """
     conn = sqlite3.connect(db)
+    conn.text_factory = lambda b: b.decode(errors = 'ignore')
     cursor = conn.cursor()
     try:
         cursor.execute(p_str)
@@ -640,8 +642,11 @@ def eval_exec_match(db, p_str, g_str, pred, gold):
     except:
         return False
 
-    cursor.execute(g_str)
-    q_res = cursor.fetchall()
+    try:
+        cursor.execute(g_str)
+        q_res = cursor.fetchall()
+    except Exception:
+        return False
 
     def res_map(res, val_units):
         rmap = {}

@@ -48,15 +48,13 @@ def synthesize_dataset(
         )
         
     create_gold_sql(
-        samples=dataset.train,
+        samples_paths=[complete_dir_path / 'train_spider.json', complete_dir_path / 'train_others.json'],
         output_path=complete_dir_path / 'train_gold.sql',
-        query_lang=query_lang
     )
     
     create_gold_sql(
-        samples=dataset.dev,
+        samples_paths=[complete_dir_path / 'dev.json'],
         output_path=complete_dir_path / 'dev_gold.sql',
-        query_lang=query_lang
     )
 
     if with_db:
@@ -128,7 +126,13 @@ def add_calculated_attributes_single(sample, query_lang, question_lang, schemas,
     return new_sample
 
 
-def create_gold_sql(samples, output_path, query_lang):
-    with open(output_path, 'w') as f:
-        for sample in samples:
-            f.write(f"{sample.query[query_lang]}\t{sample.db_id}\n")
+def create_gold_sql(samples_paths, output_path):
+    with open(output_path, 'w') as tgt:
+        for samples_path in samples_paths:
+            if not Path(samples_path).exists():
+                continue
+            samples = load_json(samples_path)
+            for sample in samples:
+                query = sample['query']
+                db_id = sample['db_id']
+                tgt.write(f"{query}\t{db_id}\n")

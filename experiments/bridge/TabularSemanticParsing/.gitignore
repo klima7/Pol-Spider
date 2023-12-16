@@ -104,7 +104,8 @@ ENV/
 *.class
 
 # Data files
-/data/*spider*/**
+# /data/*spider*/**
+/data**
 neuralsp/wombat/data/
 
 wandb/**
@@ -120,3 +121,4 @@ temp.txt
 .DS_Store
 
 !src/eval/wikisql/lib
+model/**

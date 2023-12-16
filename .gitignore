@@ -11,3 +11,5 @@ datasets/complete/**
 !datasets/complete/README.md
 
 datasets/components/schema_trans/analysis_*.json
+
+evaluation/pred.sql

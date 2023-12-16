@@ -86,6 +86,7 @@ def get_schema(db):
 
     schema = {}
     conn = sqlite3.connect(db)
+    conn.text_factory = lambda b: b.decode(errors = 'ignore')
     cursor = conn.cursor()
 
     # fetch table names
