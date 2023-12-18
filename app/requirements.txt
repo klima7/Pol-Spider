@@ -15,4 +15,4 @@ tensorboard==2.8.0
 sentencepiece==0.1.99
 six==1.16.0
 accelerate==0.25.0
-streamlit
+streamlit==1.29.0
