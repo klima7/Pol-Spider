@@ -5,6 +5,7 @@ from pathlib import Path
 import streamlit as st
 import streamlit_ace
 from streamlit_ace import st_ace
+import numpy as np
 
 from utils import get_sql_from_db, get_schema_image_from_sql, get_error_from_sql, get_schema_dict_from_sql, divide_schema_dict
 
@@ -27,11 +28,11 @@ CLAR_COLUMNS = 3
 
 def table(table_name, column_names):
     with st.container(border=True):
-        st.subheader('🗃️ '+table_name)
+        st.subheader('🗂 '+table_name)
         _ = st.text_input(
             label='table name',
             value=table_name,
-            label_visibility='hidden',
+            label_visibility='collapsed',
             key=f'table_{table_name}'
         )
         
@@ -67,7 +68,7 @@ def uploader_enhanced(*args, **kwargs):
 
 st. set_page_config(layout="wide")
 
-st.title('Polish Text-to-SQL')
+st.title('🇵🇱 Polish Text-to-SQL')
 
 tab1, tab2, tab3 = st.tabs(["1️⃣ DB Selection", "2️⃣ DB Clarification ", "3️⃣ Chat"])
 
@@ -122,3 +123,53 @@ with tab2:
             with column:
                 for table_name, table_columns in schema_dict_group.items():
                     table(table_name, table_columns)
+
+
+with tab3:
+    with st.container():
+        col1, col2, col3 = st.columns([4, 1, 1])
+        
+        with col1:
+            prompt = st.text_input(
+                label='prompt',
+                placeholder='Ask about anything',
+                label_visibility='collapsed',
+            )
+            
+        with col2:
+            ask_button = st.button(
+                label='Ask ❓',
+                type='secondary',
+                use_container_width=True
+            )
+            
+        with col3:
+            send_button = st.button(
+                label='Clear 🗑️',
+                type='secondary',
+                use_container_width=True
+            )
+            
+    with st.chat_message('user'):
+        st.write('Jaki jast najstarszy pracownik w dziale finansów?')
+    with st.chat_message('assistant'):
+        st.write('SELECT * form department')
+    with st.chat_message('assistant'):
+        st.write('How are you?')
+    
+    with st.chat_message('user'):
+        st.write('Jaki jast najstarszy pracownik w dziale finansów?')
+    with st.chat_message('assistant'):
+        st.write('SELECT * form department')
+    with st.chat_message('assistant'):
+        st.write('How are you?')
+        
+    with st.chat_message('user'):
+        st.write('Jaki jast najstarszy pracownik w dziale finansów?')
+    with st.chat_message('assistant'):
+        st.write('SELECT * form department')
+    with st.chat_message('assistant'):
+        st.write('How are you?')
+
+    
+    

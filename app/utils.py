@@ -79,7 +79,7 @@ def divide_schema_dict(schema_dict, groups_count):
     
     items = sorted(schema_dict.items(), key=lambda i: len(i[1]), reverse=True)
     for table, columns in items:
-        groups_lengths = [(sum([len(columns)+3 for columns in group.values()]), idx) for idx, group in enumerate(groups)]
+        groups_lengths = [(sum([len(columns)+2 for columns in group.values()]), idx) for idx, group in enumerate(groups)]
         smallest_group_idx = list(sorted(groups_lengths))[0][1]
         groups[smallest_group_idx][table] = columns
         
