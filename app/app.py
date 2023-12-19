@@ -29,6 +29,13 @@ st. set_page_config(layout="wide")
 
 st.title('Polish Text-to-SQL')
 
+# st.text('Upload SQLite database file or enter its schema in area bellow')
+
+db = st.file_uploader(
+    label='Upload SQLite database here or enter its schema in area bellow',
+    type=['sqlite'],
+    accept_multiple_files=False,
+)
 
 sql_schema = st_ace(
     language='sql',
@@ -38,19 +45,32 @@ sql_schema = st_ace(
     keybinding='vscode',
     show_gutter=False,
     font_size=16,
+    auto_update=False,
 )
 
-col1, col2, col3 = st.columns(3)
+if False:
+    col1, col2, col3 = st.columns(3)
 
-with col1:
-    table()
-    table()
-    table()
+    with col1:
+        table()
+        table()
+        table()
+        
+    with col2:
+        table()
+        table()
+        
+    with col3:
+        table()
+        table()
     
-with col2:
-    table()
-    table()
+    st.divider()
     
-with col3:
-    table()
-    table()
+with st.expander('📥 Import / 📤 export config'):
+    db = st.file_uploader(
+        label='Import',
+        accept_multiple_files=False,
+        # label_visibility='hidden'
+    )
+    st.button(label='Export', use_container_width=True)
+    # st.button(label='📥 Import config', use_container_width=True)
