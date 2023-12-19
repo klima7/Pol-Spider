@@ -114,62 +114,68 @@ with tab1:
 
 with tab2:
     if not schema_ok:
-        st.info('Complete previous tab first', icon='⏪')
+        st.info('Complete tab 1 first', icon='⏪')
     else:
-        clar_columns = st.columns(CLAR_COLUMNS)
-        schema_dict_groups = divide_schema_dict(schema_dict, CLAR_COLUMNS)
+        form = st.form("send_form", border=False)
+        with form:
+            st.form_submit_button('Apply', use_container_width=True, type='primary')
+            clar_columns = st.columns(CLAR_COLUMNS)
+            schema_dict_groups = divide_schema_dict(schema_dict, CLAR_COLUMNS)
 
-        for column, schema_dict_group in zip(clar_columns, schema_dict_groups):
-            with column:
-                for table_name, table_columns in schema_dict_group.items():
-                    table(table_name, table_columns)
+            for column, schema_dict_group in zip(clar_columns, schema_dict_groups):
+                with column:
+                    for table_name, table_columns in schema_dict_group.items():
+                        table(table_name, table_columns)
 
 
 with tab3:
-    with st.container():
-        col1, col2, col3 = st.columns([4, 1, 1])
+    if not schema_ok:
+        st.info('Complete tab 1 first', icon='⏪')
+    else:
+        with st.container():
+            col1, col2, col3 = st.columns([4, 1, 1])
+            
+            with col1:
+                prompt = st.text_input(
+                    label='prompt',
+                    placeholder='Ask about anything',
+                    label_visibility='collapsed',
+                )
+                
+            with col2:
+                ask_button = st.button(
+                    label='Ask ❓',
+                    type='secondary',
+                    use_container_width=True
+                )
+                
+            with col3:
+                clear_button = st.button(
+                    label='Clear 🗑️',
+                    type='secondary',
+                    use_container_width=True
+                )
+                
+        with st.chat_message('user'):
+            st.write('Jaki jast najstarszy pracownik w dziale finansów?')
+        with st.chat_message('assistant'):
+            st.write('SELECT * form department')
+        with st.chat_message('assistant'):
+            st.write('How are you?')
         
-        with col1:
-            prompt = st.text_input(
-                label='prompt',
-                placeholder='Ask about anything',
-                label_visibility='collapsed',
-            )
+        with st.chat_message('user'):
+            st.write('Jaki jast najstarszy pracownik w dziale finansów?')
+        with st.chat_message('assistant'):
+            st.write('SELECT * form department')
+        with st.chat_message('assistant'):
+            st.write('How are you?')
             
-        with col2:
-            ask_button = st.button(
-                label='Ask ❓',
-                type='secondary',
-                use_container_width=True
-            )
-            
-        with col3:
-            send_button = st.button(
-                label='Clear 🗑️',
-                type='secondary',
-                use_container_width=True
-            )
-            
-    with st.chat_message('user'):
-        st.write('Jaki jast najstarszy pracownik w dziale finansów?')
-    with st.chat_message('assistant'):
-        st.write('SELECT * form department')
-    with st.chat_message('assistant'):
-        st.write('How are you?')
-    
-    with st.chat_message('user'):
-        st.write('Jaki jast najstarszy pracownik w dziale finansów?')
-    with st.chat_message('assistant'):
-        st.write('SELECT * form department')
-    with st.chat_message('assistant'):
-        st.write('How are you?')
-        
-    with st.chat_message('user'):
-        st.write('Jaki jast najstarszy pracownik w dziale finansów?')
-    with st.chat_message('assistant'):
-        st.write('SELECT * form department')
-    with st.chat_message('assistant'):
-        st.write('How are you?')
+        with st.chat_message('user'):
+            st.write('Jaki jast najstarszy pracownik w dziale finansów?')
+        with st.chat_message('assistant'):
+            st.write('SELECT * form department')
+        with st.chat_message('assistant'):
+            st.write('How are you?')
 
-    
-    
+        
+        
