@@ -30,8 +30,7 @@ def get_db_from_sql(schema_sql):
     return db_path
 
 
-def get_schema_image_from_sql(sql):
-    db_path = get_db_from_sql(sql)
+def get_schema_image_from_db(db_path):
     path = Path(tempfile.mkdtemp()) / 'schema.png'
     render_er(f"sqlite:///{db_path}", str(path))
     return cv2.imread(str(path))
@@ -63,11 +62,6 @@ def get_schema_dict_from_db(db_path):
     tables = get_tables_from_db(db_path)
     schema_dict = {table: get_columns_from_db(db_path, table) for table in tables}
     return schema_dict
-
-
-def get_schema_dict_from_sql(sql):
-    db_path = get_db_from_sql(sql)
-    return get_schema_dict_from_db(db_path)
 
 
 def get_error_from_sql(sql):

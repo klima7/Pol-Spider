@@ -9,7 +9,7 @@ from streamlit_ace import st_ace
 import numpy as np
 
 from models import *
-from utils import get_sql_from_db, get_db_from_sql, get_schema_image_from_sql, get_error_from_sql, get_schema_dict_from_sql, divide_schema_dict
+from utils import get_sql_from_db, get_db_from_sql, get_schema_image_from_db, get_error_from_sql, get_schema_dict_from_db, divide_schema_dict
 
 
 SQL_SCHEMA_PLACEHOLDER = """
@@ -22,13 +22,9 @@ CREATE TABLE zamowienia(
 )
 """
 
-
 UPLOADS_DIR = Path('/tmp/uploads')
 
 CLAR_COLUMNS = 3
-
-
-
 
 
 def table(table_name, column_names):
@@ -76,7 +72,7 @@ def uploader_enhanced(*args, **kwargs):
     return file_path
 
 
-st. set_page_config(layout="wide")
+st.set_page_config(layout="wide")
 
 if 'messages' not in st.session_state:
     st.session_state.messages = []
@@ -86,15 +82,7 @@ st.title('🇵🇱 Polish Text-to-SQL')
 tab1, tab2, tab3 = st.tabs(["1️⃣ DB Selection", "2️⃣ DB Clarification ", "3️⃣ Chat"])
 
 with tab1:
-    with st.expander('📥 Import / 📤 export config'):
-        db = st.file_uploader(
-            label='Import',
-            accept_multiple_files=False,
-            label_visibility='collapsed'
-        )
-        st.button(label='Export', use_container_width=True, type='primary')
-    
-    st.subheader('Upload any SQLite database...')
+    st.subheader('Upload SQLite database...')
     
     db_path = uploader_enhanced(
         label='Upload SQLite database here or enter only its schema in area bellow',
@@ -119,23 +107,23 @@ with tab1:
     )
     
     schema_error = get_error_from_sql(schema_sql)
-    schema_ok = len(schema_sql) > 0 and schema_error is None
+    selected = len(schema_sql) > 0 and schema_error is None
     
     if schema_error:
         st.error(f'Schema Error: {schema_error}', icon="🔥")
     
-    if schema_ok:
-        schema_image = get_schema_image_from_sql(schema_sql)
+    if selected:
+        if db_path is None:
+            db_path = get_db_from_sql(schema_sql)
+        
+        schema_image = get_schema_image_from_db(db_path)
         st.subheader('This is graph of provided database')
         st.image(schema_image)
         
-        schema_dict = get_schema_dict_from_sql(schema_sql)
-        
-    if schema_ok and db_path is None:
-        db_path = get_db_from_sql(schema_sql)
+        schema_dict = get_schema_dict_from_db(db_path)
 
 with tab2:
-    if not schema_ok:
+    if not selected:
         st.info('Complete tab 1 first', icon='⏪')
     else:
         form = st.form("clar_form", border=False)
@@ -154,7 +142,7 @@ with tab2:
 
 
 with tab3:
-    if not schema_ok:
+    if not selected:
         st.info('Complete tab 1 first', icon='⏪')
     else:
         with st.container():
