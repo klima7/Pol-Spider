@@ -4,7 +4,11 @@ import sqlite3
 from pathlib import Path
 
 from eralchemy import render_er
+import pandas as pd
 import cv2
+
+
+DBS_DIR = Path('/tmp/dbs')
 
 
 def get_sql_from_db(db_path):
@@ -13,11 +17,17 @@ def get_sql_from_db(db_path):
     return sql
 
 
-def get_db_from_sql(sql):
-    path = Path(tempfile.mkdtemp()) / 'db.sqlite'
-    with sqlite3.connect(path) as conn:
-        conn.executescript(sql)
-    return path
+def get_db_from_sql(schema_sql):
+    h = hash(schema_sql)
+    
+    db_path = DBS_DIR / f'{h}.db'
+    
+    if not db_path.exists():
+        db_path.parent.mkdir(parents=True, exist_ok=True)
+        with sqlite3.connect(db_path) as conn:
+            conn.executescript(schema_sql)
+    
+    return db_path
 
 
 def get_schema_image_from_sql(sql):
@@ -84,3 +94,21 @@ def divide_schema_dict(schema_dict, groups_count):
         groups[smallest_group_idx][table] = columns
         
     return groups
+
+
+def execute_sql_query(db_path, sql):
+    try:
+        with sqlite3.connect(db_path) as conn:
+            cursor = conn.cursor()
+            cursor.execute(sql)
+            records = list(cursor.fetchall())
+            
+            columns_names = list(map(lambda x: x[0], cursor.description))
+            columns_data = [[r[i] for r in records] for i in range(len(columns_names))]
+            data_dict = {name: data for name, data in zip(columns_names, columns_data)}
+            data_df = pd.DataFrame(data_dict)
+            
+            cursor.close()
+            return data_df
+    except sqlite3.OperationalError as e:
+        return e

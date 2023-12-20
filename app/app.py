@@ -9,7 +9,7 @@ from streamlit_ace import st_ace
 import numpy as np
 
 from models import *
-from utils import get_sql_from_db, get_schema_image_from_sql, get_error_from_sql, get_schema_dict_from_sql, divide_schema_dict
+from utils import get_sql_from_db, get_db_from_sql, get_schema_image_from_sql, get_error_from_sql, get_schema_dict_from_sql, divide_schema_dict
 
 
 SQL_SCHEMA_PLACEHOLDER = """
@@ -26,6 +26,9 @@ CREATE TABLE zamowienia(
 UPLOADS_DIR = Path('/tmp/uploads')
 
 CLAR_COLUMNS = 3
+
+
+
 
 
 def table(table_name, column_names):
@@ -102,13 +105,16 @@ with tab1:
     schema_ok = len(schema_sql) > 0 and schema_error is None
     
     if schema_error:
-        st.error(f'Schema Error: {schema_error}', icon="🚨")
-
+        st.error(f'Schema Error: {schema_error}', icon="🔥")
+    
     if schema_ok:
         schema_image = get_schema_image_from_sql(schema_sql)
         st.image(schema_image)
         
         schema_dict = get_schema_dict_from_sql(schema_sql)
+        
+    if schema_ok and db_path is None:
+        db_path = get_db_from_sql(schema_sql)
         
     # with st.expander('📥 Import / 📤 export config'):
     #     db = st.file_uploader(
@@ -176,7 +182,8 @@ with tab3:
             message.render()
             st.session_state.messages.append(message)
                 
-        
-
-        
-        
+            time.sleep(0.5)
+                
+            sql_message = ResponseMessage(db_path, question)
+            st.session_state.messages.append(sql_message)
+            sql_message.render()
