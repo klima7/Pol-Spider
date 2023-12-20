@@ -1,5 +1,6 @@
 import tempfile
 import random
+import time
 from pathlib import Path
 
 import streamlit as st
@@ -7,6 +8,7 @@ import streamlit_ace
 from streamlit_ace import st_ace
 import numpy as np
 
+from models import *
 from utils import get_sql_from_db, get_schema_image_from_sql, get_error_from_sql, get_schema_dict_from_sql, divide_schema_dict
 
 
@@ -68,6 +70,9 @@ def uploader_enhanced(*args, **kwargs):
 
 st. set_page_config(layout="wide")
 
+if 'messages' not in st.session_state:
+    st.session_state.messages = []
+
 st.title('🇵🇱 Polish Text-to-SQL')
 
 tab1, tab2, tab3 = st.tabs(["1️⃣ DB Selection", "2️⃣ DB Clarification ", "3️⃣ Chat"])
@@ -116,7 +121,7 @@ with tab2:
     if not schema_ok:
         st.info('Complete tab 1 first', icon='⏪')
     else:
-        form = st.form("send_form", border=False)
+        form = st.form("clar_form", border=False)
         with form:
             st.form_submit_button('Apply', use_container_width=True, type='primary')
             clar_columns = st.columns(CLAR_COLUMNS)
@@ -133,49 +138,45 @@ with tab3:
         st.info('Complete tab 1 first', icon='⏪')
     else:
         with st.container():
-            col1, col2, col3 = st.columns([4, 1, 1])
+            col_joined, col_right = st.columns([5, 1])
             
-            with col1:
-                prompt = st.text_input(
-                    label='prompt',
-                    placeholder='Ask about anything',
-                    label_visibility='collapsed',
-                )
+            with col_joined:
+                with st.form('send_form', border=False, clear_on_submit=True):
+                    col_left, col_center = st.columns([4, 1])
                 
-            with col2:
-                ask_button = st.button(
-                    label='Ask ❓',
-                    type='secondary',
-                    use_container_width=True
-                )
+                    with col_left:
+                        question = st.text_input(
+                            label='prompt',
+                            placeholder='Ask about anything',
+                            label_visibility='collapsed',
+                        )
+                        
+                    with col_center:
+                        ask_button = st.form_submit_button(
+                            label='Ask ❓',
+                            type='secondary',
+                            use_container_width=True
+                        )
                 
-            with col3:
+            with col_right:
                 clear_button = st.button(
                     label='Clear 🗑️',
                     type='secondary',
                     use_container_width=True
                 )
                 
-        with st.chat_message('user'):
-            st.write('Jaki jast najstarszy pracownik w dziale finansów?')
-        with st.chat_message('assistant'):
-            st.write('SELECT * form department')
-        with st.chat_message('assistant'):
-            st.write('How are you?')
+                if clear_button:
+                    st.session_state.messages.clear()
+                
+        for message in st.session_state.messages:
+            message.render()
+                
+        if ask_button:
+            message = QuestionMessage(question)
+            message.render()
+            st.session_state.messages.append(message)
+                
         
-        with st.chat_message('user'):
-            st.write('Jaki jast najstarszy pracownik w dziale finansów?')
-        with st.chat_message('assistant'):
-            st.write('SELECT * form department')
-        with st.chat_message('assistant'):
-            st.write('How are you?')
-            
-        with st.chat_message('user'):
-            st.write('Jaki jast najstarszy pracownik w dziale finansów?')
-        with st.chat_message('assistant'):
-            st.write('SELECT * form department')
-        with st.chat_message('assistant'):
-            st.write('How are you?')
 
         
         
