@@ -86,13 +86,25 @@ st.title('🇵🇱 Polish Text-to-SQL')
 tab1, tab2, tab3 = st.tabs(["1️⃣ DB Selection", "2️⃣ DB Clarification ", "3️⃣ Chat"])
 
 with tab1:
+    with st.expander('📥 Import / 📤 export config'):
+        db = st.file_uploader(
+            label='Import',
+            accept_multiple_files=False,
+            label_visibility='collapsed'
+        )
+        st.button(label='Export', use_container_width=True, type='primary')
+    
+    st.subheader('Upload any SQLite database...')
+    
     db_path = uploader_enhanced(
         label='Upload SQLite database here or enter only its schema in area bellow',
-        type=['sqlite']
+        type=['sqlite'],
+        label_visibility='collapsed',
     )
 
     sql_from_db = get_sql_from_db(db_path) if db_path else ''
 
+    st.subheader('...Or provide SQL for schema creation')
     schema_sql = st_ace(
         value=sql_from_db,
         language='sql',
@@ -114,19 +126,13 @@ with tab1:
     
     if schema_ok:
         schema_image = get_schema_image_from_sql(schema_sql)
+        st.subheader('This is graph of provided database')
         st.image(schema_image)
         
         schema_dict = get_schema_dict_from_sql(schema_sql)
         
     if schema_ok and db_path is None:
         db_path = get_db_from_sql(schema_sql)
-        
-    # with st.expander('📥 Import / 📤 export config'):
-    #     db = st.file_uploader(
-    #         label='Import',
-    #         accept_multiple_files=False,
-    #     )
-    #     st.button(label='Export', use_container_width=True)
 
 with tab2:
     if not schema_ok:
