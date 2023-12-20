@@ -8,8 +8,16 @@ import streamlit_ace
 from streamlit_ace import st_ace
 import numpy as np
 
-from models import *
-from utils import get_sql_from_db, get_db_from_sql, get_schema_image_from_db, get_error_from_sql, get_schema_dict_from_db, divide_schema_dict, convert_name_to_sem
+from helpers.messages import *
+from helpers.utils import (
+    get_sql_from_db,
+    get_db_from_sql,
+    get_schema_image_from_db,
+    get_error_from_sql,
+    get_schema_dict_from_db,
+    divide_schema_dict,
+    convert_name_to_sem
+)
 
 
 SQL_SCHEMA_PLACEHOLDER = """

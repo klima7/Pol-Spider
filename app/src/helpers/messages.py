@@ -3,8 +3,9 @@ from dataclasses import dataclass
 from abc import ABC, abstractmethod
 
 import streamlit as st
-from predict import predict_sql
-from utils import execute_sql_query
+
+from helpers.predict import predict_sql
+from helpers.utils import execute_sql_query
 
 
 class Message(ABC):
