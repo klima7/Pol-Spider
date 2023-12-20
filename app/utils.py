@@ -106,3 +106,20 @@ def execute_sql_query(db_path, sql):
             return data_df
     except sqlite3.OperationalError as e:
         return e
+    
+    
+def convert_name_to_sem(name):
+    if len(name) == 0:
+        return name
+    
+    sem_name = name[0]
+    
+    for letter in name[1:]:
+        prev_letter = sem_name[-1]
+        if prev_letter.islower() and letter.isupper():
+            sem_name += ' '
+        sem_name += letter
+        
+    sem_name = sem_name.replace('_', ' ').lower()
+        
+    return sem_name

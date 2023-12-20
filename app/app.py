@@ -9,7 +9,7 @@ from streamlit_ace import st_ace
 import numpy as np
 
 from models import *
-from utils import get_sql_from_db, get_db_from_sql, get_schema_image_from_db, get_error_from_sql, get_schema_dict_from_db, divide_schema_dict
+from utils import get_sql_from_db, get_db_from_sql, get_schema_image_from_db, get_error_from_sql, get_schema_dict_from_db, divide_schema_dict, convert_name_to_sem
 
 
 SQL_SCHEMA_PLACEHOLDER = """
@@ -32,7 +32,7 @@ def table(table_name, column_names):
         st.subheader('🗂 '+table_name)
         table_sem_name = st.text_input(
             label='table name',
-            value=table_name,
+            value=convert_name_to_sem(table_name),
             label_visibility='collapsed',
             key=f'table_{table_name}'
         )
@@ -44,7 +44,7 @@ def table(table_name, column_names):
         for column_name in column_names:
             column_sem_name = st.text_input(
                 label='📊 ' + column_name,
-                value=column_name,
+                value=convert_name_to_sem(column_name),
                 key=f'column_{table_name}_{column_name}'
             )
             columns_sem_dict[column_name] = column_sem_name
