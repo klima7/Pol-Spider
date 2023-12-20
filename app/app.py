@@ -34,7 +34,7 @@ CLAR_COLUMNS = 3
 def table(table_name, column_names):
     with st.container(border=True):
         st.subheader('🗂 '+table_name)
-        _ = st.text_input(
+        table_sem_name = st.text_input(
             label='table name',
             value=table_name,
             label_visibility='collapsed',
@@ -43,12 +43,17 @@ def table(table_name, column_names):
         
         st.divider()
 
+        columns_sem_dict = {}
+        
         for column_name in column_names:
-            _ = st.text_input(
+            column_sem_name = st.text_input(
                 label='📊 ' + column_name,
                 value=column_name,
                 key=f'column_{table_name}_{column_name}'
             )
+            columns_sem_dict[column_name] = column_sem_name
+            
+    return table_sem_name, columns_sem_dict
 
 
 def uploader_enhanced(*args, **kwargs):
@@ -133,10 +138,13 @@ with tab2:
             clar_columns = st.columns(CLAR_COLUMNS)
             schema_dict_groups = divide_schema_dict(schema_dict, CLAR_COLUMNS)
 
+            sem_names = {}
+
             for column, schema_dict_group in zip(clar_columns, schema_dict_groups):
                 with column:
                     for table_name, table_columns in schema_dict_group.items():
-                        table(table_name, table_columns)
+                        table_sem, columns_sem = table(table_name, table_columns)
+                        sem_names[table_name] = (table_sem, columns_sem)
 
 
 with tab3:
@@ -184,6 +192,6 @@ with tab3:
                 
             time.sleep(0.5)
                 
-            sql_message = ResponseMessage(db_path, question)
+            sql_message = ResponseMessage(db_path, question, sem_names)
             st.session_state.messages.append(sql_message)
             sql_message.render()

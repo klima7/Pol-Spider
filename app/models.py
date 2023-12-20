@@ -25,9 +25,11 @@ class QuestionMessage(Message):
 
 class ResponseMessage(Message):
     
-    def __init__(self, db_path: str, question: str):
+    def __init__(self, db_path: str, question: str, sem_names: dict):
         self.db_path = db_path
         self.question = question
+        self.sem_names = sem_names
+        
         self.sql = None
         self.data = None
     
@@ -41,7 +43,7 @@ class ResponseMessage(Message):
     def _render_sql(self):
         if self.sql is None:
             with st.spinner('Thinking...'):
-                self.sql = predict_sql()
+                self.sql = predict_sql(self.question, self.sem_names)
                 
         st.text(self.sql)
         
