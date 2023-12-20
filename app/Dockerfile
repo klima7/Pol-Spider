@@ -1,7 +1,7 @@
 FROM nvidia/cuda:11.2.2-devel-ubuntu20.04
 
 # install required linux packages
-RUN apt-get update && apt install -y git wget
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt install -y git wget graphviz graphviz-dev
 
 # install conda
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /miniconda.sh && bash /miniconda.sh -b -p /opt/conda
@@ -57,4 +57,4 @@ RUN conda init
 
 RUN echo "conda activate resdsql" >> ~/.bashrc
 
-CMD sleep infinity
+CMD conda run -n resdsql streamlit run --server.port 80 app.py --server.enableXsrfProtection=false

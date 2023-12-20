@@ -4,6 +4,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    ports:
+      - "80:80"
     mem_limit: 50GB
     shm_size: '50gb'
     volumes:
