@@ -2,6 +2,7 @@ import os
 import sys
 import json
 import sqlite3
+from copy import deepcopy
 from os import listdir, makedirs
 from os.path import isfile, isdir, join, split, exists, splitext
 from nltk import word_tokenize, tokenize
@@ -83,7 +84,27 @@ def dump_db_json_schema(db, f):
     return data
 
 
-def get_tables(db_path, base_name='base'):
+def apply_sem_names_to_tables(tables_json, sem_names, db_name='base'):
+    new_tables_json = deepcopy(tables_json)
+    db = [db for db in new_tables_json if db['db_id'] == db_name][0]
+    
+    for table_idx in range(len(db['table_names_original'])):
+        name_original = db['table_names_original'][table_idx]
+        if name_original in sem_names:
+            db['table_names'][table_idx] = sem_names[name_original][0]
+            
+    for column_idx in range(len(db['column_names_original'])):
+        table_idx, column_original = db['column_names_original'][column_idx]
+        table_original = db['table_names_original'][table_idx]
+
+        if table_original in sem_names and column_original in sem_names[table_original][1]:
+            sem_name = sem_names[table_original][1][column_original]
+            db['column_names'][column_idx] = (db['column_names'][column_idx][0], sem_name)
+                
+    return new_tables_json
+        
+
+def get_tables(db_path, sem_names=None, db_name='base'):
     ex_tabs = [
         {
             "column_names": [],
@@ -103,13 +124,16 @@ def get_tables(db_path, base_name='base'):
     tables = []
     
     for db in db_files:
-        table = dump_db_json_schema(db, base_name)
-        prev_tab_num = len(ex_tabs[base_name]["table_names"])
-        prev_col_num = len(ex_tabs[base_name]["column_names"])
+        table = dump_db_json_schema(db, db_name)
+        prev_tab_num = len(ex_tabs[db_name]["table_names"])
+        prev_col_num = len(ex_tabs[db_name]["column_names"])
         cur_tab_num = len(table["table_names"])
         cur_col_num = len(table["column_names"])
-        if base_name in ex_tabs.keys() and prev_tab_num == cur_tab_num and prev_col_num == cur_col_num and prev_tab_num != 0 and len(ex_tabs[base_name]["column_names"]) > 1:
-            table["table_names"] = ex_tabs[base_name]["table_names"]
-            table["column_names"] = ex_tabs[base_name]["column_names"]
+        if db_name in ex_tabs.keys() and prev_tab_num == cur_tab_num and prev_col_num == cur_col_num and prev_tab_num != 0 and len(ex_tabs[db_name]["column_names"]) > 1:
+            table["table_names"] = ex_tabs[db_name]["table_names"]
+            table["column_names"] = ex_tabs[db_name]["column_names"]
         tables.append(table)
+        
+    tables = apply_sem_names_to_tables(tables, sem_names or {}, db_name)
+        
     return tables

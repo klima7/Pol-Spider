@@ -15,7 +15,7 @@ class MyClassifier(nn.Module):
         model_class = XLMRobertaModel if "xlm" in model_name_or_path else RobertaModel
         if mode in ["eval", "test"]:
             # load config
-            config = AutoConfig.from_pretrained(model_name_or_path)
+            config = AutoConfig.from_pretrained(model_name_or_path, torch_dtype=torch.float16)
             # randomly initialize model's parameters according to the config
             self.plm_encoder = model_class(config)
         elif mode == "train":

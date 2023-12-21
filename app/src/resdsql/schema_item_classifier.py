@@ -8,59 +8,49 @@ import torch.optim as optim
 from tqdm import tqdm
 from copy import deepcopy
 from tokenizers import AddedToken
-from utils.classifier_metric.evaluator import cls_metric, auc_metric
 from torch.utils.data import DataLoader
-from transformers import RobertaTokenizerFast, XLMRobertaTokenizerFast
-from utils.classifier_model import MyClassifier
-from utils.classifier_loss import ClassifierLoss
+from transformers import RobertaTokenizerFast, XLMRobertaTokenizerFast, AutoTokenizer
 from transformers.trainer_utils import set_seed
 from torch.utils.tensorboard import SummaryWriter
-from utils.load_dataset import ColumnAndTableClassifierDataset
+
+from .utils.classifier_metric.evaluator import cls_metric, auc_metric
+from .utils.classifier_model import MyClassifier
+from .utils.classifier_loss import ClassifierLoss
+from .utils.load_dataset import ColumnAndTableClassifierDataset
 
 
-def parse_option():
-    parser = argparse.ArgumentParser("command line arguments for fine-tuning schema item classifier.")
+model, tokenizer = None, None
+
+
+def _load(save_path, model_name_or_path='roberta-large',  mode='test'):
+    tokenizer_class = XLMRobertaTokenizerFast if "xlm" in model_name_or_path else RobertaTokenizerFast
     
-    parser.add_argument('--batch_size', type = int, default = 8,
-                        help = 'input batch size.')
-    parser.add_argument('--gradient_descent_step', type = int, default = 4,
-                        help = 'perform gradient descent per "gradient_descent_step" steps.')
-    parser.add_argument('--device', type = str, default = "3",
-                        help = 'the id of used GPU device.')
-    parser.add_argument('--learning_rate',type = float, default = 3e-5,
-                        help = 'learning rate.')
-    parser.add_argument('--gamma', type = float, default = 1.0,
-                        help = 'gamma parameter in the focal loss. Recommended: [0.0-2.0].')
-    parser.add_argument('--alpha', type = float, default = 1.0,
-                        help = 'alpha parameter in the focal loss. Must between [0.0-1.0].')
-    parser.add_argument('--epochs', type = int, default = 128,
-                        help = 'training epochs.')
-    parser.add_argument('--patience', type = int, default = 32,
-                        help = 'patience step in early stopping. -1 means no early stopping.')
-    parser.add_argument('--seed', type = int, default = 42,
-                        help = 'random seed.')
-    parser.add_argument('--save_path', type = str, default = "models/schema_item_classifier",
-                        help = 'save path of best fine-tuned model on validation set.')
-    parser.add_argument('--tensorboard_save_path', type = str, default = None,
-                        help = 'save path of tensorboard log.')
-    parser.add_argument('--train_filepath', type = str, default = "data/pre-processing/preprocessed_train_spider.json",
-                        help = 'path of pre-processed training dataset.')
-    parser.add_argument('--dev_filepath', type = str, default = "data/pre-processing/preprocessed_dev.json",
-                        help = 'path of pre-processed development dataset.')
-    parser.add_argument('--output_filepath', type = str, default = "data/pre-processing/dataset_with_pred_probs.json",
-                        help = 'path of the output dataset (used in eval mode).')
-    parser.add_argument('--model_name_or_path', type = str, default = "roberta-large",
-                        help = '''pre-trained model name.''')
-    parser.add_argument('--use_contents', action='store_true',
-                        help = 'whether to integrate db contents into input sequence')
-    parser.add_argument('--add_fk_info', action='store_true',
-                        help = 'whether to add [FK] tokens into input sequence')
-    parser.add_argument('--mode', type = str, default = "train",
-                        help='trian, eval or test.')
+    # load tokenizer
+    tokenizer = tokenizer_class.from_pretrained(
+        save_path,
+        add_prefix_space = True,
+        torch_dtype=torch.float16,
+    )
     
-    opt = parser.parse_args()
+    # initialize model
+    model = MyClassifier(
+        model_name_or_path = save_path,
+        vocab_size = len(tokenizer),
+        mode = mode,
+    )
+    
+    # load fine-tuned params
+    print(save_path + "/dense_classifier.pt")
+    model.load_state_dict(torch.load(save_path + "/dense_classifier.pt", map_location=torch.device('cpu')))
+    if torch.cuda.is_available():
+        model = model.cuda()
+    model.eval()
+    
+    return tokenizer, model
 
-    return opt
+
+tokenizer, model = _load('/app/models/classifier2')
+
     
 def prepare_batch_inputs_and_labels(batch, tokenizer):
     batch_size = len(batch)
@@ -180,235 +170,20 @@ def prepare_batch_inputs_and_labels(batch, tokenizer):
         batch_aligned_question_ids, batch_aligned_column_info_ids, \
         batch_aligned_table_name_ids, batch_column_number_in_each_table
 
-def _train(opt):
-    print(opt)
-    set_seed(opt.seed)
 
-    patience = opt.patience if opt.patience > 0 else float('inf')
-
-    if opt.tensorboard_save_path is not None:
-        writer = SummaryWriter(opt.tensorboard_save_path)
-    else:
-        writer = None
-
-    os.environ["CUDA_VISIBLE_DEVICES"] = opt.device
-
-    tokenizer_class = XLMRobertaTokenizerFast if "xlm" in opt.model_name_or_path else RobertaTokenizerFast
-
-    tokenizer = tokenizer_class.from_pretrained(
-        opt.model_name_or_path,
-        add_prefix_space = True
-    )
-    tokenizer.add_tokens(AddedToken("[FK]"))
-
-    train_dataset = ColumnAndTableClassifierDataset(
-        dir_ = opt.train_filepath,
-        use_contents = opt.use_contents,
-        add_fk_info = opt.add_fk_info
-    )
-
-    train_dataloder = DataLoader(
-        train_dataset, 
-        batch_size = opt.batch_size, 
-        shuffle = True,
-        collate_fn = lambda x: x
-    )
-
-    dev_dataset = ColumnAndTableClassifierDataset(
-        dir_ = opt.dev_filepath,
-        use_contents = opt.use_contents,
-        add_fk_info = opt.add_fk_info
-    )
-
-    dev_dataloder = DataLoader(
-        dev_dataset,
-        batch_size = opt.batch_size,
-        shuffle = False,
-        collate_fn = lambda x: x
-    )
-
-    # initialize model
-    model = MyClassifier(
-        model_name_or_path = opt.model_name_or_path,
-        vocab_size = len(tokenizer),
-        mode = opt.mode
-    )
-
-    if torch.cuda.is_available():
-        model = model.cuda()
-
-    # total training steps
-    num_training_steps = int(opt.epochs*8000/opt.batch_size)
-    # warm up steps (10% training step)
-    num_warmup_steps = int(0.1*num_training_steps)
-    # evaluate model for each 1.42857 epochs (about 1.42857*7000=10000 examples for Spider)
-    num_checkpoint_steps = int(1.42857*8000/opt.batch_size)
-
-    optimizer = optim.AdamW(
-        params = model.parameters(), 
-        lr = opt.learning_rate
-    )
-
-    scheduler = transformers.get_cosine_schedule_with_warmup(
-        optimizer, 
-        num_warmup_steps = num_warmup_steps,
-        num_training_steps = num_training_steps
-    )
-
-    best_score, early_stop_step, train_step = 0, 0, 0
-    encoder_loss_func = ClassifierLoss(alpha = opt.alpha, gamma = opt.gamma)
-    
-    for epoch in range(opt.epochs):
-        print(f"This is epoch {epoch+1}.")
-        for batch in train_dataloder:
-            model.train()
-            train_step += 1
-
-            encoder_input_ids, encoder_input_attention_mask, \
-                batch_column_labels, batch_table_labels, batch_aligned_question_ids, \
-                batch_aligned_column_info_ids, batch_aligned_table_name_ids, \
-                batch_column_number_in_each_table = prepare_batch_inputs_and_labels(batch, tokenizer)
-            
-            model_outputs = model(
-                encoder_input_ids,
-                encoder_input_attention_mask,
-                batch_aligned_question_ids,
-                batch_aligned_column_info_ids,
-                batch_aligned_table_name_ids,
-                batch_column_number_in_each_table
-            )
-            
-            loss = encoder_loss_func.compute_loss(
-                model_outputs["batch_table_name_cls_logits"],
-                batch_table_labels,
-                model_outputs["batch_column_info_cls_logits"],
-                batch_column_labels
-            )
-            
-            loss.backward()
-            
-            # update lr
-            if scheduler is not None:
-                scheduler.step()
-            
-            if writer is not None:
-                # record training loss (tensorboard)
-                writer.add_scalar('train loss', loss.item(), train_step)
-                # record learning rate (tensorboard)
-                writer.add_scalar('train lr', optimizer.state_dict()['param_groups'][0]['lr'], train_step)
-            
-            if train_step % opt.gradient_descent_step == 0:
-                torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-                optimizer.step()
-                optimizer.zero_grad()
-            
-            if train_step % num_checkpoint_steps == 0:
-                print(f"At {train_step} training step, start an evaluation.")
-                model.eval()
-
-                table_labels_for_auc, column_labels_for_auc = [], []
-                table_pred_probs_for_auc, column_pred_probs_for_auc = [], []
-
-                for batch in dev_dataloder:
-                    encoder_input_ids, encoder_input_attention_mask, \
-                        batch_column_labels, batch_table_labels, batch_aligned_question_ids, \
-                        batch_aligned_column_info_ids, batch_aligned_table_name_ids, \
-                        batch_column_number_in_each_table = prepare_batch_inputs_and_labels(batch, tokenizer)
-
-                    with torch.no_grad():
-                        model_outputs = model(
-                            encoder_input_ids,
-                            encoder_input_attention_mask, 
-                            batch_aligned_question_ids,
-                            batch_aligned_column_info_ids,
-                            batch_aligned_table_name_ids,
-                            batch_column_number_in_each_table
-                        )
-
-                    for batch_id, table_logits in enumerate(model_outputs["batch_table_name_cls_logits"]):
-                        table_pred_probs = torch.nn.functional.softmax(table_logits, dim = 1)
-                        
-                        table_pred_probs_for_auc.extend(table_pred_probs[:, 1].cpu().tolist())
-                        table_labels_for_auc.extend(batch_table_labels[batch_id].cpu().tolist())
-
-                    for batch_id, column_logits in enumerate(model_outputs["batch_column_info_cls_logits"]):
-                        column_pred_probs = torch.nn.functional.softmax(column_logits, dim = 1)
-            
-                        column_pred_probs_for_auc.extend(column_pred_probs[:, 1].cpu().tolist())
-                        column_labels_for_auc.extend(batch_column_labels[batch_id].cpu().tolist())
-
-                # calculate AUC score for table classification
-                table_auc = auc_metric(table_labels_for_auc, table_pred_probs_for_auc)
-                # calculate AUC score for column classification
-                column_auc = auc_metric(column_labels_for_auc, column_pred_probs_for_auc)
-                print("table AUC:", table_auc)
-                print("column AUC:", column_auc)
-
-                if writer is not None:
-                    writer.add_scalar('table AUC', table_auc, train_step/num_checkpoint_steps)
-                    writer.add_scalar('column AUC', column_auc, train_step/num_checkpoint_steps)
-                
-                toral_auc_score = table_auc + column_auc
-                print("total auc:", toral_auc_score)
-                # save the best ckpt
-                if toral_auc_score >= best_score:
-                    best_score = toral_auc_score
-                    os.makedirs(opt.save_path, exist_ok = True)
-                    torch.save(model.state_dict(), opt.save_path + "/dense_classifier.pt")
-                    model.plm_encoder.config.save_pretrained(save_directory = opt.save_path)
-                    tokenizer.save_pretrained(save_directory = opt.save_path)
-                    early_stop_step = 0
-                else:
-                    early_stop_step += 1
-                
-                print("early_stop_step:", early_stop_step)
-
-            if early_stop_step >= patience:
-                break
-        
-        if early_stop_step >= patience:
-            print("Classifier training process triggers early stopping.")
-            break
-    
-    print("best auc score:", best_score)
-
-def _test(opt):
-    set_seed(opt.seed)
-    os.environ["CUDA_VISIBLE_DEVICES"] = opt.device
-
-    tokenizer_class = XLMRobertaTokenizerFast if "xlm" in opt.model_name_or_path else RobertaTokenizerFast
-    
-    # load tokenizer
-    tokenizer = tokenizer_class.from_pretrained(
-        opt.save_path,
-        add_prefix_space = True
-    )
-    
+def _test(dev_filepath, use_contents, add_fk_info, batch_size, mode):
     dataset = ColumnAndTableClassifierDataset(
-        dir_ = opt.dev_filepath,
-        use_contents = opt.use_contents,
-        add_fk_info = opt.add_fk_info
+        dir_ = dev_filepath,
+        use_contents = use_contents,
+        add_fk_info = add_fk_info
     )
 
     dataloder = DataLoader(
         dataset,
-        batch_size = opt.batch_size,
+        batch_size = batch_size,
         shuffle = False,
         collate_fn = lambda x: x
     )
-
-    # initialize model
-    model = MyClassifier(
-        model_name_or_path = opt.save_path,
-        vocab_size = len(tokenizer),
-        mode = opt.mode
-    )
-
-    # load fine-tuned params
-    model.load_state_dict(torch.load(opt.save_path + "/dense_classifier.pt", map_location=torch.device('cpu')))
-    if torch.cuda.is_available():
-        model = model.cuda()
-    model.eval()
 
     table_labels_for_auc, column_labels_for_auc = [], []
     table_pred_probs_for_auc, column_pred_probs_for_auc = [], []
@@ -447,7 +222,7 @@ def _test(opt):
             column_pred_probs_for_auc.extend(column_pred_probs[:, 1].cpu().tolist())
             column_labels_for_auc.extend(batch_column_labels[batch_id].cpu().tolist())
 
-    if opt.mode == "eval":
+    if mode == "eval":
         # calculate AUC score for table classification
         table_auc = auc_metric(table_labels_for_auc, table_pred_probs_for_auc)
         # calculate AUC score for column classification
@@ -458,14 +233,11 @@ def _test(opt):
     
     return returned_table_pred_probs, returned_column_pred_probs
 
-if __name__ == "__main__":
-    opt = parse_option()
-    if opt.mode == "train":
-        _train(opt)
-    elif opt.mode in ["eval", "test"]:
-        total_table_pred_probs, total_column_pred_probs = _test(opt)
+def classify_schema_items(mode, dev_filepath, output_filepath, use_contents, add_fk_info, batch_size=1):
+    if mode in ["eval", "test"]:
+        total_table_pred_probs, total_column_pred_probs = _test(dev_filepath, use_contents, add_fk_info, batch_size, mode)
         
-        with open(opt.dev_filepath, "r") as f:
+        with open(dev_filepath, "r") as f:
             dataset = json.load(f)
         
         # record predicted probability
@@ -514,8 +286,8 @@ if __name__ == "__main__":
             with open("./data/pre-processing/truncated_dataset.json", "w") as f:
                 f.write(json.dumps(truncated_dataset, indent = 2, ensure_ascii = False))
             
-            opt.dev_filepath = "./data/pre-processing/truncated_dataset.json"
-            total_table_pred_probs, total_column_pred_probs = _test(opt)
+            dev_filepath = "./data/pre-processing/truncated_dataset.json"
+            total_table_pred_probs, total_column_pred_probs = _test(dev_filepath, use_contents, add_fk_info, batch_size, mode)
             
             for data_id, data in enumerate(truncated_dataset):
                 table_num = len(data["table_labels"])
@@ -561,5 +333,5 @@ if __name__ == "__main__":
             
             os.remove("./data/pre-processing/truncated_dataset.json")
 
-        with open(opt.output_filepath, "w") as f:
+        with open(output_filepath, "w") as f:
             f.write(json.dumps(dataset, indent = 2, ensure_ascii = False))

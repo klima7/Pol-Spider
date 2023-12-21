@@ -2,7 +2,7 @@ import re
 import json
 import argparse
 
-from utils.bridge_content_encoder import get_database_matches
+from .utils.bridge_content_encoder import get_database_matches
 from sql_metadata import Parser
 from tqdm import tqdm
 
@@ -267,15 +267,15 @@ def isFloat(string):
                 return False
         return True
 
-def main(opt):
-    dataset = json.load(open(opt.input_dataset_path))
-    all_db_infos = json.load(open(opt.table_path))
+def main(input_dataset_path, table_path, db_path, output_dataset_path, mode='test', target_type='sql', natsql_dataset_path=''):
+    dataset = json.load(open(input_dataset_path))
+    all_db_infos = json.load(open(table_path))
     
-    assert opt.mode in ["train", "eval", "test"]
+    assert mode in ["train", "eval", "test"]
 
-    if opt.mode in ["train", "eval"] and opt.target_type == "natsql":
+    if mode in ["train", "eval"] and target_type == "natsql":
         # only train_spider.json and dev.json have corresponding natsql dataset
-        natsql_dataset = json.load(open(opt.natsql_dataset_path))
+        natsql_dataset = json.load(open(natsql_dataset_path))
     else:
         # empty natsql dataset
         natsql_dataset = [None for _ in range(len(dataset))]
@@ -285,25 +285,10 @@ def main(opt):
     preprocessed_dataset = []
 
     for natsql_data, data in tqdm(zip(natsql_dataset, dataset)):
-        if data['query'] == 'SELECT T1.company_name FROM Third_Party_Companies AS T1 JOIN Maintenance_Contracts AS T2 ON T1.company_id  =  T2.maintenance_contract_company_id JOIN Ref_Company_Types AS T3 ON T1.company_type_code  =  T3.company_type_code ORDER BY T2.contract_end_date DESC LIMIT 1':
-            data['query'] = 'SELECT T1.company_type FROM Third_Party_Companies AS T1 JOIN Maintenance_Contracts AS T2 ON T1.company_id  =  T2.maintenance_contract_company_id ORDER BY T2.contract_end_date DESC LIMIT 1'
-            data['query_toks'] = ['SELECT', 'T1.company_type', 'FROM', 'Third_Party_Companies', 'AS', 'T1', 'JOIN', 'Maintenance_Contracts', 'AS', 'T2', 'ON', 'T1.company_id', '=', 'T2.maintenance_contract_company_id', 'ORDER', 'BY', 'T2.contract_end_date', 'DESC', 'LIMIT', '1']
-            data['query_toks_no_value'] =  ['select', 't1', '.', 'company_type', 'from', 'third_party_companies', 'as', 't1', 'join', 'maintenance_contracts', 'as', 't2', 'on', 't1', '.', 'company_id', '=', 't2', '.', 'maintenance_contract_company_id', 'order', 'by', 't2', '.', 'contract_end_date', 'desc', 'limit', 'value']
-            data['question'] = 'What is the type of the company who concluded its contracts most recently?'
-            data['question_toks'] = ['What', 'is', 'the', 'type', 'of', 'the', 'company', 'who', 'concluded', 'its', 'contracts', 'most', 'recently', '?']
-        if data['query'].startswith('SELECT T1.fname FROM student AS T1 JOIN lives_in AS T2 ON T1.stuid  =  T2.stuid WHERE T2.dormid IN'):
-            data['query'] = data['query'].replace('IN (SELECT T2.dormid)', 'IN (SELECT T3.dormid)')
-            index = data['query_toks'].index('(') + 2
-            # assert data['query_toks'][index] == 'T2.dormid'
-            data['query_toks'][index] = 'T3.dormid'
-            index = data['query_toks_no_value'].index('(') + 2
-            # assert data['query_toks_no_value'][index] == 't2'
-            data['query_toks_no_value'][index] = 't3'
-
         question = data["question"].replace("\u2018", "'").replace("\u2019", "'").replace("\u201c", "'").replace("\u201d", "'").strip()
         db_id = data["db_id"]
         
-        if opt.mode == "test":
+        if mode == "test":
             sql, norm_sql, sql_skeleton = "", "", ""
             sql_tokens = []
 
@@ -356,7 +341,7 @@ def main(opt):
                 table["table_name_original"], 
                 table["column_names_original"], 
                 db_id, 
-                opt.db_path
+                db_path
             )
 
             preprocessed_data["db_schema"].append({
@@ -369,7 +354,7 @@ def main(opt):
             })
 
             # extract table and column classification labels
-            if opt.target_type == "sql":
+            if target_type == "sql":
                 if table["table_name_original"] in sql_tokens:  # for used tables
                     preprocessed_data["table_labels"].append(1)
                     column_labels = []
@@ -383,7 +368,7 @@ def main(opt):
                 else:  # for unused tables and their columns
                     preprocessed_data["table_labels"].append(0)
                     preprocessed_data["column_labels"].append([0 for _ in range(len(table["column_names_original"]))])
-            elif opt.target_type == "natsql":
+            elif target_type == "natsql":
                 if table["table_name_original"] in natsql_tokens: # for used tables
                     preprocessed_data["table_labels"].append(1)
                     column_labels = []
@@ -401,7 +386,7 @@ def main(opt):
         
         preprocessed_dataset.append(preprocessed_data)
 
-    with open(opt.output_dataset_path, "w") as f:
+    with open(output_dataset_path, "w") as f:
         preprocessed_dataset_str = json.dumps(preprocessed_dataset, indent = 2, ensure_ascii = False)
         f.write(preprocessed_dataset_str)
 
