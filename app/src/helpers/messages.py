@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 
 import streamlit as st
 
-from helpers.predict import predict_sql
+from resdsql import generate_sql
 from helpers.utils import execute_sql_query
 
 
@@ -44,7 +44,7 @@ class ResponseMessage(Message):
     def _render_sql(self):
         if self.sql is None:
             with st.spinner('Thinking...'):
-                self.sql = predict_sql(self.question, self.sem_names)
+                self.sql = generate_sql(self.question, self.sem_names)
                 
         st.text(self.sql)
         

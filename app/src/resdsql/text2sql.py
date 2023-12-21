@@ -11,8 +11,9 @@ from .utils.load_dataset import Text2SQLDataset
 from .utils.text2sql_decoding_utils import decode_sqls
 
 
-def load_models(save_path, device):
-    os.environ["CUDA_VISIBLE_DEVICES"] = device
+def load_text2sql_models(save_path, device=None):
+    if device:
+        os.environ["CUDA_VISIBLE_DEVICES"] = device
 
     # initialize tokenizer
     tokenizer = T5TokenizerFast.from_pretrained(
@@ -36,10 +37,8 @@ def load_models(save_path, device):
     return tokenizer, model
 
 
-tokenizer, model = load_models('/app/models/generator', "0")
-
-
 def generate_sql(
+        models,
         batch_size=8,
         seed=42,
         mode="train",
@@ -49,6 +48,8 @@ def generate_sql(
         num_return_sequences=8,
         target_type="sql",
     ):
+    tokenizer, model = models
+    
     set_seed(seed)
 
     dev_dataset = Text2SQLDataset(

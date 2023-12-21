@@ -4,21 +4,19 @@ import torch
 
 from copy import deepcopy
 from torch.utils.data import DataLoader
-from transformers import RobertaTokenizerFast, XLMRobertaTokenizerFast
+from transformers import XLMRobertaTokenizerFast
 from transformers.trainer_utils import set_seed
 
 from .utils.classifier_model import MyClassifier
 from .utils.load_dataset import ColumnAndTableClassifierDataset
 
 
-model, tokenizer = None, None
-
-
-def _load(save_path, model_name_or_path='roberta-large',  mode='test'):
-    tokenizer_class = XLMRobertaTokenizerFast if "xlm" in model_name_or_path else RobertaTokenizerFast
+def load_classifier_models(save_path, device=None):
+    if device:
+        os.environ["CUDA_VISIBLE_DEVICES"] = device
     
     # load tokenizer
-    tokenizer = tokenizer_class.from_pretrained(
+    tokenizer = XLMRobertaTokenizerFast.from_pretrained(
         save_path,
         add_prefix_space = True,
         torch_dtype=torch.float16,
@@ -28,20 +26,16 @@ def _load(save_path, model_name_or_path='roberta-large',  mode='test'):
     model = MyClassifier(
         model_name_or_path = save_path,
         vocab_size = len(tokenizer),
-        mode = mode,
+        mode = 'test',
     )
     
     # load fine-tuned params
-    print(save_path + "/dense_classifier.pt")
     model.load_state_dict(torch.load(save_path + "/dense_classifier.pt", map_location=torch.device('cpu')))
     if torch.cuda.is_available():
         model = model.cuda()
     model.eval()
     
     return tokenizer, model
-
-
-tokenizer, model = _load('/app/models/classifier2')
 
     
 def prepare_batch_inputs_and_labels(batch, tokenizer):
@@ -163,7 +157,9 @@ def prepare_batch_inputs_and_labels(batch, tokenizer):
         batch_aligned_table_name_ids, batch_column_number_in_each_table
 
 
-def _test(dev_filepath, use_contents, add_fk_info, batch_size, seed):
+def _test(models, dev_filepath, use_contents, add_fk_info, batch_size, seed):
+    tokenizer, model = models
+    
     set_seed(seed)
     
     dataset = ColumnAndTableClassifierDataset(
@@ -218,9 +214,10 @@ def _test(dev_filepath, use_contents, add_fk_info, batch_size, seed):
     
     return returned_table_pred_probs, returned_column_pred_probs
 
-def classify_schema_items(mode, dev_filepath, output_filepath, use_contents, add_fk_info, batch_size=1, seed=42):
+
+def classify_schema_items(models, mode, dev_filepath, output_filepath, use_contents, add_fk_info, batch_size=1, seed=42):
     if mode in ["eval", "test"]:
-        total_table_pred_probs, total_column_pred_probs = _test(dev_filepath, use_contents, add_fk_info, batch_size, seed)
+        total_table_pred_probs, total_column_pred_probs = _test(models, dev_filepath, use_contents, add_fk_info, batch_size, seed)
         
         with open(dev_filepath, "r") as f:
             dataset = json.load(f)
@@ -272,7 +269,7 @@ def classify_schema_items(mode, dev_filepath, output_filepath, use_contents, add
                 f.write(json.dumps(truncated_dataset, indent = 2, ensure_ascii = False))
             
             dev_filepath = "./data/pre-processing/truncated_dataset.json"
-            total_table_pred_probs, total_column_pred_probs = _test(dev_filepath, use_contents, add_fk_info, batch_size, seed)
+            total_table_pred_probs, total_column_pred_probs = _test(models, dev_filepath, use_contents, add_fk_info, batch_size, seed)
             
             for data_id, data in enumerate(truncated_dataset):
                 table_num = len(data["table_labels"])
