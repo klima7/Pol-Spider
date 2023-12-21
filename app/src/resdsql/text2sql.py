@@ -48,7 +48,6 @@ def generate_sql(
         num_beams=8,
         num_return_sequences=8,
         target_type="sql",
-        output="predicted_sql.txt",
     ):
     set_seed(seed)
 
@@ -108,12 +107,5 @@ def generate_sql(
             else:
                 raise ValueError()
     
-    new_dir = "/".join(output.split("/")[:-1]).strip()
-    if new_dir != "":
-        os.makedirs(new_dir, exist_ok = True)
-    
     # save results
-    with open(output, "w", encoding = 'utf-8') as f:
-        for pred in predict_sqls:
-            f.write(pred + "\n")
-    
+    return predict_sqls
