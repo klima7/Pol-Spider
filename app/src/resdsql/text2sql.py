@@ -1,7 +1,6 @@
 import os
 import torch
 
-from tqdm import tqdm
 from tokenizers import AddedToken
 
 from torch.utils.data import DataLoader
@@ -53,9 +52,6 @@ def generate_sql(
     ):
     set_seed(seed)
 
-    import time
-    start_time = time.time()
-    
     dev_dataset = Text2SQLDataset(
         dir_ = dev_filepath,
         mode = mode
@@ -70,7 +66,7 @@ def generate_sql(
     )
 
     predict_sqls = []
-    for batch in tqdm(dev_dataloder):
+    for batch in dev_dataloder:
         batch_inputs = [data[0] for data in batch]
         batch_db_ids = [data[1] for data in batch]
         batch_tc_original = [data[2] for data in batch]
@@ -121,5 +117,3 @@ def generate_sql(
         for pred in predict_sqls:
             f.write(pred + "\n")
     
-    end_time = time.time()
-    print("Text-to-SQL inference spends {}s.".format(end_time-start_time))

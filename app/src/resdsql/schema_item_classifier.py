@@ -2,7 +2,6 @@ import os
 import json
 import torch
 
-from tqdm import tqdm
 from copy import deepcopy
 from torch.utils.data import DataLoader
 from transformers import RobertaTokenizerFast, XLMRobertaTokenizerFast
@@ -164,7 +163,9 @@ def prepare_batch_inputs_and_labels(batch, tokenizer):
         batch_aligned_table_name_ids, batch_column_number_in_each_table
 
 
-def _test(dev_filepath, use_contents, add_fk_info, batch_size, mode):
+def _test(dev_filepath, use_contents, add_fk_info, batch_size, seed):
+    set_seed(seed)
+    
     dataset = ColumnAndTableClassifierDataset(
         dir_ = dev_filepath,
         use_contents = use_contents,
@@ -183,7 +184,7 @@ def _test(dev_filepath, use_contents, add_fk_info, batch_size, mode):
 
     returned_table_pred_probs, returned_column_pred_probs = [], []
 
-    for batch in tqdm(dataloder):
+    for batch in dataloder:
         encoder_input_ids, encoder_input_attention_mask, \
             batch_column_labels, batch_table_labels, batch_aligned_question_ids, \
             batch_aligned_column_info_ids, batch_aligned_table_name_ids, \
@@ -217,9 +218,9 @@ def _test(dev_filepath, use_contents, add_fk_info, batch_size, mode):
     
     return returned_table_pred_probs, returned_column_pred_probs
 
-def classify_schema_items(mode, dev_filepath, output_filepath, use_contents, add_fk_info, batch_size=1):
+def classify_schema_items(mode, dev_filepath, output_filepath, use_contents, add_fk_info, batch_size=1, seed=42):
     if mode in ["eval", "test"]:
-        total_table_pred_probs, total_column_pred_probs = _test(dev_filepath, use_contents, add_fk_info, batch_size, mode)
+        total_table_pred_probs, total_column_pred_probs = _test(dev_filepath, use_contents, add_fk_info, batch_size, seed)
         
         with open(dev_filepath, "r") as f:
             dataset = json.load(f)
@@ -271,7 +272,7 @@ def classify_schema_items(mode, dev_filepath, output_filepath, use_contents, add
                 f.write(json.dumps(truncated_dataset, indent = 2, ensure_ascii = False))
             
             dev_filepath = "./data/pre-processing/truncated_dataset.json"
-            total_table_pred_probs, total_column_pred_probs = _test(dev_filepath, use_contents, add_fk_info, batch_size, mode)
+            total_table_pred_probs, total_column_pred_probs = _test(dev_filepath, use_contents, add_fk_info, batch_size, seed)
             
             for data_id, data in enumerate(truncated_dataset):
                 table_num = len(data["table_labels"])

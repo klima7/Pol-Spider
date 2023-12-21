@@ -3,7 +3,6 @@ import json
 
 from .utils.bridge_content_encoder import get_database_matches
 from sql_metadata import Parser
-from tqdm import tqdm
 
 sql_keywords = ['select', 'from', 'where', 'group', 'order', 'limit', 'intersect', 'union', \
     'except', 'join', 'on', 'as', 'not', 'between', 'in', 'like', 'is', 'exists', 'max', 'min', \
@@ -256,7 +255,7 @@ def preprocess(input_dataset_path, table_path, db_path, output_dataset_path, mod
     
     preprocessed_dataset = []
 
-    for natsql_data, data in tqdm(zip(natsql_dataset, dataset)):
+    for natsql_data, data in zip(natsql_dataset, dataset):
         question = data["question"].replace("\u2018", "'").replace("\u2019", "'").replace("\u201c", "'").replace("\u201d", "'").strip()
         db_id = data["db_id"]
         
