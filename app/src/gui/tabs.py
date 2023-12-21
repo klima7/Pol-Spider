@@ -4,6 +4,7 @@ from streamlit_ace import st_ace
 from gui.constants import *
 from gui.messages import QuestionMessage, ResponseMessage
 from gui.components import table, uploader_enhanced
+from gui.resources import load_resdsql_model
 from helpers.utils import (
     get_sql_from_db,
     get_db_from_sql,
@@ -116,6 +117,8 @@ def chat_tab(db_path, sem_names):
                 
                 if clear_button:
                     st.session_state.messages.clear()
+                    
+        resdsql_model = load_resdsql_model()
                 
         for message in st.session_state.messages:
             message.render()
@@ -125,6 +128,11 @@ def chat_tab(db_path, sem_names):
             message.render()
             st.session_state.messages.append(message)
                 
-            sql_message = ResponseMessage(db_path, question, sem_names)
+            sql_message = ResponseMessage(
+                resdsql_model,
+                db_path,
+                question,
+                sem_names
+            )
             st.session_state.messages.append(sql_message)
             sql_message.render()

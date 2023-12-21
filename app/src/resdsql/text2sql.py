@@ -40,7 +40,7 @@ def load_text2sql_models(save_path, device=None):
 def generate_sql(
         models,
         batch_size=8,
-        seed=42,
+        seed=None,
         mode="train",
         dev_filepath="data/preprocessed_data/resdsql_dev.json",
         db_path="database",
@@ -50,7 +50,8 @@ def generate_sql(
     ):
     tokenizer, model = models
     
-    set_seed(seed)
+    if seed:
+        set_seed(seed)
 
     dev_dataset = Text2SQLDataset(
         dir_ = dev_filepath,

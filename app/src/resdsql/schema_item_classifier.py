@@ -160,7 +160,8 @@ def prepare_batch_inputs_and_labels(batch, tokenizer):
 def _test(models, dev_filepath, use_contents, add_fk_info, batch_size, seed):
     tokenizer, model = models
     
-    set_seed(seed)
+    if seed:
+        set_seed(seed)
     
     dataset = ColumnAndTableClassifierDataset(
         dir_ = dev_filepath,
@@ -215,7 +216,7 @@ def _test(models, dev_filepath, use_contents, add_fk_info, batch_size, seed):
     return returned_table_pred_probs, returned_column_pred_probs
 
 
-def classify_schema_items(models, mode, dev_filepath, output_filepath, use_contents, add_fk_info, batch_size=1, seed=42):
+def classify_schema_items(models, mode, dev_filepath, output_filepath, use_contents, add_fk_info, batch_size=1, seed=None):
     if mode in ["eval", "test"]:
         total_table_pred_probs, total_column_pred_probs = _test(models, dev_filepath, use_contents, add_fk_info, batch_size, seed)
         

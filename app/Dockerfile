@@ -53,4 +53,4 @@ RUN conda init
 
 RUN echo "conda activate resdsql" >> ~/.bashrc
 
-CMD conda run -n resdsql streamlit run --server.port 80 app.py --server.enableXsrfProtection=false
+CMD conda run -n resdsql cd src; streamlit run --server.port 80 app.py --server.enableXsrfProtection=false

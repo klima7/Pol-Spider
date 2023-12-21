@@ -1,5 +1,6 @@
 import streamlit as st
 
+from gui.resources import load_resdsql_model
 from gui.tabs import (
     selection_tab,
     clarification_tab,
@@ -10,6 +11,8 @@ from gui.tabs import (
 st.set_page_config(layout="wide")
 
 st.title('🇵🇱 Polish Text-to-SQL')
+
+load_resdsql_model()
 
 tab1, tab2, tab3 = st.tabs([
     "1️⃣ DB Selection",

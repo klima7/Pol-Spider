@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 
 import streamlit as st
 
-from resdsql import generate_sql
+from resdsql.predict import generate_sql
 from helpers.utils import execute_sql_query
 
 
@@ -26,7 +26,8 @@ class QuestionMessage(Message):
 
 class ResponseMessage(Message):
     
-    def __init__(self, db_path: str, question: str, sem_names: dict):
+    def __init__(self, model, db_path, question, sem_names=None):
+        self.model = model
         self.db_path = db_path
         self.question = question
         self.sem_names = sem_names
@@ -45,7 +46,11 @@ class ResponseMessage(Message):
         if self.sql is None:
             with st.spinner('Thinking...'):
                 # self.sql = generate_sql(self.question, self.sem_names)
-                self.sql = 'select * from student'
+                self.sql = self.model(
+                    self.question,
+                    self.db_path,
+                    self.sem_names
+                )
                 
         st.text(self.sql)
         
