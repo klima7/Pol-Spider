@@ -44,7 +44,8 @@ class ResponseMessage(Message):
     def _render_sql(self):
         if self.sql is None:
             with st.spinner('Thinking...'):
-                self.sql = generate_sql(self.question, self.sem_names)
+                # self.sql = generate_sql(self.question, self.sem_names)
+                self.sql = 'select * from student'
                 
         st.text(self.sql)
         
