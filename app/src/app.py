@@ -8,16 +8,20 @@ from gui.tabs import (
 )
 
 
-st.set_page_config(layout="wide")
+st.set_page_config(
+    page_title='Text2SQL',
+    page_icon='🇵🇱',
+    layout='wide'
+)
 
 st.title('🇵🇱 Polish Text-to-SQL')
 
 load_resdsql_model()
 
 tab1, tab2, tab3 = st.tabs([
-    "1️⃣ DB Selection",
-    "2️⃣ DB Clarification ",
-    "3️⃣ Chat"
+    '1️⃣ DB Selection',
+    '2️⃣ DB Clarification',
+    '3️⃣ Chat'
 ])
 
 with tab1:
