@@ -10,33 +10,6 @@ sql_keywords = ['select', 'from', 'where', 'group', 'order', 'limit', 'intersect
     'except', 'join', 'on', 'as', 'not', 'between', 'in', 'like', 'is', 'exists', 'max', 'min', \
         'count', 'sum', 'avg', 'and', 'or', 'desc', 'asc']
 
-def parse_option():
-    parser = argparse.ArgumentParser("")
-    
-    parser.add_argument('--mode', type = str, default = "train")
-    parser.add_argument('--table_path', type = str, default = "./data/spider/tables.json")
-    parser.add_argument('--input_dataset_path', type = str, default = "./data/spider/train_spider.json", 
-                        help = '''
-                            options:
-                                ./data/spider/train_spider.json
-                                ./data/spider/dev.json
-                            ''')
-    parser.add_argument('--natsql_dataset_path', type = str, default = "./NatSQL/NatSQLv1_6/train_spider-natsql.json", 
-                        help = '''
-                            options:
-                                ./NatSQL/NatSQLv1_6/train_spider-natsql.json
-                                ./NatSQL/NatSQLv1_6/dev-natsql.json
-                            ''')
-    parser.add_argument('--output_dataset_path', type = str, default = "./data/pre-processing/preprocessed_dataset.json", 
-                        help = "the filepath of preprocessed dataset.")
-    parser.add_argument('--db_path', type = str, default = "./data/spider/database", 
-                        help = "the filepath of database.")
-    parser.add_argument("--target_type", type = str, default = "sql",
-                        help = "sql or natsql.")
-
-    opt = parser.parse_args()
-
-    return opt
 
 def get_db_contents(question, table_name_original, column_names_original, db_id, db_path):
     matched_contents = []
@@ -389,7 +362,3 @@ def main(input_dataset_path, table_path, db_path, output_dataset_path, mode='tes
     with open(output_dataset_path, "w") as f:
         preprocessed_dataset_str = json.dumps(preprocessed_dataset, indent = 2, ensure_ascii = False)
         f.write(preprocessed_dataset_str)
-
-if __name__ == "__main__":
-    opt = parse_option()
-    main(opt)

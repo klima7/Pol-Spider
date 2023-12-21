@@ -1,12 +1,11 @@
 import os
-import json
 import torch
 
 from tqdm import tqdm
 from tokenizers import AddedToken
 
 from torch.utils.data import DataLoader
-from transformers import T5TokenizerFast, T5ForConditionalGeneration, MT5ForConditionalGeneration
+from transformers import T5TokenizerFast, MT5ForConditionalGeneration
 from transformers.trainer_utils import set_seed
 
 from .utils.load_dataset import Text2SQLDataset

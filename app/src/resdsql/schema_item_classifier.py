@@ -1,21 +1,14 @@
 import os
 import json
 import torch
-import transformers
-import argparse
-import torch.optim as optim
 
 from tqdm import tqdm
 from copy import deepcopy
-from tokenizers import AddedToken
 from torch.utils.data import DataLoader
-from transformers import RobertaTokenizerFast, XLMRobertaTokenizerFast, AutoTokenizer
+from transformers import RobertaTokenizerFast, XLMRobertaTokenizerFast
 from transformers.trainer_utils import set_seed
-from torch.utils.tensorboard import SummaryWriter
 
-from .utils.classifier_metric.evaluator import cls_metric, auc_metric
 from .utils.classifier_model import MyClassifier
-from .utils.classifier_loss import ClassifierLoss
 from .utils.load_dataset import ColumnAndTableClassifierDataset
 
 
@@ -221,15 +214,6 @@ def _test(dev_filepath, use_contents, add_fk_info, batch_size, mode):
             
             column_pred_probs_for_auc.extend(column_pred_probs[:, 1].cpu().tolist())
             column_labels_for_auc.extend(batch_column_labels[batch_id].cpu().tolist())
-
-    if mode == "eval":
-        # calculate AUC score for table classification
-        table_auc = auc_metric(table_labels_for_auc, table_pred_probs_for_auc)
-        # calculate AUC score for column classification
-        column_auc = auc_metric(column_labels_for_auc, column_pred_probs_for_auc)
-        print("table auc:", table_auc)
-        print("column auc:", column_auc)
-        print("total auc:", table_auc+column_auc)
     
     return returned_table_pred_probs, returned_column_pred_probs
 
