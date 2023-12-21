@@ -22,10 +22,6 @@ RUN pip install -r requirements.txt
 
 RUN pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.0/en_core_web_sm-2.2.0.tar.gz
 
-COPY resdsql/nltk_downloader.py resdsql/nltk_downloader.py
-
-RUN python resdsql/nltk_downloader.py
-
 WORKDIR /app/resdsql/third_party
 
 RUN git clone https://github.com/ElementAI/spider.git

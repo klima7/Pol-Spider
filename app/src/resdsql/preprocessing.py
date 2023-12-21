@@ -1,6 +1,5 @@
 import re
 import json
-import argparse
 
 from .utils.bridge_content_encoder import get_database_matches
 from sql_metadata import Parser
@@ -240,7 +239,7 @@ def isFloat(string):
                 return False
         return True
 
-def main(input_dataset_path, table_path, db_path, output_dataset_path, mode='test', target_type='sql', natsql_dataset_path=''):
+def preprocess(input_dataset_path, table_path, db_path, output_dataset_path, mode='test', target_type='sql', natsql_dataset_path=''):
     dataset = json.load(open(input_dataset_path))
     all_db_infos = json.load(open(table_path))
     
