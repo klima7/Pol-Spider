@@ -4,8 +4,8 @@ device="0"
 
 if [ $1 = "base" ]
 then
-    text2sql_model_save_path="./models/text2sql-mt5-base-polspider/checkpoint-259728"
-    text2sql_model_bs=8
+    text2sql_model_save_path="./models/text2sql-mt5-base-polspider/checkpoint-best"
+    text2sql_model_bs=6
 else
     echo "The first arg must in [base, large, 3b]."
     exit
@@ -25,7 +25,55 @@ then
     table_path="./data/pol_spider/tables.json"
     input_dataset_path="./data/pol_spider/dev.json"
     db_path="./data/pol_spider/database"
-    output="./predictions/polspider/$model_name/pred.sql"
+    output="./predictions/polish/$model_name/pol_spider.sql"
+elif [ $2 = "pol_spider_pl" ]
+then
+    table_path="./data/pol_spider_pl/tables.json"
+    input_dataset_path="./data/pol_spider_pl/dev.json"
+    db_path="./data/pol_spider_pl/database"
+    output="./predictions/polish/$model_name/pol_spider_pl.sql"
+elif [ $2 = "pol_spider_en" ]
+then
+    table_path="./data/pol_spider_en/tables.json"
+    input_dataset_path="./data/pol_spider_en/dev.json"
+    db_path="./data/pol_spider_en/database"
+    output="./predictions/polish/$model_name/pol_spider_en.sql"
+elif [ $2 = "en_spider" ]
+then
+    table_path="./data/en_spider/tables.json"
+    input_dataset_path="./data/en_spider/dev.json"
+    db_path="./data/en_spider/database"
+    output="./predictions/polish/$model_name/en_spider.sql"
+elif [ $2 = "mix_spider" ]
+then
+    table_path="./data/mix_spider/tables.json"
+    input_dataset_path="./data/mix_spider/dev.json"
+    db_path="./data/mix_spider/database"
+    output="./predictions/polish/$model_name/mix_spider.sql"
+elif [ $2 = "pol_cosql" ]
+then
+    table_path="./data/pol_cosql/tables.json"
+    input_dataset_path="./data/pol_cosql/dev.json"
+    db_path="./data/pol_cosql/database"
+    output="./predictions/polish/$model_name/pol_cosql.sql"
+elif [ $2 = "pol_sparc" ]
+then
+    table_path="./data/pol_sparc/tables.json"
+    input_dataset_path="./data/pol_sparc/dev.json"
+    db_path="./data/pol_sparc/database"
+    output="./predictions/polish/$model_name/pol_sparc.sql"
+elif [ $2 = "pol_spiderdk" ]
+then
+    table_path="./data/pol_spiderdk/tables.json"
+    input_dataset_path="./data/pol_spiderdk/dev.json"
+    db_path="./data/pol_spiderdk/database"
+    output="./predictions/polish/$model_name/pol_spiderdk.sql"
+elif [ $2 = "pol_spidersyn" ]
+then
+    table_path="./data/pol_spidersyn/tables.json"
+    input_dataset_path="./data/pol_spidersyn/dev.json"
+    db_path="./data/pol_spidersyn/database"
+    output="./predictions/polish/$model_name/pol_spidersyn.sql"
 else
     echo "The second arg is invalid"
     exit

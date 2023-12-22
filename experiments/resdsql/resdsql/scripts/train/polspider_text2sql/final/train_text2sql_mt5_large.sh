@@ -17,10 +17,10 @@ python -u text2sql.py \
 
 # select the best text2sql-mt5-large (CSpider version) ckpt
 python -u evaluate_text2sql_ckpts.py \
-    --batch_size 1 \
+    --batch_size 4 \
     --device "0" \
     --seed 42 \
-    --save_path "./models/mt5-large-polspider" \
+    --save_path "./models/text2sql-mt5-large-polspider" \
     --eval_results_path "./eval_results/mt5-large-polspider" \
     --mode eval \
     --dev_filepath "./data/preprocessed_data/resdsql_dev_polspider.json" \
