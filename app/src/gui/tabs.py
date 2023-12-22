@@ -3,7 +3,7 @@ from streamlit_ace import st_ace
 
 from gui.constants import *
 from gui.messages import QuestionMessage, ResponseMessage
-from gui.components import table, uploader_enhanced
+from gui.components import table, uploader_enhanced, ask_panel
 from gui.resources import load_resdsql_model
 from gui.translation import trans
 from helpers.utils import (
@@ -85,48 +85,22 @@ def chat_tab(db_path, sem_names):
     if not db_path:
         st.info(trans('complete_1'), icon='⏪')
     else:
+        resdsql_model = load_resdsql_model()
+        
         if 'messages' not in st.session_state:
             st.session_state.messages = []
-        
-        with st.container():
-            col_joined, col_right = st.columns([5, 1])
-            
-            with col_joined:
-                with st.form('send_form', border=False, clear_on_submit=True):
-                    col_left, col_center = st.columns([4, 1])
-                
-                    with col_left:
-                        question = st.text_input(
-                            label='prompt',
-                            placeholder=trans('question_placeholder'),
-                            label_visibility='collapsed',
-                        )
-                        
-                    with col_center:
-                        ask_button = st.form_submit_button(
-                            label=trans('ask'),
-                            type='secondary',
-                            use_container_width=True
-                        )
-                
-            with col_right:
-                clear_button = st.button(
-                    label=trans('clear'),
-                    type='secondary',
-                    use_container_width=True
-                )
-                
-                if clear_button:
-                    st.session_state.messages.clear()
-                    
-        resdsql_model = load_resdsql_model()
                 
         for message in st.session_state.messages:
             message.render()
+            
+        ask_button, clear_button, question = ask_panel()
+        
+        if clear_button:
+            st.session_state.messages.clear()
+            st.rerun()
                 
         if ask_button:
             message = QuestionMessage(question)
-            message.render()
             st.session_state.messages.append(message)
                 
             sql_message = ResponseMessage(
@@ -136,4 +110,5 @@ def chat_tab(db_path, sem_names):
                 sem_names
             )
             st.session_state.messages.append(sql_message)
-            sql_message.render()
+            
+            st.rerun()

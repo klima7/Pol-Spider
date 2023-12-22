@@ -66,3 +66,35 @@ def language_selector(default='pl'):
         format_func=lambda lang: gui_texts[lang],
         key='lang_selector',
     )
+
+
+def ask_panel():
+    with st.container():
+        col_joined, col_right = st.columns([5, 1])
+        
+        with col_joined:
+            with st.form('send_form', border=False, clear_on_submit=True):
+                col_left, col_center = st.columns([4, 1])
+            
+                with col_left:
+                    question = st.text_input(
+                        label='prompt',
+                        placeholder=trans('question_placeholder'),
+                        label_visibility='collapsed',
+                    )
+                    
+                with col_center:
+                    ask_button = st.form_submit_button(
+                        label=trans('ask'),
+                        type='secondary',
+                        use_container_width=True
+                    )
+            
+        with col_right:
+            clear_button = st.button(
+                label=trans('clear'),
+                type='secondary',
+                use_container_width=True
+            )
+                
+    return ask_button, clear_button, question
