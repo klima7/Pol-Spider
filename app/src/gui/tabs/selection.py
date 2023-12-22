@@ -1,4 +1,7 @@
+import json
 from pathlib import Path
+from typing import Optional
+from dataclasses import dataclass
 
 import streamlit as st
 from streamlit_ace import st_ace
@@ -38,13 +41,12 @@ def selection_tab():
     
     # select example
     st.subheader(trans('select_example'))
-    examples = get_examples()
-    paths = list(examples.keys())
+    examples_dict = {e.path: e for e in get_examples()}
     db_path_new = st.selectbox(
         label='',
-        options=paths,
+        options=examples_dict.keys(),
         index=0,
-        format_func=lambda path: examples[path],
+        format_func=lambda path: examples_dict[path].disp_name,
         label_visibility='collapsed',
     )
     db_path = db_path or db_path_new
@@ -88,8 +90,28 @@ def sql_schema_input(db_path):
             db_path = get_db_from_sql(schema_sql)
 
 
+
+@dataclass
+class ExampleDb:
+    name: str
+    path: Optional[Path] = None
+    description: Optional[dict] = None
+    schema: Optional[str] = None
+    content: Optional[str] = None
+    
+    @property
+    def disp_name(self):
+        return self.name
+
+
 def get_examples():
-    examples = {None: trans('nothing')}
-    for path in EXAMPLES_PATH.glob('*.sqlite'):
-        examples[path] = '🛢️ ' + path.name[:-7].replace('_', ' ').title()
+    examples = [ExampleDb(name=trans('nothing'))]
+    
+    for dir in EXAMPLES_PATH.glob('*'):
+        db_path = dir / 'database.sqlite'
+        meta_path = dir / 'metadata.json'
+        with open(meta_path) as f:
+            meta = json.load(f)
+        example = ExampleDb(path=db_path, **meta)
+        examples.append(example)
     return examples
