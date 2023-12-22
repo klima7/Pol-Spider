@@ -1,6 +1,8 @@
 import streamlit as st
 
 from gui.resources import load_resdsql_model
+from gui.components import language_selector
+from gui.translation import trans
 from gui.tabs import (
     selection_tab,
     clarification_tab,
@@ -14,14 +16,19 @@ st.set_page_config(
     layout='wide'
 )
 
-st.title('🇵🇱 Polish Text-to-SQL')
+col1, col2 = st.columns([2, 1])
+
+with col1:
+    st.title(trans('title'))
+with col2:
+    language_selector()
 
 load_resdsql_model()
 
 tab1, tab2, tab3 = st.tabs([
-    '1️⃣ DB Selection',
-    '2️⃣ DB Clarification',
-    '3️⃣ Chat'
+    trans('selection_tab'),
+    trans('clarification_tab'),
+    trans('chat_tab')
 ])
 
 with tab1:

@@ -5,6 +5,7 @@ from gui.constants import *
 from gui.messages import QuestionMessage, ResponseMessage
 from gui.components import table, uploader_enhanced
 from gui.resources import load_resdsql_model
+from gui.translation import trans
 from helpers.utils import (
     get_sql_from_db,
     get_db_from_sql,
@@ -16,17 +17,17 @@ from helpers.utils import (
 
 
 def selection_tab():
-    st.subheader('Upload SQLite database...')
+    st.subheader(trans('upload_db'))
     
     db_path = uploader_enhanced(
-        label='Upload SQLite database here or enter only its schema in area bellow',
+        label=trans('upload_db'),
         type=['sqlite'],
         label_visibility='collapsed',
     )
 
     sql_from_db = get_sql_from_db(db_path) if db_path else ''
 
-    st.subheader('...Or provide SQL for schema creation')
+    st.subheader(trans('provide_sql'))
     schema_sql = st_ace(
         value=sql_from_db,
         language='sql',
@@ -43,14 +44,14 @@ def selection_tab():
     schema_error = get_error_from_sql(schema_sql)
     
     if schema_error:
-        st.error(f'Schema Error: {schema_error}', icon="🔥")
+        st.error(f'{trans("schema_error")}: {schema_error}', icon="🔥")
     
     elif len(schema_sql) > 0:
         if db_path is None:
             db_path = get_db_from_sql(schema_sql)
         
         schema_image = get_schema_image_from_db(db_path)
-        st.subheader('This is graph of provided database')
+        st.subheader(trans('graph_title'))
         st.image(schema_image)
         
     return db_path
@@ -58,14 +59,14 @@ def selection_tab():
 
 def clarification_tab(db_path):
     if not db_path:
-        st.info('Complete tab 1 first', icon='⏪')
+        st.info(trans('complete_1'), icon='⏪')
         return None
     else:
         schema_dict = get_schema_dict_from_db(db_path)
         
         form = st.form("clar_form", border=False)
         with form:
-            st.form_submit_button('Apply', use_container_width=True, type='primary')
+            st.form_submit_button(trans('apply'), use_container_width=True, type='primary')
             clar_columns = st.columns(CLAR_COLUMNS)
             schema_dict_groups = divide_schema_dict(schema_dict, CLAR_COLUMNS)
 
@@ -82,7 +83,7 @@ def clarification_tab(db_path):
     
 def chat_tab(db_path, sem_names):
     if not db_path:
-        st.info('Complete tab 1 first', icon='⏪')
+        st.info(trans('complete_1'), icon='⏪')
     else:
         if 'messages' not in st.session_state:
             st.session_state.messages = []
@@ -97,20 +98,20 @@ def chat_tab(db_path, sem_names):
                     with col_left:
                         question = st.text_input(
                             label='prompt',
-                            placeholder='Ask about anything',
+                            placeholder=trans('question_placeholder'),
                             label_visibility='collapsed',
                         )
                         
                     with col_center:
                         ask_button = st.form_submit_button(
-                            label='Ask ❓',
+                            label=trans('ask'),
                             type='secondary',
                             use_container_width=True
                         )
                 
             with col_right:
                 clear_button = st.button(
-                    label='Clear 🗑️',
+                    label=trans('clear'),
                     type='secondary',
                     use_container_width=True
                 )

@@ -2,6 +2,7 @@ from pathlib import Path
 
 import streamlit as st
 
+from gui.translation import trans, lang
 from helpers.utils import convert_name_to_sem
 
 
@@ -48,3 +49,20 @@ def uploader_enhanced(*args, **kwargs):
             f.write(file.read())
     
     return file_path
+
+
+def language_selector(default='pl'):
+    options = ['pl', 'en']
+    
+    gui_texts = {
+        'pl': trans('polish'),
+        'en': trans('english')
+    }
+    
+    st.selectbox(
+        label=trans('lang_label'),
+        options=options,
+        index=options.index(lang()),
+        format_func=lambda lang: gui_texts[lang],
+        key='lang_selector',
+    )
