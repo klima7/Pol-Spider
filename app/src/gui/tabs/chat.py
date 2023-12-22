@@ -9,6 +9,8 @@ from gui.translation import trans
 from helpers.database import execute_sql_query
 
 
+MAX_TABLE_HEIGHT = 200
+
 
 def chat_tab(db_path, sem_names):
     if not db_path:
@@ -101,6 +103,7 @@ class ResponseMessage(Message):
         
         self.sql = None
         self.data = None
+        self.first_render = True
     
     
     def render(self):
@@ -112,14 +115,22 @@ class ResponseMessage(Message):
     def _render_sql(self):
         if self.sql is None:
             with st.spinner(trans('thinking')):
-                # self.sql = generate_sql(self.question, self.sem_names)
                 self.sql = self.model(
                     self.question,
                     self.db_path,
                     self.sem_names
                 )
                 
-        st.text(self.sql)
+        placeholder = st.empty()
+        
+        if self.first_render:
+            for idx in range(len(self.sql)):
+                placeholder.text(self.sql[:idx+1])
+                time.sleep(0.05)
+            self.first_render = False
+        else:
+            placeholder.text(self.sql)
+            
         
     def _render_data(self):
         if self.data is None:
@@ -130,7 +141,7 @@ class ResponseMessage(Message):
         if isinstance(self.data, Exception):
             st.error(str(self.data), icon='🔥')
         else:
-            height = 200 if len(self.data) > 1 else 50
+            height = MAX_TABLE_HEIGHT if len(self.data) > 1 else 50
             st.dataframe(
                 self.data,
                 use_container_width=True,
