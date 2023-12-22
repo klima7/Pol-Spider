@@ -1,8 +1,7 @@
 import streamlit as st
 
 from gui.resources import load_resdsql_model
-from gui.components import language_selector
-from gui.translation import trans
+from gui.translation import language_selector, trans
 from gui.tabs import (
     selection_tab,
     clarification_tab,

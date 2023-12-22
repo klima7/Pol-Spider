@@ -86,3 +86,20 @@ def lang():
 
 def trans(id):
     return ALL_TRANSLATIONS[id][lang()]
+
+
+def language_selector(default='pl'):
+    options = ['pl', 'en']
+    
+    gui_texts = {
+        'pl': trans('polish'),
+        'en': trans('english')
+    }
+    
+    st.selectbox(
+        label=trans('lang_label'),
+        options=options,
+        index=options.index(lang()),
+        format_func=lambda lang: gui_texts[lang],
+        key='lang_selector',
+    )
