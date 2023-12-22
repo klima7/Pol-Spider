@@ -51,6 +51,19 @@ def selection_tab():
 
     # provide sql
     st.subheader(trans('provide_sql'))
+    db_path_new = sql_schema_input(db_path)
+    db_path = db_path or db_path_new
+    
+    # graph
+    if db_path:
+        schema_image = get_schema_image_from_db(db_path)
+        st.subheader(trans('graph_title'))
+        st.image(schema_image)
+        
+    return db_path
+
+
+def sql_schema_input(db_path):
     sql_from_db = get_sql_from_db(db_path) if db_path else ''
     schema_sql = st_ace(
         value=sql_from_db,
@@ -69,16 +82,10 @@ def selection_tab():
     
     if schema_error:
         st.error(f'{trans("schema_error")}: {schema_error}', icon="🔥")
-    
+        
     elif len(schema_sql) > 0:
         if db_path is None:
             db_path = get_db_from_sql(schema_sql)
-        
-        schema_image = get_schema_image_from_db(db_path)
-        st.subheader(trans('graph_title'))
-        st.image(schema_image)
-        
-    return db_path
 
 
 def get_examples():

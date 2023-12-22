@@ -6,20 +6,20 @@ DEFAULT_LANG = 'en'
 
 ALL_TRANSLATIONS = {
     "title": {
-        "en": "Polish Text-to-SQL",
-        "pl": "Polskie Text-to-SQL"
+        "en": "🏳 Polish Text-to-SQL",
+        "pl": "🏳 Polskie Text-to-SQL"
     },
     "lang_label": {
         "en": "Interface language",
         "pl": "Język interfejsu"
     },
     "polish": {
-        "en": "🇵🇱 Polish",
-        "pl": "🇵🇱 Polski"
+        "en": "🏳 Polish",
+        "pl": "🏳 Polski"
     },
     "english": {
-        "en": "🇬🇧 English",
-        "pl": "🇬🇧 Angielski"
+        "en": "🏳 English",
+        "pl": "🏳 Angielski"
     },
     "selection_tab": {
         "en": "1️⃣ DB Selection",
