@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import streamlit as st
 from streamlit_ace import st_ace
 
@@ -22,18 +24,34 @@ CREATE TABLE zamowienia(
 """
 
 
+EXAMPLES_PATH = Path('../db')
+
+
 def selection_tab():
+    # upload new
     st.subheader(trans('upload_db'))
-    
     db_path = uploader_enhanced(
         label=trans('upload_db'),
         type=['sqlite'],
         label_visibility='collapsed',
     )
+    
+    # select example
+    st.subheader(trans('select_example'))
+    examples = get_examples()
+    paths = list(examples.keys())
+    db_path_new = st.selectbox(
+        label='',
+        options=paths,
+        index=0,
+        format_func=lambda path: examples[path],
+        label_visibility='collapsed',
+    )
+    db_path = db_path or db_path_new
 
-    sql_from_db = get_sql_from_db(db_path) if db_path else ''
-
+    # provide sql
     st.subheader(trans('provide_sql'))
+    sql_from_db = get_sql_from_db(db_path) if db_path else ''
     schema_sql = st_ace(
         value=sql_from_db,
         language='sql',
@@ -61,3 +79,10 @@ def selection_tab():
         st.image(schema_image)
         
     return db_path
+
+
+def get_examples():
+    examples = {None: trans('nothing')}
+    for path in EXAMPLES_PATH.glob('*.sqlite'):
+        examples[path] = '🛢️ ' + path.name[:-7].replace('_', ' ').title()
+    return examples

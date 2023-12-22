@@ -34,12 +34,20 @@ ALL_TRANSLATIONS = {
         "pl": "3️⃣ Chat"
     },
     "upload_db": {
-        "en": "Upload SQLite database...",
-        "pl": "Załaduj bazę danych SQLite..."
+        "en": "Upload SQLite database ...",
+        "pl": "Załaduj bazę danych SQLite ..."
     },
     "provide_sql": {
-        "en": "...Or provide SQL for schema creation",
-        "pl": "...Lub dostarcz skrypt SQL tworzący schemat"
+        "en": "... Or provide SQL for schema creation",
+        "pl": "... Lub dostarcz skrypt SQL tworzący schemat"
+    },
+    "select_example": {
+        "en": "... Or select example database",
+        "pl": "... Lub wybierz przykładową bazę"
+    },
+    "nothing": {
+        "en": "🕳️ Nothing",
+        "pl": "🕳️ Brak"
     },
     "graph_title": {
         "en": "Graph of provided database",
