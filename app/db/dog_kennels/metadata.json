@@ -1,9 +1,9 @@
 {
-    "name": "dog kennels",
+    "name": "🐶 dog kennels",
     "description": {
         "pl": "",
         "en": ""
     },
-    "schema": "pl",
-    "content": "pl"
+    "schema": "english",
+    "content": "english"
 }

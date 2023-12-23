@@ -1,9 +1,9 @@
 {
-    "name": "car 1",
+    "name": "🚗 car 1",
     "description": {
         "pl": "",
         "en": ""
     },
-    "schema": "pl",
-    "content": "pl"
+    "schema": "english",
+    "content": "english"
 }

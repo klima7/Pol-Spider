@@ -1,9 +1,9 @@
 {
-    "name": "pets 1",
+    "name": "🐈 pets 1",
     "description": {
         "pl": "",
         "en": ""
     },
-    "schema": "pl",
-    "content": "pl"
+    "schema": "english",
+    "content": "english"
 }

@@ -1,9 +1,9 @@
 {
-    "name": "museum visit",
+    "name": "🏛 museum visit",
     "description": {
         "pl": "",
         "en": ""
     },
-    "schema": "pl",
-    "content": "pl"
+    "schema": "english",
+    "content": "english"
 }

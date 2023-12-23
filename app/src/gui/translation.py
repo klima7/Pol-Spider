@@ -14,12 +14,12 @@ ALL_TRANSLATIONS = {
         "pl": "Język interfejsu"
     },
     "polish": {
-        "en": "🏳 Polish",
-        "pl": "🏳 Polski"
+        "en": "polish",
+        "pl": "polski"
     },
     "english": {
-        "en": "🏳 English",
-        "pl": "🏳 Angielski"
+        "en": "english",
+        "pl": "angielski"
     },
     "selection_tab": {
         "en": "1️⃣ DB Selection",
@@ -48,6 +48,10 @@ ALL_TRANSLATIONS = {
     "nothing": {
         "en": "🕳️ Nothing",
         "pl": "🕳️ Brak"
+    },
+    "schema": {
+        "en": "schema",
+        "pl": "schemat"
     },
     "graph_title": {
         "en": "Graph of provided database",
@@ -100,8 +104,8 @@ def language_selector(default='pl'):
     options = ['pl', 'en']
     
     gui_texts = {
-        'pl': trans('polish'),
-        'en': trans('english')
+        'pl': '🏳 ' + trans('polish').capitalize(),
+        'en': '🏳 ' + trans('english').capitalize()
     }
     
     st.selectbox(

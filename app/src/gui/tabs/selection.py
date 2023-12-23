@@ -101,12 +101,14 @@ class ExampleDb:
     
     @property
     def disp_name(self):
-        return self.name
+        if self.path is None:
+            return self.name
+        else:
+            return f"{self.name} ({trans('schema')}: {trans(self.schema)})"
 
 
 def get_examples():
-    examples = [ExampleDb(name=trans('nothing'))]
-    
+    examples = []
     for dir in EXAMPLES_PATH.glob('*'):
         db_path = dir / 'database.sqlite'
         meta_path = dir / 'metadata.json'
@@ -114,4 +116,7 @@ def get_examples():
             meta = json.load(f)
         example = ExampleDb(path=db_path, **meta)
         examples.append(example)
-    return examples
+        
+    nothing_example = ExampleDb(name=trans('nothing'))
+    examples = list(sorted(examples, key=lambda e: e.name[2:]))
+    return [nothing_example, *examples]
