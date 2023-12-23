@@ -1,9 +1,9 @@
 {
-    "name": "👨🏼‍🎓 student transcripts tracking",
+    "name": "🏛 museum visit",
     "description": {
         "pl": "",
         "en": ""
     },
     "schema": "english",
-    "content": "english"
+    "content": "polish"
 }

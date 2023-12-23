@@ -104,14 +104,13 @@ class ExampleDb:
         if self.path is None:
             return self.name
         else:
-            return f"{self.name} ({trans('schema')}: {trans(self.schema)})"
+            return f"{self.name} ({trans('schema')}: {trans(self.schema)}, {trans('content')}: {trans(self.content)})"
 
 
 def get_examples():
     examples = []
-    for dir in EXAMPLES_PATH.glob('*'):
-        db_path = dir / 'database.sqlite'
-        meta_path = dir / 'metadata.json'
+    for db_path in EXAMPLES_PATH.glob('**/*.sqlite'):
+        meta_path = db_path.parent / 'metadata.json'
         with open(meta_path) as f:
             meta = json.load(f)
         example = ExampleDb(path=db_path, **meta)

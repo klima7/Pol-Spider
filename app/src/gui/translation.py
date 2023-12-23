@@ -53,6 +53,10 @@ ALL_TRANSLATIONS = {
         "en": "schema",
         "pl": "schemat"
     },
+    "content": {
+        "en": "content",
+        "pl": "zawartość"
+    },
     "graph_title": {
         "en": "Graph of provided database",
         "pl": "Diagram wybranej bazy danych"
