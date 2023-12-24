@@ -104,7 +104,8 @@ class ExampleDb:
         if self.path is None:
             return self.name
         else:
-            return f"{self.name} ({trans('schema')}: {trans(self.schema)}, {trans('content')}: {trans(self.content)})"
+            return f"{self.name} ({trans('schema')}: {trans(self.schema)})"
+            # return f"{self.name} ({trans('schema')}: {trans(self.schema)}, {trans('content')}: {trans(self.content)})"
 
 
 def get_examples():
