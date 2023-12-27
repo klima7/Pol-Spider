@@ -1,0 +1,9 @@
+services:
+  c3sql:
+    container_name: c3sql
+    build:
+      context: .
+      dockerfile: Dockerfile
+    mem_limit: 8GB
+    volumes:
+      - .:/home/user/app
