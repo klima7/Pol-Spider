@@ -31,7 +31,7 @@ python src/table_recall.py \
 # recall columns
 echo "recall columns..."
 python src/column_recall.py \
-    --input_recalled_tables_path "./generate_datasets/table_recall.json" \
+    --input_dataset_path "./generate_datasets/table_recall.json" \
     --output_recalled_columns_path "./generate_datasets/column_recall.json" \
 
 # generate prompt

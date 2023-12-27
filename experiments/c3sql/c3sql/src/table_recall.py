@@ -5,9 +5,6 @@ import time
 from tqdm import tqdm
 from collections import Counter
 
-# add your openai api key
-openai.api_key = "sk-"
-
 
 def parse_option():
     parser = argparse.ArgumentParser("command line arguments for recall tables")

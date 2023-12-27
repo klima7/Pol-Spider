@@ -5,13 +5,10 @@ import time
 from tqdm import tqdm
 from collections import Counter
 
-# add your openai api key
-openai.api_key = "sk-"
-
 
 def parse_option():
     parser = argparse.ArgumentParser("command line arguments for recall columns")
-    parser.add_argument("--input_recalled_tables_path", type=str)
+    parser.add_argument("--input_dataset_path", type=str)
     parser.add_argument("--self_consistent", type=bool, default=True)
     parser.add_argument("--n", type=int, default=10,
                         help="Size of self-consistent set")
@@ -201,5 +198,5 @@ if __name__ == "__main__":
         info = info_generate(tabs_cols, data)
         res.append(info)
         # print(res)
-        with open(opt.output_dataset_path, 'w') as f:
+        with open(opt.output_recalled_columns_path, 'w') as f:
             json.dump(res, f, indent=2)
