@@ -1,8 +1,8 @@
 set -e
 
-tables="./data/spider/tables.json"
-dataset_path="./data/spider/dev.json"
-db_dir="database"
+tables="./data/pol_spider_10/tables.json"
+dataset_path="./data/pol_spider_10/dev.json"
+db_dir="./data/pol_spider_10/database"
 output_dataset_path="predicted_sql.txt"
 
 processed_dataset_path="./generate_datasets/C3_dev.json"
