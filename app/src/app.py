@@ -4,6 +4,7 @@ import streamlit as st
 
 from gui.resources import load_resdsql_model
 from gui.translation import language_selector, trans
+from gui.components import password_protection
 from gui.tabs import (
     selection_tab,
     clarification_tab,
@@ -17,7 +18,9 @@ st.set_page_config(
     layout='wide'
 )
 
+
 if os.environ.get('OPENAI_API_KEY') is not None:
+    password_protection()
     openai_api_key = os.environ.get('OPENAI_API_KEY')
     col1, col2 = st.columns([2, 1])
     with col1:
