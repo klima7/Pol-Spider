@@ -1,3 +1,4 @@
 data/**
 database/**
 generate_datasets/**
+predictions/**
