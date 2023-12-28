@@ -1,6 +1,7 @@
 import json
 import argparse
 import openai
+import openai.error
 import time
 from tqdm import tqdm
 from collections import Counter
@@ -126,6 +127,8 @@ if __name__ == "__main__":
         while tables_all is None:
             try:
                 tables_all = generate_reply([{"role": "user", "content": prompt}], sc_num)
+            except openai.error.AuthenticationError as e:
+                raise e
             except:
                 print(f'api error, wait for 3 seconds and retry...')
                 time.sleep(3)

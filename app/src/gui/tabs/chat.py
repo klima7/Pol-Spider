@@ -136,7 +136,10 @@ class ResponseMessage(Message):
     def _predict_sql_if_needed(self):
         if self.sql is None:
                 with st.spinner(trans('thinking')):
-                    self._predict_sql()
+                    try:
+                        self._predict_sql()
+                    except Exception as e:
+                        self.sql = e
 
     def _predict_sql(self):
         raise NotImplementedError
@@ -144,7 +147,9 @@ class ResponseMessage(Message):
     def _render_sql(self):        
         placeholder = st.empty()
         
-        if self.first_render:
+        if isinstance(self.sql, Exception):
+            st.error(str(self.sql), icon='🔥')
+        elif self.first_render:
             for idx in range(len(self.sql)):
                 placeholder.text(self.sql[:idx+1])
                 time.sleep(0.05)
@@ -154,6 +159,9 @@ class ResponseMessage(Message):
             
         
     def _render_data(self):
+        if isinstance(self.sql, Exception):
+            return
+        
         if self.data is None:
             with st.spinner(trans('executing')):
                 time.sleep(1)

@@ -37,12 +37,14 @@ def predict_sql(question, db_path, openai_api_key, sem_names=None):
         aux_dir.mkdir()
         
         # run bash script
-        ret = subprocess.call([
-            'sh', './run_c3sql.sh',
-            str(tables_path), str(samples_path), str(database_path), str(output_path), str(aux_dir), openai_api_key
-        ], cwd=str(Path.cwd() / 'c3sql'))
-
-        assert ret == 0
+        try:
+            ret = subprocess.call([
+                'sh', './run_c3sql.sh',
+                str(tables_path), str(samples_path), str(database_path), str(output_path), str(aux_dir), openai_api_key
+            ], cwd=str(Path.cwd() / 'c3sql'))
+            assert ret == 0
+        except Exception:
+            raise Exception('Something went wrong.')
 
         # read output
         with open(output_path, 'r') as f:
