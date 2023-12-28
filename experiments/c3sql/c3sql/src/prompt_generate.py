@@ -18,7 +18,7 @@ if __name__ == "__main__":
         data_all = json.load(f)
     temp = []
     for id, data in enumerate(data_all):
-        data['input_sequence'] = "### Complete sqlite SQL query only and with no explanation, and do not select extra columns that are not explicitly requested in the query. " \
+        data['input_sequence'] = "### Complete sqlite SQL query only and with no explanation, and do not select extra columns that are not explicitly requested in the query. Query will be provided in polish language." \
                         "\n ### Sqlite SQL tables, with their properties: \n#\n"
         schema = ""
         for tab, cols in data['schema'].items():

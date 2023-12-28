@@ -152,7 +152,7 @@ def info_generate(tabs_cols, data):
     return info
 
 
-instruction = '''Given the database tables and question, perform the following actions: 
+instruction = '''Given the database tables and polish question, perform the following actions: 
 1 - Rank the columns in each table based on the possibility of being used in the SQL, Column that matches more with the question words or the foreign key is highly relevant and must be placed ahead. You should output them in the order of the most relevant to the least relevant.
 Explain why you choose each column.
 2 - Output a JSON object that contains all the columns in each table according to your explanation. The format should be like: 
