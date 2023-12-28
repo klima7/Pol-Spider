@@ -5,7 +5,7 @@ import argparse
 from sql_metadata import Parser
 from tqdm import tqdm
 
-from .bridge_content_encoder import get_database_matches
+from bridge_content_encoder import get_database_matches
 
 
 sql_keywords = ['select', 'from', 'where', 'group', 'order', 'limit', 'intersect', 'union', \

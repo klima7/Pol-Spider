@@ -7,8 +7,8 @@ import os
 import sqlite3
 from tqdm import tqdm
 
-from .sql_post_process import fix_select_column
-from .get_selfconsistent_output import get_sqls
+from sql_post_process import fix_select_column
+from get_selfconsistent_output import get_sqls
 
 
 chat_prompt = [

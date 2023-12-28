@@ -12,6 +12,7 @@ dataset_path=$2
 device="0"
 db_path=$3
 processed_dataset_path=$4
+
 # preprocess test set
 echo "preprocessing..."
 python src/preprocessing.py \
