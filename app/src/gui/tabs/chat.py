@@ -8,11 +8,13 @@ from gui.resources import load_resdsql_model
 from gui.translation import trans
 from helpers.database import execute_sql_query
 
+import c3sql
+
 
 MAX_TABLE_HEIGHT = 200
 
 
-def chat_tab(db_path, sem_names):
+def chat_tab(db_path, sem_names, openai_api_key):
     if not db_path:
         st.info(trans('complete_1'), icon='⏪')
     else:
@@ -24,7 +26,7 @@ def chat_tab(db_path, sem_names):
         for message in st.session_state.messages:
             message.render()
             
-        ask_button, clear_button, question = ask_panel()
+        ask_button, clear_button, question, model = ask_panel()
         
         if clear_button:
             st.session_state.messages.clear()
@@ -34,13 +36,22 @@ def chat_tab(db_path, sem_names):
             message = QuestionMessage(question)
             st.session_state.messages.append(message)
                 
-            sql_message = ResponseMessage(
-                resdsql_model,
-                db_path,
-                question,
-                sem_names
-            )
-            st.session_state.messages.append(sql_message)
+            if model == 'resdsql':
+                response_message = ResdsqlResponseMessage(
+                    resdsql_model,
+                    db_path,
+                    question,
+                    sem_names
+                )
+            elif model == 'c3sql':
+                response_message = C3sqlResponseMessage(
+                    openai_api_key,
+                    db_path,
+                    question,
+                    sem_names
+                )
+            
+            st.session_state.messages.append(response_message)
             
             st.rerun()
 
@@ -51,16 +62,26 @@ def ask_panel():
         
         with col_joined:
             with st.form('send_form', border=False, clear_on_submit=True):
-                col_left, col_center = st.columns([4, 1])
+                col_question, col_model, col_ask = st.columns([4, 1, 1])
             
-                with col_left:
+                with col_question:
                     question = st.text_input(
                         label='prompt',
                         placeholder=trans('question_placeholder'),
                         label_visibility='collapsed',
                     )
                     
-                with col_center:
+                with col_model:
+                    model = st.selectbox(
+                        label='Model',
+                        options=['resdsql', 'c3sql'],
+                        index=0,
+                        format_func=lambda text: '🤖 ' + text.upper(),
+                        key='model_select',
+                        label_visibility='collapsed'
+                    )
+                    
+                with col_ask:
                     ask_button = st.form_submit_button(
                         label=trans('ask'),
                         type='secondary',
@@ -74,7 +95,7 @@ def ask_panel():
                 use_container_width=True
             )
                 
-    return ask_button, clear_button, question
+    return ask_button, clear_button, question, model
 
 
 class Message(ABC):
@@ -95,32 +116,32 @@ class QuestionMessage(Message):
 
 class ResponseMessage(Message):
     
-    def __init__(self, model, db_path, question, sem_names=None):
-        self.model = model
+    def __init__(self, db_path, question, sem_names, name, avatar=None):
         self.db_path = db_path
         self.question = question
         self.sem_names = sem_names
+        self.name = name
+        self.avatar = avatar
         
         self.sql = None
         self.data = None
         self.first_render = True
     
-    
     def render(self):
-        with st.chat_message('assistant'):
+        with st.chat_message(name=self.name, avatar=self.avatar):
+            self._predict_sql_if_needed()
             self._render_sql()
             self._render_data()
             
-
-    def _render_sql(self):
+    def _predict_sql_if_needed(self):
         if self.sql is None:
-            with st.spinner(trans('thinking')):
-                self.sql = self.model(
-                    self.question,
-                    self.db_path,
-                    self.sem_names
-                )
-                
+                with st.spinner(trans('thinking')):
+                    self._predict_sql()
+
+    def _predict_sql(self):
+        raise NotImplementedError
+
+    def _render_sql(self):        
         placeholder = st.empty()
         
         if self.first_render:
@@ -147,3 +168,32 @@ class ResponseMessage(Message):
                 use_container_width=True,
                 height=height,
             )
+
+
+class ResdsqlResponseMessage(ResponseMessage):
+    
+    def __init__(self, model, db_path, question, sem_names=None):
+        super().__init__(db_path, question, sem_names, name='RESDSQL')
+        self.model = model
+    
+    def _predict_sql(self):
+        self.sql = self.model(
+            self.question,
+            self.db_path,
+            self.sem_names
+        )
+
+
+class C3sqlResponseMessage(ResponseMessage):
+    
+    def __init__(self, openai_api_key, db_path, question, sem_names=None):
+        super().__init__(db_path, question, sem_names, name='C3SQL')
+        self.openai_api_key = openai_api_key
+    
+    def _predict_sql(self):
+        self.sql = c3sql.predict_sql(
+            self.question,
+            self.db_path,
+            self.openai_api_key,
+            self.sem_names
+        )
