@@ -21,6 +21,10 @@ ALL_TRANSLATIONS = {
         "en": "english",
         "pl": "angielski"
     },
+    "openai_api_key": {
+        "en": "OpenAI API key (required for C3 model)",
+        "pl": "Klucz API dla OpenAI (wymagane dla modelu C3)"
+    },
     "selection_tab": {
         "en": "1️⃣ DB Selection",
         "pl": "1️⃣ Wybór Bazy"

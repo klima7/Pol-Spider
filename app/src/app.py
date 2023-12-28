@@ -30,7 +30,7 @@ else:
         st.title(trans('title'))
     with col2:
         openai_api_key = st.text_input(
-            label='OpenAI API Key',
+            label=trans('openai_api_key'),
             type='password'
         )
     with col3:

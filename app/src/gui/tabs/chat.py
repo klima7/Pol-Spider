@@ -43,7 +43,7 @@ def chat_tab(db_path, sem_names, openai_api_key):
                     question,
                     sem_names
                 )
-            elif model == 'c3sql':
+            elif model == 'c3':
                 response_message = C3sqlResponseMessage(
                     openai_api_key,
                     db_path,
@@ -74,7 +74,7 @@ def ask_panel():
                 with col_model:
                     model = st.selectbox(
                         label='Model',
-                        options=['resdsql', 'c3sql'],
+                        options=['resdsql', 'c3'],
                         index=0,
                         format_func=lambda text: '🤖 ' + text.upper(),
                         key='model_select',
