@@ -63,6 +63,8 @@ def _subsample(src_path, dst_path, train_size, dev_size, seed=42):
 def _subsample_split(json_paths, gold_path, size):
     samples = []
     for path in json_paths:
+        if not Path(path).exists():
+            continue
         for sample in load_json(path):
             sample['path'] = path
             samples.append(sample)
@@ -75,12 +77,12 @@ def _subsample_split(json_paths, gold_path, size):
     for dif_samples in hardnesses.values():
         random.shuffle(dif_samples)
         
-    orig_distrib = {dif: len(dif_samples) / len(samples) for dif, dif_samples in hardnesses.items()}
+    orig_distrib = {dif: len(dif_samples) / max(len(samples), 1) for dif, dif_samples in hardnesses.items()}
     
     names = list(hardnesses.keys())
     count = np.array([len(dif_samples) for dif_samples in hardnesses.values()])
     scale_factor = len(samples) / max(size, 1)
-    scaled_count = count / scale_factor
+    scaled_count = count / max(scale_factor, 1)
     
     # select samples one by one
     selected_hardnesses = {'easy': [], 'medium': [], 'hard': [], 'extra': []}
@@ -110,6 +112,8 @@ def _subsample_split(json_paths, gold_path, size):
     # construct gold queries
     samples = []
     for path in json_paths:
+        if not Path(path).exists():
+            continue
         for sample in load_json(path):
             sample['path'] = path
             samples.append(sample)
