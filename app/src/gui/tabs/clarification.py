@@ -36,7 +36,7 @@ def clarification_tab(db_path):
 
 def table(table_name, column_names):
     with st.container(border=True):
-        st.subheader('💾 '+table_name)
+        st.subheader('📋 '+table_name)
         table_sem_name = st.text_input(
             label='table name',
             value=convert_name_to_sem(table_name),
