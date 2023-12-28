@@ -19,3 +19,4 @@ eralchemy
 SQLAlchemy==1.0.13
 opencv-python-headless==4.8.1.78
 protobuf==3.20.3
+openai==0.28.1
