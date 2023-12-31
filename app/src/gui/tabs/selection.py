@@ -87,7 +87,8 @@ def sql_schema_input(db_path):
         
     elif len(schema_sql) > 0:
         if db_path is None:
-            db_path = get_db_from_sql(schema_sql)
+            db_path = get_db_from_sql(schema_sql)   
+            return db_path
 
 
 
