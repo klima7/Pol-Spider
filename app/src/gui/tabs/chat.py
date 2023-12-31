@@ -3,11 +3,11 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
 import streamlit as st
+import sqlparse
 
 from gui.resources import load_resdsql_model
 from gui.translation import trans
 from helpers.database import execute_sql_query
-
 import c3sql
 
 
@@ -137,7 +137,15 @@ class ResponseMessage(Message):
         if self.sql is None:
                 with st.spinner(trans('thinking')):
                     try:
-                        self._predict_sql()
+                        self.sql = self._predict_sql()
+                        if isinstance(self.sql, str):
+                            self.sql = sqlparse.format(
+                                self.sql,
+                                reindent=True,
+                                keyword_case='upper',
+                                identifier_case='lower',
+                                # indent_tabs=True,
+                            )
                     except Exception as e:
                         self.sql = e
 
@@ -185,7 +193,7 @@ class ResdsqlResponseMessage(ResponseMessage):
         self.model = model
     
     def _predict_sql(self):
-        self.sql = self.model(
+        return self.model(
             self.question,
             self.db_path,
             self.sem_names
@@ -199,7 +207,7 @@ class C3sqlResponseMessage(ResponseMessage):
         self.openai_api_key = openai_api_key
     
     def _predict_sql(self):
-        self.sql = c3sql.predict_sql(
+        return c3sql.predict_sql(
             self.question,
             self.db_path,
             self.openai_api_key,
