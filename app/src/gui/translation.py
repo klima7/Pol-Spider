@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-DEFAULT_LANG = 'en'
+DEFAULT_LANG = 'pl'
 
 
 ALL_TRANSLATIONS = {
@@ -108,7 +108,7 @@ def trans(id):
     return ALL_TRANSLATIONS[id][lang()]
 
 
-def language_selector(default='pl'):
+def language_selector():
     options = ['pl', 'en']
     
     gui_texts = {
