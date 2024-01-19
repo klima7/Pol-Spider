@@ -167,7 +167,7 @@ class ResponseMessage(Message):
         elif self.first_render:
             for idx in range(len(self.sql)):
                 placeholder.text(self.sql[:idx+1])
-                time.sleep(0.05)
+                time.sleep(0.025)
             self.first_render = False
         else:
             placeholder.text(self.sql)
