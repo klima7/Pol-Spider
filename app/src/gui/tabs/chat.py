@@ -56,12 +56,17 @@ def chat_tab(db_path, sem_names, openai_api_key):
             st.rerun()
 
 
+def clear():
+    st.session_state['prompt_copy'] = st.session_state['prompt']
+    st.session_state['prompt'] = ''
+
+
 def ask_panel():
     with st.container():
         col_joined, col_right = st.columns([5, 1])
         
         with col_joined:
-            with st.form('send_form', border=False, clear_on_submit=True):
+            with st.form('send_form', border=False):
                 col_question, col_model, col_ask = st.columns([4, 1, 1])
             
                 with col_question:
@@ -69,13 +74,13 @@ def ask_panel():
                         label='prompt',
                         placeholder=trans('question_placeholder'),
                         label_visibility='collapsed',
+                        key='prompt',
                     )
                     
                 with col_model:
                     model = st.selectbox(
                         label='Model',
                         options=['resdsql', 'c3'],
-                        index=0,
                         format_func=lambda text: '🤖 ' + text.upper(),
                         key='model_select',
                         label_visibility='collapsed'
@@ -85,7 +90,8 @@ def ask_panel():
                     ask_button = st.form_submit_button(
                         label=trans('ask'),
                         type='secondary',
-                        use_container_width=True
+                        use_container_width=True,
+                        on_click=clear
                     )
             
         with col_right:
@@ -95,7 +101,8 @@ def ask_panel():
                 use_container_width=True
             )
                 
-    return ask_button, clear_button, question, model
+    prompt = st.session_state['prompt_copy'] if 'prompt_copy' in st.session_state else None
+    return ask_button, clear_button, prompt, model
 
 
 class Message(ABC):
