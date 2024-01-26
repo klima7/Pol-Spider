@@ -102,7 +102,7 @@ def ask_panel():
             )
                 
     prompt = st.session_state['prompt_copy'] if 'prompt_copy' in st.session_state else None
-    return ask_button, clear_button, prompt, model
+    return ask_button and len(prompt) > 0, clear_button, prompt, model
 
 
 class Message(ABC):
