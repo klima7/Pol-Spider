@@ -1,2 +1,14 @@
 [theme]
 base="light"
+
+[client]
+toolbarMode = "viewer"
+
+[browser]
+gatherUsageStats = false
+
+[server]
+port = 80
+watchFileSystem = false
+maxUploadSize = 1028
+enableXsrfProtection = false
