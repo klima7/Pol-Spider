@@ -26,7 +26,7 @@ python -m spacy download xx_sent_ud_sm
 Example dataset synthesis - synthesize dataset named `pol-spider-en`, which is based on samples from `spider`. Translate questions to polish. Apply `context-curated` translation to schema names. Translate strings in SQL queries to polish.
 ```bash
 python datasets/scripts/synthesize.py spider pol-spider-en \
-  --question-lang pl
+  --question-lang pl \
   --schema-translation context-curated \
   --query-lang pl \
   --with-db
