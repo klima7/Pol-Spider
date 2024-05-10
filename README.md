@@ -7,9 +7,9 @@ This repository provides translation of [Spider](https://yale-lily.github.io/spi
 ## Ready datasets
 Polish translations are ready to download from [Hugging Face Datasets](https://huggingface.co/datasets/klima7/Pol-Spider/tree/main) 🤗
 
-## Datasets synthesis from scratch
+## Datasets synthesis
 
-First setup environment:
+Setup environment:
 ```bash
 # clone repository
 https://github.com/klima7/Polish-Spider
@@ -22,3 +22,22 @@ pip install -r requirements.txt
 # download spacy model
 python -m spacy download xx_sent_ud_sm
 ```
+
+Example dataset synthesis - synthesize dataset named `pol-spider-en`, which is based on samples from `spider`. Translate questions to polish. Apply `context-curated` translation to schema names. Translate strings in SQL queries to polish.
+```bash
+python datasets/scripts/synthesize.py spider pol-spider-en \
+  --question-lang pl
+  --schema-translation context-curated \
+  --query-lang pl \
+  --with-db
+```
+
+Joining datasets - create `pol-spider` dataset by joining `pol-spider-en` and `pol-spider-pl`:
+```bash
+python datasets/scripts/join.py pol-spider pol-spider-en pol-spider-pl
+```
+
+
+## Experiments
+
+## App
