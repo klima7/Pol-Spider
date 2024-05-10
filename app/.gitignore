@@ -1,1 +1,2 @@
-models/**
+models/classifier/**
+models/text2sql/**
