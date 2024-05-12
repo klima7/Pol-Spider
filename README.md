@@ -1,6 +1,6 @@
 # Pol-Spider 🕷️
 
-This repository provides translation of [Spider](https://yale-lily.github.io/spider), [CoSQL](https://yale-lily.github.io/cosql), [SParC](https://yale-lily.github.io/sparc), [Spider-DK](https://github.com/ygan/Spider-DK), [Spider-Syn](https://github.com/ygan/Spider-Syn) datasets in multiple variants and code for some experiments.
+This repository provides translation of [Spider](https://yale-lily.github.io/spider), [CoSQL](https://yale-lily.github.io/cosql), [SParC](https://yale-lily.github.io/sparc), [Spider-DK](https://github.com/ygan/Spider-DK), [Spider-Syn](https://github.com/ygan/Spider-Syn) datasets into Polish and code for some experiments.
 
 📄 Associated master thesis: [download link](https://github.com/klima7/Master-Thesis/releases/download/submit/master-thesis.pdf).
 
