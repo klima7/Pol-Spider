@@ -1,10 +1,10 @@
 # Database
 
-In this directory original, english databases should be placed to allow dataset synthesis with databases schema translation.
+In this directory original, english databases should be placed.
 
 
 ## Download link
-[Download link](https://tulodz-my.sharepoint.com/:f:/g/personal/222467_edu_p_lodz_pl/EvYMCKbrQgtOuQS3sltwvqEBg7MK8o9wgCyhv3n53Havhg?e=XNokbq)
+[Download link](https://huggingface.co/datasets/klima7/Pol-Spider/blob/main/_database.zip)
 
 ## Required structure
 ```
