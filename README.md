@@ -24,6 +24,8 @@ pip install -r requirements.txt
 python -m spacy download xx_sent_ud_sm
 ```
 
+Then download oryginal english databases from [here](https://huggingface.co/datasets/klima7/Pol-Spider/blob/main/_database.zip) and place inside `datasets/components/database`
+
 ### Example dataset synthesis
 Synthesize dataset named `pol-spider-en`, which is based on samples from `spider`. Translate questions to polish. Apply `context-curated` translation to schema names. Translate strings in SQL queries to polish:
 ```bash
