@@ -46,7 +46,7 @@ python datasets/scripts/join.py pol-spider pol-spider-en pol-spider-pl
 ![app_image](app/image.png)
 
 ### Starting app
-To use `REDSDSQL` model downloading weights from [Hugging Face](https://huggingface.co/klima7/Pol-Spider-App) 🤗 and placing inside `app/models` is required.
+To use `RESDSQL` model downloading weights from [Hugging Face](https://huggingface.co/klima7/Pol-Spider-App) 🤗 and placing inside `app/models` is required.
 ```bash
 cd app
 docker compose up --build
